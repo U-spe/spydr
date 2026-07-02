@@ -1,5 +1,5 @@
 /* =========================
-   SPYDR GAME LOADER (FIXED)
+   SPYDR GAME LOADER (STABLE)
 ========================= */
 
 /* CONSTANTS FOR PLACEHOLDERS */
@@ -28,7 +28,9 @@ let gameLists = [];
 let currentSourceData = null;
 let games = [];
 let filteredGames = [];
-let renderTimeouts = []; // Tracks staggered rendering
+
+// Track if Lumin has been successfully loaded to prevent duplicate initializations
+window.isLuminInitialized = false; 
 
 /* =========================
    SAFE INIT GUARD
@@ -92,10 +94,6 @@ function buildSourceMenu() {
 async function setSource(index) {
   const source = gameLists[index];
   if (!source) return;
-
-  // FIX: Immediately halt any staggered rendering from the previous source
-  renderTimeouts.forEach(clearTimeout);
-  renderTimeouts = [];
 
   currentSourceData = source;
   if (sourceText) sourceText.textContent = source.Name;
@@ -194,69 +192,61 @@ async function loadGames() {
 }
 
 /* =========================
-   RENDER (STAGGERED + 4.5s FALLBACK)
+   RENDER (STABLE + 4.5s FALLBACK)
 ========================= */
 function renderGames() {
   if (!gameGrid) return;
   gameGrid.innerHTML = "";
-
-  // Clear ongoing renders to prevent glitches when searching/switching rapidly
-  renderTimeouts.forEach(clearTimeout);
-  renderTimeouts = [];
 
   if (filteredGames.length === 0) {
     gameGrid.innerHTML = "no games found";
     return;
   }
 
-  filteredGames.forEach((game, index) => {
-    const timeoutId = setTimeout(() => {
-      const card = document.createElement("div");
-      card.className = "game-card";
+  filteredGames.forEach((game) => {
+    const card = document.createElement("div");
+    card.className = "game-card";
 
-      // Create elements dynamically
-      const img = document.createElement("img");
-      const titleSpan = document.createElement("span");
-      const fallbackSrc = "assets/images/no-image.png";
+    // Create elements dynamically
+    const img = document.createElement("img");
+    const titleSpan = document.createElement("span");
+    const fallbackSrc = "assets/images/no-image.png";
 
-      img.src = getCover(game);
-      img.style.filter = "grayscale(100%)";
-      titleSpan.textContent = game.name; // User Preference: Just game names, no extra labels
+    img.src = getCover(game);
+    img.style.filter = "grayscale(100%)";
+    titleSpan.textContent = game.name; 
 
-      // Track loading state
-      let isLoaded = false;
+    // Track loading state
+    let isLoaded = false;
 
-      // Triggered if the image loads successfully
-      img.onload = () => {
-        isLoaded = true;
-      };
+    // Triggered if the image loads successfully
+    img.onload = () => {
+      isLoaded = true;
+    };
 
-      // Triggered instantly if the image link is hard-broken (e.g., 404 error)
-      img.onerror = () => {
-        if (!img.src.includes(fallbackSrc)) {
-          img.src = fallbackSrc;
-          isLoaded = true; 
-        }
-      };
+    // Triggered instantly if the image link is hard-broken (e.g., 404 error)
+    img.onerror = () => {
+      if (!img.src.includes(fallbackSrc)) {
+        img.src = fallbackSrc;
+        isLoaded = true; 
+      }
+    };
 
-      // Triggered if the image hangs for more than 4.5 seconds
-      setTimeout(() => {
-        if (!isLoaded && !img.src.includes(fallbackSrc)) {
-          img.src = fallbackSrc;
-        }
-      }, 4500);
+    // Triggered if the image hangs for more than 4.5 seconds
+    setTimeout(() => {
+      if (!isLoaded && !img.src.includes(fallbackSrc)) {
+        img.src = fallbackSrc;
+      }
+    }, 4500);
 
-      // Assemble the card
-      card.appendChild(img);
-      card.appendChild(titleSpan);
-      
-      // Attach the click event
-      card.onclick = () => openGame(game);
+    // Assemble the card
+    card.appendChild(img);
+    card.appendChild(titleSpan);
+    
+    // Attach the click event
+    card.onclick = () => openGame(game);
 
-      gameGrid.appendChild(card);
-    }, index * 75); // 75ms delay between each game loading into the DOM
-
-    renderTimeouts.push(timeoutId);
+    gameGrid.appendChild(card);
   });
 }
 
@@ -305,23 +295,19 @@ closeGameBtn?.addEventListener("click", () => {
 });
 
 /* =========================
-   LUMIN
+   LUMIN (STABLE)
 ========================= */
 function loadLumin() {
   if (!luminGames) return;
-  
-  // FIX: Only initialize the HTML if it hasn't been set up yet.
-  // Overwriting this repeatedly is what breaks the SDK.
-  let gamesContainer = document.getElementById("games");
-  
-  if (window.Lumin && typeof window.Lumin.init === "function" && gamesContainer) {
-    // Lumin is already active and the container exists, no need to rebuild.
+
+  // If Lumin has already been built and initialized, do absolutely nothing.
+  // We just let the display: block (from setSource) show the existing UI.
+  if (window.isLuminInitialized) {
     return;
   }
 
-  if (!gamesContainer) {
-    luminGames.innerHTML = `<div id="games"></div>`;
-  }
+  // Create the container strictly once
+  luminGames.innerHTML = `<div id="games"></div>`;
 
   // Prevent multiple script tags from appending if clicked rapidly
   if (document.querySelector("script[data-lumin='true']")) {
@@ -332,25 +318,24 @@ function loadLumin() {
   script.src = "https://cdn.jsdelivr.net/gh/luminsdk/script@latest/lumin.min.js";
   script.dataset.lumin = "true";
 
-  script.onload = startLumin;
+  script.onload = () => {
+    if (window.Lumin && typeof window.Lumin.init === "function") {
+      Lumin.init({
+        container: "#games",
+        theme: "dark"
+      });
+      // Mark as initialized so we never run this again
+      window.isLuminInitialized = true;
+    } else {
+      luminGames.innerHTML = "lumin not available";
+    }
+  };
 
   script.onerror = () => {
     luminGames.innerHTML = "failed to load lumin";
   };
 
   document.body.appendChild(script);
-}
-
-function startLumin() {
-  if (!window.Lumin || typeof window.Lumin.init !== "function") {
-    if (luminGames) luminGames.innerHTML = "lumin not available";
-    return;
-  }
-
-  Lumin.init({
-    container: "#games",
-    theme: "dark"
-  });
 }
 
 /* =========================

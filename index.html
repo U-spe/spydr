@@ -5,14 +5,19 @@
   <title>spydr</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
 
+  <!-- css -->
   <link rel="stylesheet" href="/css/main.css"/>
 </head>
 
 <body>
 
-<!-- LOADING SCREEN -->
+<!-- LOADING -->
 <div id="loading-screen">
   <video id="loadVideo" autoplay muted playsinline>
     <source src="/assets/images/load.mp4" type="video/mp4">
@@ -28,18 +33,34 @@
     <div id="date">loading...</div>
   </div>
 
-  <!-- CENTER -->
-  <div class="center">
-    <h1 class="logo">spydr</h1>
-    <div class="const" id="constText">initializing...</div>
+  <!-- MENU (hover dropdown system) -->
+  <div class="menu-wrapper">
+
+    <button id="menu-btn">☰</button>
+
+    <div id="menu">
+      <button onclick="go('games.html')">🎮 games</button>
+      <button onclick="go('apps.html')">📦 apps</button>
+      <button onclick="go('browser.html')">🌐 browser</button>
+      <button onclick="go('chat.html')">💬 chat</button>
+    </div>
+
   </div>
 
-  <!-- MENU -->
-  <div class="menu">
-    <button onclick="go('games.html')">games</button>
-    <button onclick="go('apps.html')">apps</button>
-    <button onclick="go('browser.html')">browser</button>
-    <button onclick="go('chat.html')">chat</button>
+  <!-- CENTER HERO -->
+  <div class="center">
+
+    <div class="hero-wrap">
+
+      <img src="/assets/images/logo.png" class="logo-img" alt="spydr logo">
+
+      <div class="hero-text">
+        <h1>spydr</h1>
+        <div class="const" id="constText">initializing...</div>
+      </div>
+
+    </div>
+
   </div>
 
 </div>

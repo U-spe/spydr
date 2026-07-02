@@ -19,73 +19,72 @@
 
 <body>
 
-<!-- LOADING -->
-<div id="loading-screen">
-  <video id="loadVideo" autoplay muted playsinline>
-    <source src="/assets/images/load.mp4" type="video/mp4">
-  </video>
-</div>
+  <!-- GLOBAL LOADER -->
+  <div id="loader"></div>
 
-<!-- APP -->
-<div id="app">
+  <!-- APP -->
+  <div id="app">
 
-  <!-- TOP BAR -->
-  <div class="top">
-    <div id="time">--:--</div>
-    <div id="date">loading...</div>
-  </div>
-
-  <!-- MENU -->
-  <div class="menu-wrapper">
-    <button id="menu-btn">
-      <i class="ri-menu-line"></i>
-    </button>
-
-    <div id="menu">
-      <button onclick="go('games.html')">
-        <i class="ri-gamepad-line"></i> games
-      </button>
-
-      <button onclick="go('apps.html')">
-        <i class="ri-apps-line"></i> apps
-      </button>
-
-      <button onclick="go('browser.html')">
-        <i class="ri-global-line"></i> browser
-      </button>
-
-      <button onclick="go('chat.html')">
-        <i class="ri-chat-3-line"></i> chat
-      </button>
+    <!-- TOP BAR -->
+    <div class="top">
+      <div id="time">--:--</div>
+      <div id="date">loading...</div>
     </div>
-  </div>
 
-  <!-- HERO -->
-  <div class="center">
+    <!-- MENU -->
+    <div class="menu-wrapper">
+      <button id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </button>
 
-    <div class="hero-wrap">
-      <img src="/assets/images/logo.png" class="logo-img" />
+      <div id="menu">
+        <button onclick="go('games.html')">
+          <i class="ri-gamepad-line"></i> games
+        </button>
 
-      <div class="hero-text">
-        <h1>spydr</h1>
-        <div class="const" id="constText">initializing...</div>
+        <button onclick="go('apps.html')">
+          <i class="ri-apps-line"></i> apps
+        </button>
+
+        <button onclick="go('browser.html')">
+          <i class="ri-global-line"></i> browser
+        </button>
+
+        <button onclick="go('chat.html')">
+          <i class="ri-chat-3-line"></i> chat
+        </button>
       </div>
     </div>
 
+    <!-- HERO -->
+    <div class="center">
+
+      <div class="hero-wrap">
+        <img src="/assets/images/logo.png" class="logo-img">
+
+        <div class="hero-text">
+          <h1>spydr</h1>
+          <div class="const" id="constText">
+            initializing...
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MINI GAMES -->
+    <div class="games">
+      <div class="game-card">neon drift</div>
+      <div class="game-card">void runner</div>
+      <div class="game-card">pixel siege</div>
+      <div class="game-card">cyber arena</div>
+    </div>
+
   </div>
 
-  <!-- MINI GAMES (THIS WAS MISSING BEFORE) -->
-  <div class="games">
-    <div class="game-card">neon drift</div>
-    <div class="game-card">void runner</div>
-    <div class="game-card">pixel siege</div>
-    <div class="game-card">cyber arena</div>
-  </div>
+  <script src="/js/load.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/globalcloak.js"></script>
 
-</div>
-
-<script src="/js/main.js"></script>
-<script src="/js/globalcloak.js"></script>
-  
 </body>
 </html>

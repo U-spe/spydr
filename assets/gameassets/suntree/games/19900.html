@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Your Sets | Quizlet</title>
+        <link rel="icon" href="/stuff/jolly.png">
+        <link rel="stylesheet" href="/stuff/css/styles.css">
+        <link rel="stylesheet" href="/stuff/css/alert.css">
+        <meta property="og:title" content="Study.com">
+        <meta name="theme-color" content="#8600ff">
+        <meta name="msapplication-TileColor" content="#8600ff">
+        <meta name="description" content="Studying utilities for students.">
+        <meta property="og:description" content="Studying utilities for students.">
+        
+        
+        <style type="text/css">@font-face {font-family:Figtree;font-style:normal;font-weight:400;src:url(/cf-fonts/v/figtree/5.2.10/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Figtree;font-style:normal;font-weight:400;src:url(/cf-fonts/v/figtree/5.2.10/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Figtree;font-style:normal;font-weight:600;src:url(/cf-fonts/v/figtree/5.2.10/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Figtree;font-style:normal;font-weight:600;src:url(/cf-fonts/v/figtree/5.2.10/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Figtree;font-style:normal;font-weight:700;src:url(/cf-fonts/v/figtree/5.2.10/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Figtree;font-style:normal;font-weight:700;src:url(/cf-fonts/v/figtree/5.2.10/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}</style>
+        <script src="/baremux/index.js" defer></script>
+        <script src="/uv/uv.bundle.js" defer></script>
+        <script src="/uv/uv.config.js" defer></script>
+        <script src="/scram/scramjet.js" defer></script>
+        <script src="/controller/controller.api.js" defer></script>
+        <script src="/stuff.js?v=6" defer></script>
+        <script defer>
+          function showEmbedError(title, message) {
+            const heading = document.getElementById("theh1");
+            const paragraph = document.getElementById("thep");
+            if (heading) heading.innerText = title;
+            if (paragraph) paragraph.innerText = message;
+          }
+
+          async function initEmbed() {
+            let destination = "";
+            const hash = window.location.hash.slice(1);
+
+            if (!hash) {
+              console.error("hey twin, sum went wrong here. heres how to do the thing embed.html#https://example.com");
+              showEmbedError(
+                "no url found. if this is unexpected, report to @korona.lat on discord.",
+                "expected format: embed.html#https://example.com"
+              );
+              return;
+            }
+
+            try {
+              destination = new URL(decodeURIComponent(hash)).toString();
+            } catch (err) {
+              console.error(`Bad # string or bad URL. Got error: ${err}`);
+              showEmbedError(
+                "invalid url, unable to load. if this is unexpected, report to @korona.lat on discord.",
+                `error: ${err.message}`
+              );
+              return;
+            }
+
+            try {
+              await window.KoronaProxy.ready;
+              const frame = document.getElementById("proxy-frame");
+              frame.src = window.KoronaProxy.encodeUrl(destination);
+              frame.style.display = "block";
+            } catch (err) {
+              console.error(`Encountered error: ${err}`);
+              showEmbedError("Proxy Error", `Error: ${err.message}`);
+            }
+          }
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", initEmbed);
+          } else {
+            initEmbed();
+          }
+        </script>
+    </head>
+    <body>
+        <iframe id="proxy-frame" allowfullscreen></iframe>
+
+        <div id="fadeout">
+          <div id="loadingbox">
+            <span class="korona-mark">korona</span>
+            <div class="spinner"></div>
+            <h1 id="theh1">deploying proxy....</h1>
+            <p id="thep">this might take a bit</p>
+          </div>
+        </div>
+
+        <span class="loader"></span>
+        <div id="teacher-setup-dialogs-container"></div>
+
+        <script>
+          function lowtaperfade(){
+            // yes, thats all it does.
+            // uv does not like using the style tag as it is defined somewhere in uv and that breaks this page if
+            // document.getElementById('fadeout').style = "opacity: 0;" is used in embed.js
+            document.getElementById('fadeout').style = "opacity: 0;"
+          }
+          function highslipperybuzz(){
+            document.getElementById('fadeout').style = "opacity: 1;"
+            document.getElementById('theh1').innerText = "this is.. TAKING TOO LONG"
+            document.getElementById('thep').innerText = "the server might be overloaded, or the requested site is slow right now."
+          }
+        </script>
+
+        <style>
+          html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Figtree', sans-serif;
+            background: #000;
+          }
+
+          #proxy-frame {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: 10000;
+            display: none;
+          }
+
+          /* korona purple loading backdrop */
+          #fadeout {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(160deg, #000000, #1a0030, #0d001a, #2a0050, #000000);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            transition: opacity 0.4s ease-in-out;
+            z-index: 9998;
+          }
+          @keyframes gradientShift {
+            0%   { background-position: 0% 50%; }
+            50%  { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+          }
+
+          #loadingbox {
+            position: fixed;
+            z-index: 9999;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            text-align: center;
+            color: #e2d4f0;
+            line-height: 1.5;
+            user-select: none;
+            padding: 0 24px;
+          }
+
+          .korona-mark {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #d8b4fe;
+            letter-spacing: -0.01em;
+            text-shadow: 0 0 24px rgba(168, 85, 247, 0.45);
+          }
+
+          .spinner {
+            width: 44px;
+            height: 44px;
+            border: 3px solid rgba(140, 60, 200, 0.25);
+            border-top-color: #c084fc;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+          }
+          @keyframes spin {
+            to { transform: rotate(360deg); }
+          }
+
+          #theh1 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #e9d5ff;
+            margin: 0;
+            max-width: 32ch;
+          }
+
+          #thep {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: rgba(192, 132, 252, 0.6);
+            margin: 0;
+            max-width: 40ch;
+          }
+
+          /* bottom progress shimmer */
+          .loader {
+            width: 100%;
+            height: 3px;
+            display: block;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            background: rgba(140, 60, 200, 0.15);
+            overflow: hidden;
+            z-index: 9999;
+          }
+          .loader::after {
+            content: '';
+            width: 220px;
+            height: 3px;
+            background: linear-gradient(90deg, rgba(134, 0, 255, 0), #8600ff, #c084fc, rgba(192, 132, 252, 0));
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: animloader 1.6s linear infinite;
+          }
+          @keyframes animloader {
+            0%   { transform: translateX(-100%); }
+            100% { transform: translateX(100vw); }
+          }
+
+          #teacher-setup-dialogs-container {
+            filter: drop-shadow(0px 0px 10px rgba(192, 132, 252, 0.6));
+          }
+        </style>
+    </body>
+</html>

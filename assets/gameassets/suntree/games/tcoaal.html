@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html style="height:100%;margin:0;padding:0;overflow:hidden">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <link rel="icon" href="icon/icon.png" type="image/png">
+        <link rel="apple-touch-icon" href="icon/icon.png">
+        <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
+        <title>The Coffin of Andy and Leyley</title>
+        <style>
+            * { margin:0; padding:0; }
+            html, body { width:100%; height:100%; overflow:hidden; background:#000; }
+        </style>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2232JQ1RC7');
+</script>
+</head>
+    <body>
+        <script type="text/javascript" src="js/libs/pixi.js"></script>
+        <script type="text/javascript" src="js/libs/pixi-tilemap.js"></script>
+        <script type="text/javascript" src="js/libs/pixi-picture.js"></script>
+        <script type="text/javascript" src="js/libs/fpsmeter.js"></script>
+        <script type="text/javascript" src="js/libs/lz-string.js"></script>
+        <script type="text/javascript" src="js/libs/iphone-inline-video.browser.js"></script>
+        <script type="text/javascript" src="js/rpg_core.js"></script>
+        <script type="text/javascript" src="js/rpg_managers.js"></script>
+        <script type="text/javascript" src="js/rpg_objects.js"></script>
+        <script type="text/javascript" src="js/rpg_scenes.js"></script>
+        <script type="text/javascript" src="js/rpg_sprites.js"></script>
+        <script type="text/javascript" src="js/rpg_windows.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script>
+            Graphics._updateCanvas = function() {
+                this._canvas.style.zIndex = 1;
+                this._canvas.style.position = 'absolute';
+                this._canvas.style.margin = 'auto';
+                this._canvas.style.top = '0';
+                this._canvas.style.left = '0';
+                this._canvas.style.right = '0';
+                this._canvas.style.bottom = '0';
+                this._canvas.style.width = window.innerWidth + 'px';
+                this._canvas.style.height = window.innerHeight + 'px';
+            };
+            Graphics._centerElement = function(element) {
+                element.style.position = 'absolute';
+                element.style.margin = 'auto';
+                element.style.top = '0';
+                element.style.left = '0';
+                element.style.right = '0';
+                element.style.bottom = '0';
+                element.style.width = window.innerWidth + 'px';
+                element.style.height = window.innerHeight + 'px';
+            };
+            Graphics._updateRealScale = function() {
+                this._realScale = 1;
+            };
+        </script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>

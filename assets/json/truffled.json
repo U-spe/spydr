@@ -1,0 +1,2208 @@
+
+[
+  {
+    "name": "1",
+    "cover": "/gameimg/truffled/1.webp",
+    "url": "/games/truffled/games/1/index.html"
+  },
+  {
+    "name": "1 on 1 Soccer",
+    "cover": "/gameimg/truffled/12.webp",
+    "url": "/games/truffled/games/1on1soccer/index.html"
+  },
+  {
+    "name": "10 Minutes Till Dawn",
+    "cover": "/gameimg/truffled/10.webp",
+    "url": "/games/truffled/games/10minutestilldawn/index.html"
+  },
+  {
+    "name": "1v1.lol",
+    "cover": "/gameimg/truffled/1v1.webp",
+    "url": "/games/truffled/gamefile/1v1.html"
+  },
+  {
+    "name": "2048",
+    "cover": "/gameimg/truffled/2048.webp",
+    "url": "/games/truffled/games/2048/index.html"
+  },
+  {
+    "name": "30",
+    "cover": "/gameimg/truffled/30.webp",
+    "url": "/games/truffled/games/30dolar/index.html"
+  },
+  {
+    "name": "-3",
+    "cover": "/gameimg/truffled/minus3.webp",
+    "url": "/games/truffled/games/minus3/index.html"
+  },
+  {
+    "name": "A Difficult Game About Climbing, Webport",
+    "cover": "/gameimg/truffled/adgac.webp",
+    "url": "/games/truffled/gamefile/adgac.html"
+  },
+  {
+    "name": "A Game About Feeding A Blackhole",
+    "cover": "/gameimg/truffled/blackhole.webp",
+    "url": "/games/truffled/gamefile/blackhole.html"
+  },
+  {
+    "name": "A Small World Cup",
+    "cover": "/gameimg/truffled/worldcup.webp",
+    "url": "/games/truffled/gamefile/aswc.html"
+  },
+  {
+    "name": "Academytale, Webport",
+    "cover": "/gameimg/truffled/academytale.webp",
+    "url": "/games/truffled/games/academytale/index.html"
+  },
+  {
+    "name": "Achievement Unlocked",
+    "cover": "/gameimg/truffled/achieve.webp",
+    "url": "/games/truffled/games/achieveunlocked/index.html"
+  },
+  {
+    "name": "ADOFAI",
+    "cover": "/gameimg/truffled/adofai.webp",
+    "url": "/games/truffled/games/a-dance-of-fire-and-ice/index.html"
+  },
+  {
+    "name": "Adventure Capitalist",
+    "cover": "/gameimg/truffled/adventure.webp",
+    "url": "/games/truffled/games/adventure/index.html"
+  },
+  {
+    "name": "Amanda the adventurer",
+    "cover": "/gameimg/truffled/aman.webp",
+    "url": "/games/truffled/games/amanda-the-adventurer/index.html"
+  },
+  {
+    "name": "Among us",
+    "cover": "/gameimg/truffled/among.webp",
+    "url": "/games/truffled/games/amongus/index.html"
+  },
+  {
+    "name": "Amaze",
+    "cover": "/gameimg/truffled/amaze.webp",
+    "url": "/games/truffled/games/amaze/index.html"
+  },
+  {
+    "name": "Angry Birds",
+    "cover": "/gameimg/truffled/angry.webp",
+    "url": "/games/truffled/gamefile/Angrybirds.html"
+  },
+  {
+    "name": "Angry Birds Epic, Webport",
+    "cover": "/gameimg/truffled/epic.webp",
+    "url": "/games/truffled/games/Epic/index.html"
+  },
+  {
+    "name": "Angry Birds Online",
+    "cover": "/gameimg/truffled/angrybirdsonline.webp",
+    "url": "/games/truffled/gamefile/angrybirdsonline.html"
+  },
+  {
+    "name": "Antonblast",
+    "cover": "/gameimg/truffled/anton.webp",
+    "url": "/games/truffled/gamefile/anton.html"
+  },
+  {
+    "name": "Apes Vs Helium",
+    "cover": "/gameimg/truffled/avh.webp",
+    "url": "/games/truffled/games/AVHPort/index.html"
+  },
+  {
+    "name": "Arthur's Nightmare",
+    "cover": "/gameimg/truffled/arthursnight.webp",
+    "url": "/games/truffled/gamefile/arthur.html"
+  },
+  {
+    "name": "Bad Icecream 1",
+    "cover": "/gameimg/truffled/badice1.webp",
+    "url": "/games/truffled/gamefile/badice1.html"
+  },
+  {
+    "name": "Bad Icecream 2",
+    "cover": "/gameimg/truffled/badice2.webp",
+    "url": "/games/truffled/gamefile/badice2.html"
+  },
+  {
+    "name": "Bad Icecream 3",
+    "cover": "/gameimg/truffled/badice3.webp",
+    "url": "/games/truffled/gamefile/badice3.html"
+  },
+  {
+    "name": "Bad Parenting",
+    "cover": "/gameimg/truffled/bad.webp",
+    "url": "/games/truffled/games/bad/index.html"
+  },
+  {
+    "name": "Bad Piggies",
+    "cover": "/gameimg/truffled/badp.webp",
+    "url": "/games/truffled/gamefile/piggies.html"
+  },
+  {
+    "name": "Bad time Simulator",
+    "cover": "/gameimg/truffled/badt.webp",
+    "url": "/games/truffled/games/bts/index.html"
+  },
+  {
+    "name": "Balatro",
+    "cover": "/gameimg/truffled/bal.webp",
+    "url": "/games/truffled/games/balatro/index.html"
+  },
+  {
+    "name": "Baldi's Basics",
+    "cover": "/gameimg/truffled/baldi.webp",
+    "url": "/games/truffled/games/baldis-basics/index.html"
+  },
+  {
+    "name": "Baldi's Basics Birthday Bash, Webport",
+    "cover": "/gameimg/truffled/bday.webp",
+    "url": "/games/truffled/games/bday/index.html"
+  },
+  {
+    "name": "Baldi's Basics Classic Remastered",
+    "cover": "/gameimg/truffled/baldire.webp",
+    "url": "/games/truffled/games/BBCR/index.html"
+  },
+  {
+    "name": "Baldi's Basics Plus",
+    "cover": "/gameimg/truffled/baldiplus.webp",
+    "url": "/games/truffled/gamefile/bbp.html"
+  },
+  {
+    "name": "Baldi's Basics Classic Remastered",
+    "cover": "/gameimg/truffled/bfs.webp",
+    "url": "/games/truffled/games/bfs/"
+  },
+  {
+    "name": "Baldurs Gate 2",
+    "cover": "/gameimg/truffled/gate2.webp",
+    "url": "/games/truffled/games/baldurs-gate-2/index.html"
+  },
+  {
+    "name": "Banjo Kazooie",
+    "cover": "/gameimg/truffled/banjokazooie.webp",
+    "url": "/games/truffled/gamefile/banjokazooie.html"
+  },
+  {
+    "name": "Bart Bash",
+    "cover": "/gameimg/truffled/bartbash.webp",
+    "url": "/games/truffled/gamefile/bartbash.html"
+  },
+  {
+    "name": "Bart Blast",
+    "cover": "/gameimg/truffled/bart.webp",
+    "url": "/games/truffled/gamefile/bart.html"
+  },
+  {
+    "name": "Baseball Bros",
+    "cover": "/gameimg/truffled/basebros.webp",
+    "url": "/games/truffled/games/baseballbros/index.html"
+  },
+  {
+    "name": "Basket Bros",
+    "cover": "/gameimg/truffled/basketbro.webp",
+    "url": "/games/truffled/gamefile/basket.html"
+  },
+  {
+    "name": "Basket Random",
+    "cover": "/gameimg/truffled/basket.webp",
+    "url": "/games/truffled/games/basket-random/index.html"
+  },
+  {
+    "name": "Basketball stars",
+    "cover": "/gameimg/truffled/basketstars.webp",
+    "url": "/games/truffled/games/basketballstars/index.html"
+  },
+  {
+    "name": "Beatblock, Webport",
+    "cover": "/gameimg/truffled/beatblock.webp",
+    "url": "/games/truffled/games/beatblock/index.html"
+  },
+  {
+    "name": "Bendy And The Ink Machine",
+    "cover": "/gameimg/truffled/bendy.webp",
+    "url": "/games/truffled/games/bendy/index.html"
+  },
+  {
+    "name": "Bergentruck",
+    "cover": "/gameimg/truffled/ber.webp",
+    "url": "/games/truffled/games/bergentruck/index.html"
+  },
+  {
+    "name": "Bfdia 5b",
+    "cover": "/gameimg/truffled/bfdia5b.webp",
+    "url": "/games/truffled/games/bfdia 5b/index.html"
+  },
+  {
+    "name": "Bitlife",
+    "cover": "/gameimg/truffled/bit.webp",
+    "url": "/games/truffled/games/bitlife/index.html"
+  },
+  {
+    "name": "Black Jack",
+    "cover": "/gameimg/truffled/blackjack.webp",
+    "url": "/games/truffled/gamefile/BlackJack.html"
+  },
+  {
+    "name": "Block Blast",
+    "cover": "/gameimg/truffled/unnamed.webp",
+    "url": "/games/truffled/games/block-blast/index.html"
+  },
+  {
+    "name": "Bloodmoney",
+    "cover": "/gameimg/truffled/blood.webp",
+    "url": "/games/truffled/games/bloodmoney/index.html"
+  },
+  {
+    "name": "Bloon TD1",
+    "cover": "/gameimg/truffled/bloons.webp",
+    "url": "/games/truffled/games/bloonstd/index.html"
+  },
+  {
+    "name": "Bloon TD2",
+    "cover": "/gameimg/truffled/blo2.webp",
+    "url": "/games/truffled/games/bloonstd2/index.html"
+  },
+  {
+    "name": "Bloon TD3",
+    "cover": "/gameimg/truffled/blo3.webp",
+    "url": "/games/truffled/games/btd3/index.html"
+  },
+  {
+    "name": "Bloon TD4",
+    "cover": "/gameimg/truffled/btd4.webp",
+    "url": "/games/truffled/gamefile/bloonstd4.html"
+  },
+  {
+    "name": "Bloons TD5",
+    "cover": "/gameimg/truffled/blo5.webp",
+    "url": "/games/truffled/games/btd5/index.html"
+  },
+  {
+    "name": "Bloons TD6",
+    "cover": "/gameimg/truffled/blo6.webp",
+    "url": "/games/truffled/games/btd6/index.html"
+  },
+  {
+    "name": "Bloxors",
+    "cover": "/gameimg/truffled/bloxorz.webp",
+    "url": "/games/truffled/games/bloxors/index.html"
+  },
+  {
+    "name": "Bombmerman",
+    "cover": "/gameimg/truffled/bomberman.webp",
+    "url": "/games/truffled/gamefile/bomberman.html"
+  },
+  {
+    "name": "Bombmerman 2",
+    "cover": "/gameimg/truffled/bomberman2.webp",
+    "url": "/games/truffled/gamefile/bomberman2.html"
+  },
+  {
+    "name": "Boxing Random",
+    "cover": "/gameimg/truffled/boxing.webp",
+    "url": "/games/truffled/gamefile/boxing.html"
+  },
+  {
+    "name": "Brotato",
+    "cover": "/gameimg/truffled/paws.webp",
+    "url": "/games/truffled/games/brotato2/index.html"
+  },
+  {
+    "name": "Buckshot Roulette",
+    "cover": "/gameimg/truffled/buck.webp",
+    "url": "/games/truffled/games/buckshot/index.html"
+  },
+  {
+    "name": "Burrito Bison",
+    "cover": "/gameimg/truffled/burrito.webp",
+    "url": "/games/truffled/games/burrito/index.html"
+  },
+  {
+    "name": "Burrito Bison Revenge",
+    "cover": "/gameimg/truffled/bbe.webp",
+    "url": "/games/truffled/gamefile/bbe.html"
+  },
+  {
+    "name": "Capuchin, Webport",
+    "cover": "/gameimg/truffled/capuchin.webp",
+    "url": "/games/truffled/games/CapuchinBog/index.html"
+  },
+  {
+    "name": "CaseOhs Basics in Eating and Fast Food, Webport",
+    "cover": "/gameimg/truffled/caseoh.webp",
+    "url": "/games/truffled/gamefile/caseoh.html"
+  },
+  {
+    "name": "Celeste, Webport",
+    "cover": "/gameimg/truffled/celeste.webp",
+    "url": "/games/truffled/games/celeste/index.html"
+  },
+  {
+    "name": "Cheese Rolling, Webport",
+    "cover": "/gameimg/truffled/cheeser.webp",
+    "url": "/games/truffled/gamefile/cheese.html"
+  },
+  {
+    "name": "Christmas Massacre, Webport",
+    "cover": "/gameimg/truffled/christmas.webp",
+    "url": "/games/truffled/gamefile/christmas.html"
+  },
+  {
+    "name": "Class Of 09",
+    "cover": "/gameimg/truffled/class.webp",
+    "url": "/games/truffled/games/C09/index.html"
+  },
+  {
+    "name": "Class Of 09 Flipside",
+    "cover": "/gameimg/truffled/flip.webp",
+    "url": "/games/truffled/games/C09FS/index.html"
+  },
+  {
+    "name": "Class Of 09 Re-Up",
+    "cover": "/gameimg/truffled/reup.webp",
+    "url": "/games/truffled/games/C09RU/index.html"
+  },
+  {
+    "name": "Clover Pit",
+    "cover": "/gameimg/truffled/clover.webp",
+    "url": "/games/truffled/gamefile/cloverpit.html"
+  },
+  {
+    "name": "Cluster Rush",
+    "cover": "/gameimg/truffled/cluster.webp",
+    "url": "/games/truffled/games/cluster/index.html"
+  },
+  {
+    "name": "Coffee Talk",
+    "cover": "/gameimg/truffled/coffee.webp",
+    "url": "/games/truffled/games/coffee/index.html"
+  },
+  {
+    "name": "Cookie Clicker",
+    "cover": "/gameimg/truffled/cookie.webp",
+    "url": "/games/truffled/games/cookie-clicker/index.html"
+  },
+  {
+    "name": "Cooking Mama",
+    "cover": "/gameimg/truffled/cookingmama.webp",
+    "url": "/games/truffled/gamefile/cookingmama.html"
+  },
+  {
+    "name": "Cooking Mama 2",
+    "cover": "/gameimg/truffled/cookingmama2.webp",
+    "url": "/games/truffled/gamefile/cookingmama2.html"
+  },
+  {
+    "name": "Cooking Mama 3",
+    "cover": "/gameimg/truffled/cookingmama3.webp",
+    "url": "/games/truffled/gamefile/cookingmama3.html"
+  },
+  {
+    "name": "Counter Stike 0.8",
+    "cover": "/gameimg/truffled/cs08.webp",
+    "url": "/games/truffled/games/psp/cs/index.html"
+  },
+  {
+    "name": "Crash Bandicoot 1",
+    "cover": "/gameimg/truffled/crash1.webp",
+    "url": "/games/truffled/gamefile/crash1.html"
+  },
+  {
+    "name": "Crash Bandicoot 2",
+    "cover": "/gameimg/truffled/crash2.webp",
+    "url": "/games/truffled/gamefile/crash2.html"
+  },
+  {
+    "name": "Crash Bandicoot 3",
+    "cover": "/gameimg/truffled/crash3.webp",
+    "url": "/games/truffled/gamefile/crash3.html"
+  },
+  {
+    "name": "Crazy Balls",
+    "cover": "/gameimg/truffled/balls.webp",
+    "url": "/games/truffled/gamefile/balls.html"
+  },
+  {
+    "name": "CrazyCattle3D",
+    "cover": "/gameimg/truffled/crazyca.webp",
+    "url": "/games/truffled/games/cattle3d/index.html"
+  },
+  {
+    "name": "Crossy Roads",
+    "cover": "/gameimg/truffled/crossy.webp",
+    "url": "/games/truffled/gamefile/crossy.html"
+  },
+  {
+    "name": "Cruelty Squad, Webport",
+    "cover": "/gameimg/truffled/cruelty.webp",
+    "url": "/games/truffled/games/cruelty/index.html"
+  },
+  {
+    "name": "Csgo Clicker",
+    "cover": "/gameimg/truffled/csgo.webp",
+    "url": "/games/truffled/games/csgo-clicker/index.html"
+  },
+  {
+    "name": "Cuphead",
+    "cover": "/gameimg/truffled/cup.webp",
+    "url": "/games/truffled/games/Cuphead/index.html"
+  },
+  {
+    "name": "Customer Support",
+    "cover": "/gameimg/truffled/cus.webp",
+    "url": "/games/truffled/games/CustomerSupport/index.html"
+  },
+  {
+    "name": "Cut The Rope",
+    "cover": "/gameimg/truffled/cut1.webp",
+    "url": "/games/truffled/gamefile/cut.html"
+  },
+  {
+    "name": "Cut The Rope : Time Travel",
+    "cover": "/gameimg/truffled/time.webp",
+    "url": "/games/truffled/gamefile/time.html"
+  },
+  {
+    "name": "Cut The Rope Holiday",
+    "cover": "/gameimg/truffled/cut2.webp",
+    "url": "/games/truffled/gamefile/hol.html"
+  },
+  {
+    "name": "Dadish",
+    "cover": "/gameimg/truffled/dadish.webp",
+    "url": "/games/truffled/gamefile/dadish.html"
+  },
+  {
+    "name": "Dadish 2",
+    "cover": "/gameimg/truffled/dadish2.webp",
+    "url": "/games/truffled/gamefile/dadish2.html"
+  },
+  {
+    "name": "Dadish 3",
+    "cover": "/gameimg/truffled/dadish3.webp",
+    "url": "/games/truffled/gamefile/dadish3.html"
+  },
+  {
+    "name": "Dadish 3d",
+    "cover": "/gameimg/truffled/dadish3d.webp",
+    "url": "/games/truffled/gamefile/dadish3d.html"
+  },
+  {
+    "name": "Dadish Daily",
+    "cover": "/gameimg/truffled/daily.webp",
+    "url": "/games/truffled/gamefile/daily.html"
+  },
+  {
+    "name": "Danganronpa",
+    "cover": "/gameimg/truffled/dan.webp",
+    "url": "/games/truffled/games/danganronpa/index.html"
+  },
+  {
+    "name": "DEAD PLATE",
+    "cover": "/gameimg/truffled/deadp.webp",
+    "url": "/games/truffled/gamefile/dead.html"
+  },
+  {
+    "name": "Dead Tapes",
+    "cover": "/gameimg/truffled/deadta.webp",
+    "url": "/games/truffled/games/deadtapesfinal/index.html"
+  },
+  {
+    "name": "Deadseat",
+    "cover": "/gameimg/truffled/deadseat.webp",
+    "url": "/games/truffled/games/deadseat/index.html"
+  },
+  {
+    "name": "Death Run 3D",
+    "cover": "/gameimg/truffled/death.webp",
+    "url": "/games/truffled/games/death-run-3d/index.html"
+  },
+  {
+    "name": "Deltarune",
+    "cover": "/gameimg/truffled/deltarune.webp",
+    "url": "/games/truffled/gamefile/deltarune.html"
+  },
+  {
+    "name": "Deltatraveler",
+    "cover": "/gameimg/truffled/deltatr.webp",
+    "url": "/games/truffled/gamefile/deltatr.html"
+  },
+  {
+    "name": "Diablo",
+    "cover": "/gameimg/truffled/diablo.webp",
+    "url": "/games/truffled/games/diablo/index.html"
+  },
+  {
+    "name": "Dice A Million, Webport",
+    "cover": "/gameimg/truffled/diceamillion.webp",
+    "url": "/games/truffled/gamefile/diceamillion.html"
+  },
+  {
+    "name": "Dinosaur",
+    "cover": "/gameimg/truffled/dino.webp",
+    "url": "/games/truffled/games/dinosaur/index.html"
+  },
+  {
+    "name": "Do Not Take This Cat Home",
+    "cover": "/gameimg/truffled/dont.webp",
+    "url": "/games/truffled/games/donottakethiscathome/index.html"
+  },
+  {
+    "name": "Doge Miner",
+    "cover": "/gameimg/truffled/doge.webp",
+    "url": "/games/truffled/gamefile/Doge Miner.html"
+  },
+  {
+    "name": "Doge Miner 2",
+    "cover": "/gameimg/truffled/dogeminer2.webp",
+    "url": "/games/truffled/gamefile/dm2.html"
+  },
+  {
+    "name": "Dome Keeper, Webport",
+    "cover": "/gameimg/truffled/domekeeper.webp",
+    "url": "/games/truffled/games/domekeeper/index.html"
+  },
+  {
+    "name": "Doodle Jump",
+    "cover": "/gameimg/truffled/doodle.webp",
+    "url": "/games/truffled/gamefile/Doodle Jump.html"
+  },
+  {
+    "name": "Doom",
+    "cover": "/gameimg/truffled/doom.webp",
+    "url": "/games/truffled/games/doom/index.html"
+  },
+  {
+    "name": "Doom 2",
+    "cover": "/gameimg/truffled/doom2.webp",
+    "url": "/games/truffled/gamefile/doom2.html"
+  },
+  {
+    "name": "Doom 3",
+    "cover": "/gameimg/truffled/doom3.webp",
+    "url": "/games/truffled/games/doom3/index.html"
+  },
+  {
+    "name": "Doom 64",
+    "cover": "/gameimg/truffled/doom64.webp",
+    "url": "/games/truffled/gamefile/doom64.html"
+  },
+  {
+    "name": "Dr. Mario",
+    "cover": "/gameimg/truffled/drmario.webp",
+    "url": "/games/truffled/gamefile/drmario.html"
+  },
+  {
+    "name": "Dreadhead Parkour",
+    "cover": "/gameimg/truffled/dread.webp",
+    "url": "/games/truffled/gamefile/dread.html"
+  },
+  {
+    "name": "Drift Boss",
+    "cover": "/gameimg/truffled/driftboss.webp",
+    "url": "/games/truffled/games/drift-boss/index.html"
+  },
+  {
+    "name": "Drift Hunter",
+    "cover": "/gameimg/truffled/hunt.webp",
+    "url": "/games/truffled/gamefile/drift.html"
+  },
+  {
+    "name": "Drive Mad",
+    "cover": "/gameimg/truffled/drive.webp",
+    "url": "/games/truffled/games/drive-mad/index.html"
+  },
+  {
+    "name": "Duck Life 1",
+    "cover": "/gameimg/truffled/duck1.webp",
+    "url": "/games/truffled/games/ducklife1/index.html"
+  },
+  {
+    "name": "Duck Life 2",
+    "cover": "/gameimg/truffled/duck2.webp",
+    "url": "/games/truffled/games/ducklife2/index.html"
+  },
+  {
+    "name": "Duck Life 3",
+    "cover": "/gameimg/truffled/duck3.webp",
+    "url": "/games/truffled/games/ducklife3/index.html"
+  },
+  {
+    "name": "Duck Life 4",
+    "cover": "/gameimg/truffled/duck4.webp",
+    "url": "/games/truffled/games/ducklife4/index.html"
+  },
+  {
+    "name": "Duck Life 5",
+    "cover": "/gameimg/truffled/duck5.webp",
+    "url": "/games/truffled/games/ducklife5/index.html"
+  },
+  {
+    "name": "Duck Life 6",
+    "cover": "/gameimg/truffled/ducklife6.webp",
+    "url": "/games/truffled/games/ducklife6/index.html"
+  },
+  {
+    "name": "Duck Life 7",
+    "cover": "/gameimg/truffled/ducklife7.webp",
+    "url": "/games/truffled/games/ducklife7/index.html"
+  },
+  {
+    "name": "Duck Life 8, Webport",
+    "cover": "/gameimg/truffled/ducklifeadc.webp",
+    "url": "/games/truffled/games/ducklifeadv/"
+  },
+  {
+    "name": "Dumb Ways To Die",
+    "cover": "/gameimg/truffled/dumb.webp",
+    "url": "/games/truffled/games/dumb/index.html"
+  },
+  {
+    "name": "Eggy Car",
+    "cover": "/gameimg/truffled/eggycar.webp",
+    "url": "/games/truffled/gamefile/eggycar.html"
+  },
+  {
+    "name": "Escape Road",
+    "cover": "/gameimg/truffled/road.webp",
+    "url": "/games/truffled/gamefile/escape.html"
+  },
+  {
+    "name": "Escape Road 2",
+    "cover": "/gameimg/truffled/escape2.webp",
+    "url": "/games/truffled/gamefile/road2.html"
+  },
+  {
+    "name": "Escape Road 3",
+    "cover": "/gameimg/truffled/escape3.webp",
+    "url": "/games/truffled/gamefile/escape3.html"
+  },
+  {
+    "name": "Escape Road City 2",
+    "cover": "/gameimg/truffled/roadcity.webp",
+    "url": "/games/truffled/gamefile/roadcity2.html"
+  },
+  {
+    "name": "Falling Fred",
+    "cover": "/gameimg/truffled/super-falling-fred.webp",
+    "url": "/games/truffled/games/falling/index.html"
+  },
+  {
+    "name": "Fallout",
+    "cover": "/gameimg/truffled/fallout.webp",
+    "url": "/games/truffled/gamefile/falloutt.html"
+  },
+  {
+    "name": "Fallout 2, Webport",
+    "cover": "/gameimg/truffled/fallout2.webp",
+    "url": "/games/truffled/games/fo2/index.html"
+  },
+  {
+    "name": "Fancy Pants Adventures",
+    "cover": "/gameimg/truffled/fpa1.webp",
+    "url": "/games/truffled/games/fancypantsadventures/index.html"
+  },
+  {
+    "name": "Fancy Pants Adventures 2",
+    "cover": "/gameimg/truffled/fancy2.webp",
+    "url": "/games/truffled/games/fancypantsadventures2/index.html"
+  },
+  {
+    "name": "Fancy Pants Adventures 3",
+    "cover": "/gameimg/truffled/fpa3.webp",
+    "url": "/games/truffled/gamefile/fpa3.html"
+  },
+  {
+    "name": "Fears To Fathom: Home Alone, Webport",
+    "cover": "/gameimg/truffled/fear.webp",
+    "url": "/games/truffled/games/ftf/index.html"
+  },
+  {
+    "name": "Final Fantasy VII",
+    "cover": "/gameimg/truffled/ffvii.webp",
+    "url": "/games/truffled/gamefile/ffvii.html"
+  },
+  {
+    "name": "Fireboy and Watergirl",
+    "cover": "/gameimg/truffled/fire1.webp",
+    "url": "/games/truffled/games/watergirl-1/index.html"
+  },
+  {
+    "name": "Fireboy and Watergirl 2",
+    "cover": "/gameimg/truffled/fire2.webp",
+    "url": "/games/truffled/games/watergirl-2/index.html"
+  },
+  {
+    "name": "Fireboy and Watergirl 3",
+    "cover": "/gameimg/truffled/fire3.webp",
+    "url": "/games/truffled/games/watergirl-3/index.html"
+  },
+  {
+    "name": "Fireboy and Watergirl 4",
+    "cover": "/gameimg/truffled/fire4.webp",
+    "url": "/games/truffled/games/watergirl-4/index.html"
+  },
+  {
+    "name": "FISH, Webport",
+    "cover": "/gameimg/truffled/fish.webp",
+    "url": "/games/truffled/gamefile/fish.html"
+  },
+  {
+    "name": "Five Nights At Candys",
+    "cover": "/gameimg/truffled/fnac.webp",
+    "url": "/games/truffled/gamefile/fnac.html"
+  },
+  {
+    "name": "Five Nights At Candys 2",
+    "cover": "/gameimg/truffled/fnac2.webp",
+    "url": "/games/truffled/gamefile/fnac2.html"
+  },
+  {
+    "name": "Five Nights At Epsteins",
+    "cover": "/gameimg/truffled/fnae.webp",
+    "url": "/games/truffled/gamefile/fnae.html"
+  },
+  {
+    "name": "Five Nights At Last Breath, Webport",
+    "cover": "/gameimg/truffled/breath.webp",
+    "url": "/games/truffled/gamefile/breath.html"
+  },
+  {
+    "name": "Flappy bird",
+    "cover": "/gameimg/truffled/flapp.webp",
+    "url": "/games/truffled/games/flappybird/index.html"
+  },
+  {
+    "name": "Flying Gorilla, Webport",
+    "cover": "/gameimg/truffled/flying.webp",
+    "url": "/games/truffled/gamefile/gorilla.html"
+  },
+  {
+    "name": "FNAF",
+    "cover": "/gameimg/truffled/splash.webp",
+    "url": "/games/truffled/games/fnaf/index.html"
+  },
+  {
+    "name": "FNAF Sisters Location",
+    "cover": "/gameimg/truffled/sister.webp",
+    "url": "/games/truffled/gamefile/fnafs.html"
+  },
+  {
+    "name": "FNAF Ultimate Custom Night",
+    "cover": "/gameimg/truffled/custom.webp",
+    "url": "/games/truffled/gamefile/fnafu.html"
+  },
+  {
+    "name": "FNAF World",
+    "cover": "/gameimg/truffled/fnafworld.webp",
+    "url": "/games/truffled/gamefile/fnafw.html"
+  },
+  {
+    "name": "FNAF World Refreshed",
+    "cover": "/gameimg/truffled/fne.webp",
+    "url": "/games/truffled/games/fnw/index.html"
+  },
+  {
+    "name": "FNAF2",
+    "cover": "/gameimg/truffled/fnaf2.webp",
+    "url": "/games/truffled/games/2/index.html"
+  },
+  {
+    "name": "FNAF3",
+    "cover": "/gameimg/truffled/3f.webp",
+    "url": "/games/truffled/games/3/index.html"
+  },
+  {
+    "name": "FNAF4",
+    "cover": "/gameimg/truffled/fnaf4.webp",
+    "url": "/games/truffled/games/fnaf4/index.html"
+  },
+  {
+    "name": "FNAF4 Halloween",
+    "cover": "/gameimg/truffled/hollowween.webp",
+    "url": "/games/truffled/gamefile/ween.html"
+  },
+  {
+    "name": "FNAW",
+    "cover": "/gameimg/truffled/fnaw.webp",
+    "url": "/games/truffled/gamefile/fnaw.html"
+  },
+  {
+    "name": "Friday Night Funkin",
+    "cover": "/gameimg/truffled/fnf.webp",
+    "url": "/games/truffled/gamefile/fnf.html"
+  },
+  {
+    "name": "Friday Night Funkin Bop City",
+    "cover": "/gameimg/truffled/bopcity.webp",
+    "url": "/games/truffled/gamefile/bopcity.html"
+  },
+  {
+    "name": "Football Bros",
+    "cover": "/gameimg/truffled/footbros.webp",
+    "url": "/games/truffled/games/footballbros/index.html"
+  },
+  {
+    "name": "Fruit Ninja",
+    "cover": "/gameimg/truffled/ninja.webp",
+    "url": "/games/truffled/games/fruitninja/index.html"
+  },
+  {
+    "name": "Fused240",
+    "cover": "/gameimg/truffled/fused240.webp",
+    "url": "/games/truffled/games/fused240/index.html"
+  },
+  {
+    "name": "Gabriel's Awesome Schoolhouse",
+    "cover": "/gameimg/truffled/gabriel.webp",
+    "url": "/games/truffled/gamefile/gash.html"
+  },
+  {
+    "name": "Gacha Life",
+    "cover": "/gameimg/truffled/gachalife.webp",
+    "url": "/games/truffled/gamefile/life.html"
+  },
+  {
+    "name": "Gacha Verse",
+    "cover": "/gameimg/truffled/gachaverse.webp",
+    "url": "/games/truffled/gamefile/verse.html"
+  },
+  {
+    "name": "Getaway Shootout",
+    "cover": "/gameimg/truffled/getaway.webp",
+    "url": "/games/truffled/games/getaway-shootout/index.html"
+  },
+  {
+    "name": "Geometry Dash, Webport",
+    "cover": "/gameimg/truffled/gd.webp",
+    "url": "/games/truffled/gamefile/gd.html"
+  },
+  {
+    "name": "Getting Over It, Webport",
+    "cover": "/gameimg/truffled/gettin.webp",
+    "url": "/games/truffled/gamefile/goi.html"
+  },
+  {
+    "name": "Gladihoppers",
+    "cover": "/gameimg/truffled/glad.webp",
+    "url": "/games/truffled/gamefile/Gladihoppers.html"
+  },
+  {
+    "name": "Go to bed",
+    "cover": "/gameimg/truffled/gotobed.webp",
+    "url": "/games/truffled/games/GTB/index.html"
+  },
+  {
+    "name": "Google Baseball",
+    "cover": "/gameimg/truffled/google.webp",
+    "url": "/games/truffled/gamefile/gbase.html"
+  },
+  {
+    "name": "Gorilla Tag",
+    "cover": "/gameimg/truffled/gtag.webp",
+    "url": "/games/truffled/games/gtag/index.html"
+  },
+  {
+    "name": "Granny",
+    "cover": "/gameimg/truffled/granny.webp",
+    "url": "/games/truffled/games/Granny/index.html"
+  },
+  {
+    "name": "Granny 2",
+    "cover": "/gameimg/truffled/gran2.webp",
+    "url": "/games/truffled/gamefile/Granny 2.html"
+  },
+  {
+    "name": "Granny 3",
+    "cover": "/gameimg/truffled/gran3.webp",
+    "url": "/games/truffled/gamefile/Granny 3.html"
+  },
+  {
+    "name": "Gravity run",
+    "cover": "/gameimg/truffled/gravity.webp",
+    "url": "/games/truffled/games/gravity-run/index.html"
+  },
+  {
+    "name": "Greybox",
+    "cover": "/gameimg/truffled/grey.webp",
+    "url": "/games/truffled/games/graybox/index.html"
+  },
+  {
+    "name": "GTA I",
+    "cover": "/gameimg/truffled/gta.webp",
+    "url": "/games/truffled/games/gta/index.html"
+  },
+  {
+    "name": "GTA II",
+    "cover": "/gameimg/truffled/gta2.webp",
+    "url": "/games/truffled/games/gta2/index.html"
+  },
+  {
+    "name": "GTA III",
+    "cover": "/gameimg/truffled/gta3.webp",
+    "url": "/games/truffled/games/gta3/index.html"
+  },
+  {
+    "name": "GTA San Andreas",
+    "cover": "/gameimg/truffled/gtasan.webp",
+    "url": "/games/truffled/games/gtasan/index.html"
+  },
+  {
+    "name": "GTA Vice City, Webport",
+    "cover": "/gameimg/truffled/vice.webp",
+    "url": "/games/truffled/games/vicecity/index.html"
+  },
+  {
+    "name": "Gun Mayhem",
+    "cover": "/gameimg/truffled/gun.webp",
+    "url": "/games/truffled/games/funmayhem/index.html"
+  },
+  {
+    "name": "Gun Mayhem 2",
+    "cover": "/gameimg/truffled/gun2.webp",
+    "url": "/games/truffled/games/funmayhem2/index.html"
+  },
+  {
+    "name": "Gun Mayhem Redux",
+    "cover": "/gameimg/truffled/gun3.webp",
+    "url": "/games/truffled/games/funmayhemredux/index.html"
+  },
+  {
+    "name": "Gunspin",
+    "cover": "/gameimg/truffled/guns.webp",
+    "url": "/games/truffled/games/gunspin/index.html"
+  },
+  {
+    "name": "Half life",
+    "cover": "/gameimg/truffled/halflife.webp",
+    "url": "/games/truffled/games/hl-main/index.html"
+  },
+  {
+    "name": "Half life 2",
+    "cover": "/gameimg/truffled/hl2.webp",
+    "url": "/games/truffled/games/hl2/index.html"
+  },
+  {
+    "name": "Half life: Opposing Force",
+    "cover": "/gameimg/truffled/hlof.webp",
+    "url": "/games/truffled/gamefile/hlof.html"
+  },
+  {
+    "name": "Happy Wheels",
+    "cover": "/gameimg/truffled/happy.webp",
+    "url": "/games/truffled/games/happywheels/index.html"
+  },
+  {
+    "name": "Helltaker, Webport",
+    "cover": "/gameimg/truffled/helltaker.webp",
+    "url": "/games/truffled/gamefile/helltaker.html"
+  },
+  {
+    "name": "Hollow Knight",
+    "cover": "/gameimg/truffled/hollow.webp",
+    "url": "/games/truffled/games/hollowknight/index.html"
+  },
+  {
+    "name": "Hotline Miami",
+    "cover": "/gameimg/truffled/hot.webp",
+    "url": "/games/truffled/games/whores/index.html"
+  },
+  {
+    "name": "House Of Hazards",
+    "cover": "/gameimg/truffled/house.webp",
+    "url": "/games/truffled/games/houseofhazards/index.html"
+  },
+  {
+    "name": "HUMAN EXPENDITURE PROGRAM",
+    "cover": "/gameimg/truffled/human.webp",
+    "url": "/games/truffled/gamefile/human.html"
+  },
+  {
+    "name": "Ice Baby Quest 2",
+    "cover": "/gameimg/truffled/icebaby2.webp",
+    "url": "/games/truffled/games/icebaby2/index.html"
+  },
+  {
+    "name": "Idle Breakout",
+    "cover": "/gameimg/truffled/idle.webp",
+    "url": "/games/truffled/games/idle-breakout/index.html"
+  },
+  {
+    "name": "Iron Lung, Webport",
+    "cover": "/gameimg/truffled/iroonlung.webp",
+    "url": "/games/truffled/games/ironlung/index.html"
+  },
+  {
+    "name": "Jeffrey Epstein Basics In Education And Kidnapping, Webport",
+    "cover": "/gameimg/truffled/jeb.webp",
+    "url": "/games/truffled/gamefile/jeb.html"
+  },
+  {
+    "name": "Jeffys Basics, Webport",
+    "cover": "/gameimg/truffled/jeffys.webp",
+    "url": "/games/truffled/games/JeffysBasicsBog/index.html"
+  },
+  {
+    "name": "Jelly Drift",
+    "cover": "/gameimg/truffled/jelly.webp",
+    "url": "/games/truffled/gamefile/jelly.html"
+  },
+  {
+    "name": "Jetpack Joyride",
+    "cover": "/gameimg/truffled/jet.webp",
+    "url": "/games/truffled/games/jetpackjoyride/index.html"
+  },
+  {
+    "name": "Jumbo Mario",
+    "cover": "/gameimg/truffled/jumbo.webp",
+    "url": "/games/truffled/games/JumboMario/index.html"
+  },
+  {
+    "name": "Karlson",
+    "cover": "/gameimg/truffled/karlson.webp",
+    "url": "/games/truffled/gamefile/Karlson.html"
+  },
+  {
+    "name": "Karlson2D",
+    "cover": "/gameimg/truffled/karlson2d.webp",
+    "url": "/games/truffled/games/karlson2d/truffledkarlson2d/index.html"
+  },
+  {
+    "name": "Kindergarten 1",
+    "cover": "/gameimg/truffled/kind1.webp",
+    "url": "/games/truffled/games/kindergarten/1/index.html"
+  },
+  {
+    "name": "Kindergarten 2",
+    "cover": "/gameimg/truffled/kind2.webp",
+    "url": "/games/truffled/games/kindergarten/2/index.html"
+  },
+  {
+    "name": "Kindergarten 3",
+    "cover": "/gameimg/truffled/kind3.webp",
+    "url": "/games/truffled/games/Kindergarten3/index.html"
+  },
+  {
+    "name": "Kirby Soft And Wet, Webport",
+    "cover": "/gameimg/truffled/kirbysoftandwet.webp",
+    "url": "/games/truffled/gamefile/kirbysoftandwet.html"
+  },
+  {
+    "name": "Klifur",
+    "cover": "/gameimg/truffled/kil.webp",
+    "url": "/games/truffled/games/kilfur/index.html"
+  },
+  {
+    "name": "Lacey's Flash Games",
+    "cover": "/gameimg/truffled/lacey.webp",
+    "url": "/games/truffled/gamefile/lacy.html"
+  },
+  {
+    "name": "Learn To Fly",
+    "cover": "/gameimg/truffled/learn1.webp",
+    "url": "/games/truffled/games/learntofly/index.html"
+  },
+  {
+    "name": "Learn To Fly 2",
+    "cover": "/gameimg/truffled/learn2.webp",
+    "url": "/games/truffled/games/learntofly2/index.html"
+  },
+  {
+    "name": "Learn To Fly 3",
+    "cover": "/gameimg/truffled/learn3.webp",
+    "url": "/games/truffled/games/ltf3/index.html"
+  },
+  {
+    "name": "Learn To Fly Idle",
+    "cover": "/gameimg/truffled/learni.webp",
+    "url": "/games/truffled/games/learntoflyidle/index.html"
+  },
+  {
+    "name": "Lego Star Wars",
+    "cover": "/gameimg/truffled/legostarwars.webp",
+    "url": "/games/truffled/gamefile/legostarwars.html"
+  },
+  {
+    "name": "Level Devil",
+    "cover": "/gameimg/truffled/level.webp",
+    "url": "/games/truffled/games/lvldevil/index.html"
+  },
+  {
+    "name": "Line Rider",
+    "cover": "/gameimg/truffled/line.webp",
+    "url": "/games/truffled/games/linerider/index.html"
+  },
+  {
+    "name": "Little Alchemy",
+    "cover": "/gameimg/truffled/lil.webp",
+    "url": "/games/truffled/games/littlealchemy/index.html"
+  },
+  {
+    "name": "Little Alchemy 2",
+    "cover": "/gameimg/truffled/little2.webp",
+    "url": "/games/truffled/gamefile/little2.html"
+  },
+  {
+    "name": "Little Big Planet",
+    "cover": "/gameimg/truffled/lbp.webp",
+    "url": "/games/truffled/games/lbp/index.html"
+  },
+  {
+    "name": "Madness Melee",
+    "cover": "/gameimg/truffled/madness.webp",
+    "url": "/games/truffled/games/bogtruffled/index.html"
+  },
+  {
+    "name": "Mario Kart 64",
+    "cover": "/gameimg/truffled/mk64.webp",
+    "url": "/games/truffled/games/mk64/index.html"
+  },
+  {
+    "name": "Mario Kart 7",
+    "cover": "/gameimg/truffled/mk7.webp",
+    "url": "/games/truffled/games/mk7/index.html"
+  },
+  {
+    "name": "Mario Kart DS",
+    "cover": "/gameimg/truffled/mkds.webp",
+    "url": "/games/truffled/games/mkds/index.html"
+  },
+  {
+    "name": "Mario Party 1",
+    "cover": "/gameimg/truffled/marioparty1.webp",
+    "url": "/games/truffled/gamefile/marioparty.html"
+  },
+  {
+    "name": "Mario Party 2",
+    "cover": "/gameimg/truffled/marioparty2.webp",
+    "url": "/games/truffled/gamefile/marioparty2.html"
+  },
+  {
+    "name": "Mario Party 3",
+    "cover": "/gameimg/truffled/marioparty3.webp",
+    "url": "/games/truffled/gamefile/marioparty3.html"
+  },
+  {
+    "name": "Megaman",
+    "cover": "/gameimg/truffled/megaman.webp",
+    "url": "/games/truffled/gamefile/megaman.html"
+  },
+  {
+    "name": "Melon Playground",
+    "cover": "/gameimg/truffled/melon.webp",
+    "url": "/games/truffled/games/melon-playground/index.html"
+  },
+  {
+    "name": "Merge Rot",
+    "cover": "/gameimg/truffled/rot.webp",
+    "url": "/games/truffled/games/mergerot/index.html"
+  },
+  {
+    "name": "Milkman karlson",
+    "cover": "/gameimg/truffled/milk.webp",
+    "url": "/games/truffled/games/milk/index.html"
+  },
+  {
+    "name": "Minecraft 1.12.2",
+    "cover": "/games/eglar/1.12.webp",
+    "url": "/games/truffled/games/eglar/1dot12dot2/index.html"
+  },
+  {
+    "name": "Minecraft 1.8.8",
+    "cover": "/games/eglar/1.8.webp",
+    "url": "/games/truffled/games/eglar/EaglercraftX_1dot8_Web/index.html"
+  },
+  {
+    "name": "Minecraft Pocket Edition, Webport",
+    "cover": "/gameimg/truffled/mcpe.webp",
+    "url": "/games/truffled/games/mcpe/index.html"
+  },
+  {
+    "name": "Minecraft Wurst",
+    "cover": "/games/eglar/wurst.webp",
+    "url": "/games/truffled/games/eglar/clwurst.html"
+  },
+  {
+    "name": "Minesweeper Mania",
+    "cover": "/gameimg/truffled/minese.webp",
+    "url": "/games/truffled/gamefile/minesweepermania.html"
+  },
+  {
+    "name": "Minesweeper Plus, Webport",
+    "cover": "/gameimg/truffled/mineseplu.webp",
+    "url": "/games/truffled/gamefile/mineplus.html"
+  },
+  {
+    "name": "Monkey Mart",
+    "cover": "/gameimg/truffled/monkey.webp",
+    "url": "/games/truffled/games/MonkeyMart/index.html"
+  },
+  {
+    "name": "Moto X3M",
+    "cover": "/gameimg/truffled/moto.webp",
+    "url": "/games/truffled/games/motox3m/index.html"
+  },
+  {
+    "name": "My Teardrop",
+    "cover": "/gameimg/truffled/mytear.webp",
+    "url": "/games/truffled/gamefile/mytear.html"
+  },
+  {
+    "name": "n-gon",
+    "cover": "/gameimg/truffled/ngon.webp",
+    "url": "/games/truffled/games/n-gon/index.html"
+  },
+  {
+    "name": "Nazi Zombies: Portable",
+    "cover": "/gameimg/truffled/nazi.webp",
+    "url": "/games/truffled/gamefile/nzp.html"
+  },
+  {
+    "name": "Needy Streamer Overload, Webport",
+    "cover": "/gameimg/truffled/nso.webp",
+    "url": "/games/truffled/games/nso/index.html"
+  },
+  {
+    "name": "New Super Mario Bros",
+    "cover": "/gameimg/truffled/nsmb.webp",
+    "url": "/games/truffled/games/nsmb/index.html"
+  },
+  {
+    "name": "Node Buster, Webport",
+    "cover": "/gameimg/truffled/nodebuster.webp",
+    "url": "/games/truffled/games/nodebuster/index.html"
+  },
+  {
+    "name": "Nubbys Number Factory, Webport",
+    "cover": "/gameimg/truffled/nubby.webp",
+    "url": "/games/truffled/gamefile/nubby.html"
+  },
+  {
+    "name": "Om Nom Run",
+    "cover": "/gameimg/truffled/omnomrun.webp",
+    "url": "/games/truffled/gamefile/omnomrun.html"
+  },
+  {
+    "name": "OMORI, Webport",
+    "cover": "/gameimg/truffled/omori.webp",
+    "url": "/games/truffled/gamefile/OMORI.html"
+  },
+  {
+    "name": "Oneshot, Webport",
+    "cover": "/gameimg/truffled/oneshot.webp",
+    "url": "/games/truffled/gamefile/oneshot.html"
+  },
+  {
+    "name": "Orange Roulette",
+    "cover": "/gameimg/truffled/orange.webp",
+    "url": "/games/truffled/gamefile/orange.html"
+  },
+  {
+    "name": "Oshi Oshi Punch",
+    "cover": "/gameimg/truffled/oshi.webp",
+    "url": "/games/truffled/gamefile/onshi.html"
+  },
+  {
+    "name": "Osu!",
+    "cover": "/gameimg/truffled/osu.webp",
+    "url": "/games/truffled/games/osu!/index.html"
+  },
+  {
+    "name": "Overburden, Webport",
+    "cover": "/gameimg/truffled/overburden.webp",
+    "url": "/games/truffled/gamefile/overburden.html"
+  },
+  {
+    "name": "OvO",
+    "cover": "/gameimg/truffled/ovo.webp",
+    "url": "/games/truffled/games/ovo/index.html"
+  },
+  {
+    "name": "OvO 2",
+    "cover": "/gameimg/truffled/ovo2.webp",
+    "url": "/games/truffled/games/OvO2/index.html"
+  },
+  {
+    "name": "OvO Dimensions",
+    "cover": "/gameimg/truffled/ovodi.webp",
+    "url": "/games/truffled/games/OvoDimensions/index.html"
+  },
+  {
+    "name": "Pacman",
+    "cover": "/gameimg/truffled/pacman.webp",
+    "url": "/games/truffled/games/pacman/index.html"
+  },
+  {
+    "name": "Pacman World",
+    "cover": "/gameimg/truffled/pacmanworld.webp",
+    "url": "/games/truffled/gamefile/pacmanw.html"
+  },
+  {
+    "name": "Pacman World 2",
+    "cover": "/gameimg/truffled/pacmanworld2.webp",
+    "url": "/games/truffled/gamefile/pacmanw2.html"
+  },
+  {
+    "name": "Paint Gal Adventures",
+    "cover": "/gameimg/truffled/paintgal.webp",
+    "url": "/games/truffled/games/paintbog/Paint Gal Adventures.html"
+  },
+  {
+    "name": "Papas Bakeria",
+    "cover": "/gameimg/truffled/bake.webp",
+    "url": "/games/truffled/games/papasbakeria/index.html"
+  },
+  {
+    "name": "Papas Burgeria",
+    "cover": "/gameimg/truffled/burger.webp",
+    "url": "/games/truffled/games/papasburgeria/index.html"
+  },
+  {
+    "name": "Papas Cheeseria",
+    "cover": "/gameimg/truffled/cheese.webp",
+    "url": "/games/truffled/games/papascheeseria/index.html"
+  },
+  {
+    "name": "Papas Donuteria",
+    "cover": "/gameimg/truffled/donut.webp",
+    "url": "/games/truffled/games/papasdonuteria/index.html"
+  },
+  {
+    "name": "Papas Freezeria",
+    "cover": "/gameimg/truffled/freeze.webp",
+    "url": "/games/truffled/games/papasfreezeria/index.html"
+  },
+  {
+    "name": "Papas Pizzaeria",
+    "cover": "/gameimg/truffled/pizza.webp",
+    "url": "/games/truffled/games/papaspizza/index.html"
+  },
+  {
+    "name": "Paper Mario",
+    "cover": "/gameimg/truffled/papermario.webp",
+    "url": "/games/truffled/gamefile/papermario.html"
+  },
+  {
+    "name": "Paperio 2",
+    "cover": "/gameimg/truffled/paperio2.webp",
+    "url": "/games/truffled/games/paperio2/index.html"
+  },
+  {
+    "name": "Papers, Please",
+    "cover": "/gameimg/truffled/papers.webp",
+    "url": "/games/truffled/gamefile/papers.html"
+  },
+  {
+    "name": "Parappa The Rapper",
+    "cover": "/gameimg/truffled/rapper.webp",
+    "url": "/games/truffled/games/paps/index.html"
+  },
+  {
+    "name": "Parappa The Rapper 2",
+    "cover": "/gameimg/truffled/parappa2.webp",
+    "url": "/games/truffled/games/parappa2/index.html"
+  },
+  {
+    "name": "Peaks of Yore, Webport",
+    "cover": "/gameimg/truffled/peaksofyore.webp",
+    "url": "/games/truffled/gamefile/peaksofyore.html"
+  },
+  {
+    "name": "Peggle",
+    "cover": "/gameimg/truffled/peggle.webp",
+    "url": "/games/truffled/gamefile/Peggle.html"
+  },
+  {
+    "name": "People Playground, Webport",
+    "cover": "/gameimg/truffled/peoplepg.webp",
+    "url": "/games/truffled/games/PPG/index.html"
+  },
+  {
+    "name": "Pixel Gun 3D",
+    "cover": "/gameimg/truffled/pixelgun.webp",
+    "url": "/games/truffled/games/pixl/index.html"
+  },
+  {
+    "name": "Pizza Tower, Webport",
+    "cover": "/gameimg/truffled/pizzatower.webp",
+    "url": "/games/truffled/gamefile/Pizza Tower.html"
+  },
+  {
+    "name": "Pizza Tower: Scoutdigo",
+    "cover": "/gameimg/truffled/pts.webp",
+    "url": "/games/truffled/gamefile/pts.html"
+  },
+  {
+    "name": "Plants VS Zombies",
+    "cover": "/gameimg/truffled/pvz.webp",
+    "url": "/games/truffled/gamefile/pvs.html"
+  },
+  {
+    "name": "Plants VS Zombies Garden Endless",
+    "cover": "/gameimg/truffled/pvz2.webp",
+    "url": "/games/truffled/games/pvzge/index.html"
+  },
+  {
+    "name": "Pokemon Academy Life Forever",
+    "cover": "/gameimg/truffled/pokemonacademy.webp",
+    "url": "/games/truffled/gamefile/pokemonacademy.html"
+  },
+  {
+    "name": "Pokemon Blue",
+    "cover": "/gameimg/truffled/blue.webp",
+    "url": "/games/truffled/gamefile/blue.html"
+  },
+  {
+    "name": "Pokemon Crystal",
+    "cover": "/gameimg/truffled/crystal.webp",
+    "url": "/games/truffled/gamefile/blob.html"
+  },
+  {
+    "name": "Pokemon Emerald",
+    "cover": "/gameimg/truffled/em.webp",
+    "url": "/games/truffled/gamefile/em.html"
+  },
+  {
+    "name": "Pokemon Gold",
+    "cover": "/gameimg/truffled/gold.webp",
+    "url": "/games/truffled/gamefile/red.html"
+  },
+  {
+    "name": "Pokemon Red",
+    "cover": "/gameimg/truffled/pokemonfirered.webp",
+    "url": "/games/truffled/gamefile/red.html"
+  },
+  {
+    "name": "Polytrack",
+    "cover": "/gameimg/truffled/poly.webp",
+    "url": "/games/truffled/games/polytrack/index.html"
+  },
+  {
+    "name": "Portal",
+    "cover": "/gameimg/truffled/portal.webp",
+    "url": "/games/truffled/games/portal/index.html"
+  },
+  {
+    "name": "Postal, Webport",
+    "cover": "/gameimg/truffled/postal.webp",
+    "url": "/games/truffled/gamefile/postal.html"
+  },
+  {
+    "name": "Pretend its not there",
+    "cover": "/gameimg/truffled/pre.webp",
+    "url": "/games/truffled/games/pretenditsnotthere/index.html"
+  },
+  {
+    "name": "Quake",
+    "cover": "/gameimg/truffled/quake.webp",
+    "url": "/games/truffled/games/quake/index.html"
+  },
+  {
+    "name": "Quake II",
+    "cover": "/gameimg/truffled/quakeii.webp",
+    "url": "/games/truffled/games/quakeii/index.html"
+  },
+  {
+    "name": "Quake III",
+    "cover": "/gameimg/truffled/quakeiii.webp",
+    "url": "/games/truffled/games/quakeiii/Quake3.htm"
+  },
+  {
+    "name": "Raft Wars",
+    "cover": "/gameimg/truffled/raft1.webp",
+    "url": "/games/truffled/games/raft-wars/index.html"
+  },
+  {
+    "name": "Raft Wars 2",
+    "cover": "/gameimg/truffled/raft2.webp",
+    "url": "/games/truffled/games/raft-wars-2/index.html"
+  },
+  {
+    "name": "RAFT",
+    "cover": "/gameimg/truffled/raft.webp",
+    "url": "/games/truffled/games/raft/index.html"
+  },
+  {
+    "name": "Ragdoll Archers",
+    "cover": "/gameimg/truffled/archer.webp",
+    "url": "/games/truffled/games/ragdoll-archers/index.html"
+  },
+  {
+    "name": "Ragdoll Hit",
+    "cover": "/gameimg/truffled/hit.webp",
+    "url": "/games/truffled/games/ragdoll/index.html"
+  },
+  {
+    "name": "Raldi's Crack House",
+    "cover": "/gameimg/truffled/raldi.webp",
+    "url": "/games/truffled/games/raldi/index.html"
+  },
+  {
+    "name": "Rayman",
+    "cover": "/gameimg/truffled/rayman.webp",
+    "url": "/games/truffled/gamefile/rayman.html"
+  },
+  {
+    "name": "RE:RUN",
+    "cover": "/gameimg/truffled/rerun.webp",
+    "url": "/games/truffled/games/rerun/index.html"
+  },
+  {
+    "name": "REPO",
+    "cover": "/gameimg/truffled/repo.webp",
+    "url": "/games/truffled/games/repo/index.html"
+  },
+  {
+    "name": "Resident Evil 1",
+    "cover": "/gameimg/truffled/res1.webp",
+    "url": "/games/truffled/gamefile/res1.html"
+  },
+  {
+    "name": "Resident Evil 2",
+    "cover": "/gameimg/truffled/res2.webp",
+    "url": "/games/truffled/gamefile/res2.html"
+  },
+  {
+    "name": "Retro Bowl",
+    "cover": "/gameimg/truffled/retro.webp",
+    "url": "/games/truffled/games/retro-bowl/index.html"
+  },
+  {
+    "name": "Retro Bowl College",
+    "cover": "/gameimg/truffled/retroc.webp",
+    "url": "/games/truffled/games/rbcollege/index.html"
+  },
+  {
+    "name": "Riddle School",
+    "cover": "/gameimg/truffled/riddle1.webp",
+    "url": "/games/truffled/games/riddleschool/index.html"
+  },
+  {
+    "name": "Riddle School 2",
+    "cover": "/gameimg/truffled/riddle2.webp",
+    "url": "/games/truffled/games/sriddleschool2/index.html"
+  },
+  {
+    "name": "Riddle School 3",
+    "cover": "/gameimg/truffled/riddle3.webp",
+    "url": "/games/truffled/games/riddleschool3/index.html"
+  },
+  {
+    "name": "Riddle School 4",
+    "cover": "/gameimg/truffled/riddle4.webp",
+    "url": "/games/truffled/games/riddleschool4/index.html"
+  },
+  {
+    "name": "Riddle School 5",
+    "cover": "/gameimg/truffled/riddle5.webp",
+    "url": "/games/truffled/games/riddleschool5/index.html"
+  },
+  {
+    "name": "Riddle School Transfer",
+    "cover": "/gameimg/truffled/riddletr.webp",
+    "url": "/games/truffled/games/riddleschooltransfer/index.html"
+  },
+  {
+    "name": "Riddle School Transfer 2",
+    "cover": "/gameimg/truffled/riddletr2.webp",
+    "url": "/games/truffled/games/riddleschooltransfer2/index.html"
+  },
+  {
+    "name": "Rooftop Snipers",
+    "cover": "/gameimg/truffled/roof2.webp",
+    "url": "/games/truffled/games/rooftop-snipers/index.html"
+  },
+  {
+    "name": "Rooftop Snipers 2",
+    "cover": "/gameimg/truffled/roof1.webp",
+    "url": "/games/truffled/games/rooftop-snipers-2/index.html"
+  },
+  {
+    "name": "Run",
+    "cover": "/gameimg/truffled/run1.webp",
+    "url": "/games/truffled/gamefile/run.html"
+  },
+  {
+    "name": "Run 2",
+    "cover": "/gameimg/truffled/run2.webp",
+    "url": "/games/truffled/gamefile/run2.html"
+  },
+  {
+    "name": "Run 3",
+    "cover": "/gameimg/truffled/run3.webp",
+    "url": "/games/truffled/gamefile/run3.html"
+  },
+  {
+    "name": "Running Fred, Webport",
+    "cover": "/gameimg/truffled/fred.webp",
+    "url": "/games/truffled/games/fred/index.html"
+  },
+  {
+    "name": "Saihate Station, Webport",
+    "cover": "/gameimg/truffled/saihatestation.webp",
+    "url": "/games/truffled/gamefile/saihatestation.html"
+  },
+  {
+    "name": "Sandboxels",
+    "cover": "/gameimg/truffled/sand.webp",
+    "url": "/games/truffled/gamefile/Sandboxels.html"
+  },
+  {
+    "name": "Sanic Ball",
+    "cover": "/gameimg/truffled/sanicball.webp",
+    "url": "/games/truffled/games/ball/index.html"
+  },
+  {
+    "name": "Scary Path",
+    "cover": "/gameimg/truffled/path.webp",
+    "url": "/games/truffled/games/scary-path/index.html"
+  },
+  {
+    "name": "Schoolboy Runaway, Webport",
+    "cover": "/gameimg/truffled/runaway.webp",
+    "url": "/games/truffled/gamefile/runaway.html"
+  },
+  {
+    "name": "Shift At Midnight, Webport",
+    "cover": "/gameimg/truffled/shift.webp",
+    "url": "/games/truffled/gamefile/shift.html"
+  },
+  {
+    "name": "Silksong, Webport",
+    "cover": "/gameimg/truffled/silk.webp",
+    "url": "/games/truffled/games/silk/index.html"
+  },
+  {
+    "name": "Skibidi Shooter",
+    "cover": "/gameimg/truffled/ski.webp",
+    "url": "/games/truffled/games/skibidi-shooter/index.html"
+  },
+  {
+    "name": "Slender: The 8 Pages",
+    "cover": "/gameimg/truffled/slender.webp",
+    "url": "/games/truffled/games/slender/index.html"
+  },
+  {
+    "name": "Slendytubbies",
+    "cover": "/gameimg/truffled/slendy.webp",
+    "url": "/games/truffled/games/slendy/index.html"
+  },
+  {
+    "name": "Slient Hill",
+    "cover": "/gameimg/truffled/slienthill.webp",
+    "url": "/games/truffled/gamefile/slienthill.html"
+  },
+  {
+    "name": "Slime Ranchers",
+    "cover": "/gameimg/truffled/slime.webp",
+    "url": "/games/truffled/gamefile/Slimerancher.html"
+  },
+  {
+    "name": "Slither.io",
+    "cover": "/gameimg/truffled/sli.webp",
+    "url": "/games/truffled/gamefile/sfge.html"
+  },
+  {
+    "name": "Slope",
+    "cover": "/gameimg/truffled/slope.webp",
+    "url": "/games/truffled/games/slope/index.html"
+  },
+  {
+    "name": "Slowroads",
+    "cover": "/gameimg/truffled/slow.webp",
+    "url": "/games/truffled/games/slowroads/index.html"
+  },
+  {
+    "name": "Super Mario 64",
+    "cover": "/gameimg/truffled/sm64.webp",
+    "url": "/games/truffled/games/sm64/index.html"
+  },
+  {
+    "name": "Super Mario Bros",
+    "cover": "/gameimg/truffled/smb.webp",
+    "url": "/games/truffled/gamefile/smb.html"
+  },
+  {
+    "name": "Super Mario Galaxy DS",
+    "cover": "/gameimg/truffled/smgds.webp",
+    "url": "/games/truffled/gamefile/smgds.html"
+  },
+  {
+    "name": "Super Oliver World",
+    "cover": "/gameimg/truffled/superoliverworld.webp",
+    "url": "/games/truffled/gamefile/superoliverworld.html"
+  },
+  {
+    "name": "Super Smash Bros",
+    "cover": "/gameimg/truffled/ssm.webp",
+    "url": "/games/truffled/gamefile/ssm.html"
+  },
+  {
+    "name": "Smash Karts",
+    "cover": "/gameimg/truffled/smashkarts.webp",
+    "url": "/games/truffled/games/smashkarts/index.html"
+  },
+  {
+    "name": "Snow Rider 3D",
+    "cover": "/gameimg/truffled/snow.webp",
+    "url": "/games/truffled/games/snowrider3D-main/index.html"
+  },
+  {
+    "name": "Snow Battle",
+    "cover": "/gameimg/truffled/snowio.webp",
+    "url": "/games/truffled/gamefile/snow.html"
+  },
+  {
+    "name": "Soccer Bros",
+    "cover": "/gameimg/truffled/soccer.webp",
+    "url": "/games/truffled/games/soccerbros/index.html"
+  },
+  {
+    "name": "Soccer Random",
+    "cover": "/gameimg/truffled/soccerra.webp",
+    "url": "/games/truffled/games/soccer-random/index.html"
+  },
+  {
+    "name": "Solar Smash",
+    "cover": "/gameimg/truffled/solar.webp",
+    "url": "/games/truffled/gamefile/solar.html"
+  },
+  {
+    "name": "Solitaire",
+    "cover": "/gameimg/truffled/soli.webp",
+    "url": "/games/truffled/games/solitaire/index.html"
+  },
+  {
+    "name": "Sonic 1",
+    "cover": "/gameimg/truffled/sonic1.webp",
+    "url": "/games/truffled/games/sonic/index.html"
+  },
+  {
+    "name": "Sonic 2",
+    "cover": "/gameimg/truffled/sonic2.webp",
+    "url": "/games/truffled/games/sonic2/index.html"
+  },
+  {
+    "name": "Sonic 3",
+    "cover": "/gameimg/truffled/sonic3.webp",
+    "url": "/games/truffled/games/sonic3/sonic3.html"
+  },
+  {
+    "name": "Sonic 4",
+    "cover": "/gameimg/truffled/sonic4.webp",
+    "url": "/games/truffled/games/sonic4/index.html"
+  },
+  {
+    "name": "Sonic 3D Blast",
+    "cover": "/gameimg/truffled/sonic3dblast.webp",
+    "url": "/games/truffled/gamefile/sonic3dblast.html"
+  },
+  {
+    "name": "Sonic CD",
+    "cover": "/gameimg/truffled/soniccd.webp",
+    "url": "/games/truffled/games/soniccd/soniccd.html"
+  },
+  {
+    "name": "Sonic EXE",
+    "cover": "/gameimg/truffled/sonicexe.webp",
+    "url": "/games/truffled/gamefile/sonicexe.html"
+  },
+  {
+    "name": "Sonic Jam",
+    "cover": "/gameimg/truffled/sonicjam.webp",
+    "url": "/games/truffled/gamefile/sonicjam.html"
+  },
+  {
+    "name": "Sonic Mania, Webport",
+    "cover": "/gameimg/truffled/mania.webp",
+    "url": "/games/truffled/gamefile/sonic.html"
+  },
+  {
+    "name": "Sonic R",
+    "cover": "/gameimg/truffled/sonicr.webp",
+    "url": "/games/truffled/gamefile/sonicr.html"
+  },
+  {
+    "name": "Sonic Robo Blast 2",
+    "cover": "/gameimg/truffled/robo.webp",
+    "url": "/games/truffled/games/srb2/index.html"
+  },
+  {
+    "name": "Sonic Robo Blast 2 KART",
+    "cover": "/gameimg/truffled/kart.webp",
+    "url": "/games/truffled/games/kart/index.html"
+  },
+  {
+    "name": "Sonic World Next",
+    "cover": "/gameimg/truffled/swn.webp",
+    "url": "/games/truffled/games/swn/index.html"
+  },
+  {
+    "name": "Space waves",
+    "cover": "/gameimg/truffled/space.webp",
+    "url": "/games/truffled/gamefile/spacewaves.html"
+  },
+  {
+    "name": "Spank the monkey",
+    "cover": "/gameimg/truffled/monk.webp",
+    "url": "/games/truffled/gamefile/monkey.html"
+  },
+  {
+    "name": "Speed Stars",
+    "cover": "/gameimg/truffled/speed.webp",
+    "url": "/games/truffled/games/speed-stars/index.html"
+  },
+  {
+    "name": "Spelunky Classic HD",
+    "cover": "/gameimg/truffled/spelunkyclassic.webp",
+    "url": "/games/truffled/gamefile/spelunky.html"
+  },
+  {
+    "name": "Starbound, Webport",
+    "cover": "/gameimg/truffled/starbound.webp",
+    "url": "/games/truffled/games/Starbound/index.html"
+  },
+  {
+    "name": "Stardew Valley, Webport",
+    "cover": "/gameimg/truffled/stardew.webp",
+    "url": "/games/truffled/games/stardew/index.html"
+  },
+  {
+    "name": "Stick War: Legacy",
+    "cover": "/gameimg/truffled/stickwar.webp",
+    "url": "/games/truffled/gamefile/stickwar.html"
+  },
+  {
+    "name": "Stick With It, Webport",
+    "cover": "/gameimg/truffled/stick.webp",
+    "url": "/games/truffled/games/stick/index.html"
+  },
+  {
+    "name": "Stickman Hook",
+    "cover": "/gameimg/truffled/stickman.webp",
+    "url": "/games/truffled/games/stickman-hook/index.html"
+  },
+  {
+    "name": "Subway Surfers",
+    "cover": "/gameimg/truffled/sub.webp",
+    "url": "/games/truffled/games/subway-surfers/index.html"
+  },
+  {
+    "name": "Super Hot",
+    "cover": "/gameimg/truffled/superhot.webp",
+    "url": "/games/truffled/games/superhot/index.html"
+  },
+  {
+    "name": "Super Meat Boy",
+    "cover": "/gameimg/truffled/meat.webp",
+    "url": "/games/truffled/games/meatboy/index.html"
+  },
+  {
+    "name": "Super Monkey Ball 1 & 2",
+    "cover": "/gameimg/truffled/monkb.webp",
+    "url": "/games/truffled/gamefile/monk.html"
+  },
+  {
+    "name": "Super Monkey Ball JR",
+    "cover": "/gameimg/truffled/supermonkey.webp",
+    "url": "/games/truffled/gamefile/supermonkey.html"
+  },
+  {
+    "name": "Super Smash Flash",
+    "cover": "/gameimg/truffled/supersmash.webp",
+    "url": "/games/truffled/gamefile/ssf.html"
+  },
+  {
+    "name": "Super Smash Flash 2",
+    "cover": "/gameimg/truffled/ssf2.webp",
+    "url": "/games/truffled/gamefile/ssf2.html"
+  },
+  {
+    "name": "Survivor.io, Webport",
+    "cover": "/gameimg/truffled/survivorio.webp",
+    "url": "/games/truffled/gamefile/survivor.html"
+  },
+  {
+    "name": "Taiko No Tatsujini",
+    "cover": "/gameimg/truffled/taiko.webp",
+    "url": "/games/truffled/games/psp/tja/index.html"
+  },
+  {
+    "name": "Tanuki Sunset",
+    "cover": "/gameimg/truffled/tanukisunset.webp",
+    "url": "/games/truffled/games/tanukisunset/index.html"
+  },
+  {
+    "name": "Tattle Tail, Webport",
+    "cover": "/gameimg/truffled/tat.webp",
+    "url": "/games/truffled/games/tattletail/index.html"
+  },
+  {
+    "name": "Ten Basket",
+    "cover": "/gameimg/truffled/ten.webp",
+    "url": "/games/truffled/games/ten-basket/index.html"
+  },
+  {
+    "name": "Terraria, Webport",
+    "cover": "/gameimg/truffled/ter.webp",
+    "url": "/games/truffled/games/terraria/terraria-wrapper.html"
+  },
+  {
+    "name": "Tetris",
+    "cover": "/gameimg/truffled/tet.webp",
+    "url": "/games/truffled/games/tetris/index.html"
+  },
+  {
+    "name": "Tetrisweeper",
+    "cover": "/gameimg/truffled/tetriss.webp",
+    "url": "/games/truffled/games/tetrisweeper/"
+  },
+  {
+    "name": "The Binding Of Issac",
+    "cover": "/gameimg/truffled/tboi.webp",
+    "url": "/games/truffled/games/binding-of-isaac/index.html"
+  },
+  {
+    "name": "The Binding Of Isaac Wrath Of The Lamb",
+    "cover": "/gameimg/truffled/tboiw.webp",
+    "url": "/games/truffled/gamefile/tboiw.html"
+  },
+  {
+    "name": "The Binding Of Isaac Wrath Of The Lamb: Eternal",
+    "cover": "/gameimg/truffled/boilambeternal.webp",
+    "url": "/games/truffled/gamefile/boilambeternal.html"
+  },
+  {
+    "name": "The Binding Of Issac: Rebirth",
+    "cover": "/gameimg/truffled/tboir.webp",
+    "url": "/games/truffled/games/psp/tboir/index.html"
+  },
+  {
+    "name": "The Impossible Quiz",
+    "cover": "/gameimg/truffled/quiz.webp",
+    "url": "/games/truffled/games/theimpossiblequiz/index.html"
+  },
+  {
+    "name": "The Legend of Zelda Ocarina of Time",
+    "cover": "/gameimg/truffled/tloz.webp",
+    "url": "/games/truffled/gamefile/tloz.html"
+  },
+  {
+    "name": "Thats Not My Neighbor",
+    "cover": "/gameimg/truffled/thatsnot.webp",
+    "url": "/games/truffled/gamefile/thatsnot.html"
+  },
+  {
+    "name": "There Is No Game",
+    "cover": "/gameimg/truffled/ting.webp",
+    "url": "/games/truffled/games/there-is-no-game/index.html"
+  },
+  {
+    "name": "Time Shooter 1",
+    "cover": "/gameimg/truffled/tim1.webp",
+    "url": "/games/truffled/gamefile/time1.html"
+  },
+  {
+    "name": "Time Shooter 2",
+    "cover": "/gameimg/truffled/tim2.webp",
+    "url": "/games/truffled/games/timeshooter2/index.html"
+  },
+  {
+    "name": "Time Shooter 3",
+    "cover": "/gameimg/truffled/tim3.webp",
+    "url": "/games/truffled/games/timeshoot3/index.html"
+  },
+  {
+    "name": "Tiny Fishing",
+    "cover": "/gameimg/truffled/tiny.webp",
+    "url": "/games/truffled/games/tiny-fishing/index.html"
+  },
+  {
+    "name": "To The Core",
+    "cover": "/gameimg/truffled/to.webp",
+    "url": "/games/truffled/games/tothecore/index.html"
+  },
+  {
+    "name": "Tomb Of The Mask",
+    "cover": "/gameimg/truffled/tomb.webp",
+    "url": "/games/truffled/games/tombofthemask/index.html"
+  },
+  {
+    "name": "Tomodachi Collection",
+    "cover": "/gameimg/truffled/tomo.webp",
+    "url": "/games/truffled/gamefile/tomo.html"
+  },
+  {
+    "name": "Touhou Mother",
+    "cover": "/gameimg/truffled/touhou.webp",
+    "url": "/games/truffled/games/touhoumother/index.html"
+  },
+  {
+    "name": "Tube Jumpers",
+    "cover": "/gameimg/truffled/tube.webp",
+    "url": "/games/truffled/gamefile/tube.html"
+  },
+  {
+    "name": "Tung Tung Horror",
+    "cover": "/gameimg/truffled/tung.webp",
+    "url": "/games/truffled/gamefile/tung.html"
+  },
+  {
+    "name": "Ultrakill",
+    "cover": "/gameimg/truffled/ultra.webp",
+    "url": "/games/truffled/games/ultrakill/ultrakill/index.html"
+  },
+  {
+    "name": "Ultrapool",
+    "cover": "/gameimg/truffled/ultrapool.webp",
+    "url": "/games/truffled/gamefile/ultrapool.html"
+  },
+  {
+    "name": "Um Jammer Lammy",
+    "cover": "/gameimg/truffled/jammer.webp",
+    "url": "/games/truffled/gamefile/jemmer.html"
+  },
+  {
+    "name": "Undertale",
+    "cover": "/gameimg/truffled/uertale.webp",
+    "url": "/games/truffled/gamefile/undertale.html"
+  },
+  {
+    "name": "Undertale Yellow",
+    "cover": "/gameimg/truffled/udy.webp",
+    "url": "/games/truffled/games/uty/play.html"
+  },
+  {
+    "name": "Untitled Goose Game",
+    "cover": "/gameimg/truffled/untitled.webp",
+    "url": "/games/truffled/games/UntitledGooseGameBog/index.html"
+  },
+  {
+    "name": "Vampire Survivors",
+    "cover": "/gameimg/truffled/vampire.webp",
+    "url": "/games/truffled/games/vampire/index.html"
+  },
+  {
+    "name": "Vex",
+    "cover": "/gameimg/truffled/vex.webp",
+    "url": "/games/truffled/games/vex/index.html"
+  },
+  {
+    "name": "Vex 2",
+    "cover": "/gameimg/truffled/vex2.webp",
+    "url": "/games/truffled/gamefile/vex2.html"
+  },
+  {
+    "name": "Vex 3",
+    "cover": "/gameimg/truffled/vex3.webp",
+    "url": "/games/truffled/games/vex3/index.html"
+  },
+  {
+    "name": "Vex 4",
+    "cover": "/gameimg/truffled/vex4.webp",
+    "url": "/games/truffled/games/vex4/index.html"
+  },
+  {
+    "name": "Vex 5",
+    "cover": "/gameimg/truffled/vex5.webp",
+    "url": "/games/truffled/games/vex5/index.html"
+  },
+  {
+    "name": "Vex 6",
+    "cover": "/gameimg/truffled/vex6.webp",
+    "url": "/games/truffled/gamefile/vex6.html"
+  },
+  {
+    "name": "Vex 7",
+    "cover": "/gameimg/truffled/vex7.webp",
+    "url": "/games/truffled/gamefile/vex7.html"
+  },
+  {
+    "name": "Vex 8",
+    "cover": "/gameimg/truffled/vex8.webp",
+    "url": "/games/truffled/gamefile/vex8.html"
+  },
+  {
+    "name": "Vib-Ribbon",
+    "cover": "/gameimg/truffled/vib.webp",
+    "url": "/games/truffled/gamefile/vib.html"
+  },
+  {
+    "name": "Volley Random",
+    "cover": "/games/volley-random/splash.png",
+    "url": "/games/truffled/games/volley-random/index.html"
+  },
+  {
+    "name": "Warioware D.I.Y",
+    "cover": "/gameimg/truffled/wariowarediy.webp",
+    "url": "/games/truffled/gamefile/wariowarediy.html"
+  },
+  {
+    "name": "We Become What We behold",
+    "cover": "/gameimg/truffled/wbwwb.webp",
+    "url": "/games/truffled/gamefile/wbwwb.html"
+  },
+  {
+    "name": "Webfishing",
+    "cover": "/gameimg/truffled/web.webp",
+    "url": "/games/truffled/games/webfishing/"
+  },
+  {
+    "name": "Who's Your Daddy",
+    "cover": "/gameimg/truffled/daddy.webp",
+    "url": "/games/truffled/games/whoseyourdaddy/index.html"
+  },
+  {
+    "name": "Witch's Heart",
+    "cover": "/gameimg/truffled/witches.webp",
+    "url": "/games/truffled/gamefile/witches.html"
+  },
+  {
+    "name": "Wordle",
+    "cover": "/gameimg/truffled/world.webp",
+    "url": "/games/truffled/games/wordle-unlimited/index.html"
+  },
+  {
+    "name": "Worlds Hardest Game",
+    "cover": "/gameimg/truffled/wrdd.webp",
+    "url": "/games/truffled/gamefile/twhg.html"
+  },
+  {
+    "name": "Worlds Hardest Game 2",
+    "cover": "/games/worlds-hardest-game-2/the-worlds-hardest-game-2.jpg",
+    "url": "/games/truffled/games/worlds-hardest-game-2/index.html"
+  },
+  {
+    "name": "Worlds Hardest Game 3",
+    "cover": "/gameimg/truffled/3.webp",
+    "url": "/games/truffled/games/worlds-hardest-game-3/index.html"
+  },
+  {
+    "name": "Woody's Incredible Journey To The Escape From Eternal Terror",
+    "cover": "/gameimg/truffled/WIJ.webp",
+    "url": "/games/truffled/games/WIJ/index.html"
+  },
+  {
+    "name": "Yandere Simulator, Webport",
+    "cover": "/gameimg/truffled/yandere.webp",
+    "url": "/games/truffled/gamefile/yandere.html"
+  },
+  {
+    "name": "Yoked",
+    "cover": "/gameimg/truffled/yoked.webp",
+    "url": "/games/truffled/gamefile/yoked.html"
+  },
+  {
+    "name": "Your Only Move Is HUSTLE, YOMI Hustle, Webport",
+    "cover": "/gameimg/truffled/YOMI.webp",
+    "url": "/games/truffled/games/YOMIHustle/index.html"
+  },
+  {
+    "name": "Yume Nikki, Webport",
+    "cover": "/gameimg/truffled/yumi.webp",
+    "url": "/games/truffled/gamefile/yume.html"
+  }
+]

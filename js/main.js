@@ -1,22 +1,9 @@
-// splash text
-const splashes = [
-  "spydr online...",
-  "system loaded",
-  "neon protocol active",
-  "welcome back",
-  "don’t get caught"
-];
-
-document.getElementById("splash").textContent =
-  splashes[Math.floor(Math.random() * splashes.length)];
-
-
-// clock
+// CLOCK
 function updateClock() {
   const now = new Date();
 
   document.getElementById("time").textContent =
-    now.toLocaleTimeString();
+    now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 
   document.getElementById("date").textContent =
     now.toDateString();
@@ -26,49 +13,52 @@ setInterval(updateClock, 1000);
 updateClock();
 
 
-// const rotating text
-const constText = [
-  "const: spider core",
-  "const: system online",
-  "const: neon load",
-  "const: runtime active"
+// CONST TEXT (clean system-style rotation)
+const texts = [
+  "system: spydr core loaded",
+  "initializing modules...",
+  "syncing interface",
+  "render engine online",
+  "welcome"
 ];
 
-const el = document.getElementById("constText");
+const constText = document.getElementById("constText");
 
 setInterval(() => {
-  el.textContent =
-    constText[Math.floor(Math.random() * constText.length)];
+  constText.textContent =
+    texts[Math.floor(Math.random() * texts.length)];
 }, 2500);
 
 
-// navigation
-function go(page) {
-  document.body.style.opacity = "0";
-  setTimeout(() => window.location.href = page, 300);
-}
-
-function goUpdates() {
-  window.location.href = "/updates.html";
-}
-
-
-// vanta init
+// LOADING SCREEN HANDLER (VIDEO)
 window.addEventListener("load", () => {
-  try {
-    VANTA.FOG({
-      el: "#vanta-bg",
-      highlightColor: 0x6d28d9,
-      midtoneColor: 0x4c1d95,
-      lowlightColor: 0x000000,
-      baseColor: 0x050505,
-      blurFactor: 0.7,
-      speed: 2,
-      zoom: 0.4
-    });
+  const video = document.getElementById("loadVideo");
+  const loading = document.getElementById("loading-screen");
+  const app = document.getElementById("app");
 
-    document.getElementById("vanta-bg").style.opacity = "1";
-  } catch (e) {
-    console.log(e);
+  // wait for video to finish or force timeout
+  let done = false;
+
+  function finish() {
+    if (done) return;
+    done = true;
+
+    loading.style.opacity = "0";
+    setTimeout(() => {
+      loading.style.display = "none";
+      app.style.opacity = "1";
+    }, 600);
   }
+
+  // if video ends
+  video.onended = finish;
+
+  // fallback timeout (important so it never gets stuck)
+  setTimeout(finish, 5000);
 });
+
+
+// NAV
+function go(page) {
+  window.location.href = page;
+}

@@ -2,65 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>spydr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- remix icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
 
-  <link rel="stylesheet" href="/css/main.css"/>
+  <script src="/js/theme.js"></script>
+  <script src="/js/three.min.js"></script>
 </head>
 
 <body>
 
-  <!-- SIDEBAR -->
-  <nav class="sidebar">
-    
-    <div class="brand">
-      <div class="logo">spydr</div>
-      <div class="const-text" id="constText">loading...</div>
+  <!-- BACKGROUND -->
+  <div id="vanta-bg"></div>
+  <div class="overlay"></div>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div id="time">--:--:--</div>
+    <div id="date">loading...</div>
+  </div>
+
+  <!-- TOP RIGHT -->
+  <div class="top-right">
+    <button onclick="go('/settings.html')">⚙ settings</button>
+    <button onclick="go('/login.html')">🔐 login</button>
+  </div>
+
+  <!-- MENU -->
+  <div class="menu-wrapper">
+
+    <button id="menu-btn">☰</button>
+
+    <div id="menu">
+      <button onclick="go('/games.html')">🎮 games</button>
+      <button onclick="go('/apps.html')">📦 apps</button>
+      <button onclick="go('/browser.html')">🌐 browser</button>
+      <button onclick="go('/watch.html')">🎬 movies</button>
+      <button onclick="go('/ai.html')">🤖 ai chat</button>
+      <button onclick="go('/chat.html')">💬 chat</button>
+      <button onclick="go('/music.html')">🎵 music</button>
     </div>
 
-    <div class="nav-links">
-      <a href="#home"><i class="ri-home-line"></i><span>home</span></a>
-      <a href="#featured"><i class="ri-star-line"></i><span>featured</span></a>
-      <a href="#games"><i class="ri-gamepad-line"></i><span>games</span></a>
-      <a href="#credits"><i class="ri-information-line"></i><span>credits</span></a>
-    </div>
+  </div>
 
-  </nav>
+  <!-- CENTER -->
+  <div class="center">
 
-  <!-- MAIN -->
-  <main class="main">
+    <div class="logo-container">
 
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <h1>spydr</h1>
-      <p>clean. fast. minimal.</p>
-    </section>
+      <img id="spider" src="spider.png" alt="spydr">
 
-    <!-- FEATURED -->
-    <section id="featured" class="section">
-      <h2>featured</h2>
-      <div class="grid">
-        <div class="card">game one</div>
-        <div class="card">game two</div>
-        <div class="card">game three</div>
+      <div class="logo-text-wrap">
+        <div class="logo">spydr</div>
+        <div class="version-tag" id="constText">loading...</div>
       </div>
-    </section>
 
-    <!-- GAMES -->
-    <section id="games" class="section">
-      <h2>games</h2>
-      <div class="grid" id="gameGrid"></div>
-    </section>
+    </div>
 
-    <!-- FOOTER -->
-    <footer id="credits">
-      <p>spydr © 2026</p>
-    </footer>
+  </div>
 
-  </main>
+  <!-- SPLASH -->
+  <div class="splash" id="splash"></div>
+
+  <!-- VERSION -->
+  <div class="version-area">
+    <button onclick="goUpdates()">current version: spydr v1.0</button>
+  </div>
 
   <script src="/js/main.js"></script>
 </body>

@@ -3,74 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <title>spydr</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <script src="/js/theme.js"></script>
-  <script src="/js/three.min.js"></script>
+  <link rel="stylesheet" href="/css/main.css"/>
 </head>
 
 <body>
 
-  <!-- BACKGROUND -->
-  <div id="vanta-bg"></div>
-  <div class="overlay"></div>
+<!-- LOADING SCREEN -->
+<div id="loading-screen">
+  <video id="loadVideo" autoplay muted playsinline>
+    <source src="/assets/images/load.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- APP -->
+<div id="app">
 
   <!-- TOP BAR -->
-  <div class="top-bar">
-    <div id="time">--:--:--</div>
+  <div class="top">
+    <div id="time">--:--</div>
     <div id="date">loading...</div>
-  </div>
-
-  <!-- TOP RIGHT -->
-  <div class="top-right">
-    <button onclick="go('/settings.html')">⚙ settings</button>
-    <button onclick="go('/login.html')">🔐 login</button>
-  </div>
-
-  <!-- MENU -->
-  <div class="menu-wrapper">
-
-    <button id="menu-btn">☰</button>
-
-    <div id="menu">
-      <button onclick="go('/games.html')">🎮 games</button>
-      <button onclick="go('/apps.html')">📦 apps</button>
-      <button onclick="go('/browser.html')">🌐 browser</button>
-      <button onclick="go('/watch.html')">🎬 movies</button>
-      <button onclick="go('/ai.html')">🤖 ai chat</button>
-      <button onclick="go('/chat.html')">💬 chat</button>
-      <button onclick="go('/music.html')">🎵 music</button>
-    </div>
-
   </div>
 
   <!-- CENTER -->
   <div class="center">
-
-    <div class="logo-container">
-
-      <img id="spider" src="spider.png" alt="spydr">
-
-      <div class="logo-text-wrap">
-        <div class="logo">spydr</div>
-        <div class="version-tag" id="constText">loading...</div>
-      </div>
-
-    </div>
-
+    <h1 class="logo">spydr</h1>
+    <div class="const" id="constText">initializing...</div>
   </div>
 
-  <!-- SPLASH -->
-  <div class="splash" id="splash"></div>
-
-  <!-- VERSION -->
-  <div class="version-area">
-    <button onclick="goUpdates()">current version: spydr v1.0</button>
+  <!-- MENU -->
+  <div class="menu">
+    <button onclick="go('games.html')">games</button>
+    <button onclick="go('apps.html')">apps</button>
+    <button onclick="go('browser.html')">browser</button>
+    <button onclick="go('chat.html')">chat</button>
   </div>
 
-  <script src="/js/main.js"></script>
+</div>
+
+<script src="/js/main.js"></script>
 </body>
 </html>

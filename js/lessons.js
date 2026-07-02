@@ -72,11 +72,7 @@ function buildSourceMenu() {
     const item = document.createElement("div");
     item.className = "dropdown-item";
 
-    item.innerHTML = `
-      <i class="${source.Icon || "ri-folder-line"}"></i>
-      <span>${source.Name}</span>
-    `;
-
+    item.innerHTML = `<i class="${source.Icon || "ri-folder-line"}"></i><span>${source.Name}</span>`;
     item.onclick = () => setSource(index);
 
     dropdownMenu.appendChild(item);
@@ -147,11 +143,7 @@ async function loadGames() {
   } catch (err) {
     console.error(err);
 
-    gameGrid.innerHTML = `
-      <div style="padding:20px;color:#fff;">
-        failed to load games
-      </div>
-    `;
+    gameGrid.innerHTML = `<div style="padding:20px;color:#fff;">failed to load games</div>`;
   }
 }
 
@@ -170,11 +162,7 @@ function renderGames() {
     const card = document.createElement("div");
     card.className = "game-card";
 
-    card.innerHTML = `
-      <img src="${getCover(game)}">
-      <span>${game.name}</span>
-    `;
-
+    card.innerHTML = `<img src="${getCover(game)}"><span>${game.name}</span>`;
     card.onclick = () => openGame(game);
 
     gameGrid.appendChild(card);
@@ -201,7 +189,7 @@ function openGame(game) {
   let url = getGameURL(game);
 
   if (game.prx) {
-    url = `/embed.html?url=${encodeURIComponent(url)}`;
+    url = `embed.html?url=${encodeURIComponent(url)}`;
   }
 
   gameView.style.display = "flex";
@@ -258,7 +246,7 @@ function startLumin() {
 async function init() {
   try {
     const response = await fetch(
-      "/assets/json/gzone-main.json?t=" + Date.now()
+      "assets/json/gzone-main.json?t=" + Date.now()
     );
 
     if (!response.ok) {
@@ -276,11 +264,7 @@ async function init() {
   } catch (err) {
     console.error(err);
 
-    gameGrid.innerHTML = `
-      <div style="padding:20px;color:white;">
-        failed to initialize
-      </div>
-    `;
+    gameGrid.innerHTML = `<div style="padding:20px;color:white;">failed to initialize</div>`;
   }
 }
 

@@ -3,11 +3,7 @@ function updateClock() {
   const now = new Date();
 
   document.getElementById("time").textContent =
-    now.toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit"
-    });
+    now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
 
   document.getElementById("date").textContent =
     now.toDateString();
@@ -19,14 +15,14 @@ updateClock();
 
 // CONST TEXT
 const lines = [
-  "system initializing",
+  "system initializing...",
   "spydr core active",
   "render engine online",
-  "weaving everything together",
+  "weaving everything togther",
   "grayscale protocol enabled"
 ];
 
-const constText = document.getElementById("constText");
+const constText = document.querySelector(".const");
 
 setInterval(() => {
   constText.textContent =
@@ -34,8 +30,8 @@ setInterval(() => {
 }, 2400);
 
 
-// LOADING SCREEN (SMOOTH EXIT)
-const INTRO_TIME = 5200;
+// LOADING
+const INTRO_TIME = 5000;
 
 window.addEventListener("load", () => {
   const loading = document.getElementById("loading-screen");
@@ -66,3 +62,38 @@ function go(page) {
   document.body.style.opacity = "0";
   setTimeout(() => window.location.href = page, 350);
 }
+
+
+// MENU BEHAVIOR (FIXED + SMOOTH)
+const menu = document.getElementById("menu");
+const btn = document.getElementById("menu-btn");
+const wrapper = document.querySelector(".menu-wrapper");
+
+let closeTimer = null;
+let locked = false;
+
+// click toggles lock (real UI behavior)
+btn.addEventListener("click", () => {
+  locked = !locked;
+
+  if (locked) {
+    menu.classList.add("open");
+  } else {
+    menu.classList.remove("open");
+  }
+});
+
+// hover opens instantly
+wrapper.addEventListener("mouseenter", () => {
+  clearTimeout(closeTimer);
+  menu.classList.add("open");
+});
+
+// hover leave = delayed close (SMOOTH FEEL)
+wrapper.addEventListener("mouseleave", () => {
+  if (locked) return;
+
+  closeTimer = setTimeout(() => {
+    menu.classList.remove("open");
+  }, 180); // 👈 THIS controls “stay open longer”
+});

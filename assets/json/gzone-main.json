@@ -26,8 +26,8 @@
     "Icon": "ri-flashlight-line"
   },
   {
-    "Name": "Lumin",
-    "File": "assets/json/lumin.html",
-    "Icon": "ri-lightbulb-line"
+    "Name": "SunTree",
+    "File": "assets/json/suntree.json",
+    "Icon": "ri-tree-line"
   }
 ]

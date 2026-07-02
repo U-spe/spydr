@@ -8,10 +8,12 @@
   <!-- favicon -->
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
+  <!-- remix icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- css -->
   <link rel="stylesheet" href="/css/main.css"/>
 </head>
 
@@ -33,34 +35,51 @@
     <div id="date">loading...</div>
   </div>
 
-  <!-- MENU (hover dropdown system) -->
+  <!-- MENU -->
   <div class="menu-wrapper">
-
-    <button id="menu-btn">☰</button>
+    <button id="menu-btn">
+      <i class="ri-menu-line"></i>
+    </button>
 
     <div id="menu">
-      <button onclick="go('games.html')">🎮 games</button>
-      <button onclick="go('apps.html')">📦 apps</button>
-      <button onclick="go('browser.html')">🌐 browser</button>
-      <button onclick="go('chat.html')">💬 chat</button>
-    </div>
+      <button onclick="go('games.html')">
+        <i class="ri-gamepad-line"></i> games
+      </button>
 
+      <button onclick="go('apps.html')">
+        <i class="ri-apps-line"></i> apps
+      </button>
+
+      <button onclick="go('browser.html')">
+        <i class="ri-global-line"></i> browser
+      </button>
+
+      <button onclick="go('chat.html')">
+        <i class="ri-chat-3-line"></i> chat
+      </button>
+    </div>
   </div>
 
-  <!-- CENTER HERO -->
+  <!-- HERO -->
   <div class="center">
 
     <div class="hero-wrap">
-
-      <img src="/assets/images/logo.png" class="logo-img" alt="spydr logo">
+      <img src="/assets/images/logo.png" class="logo-img" />
 
       <div class="hero-text">
         <h1>spydr</h1>
         <div class="const" id="constText">initializing...</div>
       </div>
-
     </div>
 
+  </div>
+
+  <!-- MINI GAMES (THIS WAS MISSING BEFORE) -->
+  <div class="games">
+    <div class="game-card">neon drift</div>
+    <div class="game-card">void runner</div>
+    <div class="game-card">pixel siege</div>
+    <div class="game-card">cyber arena</div>
   </div>
 
 </div>

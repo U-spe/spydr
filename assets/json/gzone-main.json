@@ -27,7 +27,7 @@
   },
   {
     "Name": "Lumin",
-    "File": "lumin",
+    "File": "assets/json/lumin.html",
     "Icon": "ri-lightbulb-line"
   }
 ]

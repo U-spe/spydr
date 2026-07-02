@@ -8,7 +8,7 @@
   --gray: #bdbdbd;
   --darkgray: #8a8a8a;
 
-  --t: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  --t: 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 * {
@@ -59,7 +59,7 @@ body {
   font-size: 13px;
 }
 
-/* MENU FIX (THIS FIXES YOUR HOVER ISSUE) */
+/* MENU WRAPPER */
 .menu-wrapper {
   position: absolute;
   left: 20px;
@@ -67,17 +67,16 @@ body {
   z-index: 100;
 }
 
+/* BUTTON */
 #menu-btn {
   background: var(--card);
   border: 1px solid var(--border);
   color: var(--white);
   padding: 12px 14px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
+/* MENU BOX */
 #menu {
   position: absolute;
   bottom: 55px;
@@ -92,16 +91,19 @@ body {
   opacity: 0;
   pointer-events: none;
   transform: translateY(10px);
+
   transition: var(--t);
 }
 
-/* FIXED HOVER LOGIC */
-.menu-wrapper:hover #menu {
+/* OPEN STATES */
+.menu-wrapper:hover #menu,
+#menu.open {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
 
+/* ITEMS */
 #menu button {
   width: 100%;
   background: transparent;
@@ -111,9 +113,8 @@ body {
   text-align: left;
   cursor: pointer;
   display: flex;
-  align-items: center;
   gap: 8px;
-  font-family: inherit;
+  align-items: center;
 }
 
 #menu button:hover {
@@ -144,7 +145,6 @@ body {
 .hero-text h1 {
   font-family: "Space Grotesk", sans-serif;
   font-size: 110px;
-  letter-spacing: -4px;
 }
 
 .const {
@@ -153,13 +153,12 @@ body {
   margin-top: 6px;
 }
 
-/* MINI GAMES (NOW ADDED PROPERLY) */
+/* GAMES */
 .games {
   position: absolute;
   bottom: 110px;
   left: 50%;
   transform: translateX(-50%);
-
   display: flex;
   gap: 12px;
 }

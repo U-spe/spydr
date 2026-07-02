@@ -170,8 +170,8 @@ async function loadGames() {
 
       return {
         id: game.id || (crypto?.randomUUID?.() ?? Math.random().toString(36)),
-name:
-  game.name || game.title ||  game.game || game.app || game.slug ||game.id?.toString() ||`Game ${i + 1}`,
+        name:
+          game.name || game.title || game.game || game.app || game.slug || game.id?.toString() || `Game ${i + 1}`,
         url: urlStr,
         cover: coverStr,
         prx: game.prx || game.proxy || false
@@ -190,7 +190,7 @@ name:
 }
 
 /* =========================
-   RENDER
+   RENDER (UPDATED WITH TIMEOUT & FALLBACK)
 ========================= */
 function renderGames() {
   if (!gameGrid) return;
@@ -205,8 +205,40 @@ function renderGames() {
     const card = document.createElement("div");
     card.className = "game-card";
 
-    // Applied Grayscale filter directly via JS inline styling
-    card.innerHTML = `<img src="${getCover(game)}" style="filter: grayscale(100%);"><span>${game.name}</span>`;
+    // Create img and span elements dynamically
+    const img = document.createElement("img");
+    const titleSpan = document.createElement("span");
+    const fallbackSrc = "assets/images/no-image.png";
+
+    img.src = getCover(game);
+    img.style.filter = "grayscale(100%)";
+    titleSpan.textContent = game.name;
+
+    // Track loading status
+    let isLoaded = false;
+
+    // Triggered if the image loads successfully
+    img.onload = () => {
+      isLoaded = true;
+    };
+
+    // Triggered instantly if the image returns an error (e.g. 404 Not Found)
+    img.onerror = () => {
+      if (!img.src.includes(fallbackSrc)) {
+        img.src = fallbackSrc;
+        isLoaded = true;
+      }
+    };
+
+    // 2.5 second timeout fallback
+    setTimeout(() => {
+      if (!isLoaded && !img.src.includes(fallbackSrc)) {
+        img.src = fallbackSrc;
+      }
+    }, 2500);
+
+    card.appendChild(img);
+    card.appendChild(titleSpan);
     card.onclick = () => openGame(game);
 
     gameGrid.appendChild(card);

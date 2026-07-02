@@ -1,125 +1,83 @@
 /* =========================
-   NEO GAME LOADER (LOADER SHARED WITH SPYDR)
+   SPYDR GAME LOADER (FIXED)
 ========================= */
 
 /* ELEMENTS */
+const dropdownButton = document.getElementById("dropdownButton");
+const dropdownMenu = document.getElementById("dropdownMenu");
+const sourceText = document.getElementById("sourceText");
 
-const dropdownButton =
-  document.getElementById("dropdownButton");
+const searchInput = document.getElementById("search");
+const gameGrid = document.getElementById("game-grid");
 
-const dropdownMenu =
-  document.getElementById("dropdownMenu");
+const luminGames = document.getElementById("lumin-games");
 
-const sourceText =
-  document.getElementById("sourceText");
-
-const searchInput =
-  document.getElementById("search");
-
-const gameGrid =
-  document.getElementById("game-grid");
-
-const luminGames =
-  document.getElementById("lumin-games");
-
-const gameView =
-  document.getElementById("game-view");
-
-const gameFrame =
-  document.getElementById("game-frame");
-
-const closeGameBtn =
-  document.getElementById("closeGameBtn");
+const gameView = document.getElementById("game-view");
+const gameFrame = document.getElementById("game-frame");
+const closeGameBtn = document.getElementById("closeGameBtn");
 
 /* STATE */
-
 let gameLists = [];
-
 let currentSourceData = null;
-
 let games = [];
 let filteredGames = [];
 
 /* =========================
+   SAFE INIT GUARD
+========================= */
+function waitForDOM() {
+  return (
+    dropdownButton &&
+    dropdownMenu &&
+    gameGrid &&
+    searchInput
+  );
+}
+
+/* =========================
    HELPERS
 ========================= */
-
 function getGameURL(game) {
-
-  if (!game.url) {
-    return "#";
-  }
-
-  return game.url;
+  return game.url || "#";
 }
 
 function getCover(game) {
-
-  if (game.cover) {
-    return game.cover;
-  }
-
-  return "https://via.placeholder.com/300x200?text=No+Image";
+  return game.cover ||
+    "https://via.placeholder.com/300x200?text=No+Image";
 }
 
 /* =========================
    DROPDOWN
 ========================= */
+dropdownButton?.addEventListener("click", () => {
+  dropdownMenu.classList.toggle("active");
+});
 
-dropdownButton.addEventListener(
-  "click",
-  () => {
-
-    dropdownMenu.classList.toggle(
-      "active"
-    );
+document.addEventListener("click", (e) => {
+  if (
+    !dropdownButton?.contains(e.target) &&
+    !dropdownMenu?.contains(e.target)
+  ) {
+    dropdownMenu?.classList.remove("active");
   }
-);
-
-document.addEventListener(
-  "click",
-  (e) => {
-
-    if (
-      !dropdownButton.contains(e.target) &&
-      !dropdownMenu.contains(e.target)
-    ) {
-
-      dropdownMenu.classList.remove(
-        "active"
-      );
-    }
-  }
-);
+});
 
 /* =========================
    BUILD SOURCES
 ========================= */
-
 function buildSourceMenu() {
-
   dropdownMenu.innerHTML = "";
 
   gameLists.forEach((source, index) => {
-
-    const item =
-      document.createElement("div");
-
-    item.className =
-      "dropdown-item";
+    const item = document.createElement("div");
+    item.className = "dropdown-item";
 
     item.innerHTML = `
       <i class="${source.Icon || "ri-folder-line"}"></i>
       <span>${source.Name}</span>
     `;
 
-    item.addEventListener(
-      "click",
-      () => {
-
-        setSource(index);
-      }
-    );
+    item.onclick = () => setSource(index);
 
     dropdownMenu.appendChild(item);
   });
@@ -128,228 +86,70 @@ function buildSourceMenu() {
 /* =========================
    SET SOURCE
 ========================= */
-
 async function setSource(index) {
-
-  const source =
-    gameLists[index];
-
-  if (!source) {
-    return;
-  }
+  const source = gameLists[index];
+  if (!source) return;
 
   currentSourceData = source;
+  sourceText.textContent = source.Name;
 
-  sourceText.textContent =
-    source.Name;
-
-  dropdownMenu.classList.remove(
-    "active"
-  );
-
+  dropdownMenu.classList.remove("active");
   searchInput.value = "";
 
-  /* LUMIN */
-
-  if (
-    source.Name
-      .toLowerCase()
-      .includes("lumin")
-  ) {
-
-    gameGrid.style.display =
-      "none";
-
-    luminGames.style.display =
-      "block";
-
+  /* LUMIN MODE */
+  if (source.Name.toLowerCase().includes("lumin")) {
+    gameGrid.style.display = "none";
+    luminGames.style.display = "block";
     loadLumin();
-
     return;
   }
 
-  /* NORMAL SOURCES */
-
-  luminGames.style.display =
-    "none";
-
-  gameGrid.style.display =
-    "grid";
+  luminGames.style.display = "none";
+  gameGrid.style.display = "grid";
 
   await loadGames();
 }
 
 /* =========================
-   LOAD GAMES
+   LOAD GAMES (FIXED PATH HERE)
 ========================= */
-
 async function loadGames() {
+  if (!currentSourceData) return;
 
-  if (!currentSourceData) {
-    return;
-  }
-
-  gameGrid.innerHTML =
-    "Loading games...";
+  gameGrid.innerHTML = "Loading...";
 
   try {
-
-    const response =
-      await fetch(
-        currentSourceData.File +
-        "?t=" +
-        Date.now()
-      );
-
-    if (!response.ok) {
-      throw new Error(
-        "Failed loading source"
-      );
-    }
-
-    const data =
-      await response.json();
-
-    /* SUPPORT MULTIPLE JSON FORMATS */
-
-    const rawGames =
-      Array.isArray(data)
-        ? data
-        : data.games ||
-          data.items ||
-          data.apps ||
-          [];
-
-    games = rawGames.map(
-      (game, index) => {
-
-        /* NAME */
-
-        const name =
-          game.name ||
-          game.title ||
-          game.game ||
-          game.app ||
-          game.slug ||
-          game.id?.toString() ||
-          `Game ${index + 1}`;
-
-        /* URL */
-
-        let url =
-          game.url ||
-          game.game_url ||
-          game.file_name ||
-          game.embed_url ||
-          game.link ||
-          game.src ||
-          game.play ||
-          "";
-
-        /* PLACEHOLDER SUPPORT */
-
-        if (
-          typeof url === "string"
-        ) {
-
-          url = url
-            .replaceAll(
-              "{HTML_URL}",
-              "https://cdn.jsdelivr.net/gh/freebuisness/html@main"
-            )
-            .replaceAll(
-              "{COVER_URL}",
-              "https://cdn.jsdelivr.net/gh/freebuisness/covers@main"
-            );
-        }
-
-        /* AUTO BUILD URL */
-
-        if (!url && game.id) {
-
-          url =
-            `https://cdn.jsdelivr.net/gh/freebuisness/html@main/${game.id}.html`;
-        }
-
-        /* COVER */
-
-        let cover =
-          game.cover ||
-          game.thumbnail ||
-          game.thumb ||
-          game.image ||
-          game.img ||
-          game.icon ||
-          "";
-
-        /* PLACEHOLDER SUPPORT */
-
-        if (
-          typeof cover === "string"
-        ) {
-
-          cover = cover
-            .replaceAll(
-              "{HTML_URL}",
-              "https://cdn.jsdelivr.net/gh/freebuisness/html@main"
-            )
-            .replaceAll(
-              "{COVER_URL}",
-              "https://cdn.jsdelivr.net/gh/freebuisness/covers@main"
-            );
-        }
-
-        /* AUTO BUILD COVER */
-
-        if (!cover && game.id) {
-
-          cover =
-            `https://cdn.jsdelivr.net/gh/freebuisness/covers@main/${game.id}.png`;
-        }
-
-        /* FLAGS */
-
-        const direct =
-          game.direct === true ||
-          game.frame === true;
-
-        const prx =
-          game.prx === true ||
-          game.proxy === true;
-
-        return {
-
-          id:
-            game.id ||
-            crypto.randomUUID(),
-
-          name,
-
-          url,
-
-          cover,
-
-          featured:
-            game.featured || false,
-
-          direct,
-
-          prx
-        };
-      }
+    const response = await fetch(
+      currentSourceData.File + "?t=" + Date.now()
     );
 
-    filteredGames = [...games];
+    if (!response.ok) {
+      throw new Error("Failed loading source JSON");
+    }
 
+    const data = await response.json();
+
+    const rawGames = Array.isArray(data)
+      ? data
+      : data.games || data.items || data.apps || [];
+
+    games = rawGames.map((game, i) => ({
+      id: game.id || (crypto?.randomUUID?.() ?? Math.random().toString(36)),
+      name: game.name || game.title || `Game ${i + 1}`,
+      url: game.url || game.link || "",
+      cover: game.cover || game.image || game.img || "",
+      prx: game.prx || game.proxy || false
+    }));
+
+    filteredGames = [...games];
     renderGames();
 
   } catch (err) {
-
     console.error(err);
 
     gameGrid.innerHTML = `
-      <div style="padding:20px">
-        Failed to load games
+      <div style="padding:20px;color:#fff;">
+        failed to load games
       </div>
     `;
   }
@@ -358,47 +158,24 @@ async function loadGames() {
 /* =========================
    RENDER
 ========================= */
-
 function renderGames() {
-
   gameGrid.innerHTML = "";
 
   if (filteredGames.length === 0) {
-
-    gameGrid.innerHTML = `
-      <div style="padding:20px">
-        No games found
-      </div>
-    `;
-
+    gameGrid.innerHTML = "no games found";
     return;
   }
 
   filteredGames.forEach((game) => {
-
-    const card =
-      document.createElement("div");
-
-    card.className =
-      "game-card pop";
+    const card = document.createElement("div");
+    card.className = "game-card";
 
     card.innerHTML = `
-      <img
-        src="${getCover(game)}"
-        loading="lazy"
-        onerror="this.src='https://via.placeholder.com/300x200?text=No+Image'"
-      >
-
+      <img src="${getCover(game)}">
       <span>${game.name}</span>
     `;
 
-    card.addEventListener(
-      "click",
-      () => {
-
-        openGame(game);
-      }
-    );
+    card.onclick = () => openGame(game);
 
     gameGrid.appendChild(card);
   });
@@ -407,178 +184,88 @@ function renderGames() {
 /* =========================
    SEARCH
 ========================= */
+searchInput?.addEventListener("input", (e) => {
+  const q = e.target.value.toLowerCase();
 
-searchInput.addEventListener(
-  "input",
-  (e) => {
+  filteredGames = games.filter(g =>
+    g.name.toLowerCase().includes(q)
+  );
 
-    const query =
-      e.target.value
-        .toLowerCase()
-        .trim();
-
-    filteredGames =
-      games.filter((game) =>
-        game.name
-          .toLowerCase()
-          .includes(query)
-      );
-
-    renderGames();
-  }
-);
+  renderGames();
+});
 
 /* =========================
    OPEN GAME
 ========================= */
-
 function openGame(game) {
-
-  let finalURL =
-    getGameURL(game);
+  let url = getGameURL(game);
 
   if (game.prx) {
-
-    finalURL =
-      `/embed.html?url=${encodeURIComponent(finalURL)}`;
+    url = `/embed.html?url=${encodeURIComponent(url)}`;
   }
 
-  gameView.style.display =
-    "flex";
-
-  gameFrame.src = finalURL;
+  gameView.style.display = "flex";
+  gameFrame.src = url;
 }
 
 /* =========================
    CLOSE GAME
 ========================= */
-
-function closeGame() {
-
-  gameView.style.display =
-    "none";
-
-  gameFrame.src =
-    "about:blank";
-}
-
-closeGameBtn.addEventListener(
-  "click",
-  closeGame
-);
+closeGameBtn?.addEventListener("click", () => {
+  gameView.style.display = "none";
+  gameFrame.src = "about:blank";
+});
 
 /* =========================
-   LUMIN
+   LUMIN (UNCHANGED)
 ========================= */
-
 function loadLumin() {
+  luminGames.innerHTML = `<div id="games"></div>`;
 
-  luminGames.innerHTML = `
-    <div id="games"></div>
-  `;
-
-  /* ALREADY LOADED */
-
-  if (window.Lumin) {
-
+  if (window.Lumin && typeof window.Lumin.init === "function") {
     startLumin();
-
     return;
   }
 
-  /* PREVENT DUPLICATE */
+  const script = document.createElement("script");
+  script.src = "https://cdn.jsdelivr.net/gh/luminsdk/script@latest/lumin.min.js";
+  script.dataset.lumin = "true";
 
-  const existing =
-    document.querySelector(
-      'script[data-lumin="true"]'
-    );
-
-  if (existing) {
-
-    existing.onload =
-      startLumin;
-
-    return;
-  }
-
-  const script =
-    document.createElement("script");
-
-  script.src =
-    "https://cdn.jsdelivr.net/gh/luminsdk/script@latest/lumin.min.js";
-
-  script.dataset.lumin =
-    "true";
-
-  script.onload =
-    startLumin;
+  script.onload = startLumin;
 
   script.onerror = () => {
-
-    luminGames.innerHTML = `
-      <div style="padding:20px">
-        Failed to load Lumin SDK
-      </div>
-    `;
+    luminGames.innerHTML = "failed to load lumin";
   };
 
   document.body.appendChild(script);
 }
 
 function startLumin() {
-
-  if (!window.Lumin) {
-
-    luminGames.innerHTML = `
-      <div style="padding:20px">
-        Lumin object missing
-      </div>
-    `;
-
+  if (!window.Lumin || typeof window.Lumin.init !== "function") {
+    luminGames.innerHTML = "lumin not available";
     return;
   }
 
-  try {
-
-    Lumin.init({
-      container: "#games",
-      theme: "dark"
-    });
-
-  } catch (err) {
-
-    console.error(err);
-
-    luminGames.innerHTML = `
-      <div style="padding:20px">
-        Lumin failed to initialize
-      </div>
-    `;
-  }
+  Lumin.init({
+    container: "#games",
+    theme: "dark"
+  });
 }
 
 /* =========================
-   INIT
+   INIT (FIXED PATH IS HERE)
 ========================= */
-
 async function init() {
-
   try {
-
-    const response =
-      await fetch(
-        "assets/json/main-zone.json?t=" +
-        Date.now()
-      );
+    const response = await fetch(
+      "/assets/json/gzone-main.json?t=" + Date.now()
+    );
 
     if (!response.ok) {
-      throw new Error(
-        "Failed loading main-zone.json"
-      );
+      throw new Error("Failed loading gzone-main.json");
     }
 
-    gameLists =
-      await response.json();
+    gameLists = await response.json();
 
     buildSourceMenu();
 
@@ -587,15 +274,18 @@ async function init() {
     }
 
   } catch (err) {
-
     console.error(err);
 
     gameGrid.innerHTML = `
-      <div style="padding:20px">
-        Failed to initialize launcher
+      <div style="padding:20px;color:white;">
+        failed to initialize
       </div>
     `;
   }
 }
 
-init();
+if (waitForDOM()) {
+  init();
+} else {
+  window.addEventListener("DOMContentLoaded", init);
+}

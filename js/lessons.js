@@ -28,6 +28,7 @@ let gameLists = [];
 let currentSourceData = null;
 let games = [];
 let filteredGames = [];
+let renderTimeouts = []; // Tracks staggered rendering
 
 /* =========================
    SAFE INIT GUARD
@@ -170,8 +171,7 @@ async function loadGames() {
 
       return {
         id: game.id || (crypto?.randomUUID?.() ?? Math.random().toString(36)),
-        name:
-          game.name || game.title || game.game || game.app || game.slug || game.id?.toString() || `Game ${i + 1}`,
+        name: game.name || game.title ||  game.game || game.app || game.slug ||game.id?.toString() ||`Game ${i + 1}`,
         url: urlStr,
         cover: coverStr,
         prx: game.prx || game.proxy || false
@@ -190,58 +190,69 @@ async function loadGames() {
 }
 
 /* =========================
-   RENDER (UPDATED WITH TIMEOUT & FALLBACK)
+   RENDER (STAGGERED + 4.5s FALLBACK)
 ========================= */
 function renderGames() {
   if (!gameGrid) return;
   gameGrid.innerHTML = "";
+
+  // Clear any ongoing staggered renders to prevent glitches when searching/switching
+  renderTimeouts.forEach(clearTimeout);
+  renderTimeouts = [];
 
   if (filteredGames.length === 0) {
     gameGrid.innerHTML = "no games found";
     return;
   }
 
-  filteredGames.forEach((game) => {
-    const card = document.createElement("div");
-    card.className = "game-card";
+  filteredGames.forEach((game, index) => {
+    const timeoutId = setTimeout(() => {
+      const card = document.createElement("div");
+      card.className = "game-card";
 
-    // Create img and span elements dynamically
-    const img = document.createElement("img");
-    const titleSpan = document.createElement("span");
-    const fallbackSrc = "assets/images/no-image.png";
+      // Create the image and text elements dynamically
+      const img = document.createElement("img");
+      const titleSpan = document.createElement("span");
+      const fallbackSrc = "assets/images/no-image.png";
 
-    img.src = getCover(game);
-    img.style.filter = "grayscale(100%)";
-    titleSpan.textContent = game.name;
+      img.src = getCover(game);
+      img.style.filter = "grayscale(100%)";
+      titleSpan.textContent = game.name;
 
-    // Track loading status
-    let isLoaded = false;
+      // Track loading state
+      let isLoaded = false;
 
-    // Triggered if the image loads successfully
-    img.onload = () => {
-      isLoaded = true;
-    };
-
-    // Triggered instantly if the image returns an error (e.g. 404 Not Found)
-    img.onerror = () => {
-      if (!img.src.includes(fallbackSrc)) {
-        img.src = fallbackSrc;
+      // Triggered if the image loads successfully
+      img.onload = () => {
         isLoaded = true;
-      }
-    };
+      };
 
-    // 2.5 second timeout fallback
-    setTimeout(() => {
-      if (!isLoaded && !img.src.includes(fallbackSrc)) {
-        img.src = fallbackSrc;
-      }
-    }, 2500);
+      // Triggered instantly if the image link is broken (e.g., 404 error)
+      img.onerror = () => {
+        if (!img.src.includes(fallbackSrc)) {
+          img.src = fallbackSrc;
+          isLoaded = true; // Mark as loaded so the timeout doesn't fire redundantly
+        }
+      };
 
-    card.appendChild(img);
-    card.appendChild(titleSpan);
-    card.onclick = () => openGame(game);
+      // Triggered if the image hangs for more than 4.5 seconds
+      setTimeout(() => {
+        if (!isLoaded && !img.src.includes(fallbackSrc)) {
+          img.src = fallbackSrc;
+        }
+      }, 4500);
 
-    gameGrid.appendChild(card);
+      // Assemble the card
+      card.appendChild(img);
+      card.appendChild(titleSpan);
+      
+      // Attach the click event
+      card.onclick = () => openGame(game);
+
+      gameGrid.appendChild(card);
+    }, index * 75); // 75ms delay between each game loading into the DOM
+
+    renderTimeouts.push(timeoutId);
   });
 }
 

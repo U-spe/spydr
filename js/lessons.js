@@ -1,5 +1,5 @@
 /* =========================
-   SPYDR GAME LOADER (STABLE)
+   SPYDR GAME LOADER (SANDBOXED)
 ========================= */
 
 /* CONSTANTS FOR PLACEHOLDERS */
@@ -28,9 +28,6 @@ let gameLists = [];
 let currentSourceData = null;
 let games = [];
 let filteredGames = [];
-
-// Track if Lumin has been successfully loaded to prevent duplicate initializations
-window.isLuminInitialized = false; 
 
 /* =========================
    SAFE INIT GUARD
@@ -295,47 +292,63 @@ closeGameBtn?.addEventListener("click", () => {
 });
 
 /* =========================
-   LUMIN (STABLE)
+   LUMIN (IFRAME SANDBOX)
 ========================= */
 function loadLumin() {
   if (!luminGames) return;
 
-  // If Lumin has already been built and initialized, do absolutely nothing.
-  // We just let the display: block (from setSource) show the existing UI.
-  if (window.isLuminInitialized) {
+  // If the iframe already exists, do nothing (prevents reloading on rapid clicks)
+  if (luminGames.querySelector("iframe")) {
     return;
   }
 
-  // Create the container strictly once
-  luminGames.innerHTML = `<div id="games"></div>`;
+  // Clear container
+  luminGames.innerHTML = "";
 
-  // Prevent multiple script tags from appending if clicked rapidly
-  if (document.querySelector("script[data-lumin='true']")) {
-    return;
-  }
+  // Exact HTML snippet wrapped in an iframe document structure
+  const iframeContent = `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <style>
+          /* Keep styling seamless with parent dark theme */
+          body { 
+            margin: 0; 
+            padding: 0; 
+            background: transparent; 
+            color: white; 
+            color-scheme: dark; 
+          }
+        </style>
+      </head>
+      <body>
+        <div id="games"></div>
+        <script src="https://cdn.jsdelivr.net/gh/luminsdk/script@latest/lumin.min.js"><\/script>
+        <script>
+          // Added a tiny interval to ensure the script parses completely before init
+          let checkLumin = setInterval(() => {
+            if (window.Lumin && typeof window.Lumin.init === 'function') {
+              clearInterval(checkLumin);
+              Lumin.init({
+                container: '#games',
+                theme: 'dark'
+              });
+            }
+          }, 50);
+        </script>
+      </body>
+    </html>
+  `;
 
-  const script = document.createElement("script");
-  script.src = "https://cdn.jsdelivr.net/gh/luminsdk/script@latest/lumin.min.js";
-  script.dataset.lumin = "true";
+  // Create the sandboxed iframe
+  const iframe = document.createElement("iframe");
+  iframe.style.width = "100%";
+  iframe.style.height = "100vh"; // Adjust height as necessary for your layout
+  iframe.style.border = "none";
+  iframe.style.display = "block";
+  iframe.srcdoc = iframeContent;
 
-  script.onload = () => {
-    if (window.Lumin && typeof window.Lumin.init === "function") {
-      Lumin.init({
-        container: "#games",
-        theme: "dark"
-      });
-      // Mark as initialized so we never run this again
-      window.isLuminInitialized = true;
-    } else {
-      luminGames.innerHTML = "lumin not available";
-    }
-  };
-
-  script.onerror = () => {
-    luminGames.innerHTML = "failed to load lumin";
-  };
-
-  document.body.appendChild(script);
+  luminGames.appendChild(iframe);
 }
 
 /* =========================

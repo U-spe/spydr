@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>spydr // lessons</title>
+
+<link rel="icon" href="/assets/images/favicon.png">
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/games.css">
+
+<script src="/js/globalcloak.js"></script>
+</head>
+
+<body>
+
+<!-- TOP RIGHT -->
+<div class="top-right">
+  <button onclick="go('/settings.html')">
+    <i class="ri-settings-3-line"></i> settings
+  </button>
+
+  <button onclick="go('/login.html')">
+    <i class="ri-login-box-line"></i> login
+  </button>
+</div>
+
+<!-- MENU (JETX STYLE HOVER MENU REUSED) -->
+<div class="menu-wrapper">
+
+  <button id="menu-btn">
+    <i class="ri-menu-line"></i>
+  </button>
+
+  <div id="menu">
+
+    <button onclick="go('/lessons.html')">
+      <i class="ri-gamepad-line"></i> lessons
+    </button>
+
+    <button onclick="go('/applications.html')">
+      <i class="ri-apps-line"></i> applications
+    </button>
+
+    <button onclick="go('/search.html')">
+      <i class="ri-global-line"></i> search
+    </button>
+
+    <button onclick="go('/audios.html')">
+      <i class="ri-music-line"></i> audios
+    </button>
+
+    <button onclick="go('/settings.html')">
+      <i class="ri-settings-3-line"></i> settings
+    </button>
+
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="center">
+
+  <div class="top-bar">
+
+    <div class="dropdown">
+
+      <button id="dropdownButton">
+        <i class="ri-gamepad-line"></i>
+        <span id="sourceText">loading...</span>
+        <i class="ri-arrow-down-s-line"></i>
+      </button>
+
+      <div id="dropdownMenu"></div>
+
+    </div>
+
+    <div class="search">
+      <i class="ri-search-line"></i>
+      <input id="search" placeholder="search lessons...">
+    </div>
+
+  </div>
+
+  <div id="game-grid">loading...</div>
+
+</div>
+
+<!-- GAME VIEW -->
+<div id="game-view">
+  <button id="closeGameBtn">← back</button>
+  <iframe id="game-frame"></iframe>
+</div>
+
+<script src="/js/lessons.js"></script>
+
+<script>
+function go(page){
+  document.body.style.opacity = "0";
+  setTimeout(()=>location.href=page,300);
+}
+</script>
+
+</body>
+</html>

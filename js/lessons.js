@@ -1,5 +1,5 @@
 /* =========================
-   SPYDR GAME LOADER (SANDBOXED)
+   SPYDR GAME LOADER (CLEAN ARCHITECTURE)
 ========================= */
 
 /* CONSTANTS FOR PLACEHOLDERS */
@@ -98,18 +98,24 @@ async function setSource(index) {
   dropdownMenu?.classList.remove("active");
   if (searchInput) searchInput.value = "";
 
-  /* LUMIN MODE */
-  if (source.Name.toLowerCase().includes("lumin")) {
+  /* EXTERNAL HTML / SANDBOX MODE */
+  // If the JSON points to an HTML file instead of a JSON list, load it isolated.
+  if (source.File.endsWith(".html") || source.Name.toLowerCase().includes("lumin")) {
     if (gameGrid) gameGrid.style.display = "none";
     if (luminGames) {
       luminGames.style.display = "block";
+      // Inject the isolated file
+      let fileToLoad = source.File.endsWith(".html") ? source.File : "lumin.html";
+      luminGames.innerHTML = `<iframe src="${fileToLoad}" style="width:100%; height:100vh; border:none; display:block;"></iframe>`;
     }
-    loadLumin();
     return;
   }
 
-  // STANDARD MODE
-  if (luminGames) luminGames.style.display = "none";
+  // STANDARD JSON MODE
+  if (luminGames) {
+    luminGames.style.display = "none";
+    luminGames.innerHTML = ""; // Clear the iframe to free memory
+  }
   if (gameGrid) gameGrid.style.display = "grid";
 
   await loadGames();
@@ -189,7 +195,7 @@ async function loadGames() {
 }
 
 /* =========================
-   RENDER (STABLE + 4.5s FALLBACK)
+   RENDER (4.5s FALLBACK)
 ========================= */
 function renderGames() {
   if (!gameGrid) return;
@@ -211,7 +217,7 @@ function renderGames() {
 
     img.src = getCover(game);
     img.style.filter = "grayscale(100%)";
-    titleSpan.textContent = game.name; 
+    titleSpan.textContent = game.name; // User Preference: Name only, no extra labels
 
     // Track loading state
     let isLoaded = false;
@@ -251,8 +257,8 @@ function renderGames() {
    SEARCH
 ========================= */
 searchInput?.addEventListener("input", (e) => {
-  // Prevent searching from interfering if currently in Lumin mode
-  if (currentSourceData && currentSourceData.Name.toLowerCase().includes("lumin")) {
+  // Prevent searching from interfering if currently in an HTML Sandbox mode
+  if (currentSourceData && (currentSourceData.File.endsWith(".html") || currentSourceData.Name.toLowerCase().includes("lumin"))) {
     return; 
   }
 
@@ -290,66 +296,6 @@ closeGameBtn?.addEventListener("click", () => {
   
   document.body.style.overflow = ""; // Restore background scrolling
 });
-
-/* =========================
-   LUMIN (IFRAME SANDBOX)
-========================= */
-function loadLumin() {
-  if (!luminGames) return;
-
-  // If the iframe already exists, do nothing (prevents reloading on rapid clicks)
-  if (luminGames.querySelector("iframe")) {
-    return;
-  }
-
-  // Clear container
-  luminGames.innerHTML = "";
-
-  // Exact HTML snippet wrapped in an iframe document structure
-  const iframeContent = `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <style>
-          /* Keep styling seamless with parent dark theme */
-          body { 
-            margin: 0; 
-            padding: 0; 
-            background: transparent; 
-            color: white; 
-            color-scheme: dark; 
-          }
-        </style>
-      </head>
-      <body>
-        <div id="games"></div>
-        <script src="https://cdn.jsdelivr.net/gh/luminsdk/script@latest/lumin.min.js"><\/script>
-        <script>
-          // Added a tiny interval to ensure the script parses completely before init
-          let checkLumin = setInterval(() => {
-            if (window.Lumin && typeof window.Lumin.init === 'function') {
-              clearInterval(checkLumin);
-              Lumin.init({
-                container: '#games',
-                theme: 'dark'
-              });
-            }
-          }, 50);
-        </script>
-      </body>
-    </html>
-  `;
-
-  // Create the sandboxed iframe
-  const iframe = document.createElement("iframe");
-  iframe.style.width = "100%";
-  iframe.style.height = "100vh"; // Adjust height as necessary for your layout
-  iframe.style.border = "none";
-  iframe.style.display = "block";
-  iframe.srcdoc = iframeContent;
-
-  luminGames.appendChild(iframe);
-}
 
 /* =========================
    INIT

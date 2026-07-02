@@ -3,7 +3,11 @@ function updateClock() {
   const now = new Date();
 
   document.getElementById("time").textContent =
-    now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    now.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit"
+    });
 
   document.getElementById("date").textContent =
     now.toDateString();
@@ -13,52 +17,57 @@ setInterval(updateClock, 1000);
 updateClock();
 
 
-// CONST TEXT (clean system-style rotation)
-const texts = [
-  "system: spydr core loaded",
-  "initializing modules...",
-  "syncing interface",
-  "render engine online",
-  "welcome"
+// CONST TEXT ROTATION
+const lines = [
+  "system booting...",
+  "spydr core online",
+  "loading interface",
+  "sync complete",
+  "neural mesh active"
 ];
 
 const constText = document.getElementById("constText");
 
 setInterval(() => {
   constText.textContent =
-    texts[Math.floor(Math.random() * texts.length)];
+    lines[Math.floor(Math.random() * lines.length)];
 }, 2500);
 
 
-// LOADING SCREEN HANDLER (VIDEO)
+// INTRO CONTROL (SPEED KNOB)
+const INTRO_TIME = 5200; // change this anytime
+
 window.addEventListener("load", () => {
-  const video = document.getElementById("loadVideo");
   const loading = document.getElementById("loading-screen");
+  const video = document.getElementById("loadVideo");
   const app = document.getElementById("app");
 
-  // wait for video to finish or force timeout
-  let done = false;
+  let finished = false;
 
-  function finish() {
-    if (done) return;
-    done = true;
+  function finishIntro() {
+    if (finished) return;
+    finished = true;
 
     loading.style.opacity = "0";
+
     setTimeout(() => {
       loading.style.display = "none";
       app.style.opacity = "1";
+      app.classList.add("loaded");
     }, 600);
   }
 
-  // if video ends
-  video.onended = finish;
-
-  // fallback timeout (important so it never gets stuck)
-  setTimeout(finish, 5000);
+  // video ends OR timeout fallback
+  video.onended = finishIntro;
+  setTimeout(finishIntro, INTRO_TIME);
 });
 
 
 // NAV
 function go(page) {
-  window.location.href = page;
+  document.body.style.opacity = "0";
+
+  setTimeout(() => {
+    window.location.href = page;
+  }, 400);
 }

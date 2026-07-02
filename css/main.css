@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+/* remix icons global fix */
+i {
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  display: flex;
+  background: #0a0a0f;
+  color: white;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 70px;
+  height: 100vh;
+  background: #0f0f14;
+  border-right: 1px solid #1e1e2a;
+  position: fixed;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.sidebar:hover {
+  width: 220px;
+}
+
+/* BRAND */
+.brand {
+  padding: 20px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: lowercase;
+}
+
+.const-text {
+  font-size: 11px;
+  color: #777;
+  margin-top: 6px;
+  height: 14px;
+}
+
+/* NAV */
+.nav-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: #aaa;
+  transition: 0.2s;
+}
+
+.nav-links a span {
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.sidebar:hover .nav-links a span {
+  opacity: 1;
+}
+
+.nav-links a:hover {
+  background: #171722;
+  color: white;
+}
+
+/* MAIN */
+.main {
+  margin-left: 70px;
+  padding: 40px;
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 70px;
+  text-transform: lowercase;
+}
+
+.hero p {
+  color: #888;
+}
+
+/* SECTIONS */
+.section {
+  margin-top: 80px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  text-transform: lowercase;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: #151520;
+  border: 1px solid #222;
+  padding: 18px;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #4b4bff;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 100px;
+  padding: 40px 0;
+  text-align: center;
+  color: #666;
+}

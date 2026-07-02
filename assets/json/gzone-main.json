@@ -1,0 +1,33 @@
+
+[
+    {
+    "Name": "Hydra",
+    "File": "assets/json/hydra.json",
+    "Icon": "ri-ailen-line"
+  },
+  {
+    "Name": "TGLSC",
+    "File": "assets/json/tglsc.json",
+    "Icon": "ri-fire-line"
+  },
+  {
+    "Name": "Gn-Math",
+    "File": "assets/json/gnmath.json",
+    "Icon": "ri-book-line"
+  },
+  {
+    "Name": "Truffled",
+    "File": "assets/json/truffled.json",
+    "Icon": "ri-ghost-line"
+  },
+  {
+    "Name": "Zaapiz/GN Math",
+    "File": "assets/json/zaapiz.json",
+    "Icon": "ri-zap-line"
+  },
+  {
+    "Name": "Lumin",
+    "File": "lumin",
+    "Icon": "ri-lightbulb-line"
+  }
+]

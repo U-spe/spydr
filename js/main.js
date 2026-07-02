@@ -1,35 +1,74 @@
-// const rotating text (changes on load)
-const phrases = [
-  "const: minimal build",
-  "const: loading worlds",
-  "const: neon protocol",
-  "const: spider core active",
-  "const: system online"
+// splash text
+const splashes = [
+  "spydr online...",
+  "system loaded",
+  "neon protocol active",
+  "welcome back",
+  "don’t get caught"
 ];
 
-const textEl = document.getElementById("constText");
+document.getElementById("splash").textContent =
+  splashes[Math.floor(Math.random() * splashes.length)];
 
-function setRandomConst() {
-  const random = Math.floor(Math.random() * phrases.length);
-  textEl.textContent = phrases[random];
+
+// clock
+function updateClock() {
+  const now = new Date();
+
+  document.getElementById("time").textContent =
+    now.toLocaleTimeString();
+
+  document.getElementById("date").textContent =
+    now.toDateString();
 }
 
-setRandomConst();
+setInterval(updateClock, 1000);
+updateClock();
 
-// simple game loader (expand later)
-const games = [
-  "neon drift",
-  "void runner",
-  "pixel siege",
-  "cyber arena",
-  "spider core"
+
+// const rotating text
+const constText = [
+  "const: spider core",
+  "const: system online",
+  "const: neon load",
+  "const: runtime active"
 ];
 
-const grid = document.getElementById("gameGrid");
+const el = document.getElementById("constText");
 
-games.forEach(name => {
-  const div = document.createElement("div");
-  div.className = "card";
-  div.textContent = name;
-  grid.appendChild(div);
+setInterval(() => {
+  el.textContent =
+    constText[Math.floor(Math.random() * constText.length)];
+}, 2500);
+
+
+// navigation
+function go(page) {
+  document.body.style.opacity = "0";
+  setTimeout(() => window.location.href = page, 300);
+}
+
+function goUpdates() {
+  window.location.href = "/updates.html";
+}
+
+
+// vanta init
+window.addEventListener("load", () => {
+  try {
+    VANTA.FOG({
+      el: "#vanta-bg",
+      highlightColor: 0x6d28d9,
+      midtoneColor: 0x4c1d95,
+      lowlightColor: 0x000000,
+      baseColor: 0x050505,
+      blurFactor: 0.7,
+      speed: 2,
+      zoom: 0.4
+    });
+
+    document.getElementById("vanta-bg").style.opacity = "1";
+  } catch (e) {
+    console.log(e);
+  }
 });

@@ -1,0 +1,969 @@
+[
+  {
+    "id": 1,
+    "name": "Amanda the Adventurer",
+    "url": "/flashcard/amanda-the-adventurer/index.html",
+    "cover": "/assets/images/flashcards/capsule_616x353.png"
+  },
+  {
+    "id": 2,
+    "name": "Andy's Apple Farm",
+    "url": "/flashcard/andys-apple-farm/index.html",
+    "cover": "/assets/images/flashcards/ne3tan.webp"
+  },
+  {
+    "id": 3,
+    "name": "Bad Parenting 1",
+    "url": "/flashcard/bad-parenting/index.html",
+    "cover": "/assets/images/flashcards/Bad_parenting_1.webp"
+  },
+  {
+    "id": 4,
+    "name": "Bendy and the Ink Machine",
+    "url": "/flashcard/bendy/index.html",
+    "cover": "/assets/images/flashcards/9381c82bcb85d723252de06ea9f1dda0c62a45ccbabcfaf1e35afa4d27ddadf7.avif"
+  },
+  {
+    "id": 5,
+    "name": "BLOODMONEY!",
+    "url": "/flashcard/bloodmoney/index.html",
+    "cover": "/assets/images/flashcards/bloodmoney-main.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Buckshot Roulette",
+    "url": "/flashcard/buckshot-roulette/index.html",
+    "cover": "/assets/images/flashcards/Site-logo.webp"
+  },
+  {
+    "id": 7,
+    "name": "Celeste",
+    "url": "/flashcard/celeste/index.html",
+    "cover": "/assets/images/flashcards/691ba3e0801180a9864cc8a7694b6f98097f9d9799bc7e3dc6db92f086759252.avif",
+    "controls": "arrows"
+  },
+  {
+    "id": 8,
+    "name": "Fears to Fathom: Home Alone",
+    "url": "/flashcard/fears-to-fathom/home-alone/index.html",
+    "cover": "/assets/images/flashcards/capsule_616x353.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Gorilla Tag",
+    "url": "/flashcard/gorilla-tag/index.html",
+    "cover": "/assets/images/flashcards/4744c1ac34e78d50f9ecfbc9958ca6375a2011b1bcf9b9b6.avif"
+  },
+  {
+    "id": 10,
+    "name": "Half Life",
+    "url": "/flashcard/half-life/index.html",
+    "cover": "/assets/images/flashcards/half-life.webp",
+    "controls": "arrows"
+  },
+  {
+    "id": 11,
+    "name": "Hollow Knight",
+    "url": "/flashcard/hollow-knight/index.html",
+    "cover": "/assets/images/flashcards/4643fb058642335c523910f3a7910575f56372f612f7c0c9a497aaae978d3e51.avif",
+    "controls": "arrows"
+  },
+  {
+    "id": 12,
+    "name": "Hotline Miami",
+    "url": "/flashcard/hotline-miami/index.html",
+    "cover": "/assets/images/flashcards/124e6f1066799ec18bb6722d4e312773ec9570b16ce450736cd64ba9730c91e0.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Karlson",
+    "url": "/flashcard/karlson/index.html",
+    "cover": "/assets/images/flashcards/i5U2n+.png"
+  },
+  {
+    "id": 14,
+    "name": "Kindergarten 1",
+    "url": "/flashcard/kindergarten/1/index.html",
+    "cover": "/assets/images/flashcards/Wiki-background.webp"
+  },
+  {
+    "id": 15,
+    "name": "Kindergarten 2",
+    "url": "/flashcard/kindergarten/2/index.html",
+    "cover": "/assets/images/flashcards/aasdasdasdasdasdasd.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Kindergarten 3",
+    "url": "/flashcard/kindergarten3/index.html",
+    "cover": "/assets/images/flashcards/caasdasdsule_616x353.jpg"
+  },
+  {
+    "id": 17,
+    "name": "OMORI",
+    "url": "/flashcard/omori/index.html",
+    "cover": "/assets/images/flashcards/capsuxasdle_616x353.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 18,
+    "name": "People Playground",
+    "url": "/flashcard/people-playground/index.html",
+    "cover": "/assets/images/flashcards/capsuxczxcle_616x353.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Pizza Tower",
+    "url": "/flashcard/pizza-tower/index.html",
+    "cover": "/assets/images/flashcards/pizza-tower-button-02-1670021139476.jpg"
+  },
+  {
+    "id": 20,
+    "name": "R.E.P.O",
+    "url": "/flashcard/repo/index.html",
+    "cover": "/assets/images/flashcards/Repo-Titulo.jpg.webp"
+  },
+  {
+    "id": 21,
+    "name": "Raft",
+    "url": "/flashcard/raft/index.html",
+    "cover": "/assets/images/flashcards/heaxder.jpg"
+  },
+  {
+    "id": 22,
+    "name": "RE:RUN",
+    "url": "/flashcard/rerun/index.html",
+    "cover": "/assets/images/flashcards/8XI5Ic.png"
+  },
+  {
+    "id": 23,
+    "name": "Schoolboy Runaway",
+    "url": "/flashcard/schoolboy-runaway/index.html",
+    "cover": "/assets/images/flashcards/schoolboyrunaway.webp"
+  },
+  {
+    "id": 24,
+    "name": "Slender: The 8 Pages",
+    "url": "/flashcard/slender/index.html",
+    "cover": "/assets/images/flashcards/Slender_Logo.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Slime Rancher",
+    "url": "/flashcard/slime-rancher/index.html",
+    "cover": "/assets/images/flashcards/SlimeRancher-Keyart_Wishlist-Landscape-2560x1440-b2f7b22e6d19dff415daf5dbe4d8e78c.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Sonic CD",
+    "url": "/flashcard/sonic-cd/index.html",
+    "cover": "/assets/images/flashcards/8793_Sonic_CD.webp"
+  },
+  {
+    "id": 27,
+    "name": "Sonic Mania",
+    "url": "/flashcard/sonicmania/index.html",
+    "cover": "/assets/images/flashcards/capsule_6zxzxzx16x353.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Tattletail",
+    "url": "/flashcard/tattletail/index.html",
+    "cover": "/assets/images/flashcards/Tattletail_Steam_cover.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Terraria",
+    "url": "/flashcard/Terraria.html",
+    "cover": "/assets/images/flashcards/heaasdasdasdasdder.jpg"
+  },
+  {
+    "id": 30,
+    "name": "ULTRAKILL",
+    "url": "/flashcard/ultrakill/index.html",
+    "cover": "/assets/images/flashcards/91iQcC7apEL.png"
+  },
+  {
+    "id": 31,
+    "name": "WebFishing",
+    "url": "/flashcard/web-fishing/index.html",
+    "cover": "/assets/images/flashcards/capsule_6zxczxczxc16x353.jpg"
+  },
+  {
+    "id": 32,
+    "name": "Yandere Simulator",
+    "url": "/flashcard/yandere-simulator/index.html",
+    "cover": "/assets/images/flashcards/Logo_Yandere_Simulator.svg.png"
+  },
+  {
+    "id": 33,
+    "name": "Doki Doki Literature Club+",
+    "url": "/flashcard/ddlcplus/index.html",
+    "cover": "/assets/images/flashcards/cfef7634adfd013fc6429f00e0284ddef85c0f857ed5da8d319710cbc249cac3.avif",
+    "controls": "none"
+  },
+  {
+    "id": 34,
+    "name": "Peggle",
+    "url": "/flashcard/peggle/index.html",
+    "cover": "/assets/images/flashcards/maxzxczxczxczxczxcresdefault.jpg",
+    "controls": "none"
+  },
+  {
+    "id": 35,
+    "name": "Untitled Goose Game",
+    "url": "/flashcard/untitled-goose-game/index.html",
+    "cover": "/assets/images/flashcards/e3549b645ea3dc77411280ba4a83f018235bbdb6f0b32039a5519cee985f0f4f.avif"
+  },
+  {
+    "id": 36,
+    "name": "A Difficult Game About Climbing",
+    "url": "/flashcard/adgac/index.html",
+    "cover": "/assets/images/flashcards/m12123axresdefault.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Undertale",
+    "url": "/flashcard/undertale/index.html",
+    "cover": "/assets/images/flashcards/44bea8c565db26c0c470a6325a47c9ea031633945cb91e4b5e1b1a39b01a2cdb.avif",
+    "controls": "arrows"
+  },
+  {
+    "id": 38,
+    "name": "Five Nights at Freddy's",
+    "url": "/flashcard/fnaf1/index.html",
+    "cover": "/assets/images/flashcards/FNaF1.webp",
+    "controls": "arrows"
+  },
+  {
+    "id": 39,
+    "name": "Five Nights at Freddy's 2",
+    "url": "/flashcard/fnaf2/index.html",
+    "cover": "/assets/images/flashcards/fnaf-2-banner-fnaf2io.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 40,
+    "name": "Five Nights at Freddy's 3",
+    "url": "/flashcard/fnaf3/index.html",
+    "cover": "/assets/images/flashcards/71Pib7x9NbL.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 41,
+    "name": "Five Nights at Freddy's 4",
+    "url": "/flashcard/fnaf4/index.html",
+    "cover": "/assets/images/flashcards/baf1a457fbdeb042db36a38d16ffb7c67866736bb4795905be133826ed8b4fa7.avif",
+    "controls": "arrows"
+  },
+  {
+    "id": 42,
+    "name": "Five Nights at Freddy's 5: Sister Location",
+    "url": "/flashcard/fnafsl/index.html",
+    "cover": "/assets/images/flashcards/afb4fd16215e81ad263af66ffa6c3e384092bef0d3742b2f227b35bc60fa189b.avif"
+  },
+  {
+    "id": 43,
+    "name": "Five Nights at Freddy's: Ultimate Custom Night",
+    "url": "/flashcard/fnafucn/index.html",
+    "cover": "/assets/images/flashcards/06710fa7c3370a536005813c75f650148b38bb419f8dfd5b7f6e9712ec50196f.avif",
+    "controls": "arrows"
+  },
+  {
+    "id": 44,
+    "name": "FNAF World",
+    "url": "/flashcard/fnafw/index.html",
+    "cover": "/assets/images/flashcards/FNAFWorldlogo.jpg"
+  },
+  {
+    "id": 45,
+    "name": "Five Nights at Freddy's: Pizzaria Simulator",
+    "url": "/flashcard/fnafps/index.html",
+    "cover": "/assets/images/flashcards/zczxczxczxczxczxc.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 46,
+    "name": "Iron Lung",
+    "url": "/flashcard/iron-lung/index.html",
+    "cover": "/assets/images/flashcards/1d825d77d4a37747fbed529203a93266d97f29ccbaddbe022af52a55b477bafe.avif"
+  },
+  {
+    "id": 47,
+    "name": "Polytrack",
+    "url": "/flashcard/polytrack/index.html",
+    "cover": "/assets/images/flashcards/maxresdezxczxczxczxcfault.jpg"
+  },
+  {
+    "id": 48,
+    "name": "Klifur",
+    "url": "/flashcard/klifur/index.html",
+    "cover": "/assets/images/flashcards/prmajD.png",
+    "controls": "none"
+  },
+  {
+    "id": 49,
+    "name": "Balatro",
+    "url": "/flashcard/balatro/index.html",
+    "cover": "/assets/images/flashcards/asdasdasdasder.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 50,
+    "name": "Five Nights at Epstein's",
+    "url": "/flashcard/fnae/index.html",
+    "cover": "/assets/images/flashcards/maxzxczxczxcresdefault.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 51,
+    "name": "Friday Night Funkin'",
+    "url": "/flashcard/FNF/index.html",
+    "cover": "/assets/images/flashcards/769f9db715608f22e9174283d0f050e0_fgraphic.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 52,
+    "name": "Blockblast",
+    "url": "/flashcard/BlockBlast/index.html",
+    "cover": "/assets/images/flashcards/block-blast-online1.webp",
+    "controls": "none"
+  },
+  {
+    "id": 53,
+    "name": "Bloons Tower Defense",
+    "url": "/flashcard//btd/btd.html",
+    "cover": "/assets/images/flashcards/Bloons_TD_iOS_Logo.jpg",
+    "controls": "none"
+  },
+  {
+    "id": 54,
+    "name": "Bloons Tower Defense 2",
+    "url": "/flashcard//btd/btd2.html",
+    "cover": "/assets/images/flashcards/cover-1638358840555.png",
+    "controls": "none"
+  },
+  {
+    "id": 55,
+    "name": "Bloons Tower Defense 3",
+    "url": "/flashcard//btd/btd3.html",
+    "cover": "/assets/images/flashcards/bloonstd3.webp",
+    "controls": "none"
+  },
+  {
+    "id": 56,
+    "name": "Drift Boss",
+    "url": "/flashcard//drift-boss/index.html",
+    "cover": "/assets/images/flashcards/drift-boss-game.png",
+    "controls": "none"
+  },
+  {
+    "id": 57,
+    "name": "Rise Higher",
+    "url": "/flashcard//rise-higher/index.html",
+    "cover": "/assets/images/flashcards/maxrezxczxczczxcsdefault.jpg",
+    "controls": "none"
+  },
+  {
+    "id": 58,
+    "name": "HexGL",
+    "url": "/flashcard/HexGL/index.html",
+    "cover": "/assets/images/flashcards/U1_bAe.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 59,
+    "name": "Geometry Dash Lite",
+    "url": "/flashcard/gdlite/index.html",
+    "cover": "/assets/images/flashcards/61CCVhzkDeL.png",
+    "controls": "arrows"
+  },
+  {
+    "id": 60,
+    "name": "Duck Life",
+    "url": "/flashcard/dl/dl.html",
+    "cover": "/assets/images/flashcards/dl.webp",
+    "controls": "arrows"
+  },
+  {
+    "id": 61,
+    "name": "Baldi's Basics Plus",
+    "url": "/flashcard/baldi-plus/index.html",
+    "cover": "/assets/images/flashcards/f0ce23ce5af5eb2b016249919eef7fc28aa4fc83_400x225.png"
+  },
+  {
+    "id": 62,
+    "name": "Class of '09",
+    "url": "/flashcard/class-of-09/index.html",
+    "cover": "/assets/images/flashcards/class-of-09-1hav5.webp",
+    "controls": "none"
+  },
+  {
+    "id": 63,
+    "name": "Cuphead",
+    "url": "/flashcard/cuphead/index.html",
+    "cover": "/assets/images/flashcards/d94d2186ef03c930392253c83c84af0c73b7e57cd902a526b09b4155a25930fe.avif"
+  },
+  {
+    "id": 64,
+    "name": "Getting Over It",
+    "url": "/flashcard/getting-over-it/index.html",
+    "cover": "/assets/images/flashcards/capsule_616x353.jpg",
+    "controls": "none"
+  },
+  {
+    "id": 65,
+    "name": "Duck Life 2",
+    "url": "/flashcard/dl/dl2.html",
+    "cover": "/assets/images/flashcards/dl2.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 66,
+    "name": "Duck Life 3",
+    "url": "/flashcard/dl/dl3.html",
+    "cover": "/assets/images/flashcards/DuckLife3_OG-logo.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 67,
+    "name": "Duck Life 4",
+    "url": "/flashcard/dl/dl4.html",
+    "cover": "/assets/images/flashcards/DuckLife4_OG-logo.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 68,
+    "name": "The Coffin of Andy and Leyley",
+    "url": "/flashcard/tcoaal/index.html",
+    "cover": "/assets/images/flashcards/The_Coffin_of_Andy_and_Leyley_Banner.png",
+    "controls": "arrows"
+  },
+  {
+    "id": 69,
+    "name": "Minesweeper",
+    "url": "/flashcard/minesweeper/index.html",
+    "cover": "/assets/images/flashcards/minesweeper-logo.png",
+    "controls": "none"
+  },
+  {
+    "id": 70,
+    "name": "Minecraft",
+    "url": "/flashcard/minecraft/index.html",
+    "cover": "/assets/images/flashcards/MSPromotionalBackground.webp"
+  },
+  {
+    "id": 71,
+    "name": "Project Diva Extended",
+    "url": "/flashcard/divaextend/index.html",
+    "cover": "/assets/images/flashcards/artworks-000287662511-lm5vi5-t500x500.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 72,
+    "name": "NBA 2K13",
+    "url": "/flashcard/nba2k13/index.html",
+    "cover": "/assets/images/flashcards/NBA-2k13.jpeg",
+    "controls": "arrows"
+  },
+  {
+    "id": 73,
+    "name": "Little Big Planet",
+    "url": "/flashcard/lbp/index.html",
+    "cover": "/assets/images/flashcards/dtrbirjxbmwjymd-800x450-nopad.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 74,
+    "name": "Lego Batman: The Videogame",
+    "url": "/flashcard/lego-batman/index.html",
+    "cover": "/assets/images/flashcards/lego-batman-the-videogame-ds.webp",
+    "controls": "arrows"
+  },
+  {
+    "id": 75,
+    "name": "Assassin's Creed: Bloodlines",
+    "url": "/flashcard/assassin-creed-bloodline/index.html",
+    "cover": "/assets/images/flashcards/ac-title.png",
+    "controls": "arrows"
+  },
+  {
+    "id": 76,
+    "name": "God of War: Ghost of Sparta",
+    "url": "/flashcard/god-of-war-ghost-of-sparta/index.html",
+    "cover": "/assets/images/flashcards/Kratos-Ghost-of-Sparta-God-of-War.avif",
+    "controls": "arrows"
+  },
+  {
+    "id": 77,
+    "name": "God of War: Chains of Olympus",
+    "url": "/flashcard/god-of-war-chains-of-olympus",
+    "cover": "/assets/images/flashcards/102504-1.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 78,
+    "name": "Orange Roulette",
+    "url": "/flashcard/orange-roulette/index.html",
+    "cover": "/assets/images/flashcards/header.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 79,
+    "name": "Raldi's Crackhouse",
+    "url": "/flashcard/raldi/index.html",
+    "cover": "/assets/images/flashcards/65862c6feaf80.webp"
+  },
+  {
+    "id": 80,
+    "name": "Undertale Yellow",
+    "url": "/flashcard/undertale-yellow/index.html",
+    "cover": "/assets/images/flashcards/136925-ee65ajxb-v4.webp",
+    "controls": "arrows"
+  },
+  {
+    "id": 81,
+    "name": "Needy Streamer Overload",
+    "url": "/flashcard/nso/index.html",
+    "cover": "/assets/images/flashcards/product_img_624afa2401fc34d1dd73e94189379d44.png",
+    "controls": "arrows"
+  },
+  {
+    "id": 82,
+    "name": "Tanuki Sunset",
+    "url": "/flashcard/tanuki-sunset/index.html",
+    "cover": "/assets/images/flashcards/40b2e5a70c32922326de3732b6b2f17f7773e14caa70296ff43379e6ca92676e.avif",
+    "controls": "none"
+  },
+  {
+    "id": 83,
+    "name": "Roblox",
+    "url": "/embed.html#https://nowgg.fun/apps/a/19900/b.html",
+    "cover": "/assets/images/flashcards/28ab48fcd5d5b19b03c126d2b6aef4b8.jpg",
+    "controls": "none"
+  },
+  {
+    "id": 84,
+    "name": "Fortnite",
+    "url": "/embed.html#https://play.geforcenow.com/mall/#/deeplink?game-id=46bfab06-d864-465d-9e56-2d9e45cdee0a",
+    "cover": "/assets/images/flashcards/maxresdefault.jpg",
+    "controls": "none"
+  },
+  {
+    "id": 85,
+    "name": "Stumble Guys",
+    "url": "/embed.html#https://nowgg.fun/apps/a/10011/b.html",
+    "cover": "/assets/images/flashcards/45dc1c4949a8a343f123a3eef6c5ba8aade31d8ad4f945706a4f4745e74d8573.avif",
+    "controls": "none"
+  },
+  {
+    "id": 86,
+    "name": "CookieRun: Kingdom",
+    "url": "/embed.html#https://nowgg.fun/apps/a/10019/b.html",
+    "cover": "/assets/images/flashcards/og-en.jpg",
+    "controls": "none"
+  },
+  {
+    "id": 87,
+    "name": "Call of Duty: Mobile",
+    "url": "/embed.html#https://nowgg.fun/apps/a/10008/b.html",
+    "cover": "/assets/images/flashcards/call-of-duty-mobile-made-more-money-in-a-month-than-warzone-mobile-did-in-a-year-cover682f42117bccc.jpg",
+    "controls": "none"
+  },
+  {
+    "id": 88,
+    "name": "Silent Hill",
+    "url": "/flashcard/silent-hill/index.html",
+    "cover": "/assets/images/flashcards/hq720.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 89,
+    "name": "Danganronpa: Trigger Happy Havoc",
+    "url": "/flashcard/danganronpa/index.html",
+    "cover": "/assets/images/flashcards/6a84ae122ee090fb34e921775ed4c8d3f29fece6ba746c9b557202a62f10b542.avif"
+  },
+  {
+    "id": 90,
+    "name": "Granny",
+    "url": "/flashcard/granny/index.html",
+    "cover": "/assets/images/flashcards/granny.jpg"
+  },
+  {
+    "id": 91,
+    "name": "Deltarune",
+    "url": "/flashcard/deltarune/index.html",
+    "cover": "/assets/images/flashcards/deltarune.webp",
+    "controls": "arrows"
+  },
+  {
+    "id": 92,
+    "name": "Moto X3M",
+    "url": "/flashcard/motox3m/index.html",
+    "cover": "/assets/images/flashcards/MotoX3M_OG-logo.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 93,
+    "name": "Pokemon Blue",
+    "url": "/flashcard/pokemon-blue-version/index.html",
+    "cover": "/assets/images/flashcards/H2x1_GB_PokemonBlue_enGB.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 94,
+    "name": "Pokemon Red",
+    "url": "/flashcard/pokemon-red-version/index.html",
+    "cover": "/assets/images/flashcards/H2x1_GB_PokemonRed_enGB_cover1280w.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 95,
+    "name": "Pokemon Yellow",
+    "url": "/flashcard/pokemon-yellow-version/index.html",
+    "cover": "/assets/images/flashcards/H2x1_GB_PokemonYellow_enGB_cover1600w.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 96,
+    "name": "Pokemon Gold",
+    "url": "/flashcard/pokemon-gold-version/index.html",
+    "cover": "/assets/images/flashcards/H2x1_GBC_PokemonGold_enGB.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 97,
+    "name": "Pokemon Silver",
+    "url": "/flashcard/pokemon-silver-version/index.html",
+    "cover": "/assets/images/flashcards/pokemon-silver.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 98,
+    "name": "Pokemon Crystal",
+    "url": "/flashcard/pokemon-crystal-version/index.html",
+    "cover": "/assets/images/flashcards/H2x1_GBC_PokemonCrystal_enGB.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 99,
+    "name": "Pokemon Ruby",
+    "url": "/flashcard/pokemon-ruby-version/index.html",
+    "cover": "/assets/images/flashcards/SI_GBA_PokemonRuby_enGB_cover1280w.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 100,
+    "name": "Pokemon Sapphire",
+    "url": "/flashcard/pokemon-sapphire-version/index.html",
+    "cover": "/assets/images/flashcards/SI_GBA_PokemonSapphire_enGB_cover1600w.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 101,
+    "name": "Pokemon Fire Red",
+    "url": "/flashcard/pokemon-fire-red-version/index.html",
+    "cover": "/assets/images/flashcards/16x9_NSwitch_PokemonFireRed_UK_cover1600w.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 102,
+    "name": "Pokemon Leaf Green",
+    "url": "/flashcard/pokemon-leaf-green-version/index.html",
+    "cover": "/assets/images/flashcards/16x9_NSwitch_PokemonLeafGreen_UK.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 103,
+    "name": "Pokemon Emerald",
+    "url": "/flashcard/pokemon-emerald-version/index.html",
+    "cover": "/assets/images/flashcards/emerald.png",
+    "controls": "arrows"
+  },
+  {
+    "id": 104,
+    "name": "Look Outside",
+    "url": "/flashcard/look-outside/index.html",
+    "cover": "/assets/images/flashcards/lookoutside.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 105,
+    "name": "Five Nights At Candy's",
+    "url": "/flashcard/fnac1/index.html",
+    "cover": "/assets/images/flashcards/fnac.webp",
+    "controls": "arrows"
+  },
+  {
+    "id": 106,
+    "name": "Five Nights At Candy's 2",
+    "url": "/flashcard/fnac2/index.html",
+    "cover": "/assets/images/flashcards/fnac2.webp",
+    "controls": "arrows"
+  },
+  {
+    "id": 107,
+    "name": "Jelly Drift",
+    "url": "/flashcard/jelly-drift/index.html",
+    "cover": "/assets/images/flashcards/5e798B.png"
+  },
+  {
+    "id": 108,
+    "name": "The Man from the Window",
+    "url": "/flashcard/the-man-in-the-window/index.html",
+    "cover": "/assets/images/flashcards/the-man-from-the-window.avif"
+  },
+  {
+    "id": 109,
+    "name": "That's Not My Neighbor",
+    "url": "/flashcard/thats-not-my-neighbor/index.html",
+    "cover": "/assets/images/flashcards/thatsnotmyneighbor.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 110,
+    "name": "Sonic.EXE",
+    "url": "/flashcard/sonicexe/index.html",
+    "cover": "/assets/images/flashcards/1311560123.jc-the-hyena_soniccreepy1.webp",
+    "controls": "arrows"
+  },
+  {
+    "id": 111,
+    "name": "Dumb Ways To Die",
+    "url": "/flashcard/dumb-ways-to-die/index.html",
+    "cover": "/assets/images/flashcards/1_Al_9A_Usj2VY15kRVNdmKg.jpg",
+    "controls": "arrows"
+  },
+  {
+    "id": 112,
+    "name": "DOOM",
+    "url": "/flashcard/doom/index.html",
+    "cover": "/assets/images/flashcards/1200.webp",
+    "controls": "arrows"
+  },
+  {
+    "id": 113,
+    "name": "QWOP",
+    "url": "/flashcard/qwop/index.html",
+    "cover": "/assets/images/flashcards/qwop.webp",
+    "controls": "qwop"
+  },
+  {
+    "id": 114,
+    "name": "Hollow Knight: Silksong",
+    "url": "/flashcard/silksong/index.html",
+    "cover": "/assets/images/flashcards/silky.avif",
+    "controls": "arrows"
+  },
+  {
+    "id": 115,
+    "name": "Baldis Basics Classic Remasterd",
+    "url": "/flashcard/baldis-basics/index.html",
+    "cover": "/assets/images/flashcards/aisiodjakjxncjnasbdfhjags.jpg"
+  },
+  {
+    "id": 116,
+    "name": "Brotato",
+    "url": "/flashcard/brotato/index.html",
+    "cover": "/assets/images/flashcards/imcrine.jpeg"
+  },
+  {
+    "id": 117,
+    "name": "Baldi's Birthday Bash",
+    "url": "/flashcard/BaldiBirthdayBash.html",
+    "cover": "/assets/images/flashcards/BaldiBirthdayBash.png"
+  },
+  {
+    "id": 118,
+    "name": "The Powder Toy",
+    "url": "/flashcard/tpt/index.html",
+    "cover": "/assets/images/flashcards/tpt.jpg"
+  },
+  {
+    "id": 119,
+    "name": "killer chat",
+    "url": "/flashcard/killerchat/index.html",
+    "cover": "/assets/killerchat.webp",
+    "controls": "none"
+  },
+  {
+    "id": 120,
+    "name": "class of '09: the flipside",
+    "url": "/flashcard/co09tfs/index.html",
+    "cover": "/assets/co09tfs.jpg",
+    "controls": "none"
+  },
+  {
+    "id": 121,
+    "name": "class of '09: the reup",
+    "url": "/flashcard/co09tru/index.html",
+    "cover": "/assets/co09tru.jpg",
+    "controls": "none"
+  },
+  {
+    "id": 122,
+    "name": "do not take this cat home",
+    "url": "/flashcard/donottakethiscathome/index.html",
+    "cover": "/assets/dnttch.png",
+    "controls": "none"
+  },
+  {
+    "id": 123,
+    "name": "a date with death",
+    "url": "/flashcard/adatewithdeath/index.html",
+    "cover": "/assets/adatewithdeath.jpg",
+    "controls": "none"
+  },
+  {
+    "id": 124,
+    "name": "cookie run kingdom",
+    "url": "embed.html#https://nowgg.fun/apps/a/10019/b.html",
+    "cover": "/assets/crk.jpeg"
+  },
+  {
+    "id": 125,
+    "name": "call of duty mobile",
+    "url": "embed.html#https://68.ip.nowgg.fun/apps/a/10008/b.html",
+    "cover": "/assets/cod.jpg"
+  },
+  {
+    "id": 126,
+    "name": "rocket league sideswipe",
+    "url": "embed.html#https://nowgg.fun/apps/psyonix-studios/4656/rocket-league.html",
+    "cover": "/assets/rocketleague.webp"
+  },
+  {
+    "id": 127,
+    "name": "shift at midnight",
+    "url": "/flashcard/shift-at-midnight/index.html",
+    "cover": "/assets/shiftatmidnight.jpg"
+  },
+  {
+    "id": 128,
+    "name": "cruelty squad",
+    "url": "/flashcard/crueltysquad/index.html",
+    "cover": "/assets/crueltysquad.jpeg",
+    "controls": "none"
+  },
+  {
+    "id": 129,
+    "name": "windowkill",
+    "url": "/flashcard/windowkill/index.html",
+    "cover": "/assets/windowkill.jpeg",
+    "controls": "none"
+  },
+  {
+    "id": 130,
+    "name": "peaks of yore",
+    "url": "/flashcard/peaksofyore/index.html",
+    "cover": "/assets/peaksofyore.png"
+  },
+  {
+    "id": 131,
+    "name": "saihate station",
+    "url": "/flashcard/saihate/index.html",
+    "cover": "/assets/saihate.webp"
+  },
+  {
+    "id": 132,
+    "name": "inscryption",
+    "url": "/flashcard/inscryption/index.html",
+    "cover": "/assets/inscryption.jpg"
+  },
+  {
+    "id": 133,
+    "name": "youtubers life",
+    "url": "/flashcard/ytlife/index.html",
+    "cover": "/assets/ytlife.jpeg"
+  },
+  {
+    "id": 134,
+    "name": "plague inc: evolved",
+    "url": "/flashcard/plagueinc/index.html",
+    "cover": "/assets/plagueinc.png"
+  },
+  {
+    "id": 135,
+    "name": "in stars and time",
+    "url": "/flashcard/isat/index.html",
+    "cover": "/assets/isat.png"
+  },
+  {
+    "id": 136,
+    "name": "whos your daddy",
+    "url": "/flashcard/whosyourdaddy/index.html",
+    "cover": "/assets/wyd.jpg"
+  },
+  {
+    "id": 137,
+    "name": "fear and hunger",
+    "url": "/flashcard/fah/index.html",
+    "cover": "/assets/fah.jpeg"
+  },
+  {
+    "id": 138,
+    "name": "fear and hunger 2: termina",
+    "url": "/flashcard/fah2/index.html",
+    "cover": "/assets/fah2.jpg"
+  },
+  {
+    "id": 139,
+    "name": "cloverpit",
+    "url": "/flashcard/cloverpit/index.html",
+    "cover": "/assets/cloverpit.jpeg"
+  },
+  {
+    "id": 140,
+    "name": "gabriels awesome schoolhouse",
+    "url": "/flashcard/gash/index.html",
+    "cover": "/assets/gash.jpg"
+  },
+  {
+    "id": 141,
+    "name": "power hover",
+    "url": "/flashcard/powerhover/index.html",
+    "cover": "/assets/powerhover.webp"
+  },
+  {
+    "id": 142,
+    "name": "stardew valley",
+    "url": "/flashcard/stardew/index.html",
+    "cover": "/assets/stardew.avif"
+  },
+  {
+    "id": 143,
+    "name": "approaches",
+    "url": "/flashcard/approaches/index.html",
+    "cover": "/assets/approaches.gif"
+  },
+  {
+    "id": 144,
+    "name": "agafabh",
+    "url": "/flashcard/agafabh/index.html",
+    "cover": "/assets/agafabh.jpg"
+  },
+  {
+    "id": 145,
+    "name": "purrgatory",
+    "url": "/flashcard/purrgatory/index.html",
+    "cover": "/assets/purrgatory.jpg"
+  },
+  {
+    "id": 146,
+    "name": "dictators: no peace countryballs",
+    "url": "/flashcard/npc/index.html",
+    "cover": "/assets/npc.jpg"
+  },
+  {
+    "id": 147,
+    "name": "Road of the Dead",
+    "url": "/flashcard/rotd/index.html",
+    "cover": "/assets/rotd.webp"
+  },
+  {
+    "id": 148,
+    "name": "Road of the Dead 2",
+    "url": "/flashcard/rotd2/index.html",
+    "cover": "/assets/rotd2.png"
+  }
+]

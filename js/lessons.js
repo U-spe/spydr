@@ -93,6 +93,10 @@ async function setSource(index) {
   const source = gameLists[index];
   if (!source) return;
 
+  // FIX: Immediately halt any staggered rendering from the previous source
+  renderTimeouts.forEach(clearTimeout);
+  renderTimeouts = [];
+
   currentSourceData = source;
   if (sourceText) sourceText.textContent = source.Name;
 
@@ -196,7 +200,7 @@ function renderGames() {
   if (!gameGrid) return;
   gameGrid.innerHTML = "";
 
-  // Clear any ongoing staggered renders to prevent glitches when searching/switching
+  // Clear ongoing renders to prevent glitches when searching/switching rapidly
   renderTimeouts.forEach(clearTimeout);
   renderTimeouts = [];
 
@@ -210,14 +214,14 @@ function renderGames() {
       const card = document.createElement("div");
       card.className = "game-card";
 
-      // Create the image and text elements dynamically
+      // Create elements dynamically
       const img = document.createElement("img");
       const titleSpan = document.createElement("span");
       const fallbackSrc = "assets/images/no-image.png";
 
       img.src = getCover(game);
       img.style.filter = "grayscale(100%)";
-      titleSpan.textContent = game.name;
+      titleSpan.textContent = game.name; // User Preference: Just game names, no extra labels
 
       // Track loading state
       let isLoaded = false;
@@ -227,11 +231,11 @@ function renderGames() {
         isLoaded = true;
       };
 
-      // Triggered instantly if the image link is broken (e.g., 404 error)
+      // Triggered instantly if the image link is hard-broken (e.g., 404 error)
       img.onerror = () => {
         if (!img.src.includes(fallbackSrc)) {
           img.src = fallbackSrc;
-          isLoaded = true; // Mark as loaded so the timeout doesn't fire redundantly
+          isLoaded = true; 
         }
       };
 
@@ -260,6 +264,11 @@ function renderGames() {
    SEARCH
 ========================= */
 searchInput?.addEventListener("input", (e) => {
+  // Prevent searching from interfering if currently in Lumin mode
+  if (currentSourceData && currentSourceData.Name.toLowerCase().includes("lumin")) {
+    return; 
+  }
+
   const q = e.target.value.toLowerCase();
 
   filteredGames = games.filter(g =>
@@ -301,10 +310,21 @@ closeGameBtn?.addEventListener("click", () => {
 function loadLumin() {
   if (!luminGames) return;
   
-  luminGames.innerHTML = `<div id="games"></div>`;
+  // FIX: Only initialize the HTML if it hasn't been set up yet.
+  // Overwriting this repeatedly is what breaks the SDK.
+  let gamesContainer = document.getElementById("games");
+  
+  if (window.Lumin && typeof window.Lumin.init === "function" && gamesContainer) {
+    // Lumin is already active and the container exists, no need to rebuild.
+    return;
+  }
 
-  if (window.Lumin && typeof window.Lumin.init === "function") {
-    startLumin();
+  if (!gamesContainer) {
+    luminGames.innerHTML = `<div id="games"></div>`;
+  }
+
+  // Prevent multiple script tags from appending if clicked rapidly
+  if (document.querySelector("script[data-lumin='true']")) {
     return;
   }
 

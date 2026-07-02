@@ -10,7 +10,7 @@ const sourceText = document.getElementById("sourceText");
 const searchInput = document.getElementById("search");
 const gameGrid = document.getElementById("game-grid");
 
-const luminGames = document.getElementById("lumin-games");
+let luminGames = document.getElementById("lumin-games");
 
 const gameView = document.getElementById("game-view");
 const gameFrame = document.getElementById("game-frame");
@@ -42,8 +42,7 @@ function getGameURL(game) {
 }
 
 function getCover(game) {
-  return game.cover ||
-    "https://via.placeholder.com/300x200?text=No+Image";
+  return game.cover || "https://via.placeholder.com/300x200?text=No+Image";
 }
 
 /* =========================
@@ -87,21 +86,24 @@ async function setSource(index) {
   if (!source) return;
 
   currentSourceData = source;
-  sourceText.textContent = source.Name;
+  if (sourceText) sourceText.textContent = source.Name;
 
-  dropdownMenu.classList.remove("active");
-  searchInput.value = "";
+  dropdownMenu?.classList.remove("active");
+  if (searchInput) searchInput.value = "";
 
   /* LUMIN MODE */
   if (source.Name.toLowerCase().includes("lumin")) {
-    gameGrid.style.display = "none";
-    luminGames.style.display = "block";
+    if (gameGrid) gameGrid.style.display = "none";
+    if (luminGames) {
+      luminGames.style.display = "block";
+    }
     loadLumin();
     return;
   }
 
-  luminGames.style.display = "none";
-  gameGrid.style.display = "grid";
+  // STANDARD MODE
+  if (luminGames) luminGames.style.display = "none";
+  if (gameGrid) gameGrid.style.display = "grid";
 
   await loadGames();
 }
@@ -112,7 +114,7 @@ async function setSource(index) {
 async function loadGames() {
   if (!currentSourceData) return;
 
-  gameGrid.innerHTML = "Loading...";
+  if (gameGrid) gameGrid.innerHTML = "Loading...";
 
   try {
     const response = await fetch(
@@ -142,8 +144,9 @@ async function loadGames() {
 
   } catch (err) {
     console.error(err);
-
-    gameGrid.innerHTML = `<div style="padding:20px;color:#fff;">failed to load games</div>`;
+    if (gameGrid) {
+      gameGrid.innerHTML = `<div style="padding:20px;color:#fff;">failed to load games</div>`;
+    }
   }
 }
 
@@ -151,6 +154,7 @@ async function loadGames() {
    RENDER
 ========================= */
 function renderGames() {
+  if (!gameGrid) return;
   gameGrid.innerHTML = "";
 
   if (filteredGames.length === 0) {
@@ -162,7 +166,8 @@ function renderGames() {
     const card = document.createElement("div");
     card.className = "game-card";
 
-    card.innerHTML = `<img src="${getCover(game)}"><span>${game.name}</span>`;
+    // Applied Grayscale filter directly via JS inline styling
+    card.innerHTML = `<img src="${getCover(game)}" style="filter: grayscale(100%);"><span>${game.name}</span>`;
     card.onclick = () => openGame(game);
 
     gameGrid.appendChild(card);
@@ -192,22 +197,24 @@ function openGame(game) {
     url = `embed.html?url=${encodeURIComponent(url)}`;
   }
 
-  gameView.style.display = "flex";
-  gameFrame.src = url;
+  if (gameView) gameView.style.display = "flex";
+  if (gameFrame) gameFrame.src = url;
 }
 
 /* =========================
    CLOSE GAME
 ========================= */
 closeGameBtn?.addEventListener("click", () => {
-  gameView.style.display = "none";
-  gameFrame.src = "about:blank";
+  if (gameView) gameView.style.display = "none";
+  if (gameFrame) gameFrame.src = "about:blank";
 });
 
 /* =========================
    LUMIN (UNCHANGED)
 ========================= */
 function loadLumin() {
+  if (!luminGames) return;
+  
   luminGames.innerHTML = `<div id="games"></div>`;
 
   if (window.Lumin && typeof window.Lumin.init === "function") {
@@ -230,7 +237,7 @@ function loadLumin() {
 
 function startLumin() {
   if (!window.Lumin || typeof window.Lumin.init !== "function") {
-    luminGames.innerHTML = "lumin not available";
+    if (luminGames) luminGames.innerHTML = "lumin not available";
     return;
   }
 
@@ -241,9 +248,18 @@ function startLumin() {
 }
 
 /* =========================
-   INIT (FIXED PATH IS HERE)
+   INIT
 ========================= */
 async function init() {
+  // Dynamically create luminGames container if missing from HTML to prevent null errors
+  luminGames = document.getElementById("lumin-games");
+  if (!luminGames && gameGrid) {
+    luminGames = document.createElement("div");
+    luminGames.id = "lumin-games";
+    luminGames.style.display = "none";
+    gameGrid.parentNode.insertBefore(luminGames, gameGrid.nextSibling);
+  }
+
   try {
     const response = await fetch(
       "assets/json/gzone-main.json?t=" + Date.now()
@@ -263,8 +279,9 @@ async function init() {
 
   } catch (err) {
     console.error(err);
-
-    gameGrid.innerHTML = `<div style="padding:20px;color:white;">failed to initialize</div>`;
+    if (gameGrid) {
+      gameGrid.innerHTML = `<div style="padding:20px;color:white;">failed to initialize</div>`;
+    }
   }
 }
 

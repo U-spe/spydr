@@ -2,6 +2,13 @@
    SPYDR GAME LOADER (FIXED)
 ========================= */
 
+/* CONSTANTS FOR PLACEHOLDERS */
+const HTML_URL_REPLACEMENT =
+  "https://cdn.jsdelivr.net/gh/freebuisness/html@main";
+
+const COVER_URL_REPLACEMENT =
+  "https://cdn.jsdelivr.net/gh/freebuisness/covers@main";
+
 /* ELEMENTS */
 const dropdownButton = document.getElementById("dropdownButton");
 const dropdownMenu = document.getElementById("dropdownMenu");
@@ -10,7 +17,7 @@ const sourceText = document.getElementById("sourceText");
 const searchInput = document.getElementById("search");
 const gameGrid = document.getElementById("game-grid");
 
-let luminGames = document.getElementById("lumin-games");
+const luminGames = document.getElementById("lumin-games");
 
 const gameView = document.getElementById("game-view");
 const gameFrame = document.getElementById("game-frame");
@@ -42,7 +49,7 @@ function getGameURL(game) {
 }
 
 function getCover(game) {
-  return game.cover || "https://via.placeholder.com/300x200?text=No+Image";
+  return game.cover || "assets/images/no-image.png";
 }
 
 /* =========================
@@ -109,7 +116,7 @@ async function setSource(index) {
 }
 
 /* =========================
-   LOAD GAMES (FIXED PATH HERE)
+   LOAD GAMES
 ========================= */
 async function loadGames() {
   if (!currentSourceData) return;
@@ -131,15 +138,47 @@ async function loadGames() {
       ? data
       : data.games || data.items || data.apps || [];
 
-    games = rawGames.map((game, i) => ({
-      id: game.id || (crypto?.randomUUID?.() ?? Math.random().toString(36)),
-      name: game.name || game.title || `Game ${i + 1}`,
-      url: game.url || game.link || "",
-      cover: game.cover || game.image || game.img || "",
-      prx: game.prx || game.proxy || false
-    }));
+    games = rawGames.map((game, i) => {
+      // Normalize Cover
+      let coverStr = 
+        game.cover ||
+        game.thumbnail ||
+        game.thumb ||
+        game.image ||
+        game.img ||
+        game.icon ||
+        "assets/images/no-image.png";
 
-    filteredGames = [...games];
+      if (typeof coverStr === "string") {
+        coverStr = coverStr.replaceAll("{COVER_URL}", COVER_URL_REPLACEMENT);
+      }
+
+      // Normalize URL
+      let urlStr = 
+        game.url ||
+        game.game_url ||
+        game.file_name ||
+        game.embed_url ||
+        game.link ||
+        game.src ||
+        game.play ||
+        "";
+
+      if (typeof urlStr === "string") {
+        urlStr = urlStr.replaceAll("{HTML_URL}", HTML_URL_REPLACEMENT);
+      }
+
+      return {
+        id: game.id || (crypto?.randomUUID?.() ?? Math.random().toString(36)),
+name:
+  game.name || game.title ||  game.game || game.app || game.slug ||game.id?.toString() ||`Game ${i + 1}`,
+        url: urlStr,
+        cover: coverStr,
+        prx: game.prx || game.proxy || false
+      };
+    });
+
+    filteredGames = games.slice();
     renderGames();
 
   } catch (err) {
@@ -199,6 +238,8 @@ function openGame(game) {
 
   if (gameView) gameView.style.display = "flex";
   if (gameFrame) gameFrame.src = url;
+  
+  document.body.style.overflow = "hidden"; // Prevent background scrolling
 }
 
 /* =========================
@@ -207,10 +248,12 @@ function openGame(game) {
 closeGameBtn?.addEventListener("click", () => {
   if (gameView) gameView.style.display = "none";
   if (gameFrame) gameFrame.src = "about:blank";
+  
+  document.body.style.overflow = ""; // Restore background scrolling
 });
 
 /* =========================
-   LUMIN (UNCHANGED)
+   LUMIN
 ========================= */
 function loadLumin() {
   if (!luminGames) return;
@@ -251,15 +294,6 @@ function startLumin() {
    INIT
 ========================= */
 async function init() {
-  // Dynamically create luminGames container if missing from HTML to prevent null errors
-  luminGames = document.getElementById("lumin-games");
-  if (!luminGames && gameGrid) {
-    luminGames = document.createElement("div");
-    luminGames.id = "lumin-games";
-    luminGames.style.display = "none";
-    gameGrid.parentNode.insertBefore(luminGames, gameGrid.nextSibling);
-  }
-
   try {
     const response = await fetch(
       "assets/json/gzone-main.json?t=" + Date.now()

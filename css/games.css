@@ -1,0 +1,214 @@
+:root {
+  --bg: #090909;
+  --bg2: #111111;
+  --card: #171717;
+  --border: #2b2b2b;
+  --text: #ffffff;
+  --gray: #bdbdbd;
+}
+
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "JetBrains Mono";
+}
+
+/* TOP RIGHT */
+.top-right {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  gap: 10px;
+  z-index: 50;
+}
+
+.top-right button {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* MENU (FIXED HOVER BEHAVIOR) */
+.menu-wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 60;
+}
+
+#menu-btn {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+#menu {
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+  width: 200px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: 0.25s ease;
+}
+
+.menu-wrapper:hover #menu,
+#menu:hover {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#menu button {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--gray);
+  padding: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+#menu button:hover {
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+/* CENTER */
+.center {
+  padding: 80px 20px;
+}
+
+/* TOP BAR */
+.top-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+#dropdownButton {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#dropdownMenu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  min-width: 200px;
+  z-index: 99;
+}
+
+#dropdownMenu.active {
+  display: flex;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* SEARCH */
+.search {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.search input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+/* GRID */
+#game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.game-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.game-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.game-card span {
+  display: block;
+  padding: 10px;
+  color: var(--gray);
+}
+
+/* GAME VIEW */
+#game-view {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: none;
+  flex-direction: column;
+  z-index: 999;
+}
+
+#game-frame {
+  flex: 1;
+  border: none;
+}
+
+#closeGameBtn {
+  background: var(--bg2);
+  border: none;
+  color: white;
+  padding: 12px;
+}

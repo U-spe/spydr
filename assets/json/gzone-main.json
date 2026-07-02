@@ -3,7 +3,7 @@
     {
     "Name": "Hydra",
     "File": "assets/json/hydra.json",
-    "Icon": "ri-ailen-line"
+    "Icon": "ri-aliens-line"
   },
   {
     "Name": "TGLSC",
@@ -23,7 +23,7 @@
   {
     "Name": "Zaapiz/GN Math",
     "File": "assets/json/zaapiz.json",
-    "Icon": "ri-zap-line"
+    "Icon": "ri-flashlight-line"
   },
   {
     "Name": "Lumin",

@@ -30,37 +30,8 @@
   </button>
 </div>
 
-<!-- MENU (JETX STYLE HOVER MENU REUSED) -->
-<div class="menu-wrapper">
-
-  <button id="menu-btn">
-    <i class="ri-menu-line"></i>
-  </button>
-
-  <div id="menu">
-
-    <button onclick="go('/lessons.html')">
-      <i class="ri-gamepad-line"></i> lessons
-    </button>
-
-    <button onclick="go('/applications.html')">
-      <i class="ri-apps-line"></i> applications
-    </button>
-
-    <button onclick="go('/search.html')">
-      <i class="ri-global-line"></i> search
-    </button>
-
-    <button onclick="go('/audios.html')">
-      <i class="ri-music-line"></i> audios
-    </button>
-
-    <button onclick="go('/settings.html')">
-      <i class="ri-settings-3-line"></i> settings
-    </button>
-
-  </div>
-</div>
+<!-- GLOBAL MENU -->
+<div id="global-menu"></div>
 
 <!-- MAIN -->
 <div class="center">
@@ -92,11 +63,14 @@
 
 <!-- GAME VIEW -->
 <div id="game-view">
-  <button id="closeGameBtn">← back</button>
+  <button id="closeGameBtn">← exit</button>
   <iframe id="game-frame"></iframe>
 </div>
 
 <script src="/js/lessons.js"></script>
+<script src="/js/load.js"></script>
+<script src="/js/globalmenu.js"></script>
+<script src="/js/globalcloak.js"></script>
 
 <script>
 function go(page){

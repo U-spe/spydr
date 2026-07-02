@@ -17,13 +17,13 @@ setInterval(updateClock, 1000);
 updateClock();
 
 
-// CONST TEXT ROTATION
+// CONST TEXT
 const lines = [
-  "system booting...",
-  "spydr core online",
-  "loading interface",
-  "sync complete",
-  "neural mesh active"
+  "system initializing",
+  "spydr core active",
+  "render engine online",
+  "weaving everything together",
+  "grayscale protocol enabled"
 ];
 
 const constText = document.getElementById("constText");
@@ -31,43 +31,38 @@ const constText = document.getElementById("constText");
 setInterval(() => {
   constText.textContent =
     lines[Math.floor(Math.random() * lines.length)];
-}, 2500);
+}, 2400);
 
 
-// INTRO CONTROL (SPEED KNOB)
-const INTRO_TIME = 5200; // change this anytime
+// LOADING SCREEN (SMOOTH EXIT)
+const INTRO_TIME = 5200;
 
 window.addEventListener("load", () => {
   const loading = document.getElementById("loading-screen");
   const video = document.getElementById("loadVideo");
   const app = document.getElementById("app");
 
-  let finished = false;
+  let done = false;
 
-  function finishIntro() {
-    if (finished) return;
-    finished = true;
+  function finish() {
+    if (done) return;
+    done = true;
 
     loading.style.opacity = "0";
 
     setTimeout(() => {
       loading.style.display = "none";
       app.style.opacity = "1";
-      app.classList.add("loaded");
     }, 600);
   }
 
-  // video ends OR timeout fallback
-  video.onended = finishIntro;
-  setTimeout(finishIntro, INTRO_TIME);
+  video.onended = finish;
+  setTimeout(finish, INTRO_TIME);
 });
 
 
 // NAV
 function go(page) {
   document.body.style.opacity = "0";
-
-  setTimeout(() => {
-    window.location.href = page;
-  }, 400);
+  setTimeout(() => window.location.href = page, 350);
 }

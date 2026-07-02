@@ -118,7 +118,7 @@ closeGameBtn.onclick = () => {
 
 // INIT
 async function init() {
-  const res = await fetch("/game-zones/main-zone.json");
+const res = await fetch("assets/json/gzone-main.json");
   gameLists = await res.json();
 
   buildMenu();

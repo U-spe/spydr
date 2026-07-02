@@ -11,7 +11,7 @@
     "Icon": "ri-fire-line"
   },
   {
-    "Name": "Gn-Math",
+    "Name": "GN-Math",
     "File": "assets/json/gnmath.json",
     "Icon": "ri-book-line"
   },
@@ -21,7 +21,7 @@
     "Icon": "ri-ghost-line"
   },
   {
-    "Name": "Zaapiz/GN Math",
+    "Name": "Zaapiz/GN-Math",
     "File": "assets/json/zaapiz.json",
     "Icon": "ri-flashlight-line"
   },

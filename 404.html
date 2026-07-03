@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>404 - Spydr</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #000000, #120018, #2a0040);
+  color: white;
+  overflow: hidden;
+}
+
+/* glow blobs */
+.glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+}
+
+.glow.purple {
+  background: #a855f7;
+  top: -100px;
+  left: -100px;
+}
+
+.glow.blue {
+  background: #3b82f6;
+  bottom: -120px;
+  right: -120px;
+}
+
+.card {
+  position: relative;
+  text-align: center;
+  padding: 40px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  width: 320px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fff, #a855f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: black;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+p {
+  opacity: 0.7;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #a855f7;
+  color: white;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #9333ea;
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow purple"></div>
+<div class="glow blue"></div>
+
+<div class="card">
+  <div class="logo">SP</div>
+  <h1>404</h1>
+  <p>this page got wrapped inside a web</p>
+  <button onclick="goBack()">go back</button>
+</div>
+
+<script>
+function goBack() {
+  if (document.referrer) {
+    window.history.back();
+  } else {
+    window.location.href = "/";
+  }
+}
+</script>
+
+</body>
+</html>

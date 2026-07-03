@@ -26,49 +26,55 @@ body {
 /* glow */
 .glow {
   position: absolute;
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
-  filter: blur(130px);
+  filter: blur(140px);
   opacity: 0.35;
 }
 
 .glow.purple {
   background: #a855f7;
-  top: -120px;
-  left: -120px;
+  top: -140px;
+  left: -140px;
 }
 
 .glow.blue {
   background: #3b82f6;
-  bottom: -120px;
-  right: -120px;
+  bottom: -140px;
+  right: -140px;
 }
 
-/* card */
+/* center card */
 .card {
   position: relative;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   padding: 40px;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 16px;
   backdrop-filter: blur(10px);
-  width: 340px;
+  width: 360px;
 }
 
-/* logo */
+/* 🕷️ spider/logo */
 .logo {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 15px;
-  border-radius: 14px;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* makes it white */
+  margin-bottom: 10px;
 }
 
-/* 🔥 GLITCH TEXT */
+/* glitch text */
 .glitch {
-  font-size: 3.2rem;
-  font-weight: 800;
+  font-size: 3.5rem;
+  font-weight: 900;
   position: relative;
   display: inline-block;
   color: white;
@@ -116,9 +122,11 @@ body {
 }
 
 p {
-  opacity: 0.7;
-  font-size: 0.9rem;
-  margin: 12px 0 20px;
+  opacity: 0.75;
+  font-size: 0.95rem;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 button {
@@ -145,13 +153,17 @@ button:hover {
 <div class="glow blue"></div>
 
 <div class="card">
-  <img class="logo" src="/assets/images/logo.png" />
 
+  <!-- spider on top -->
+  <img class="logo" src="/assets/images/logo.png" alt="spydr logo"/>
+
+  <!-- glitch 404 -->
   <div class="glitch">404</div>
 
-  <p>this page got tangled up in a spider web🕷️</p>
+  <p>this page got tangled up in a spider web 🕷️</p>
 
   <button onclick="goBack()">go back</button>
+
 </div>
 
 <script>

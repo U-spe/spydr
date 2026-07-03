@@ -3,13 +3,11 @@
 
   const SPYDR = {
     state: {},
-    listeners: {},
-
-    // =========================
-    // 💾 STORAGE CORE
-    // =========================
     storageKey: "spydr_settings",
 
+    // =====================
+    // DEFAULTS
+    // =====================
     defaults() {
       return {
         stars: true,
@@ -23,12 +21,14 @@
       };
     },
 
+    // =====================
+    // STORAGE
+    // =====================
     load() {
       try {
-        const saved = localStorage.getItem(this.storageKey);
-        this.state = saved ? JSON.parse(saved) : this.defaults();
-      } catch (e) {
-        console.warn("Spydr settings failed to load, resetting.");
+        const data = localStorage.getItem(this.storageKey);
+        this.state = data ? JSON.parse(data) : this.defaults();
+      } catch {
         this.state = this.defaults();
       }
     },
@@ -44,24 +44,14 @@
     set(key, value) {
       this.state[key] = value;
       this.save();
-      this.emit("change", { key, value });
+
+      if (key === "theme") this.applyTheme();
+      if (key === "cloak") this.applyCloak();
     },
 
-    // =========================
-    // 📡 EVENT SYSTEM
-    // =========================
-    on(event, fn) {
-      if (!this.listeners[event]) this.listeners[event] = [];
-      this.listeners[event].push(fn);
-    },
-
-    emit(event, data) {
-      (this.listeners[event] || []).forEach(fn => fn(data));
-    },
-
-    // =========================
-    // 🎨 THEME SYSTEM
-    // =========================
+    // =====================
+    // THEME
+    // =====================
     applyTheme() {
       const theme = this.get("theme");
 
@@ -75,9 +65,9 @@
       document.documentElement.style.setProperty("--accent", accent);
     },
 
-    // =========================
-    // 🕶️ CLOAK SYSTEM
-    // =========================
+    // =====================
+    // CLOAK SYSTEM
+    // =====================
     applyCloak() {
       const enabled = this.get("cloak");
 
@@ -85,42 +75,22 @@
 
       if (enabled) {
         document.title = "Google Docs";
-        this.fakeIcon();
       } else {
         document.title = "Spydr";
-        this.restoreIcon();
       }
-    },
-
-    fakeIcon() {
-      let link = document.querySelector("link[rel~='icon']");
-      if (!link) {
-        link = document.createElement("link");
-        link.rel = "icon";
-        document.head.appendChild(link);
-      }
-      link.href = "https://www.google.com/favicon.ico";
-    },
-
-    restoreIcon() {
-      let link = document.querySelector("link[rel~='icon']");
-      if (!link) return;
-      link.href = "/favicon.ico";
     },
 
     toggleCloak() {
       this.set("cloak", !this.get("cloak"));
-      this.applyCloak();
     },
 
-    // =========================
-    // ⌨️ HOTKEY SYSTEM
-    // =========================
+    // =====================
+    // HOTKEYS
+    // =====================
     initHotkeys() {
       document.addEventListener("keydown", (e) => {
         const key = e.key.toLowerCase();
-
-        const bossKey = this.get("hotkeys").bossKey;
+        const bossKey = this.get("hotkeys")?.bossKey;
 
         if (key === bossKey) {
           this.toggleCloak();
@@ -128,9 +98,9 @@
       });
     },
 
-    // =========================
-    // 🧩 UI BINDING
-    // =========================
+    // =====================
+    // UI BINDING (settings page)
+    // =====================
     bindUI() {
       const stars = document.getElementById("starsToggle");
       const autoSave = document.getElementById("autoSaveToggle");
@@ -150,22 +120,20 @@
       }
     },
 
-    // =========================
-    // 🚀 INIT
-    // =========================
+    // =====================
+    // INIT
+    // =====================
     init() {
       this.load();
-
       this.applyTheme();
       this.applyCloak();
       this.initHotkeys();
       this.bindUI();
 
-      console.log("[Spydr] global system online 🕷️");
+      console.log("[Spydr] core online 🕷️");
     }
   };
 
-  // expose globally
   window.SPYDR = SPYDR;
 
   document.addEventListener("DOMContentLoaded", () => {

@@ -1,19 +1,32 @@
+// =====================
 // CLOCK
+// =====================
 function updateClock() {
   const now = new Date();
 
-  document.getElementById("time").textContent =
-    now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+  const timeEl = document.getElementById("time");
+  const dateEl = document.getElementById("date");
 
-  document.getElementById("date").textContent =
-    now.toDateString();
+  if (timeEl) {
+    timeEl.textContent = now.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit"
+    });
+  }
+
+  if (dateEl) {
+    dateEl.textContent = now.toDateString();
+  }
 }
 
 setInterval(updateClock, 1000);
 updateClock();
 
 
+// =====================
 // CONST TEXT
+// =====================
 const lines = [
   "system initializing...",
   "spydr core active",
@@ -25,12 +38,15 @@ const lines = [
 const constText = document.querySelector(".const");
 
 setInterval(() => {
+  if (!constText) return;
   constText.textContent =
     lines[Math.floor(Math.random() * lines.length)];
 }, 2400);
 
 
+// =====================
 // LOADING
+// =====================
 const INTRO_TIME = 5000;
 
 window.addEventListener("load", () => {
@@ -44,56 +60,66 @@ window.addEventListener("load", () => {
     if (done) return;
     done = true;
 
-    loading.style.opacity = "0";
+    if (loading) loading.style.opacity = "0";
 
     setTimeout(() => {
-      loading.style.display = "none";
-      app.style.opacity = "1";
+      if (loading) loading.style.display = "none";
+      if (app) app.style.opacity = "1";
     }, 600);
   }
 
-  video.onended = finish;
+  if (video) video.onended = finish;
   setTimeout(finish, INTRO_TIME);
 });
 
 
+// =====================
 // NAV
+// =====================
 function go(page) {
   document.body.style.opacity = "0";
-  setTimeout(() => window.location.href = page, 350);
+  setTimeout(() => (window.location.href = page), 350);
 }
 
 
-// MENU BEHAVIOR (FIXED + SMOOTH)
-const menu = document.getElementById("menu");
-const btn = document.getElementById("menu-btn");
-const wrapper = document.querySelector(".menu-wrapper");
+// =====================
+// MENU BEHAVIOR (FIXED)
+// =====================
 
-let closeTimer = null;
-let locked = false;
+// IMPORTANT FIX:
+// avoid redeclaration crash by checking if already exists
+if (!window.__spydrMenuInit) {
+  window.__spydrMenuInit = true;
 
-// click toggles lock (real UI behavior)
-btn.addEventListener("click", () => {
-  locked = !locked;
+  const menu = document.getElementById("menu");
+  const btn = document.getElementById("menu-btn");
+  const wrapper = document.querySelector(".menu-wrapper");
 
-  if (locked) {
-    menu.classList.add("open");
-  } else {
-    menu.classList.remove("open");
+  let closeTimer = null;
+  let locked = false;
+
+  if (btn && menu && wrapper) {
+    btn.addEventListener("click", () => {
+      locked = !locked;
+
+      if (locked) {
+        menu.classList.add("open");
+      } else {
+        menu.classList.remove("open");
+      }
+    });
+
+    wrapper.addEventListener("mouseenter", () => {
+      clearTimeout(closeTimer);
+      menu.classList.add("open");
+    });
+
+    wrapper.addEventListener("mouseleave", () => {
+      if (locked) return;
+
+      closeTimer = setTimeout(() => {
+        menu.classList.remove("open");
+      }, 180);
+    });
   }
-});
-
-// hover opens instantly
-wrapper.addEventListener("mouseenter", () => {
-  clearTimeout(closeTimer);
-  menu.classList.add("open");
-});
-
-// hover leave = delayed close (SMOOTH FEEL)
-wrapper.addEventListener("mouseleave", () => {
-  if (locked) return;
-
-  closeTimer = setTimeout(() => {
-    menu.classList.remove("open");
-  }, 180); // 👈 THIS controls “stay open longer”
-});
+}

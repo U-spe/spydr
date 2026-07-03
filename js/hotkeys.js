@@ -1,98 +1,49 @@
-// /js/cloak.js
-export default class CloakManager {
+// js/hotkeys.js
+export default class HotkeyManager {
     constructor(kernel) {
         this.kernel = kernel;
-        this.presets = {
-            'google-docs': {
-                title: 'Google Docs',
-                favicon: 'https://ssl.gstatic.com/docs/documents/images/kix-favicon-7.ico'
-            },
-            'google-drive': {
-                title: 'My Drive - Google Drive',
-                favicon: 'https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png'
-            },
-            'canvas': {
-                title: 'Dashboard',
-                favicon: 'https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e05d51a14c.ico'
-            },
-
-            spydr: {
-                title: "spydr",
-                icon: "assets/images.png"
-            },
-
-            google: {
-                title: "Google",
-                icon: "https://www.google.com/favicon.ico"
-            },
-
-            classroom: {
-                title: "Home - Classroom",
-                icon: "https://ssl.gstatic.com/classroom/favicon.png"
-            },
-
-            securly: {
-                title: "Create Pass - Securly Pass",
-                icon: "https://pass.securly.com/favicon.ico"
-            },
-
-            wayground: {
-                title: "Playing a Game - Wayground (Formerly Quizizz)",
-                icon: "https://wayground.com/favicon.ico"
-            },
-
-            studysync: {
-                title: "StudySync",
-                icon: "https://www.studysync.com/static/favicon.ico"
-            },
-
-            classlink: {
-                title: "My Apps - Classlink",
-                icon: "https://lh3.googleusercontent.com/eZN3KtQ96nLtnBk6vNJWNe8lAGQ_v4fWGTH7URUqzMyQ9BiDuxqpt1uSkIU-OaRhxw"
-            }
-        };
-        this.originalTitle = document.title;
-        this.originalFavicon = '';
+        this.isRecording = false;
+        this.recordCallback = null;
     }
 
     init() {
         this.settings = this.kernel.get('settings');
-        this.captureOriginalFavicon();
-        this.sync();
+        
+        window.addEventListener('keydown', (e) => {
+            if (this.isRecording) {
+                e.preventDefault();
+                if (this.recordCallback) this.recordCallback(e.key);
+                return;
+            }
+
+            // Fire execution pipeline if key binds cleanly
+            if (e.key === this.settings.get('bossKey')) {
+                e.preventDefault();
+                this.triggerPanicSequence();
+            }
+        });
     }
 
-    captureOriginalFavicon() {
-        const link = document.querySelector("link[rel~='icon']");
-        this.originalFavicon = link ? link.href : window.location.origin + '/favicon.ico';
+    startRecording(onKeyRecorded) {
+        this.isRecording = true;
+        this.recordCallback = (key) => {
+            this.isRecording = false;
+            this.recordCallback = null;
+            onKeyRecorded(key);
+        };
     }
 
-    sync() {
-        const enabled = this.settings.get('cloakEnabled');
-        const targetKey = this.settings.get('cloakTarget');
+    triggerPanicSequence() {
+        // Toggle stealth mode inversion state immediately
+        const currentState = this.settings.get('cloakEnabled');
+        this.settings.set('cloakEnabled', !currentState);
+        
+        // Propagate across modules
+        const cloak = this.kernel.get('cloak');
+        if (cloak) cloak.sync();
 
-        if (enabled && this.presets[targetKey]) {
-            this.applySpoof(this.presets[targetKey].title, this.presets[targetKey].favicon);
-        } else {
-            this.restoreSpoof();
-        }
-    }
-
-    applySpoof(title, faviconUrl) {
-        document.title = title;
-        let link = document.querySelector("link[rel~='icon']");
-        if (!link) {
-            link = document.createElement('link');
-            link.rel = 'icon';
-            document.head.appendChild(link);
-        }
-        link.href = faviconUrl;
-    }
-
-    restoreSpoof() {
-        document.title = this.originalTitle;
-        const link = document.querySelector("link[rel~='icon']");
-        if (link) {
-            link.href = this.originalFavicon;
-        }
+        // Instantly update UI toggles so visuals match system state
+        const ui = this.kernel.get('ui');
+        if (ui) ui.syncFormControls();
     }
 }

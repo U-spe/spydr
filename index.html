@@ -5,13 +5,10 @@
   <title>spydr</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- favicon -->
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
-  <!-- remix icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
-  <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/css/main.css"/>
@@ -19,28 +16,25 @@
 
 <body>
 
-  <!-- GLOBAL LOADER -->
   <div id="loader"></div>
 
-  <!-- APP -->
+  <div id="bg-effects-container">
+      <canvas id="stars-canvas"></canvas>
+      <div id="fog-overlay"></div>
+  </div>
+
   <div id="app">
 
-    <!-- TOP BAR -->
     <div class="top">
       <div id="time">--:--</div>
       <div id="date">loading...</div>
     </div>
 
-    <!-- MENU -->
-    <!-- GLOBAL MENU -->
-<div id="global-menu"></div>
+    <div id="global-menu"></div>
 
-    <!-- HERO -->
     <div class="center">
-
       <div class="hero-wrap">
-        <img src="/assets/images/logo.png" class="logo-img">
-
+        <img src="/assets/images/logo.png" class="logo-img" alt="spydr logo">
         <div class="hero-text">
           <h1>spydr</h1>
           <div class="const" id="constText">
@@ -48,10 +42,8 @@
           </div>
         </div>
       </div>
-
     </div>
 
-    <!-- MINI GAMES -->
     <div class="games">
       <div class="game-card">neon drift</div>
       <div class="game-card">void runner</div>
@@ -62,9 +54,9 @@
   </div>
 
   <script src="/js/load.js"></script>
-<script src="/js/globalmenu.js"></script>
-<script src="/js/main.js"></script>
-<script type="module" src="/js/global.js"></script>
+  <script src="/js/globalmenu.js"></script>
+  <script src="/js/main.js"></script>
+  <script type="module" src="/js/global.js"></script>
 
 </body>  
 </html>

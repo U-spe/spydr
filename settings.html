@@ -1,232 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Spydr Settings</title>
-
-  <style>
-    :root {
-      --bg: #0a0a0f;
-      --glass: rgba(255, 255, 255, 0.06);
-      --border: rgba(255, 255, 255, 0.12);
-      --text: #eaeaea;
-      --accent: #7c3aed;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: system-ui, sans-serif;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    /* 🌫️ VantaFog layer */
-    #vantafog {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      background: radial-gradient(circle at 20% 20%, rgba(124,58,237,0.25), transparent 40%),
-                  radial-gradient(circle at 80% 70%, rgba(59,130,246,0.2), transparent 45%);
-      filter: blur(60px);
-      opacity: 0.7;
-      animation: floatFog 10s ease-in-out infinite alternate;
-    }
-
-    @keyframes floatFog {
-      from { transform: translateY(-10px) scale(1); }
-      to { transform: translateY(10px) scale(1.05); }
-    }
-
-    /* ✨ glass UI */
-    .glass {
-      background: var(--glass);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-radius: 14px;
-    }
-
-    /* layout */
-    .wrap {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      height: 100vh;
-    }
-
-    /* sidebar */
-    .sidebar {
-      width: 260px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .tab {
-      padding: 12px;
-      cursor: pointer;
-      border-radius: 10px;
-      transition: 0.2s;
-      user-select: none;
-    }
-
-    .tab:hover {
-      background: rgba(255,255,255,0.08);
-    }
-
-    .tab.active {
-      background: rgba(124,58,237,0.25);
-      border: 1px solid rgba(124,58,237,0.4);
-    }
-
-    /* main panel */
-    .main {
-      flex: 1;
-      padding: 24px;
-      overflow-y: auto;
-    }
-
-    .panel {
-      display: none;
-      padding: 20px;
-    }
-
-    .panel.active {
-      display: block;
-    }
-
-    h1 {
-      font-size: 22px;
-      margin-bottom: 16px;
-    }
-
-    .card {
-      padding: 14px;
-      margin-bottom: 12px;
-      border-radius: 12px;
-    }
-
-    .toggle {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0;
-    }
-
-    input[type="checkbox"] {
-      transform: scale(1.2);
-      accent-color: var(--accent);
-    }
-
-    button {
-      background: rgba(124,58,237,0.2);
-      border: 1px solid rgba(124,58,237,0.4);
-      color: white;
-      padding: 10px 12px;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: rgba(124,58,237,0.35);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spydr // Control Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-  <!-- 🌫️ fog background -->
-  <div id="vantafog"></div>
-
-  <div class="wrap">
-
-    <!-- sidebar -->
-    <div class="sidebar glass">
-      <div class="tab active" data-tab="general">🌟 General</div>
-      <div class="tab" data-tab="themes">🎨 Themes</div>
-      <div class="tab" data-tab="hotkeys">⌨️ Hotkeys</div>
-      <div class="tab" data-tab="cloak">🕶️ Cloaking</div>
-      <div class="tab" data-tab="about">ℹ️ About</div>
+    <div id="bg-effects-container">
+        <canvas id="stars-canvas"></canvas>
+        <div id="fog-overlay"></div>
     </div>
 
-    <!-- main -->
-    <div class="main glass">
+    <div class="dashboard-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon"></div>
+                <h2>SPYDR</h2>
+                <span class="status-badge">OS_V2.6</span>
+            </div>
+            <nav class="sidebar-nav">
+                <button class="nav-btn active" data-target="general">
+                    <span class="btn-icon">⚙_</span> General
+                </button>
+                <button class="nav-btn" data-target="themes">
+                    <span class="btn-icon">🎨_</span> Themes
+                </button>
+                <button class="nav-btn" data-target="hotkeys">
+                    <span class="btn-icon">⌨_</span> Hotkeys
+                </button>
+                <button class="nav-btn" data-target="cloaking">
+                    <span class="btn-icon">🕶_</span> Cloaking
+                </button>
+                <button class="nav-btn" data-target="about">
+                    <span class="btn-icon">ℹ_</span> About
+                </button>
+            </nav>
+            <div class="sidebar-footer">
+                <p>SYS_STATUS: NOMINAL</p>
+            </div>
+        </aside>
 
-      <!-- GENERAL -->
-      <div class="panel active" id="general">
-        <h1>General Settings</h1>
+        <main class="content-panel">
+            
+            <section class="settings-section active" id="panel-general">
+                <div class="section-header">
+                    <h1>General Settings</h1>
+                    <p>Core system behavior adjustments</p>
+                </div>
+                <div class="card glassmorphism">
+                    <div class="setting-row">
+                        <div class="setting-info">
+                            <h3>Stars Background</h3>
+                            <p>Enable dynamic cosmos rendering engine in background</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="toggle-stars" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-row">
+                        <div class="setting-info">
+                            <h3>Auto Save Settings</h3>
+                            <p>Instantly commit configuration adjustments to disk</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="toggle-autosave" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
 
-        <div class="card glass">
-          <div class="toggle">
-            <span>Enable Stars</span>
-            <input type="checkbox" id="starsToggle">
-          </div>
+            <section class="settings-section" id="panel-themes">
+                <div class="section-header">
+                    <h1>Themes & Aesthetics</h1>
+                    <p>Tailor your terminal visualization matrix</p>
+                </div>
+                <div class="card glassmorphism">
+                    <div class="setting-block">
+                        <h3>Interface Core Theme</h3>
+                        <div class="radio-group">
+                            <label class="radio-tile">
+                                <input type="radio" name="ui-theme" value="dark" checked>
+                                <span class="tile-label">Dark Core</span>
+                            </label>
+                            <label class="radio-tile">
+                                <input type="radio" name="ui-theme" value="light">
+                                <span class="tile-label">Light Core</span>
+                            </label>
+                            <label class="radio-tile">
+                                <input type="radio" name="ui-theme" value="spydr-neon">
+                                <span class="tile-label">Spydr Neon</span>
+                            </label>
+                        </div>
+                    </div>
 
-          <div class="toggle">
-            <span>Auto Save Settings</span>
-            <input type="checkbox" id="autoSaveToggle">
-          </div>
-        </div>
-      </div>
+                    <div class="setting-block">
+                        <h3>Accent Color Engine</h3>
+                        <div class="radio-group">
+                            <label class="radio-tile accent-tile blue">
+                                <input type="radio" name="accent-color" value="blue" checked>
+                                <span class="tile-label">Deep Blue</span>
+                            </label>
+                            <label class="radio-tile accent-tile purple">
+                                <input type="radio" name="accent-color" value="purple">
+                                <span class="tile-label">Purple Pulse</span>
+                            </label>
+                        </div>
+                    </div>
 
-      <!-- THEMES -->
-      <div class="panel" id="themes">
-        <h1>Themes & Colors</h1>
+                    <div class="setting-block">
+                        <h3>Background FX Variant</h3>
+                        <div class="select-wrapper">
+                            <select id="bg-style-select">
+                                <option value="stars">Cosmic Fields (Stars)</option>
+                                <option value="fog">Nebula Fog Overlay</option>
+                                <option value="gradient">Linear Quantum Gradient</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <div class="card glass">
-          <button>Dark Mode</button>
-          <button>Light Mode</button>
-          <button>Spydr Neon</button>
-        </div>
-      </div>
+            <section class="settings-section" id="panel-hotkeys">
+                <div class="section-header">
+                    <h1>Quantum Hotkeys</h1>
+                    <p>Configure quick-trigger actions for emergency interception</p>
+                </div>
+                <div class="card glassmorphism">
+                    <div class="setting-row">
+                        <div class="setting-info">
+                            <h3>Boss Key</h3>
+                            <p>Instantly initiates tab disguise/redirect procedures</p>
+                        </div>
+                        <div class="hotkey-binder-wrapper">
+                            <button id="boss-key-btn" class="hotkey-btn">Click to bind</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-      <!-- HOTKEYS -->
-      <div class="panel" id="hotkeys">
-        <h1>Hotkeys</h1>
+            <section class="settings-section" id="panel-cloaking">
+                <div class="section-header">
+                    <h1>Tab Cloaking Matrice</h1>
+                    <p>Toggle real-time identity spoofing vectors (A/B State)</p>
+                </div>
+                <div class="card glassmorphism">
+                    <div class="setting-row">
+                        <div class="setting-info">
+                            <h3>Stealth Disguise Mode (B-Mode)</h3>
+                            <p>Spoof tabs instantly to look like standardized workflow assets</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="toggle-cloak">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-block">
+                        <h3>Disguise Target Identity</h3>
+                        <div class="select-wrapper">
+                            <select id="cloak-target-select">
+                                <option value="google-docs">Google Docs</option>
+                                <option value="google-drive">Google Drive</option>
+                                <option value="canvas">Canvas LMS</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <div class="card glass">
-          <p>Boss Key: (set in JS)</p>
-          <p>Settings: (set in JS)</p>
-        </div>
-      </div>
+            <section class="settings-section" id="panel-about">
+                <div class="section-header">
+                    <h1>System Manifest</h1>
+                    <p>Project Spydr build information analytics</p>
+                </div>
+                <div class="card glassmorphism info-card">
+                    <div class="manifest-row">
+                        <span class="manifest-label">CORE ARCHITECTURE:</span>
+                        <span class="manifest-val">Spydr OS v1.7.0-GPro</span>
+                    </div>
+                    <div class="manifest-row">
+                        <span class="manifest-label">BUILD ENVIRONMENT:</span>
+                        <span class="manifest-val">Vanilla JS / Production Ready</span>
+                    </div>
+                    <hr class="divider">
+                    <h3>Changelog Entries</h3>
+                    <div class="changelog-scroll">
+                        <div class="log-entry">
+                            <h4>v2.6.0 // Structural Decoupling Update</h4>
+                            <p>- Implemented fully decoupled, decoupled module design patterns.</p>
+                            <p>- Added Canvas-driven particle space matrix background styles.</p>
+                            <p>- Enhanced A:B Cloaking engine performance matrices across system layers.</p>
+                        </div>
+                        <div class="log-entry">
+                            <h4>v2.5.1 // Quantum Fixes</h4>
+                            <p>- Patched Event propagation pipeline execution leaks inside keybind components.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-      <!-- CLOAK -->
-      <div class="panel" id="cloak">
-        <h1>Cloaking Tabs & A:B</h1>
-
-        <div class="card glass">
-          <button>Enable Cloak</button>
-          <button>Switch A/B Mode</button>
-          <button>Preset: Google</button>
-        </div>
-      </div>
-
-      <!-- ABOUT -->
-      <div class="panel" id="about">
-        <h1>About & Changelog</h1>
-
-        <div class="card glass">
-          <p>Spydr v1.0</p>
-          <p>built different 🕷️</p>
-        </div>
-      </div>
-
+        </main>
     </div>
-  </div>
 
-  <!-- scripts (IMPORTANT: kept exactly as you wanted) -->
-  <script src="/js/globalmenu.js"></script>
-  <script src="/js/main.js"></script>
-  <script src="/js/global.js"></script>
-
+    <script type="module" src="global.js"></script>
 </body>
 </html>

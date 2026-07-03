@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spydr Settings</title>
+
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --glass: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.12);
+      --text: #eaeaea;
+      --accent: #7c3aed;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* 🌫️ VantaFog layer */
+    #vantafog {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(124,58,237,0.25), transparent 40%),
+                  radial-gradient(circle at 80% 70%, rgba(59,130,246,0.2), transparent 45%);
+      filter: blur(60px);
+      opacity: 0.7;
+      animation: floatFog 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatFog {
+      from { transform: translateY(-10px) scale(1); }
+      to { transform: translateY(10px) scale(1.05); }
+    }
+
+    /* ✨ glass UI */
+    .glass {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 14px;
+    }
+
+    /* layout */
+    .wrap {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* sidebar */
+    .sidebar {
+      width: 260px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .tab {
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: 0.2s;
+      user-select: none;
+    }
+
+    .tab:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    .tab.active {
+      background: rgba(124,58,237,0.25);
+      border: 1px solid rgba(124,58,237,0.4);
+    }
+
+    /* main panel */
+    .main {
+      flex: 1;
+      padding: 24px;
+      overflow-y: auto;
+    }
+
+    .panel {
+      display: none;
+      padding: 20px;
+    }
+
+    .panel.active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .card {
+      padding: 14px;
+      margin-bottom: 12px;
+      border-radius: 12px;
+    }
+
+    .toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.2);
+      accent-color: var(--accent);
+    }
+
+    button {
+      background: rgba(124,58,237,0.2);
+      border: 1px solid rgba(124,58,237,0.4);
+      color: white;
+      padding: 10px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: rgba(124,58,237,0.35);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🌫️ fog background -->
+  <div id="vantafog"></div>
+
+  <div class="wrap">
+
+    <!-- sidebar -->
+    <div class="sidebar glass">
+      <div class="tab active" data-tab="general">🌟 General</div>
+      <div class="tab" data-tab="themes">🎨 Themes</div>
+      <div class="tab" data-tab="hotkeys">⌨️ Hotkeys</div>
+      <div class="tab" data-tab="cloak">🕶️ Cloaking</div>
+      <div class="tab" data-tab="about">ℹ️ About</div>
+    </div>
+
+    <!-- main -->
+    <div class="main glass">
+
+      <!-- GENERAL -->
+      <div class="panel active" id="general">
+        <h1>General Settings</h1>
+
+        <div class="card glass">
+          <div class="toggle">
+            <span>Enable Stars</span>
+            <input type="checkbox" id="starsToggle">
+          </div>
+
+          <div class="toggle">
+            <span>Auto Save Settings</span>
+            <input type="checkbox" id="autoSaveToggle">
+          </div>
+        </div>
+      </div>
+
+      <!-- THEMES -->
+      <div class="panel" id="themes">
+        <h1>Themes & Colors</h1>
+
+        <div class="card glass">
+          <button>Dark Mode</button>
+          <button>Light Mode</button>
+          <button>Spydr Neon</button>
+        </div>
+      </div>
+
+      <!-- HOTKEYS -->
+      <div class="panel" id="hotkeys">
+        <h1>Hotkeys</h1>
+
+        <div class="card glass">
+          <p>Boss Key: (set in JS)</p>
+          <p>Settings: (set in JS)</p>
+        </div>
+      </div>
+
+      <!-- CLOAK -->
+      <div class="panel" id="cloak">
+        <h1>Cloaking Tabs & A:B</h1>
+
+        <div class="card glass">
+          <button>Enable Cloak</button>
+          <button>Switch A/B Mode</button>
+          <button>Preset: Google</button>
+        </div>
+      </div>
+
+      <!-- ABOUT -->
+      <div class="panel" id="about">
+        <h1>About & Changelog</h1>
+
+        <div class="card glass">
+          <p>Spydr v1.0</p>
+          <p>built different 🕷️</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- scripts (IMPORTANT: kept exactly as you wanted) -->
+  <script src="/js/globalmenu.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/global.js"></script>
+
+</body>
+</html>

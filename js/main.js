@@ -28,11 +28,30 @@ updateClock();
 // CONST TEXT
 // =====================
 const lines = [
-  "system initializing...",
-  "spydr core active",
+  "system initializing",
+  "made by cj the goat, right?",
   "render engine online",
   "weaving everything togther",
-  "grayscale protocol enabled"
+  "grayscale protocol enabled",
+  "look whos back...",
+  "bomboclat wahllai",
+  "i know you diddint do your math homework",
+  "yo do your work bro",
+  "damn goguardian again",
+  "damn securly again",
+  "green fn",
+  "slow ahh school wifi",
+  "built different",
+  "so now, jetx is gone so...",
+      "sony",
+      "sonny d",
+      "sonion ring",
+      "press ctrl+shift+q+q to enable a:b cloaking",
+      "did i catch you that time",
+      "what are you still doing here???",
+      "good boy",
+      "good girl",
+      "soneybun"
 ];
 
 const constText = document.querySelector(".const");

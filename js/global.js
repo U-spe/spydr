@@ -37,12 +37,23 @@ class SpydrCoreRegistry {
 
         // Core initialization execution cascade
         settings.init();
+
+        // --- AUTOMATIC THEME INJECTION ---
+        // Fetch the saved theme/background and apply it directly to the <body> 
+        // so the CSS variables update before the user even sees the page.
+        const currentTheme = settings.get('theme') || 'default';
+        const currentBg = settings.get('bgStyle') || 'stars';
+        
+        document.body.setAttribute('data-theme', currentTheme);
+        document.body.setAttribute('data-bg-style', currentBg);
+
+        // Initialize remaining managers
         theme.init();
         cloak.init();
         hotkeys.init();
         ui.init();
         
-        console.log("spydr engine // Core Stack Booted Executed Safely.");
+        console.log("spydr engine // Core Stack Booted & Themes Injected.");
     }
 }
 
@@ -59,10 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- LOADER FAILSAFE FIX ---
     // Force the loader to hide once the kernel is fully online
-    const loader = document.getElementById('loader');
+    const loader = document.getElementById('loader') || document.getElementById('loading-screen');
     if (loader) {
         setTimeout(() => {
-            loader.classList.add('hidden');
+            loader.style.opacity = '0';
+            loader.style.pointerEvents = 'none';
             // Remove it from the DOM completely after it fades out so you can click things
             setTimeout(() => loader.remove(), 500);
         }, 300);

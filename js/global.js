@@ -47,12 +47,24 @@ class SpydrCoreRegistry {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Hide the local server warning since JS Modules are executing successfully
+    // Hide the local server warning on the control panel if it exists
     const warning = document.getElementById('js-warning');
     if (warning) {
         warning.remove();
     }
 
+    // Boot the core spydr kernel
     window.SpydrKernel = new SpydrCoreRegistry();
     window.SpydrKernel.boot();
+
+    // --- LOADER FAILSAFE FIX ---
+    // Force the loader to hide once the kernel is fully online
+    const loader = document.getElementById('loader');
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add('hidden');
+            // Remove it from the DOM completely after it fades out so you can click things
+            setTimeout(() => loader.remove(), 500);
+        }, 300);
+    }
 });

@@ -20,12 +20,18 @@
       <div id="fog-overlay"></div>
   </div>
 
+  <div class="top-right-profile" onclick="go('/login.html')">
+    <span id="top-right-name">Login</span>
+    <div class="pfp-icon"></div>
+  </div>
+
   <div id="global-menu"></div>
 
   <div class="chat-app">
     
     <div class="chat-sidebar">
       <div class="sidebar-header">
+        <img src="/assets/images/favicon.png" alt="spydr" class="spydr-logo-small">
         <h2>spydr net</h2>
       </div>
       
@@ -35,7 +41,10 @@
         <div class="channel"><i class="ri-hashtag"></i> dev-logs</div>
         <div class="channel"><i class="ri-hashtag"></i> off-topic</div>
         
-        <div class="channel-category" style="margin-top: 20px;">DIRECT MESSAGES</div>
+        <div class="channel-category category-header" style="margin-top: 20px;">
+          <span>PRIVATE CHATS</span>
+          <button id="create-dm-btn" title="Create Private Chat"><i class="ri-add-line"></i></button>
+        </div>
         </div>
     </div>
 
@@ -50,7 +59,7 @@
 
       <div class="chat-input-area">
         <form id="chat-form">
-          <input type="text" id="message-input" placeholder="Message #global..." autocomplete="off" disabled>
+          <input type="text" id="message-input" placeholder="Connecting to spydr net..." autocomplete="off" disabled>
           <button type="submit" id="send-btn" disabled><i class="ri-send-plane-fill"></i></button>
         </form>
       </div>
@@ -58,7 +67,6 @@
 
   </div>
 
-  <script src="/js/auth.js"></script>
   <script src="/js/globalmenu.js"></script>
   <script type="module" src="/js/global.js"></script>
   <script type="module" src="/js/chat.js"></script>

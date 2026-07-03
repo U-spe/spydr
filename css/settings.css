@@ -1,4 +1,4 @@
-/* style.css */
+/* /css/style.css */
 
 /* --- RESET & VARIABLES --- */
 :root {
@@ -107,7 +107,7 @@ body[data-bg-style="gradient"] {
 
 /* --- SIDEBAR DESIGN --- */
 .sidebar {
-    width: 320px;
+    width: 340px;
     background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: 16px;
@@ -377,7 +377,6 @@ input:checked + .slider:before {
     color: var(--text-white);
 }
 
-/* Accent Color Overrides explicitly using variables */
 .accent-tile.blue:has(input:checked) {
     border-color: var(--blue-accent);
     box-shadow: 0 0 12px rgba(63, 94, 251, 0.4);
@@ -498,7 +497,6 @@ input:checked + .slider:before {
     100% { opacity: 0.7; }
 }
 
-/* Custom System Scrollbars */
 ::-webkit-scrollbar {
     width: 6px;
     height: 6px;

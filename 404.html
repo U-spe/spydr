@@ -19,24 +19,24 @@ body {
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #000000, #120018, #2a0040);
-  color: white;
   overflow: hidden;
+  color: white;
 }
 
-/* glow blobs */
+/* glow */
 .glow {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.4;
+  filter: blur(130px);
+  opacity: 0.35;
 }
 
 .glow.purple {
   background: #a855f7;
-  top: -100px;
-  left: -100px;
+  top: -120px;
+  left: -120px;
 }
 
 .glow.blue {
@@ -45,6 +45,7 @@ body {
   right: -120px;
 }
 
+/* card */
 .card {
   position: relative;
   text-align: center;
@@ -53,31 +54,71 @@ body {
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 16px;
   backdrop-filter: blur(10px);
-  width: 320px;
+  width: 340px;
 }
 
+/* logo */
 .logo {
   width: 70px;
   height: 70px;
   margin: 0 auto 15px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #fff, #a855f7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: black;
+  border-radius: 14px;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+/* 🔥 GLITCH TEXT */
+.glitch {
+  font-size: 3.2rem;
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+  color: white;
+}
+
+.glitch::before,
+.glitch::after {
+  content: "404";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.glitch::before {
+  color: #a855f7;
+  z-index: -1;
+  animation: glitch1 0.8s infinite;
+}
+
+.glitch::after {
+  color: #3b82f6;
+  z-index: -2;
+  animation: glitch2 0.8s infinite;
+}
+
+@keyframes glitch1 {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-1px, -2px); }
+  60% { transform: translate(2px, 1px); }
+  80% { transform: translate(-2px, -1px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch2 {
+  0% { transform: translate(0); }
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(1px, 2px); }
+  60% { transform: translate(-2px, 1px); }
+  80% { transform: translate(2px, 2px); }
+  100% { transform: translate(0); }
 }
 
 p {
   opacity: 0.7;
   font-size: 0.9rem;
-  margin-bottom: 20px;
+  margin: 12px 0 20px;
 }
 
 button {
@@ -104,9 +145,12 @@ button:hover {
 <div class="glow blue"></div>
 
 <div class="card">
-  <div class="logo">SP</div>
-  <h1>404</h1>
-  <p>this page got wrapped inside a web</p>
+  <img class="logo" src="/assets/images/logo.png" />
+
+  <div class="glitch">404</div>
+
+  <p>this page got tangled up in a spider web🕷️</p>
+
   <button onclick="goBack()">go back</button>
 </div>
 

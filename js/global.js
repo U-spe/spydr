@@ -1,10 +1,9 @@
-// /js/global.js
+// js/global.js
 import SettingsManager from './settings.js';
 import ThemeManager from './theme.js';
 import CloakManager from './cloak.js';
 import HotkeyManager from './hotkeys.js';
 import UIManager from './ui.js';
-import MainEngine from './main.js';
 
 class SpydrCoreRegistry {
     constructor() {
@@ -36,22 +35,24 @@ class SpydrCoreRegistry {
         const ui = new UIManager(this);
         this.register('ui', ui);
 
-        const main = new MainEngine(this);
-        this.register('main', main);
-
         // Core initialization execution cascade
         settings.init();
         theme.init();
         cloak.init();
         hotkeys.init();
         ui.init();
-        main.init();
         
         console.log("spydr engine // Core Stack Booted Executed Safely.");
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Hide the local server warning since JS Modules are executing successfully
+    const warning = document.getElementById('js-warning');
+    if (warning) {
+        warning.remove();
+    }
+
     window.SpydrKernel = new SpydrCoreRegistry();
     window.SpydrKernel.boot();
 });

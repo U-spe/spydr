@@ -1,192 +1,72 @@
-/* css/main.css */
-
-/* --- RESET & THEME VARIABLES --- */
 :root {
-    --bg-primary: #090909;
-    --bg-secondary: #111111;
-    --card-bg: rgba(23, 23, 23, 0.7);
-    --border-color: #2b2b2b;
-    --text-white: #ffffff;
-    --text-gray: #bdbdbd;
-    
-    /* Default Accent Engine (Deep Blue) */
-    --accent-color: #3f5efb;
-    --accent-glow: rgba(63, 94, 251, 0.4);
-    
-    --blue-accent: #3f5efb;
-    --purple-accent: #7c3aed;
+  /* Default Colors */
+  --bg: #090909;
+  --bg2: #111111;
+  --card: #171717;
+  --border: #2b2b2b;
+  --white: #ffffff;
+  --gray: #bdbdbd;
+  --darkgray: #8a8a8a;
+  --accent: #3f5efb;
+  --t: 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Light Theme Override */
 [data-theme="light"] {
-    --bg-primary: #f5f5f5;
-    --bg-secondary: #e0e0e0;
-    --card-bg: rgba(255, 255, 255, 0.8);
-    --border-color: #cccccc;
-    --text-white: #111111;
-    --text-gray: #555555;
+  --bg: #f5f5f5;
+  --bg2: #e0e0e0;
+  --card: #d1d1d1;
+  --border: #aaaaaa;
+  --white: #111111;
+  --gray: #555555;
+  --darkgray: #666666;
 }
 
+/* Neon Theme Override */
 [data-theme="spydr-neon"] {
-    --bg-primary: #05050a;
-    --bg-secondary: #0a0a14;
-    --card-bg: rgba(13, 13, 33, 0.6);
-    --border-color: #4c1d95;
-    --accent-color: #7c3aed;
-    --accent-glow: rgba(124, 58, 237, 0.6);
+  --bg: #05050a;
+  --bg2: #0a0a14;
+  --card: #131333;
+  --border: #4c1d95;
+  --accent: #7c3aed;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: var(--t);
 }
 
 body {
-    background-color: var(--bg-primary);
-    color: var(--text-white);
-    font-family: 'JetBrains Mono', monospace;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
+  background: var(--bg);
+  color: var(--white);
+  font-family: "JetBrains Mono", monospace;
+  overflow: hidden;
+  height: 100vh;
 }
 
 /* --- DYNAMIC BACKGROUND SYSTEM --- */
 #bg-effects-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
 }
-
-#stars-canvas {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: block;
-    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-#fog-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.15), transparent 70%);
-    transition: opacity 0.5s ease;
-}
-
+#stars-canvas { width: 100%; height: 100%; display: block; }
+#fog-overlay { position: absolute; inset: 0; opacity: 0; background: radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.15), transparent 70%); }
 body[data-bg-style="fog"] #fog-overlay { opacity: 1; }
-body[data-bg-style="gradient"] { background: linear-gradient(135deg, var(--bg-primary) 0%, #1c103a 100%); }
 
-/* --- GLOBAL LOADER --- */
-#loader {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: var(--bg-primary);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s ease;
-}
-#loader.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* --- MAIN APP WRAPPER --- */
-#app {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    padding: 2rem;
-}
-
-/* --- TOP BAR --- */
-.top {
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--accent-color);
-    text-shadow: 0 0 10px var(--accent-glow);
-}
-
-/* --- HERO SECTION --- */
-.center {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    text-align: center;
-}
-
-.logo-img {
-    width: 120px;
-    height: auto;
-    filter: drop-shadow(0 0 15px var(--accent-glow));
-    transition: filter 0.3s ease;
-}
-
-.hero-text h1 {
-    font-size: 4rem;
-    letter-spacing: -2px;
-    margin-bottom: 0.5rem;
-}
-
-.hero-text .const {
-    font-size: 1rem;
-    color: var(--text-gray);
-}
-
-/* --- MINI GAMES GRID --- */
-.games {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: auto;
-    flex-wrap: wrap;
-}
-
-.game-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    color: var(--text-white);
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 600;
-    letter-spacing: 1px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.game-card:hover {
-    border-color: var(--accent-color);
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 5px 15px var(--accent-glow);
-    transform: translateY(-4px);
-    color: var(--accent-color);
-}
+/* --- YOUR ORIGINAL LAYOUT --- */
+#loader { position: fixed; inset: 0; background: var(--bg); z-index: 9999; }
+.top { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); text-align: center; color: var(--gray); }
+#time { font-family: "Space Grotesk", sans-serif; font-size: 30px; color: var(--white); }
+#date { font-size: 13px; }
+.center { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.hero-wrap { display: flex; align-items: center; gap: 20px; }
+.logo-img { width: 240px; filter: grayscale(100%); }
+.hero-text h1 { font-family: "Space Grotesk", sans-serif; font-size: 110px; }
+.const { color: var(--darkgray); font-size: 14px; margin-top: 6px; }
+.games { position: absolute; bottom: 110px; left: 50%; transform: translateX(-50%); display: flex; gap: 12px; }
+.game-card { background: var(--card); border: 1px solid var(--border); padding: 12px 14px; border-radius: 10px; font-size: 13px; color: var(--gray); cursor: pointer; }
+.game-card:hover { border-color: var(--white); color: var(--white); transform: translateY(-3px); }

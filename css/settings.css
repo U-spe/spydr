@@ -1,4 +1,4 @@
-/* /css/style.css */
+/* css/style.css */
 
 /* --- RESET & VARIABLES --- */
 :root {
@@ -107,7 +107,7 @@ body[data-bg-style="gradient"] {
 
 /* --- SIDEBAR DESIGN --- */
 .sidebar {
-    width: 340px;
+    width: 360px;
     background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: 16px;
@@ -161,7 +161,7 @@ body[data-bg-style="gradient"] {
     border: 1px solid transparent;
     color: var(--text-gray);
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     text-align: left;
     padding: 14px 18px;
     border-radius: 10px;

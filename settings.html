@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spydr // Control Panel</title>
+    <title>spydr // control panel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="/css/settings.css">
 </head>
 <body>
     <div id="bg-effects-container">
@@ -19,28 +19,31 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="logo-icon"></div>
-                <h2>SPYDR</h2>
-                <span class="status-badge">OS_V2.6</span>
+                <h2>spydr</h2>
+                <span class="status-badge">os_v2.6</span>
             </div>
             <nav class="sidebar-nav">
                 <button class="nav-btn active" data-target="general">
-                    <span class="btn-icon">⚙_</span> General
+                    <span class="btn-icon">⚙_</span> General Settings/Quick Settings
+                </button>
+                <button class="nav-btn" data-target="stars">
+                    <span class="btn-icon">✨_</span> Enable Stars
                 </button>
                 <button class="nav-btn" data-target="themes">
-                    <span class="btn-icon">🎨_</span> Themes
+                    <span class="btn-icon">🎨_</span> Themes and Colors
                 </button>
                 <button class="nav-btn" data-target="hotkeys">
                     <span class="btn-icon">⌨_</span> Hotkeys
                 </button>
                 <button class="nav-btn" data-target="cloaking">
-                    <span class="btn-icon">🕶_</span> Cloaking
+                    <span class="btn-icon">🕶_</span> Cloaking Tabs & A:B
                 </button>
                 <button class="nav-btn" data-target="about">
-                    <span class="btn-icon">ℹ_</span> About
+                    <span class="btn-icon">ℹ_</span> About & Changelog
                 </button>
             </nav>
             <div class="sidebar-footer">
-                <p>SYS_STATUS: NOMINAL</p>
+                <p>sys_status: nominal</p>
             </div>
         </aside>
 
@@ -48,20 +51,10 @@
             
             <section class="settings-section active" id="panel-general">
                 <div class="section-header">
-                    <h1>General Settings</h1>
+                    <h1>General / Quick Settings</h1>
                     <p>Core system behavior adjustments</p>
                 </div>
                 <div class="card glassmorphism">
-                    <div class="setting-row">
-                        <div class="setting-info">
-                            <h3>Stars Background</h3>
-                            <p>Enable dynamic cosmos rendering engine in background</p>
-                        </div>
-                        <label class="switch">
-                            <input type="checkbox" id="toggle-stars" checked>
-                            <span class="slider"></span>
-                        </label>
-                    </div>
                     <div class="setting-row">
                         <div class="setting-info">
                             <h3>Auto Save Settings</h3>
@@ -75,9 +68,28 @@
                 </div>
             </section>
 
+            <section class="settings-section" id="panel-stars">
+                <div class="section-header">
+                    <h1>Enable Stars</h1>
+                    <p>Toggle the dynamic cosmos visualization engine</p>
+                </div>
+                <div class="card glassmorphism">
+                    <div class="setting-row">
+                        <div class="setting-info">
+                            <h3>Stars Background</h3>
+                            <p>Render interactive particle fields in the background</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="toggle-stars" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
             <section class="settings-section" id="panel-themes">
                 <div class="section-header">
-                    <h1>Themes & Aesthetics</h1>
+                    <h1>Themes and Colors</h1>
                     <p>Tailor your terminal visualization matrix</p>
                 </div>
                 <div class="card glassmorphism">
@@ -94,7 +106,7 @@
                             </label>
                             <label class="radio-tile">
                                 <input type="radio" name="ui-theme" value="spydr-neon">
-                                <span class="tile-label">Spydr Neon</span>
+                                <span class="tile-label">spydr neon</span>
                             </label>
                         </div>
                     </div>
@@ -128,7 +140,7 @@
 
             <section class="settings-section" id="panel-hotkeys">
                 <div class="section-header">
-                    <h1>Quantum Hotkeys</h1>
+                    <h1>Hotkeys</h1>
                     <p>Configure quick-trigger actions for emergency interception</p>
                 </div>
                 <div class="card glassmorphism">
@@ -146,14 +158,14 @@
 
             <section class="settings-section" id="panel-cloaking">
                 <div class="section-header">
-                    <h1>Tab Cloaking Matrice</h1>
-                    <p>Toggle real-time identity spoofing vectors (A/B State)</p>
+                    <h1>Cloaking Tabs & A:B</h1>
+                    <p>Toggle real-time identity spoofing vectors</p>
                 </div>
                 <div class="card glassmorphism">
                     <div class="setting-row">
                         <div class="setting-info">
-                            <h3>Stealth Disguise Mode (B-Mode)</h3>
-                            <p>Spoof tabs instantly to look like standardized workflow assets</p>
+                            <h3>A:B State Mode</h3>
+                            <p>A Mode = Normal / B Mode = Stealth Target Identity</p>
                         </div>
                         <label class="switch">
                             <input type="checkbox" id="toggle-cloak">
@@ -175,13 +187,13 @@
 
             <section class="settings-section" id="panel-about">
                 <div class="section-header">
-                    <h1>System Manifest</h1>
-                    <p>Project Spydr build information analytics</p>
+                    <h1>About & Changelog</h1>
+                    <p>spydr build information analytics</p>
                 </div>
                 <div class="card glassmorphism info-card">
                     <div class="manifest-row">
                         <span class="manifest-label">CORE ARCHITECTURE:</span>
-                        <span class="manifest-val">Spydr OS v1.7.0-GPro</span>
+                        <span class="manifest-val">spydr os v2.6.0-stable</span>
                     </div>
                     <div class="manifest-row">
                         <span class="manifest-label">BUILD ENVIRONMENT:</span>
@@ -191,10 +203,10 @@
                     <h3>Changelog Entries</h3>
                     <div class="changelog-scroll">
                         <div class="log-entry">
-                            <h4>v2.6.0 // Structural Decoupling Update</h4>
-                            <p>- Implemented fully decoupled, decoupled module design patterns.</p>
-                            <p>- Added Canvas-driven particle space matrix background styles.</p>
-                            <p>- Enhanced A:B Cloaking engine performance matrices across system layers.</p>
+                            <h4>v2.6.0 // Directory Restructure</h4>
+                            <p>- Split files into clean /js and /css directories.</p>
+                            <p>- Reorganized navigation tabs to user specification.</p>
+                            <p>- Enforced strict lowercase 'spydr' branding.</p>
                         </div>
                         <div class="log-entry">
                             <h4>v2.5.1 // Quantum Fixes</h4>
@@ -207,6 +219,6 @@
         </main>
     </div>
 
-    <script type="module" src="js/global.js"></script>
+    <script type="module" src="/js/global.js"></script>
 </body>
 </html>

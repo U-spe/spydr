@@ -1,4 +1,4 @@
-// /js/theme.js
+// js/theme.js
 export default class ThemeManager {
     constructor(kernel) {
         this.kernel = kernel;
@@ -11,6 +11,8 @@ export default class ThemeManager {
     init() {
         this.settings = this.kernel.get('settings');
         this.canvas = document.getElementById('stars-canvas');
+        if (!this.canvas) return;
+        
         this.ctx = this.canvas.getContext('2d');
 
         // Apply initialized profiles
@@ -41,7 +43,8 @@ export default class ThemeManager {
     applyBgStyle(style) {
         document.body.setAttribute('data-bg-style', style);
         const canvasEl = document.getElementById('stars-canvas');
-        // Re-evaluate stars state based on bg style and setting
+        if (!canvasEl) return;
+        
         if (style === 'stars' && this.settings.get('starsEnabled')) {
             canvasEl.style.opacity = '1';
         } else {
@@ -51,6 +54,8 @@ export default class ThemeManager {
 
     toggleStars(enabled) {
         const canvasEl = document.getElementById('stars-canvas');
+        if (!canvasEl) return;
+
         if (enabled && this.settings.get('bgStyle') === 'stars') {
             canvasEl.style.opacity = '1';
             this.startStarsLoop();

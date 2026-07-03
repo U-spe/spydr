@@ -9,29 +9,34 @@ menu.innerHTML = `
 
     <div id="menu">
 
-        <button onclick="go('lessons.html')">
-            <i class="ri-gamepad-line"></i>
-            lessons
+<button onclick="go('/')">
+            <i class="ri-home-5-line"></i>
+            home
         </button>
 
-        <button onclick="go('applications.html')">
+        <button onclick="go('lessons.html')">
+            <i class="ri-gamepad-line"></i>
+            games
+        </button>
+
+        <button onclick="go('flashcards.html')">
             <i class="ri-apps-line"></i>
-            applications
+            apps
         </button>
 
         <button onclick="go('search.html')">
             <i class="ri-global-line"></i>
-            search
+            browser
         </button>
 
-        <button onclick="go('audios.html')">
-            <i class="ri-headphone-line"></i>
-            audios
-        </button>
-
-        <button onclick="go('chat.html')">
+        <button onclick="go('study.html')">
             <i class="ri-robot-2-line"></i>
-            ai
+            ai chat
+        </button>
+
+        <button onclick="go('review.html')">
+            <i class="ri-chat-1-line"></i>
+            chatroom
         </button>
 
         <button onclick="go('settings.html')">

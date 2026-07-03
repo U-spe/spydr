@@ -1,0 +1,496 @@
+<html lang="en-us"><head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXHK7Q7G3Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PXHK7Q7G3Z');
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>UNDERTALE 10th Anniversary</title>
+    <style>
+        html {
+            background: #000000;
+        }
+
+        body {
+            font-family: arial;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            min-height: fill-available;
+            min-height: 100svh;
+            /* Otherwise contents can be covered by an address bar in Safari on iOS 15 */
+            min-width: 100vw;
+            background: #000000;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            place-items: center;
+        }
+
+        .emscripten {
+            padding-right: 0;
+            display: block;
+        }
+
+        div.emscripten {
+            text-align: center;
+        }
+
+        .nsmessage {
+            padding-right: 0;
+            display: inline-block;
+            vertical-align: top;
+            font-weight: bold;
+            color: white;
+        }
+
+        div.nsmessage {
+            text-align: center;
+        }
+
+        /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+        canvas.emscripten {
+            display: none;
+            border: 0px none;
+            outline: none;
+            background-color: black;
+            position: relative;
+            opacity: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+            image-rendering: optimizeSpeed;
+            /* Older versions of FF          */
+            image-rendering: -moz-crisp-edges;
+            /* FF 6.0+                       */
+            image-rendering: -webkit-optimize-contrast;
+            /* Safari                        */
+            image-rendering: -o-crisp-edges;
+            /* OS X & Windows Opera (12.02+) */
+            image-rendering: pixelated;
+            /* Awesome future-browsers       */
+            -ms-interpolation-mode: nearest-neighbor;
+            /* IE                            */
+        }
+
+        canvas.active {
+            opacity: 1;
+        }
+
+        canvas.paused {}
+
+        canvas.unpaused {
+            animation-name: none;
+        }
+
+        #status {
+            display: inline-block;
+            vertical-align: top;
+            font-weight: bold;
+            color: white;
+        }
+
+        div.loading {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+        }
+
+        div.loading>* {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .labels {
+            font-size: 4px;
+        }
+
+        .label-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas class="emscripten active unpaused paused" id="canvas" oncontextmenu="event.preventDefault()" onclick="resume()" tabindex="-1" width="640" height="480" style="cursor: default; display: block; height: 917px; width: 1222.67px;">
+    </canvas>
+    <div class="loading">
+        <noscript class="nsmessage">This requires JavaScript and WebAssembly to be enabled in your browser.</noscript>
+        <div class="emscripten" id="status"></div>
+    </div>
+
+    <script id="tick-worker" type="javascript/worker">
+        let running = false;
+      let stop_called = false;
+
+      let intervalMs = 16;
+
+      onmessage = (e) => {
+        if (e.data.run) {
+          intervalMs = Math.floor(1000 / e.data.fps);
+
+          if (!running) {
+            running = true;
+            setTimeout(tick, intervalMs);
+          }
+        } else {
+          stop_called = true;
+        }
+      }
+
+      const tick = () => {
+        if (stop_called) {
+          stop_called = false;
+          running = false;
+
+          return;
+        }
+
+        const start = new Date().getTime();
+        postMessage('');
+        const end = new Date().getTime();
+
+        let next_update = start + intervalMs - end;
+        next_update = Math.max(next_update, 0);
+        setTimeout(tick, next_update);
+      }
+    </script>
+
+    <script type="text/javascript">
+        const blob = new Blob([document.querySelector('#tick-worker').textContent]);
+        const worker = new Worker(window.URL.createObjectURL(blob));
+
+        worker.onmessage = function() {
+            GM_tick(performance.now());
+        }
+
+        if ("getGamepads" in navigator) {
+            const sendGamepadInfo = (id) => {
+                const firefoxRegex = /^([0-9a-fA-F]{4})-([0-9a-fA-F]{4})-(.*)$/;
+                const chromeRegex = /^(.*) ?\(.*[vV][eE][nN][dD][oO][rR]: ?([0-9a-fA-F]{4}).*[pP][rR][oO][dD][uU][cC][tT]: ?([0-9a-fA-F]{4})\)$/;
+
+                let name = undefined;
+                let vendor = undefined;
+                let product = undefined;
+                const firefoxMatch = id.match(firefoxRegex);
+                if (firefoxMatch) {
+                    name = firefoxMatch[3];
+                    vendor = firefoxMatch[1];
+                    product = firefoxMatch[2];
+                } else {
+                    const chromeMatch = id.match(chromeRegex);
+                    if (chromeMatch) {
+                        name = chromeMatch[1];
+                        vendor = chromeMatch[2];
+                        product = chromeMatch[3];
+                    }
+                }
+
+                if (!name) {
+                    name = "";
+                }
+                if (!vendor) {
+                    vendor = "";
+                }
+                if (!product) {
+                    product = "";
+                }
+                name = name.toLowerCase();
+                vendor = vendor.toLowerCase();
+                product = product.toLowerCase();
+
+                let ps = false;
+                let dualsense = false;
+                if (name.includes("dualsense") || name.includes("ps5")) {
+                    ps = true;
+                    dualsense = true;
+                } else if (vendor == "054c" ||
+                    name.includes("playstation") || name.includes("dualshock") ||
+                    name.includes("ps1") || name.includes("ps2") ||
+                    name.includes("ps3") || name.includes("ps4")) {
+                    ps = true;
+                }
+                const dataToSend = {
+                    gamepadIsPlaystation: ps,
+                    gamepadIsDualsense: dualsense
+                };
+                window.postMessage(dataToSend);
+            };
+
+            window.addEventListener("gamepadconnected", (event) => {
+                const id = event.gamepad.id;
+                console.log("Gamepad connected with ID: " + id);
+                sendGamepadInfo(id);
+            });
+
+            setInterval(() => {
+                const gamepads = navigator.getGamepads();
+                let activityDetectedIndex = -1;
+                for (const gp of gamepads) {
+                    if (!gp) {
+                        continue;
+                    }
+                    let activityDetected = false;
+                    if (gp.mapping !== "standard" || gp.axes.length < 2) {
+                        for (let i = 0; i < gp.axes.length; i++) {
+                            activityDetected |= Math.abs(gp.axes[i]) >= 0.4;
+                        }
+                        for (let i = 0; i < gp.buttons.length; i++) {
+                            activityDetected |= gp.buttons[i].pressed;
+                        }
+                    } else {
+                        activityDetected |= Math.abs(gp.axes[0]) >= 0.4 || Math.abs(gp.axes[1]) >= 0.4;
+                        for (let i = 0; i < gp.buttons.length; i++) {
+                            activityDetected |= gp.buttons[i].pressed;
+                        }
+                    }
+                    if (activityDetected) {
+                        sendGamepadInfo(gp.id);
+                        break;
+                    }
+                }
+            }, 16);
+        }
+
+        window.addEventListener("message", (message) => {
+            if (message && message.data === "attempt_enter_fullscreen") {
+                // Attempt entering fullscreen on mobile devices specifically.
+                if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+                    // Not supported on mobile Safari, unfortunately, as of writing this.
+                    return;
+                }
+                setTimeout(() => {
+                    if (document.body.requestFullscreen) {
+                        document.body.requestFullscreen();
+                    }
+                }, 100);
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        var bodyElement = document.getElementsByTagName("body")[0];
+        var statusElement = document.getElementById("status");
+        var canvasElement = document.getElementById("canvas");
+        canvasElement.addEventListener("click", function() {
+            canvasElement.focus();
+        });
+
+        // Prevent GameMaker from changing window title erroneously.
+        var actualDocumentTitle = document.title;
+        Object.defineProperty(document, "title", {
+            set: function(val) {},
+            get: function() {
+                return actualDocumentTitle;
+            }
+        });
+
+        var startingHeight, startingWidth;
+        var startingAspect;
+        var Module = {
+            preRun: [],
+            postRun: [],
+            print: (function() {
+                return function(text) {
+                    if (arguments.length > 1)
+                        text = Array.prototype.slice.call(arguments).join(" ");
+                    if (text === "Entering main loop.") {
+                        ensureAspectRatio();
+                    }
+                };
+            })(),
+            printErr: function(text) {
+                if (arguments.length > 1)
+                    text = Array.prototype.slice.call(arguments).join(" ");
+                console.error(text);
+            },
+            canvas: (function() {
+                var canvas = document.getElementById("canvas");
+
+                return canvas;
+            })(),
+            setStatus: function(text) {
+                if (!Module.setStatus.last)
+                    Module.setStatus.last = {
+                        time: Date.now(),
+                        text: ""
+                    };
+                if (text === Module.setStatus.last.text) return;
+                var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
+                var now = Date.now();
+                if (m && now - Module.setStatus.last.time < 30) return;
+                if (text.includes("Downloading data...")) text = "Downloading data...";
+                Module.setStatus.last.time = now;
+                Module.setStatus.last.text = text;
+                if (m) {
+                    text = m[1];
+                } else {
+                    if (!text) {
+                        canvasElement.style.display = "block";
+                    }
+                }
+                statusElement.innerHTML = text;
+            },
+            totalDependencies: 0,
+            monitorRunDependencies: function(left) {
+                this.totalDependencies = Math.max(this.totalDependencies, left);
+                Module.setStatus(
+                    left ?
+                    "Preparing... (" +
+                    (this.totalDependencies - left) +
+                    "/" +
+                    this.totalDependencies +
+                    ")" :
+                    "All downloads complete."
+                );
+            },
+        };
+        Module.setStatus("Downloading...");
+
+        if (typeof window === "object") {
+            Module['arguments'] = [];
+        }
+
+        var g_pWadLoadCallback = undefined;
+
+        function setWadLoadCallback(_wadLoadCallback) {
+            g_pWadLoadCallback = _wadLoadCallback;
+        }
+
+        var g_pAddAsyncMethod = -1;
+
+        function setAddAsyncMethod(asyncMethod) {
+            g_pAddAsyncMethod = asyncMethod;
+        }
+
+        var g_pJSExceptionHandler = undefined;
+
+        function setJSExceptionHandler(exceptionHandler) {
+            if (typeof exceptionHandler == "function") {
+                g_pJSExceptionHandler = exceptionHandler;
+            } // end if
+        } // end setJSExceptionHandler
+
+        function hasJSExceptionHandler() {
+            return (g_pJSExceptionHandler != undefined) && (typeof g_pJSExceptionHandler == "function");
+        } // end hasJSExceptionHandler
+
+        function doJSExceptionHandler(exceptionJSON) {
+            if (typeof g_pJSExceptionHandler == "function") {
+                var exception = JSON.parse(exceptionJSON);
+                g_pJSExceptionHandler(exception);
+            } // end if
+        } // end doJSExceptionHandler
+
+        function manifestFiles() {
+            return ["runner.data",
+                "runner.js",
+                "runner.wasm",
+                "audio-worklet.js",
+                "game.unx"
+            ].join(";");
+        }
+
+        function manifestFilesMD5() {
+            return ["4fcfa3acd68441ef6a5c95bd1e924fd3",
+                "b545e69455e5add6925e78db228f0d1a",
+                "54facb1a5bb9a9f44824c3a32b9d289f",
+                "e8f1e8db8cf996f8715a6f2164c2e44e",
+                "983302700fde08ece4f3fd6baa89a876"
+            ];
+        }
+
+        function onFirstFrameRendered() {}
+
+        function onGameSetWindowSize(width, height) {
+            startingHeight = height;
+            startingWidth = width;
+            startingAspect = startingWidth / startingHeight;
+            ensureAspectRatio();
+        }
+
+        function ensureAspectRatio() {
+            if (canvasElement === undefined) {
+                return;
+            }
+
+            if (startingHeight === undefined && startingWidth === undefined) {
+                return;
+            }
+
+            canvasElement.classList.add("active");
+
+            const maxWidth = window.innerWidth;
+            const maxHeight = window.innerHeight;
+            var newHeight, newWidth;
+
+            // Find the limiting dimension.
+            var heightQuotient = startingHeight / maxHeight;
+            var widthQuotient = startingWidth / maxWidth;
+
+            if (heightQuotient > widthQuotient) {
+                // Max out on height.
+                newHeight = maxHeight;
+                newWidth = newHeight * startingAspect;
+            } else {
+                // Max out on width.
+                newWidth = maxWidth;
+                newHeight = newWidth / startingAspect;
+            }
+
+            canvasElement.style.height = newHeight + "px";
+            canvasElement.style.width = newWidth + "px";
+        }
+
+        function pause() { // Don't change the name - GX Mobile calls it when the app becomes inactive.
+            if (!canvasElement.classList.contains("active")) { // Wait for the canvas to load.
+                return
+            }
+
+            GM_pause();
+            canvasElement.classList.add("paused");
+        }
+
+        function resume() {
+            GM_unpause();
+            canvasElement.classList.remove("paused");
+            canvasElement.classList.add("unpaused");
+            ensureAspectRatio();
+        }
+
+        const resizeObserver = new ResizeObserver(() => {
+            window.requestAnimationFrame(ensureAspectRatio);
+            setTimeout(() => window.requestAnimationFrame(ensureAspectRatio), 100);
+        });
+        resizeObserver.observe(document.body);
+
+        setInterval(() => window.requestAnimationFrame(ensureAspectRatio), 1000);
+
+        document.addEventListener("visibilitychange", (event) => {
+            if (document.visibilityState != "visible") {
+                pause();
+            }
+        });
+
+        setWadLoadCallback(() => {});
+    </script>
+    <script async="" type="text/javascript" src="runner.js"></script>
+
+</body></html>

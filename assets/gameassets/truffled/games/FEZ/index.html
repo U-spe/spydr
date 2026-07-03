@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXHK7Q7G3Z"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {   
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-PXHK7Q7G3Z');
+</script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FEZ - Web</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Cpath fill='%23f0c040' d='M7 7h18v5H13v4h10v5H13v4H7z'/%3E%3C/svg%3E" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; overflow: hidden; background: #000; }
+        #status {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            color: #fff; font-family: monospace; font-size: 14px; text-align: center;
+            z-index: 10;
+        }
+        #status.hidden { display: none; }
+        #progress-bar {
+            width: 300px; height: 6px; background: #333; border-radius: 3px;
+            margin: 12px auto; overflow: hidden;
+        }
+        #progress-fill {
+            width: 0%; height: 100%; background: #f0c040; transition: width 0.2s;
+        }
+        #detail {
+            margin-top: 8px; color: #888; font-size: 11px;
+        }
+        canvas {
+            display: block; width: 100vw; height: 100vh;
+            image-rendering: pixelated;
+        }
+    </style>
+</head>
+<body>
+    <div id="status">
+        <div id="status-text">Loading...</div>
+        <div id="progress-bar"><div id="progress-fill"></div></div>
+        <div id="detail"></div>
+    </div>
+
+    <canvas id="canvas" class="canvas" tabindex="0"></canvas>
+
+    <script type="module">
+        // keep browser from stealing fucking game keys mid game
+        const GAME_KEYS = new Set(['Tab', 'Escape', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', ' ']);
+        window.addEventListener('keydown', e => {
+            if (GAME_KEYS.has(e.key)) e.preventDefault();
+        });
+        window.addEventListener('keyup', e => {
+            if (GAME_KEYS.has(e.key)) e.preventDefault();
+        });
+
+        const statusEl = document.getElementById('status');
+        const statusText = document.getElementById('status-text');
+        const progressFill = document.getElementById('progress-fill');
+        const detailEl = document.getElementById('detail');
+        const canvas = document.getElementById('canvas');
+        canvas.focus();
+
+        function setStatus(msg, pct, detail) {
+            statusEl.classList.remove('hidden');
+            statusText.textContent = msg;
+            if (pct !== undefined) progressFill.style.width = pct + '%';
+            detailEl.textContent = detail || '';
+        }
+
+        function formatSize(bytes) {
+            if (bytes >= 1048576) return (bytes / 1048576).toFixed(1) + ' MB';
+            if (bytes >= 1024) return (bytes / 1024).toFixed(0) + ' KB';
+            return bytes + ' B';
+        }
+        const CONTENT_FILES = [
+            { url: 'content/Essentials.pak',          dest: '/Content/Essentials.pak',          size: 17825792 },
+            { url: 'content/Updates.pak',             dest: '/Content/Updates.pak',             size: 1036288 },
+            { url: 'content/Sounds/SoundLevels.sdl',  dest: '/Content/Sounds/SoundLevels.sdl',  size: 25600 },
+            { url: 'content/Other.pak',               dest: '/Content/Other.pak',               size: 167772160 },
+            { url: 'content/Music.pak',               dest: '/Content/Music.pak',               size: 203423744 },
+            { url: 'content/gamecontrollerdb.txt',    dest: '/gamecontrollerdb.txt',            size: 41984 },
+        ];
+
+        const TOTAL_SIZE = CONTENT_FILES.reduce((s, f) => s + f.size, 0);
+
+        async function run() {
+            try {
+                setStatus('Loading .NET runtime...', 2);
+                const wasm = await eval('import("./_framework/dotnet.js")');
+                const dotnet = wasm.dotnet;
+
+                setStatus('Initializing runtime...', 8);
+                const runtime = await dotnet
+                    .withModuleConfig({ canvas })
+                    .create();
+
+                const config = runtime.getConfig();
+                const exports = await runtime.getAssemblyExports(config.mainAssemblyName);
+                const api = exports.FezGame.Program;
+
+                await runtime.runMain();
+                setStatus('Setting up filesystem...', 12);
+                await api.PreInit(window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '/'));
+
+                let downloaded = 0;
+                for (let i = 0; i < CONTENT_FILES.length; i++) {
+                    const f = CONTENT_FILES[i];
+                    const baseName = f.url.split('/').pop();
+                    const pct = 15 + Math.round((downloaded / TOTAL_SIZE) * 70);
+                    setStatus(
+                        `Downloading game content (${i + 1}/${CONTENT_FILES.length})...`,
+                        pct,
+                        `${baseName} — ${formatSize(f.size)}`
+                    );
+                    await api.DownloadContentFile(f.url, f.dest);
+                    downloaded += f.size;
+                }
+                setStatus('Content loaded!', 88);
+                setStatus('Initializing game...', 90);
+                await api.Init(canvas.width || 1280, canvas.height || 720);
+                setStatus('Starting FEZ...', 98);
+                statusEl.classList.add('hidden');
+                canvas.focus();
+
+                console.log('[FEZ] Starting game loop via requestAnimationFrame');
+                const mainLoop = async () => {
+                    try {
+                        const keepRunning = await api.MainLoop();
+                        if (keepRunning) {
+                            requestAnimationFrame(mainLoop);
+                        } else {
+                            console.log('[FEZ] Game requested exit');
+                            await api.Cleanup();
+                        }
+                    } catch (e) {
+                        console.error('[FEZ] MainLoop error:', e);
+                        setStatus('Error: ' + e.message, 0, 'Check browser console (F12) for details.');
+                    }
+                };
+                requestAnimationFrame(mainLoop);
+
+            } catch (e) {
+                console.error('Fatal error:', e);
+                setStatus('Error: ' + e.message, 0, 'Check browser console (F12) for details.');
+            }
+        }
+
+        run();
+    </script>
+</body>
+</html>

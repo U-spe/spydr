@@ -1,4 +1,4 @@
-// /js/settings.js
+// js/settings.js
 export default class SettingsManager {
     constructor() {
         this.storageKey = 'spydr_config_matrix';
@@ -10,7 +10,7 @@ export default class SettingsManager {
             bgStyle: 'stars',
             bossKey: 'Escape',
             cloakEnabled: false,
-            cloakTarget: 'google-docs'
+            cloakTarget: 'spydr'
         };
         this.listeners = [];
     }

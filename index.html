@@ -4,13 +4,16 @@
   <meta charset="UTF-8" />
   <title>spydr</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="/css/main.css"/>
 </head>
 
-<body>
+<body data-bg-style="stars">
+
   <div id="loader"></div>
 
   <div id="bg-effects-container">
@@ -19,6 +22,7 @@
   </div>
 
   <div id="app">
+
     <div class="top">
       <div id="time">--:--</div>
       <div id="date">loading...</div>
@@ -31,7 +35,9 @@
         <img src="/assets/images/logo.png" class="logo-img" alt="spydr logo">
         <div class="hero-text">
           <h1>spydr</h1>
-          <div class="const" id="constText">initializing...</div>
+          <div class="const" id="constText">
+            initializing...
+          </div>
         </div>
       </div>
     </div>
@@ -42,11 +48,13 @@
       <div class="game-card">pixel siege</div>
       <div class="game-card">cyber arena</div>
     </div>
+
   </div>
 
   <script src="/js/load.js"></script>
   <script src="/js/globalmenu.js"></script>
   <script src="/js/main.js"></script>
   <script type="module" src="/js/global.js"></script>
+
 </body>  
 </html>

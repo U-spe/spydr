@@ -43,28 +43,56 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: "JetBrains Mono", monospace;
-  overflow: hidden; /* Prevents full page scroll, keeps app layout intact */
+  overflow: hidden; 
 }
 
 /* BACKGROUND FIX */
 #bg-effects-container {
-  position: fixed; 
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -999; 
-  pointer-events: none; 
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: -999; pointer-events: none; 
 }
-
 #stars-canvas { width: 100%; height: 100%; display: block; }
 #fog-overlay {
   position: absolute; inset: 0; opacity: 0;
   background: radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.15), transparent 70%);
 }
 body[data-bg-style="fog"] #fog-overlay { opacity: 1; }
-
 #loader { position: fixed; inset: 0; background: var(--bg); z-index: 9999; transition: opacity 0.3s ease; }
+
+/* --- TOP RIGHT PROFILE BUTTON --- */
+.top-right-profile {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 100;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 6px 16px 6px 12px;
+  border-radius: 30px;
+  transition: 0.2s ease;
+}
+
+.top-right-profile:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+#top-right-name {
+  font-size: 13px;
+  color: var(--gray);
+  font-weight: 600;
+}
+
+.pfp-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #ffffff);
+}
 
 /* --- APP LAYOUT --- */
 .chat-app {
@@ -91,6 +119,16 @@ body[data-bg-style="fog"] #fog-overlay { opacity: 1; }
   align-items: center;
   padding: 0 20px;
   border-bottom: 1px solid var(--border);
+}
+
+.spydr-logo-small {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%) brightness(200%);
+  margin-right: 12px;
+}
+
+.sidebar-header h2 {
   font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -110,6 +148,24 @@ body[data-bg-style="fog"] #fog-overlay { opacity: 1; }
   font-weight: 600;
   letter-spacing: 1px;
 }
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+
+#create-dm-btn {
+  background: transparent;
+  border: none;
+  color: var(--gray);
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+
+#create-dm-btn:hover { color: var(--text); transform: scale(1.1); }
 
 .channel {
   padding: 8px 10px;
@@ -151,6 +207,7 @@ body[data-bg-style="fog"] #fog-overlay { opacity: 1; }
 .chat-messages {
   flex: 1;
   padding: 20px;
+  padding-bottom: 10px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -172,16 +229,16 @@ body[data-bg-style="fog"] #fog-overlay { opacity: 1; }
 }
 
 .msg-content { display: flex; flex-direction: column; }
-
 .msg-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
 .msg-user { font-weight: 600; color: var(--text); font-family: "Space Grotesk", sans-serif; }
 .msg-time { font-size: 11px; color: var(--darkgray); }
 .msg-text { font-size: 14px; color: var(--gray); line-height: 1.5; }
 
-/* INPUT AREA */
+/* INPUT AREA - RAISED */
 .chat-input-area {
-  padding: 20px;
+  padding: 20px 20px 40px 20px; /* 40px bottom padding raises it off the floor */
   background: rgba(9, 9, 9, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 #chat-form {

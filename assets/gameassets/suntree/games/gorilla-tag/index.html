@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Unity WebGL Player | gorilla tag web</title>
+<link rel="shortcut icon" href="TemplateData/favicon.ico">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2232JQ1RC7');
+</script>
+</head>
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      overflow: hidden;
+      background: #000;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    #unity-container {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+    #unity-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+      #unity-loading-bar {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 300px;
+    }
+    #unity-logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 30px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+      #loading-text {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+    #unity-progress-bar-empty {
+      width: 100%;
+      height: 4px;
+      background: #333;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+      #unity-progress-bar-full {
+      width: 0%;
+      height: 100%;
+      background: #fff;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+    #progress-percentage {
+      color: #fff;
+      font-size: 12px;
+      margin-top: 10px;
+      opacity: 0.7;
+    }
+    .hidden {
+      display: none !important;
+    }
+    #unity-warning {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+    }
+    #unity-warning > div {
+      background: #fff;
+      color: #000;
+      padding: 15px 20px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    #unity-warning > div.error {
+      background: #fff !important;
+      color: #000 !important;
+    }
+  </style>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width="960" height="600" tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+      <div id="unity-logo"></div>
+      <div id="loading-text">loading</div>
+      <div id="unity-progress-bar-empty">
+      <div id="unity-progress-bar-full"></div>
+      </div>
+      <div id="progress-percentage">0%</div>
+      </div>
+      <div id="unity-warning"></div>
+    </div>
+    <script>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var progressPercentage = document.querySelector("#progress-percentage");
+      var loadingText = document.querySelector("#loading-text");
+      var warningBanner = document.querySelector("#unity-warning");
+      function unityShowBanner(msg, type) {
+      function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') {
+        div.className = 'error';
+        } else {
+        setTimeout(function() {
+        warningBanner.removeChild(div);
+        updateBannerVisibility();
+        }, 5000);
+        }
+        updateBannerVisibility();
+        }
+      async function loadDataParts() {
+        const parts = 8;
+        const buildUrl = "Build";
+        const chunks = [];  
+        //loading text and progress for parts, not the actual unity loading progress, that comes after this.
+        loadingText.textContent = "loading parts"; 
+            for (let i = 1; i <= parts; i++) {
+            const url = `${buildUrl}/gtagwebR2.data.unityweb.part${i}`;
+            loadingText.textContent = `loading part ${i}/${parts}`;
+            try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`didnt load part: ${i}`);
+            const chunk = await response.arrayBuffer();
+            chunks.push(chunk);
+            const progress = i / parts;
+            progressBarFull.style.width = (progress * 100) + "%";
+            progressPercentage.textContent = Math.round(progress * 100) + "%";
+            } catch (error) {
+            unityShowBanner(`error ${i}: ${error.message}`, 'error');
+            throw error;
+            }
+        }       
+        loadingText.textContent = "combining";        
+        const totalLength = chunks.reduce((sum, chunk) => sum + chunk.byteLength, 0);
+        const combined = new Uint8Array(totalLength);
+        let offset = 0;
+        for (const chunk of chunks) {
+          combined.set(new Uint8Array(chunk), offset);
+          offset += chunk.byteLength;
+        }        
+        return combined.buffer;
+      }
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/gtagwebR2.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/gtagwebR2.data.unityweb",
+        frameworkUrl: buildUrl + "/gtagwebR2.framework.js.unityweb",
+        codeUrl: buildUrl + "/gtagwebR2.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "boolonx",
+          productName: "gorilla tag web",
+          productVersion: "1.0",
+        showBanner: unityShowBanner,
+      };
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        var meta = document.createElement('meta');
+          meta.name = 'viewport';
+          meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+            container.className = "unity-mobile";
+            canvas.className = "unity-mobile";
+      }
+      //actually loading parts and then unity, with progress for both, the first progress is for loading the parts, the second is for unity loading after the parts are loaded.
+loadingBar.style.display = "block";
+      loadDataParts().then((combinedData) => {
+        loadingText.textContent = "loading";
+        progressBarFull.style.width = "100%";
+        progressPercentage.textContent = "100%";
+        const blob = new Blob([combinedData], { type: 'application/octet-stream' });
+        config.dataUrl = URL.createObjectURL(blob);
+        var script = document.createElement("script");
+            script.src = loaderUrl;
+            script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+        progressBarFull.style.width = 100 * progress + "%";
+        progressPercentage.textContent = Math.round(100 * progress) + "%";
+      }).then((unityInstance) => {
+        loadingBar.style.display = "none";
+      }).catch((message) => {
+        unityShowBanner(message, 'error');
+      });
+        };
+        document.body.appendChild(script);
+      }).catch((error) => {
+        unityShowBanner('failed to load: ' + error.message, 'error');
+      });
+    </script>
+  </body>
+</html>

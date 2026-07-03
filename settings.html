@@ -7,9 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/settings.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <div id="js-warning" style="background: #7c3aed; color: white; padding: 12px; text-align: center; position: fixed; top: 0; width: 100%; z-index: 9999; font-family: 'Space Grotesk', sans-serif;">
+        <strong>SYS_WARNING:</strong> You must run this using a Local Web Server (e.g., Live Server in VS Code). Opening the file directly (file://) blocks modular JavaScript from working!
+    </div>
+
     <div id="bg-effects-container">
         <canvas id="stars-canvas"></canvas>
         <div id="fog-overlay"></div>
@@ -20,7 +24,7 @@
             <div class="sidebar-header">
                 <div class="logo-icon"></div>
                 <h2>spydr</h2>
-                <span class="status-badge">os_v2.6</span>
+                <span class="status-badge">os_v2.7</span>
             </div>
             <nav class="sidebar-nav">
                 <button class="nav-btn active" data-target="general">
@@ -176,9 +180,13 @@
                         <h3>Disguise Target Identity</h3>
                         <div class="select-wrapper">
                             <select id="cloak-target-select">
-                                <option value="google-docs">Google Docs</option>
-                                <option value="google-drive">Google Drive</option>
-                                <option value="canvas">Canvas LMS</option>
+                                <option value="spydr">spydr</option>
+                                <option value="google">Google</option>
+                                <option value="classroom">Home - Classroom</option>
+                                <option value="securly">Create Pass - Securly Pass</option>
+                                <option value="wayground">Playing a Game - Wayground (Formerly Quizizz)</option>
+                                <option value="studysync">StudySync</option>
+                                <option value="classlink">My Apps - Classlink</option>
                             </select>
                         </div>
                     </div>
@@ -193,24 +201,20 @@
                 <div class="card glassmorphism info-card">
                     <div class="manifest-row">
                         <span class="manifest-label">CORE ARCHITECTURE:</span>
-                        <span class="manifest-val">spydr os v2.6.0-stable</span>
+                        <span class="manifest-val">spydr os v2.7.0</span>
                     </div>
                     <div class="manifest-row">
                         <span class="manifest-label">BUILD ENVIRONMENT:</span>
-                        <span class="manifest-val">Vanilla JS / Production Ready</span>
+                        <span class="manifest-val">Vanilla JS / Modular Logic</span>
                     </div>
                     <hr class="divider">
                     <h3>Changelog Entries</h3>
                     <div class="changelog-scroll">
                         <div class="log-entry">
-                            <h4>v2.6.0 // Directory Restructure</h4>
-                            <p>- Split files into clean /js and /css directories.</p>
-                            <p>- Reorganized navigation tabs to user specification.</p>
-                            <p>- Enforced strict lowercase 'spydr' branding.</p>
-                        </div>
-                        <div class="log-entry">
-                            <h4>v2.5.1 // Quantum Fixes</h4>
-                            <p>- Patched Event propagation pipeline execution leaks inside keybind components.</p>
+                            <h4>v2.7.0 // Integration & Expansion Update</h4>
+                            <p>- Detached main.js to prevent conflicts with root projects.</p>
+                            <p>- Imported new cloaking tab presets with custom icon pipelines.</p>
+                            <p>- Hardened DOM initialization to prevent button failures.</p>
                         </div>
                     </div>
                 </div>
@@ -219,6 +223,6 @@
         </main>
     </div>
 
-    <script type="module" src="/js/global.js"></script>
+    <script type="module" src="./js/global.js"></script>
 </body>
 </html>

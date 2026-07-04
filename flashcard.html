@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps • Spydr</title>
+
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/apps.css">
+</head>
+
+<body>
+
+    <!-- Background Effects -->
+    <div id="bg-effects-container"></div>
+
+    <main class="apps-page">
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="apps-header">
+
+            <div class="header-info">
+                <h1>Apps</h1>
+                <p>Launch proxy apps and built in tools.</p>
+            </div>
+
+            <div class="header-actions">
+
+                <input
+                    type="search"
+                    id="appSearch"
+                    placeholder="Search Apps..."
+                    autocomplete="off">
+
+            </div>
+
+        </header>
+
+        <!-- =========================
+             FEATURED
+        ========================== -->
+
+        <section class="app-section">
+
+            <div class="section-header">
+                <h2>⭐ Featured</h2>
+            </div>
+
+            <div
+                class="apps-grid"
+                id="featuredApps">
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             PROXY APPS
+        ========================== -->
+
+        <section class="app-section">
+
+            <div class="section-header">
+                <h2>🌐 Proxy Apps</h2>
+            </div>
+
+            <div
+                class="apps-grid"
+                id="proxyApps">
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             LOCAL APPS
+        ========================== -->
+
+        <section class="app-section">
+
+            <div class="section-header">
+                <h2>💻 Local Apps</h2>
+            </div>
+
+            <div
+                class="apps-grid"
+                id="localApps">
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================
+         APP CARD TEMPLATE
+         JS WILL CLONE THIS
+    ========================== -->
+
+    <template id="appTemplate">
+
+        <button class="app-card">
+
+            <div class="app-icon">
+
+                <img
+                    class="icon"
+                    src=""
+                    alt="">
+
+            </div>
+
+            <div class="app-content">
+
+                <h3 class="app-name"></h3>
+
+                <p class="app-description"></p>
+
+            </div>
+
+            <div class="app-footer">
+
+                <span class="badge"></span>
+
+            </div>
+
+        </button>
+
+    </template>
+
+    <!-- Scripts -->
+
+    <script src="/js/globalmenu.js"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/apps.js"></script>
+
+</body>
+</html>

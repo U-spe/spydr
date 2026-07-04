@@ -34,6 +34,22 @@ body {
     line-height: 1.5;
 }
 
+/* MASTER WRAPPER FOR EXTENSIBLE GLOBAL SIDEBARS/MENUS */
+.spydr-app-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* FIX: ENFORCE HAMBURGER AND MENU WRAPPERS TO RENDER HIGHER THAN MAIN INTERFACE */
+#global-menu {
+    position: relative;
+    z-index: 9999;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -50,6 +66,7 @@ body {
 
 .spydr-dashboard {
     max-width: 1600px;
+    width: 100%;
     margin: 0 auto;
     padding: 3rem 4rem;
     display: flex;

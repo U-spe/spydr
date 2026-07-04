@@ -1,865 +1,370 @@
-/* =========================================================
-   SPYDR APPS
-   Part 1 - Layout & Structure
-========================================================= */
-
+/* css/apps.css */
 :root {
-
-    --bg: #090909;
+    --bg-primary: #090909;
     --bg-secondary: #111111;
-    --card: rgba(23,23,23,.72);
-
-    --text: #ffffff;
-    --text-light: #bdbdbd;
-
-    --border: rgba(255,255,255,.08);
-
-    --blue: #3f5efb;
-    --purple: #7c3aed;
-
-    --radius: 18px;
-
-    --shadow:
-        0 10px 35px rgba(0,0,0,.35);
-
-    --glass:
-        blur(20px);
-
+    --card-bg: rgba(23, 23, 23, 0.72);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --accent-blue: #3f5efb;
+    --accent-purple: #7c3aed;
+    --text-primary: #ffffff;
+    --text-secondary: #bdbdbd;
+    
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'JetBrains Mono', monospace;
+    
+    --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* =====================================
-   PAGE
-===================================== */
-
-.apps-page{
-
-    position:relative;
-
-    width:100%;
-
-    min-height:100vh;
-
-    padding:40px;
-
-    overflow-x:hidden;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* =====================================
-   HEADER
-===================================== */
-
-.apps-header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:30px;
-
-    margin-bottom:45px;
-
+body {
+    background-color: var(--bg-primary);
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(124, 58, 237, 0.04), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(63, 94, 251, 0.04), transparent 30%);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.5;
 }
 
-.header-info h1{
-
-    font-size:3rem;
-
-    font-weight:700;
-
-    color:var(--text);
-
-    letter-spacing:-1px;
-
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.2);
 }
 
-.header-info p{
-
-    margin-top:10px;
-
-    color:var(--text-light);
-
-    font-size:1rem;
-
+.spydr-dashboard {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
-/* =====================================
-   SEARCH
-===================================== */
-
-.header-actions{
-
-    width:420px;
-
-    max-width:100%;
-
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-#appSearch{
-
-    width:100%;
-
-    height:52px;
-
-    padding:0 18px;
-
-    border:none;
-
-    outline:none;
-
-    border-radius:15px;
-
-    background:rgba(255,255,255,.05);
-
-    border:1px solid var(--border);
-
-    backdrop-filter:var(--glass);
-
-    color:white;
-
-    font-size:15px;
-
-    transition:.25s;
-
+.page-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: linear-gradient(to right, var(--text-primary), var(--text-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-#appSearch::placeholder{
-
-    color:#8f8f8f;
-
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
 }
 
-#appSearch:focus{
-
-    border-color:var(--purple);
-
-    box-shadow:
-        0 0 18px rgba(124,58,237,.35);
-
+.search-container i {
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    pointer-events: none;
+    transition: var(--transition-smooth);
 }
 
-/* =====================================
-   SECTIONS
-===================================== */
-
-.app-section{
-
-    margin-bottom:55px;
-
+#app-search {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    backdrop-filter: blur(12px);
+    transition: var(--transition-smooth);
+    outline: none;
 }
 
-.section-header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    margin-bottom:18px;
-
+#app-search:focus {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 4px rgba(63, 94, 251, 0.1);
 }
 
-.section-header h2{
-
-    color:var(--text);
-
-    font-size:1.35rem;
-
-    font-weight:600;
-
+#app-search:focus + i {
+    color: var(--accent-blue);
 }
 
-/* =====================================
-   GRID
-===================================== */
-
-.apps-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(auto-fill,minmax(210px,1fr));
-
-    gap:20px;
-
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
-/* =====================================
-   EMPTY STATE
-===================================== */
-
-.apps-grid:empty{
-
-    min-height:120px;
-
-    border-radius:var(--radius);
-
-    border:1px dashed rgba(255,255,255,.08);
-
+.app-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: opacity var(--transition-smooth), transform var(--transition-smooth);
 }
 
-/* =====================================
-   SCROLLBAR
-===================================== */
-
-::-webkit-scrollbar{
-
-    width:10px;
-
+.app-section.hidden {
+    display: none;
 }
 
-::-webkit-scrollbar-thumb{
-
-    background:rgba(255,255,255,.08);
-
-    border-radius:100px;
-
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-::-webkit-scrollbar-track{
-
-    background:transparent;
-
-}
-/* =========================================================
-   SPYDR APPS
-   Part 2 - Cards & Components
-========================================================= */
-
-/* =====================================
-   APP CARD
-===================================== */
-
-.app-card{
-
-    position:relative;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:16px;
-
-    width:100%;
-
-    min-height:235px;
-
-    padding:22px;
-
-    border:none;
-
-    border-radius:var(--radius);
-
-    cursor:pointer;
-
-    text-align:center;
-
-    color:var(--text);
-
-    background:rgba(255,255,255,.045);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(18px);
-
-    -webkit-backdrop-filter:blur(18px);
-
-    transition:
-        transform .25s ease,
-        border-color .25s ease,
-        background .25s ease,
-        box-shadow .25s ease;
-
-    overflow:hidden;
-
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border-color) 0%, transparent 100%);
 }
 
-/* glow border */
-
-.app-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    border-radius:inherit;
-
-    padding:1px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(124,58,237,.45),
-            rgba(63,94,251,.15),
-            transparent
-        );
-
-    mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-
-    mask-composite:exclude;
-
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-
-    -webkit-mask-composite:xor;
-
-    pointer-events:none;
-
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
-/* hover */
-
-.app-card:hover{
-
-    transform:
-        translateY(-6px);
-
-    background:rgba(255,255,255,.07);
-
-    border-color:rgba(124,58,237,.45);
-
-    box-shadow:
-        0 18px 45px rgba(0,0,0,.45),
-        0 0 24px rgba(124,58,237,.18);
-
+.app-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: relative;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    cursor: default;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cardAppear 0.5s var(--transition-bounce) forwards;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
 }
 
-/* click */
-
-.app-card:active{
-
-    transform:scale(.97);
-
+.app-card:focus-visible {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 4px rgba(63, 94, 251, 0.2);
 }
 
-/* =====================================
-   ICON
-===================================== */
-
-.app-icon{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    width:82px;
-
-    height:82px;
-
-    border-radius:22px;
-
-    background:rgba(255,255,255,.06);
-
-    border:1px solid rgba(255,255,255,.08);
-
+.app-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+    pointer-events: none;
 }
 
-.app-icon img{
-
-    width:58px;
-
-    height:58px;
-
-    object-fit:contain;
-
-    user-select:none;
-
-    pointer-events:none;
-
+.app-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 
-/* =====================================
-   CONTENT
-===================================== */
-
-.app-content{
-
-    width:100%;
-
+.app-card:hover::before {
+    opacity: 1;
 }
 
-.app-name{
-
-    margin-bottom:8px;
-
-    font-size:1.08rem;
-
-    font-weight:700;
-
-    color:white;
-
+.app-card:active {
+    transform: translateY(-2px) scale(0.98);
 }
 
-.app-description{
-
-    font-size:.88rem;
-
-    line-height:1.45;
-
-    color:var(--text-light);
-
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-/* =====================================
-   FOOTER
-===================================== */
-
-.app-footer{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:8px;
-
-    flex-wrap:wrap;
-
-    width:100%;
-
+.app-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    transition: transform var(--transition-smooth), background var(--transition-smooth);
 }
 
-/* =====================================
-   BADGES
-===================================== */
-
-.badge{
-
-    padding:6px 12px;
-
-    border-radius:999px;
-
-    font-size:.72rem;
-
-    font-weight:600;
-
-    letter-spacing:.3px;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    background:rgba(255,255,255,.06);
-
+.app-card:hover .app-icon {
+    transform: scale(1.1) rotate(-5deg);
+    background: rgba(255, 255, 255, 0.05);
 }
 
-/* featured */
-
-.badge.featured{
-
-    background:
-        rgba(255,193,7,.14);
-
-    color:#ffd54a;
-
+.app-badge {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    border: 1px solid transparent;
 }
 
-/* proxy */
-
-.badge.proxy{
-
-    background:
-        rgba(63,94,251,.15);
-
-    color:#8ab4ff;
-
+.app-badge.featured-badge {
+    background: rgba(124, 58, 237, 0.1);
+    color: #a78bfa;
+    border: 1px solid rgba(124, 58, 237, 0.3);
 }
 
-/* local */
-
-.badge.local{
-
-    background:
-        rgba(124,58,237,.16);
-
-    color:#c7a6ff;
-
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
-/* =====================================
-   FEATURED CARD
-===================================== */
-
-.app-card.featured{
-
-    border-color:
-        rgba(255,193,7,.25);
-
+.app-name {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
 }
 
-.app-card.featured:hover{
-
-    box-shadow:
-        0 18px 45px rgba(0,0,0,.45),
-        0 0 30px rgba(255,193,7,.18);
-
+.app-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
 }
 
-/* =====================================
-   FOCUS
-===================================== */
-
-.app-card:focus-visible{
-
-    outline:none;
-
-    border-color:var(--blue);
-
-    box-shadow:
-        0 0 0 3px rgba(63,94,251,.3);
-
+.card-footer {
+    margin-top: 0.5rem;
 }
-/* =========================================================
-   SPYDR APPS
-   Part 3 - Responsive, Animations & Polish
-========================================================= */
 
-/* =====================================
-   APP ENTRY ANIMATION
-===================================== */
+.launch-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
 
-@keyframes appFadeUp{
+.app-card:hover .launch-btn {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    border-color: var(--text-primary);
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.15);
+}
 
-    from{
+.app-card .launch-btn:active {
+    transform: scale(0.96);
+}
 
-        opacity:0;
+.no-results-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    gap: 1rem;
+    color: var(--text-secondary);
+    opacity: 0;
+    animation: fadeIn 0.4s ease forwards;
+}
 
-        transform:
-            translateY(22px)
-            scale(.96);
+.no-results-state i {
+    font-size: 3rem;
+    color: rgba(255,255,255,0.1);
+}
 
+.no-results-state.hidden {
+    display: none;
+}
+
+@keyframes cardAppear {
+    0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 1024px) {
+    .spydr-dashboard {
+        padding: 2rem;
     }
+}
 
-    to{
-
-        opacity:1;
-
-        transform:
-            translateY(0)
-            scale(1);
-
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
     }
-
-}
-
-.app-card{
-
-    animation:
-        appFadeUp .45s ease both;
-
-}
-
-/* =====================================
-   SHIMMER
-===================================== */
-
-@keyframes shimmer{
-
-    0%{
-
-        transform:translateX(-100%);
-
+    
+    .search-container {
+        max-width: 100%;
     }
-
-    100%{
-
-        transform:translateX(200%);
-
+    
+    .app-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
-
 }
 
-.app-card.loading{
-
-    overflow:hidden;
-
-    pointer-events:none;
-
-}
-
-.app-card.loading::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,.08),
-            transparent
-        );
-
-    animation:
-        shimmer 1.2s linear infinite;
-
-}
-
-/* =====================================
-   SEARCH TRANSITIONS
-===================================== */
-
-.apps-grid.searching .app-card{
-
-    opacity:.45;
-
-    transform:scale(.96);
-
-    transition:
-        opacity .2s,
-        transform .2s;
-
-}
-
-.apps-grid.searching .app-card.visible{
-
-    opacity:1;
-
-    transform:scale(1);
-
-}
-
-/* =====================================
-   EMPTY SEARCH
-===================================== */
-
-.empty-results{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    flex-direction:column;
-
-    gap:10px;
-
-    padding:70px 30px;
-
-    border-radius:var(--radius);
-
-    background:rgba(255,255,255,.03);
-
-    border:1px dashed rgba(255,255,255,.08);
-
-    text-align:center;
-
-}
-
-.empty-results h3{
-
-    font-size:1.3rem;
-
-    color:white;
-
-}
-
-.empty-results p{
-
-    color:var(--text-light);
-
-}
-
-/* =====================================
-   FEATURED HEADER
-===================================== */
-
-.section-header{
-
-    position:relative;
-
-}
-
-.section-header::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-8px;
-
-    width:50px;
-
-    height:3px;
-
-    border-radius:999px;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--purple),
-            var(--blue)
-        );
-
-}
-
-/* =====================================
-   SCROLL ANIMATION
-===================================== */
-
-.app-section{
-
-    animation:
-        appFadeUp .5s ease;
-
-}
-
-/* =====================================
-   HOVER GLOW
-===================================== */
-
-.app-card:hover .app-icon{
-
-    transform:scale(1.08);
-
-    transition:.25s;
-
-    box-shadow:
-        0 0 24px rgba(124,58,237,.25);
-
-}
-
-.app-card:hover .app-name{
-
-    color:#ffffff;
-
-}
-
-.app-card:hover .badge{
-
-    transform:translateY(-2px);
-
-}
-
-/* =====================================
-   SEARCH ICON ROOM
-===================================== */
-
-#appSearch{
-
-    padding-left:20px;
-
-}
-
-/* =====================================
-   RESPONSIVE
-===================================== */
-
-@media (max-width:1200px){
-
-    .apps-grid{
-
-        grid-template-columns:
-            repeat(auto-fill,minmax(190px,1fr));
-
+@media (max-width: 480px) {
+    .spydr-dashboard {
+        padding: 1.5rem;
     }
-
-}
-
-@media (max-width:900px){
-
-    .apps-header{
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
+    
+    .page-title {
+        font-size: 2rem;
     }
-
-    .header-actions{
-
-        width:100%;
-
-    }
-
-}
-
-@media (max-width:700px){
-
-    .apps-page{
-
-        padding:24px;
-
-    }
-
-    .apps-grid{
-
-        grid-template-columns:
-            repeat(auto-fill,minmax(165px,1fr));
-
-        gap:16px;
-
-    }
-
-    .app-card{
-
-        min-height:205px;
-
-        padding:18px;
-
-    }
-
-    .app-icon{
-
-        width:70px;
-
-        height:70px;
-
-    }
-
-    .app-icon img{
-
-        width:48px;
-
-        height:48px;
-
-    }
-
-}
-
-@media (max-width:500px){
-
-    .apps-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-/* =====================================
-   REDUCED MOTION
-===================================== */
-
-@media (prefers-reduced-motion:reduce){
-
-    *{
-
-        animation:none !important;
-
-        transition:none !important;
-
-        scroll-behavior:auto !important;
-
-    }
-
 }

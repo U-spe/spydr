@@ -3,51 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spydr // Apps</title>
+    <title>spydr // apps</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/apps.css">
+    <link rel="stylesheet" href="/css/apps.css">
 </head>
 <body>
 
     <div id="global-menu"></div>
 
-    <main class="spydr-dashboard">
-        <header class="dashboard-header">
-            <h1 class="page-title">spydr // apps</h1>
-            <div class="search-container">
-                <i class="ri-search-line"></i>
-                <input type="text" id="app-search" placeholder="Search applications..." aria-label="Search apps" autocomplete="off">
+    <div class="spydr-app-wrapper">
+        <main class="spydr-dashboard">
+            <header class="dashboard-header">
+                <h1 class="page-title">spydr // apps</h1>
+                <div class="search-container">
+                    <i class="ri-search-line"></i>
+                    <input type="text" id="app-search" placeholder="Search applications..." aria-label="Search apps" autocomplete="off">
+                </div>
+            </header>
+
+            <div class="dashboard-content" id="dashboard-content">
+                <section id="featured-section" class="app-section">
+                    <h2 class="section-title">Featured</h2>
+                    <div class="app-grid" id="featured-grid"></div>
+                </section>
+
+                <section id="proxy-section" class="app-section">
+                    <h2 class="section-title">Proxy Apps</h2>
+                    <div class="app-grid" id="proxy-grid"></div>
+                </section>
+
+                <section id="local-section" class="app-section">
+                    <h2 class="section-title">Local Apps</h2>
+                    <div class="app-grid" id="local-grid"></div>
+                </section>
+                
+                <div id="no-results" class="no-results-state hidden">
+                    <i class="ri-ghost-line"></i>
+                    <p>No applications found.</p>
+                </div>
             </div>
-        </header>
+        </main>
+    </div>
 
-        <div class="dashboard-content" id="dashboard-content">
-            <section id="featured-section" class="app-section">
-                <h2 class="section-title">Featured</h2>
-                <div class="app-grid" id="featured-grid"></div>
-            </section>
-
-            <section id="proxy-section" class="app-section">
-                <h2 class="section-title">Proxy Apps</h2>
-                <div class="app-grid" id="proxy-grid"></div>
-            </section>
-
-            <section id="local-section" class="app-section">
-                <h2 class="section-title">Local Apps</h2>
-                <div class="app-grid" id="local-grid"></div>
-            </section>
-            
-            <div id="no-results" class="no-results-state hidden">
-                <i class="ri-ghost-line"></i>
-                <p>No applications found.</p>
-            </div>
-        </div>
-    </main>
-
-    <script src="js/apps.js"></script>
+    <script src="/js/globalmenu.js"></script>
+    <script type="module" src="/js/global.js"></script>
+    <script type="module" src="/js/apps.js"></script>
 </body>
 </html>

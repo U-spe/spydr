@@ -100,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function launchProxy(url) {
         console.log(`[Spydr OS] Initiating proxy launch sequence for: ${url}`);
-        // Insert proxy routing logic here
         window.open(`/proxy?url=${encodeURIComponent(url)}`, '_blank');
     }
 
@@ -131,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function createCardHTML(app, index) {
         const badgeClass = app.featured ? 'app-badge featured-badge' : 'app-badge';
         const badgeText = app.featured ? 'Featured' : app.category;
+        const iconColorClass = app.category === 'proxy' ? 'icon-proxy' : 'icon-local';
         
         const article = document.createElement('article');
         article.className = 'app-card';
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         article.innerHTML = `
             <div class="card-header">
-                <div class="app-icon"><i class="${app.icon}"></i></div>
+                <div class="app-icon ${iconColorClass}"><i class="${app.icon}"></i></div>
                 <div class="${badgeClass}">${badgeText}</div>
             </div>
             <div class="card-body">
@@ -178,8 +178,8 @@ document.addEventListener('DOMContentLoaded', () => {
             : apps;
 
         const featuredApps = filteredApps.filter(app => app.featured);
-        const proxyApps = filteredApps.filter(app => app.category === 'proxy' && !app.featured);
-        const localApps = filteredApps.filter(app => app.category === 'local' && !app.featured);
+        const proxyApps = filteredApps.filter(app => app.category === 'proxy');
+        const localApps = filteredApps.filter(app => app.category === 'local');
 
         renderGrid(grids.featured, featuredApps);
         renderGrid(grids.proxy, proxyApps);

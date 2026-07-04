@@ -226,8 +226,15 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 1.75rem;
-    color: var(--text-primary);
     transition: transform var(--transition-smooth), background var(--transition-smooth);
+}
+
+.app-icon.icon-proxy {
+    color: var(--accent-purple);
+}
+
+.app-icon.icon-local {
+    color: var(--accent-blue);
 }
 
 .app-card:hover .app-icon {

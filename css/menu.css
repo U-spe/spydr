@@ -1,117 +1,172 @@
-/* =====================================
-   MENU
-===================================== */
+/* ==========================================
+   SPYDR FLOATING DOCK
+========================================== */
 
-.menu-wrapper {
+.dock {
+
     position: fixed;
-    left: 20px;
-    bottom: 20px;
-    z-index: 1000;
-}
 
-#menu-btn {
+    left: 50%;
+    bottom: 22px;
+
+    transform: translateX(-50%);
+
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
 
-    width: 52px;
-    height: 52px;
+    padding: 10px;
 
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
+    background: rgba(23,23,23,.72);
 
-    color: var(--white);
-
-    cursor: pointer;
-}
-
-#menu-btn i {
-    font-size: 22px;
-}
-
-#menu {
-
-    position: absolute;
-
-    left: 0;
-    bottom: 65px;
-
-    width: 220px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-
-    padding: 8px;
-
-    background: var(--bg2);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
     border: 1px solid var(--border);
-    border-radius: 14px;
 
-    opacity: 0;
-    pointer-events: none;
+    border-radius: 999px;
 
-    transform: translateY(10px);
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.45);
 
-    transition: var(--t);
+    z-index: 9999;
+}
+
+.dock button{
+
+    width:52px;
+    height:52px;
+
+    border:none;
+    outline:none;
+
+    border-radius:14px;
+
+    background:transparent;
+
+    color:var(--gray);
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:all .25s cubic-bezier(.22,1,.36,1);
+
+    position:relative;
 
 }
 
-.menu-wrapper:hover #menu,
-#menu.open {
+.dock button i{
 
-    opacity: 1;
-
-    pointer-events: auto;
-
-    transform: translateY(0);
+    font-size:24px;
 
 }
 
-#menu button {
+.dock button:hover{
 
-    display: flex;
+    color:var(--white);
 
-    align-items: center;
+    background:rgba(255,255,255,.06);
 
-    gap: 12px;
-
-    width: 100%;
-
-    padding: 12px;
-
-    background: transparent;
-
-    border: none;
-
-    border-radius: 10px;
-
-    color: var(--white);
-
-    cursor: pointer;
-
-    font-family: inherit;
-
-    font-size: 14px;
+    transform:
+        translateY(-8px)
+        scale(1.08);
 
 }
 
-#menu button:hover {
+.dock button.active{
 
-    background: rgba(255,255,255,.06);
+    color:white;
 
-    transform: translateX(4px);
+    background:linear-gradient(
+        135deg,
+        var(--accent),
+        #7c3aed
+    );
+
+    box-shadow:
+        0 0 22px rgba(124,58,237,.28);
 
 }
 
-#menu button i {
+.dock button.active::after{
 
-    font-size: 18px;
+    content:"";
 
-    width: 22px;
+    position:absolute;
 
-    text-align: center;
+    bottom:-10px;
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:white;
+
+}
+
+.dock button::before{
+
+    content:attr(data-title);
+
+    position:absolute;
+
+    bottom:68px;
+
+    background:rgba(0,0,0,.85);
+
+    color:white;
+
+    padding:6px 10px;
+
+    border-radius:8px;
+
+    font-size:12px;
+
+    white-space:nowrap;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transform:translateY(8px);
+
+    transition:.2s;
+
+}
+
+.dock button:hover::before{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+@media (max-width:700px){
+
+    .dock{
+
+        gap:6px;
+
+        padding:8px;
+
+    }
+
+    .dock button{
+
+        width:46px;
+        height:46px;
+
+    }
+
+    .dock button i{
+
+        font-size:21px;
+
+    }
 
 }

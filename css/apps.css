@@ -1,0 +1,865 @@
+/* =========================================================
+   SPYDR APPS
+   Part 1 - Layout & Structure
+========================================================= */
+
+:root {
+
+    --bg: #090909;
+    --bg-secondary: #111111;
+    --card: rgba(23,23,23,.72);
+
+    --text: #ffffff;
+    --text-light: #bdbdbd;
+
+    --border: rgba(255,255,255,.08);
+
+    --blue: #3f5efb;
+    --purple: #7c3aed;
+
+    --radius: 18px;
+
+    --shadow:
+        0 10px 35px rgba(0,0,0,.35);
+
+    --glass:
+        blur(20px);
+
+}
+
+/* =====================================
+   PAGE
+===================================== */
+
+.apps-page{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    padding:40px;
+
+    overflow-x:hidden;
+
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.apps-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    margin-bottom:45px;
+
+}
+
+.header-info h1{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    color:var(--text);
+
+    letter-spacing:-1px;
+
+}
+
+.header-info p{
+
+    margin-top:10px;
+
+    color:var(--text-light);
+
+    font-size:1rem;
+
+}
+
+/* =====================================
+   SEARCH
+===================================== */
+
+.header-actions{
+
+    width:420px;
+
+    max-width:100%;
+
+}
+
+#appSearch{
+
+    width:100%;
+
+    height:52px;
+
+    padding:0 18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid var(--border);
+
+    backdrop-filter:var(--glass);
+
+    color:white;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+#appSearch::placeholder{
+
+    color:#8f8f8f;
+
+}
+
+#appSearch:focus{
+
+    border-color:var(--purple);
+
+    box-shadow:
+        0 0 18px rgba(124,58,237,.35);
+
+}
+
+/* =====================================
+   SECTIONS
+===================================== */
+
+.app-section{
+
+    margin-bottom:55px;
+
+}
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.section-header h2{
+
+    color:var(--text);
+
+    font-size:1.35rem;
+
+    font-weight:600;
+
+}
+
+/* =====================================
+   GRID
+===================================== */
+
+.apps-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fill,minmax(210px,1fr));
+
+    gap:20px;
+
+}
+
+/* =====================================
+   EMPTY STATE
+===================================== */
+
+.apps-grid:empty{
+
+    min-height:120px;
+
+    border-radius:var(--radius);
+
+    border:1px dashed rgba(255,255,255,.08);
+
+}
+
+/* =====================================
+   SCROLLBAR
+===================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:100px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+/* =========================================================
+   SPYDR APPS
+   Part 2 - Cards & Components
+========================================================= */
+
+/* =====================================
+   APP CARD
+===================================== */
+
+.app-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:16px;
+
+    width:100%;
+
+    min-height:235px;
+
+    padding:22px;
+
+    border:none;
+
+    border-radius:var(--radius);
+
+    cursor:pointer;
+
+    text-align:center;
+
+    color:var(--text);
+
+    background:rgba(255,255,255,.045);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+
+    overflow:hidden;
+
+}
+
+/* glow border */
+
+.app-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    padding:1px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124,58,237,.45),
+            rgba(63,94,251,.15),
+            transparent
+        );
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask-composite:exclude;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    pointer-events:none;
+
+}
+
+/* hover */
+
+.app-card:hover{
+
+    transform:
+        translateY(-6px);
+
+    background:rgba(255,255,255,.07);
+
+    border-color:rgba(124,58,237,.45);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.45),
+        0 0 24px rgba(124,58,237,.18);
+
+}
+
+/* click */
+
+.app-card:active{
+
+    transform:scale(.97);
+
+}
+
+/* =====================================
+   ICON
+===================================== */
+
+.app-icon{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:82px;
+
+    height:82px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.app-icon img{
+
+    width:58px;
+
+    height:58px;
+
+    object-fit:contain;
+
+    user-select:none;
+
+    pointer-events:none;
+
+}
+
+/* =====================================
+   CONTENT
+===================================== */
+
+.app-content{
+
+    width:100%;
+
+}
+
+.app-name{
+
+    margin-bottom:8px;
+
+    font-size:1.08rem;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+.app-description{
+
+    font-size:.88rem;
+
+    line-height:1.45;
+
+    color:var(--text-light);
+
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.app-footer{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+    width:100%;
+
+}
+
+/* =====================================
+   BADGES
+===================================== */
+
+.badge{
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:.72rem;
+
+    font-weight:600;
+
+    letter-spacing:.3px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.06);
+
+}
+
+/* featured */
+
+.badge.featured{
+
+    background:
+        rgba(255,193,7,.14);
+
+    color:#ffd54a;
+
+}
+
+/* proxy */
+
+.badge.proxy{
+
+    background:
+        rgba(63,94,251,.15);
+
+    color:#8ab4ff;
+
+}
+
+/* local */
+
+.badge.local{
+
+    background:
+        rgba(124,58,237,.16);
+
+    color:#c7a6ff;
+
+}
+
+/* =====================================
+   FEATURED CARD
+===================================== */
+
+.app-card.featured{
+
+    border-color:
+        rgba(255,193,7,.25);
+
+}
+
+.app-card.featured:hover{
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.45),
+        0 0 30px rgba(255,193,7,.18);
+
+}
+
+/* =====================================
+   FOCUS
+===================================== */
+
+.app-card:focus-visible{
+
+    outline:none;
+
+    border-color:var(--blue);
+
+    box-shadow:
+        0 0 0 3px rgba(63,94,251,.3);
+
+}
+/* =========================================================
+   SPYDR APPS
+   Part 3 - Responsive, Animations & Polish
+========================================================= */
+
+/* =====================================
+   APP ENTRY ANIMATION
+===================================== */
+
+@keyframes appFadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(22px)
+            scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+.app-card{
+
+    animation:
+        appFadeUp .45s ease both;
+
+}
+
+/* =====================================
+   SHIMMER
+===================================== */
+
+@keyframes shimmer{
+
+    0%{
+
+        transform:translateX(-100%);
+
+    }
+
+    100%{
+
+        transform:translateX(200%);
+
+    }
+
+}
+
+.app-card.loading{
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.app-card.loading::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.08),
+            transparent
+        );
+
+    animation:
+        shimmer 1.2s linear infinite;
+
+}
+
+/* =====================================
+   SEARCH TRANSITIONS
+===================================== */
+
+.apps-grid.searching .app-card{
+
+    opacity:.45;
+
+    transform:scale(.96);
+
+    transition:
+        opacity .2s,
+        transform .2s;
+
+}
+
+.apps-grid.searching .app-card.visible{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+/* =====================================
+   EMPTY SEARCH
+===================================== */
+
+.empty-results{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    padding:70px 30px;
+
+    border-radius:var(--radius);
+
+    background:rgba(255,255,255,.03);
+
+    border:1px dashed rgba(255,255,255,.08);
+
+    text-align:center;
+
+}
+
+.empty-results h3{
+
+    font-size:1.3rem;
+
+    color:white;
+
+}
+
+.empty-results p{
+
+    color:var(--text-light);
+
+}
+
+/* =====================================
+   FEATURED HEADER
+===================================== */
+
+.section-header{
+
+    position:relative;
+
+}
+
+.section-header::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:50px;
+
+    height:3px;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--purple),
+            var(--blue)
+        );
+
+}
+
+/* =====================================
+   SCROLL ANIMATION
+===================================== */
+
+.app-section{
+
+    animation:
+        appFadeUp .5s ease;
+
+}
+
+/* =====================================
+   HOVER GLOW
+===================================== */
+
+.app-card:hover .app-icon{
+
+    transform:scale(1.08);
+
+    transition:.25s;
+
+    box-shadow:
+        0 0 24px rgba(124,58,237,.25);
+
+}
+
+.app-card:hover .app-name{
+
+    color:#ffffff;
+
+}
+
+.app-card:hover .badge{
+
+    transform:translateY(-2px);
+
+}
+
+/* =====================================
+   SEARCH ICON ROOM
+===================================== */
+
+#appSearch{
+
+    padding-left:20px;
+
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width:1200px){
+
+    .apps-grid{
+
+        grid-template-columns:
+            repeat(auto-fill,minmax(190px,1fr));
+
+    }
+
+}
+
+@media (max-width:900px){
+
+    .apps-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .header-actions{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:700px){
+
+    .apps-page{
+
+        padding:24px;
+
+    }
+
+    .apps-grid{
+
+        grid-template-columns:
+            repeat(auto-fill,minmax(165px,1fr));
+
+        gap:16px;
+
+    }
+
+    .app-card{
+
+        min-height:205px;
+
+        padding:18px;
+
+    }
+
+    .app-icon{
+
+        width:70px;
+
+        height:70px;
+
+    }
+
+    .app-icon img{
+
+        width:48px;
+
+        height:48px;
+
+    }
+
+}
+
+@media (max-width:500px){
+
+    .apps-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}

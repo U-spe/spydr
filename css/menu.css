@@ -1,0 +1,117 @@
+/* =====================================
+   MENU
+===================================== */
+
+.menu-wrapper {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+}
+
+#menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    color: var(--white);
+
+    cursor: pointer;
+}
+
+#menu-btn i {
+    font-size: 22px;
+}
+
+#menu {
+
+    position: absolute;
+
+    left: 0;
+    bottom: 65px;
+
+    width: 220px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    padding: 8px;
+
+    background: var(--bg2);
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transform: translateY(10px);
+
+    transition: var(--t);
+
+}
+
+.menu-wrapper:hover #menu,
+#menu.open {
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+
+}
+
+#menu button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    padding: 12px;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 10px;
+
+    color: var(--white);
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+}
+
+#menu button:hover {
+
+    background: rgba(255,255,255,.06);
+
+    transform: translateX(4px);
+
+}
+
+#menu button i {
+
+    font-size: 18px;
+
+    width: 22px;
+
+    text-align: center;
+
+}

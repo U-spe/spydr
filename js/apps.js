@@ -178,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             : apps;
 
         const featuredApps = filteredApps.filter(app => app.featured);
+        // FIX: RETAIN SYSTEM DESIGN LAYOUT BY PREVENTING SUB-CATEGORY DELETIONS WHEN FEATURED EXISTS
         const proxyApps = filteredApps.filter(app => app.category === 'proxy');
         const localApps = filteredApps.filter(app => app.category === 'local');
 

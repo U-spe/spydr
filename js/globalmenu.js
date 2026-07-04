@@ -1,54 +1,75 @@
-const menu = document.getElementById("global-menu");
+const container = document.getElementById("global-menu");
 
-if (menu) {
+if (container) {
 
-    menu.innerHTML = `
-        <div class="menu-wrapper">
+    const current = window.location.pathname.split("/").pop() || "index.html";
 
-            <button id="menu-btn" type="button" aria-label="Open Menu">
-                <i class="ri-menu-line"></i>
-            </button>
+    const pages = [
+        {
+            icon: "ri-home-5-line",
+            title: "Home",
+            page: "index.html"
+        },
+        {
+            icon: "ri-gamepad-line",
+            title: "Games",
+            page: "lessons.html"
+        },
+        {
+            icon: "ri-apps-line",
+            title: "Apps",
+            page: "flashcards.html"
+        },
+        {
+            icon: "ri-global-line",
+            title: "Browser",
+            page: "search.html"
+        },
+        {
+            icon: "ri-robot-2-line",
+            title: "AI",
+            page: "study.html"
+        },
+        {
+            icon: "ri-chat-1-line",
+            title: "Chat",
+            page: "review.html"
+        },
+        {
+            icon: "ri-settings-3-line",
+            title: "Settings",
+            page: "settings.html"
+        }
+    ];
 
-            <nav id="menu">
+    const dock = document.createElement("div");
+    dock.className = "dock";
 
-                <button onclick="go('/')">
-                    <i class="ri-home-5-line"></i>
-                    <span>Home</span>
-                </button>
+    pages.forEach(item => {
 
-                <button onclick="go('lessons.html')">
-                    <i class="ri-gamepad-line"></i>
-                    <span>Games</span>
-                </button>
+        const button = document.createElement("button");
 
-                <button onclick="go('flashcards.html')">
-                    <i class="ri-apps-line"></i>
-                    <span>Apps</span>
-                </button>
+        button.dataset.title = item.title;
 
-                <button onclick="go('search.html')">
-                    <i class="ri-global-line"></i>
-                    <span>Browser</span>
-                </button>
+        if (
+            current === item.page ||
+            (current === "" && item.page === "index.html")
+        ) {
+            button.classList.add("active");
+        }
 
-                <button onclick="go('study.html')">
-                    <i class="ri-robot-2-line"></i>
-                    <span>AI Chat</span>
-                </button>
+        button.innerHTML = `<i class="${item.icon}"></i>`;
 
-                <button onclick="go('review.html')">
-                    <i class="ri-chat-1-line"></i>
-                    <span>Chatroom</span>
-                </button>
+        button.onclick = () => {
 
-                <button onclick="go('settings.html')">
-                    <i class="ri-settings-3-line"></i>
-                    <span>Settings</span>
-                </button>
+            window.location.href = item.page;
 
-            </nav>
+        };
 
-        </div>
-    `;
+        dock.appendChild(button);
+
+    });
+
+    container.appendChild(dock);
 
 }

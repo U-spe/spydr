@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'local',
             featured: false,
             launchType: 'local',
-            url: '/calc.html'
+            url: '/apps/calc.html'
         },
         {
             id: 'note',
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'local',
             featured: false,
             launchType: 'local',
-            url: '/notepad.html'
+            url: '/apps/notes.html'
         },
         {
             id: 'html',
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'local',
             featured: true,
             launchType: 'local',
-            url: '/editor.html'
+            url: '/apps/edit.html'
         },
         {
             id: 'mov',
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'local',
             featured: false,
             launchType: 'local',
-            url: '/movies.html'
+            url: '/apps/movies.html'
         },
         {
             id: 'cine',
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             category: 'local',
             featured: true,
             launchType: 'local',
-            url: '/cine.html'
+            url: '/apps/c-os.html'
         }
     ];
 

@@ -26,7 +26,7 @@ body{
 
     background:transparent;
 
-    color:var(--white,#fff);
+    color:var(--black,#000);
 
     font-family:"JetBrains Mono",monospace;
 

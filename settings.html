@@ -147,18 +147,50 @@
             <section class="settings-section" id="panel-hotkeys">
                 <div class="section-header">
                     <h1>Hotkeys</h1>
-                    <p>Configure quick-trigger actions for emergency interception</p>
+                    <p>Configure quick-trigger actions for emergency interception and utilities</p>
                 </div>
                 <div class="card glassmorphism">
+                    
+                    <div class="setting-row">
+                        <div class="setting-info">
+                            <h3>Panic Key</h3>
+                            <p>Hard redirect to Google and force-cloak to Google Classroom</p>
+                        </div>
+                        <div class="hotkey-binder-wrapper">
+                            <button id="panic-key-btn" class="hotkey-btn">Click to bind</button>
+                        </div>
+                    </div>
+
                     <div class="setting-row">
                         <div class="setting-info">
                             <h3>Boss Key</h3>
-                            <p>Instantly initiates tab disguise/redirect procedures</p>
+                            <p>Instantly enables your currently saved stealth A:B identity</p>
                         </div>
                         <div class="hotkey-binder-wrapper">
                             <button id="boss-key-btn" class="hotkey-btn">Click to bind</button>
                         </div>
                     </div>
+
+                    <div class="setting-row">
+                        <div class="setting-info">
+                            <h3>Developer Mode Key</h3>
+                            <p>Toggle overlay displaying FPS, Battery, and Browser details</p>
+                        </div>
+                        <div class="hotkey-binder-wrapper">
+                            <button id="dev-mode-key-btn" class="hotkey-btn">Click to bind</button>
+                        </div>
+                    </div>
+
+                    <div class="setting-row">
+                        <div class="setting-info">
+                            <h3>Quick Settings Key</h3>
+                            <p>Instantly pull up this system control panel</p>
+                        </div>
+                        <div class="hotkey-binder-wrapper">
+                            <button id="quick-settings-key-btn" class="hotkey-btn">Click to bind</button>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
@@ -203,7 +235,7 @@
                 <div class="card glassmorphism info-card">
                     <div class="manifest-row">
                         <span class="manifest-label">CORE ARCHITECTURE:</span>
-                        <span class="manifest-val">spydr os v2.7.0</span>
+                        <span class="manifest-val">spydr os v1.8.0</span>
                     </div>
                     <div class="manifest-row">
                         <span class="manifest-label">BUILD ENVIRONMENT:</span>
@@ -213,8 +245,8 @@
                     <h3>Changelog Entries</h3>
                     <div class="changelog-scroll">
                         <div class="log-entry">
-                            <h4>v1.7.0 // Integration & Expansion Update</h4>
-                            <p>- Detached main.js to prevent conflicts with root projects.</p>
+                            <h4>v1.8.0 // Expansion Update</h4>
+                            <p>- Added more hotkeys and fixed CSS hotkey settings.</p>
                             <p>- Imported new cloaking tab presets with custom icon pipelines.</p>
                             <p>- Hardened DOM initialization to prevent button failures.</p>
                         </div>

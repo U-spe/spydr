@@ -21,13 +21,18 @@ export default class UIManager {
         this.dom.themeRadios = document.querySelectorAll('input[name="ui-theme"]');
         this.dom.accentRadios = document.querySelectorAll('input[name="accent-color"]');
         this.dom.bgStyleSelect = document.getElementById('bg-style-select');
-        this.dom.bossKeyBtn = document.getElementById('boss-key-btn');
         this.dom.toggleCloak = document.getElementById('toggle-cloak');
         this.dom.cloakTargetSelect = document.getElementById('cloak-target-select');
+
+        // Hotkey Buttons
+        this.dom.panicKeyBtn = document.getElementById('panic-key-btn');
+        this.dom.bossKeyBtn = document.getElementById('boss-key-btn');
+        this.dom.devModeKeyBtn = document.getElementById('dev-mode-key-btn');
+        this.dom.quickSettingsKeyBtn = document.getElementById('quick-settings-key-btn');
     }
 
     bindEvents() {
-        // Navigation Switch System logic (Safeguarded with optional chaining to prevent crashes)
+        // Navigation Switch System logic
         this.dom.navButtons?.forEach(btn => {
             btn.addEventListener('click', () => {
                 const target = btn.getAttribute('data-target');
@@ -68,19 +73,28 @@ export default class UIManager {
             this.settings.set('cloakTarget', e.target.value);
         });
 
-        // Hotkey binding capture trigger
-        if (this.dom.bossKeyBtn) {
-            this.dom.bossKeyBtn.addEventListener('click', () => {
-                this.dom.bossKeyBtn.textContent = 'PRESS ANY KEY...';
-                this.dom.bossKeyBtn.classList.add('recording');
+        // REUSABLE HOTKEY BINDER
+        const bindHotkey = (element, settingName) => {
+            if (!element) return;
+            
+            element.addEventListener('click', () => {
+                element.textContent = 'PRESS ANY KEY...';
+                element.classList.add('recording');
                 
                 this.kernel.get('hotkeys').startRecording((recordedKey) => {
-                    this.settings.set('bossKey', recordedKey);
-                    this.dom.bossKeyBtn.textContent = recordedKey === ' ' ? 'Space' : recordedKey;
-                    this.dom.bossKeyBtn.classList.remove('recording');
+                    this.settings.set(settingName, recordedKey);
+                    // Handle spacebar explicitly so it doesn't just show an empty box
+                    element.textContent = recordedKey === ' ' ? 'Space' : recordedKey;
+                    element.classList.remove('recording');
                 });
             });
-        }
+        };
+
+        // Bind all 4 Hotkey UI Buttons
+        bindHotkey(this.dom.panicKeyBtn, 'panicKey');
+        bindHotkey(this.dom.bossKeyBtn, 'bossKey');
+        bindHotkey(this.dom.devModeKeyBtn, 'devModeKey');
+        bindHotkey(this.dom.quickSettingsKeyBtn, 'quickSettingsKey');
 
         // Pipeline listener registration hooks
         this.settings.subscribe((key, val) => this.handleExternalStateChange(key, val));
@@ -102,10 +116,12 @@ export default class UIManager {
         if (this.dom.toggleCloak) this.dom.toggleCloak.checked = this.settings.get('cloakEnabled');
         if (this.dom.cloakTargetSelect) this.dom.cloakTargetSelect.value = this.settings.get('cloakTarget');
         
-        const currentKey = this.settings.get('bossKey');
-        if (this.dom.bossKeyBtn) {
-            this.dom.bossKeyBtn.textContent = currentKey === ' ' ? 'Space' : currentKey;
-        }
+        // Sync Hotkey Buttons Text
+        const formatKey = (key) => key === ' ' ? 'Space' : key;
+        if (this.dom.panicKeyBtn) this.dom.panicKeyBtn.textContent = formatKey(this.settings.get('panicKey'));
+        if (this.dom.bossKeyBtn) this.dom.bossKeyBtn.textContent = formatKey(this.settings.get('bossKey'));
+        if (this.dom.devModeKeyBtn) this.dom.devModeKeyBtn.textContent = formatKey(this.settings.get('devModeKey'));
+        if (this.dom.quickSettingsKeyBtn) this.dom.quickSettingsKeyBtn.textContent = formatKey(this.settings.get('quickSettingsKey'));
 
         this.dom.themeRadios?.forEach(radio => {
             radio.checked = (radio.value === this.settings.get('theme'));
@@ -117,7 +133,6 @@ export default class UIManager {
     }
 
     handleExternalStateChange(key, val) {
-        // Cross execution reactive handling pipelines
         const themeMgr = this.kernel.get('theme');
         const cloakMgr = this.kernel.get('cloak');
 

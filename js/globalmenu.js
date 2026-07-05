@@ -8,37 +8,37 @@ if (container) {
         {
             icon: "ri-home-5-line",
             title: "Home",
-            page: "index.html"
+            page: "/"
         },
         {
             icon: "ri-gamepad-line",
             title: "Games",
-            page: "lessons.html"
+            page: "/lessons.html"
         },
         {
             icon: "ri-apps-line",
             title: "Apps",
-            page: "flashcards.html"
+            page: "/flashcards.html"
         },
         {
             icon: "ri-global-line",
             title: "Browser",
-            page: "search.html"
+            page: "/search.html"
         },
         {
             icon: "ri-robot-2-line",
             title: "AI",
-            page: "study.html"
+            page: "/study.html"
         },
         {
             icon: "ri-chat-1-line",
             title: "Chat",
-            page: "review.html"
+            page: "/review.html"
         },
         {
             icon: "ri-settings-3-line",
             title: "Settings",
-            page: "settings.html"
+            page: "/settings.html"
         }
     ];
 

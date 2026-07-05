@@ -160,19 +160,15 @@ button:hover {
   <!-- glitch 404 -->
   <div class="glitch">404</div>
 
-  <p>hahahahaha. you really thought you was going somewhere with this page. nah, you got tangled in a spider web. 🕷️</p>
+  <p>hahahahaha. you REALLY thought you was going somewhere with this page. fuh nah, you got tangled in a spider web. 🕷️</p>
 
-  <button onclick="goBack()">go home like a good boy</button>
+  <button onclick="goHome()">go home like a good boy</button>
 
 </div>
 
 <script>
-function goBack() {
-  if (document.referrer) {
-    window.history.back();
-  } else {
-    window.location.href = "/";
-  }
+function goHome() {
+    window.location.replace("/");
 }
 </script>
 

@@ -3,6 +3,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>spydr // cine-os</title>
+<link rel="stylesheet" href="/css/menu.css">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap');
 
@@ -332,7 +333,7 @@ body {
 .m-ri small { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; margin-bottom: 4px; font-weight: 600; letter-spacing: 1px;}
 .m-ri span { display: block; font-size: 13px; color: #ccc; font-weight: 400; line-height: 1.5;}
 
-/*  Alert Popups  */
+/* Alert Popups  */
 .popup-wrap {
   position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
   display: flex; justify-content: center; align-items: center; z-index: 999999999999;
@@ -361,7 +362,7 @@ body {
 .popup-btn.secondary { background: rgba(255,255,255,0.1); color: #fff; }
 .popup-btn:not(:disabled):hover { transform: translateY(-2px); }
 
-/*  Tutorial Page n iFrames, uh this is the ui for the Tutorial page i made  */
+/* Tutorial Page n iFrames, uh this is the ui for the Tutorial page i made  */
 .tut-cnt { text-align: center; }
 .tut-cnt video { width: 100%; border-radius: 20px; border: 1px solid var(--border); box-shadow: 0 30px 60px rgba(0,0,0,0.6); margin-bottom: 30px; background: #000; }
 
@@ -483,16 +484,8 @@ body {
 </head>
 <body>
 
-<div style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); z-index: 1000; display: flex; gap: 10px;">
-  <div class="top-notch" onclick="tglV('h')" style="position: relative; left: auto; top: auto; transform: none; cursor: pointer;">
-    <img src="https://freepngimg.com/convert-png/89656-icons-circle-computer-black-white-steam" alt="Logo">
-    <span>Cine-Cloud by C.S</span> <! Just incase you dont know C.S stands for Cine-Softwares !>
-  </div>
-  <div class="top-notch" id="n-game" onclick="tglV('g')" style="position: relative; left: auto; top: auto; transform: none; cursor: pointer; display: none; background: rgba(255,255,255,0.15);">
-    <span id="n-game-title" style="color: #fff;">Game</span>
-    <span onclick="clsGm(event)" style="margin-left: 8px; color: #ff4d4d; font-weight: bold; font-size: 16px;">×</span>
-  </div>
-</div>
+<script src="/js/globalmenu.js"></script>
+<script type="module" src="/js/global.js"></script>
 
 <! THE Boot Screen !>
 <div id="new-boot">

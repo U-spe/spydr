@@ -8,7 +8,12 @@ export default class SettingsManager {
             theme: 'dark',
             accent: 'blue',
             bgStyle: 'stars',
-            bossKey: 'Escape',
+            // --- HOTKEYS ---
+            panicKey: '`',         // Default: Tilde
+            bossKey: 'Escape',     // Default: Escape
+            devModeKey: 'F4',      // Default: F4
+            quickSettingsKey: 'F9',// Default: F9
+            // ---------------
             cloakEnabled: false,
             cloakTarget: 'spydr'
         };

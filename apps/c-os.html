@@ -18,16 +18,6 @@
   --accent: #ffffff;
 }
 
-
-
-
-
-
-
-
-
-
-
   /*BODY */
 body {
   margin: 0; padding: 0; background: var(--bg); color: var(--text);
@@ -37,17 +27,6 @@ body {
 }
 
 ::-webkit-scrollbar { width: 0; }
-
-/* BRANDING NOTCH */
-.top-notch {
-  background: var(--glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border); border-top: none;
-  border-bottom-left-radius: 18px; border-bottom-right-radius: 18px;
-  padding: 8px 24px; display: flex; align-items: center; gap: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-.top-notch img { width: 18px; opacity: 0.9; }
-.top-notch span { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;}
 
 /* --- BOOTS --- */
 #new-boot {
@@ -136,7 +115,6 @@ body {
   box-shadow: 0 20px 50px rgba(0,0,0,0.5); max-width: 1400px; margin: 0 auto;
 }
 
-
   /*Hobver Animation*/
 .hero-cont:hover {
   transform: translateY(-6px); box-shadow: 0 30px 80px rgba(0,0,0,0.8); border-color: rgba(255,255,255,0.2);
@@ -195,81 +173,6 @@ body {
   margin-top: 8px; font-weight: 600;
 }
 .c-time-hover svg { width: 14px; height: 14px; stroke: #aaa; }
-
-/* THE Bottom Dock */
-.dock-wrap {
-  position: fixed; bottom: 35px; left: 50%; transform: translateX(-50%);
-  display: flex; align-items: center; gap: 15px; z-index: 10000000000;
-}
-
-.main-dock {
-  background: var(--glass); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
-  
-  border: 1px solid var(--border); border-radius: 80px;
-  display: flex; align-items: center; padding: 10px 14px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-  
-}
-
-.d-logo {
-  width: 26px; height: 26px; margin: 0 12px 0 10px; object-fit: contain;
-  opacity: 0.8; transition: 0.3s; cursor: pointer;
-}
-
-  
-.d-logo:hover { opacity: 1; transform: scale(1.1); }
-.d-sep { width: 1px; height: 24px; background: var(--border); margin: 0 6px; }
-
-
-
-
-  
-.d-btn {
-  padding: 10px 26px; border-radius: 100px; color: var(--muted);
-  font-size: 13px; font-weight: 500; cursor: pointer; transition: 0.3s;
-}
-.d-btn:hover { 
-  color: #fff; 
-  background: 
-    rgba(255,255,255,0.05); 
-}
-
-  
-.d-btn.active { 
-  color: #000; 
-  background: #fff; 
-  font-weight: 600; 
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); 
-}
-
-.trk-widg {
-  background: var(--glass); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
-  border: 1px solid var(--border); border-radius: 100px;
-  height: 60px; padding: 6px; display: none; align-items: center; gap: 14px;
-  box-sizing: border-box; overflow: hidden; max-width: 60px; 
-  transition: max-width 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s;
-  cursor: pointer; white-space: nowrap; box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-}
-.trk-widg:hover { max-width: 340px; background: var(--glass-hover); border-color: rgba(255,255,255,0.2); }
-
-.tw-img {
-  width: 46px; height: 46px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-.tw-txt { display: flex; flex-direction: column; flex-shrink: 0; margin-right: 10px; }
-.tw-txt small { font-size: 10px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
-.tw-txt strong { font-size: 13px; font-weight: 500; color: #aaa; text-overflow: ellipsis; overflow: hidden; max-width: 130px; }
-
-.tw-btn {
-  background: #fff; color: #000; font-size: 12px; padding: 10px 20px; border-radius: 100px; border: none;
-  cursor: pointer; font-weight: 700; transition: 0.3s;
-  opacity: 0; transform: translateX(15px); pointer-events: none; text-transform: uppercase;
-}
-.trk-widg:hover .tw-btn { opacity: 1; transform: translateX(0); pointer-events: auto; }
-.tw-btn:hover { background: #e0e0e0; transform: scale(1.05); }
-
-.tw-btn.quit { background: rgba(255, 60, 60, 0.15); color: #ff4d4d; border: 1px solid rgba(255, 60, 60, 0.3); }
-.tw-btn.quit:hover { background: #ff4d4d; color: #fff; }
 
 /* ModalSSS */
 #modal-ui {
@@ -465,14 +368,6 @@ body {
   .settings-box { padding: 15px; border-radius: 16px; }
   .p-card { min-width: 60px; padding: 10px; }
   .swatch-btn { width: 40px; height: 40px; border-radius: 10px; }
-  
-  .dock-wrap { width: 95%; bottom: 15px; }
-  .main-dock { padding: 6px 8px; width: 100%; justify-content: space-around; }
-  .d-logo { margin: 0 4px; width: 20px; height: 20px; }
-  .d-btn { padding: 8px 12px; font-size: 11px; }
-  .d-sep { height: 16px; margin: 0 2px; }
-  .top-notch { padding: 6px 12px; }
-  .top-notch span { font-size: 10px; }
 }
 
 @media (max-width: 480px) {
@@ -513,15 +408,13 @@ body {
           
           
           <div class="h-stat">
-
-            
             <span id="hc-time"></span>
             <span id="hc-dev"></span>
           </div>
         </div>
       </div>
 
-      <div class="sec-head">Games We Recommend</div> <! NOTE: FIND A REAL !>
+      <div class="sec-head">Games We Recommend</div>
       <div class="marquee-wrap">
         <div class="marquee-track" id="g-recom-track"></div>
       </div>
@@ -539,7 +432,7 @@ body {
       <div class="grid-h" id="g-trnd"></div>
     </div>
   </div>
- <! Might add mroe in later updates !>
+
   <div id="v-lib" class="tab-view">
     <div class="sec-head" style="margin-top:0;">Complete Library</div>
     <div class="lib-search-wrap">
@@ -554,21 +447,19 @@ body {
       <h1 style="font-weight: 400; font-size: 42px; margin-bottom: 12px; letter-spacing:-1px;">Setup Guide</h1>
       <p style="color: #888; margin-bottom: 40px; font-size: 15px;">Make sure you watch this quick video so everything runs smoothly.</p>
       
-      <video controls><source src="Tutorial.mp4" type="video/mp4"></video> <! IF YOUR MAKING YOUR OWN VERSION, You can change the path and title for the tutorial or remove it i guess !>
+      <video controls><source src="Tutorial.mp4" type="video/mp4"></video>
       
       <button class="show-login-btn" id="login-trigger" onclick="openAuthTray()">Log in to play</button>
 
       <div id="auth-success" style="display:none;">
         <div class="auth-success-box">
             <h3>You're All Set!</h3>
-            <p>Your Logged In and ready.</p> <! Auto like detect when the user logs in by checking iframe url !>
+            <p>Your Logged In and ready.</p>
         </div>
       </div>
       
       <div id="frame-area">
-       
         <div class="f-box" id="frame-wrapper">
-          
          <h3>Log in with Raccoon</h3>
           <div style="margin-bottom: 15px; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
             <p style="margin: 0 0 10px 0; color: #fff; font-size: 14px; font-weight: 600;">[BETA]: This is temporary, see if you can login by clicking the button below</p>
@@ -579,7 +470,7 @@ body {
         </div>
         <div class="f-box" id="mail-wrapper">
           <h3>Need a temp email?</h3>
-          <iframe class="f-mail" src="https://tempmail.ing/"></iframe> <! this is the link we iframe to the user to give them a temp link !>
+          <iframe class="f-mail" src="https://tempmail.ing/"></iframe>
         </div>
       </div>
     </div>
@@ -650,28 +541,6 @@ body {
       <h3 style="margin:40px 0 15px 0; font-size:18px; color:#fff;">Audio</h3>
       <button id="music-toggle-btn" class="show-login-btn" style="margin:0;" onclick="toggleBGM()">Mute Music</button>
     </div>
-  </div>
-
-</div>
-
-
-<div class="dock-wrap">
-  <div class="main-dock">
-    <img src="https://freepngimg.com/convert-png/89656-icons-circle-computer-black-white-steam" class="d-logo">
-    <div class="d-sep"></div>
-    <div class="d-btn active" id="b-cine" onclick="chgTab('cine')">Cine</div>
-    <div class="d-btn" id="b-lib" onclick="chgTab('lib')">Library</div>
-    <div class="d-btn" id="b-tut" onclick="chgTab('tut')">Tutorial</div>
-    <div class="d-btn" id="b-set" onclick="chgTab('set')">Settings</div>
-  </div>
-
-  <div class="trk-widg" id="tk">
-    <img src="" class="tw-img" id="tk-img">
-    <div class="tw-txt">
-      <small id="tk-lbl">Last Played</small>
-      <strong id="tk-nm">...</strong>
-    </div>
-    <button class="tw-btn" id="tk-btn" onclick="tkAction()"></button>
   </div>
 </div>
 
@@ -745,12 +614,8 @@ body {
       <p>End of notice.</p>
     </div>
 
-    
     <div class="popup-btn-row">
-      
       <button class="popup-btn primary" id="btn-legal-accept" disabled onclick="acceptLegal()" style="width:100%;">I Agree</button>
-    
-    
     </div>
   </div>
 </div>
@@ -789,12 +654,10 @@ body {
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff4d4d" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
     </div>
     <h2>Session Active</h2>
-    <p>You're already playing a game! Make sure to exit your current session before starting a new one.</p> <! feel like i had to add thos cuz why not !>
+    <p>You're already playing a game! Make sure to exit your current session before starting a new one.</p>
     <div class="popup-btn-row">
-      
       <button class="popup-btn primary" style="width: 100%;" onclick="hidePopup('p-sess-block')">Got it</button>
     </div>
-  
   </div>
 </div>
 
@@ -1087,10 +950,9 @@ function filterLib(){
 }
 
 function chgTab(v){
-  document.querySelectorAll('.d-btn').forEach(b=>b.classList.remove('active'));
   document.querySelectorAll('.tab-view').forEach(s=>s.classList.remove('active'));
-  let btn=document.getElementById('b-'+v), view=document.getElementById('v-'+v);
-  if(btn)btn.classList.add('active');if(view)view.classList.add('active');
+  let view=document.getElementById('v-'+v);
+  if(view)view.classList.add('active');
   if(v === 'tut') {
     fdM(0, 800);
   } else {
@@ -1179,18 +1041,18 @@ window.addEventListener('keydown',(e)=>{
 let gmWin=null;let gmId=null;let gInt=null;let gSs=0;
 function tglV(v){
   if(v==='h'){
-    document.getElementById('app-wrap').style.display='block';document.querySelector('.dock-wrap').style.display='flex';
+    document.getElementById('app-wrap').style.display='block';
     document.getElementById('game-layer').style.display='none';
     fdM(0.5, 800);
   }else{
-    document.getElementById('app-wrap').style.display='none';document.querySelector('.dock-wrap').style.display='none';
+    document.getElementById('app-wrap').style.display='none';
     document.getElementById('game-layer').style.display='block';
     fdM(0, 800);
   }
 }
 
 function clsGm(e){
-  if(e)e.stopPropagation();document.getElementById('n-game').style.display='none';document.getElementById('gF').src="";
+  if(e)e.stopPropagation();document.getElementById('gF').src="";
   if(gmWin)gmWin.closed=true;if(document.exitFullscreen)document.exitFullscreen().catch(()=>{});
   if(document.exitPointerLock)document.exitPointerLock();if(navigator.keyboard)navigator.keyboard.unlock();
   tglV('h');
@@ -1222,7 +1084,6 @@ function rnLd(){
     trStart(cxG.id);
     return;
   }
-  document.getElementById('n-game-title').innerText=cxG.n;document.getElementById('n-game').style.display='flex';
   let f=document.getElementById('gF'),s=document.getElementById('bS'),bt=document.getElementById('bS-t'),lo=document.getElementById('lO');
   if(bt)bt.innerText='Loading '+cxG.n+'...';s.style.display='flex';s.style.opacity='1';lo.style.display='none';tglV('g');
   gmWin={closed:false,close:function(){clsGm();}};setTimeout(()=>{f.src=tU;setTimeout(()=>{if(s){s.style.opacity='0';setTimeout(()=>s.style.display='none',1000);}},1500);},2500);trStart(cxG.id);
@@ -1234,9 +1095,7 @@ function trStart(id){
 }
 
 function rfrTrk(){
-  let widg=document.getElementById('tk');
-  if(gmWin&&gmId){let g=G_DATA.find(x=>x.id===gmId);if(g){document.getElementById('tk-img').src=g.img;document.getElementById('tk-lbl').innerText="Playing Now";document.getElementById('tk-lbl').style.color="#fff";document.getElementById('tk-nm').innerText=g.n;let btn=document.getElementById('tk-btn');btn.className="tw-btn quit";btn.innerText="Quit Game";widg.style.display="flex";}}
-  else{let pg=Object.keys(lsDB).filter(k=>lsDB[k].t>0);if(pg.length>0){let bId=pg.sort((a,b)=>lsDB[b].l-lsDB[a].l)[0];let g=G_DATA.find(x=>x.id===bId);if(g){document.getElementById('tk-img').src=g.img;document.getElementById('tk-lbl').innerText="Last Played";document.getElementById('tk-lbl').style.color="#a1a1a6";document.getElementById('tk-nm').innerText=g.n;let btn=document.getElementById('tk-btn');btn.className="tw-btn";btn.innerText="Launch";widg.style.display="flex";}}else widg.style.display="none";}
+  // Kept empty in case other scripts rely on the logic, but UI is stripped.
 }
 
 function tkAction(){if(gmWin&&!gmWin.closed)gmWin.close();else{let pg=Object.keys(lsDB).filter(k=>lsDB[k].t>0);if(pg.length>0){let bId=pg.sort((a,b)=>lsDB[b].l-lsDB[a].l)[0];cxG=G_DATA.find(x=>x.id===bId);try2launch();}}}

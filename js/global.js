@@ -39,8 +39,6 @@ class SpydrCoreRegistry {
         settings.init();
 
         // --- AUTOMATIC THEME INJECTION ---
-        // Fetch the saved theme/background and apply it directly to the <body> 
-        // so the CSS variables update before the user even sees the page.
         const currentTheme = settings.get('theme') || 'default';
         const currentBg = settings.get('bgStyle') || 'stars';
         
@@ -69,13 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.SpydrKernel.boot();
 
     // --- LOADER FAILSAFE FIX ---
-    // Force the loader to hide once the kernel is fully online
     const loader = document.getElementById('loader') || document.getElementById('loading-screen');
     if (loader) {
         setTimeout(() => {
             loader.style.opacity = '0';
             loader.style.pointerEvents = 'none';
-            // Remove it from the DOM completely after it fades out so you can click things
             setTimeout(() => loader.remove(), 500);
         }, 300);
     }

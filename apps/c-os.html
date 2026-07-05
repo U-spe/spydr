@@ -1,0 +1,1388 @@
+
+<! --
+
+WELCOME TO CINE CLOUD,
+
+As i promised code is 100% opensourced, feel free to fork it, copy it, remake it whatever.
+
+I should have put like helpful comments for ya here and there that can help you.
+
+ --!>
+
+
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cine-Cloud OS</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap');
+
+/* START OF CSS!!! */
+:root {
+  --bg: #050505;
+  --glass: rgba(22, 22, 25, 0.6);
+  --glass-hover: rgba(35, 35, 40, 0.8);
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #f5f5f7;
+  --muted: #888890; 
+  --accent: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+  /*BODY */
+body {
+  margin: 0; padding: 0; background: var(--bg); color: var(--text);
+  font-family: 'Inter', sans-serif; overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; user-select: none;
+  height: 100vh; display: flex; flex-direction: column;
+}
+
+::-webkit-scrollbar { width: 0; }
+
+/* BRANDING NOTCH */
+.top-notch {
+  background: var(--glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border); border-top: none;
+  border-bottom-left-radius: 18px; border-bottom-right-radius: 18px;
+  padding: 8px 24px; display: flex; align-items: center; gap: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.top-notch img { width: 18px; opacity: 0.9; }
+.top-notch span { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;}
+
+/* --- BOOTS --- */
+#new-boot {
+  position: fixed; inset: 0; background: #000; z-index: 9999999;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  transition: opacity 0.6s ease;
+}
+
+.fig-title {
+  font-size: 44px; font-weight: 800; color: #fff; text-transform: uppercase;
+  letter-spacing: 20px; margin-left: 20px; opacity: 0;
+  animation: txtIn 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.fig-line {
+  width: 0; height: 2px; background: #fff; margin-top: 15px; opacity: 0;
+  box-shadow: 0 0 10px #fff; animation: lineGrow 1.5s ease 0.5s forwards;
+}
+
+@keyframes txtIn {
+  0% { letter-spacing: 0px; opacity: 0; filter: blur(10px); transform:scale(0.9);}
+  100% { letter-spacing: 20px; opacity: 1; filter: blur(0px); transform:scale(1);}
+}
+
+@keyframes lineGrow {
+  0% { width: 0; opacity: 0; }
+  10% { opacity: 1; }
+  100% { width: 180px; opacity: 1; }
+}
+
+
+  /*FADE IN! */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* --- Background(s?!?!? maybe ikd) --- */
+#bg-amb {
+  position: fixed; inset: 0; object-fit: cover; opacity: 0.06; 
+  filter: blur(80px) saturate(120%); z-index: -1; 
+  transition: opacity 1.5s ease, filter 1.5s ease; width: 100vw; height: 100vh;
+  pointer-events: none;
+}
+
+/* APPS */
+#app-wrap {
+  flex: 1; overflow-y: auto; padding: 60px 50px 180px 50px; scroll-behavior: smooth;
+}
+
+#cine-content, .grid-v, .tut-cnt, .settings-box {
+  max-width: 1400px; margin: 0 auto; width: 100%; box-sizing: border-box;
+}
+
+.tab-view { display: none; animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.tab-view.active { display: block; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+
+.sec-head {
+  font-size: 22px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 25px; margin-top: 60px;
+  display: flex; align-items: center; gap: 12px; color: #fff; max-width: 1400px; margin-left: auto; margin-right: auto;
+}
+.sec-head::before { content: ''; width: 4px; height: 18px; background: #fff; border-radius: 4px; }
+
+/* SEARCH INPUT */
+.lib-search-wrap { margin-bottom: 30px; position: relative; max-width: 1400px; margin-left: auto; margin-right: auto;}
+.lib-search-wrap input {
+  width: 100%; padding: 18px 24px 18px 50px; border-radius: 16px;
+  background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+  color: #fff; font-size: 15px; outline: none; transition: 0.3s;
+  font-family: 'Inter', sans-serif; backdrop-filter: blur(10px); box-sizing: border-box;
+}
+.lib-search-wrap input:focus { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.lib-search-wrap svg { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; stroke: #aaa; }
+
+/* RECOMMENDES */
+.marquee-wrap { width: 100%; overflow: hidden; position: relative; padding: 10px 0; border-radius: 16px; max-width: 1400px; margin: 0 auto;}
+.marquee-track { display: flex; gap: 25px; width: max-content; animation: slideLeft 40s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+@keyframes slideLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* --- Banner!! --- */
+.hero-cont {
+  width: 100%; height: 500px; border-radius: 20px; overflow: hidden; position: relative;
+  cursor: pointer; border: 1px solid var(--border);
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5); max-width: 1400px; margin: 0 auto;
+}
+
+
+  /*Hobver Animation*/
+.hero-cont:hover {
+  transform: translateY(-6px); box-shadow: 0 30px 80px rgba(0,0,0,0.8); border-color: rgba(255,255,255,0.2);
+}
+
+.h-img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.5s ease, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); opacity: 0.8;}
+.hero-cont:hover .h-img { transform: scale(1.03); opacity: 1;}
+
+.h-over {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
+  display: flex; flex-direction: column; justify-content: flex-end; padding: 60px;
+}
+
+.h-tag {
+  background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: #fff; border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 18px; font-size: 11px; font-weight: 700; border-radius: 100px; letter-spacing: 1px;
+  margin-bottom: 20px; align-self: flex-start; text-transform: uppercase;
+}
+
+.h-title { font-size: 60px; font-weight: 800; margin: 0 0 10px 0; letter-spacing: -2px; }
+.h-stat { font-size: 15px; color: #aaa; display: flex; gap: 20px; font-weight: 500;}
+
+/* This is the GRID! */
+.grid-h { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; max-width: 1400px; margin: 0 auto; }
+.grid-v { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 25px; }
+
+.c-h {
+  position: relative; aspect-ratio: 16/9; border-radius: 14px; overflow: hidden; cursor: pointer;
+  background: #080808; border: 1px solid var(--border); flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); width: 320px; /* fixed width for marquee */
+}
+.grid-h .c-h { width: 100%; } /* normal grids */
+
+.c-v {
+  position: relative; aspect-ratio: 3/4; border-radius: 12px; overflow: hidden; cursor: pointer;
+  background: #080808; border: 1px solid var(--border);
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.c-h img, .c-v img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; transition: 0.5s; filter: grayscale(20%);}
+.c-h:hover, .c-v:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.2); box-shadow: 0 20px 40px rgba(0,0,0,0.8); }
+.c-h:hover img, .c-v:hover img { opacity: 1; transform: scale(1.05); filter: grayscale(0%);}
+
+.c-inf {
+  position: absolute; bottom: 0; left: 0; width: 100%; padding: 50px 25px 25px; box-sizing: border-box;
+  background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+  opacity: 0; transform: translateY(15px); transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.c-h:hover .c-inf, .c-v:hover .c-inf { opacity: 1; transform: translateY(0); }
+.c-inf h3 { font-size: 16px; font-weight: 600; margin: 0 0 6px 0; letter-spacing: -0.5px;}
+.c-inf span { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 500;}
+
+.c-time-hover {
+  display: flex; align-items: center; gap: 6px; font-size: 11px; color: #aaa;
+  margin-top: 8px; font-weight: 600;
+}
+.c-time-hover svg { width: 14px; height: 14px; stroke: #aaa; }
+
+/* THE Bottom Dock */
+.dock-wrap {
+  position: fixed; bottom: 35px; left: 50%; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 15px; z-index: 10000000000;
+}
+
+.main-dock {
+  background: var(--glass); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+  
+  border: 1px solid var(--border); border-radius: 80px;
+  display: flex; align-items: center; padding: 10px 14px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+  
+}
+
+.d-logo {
+  width: 26px; height: 26px; margin: 0 12px 0 10px; object-fit: contain;
+  opacity: 0.8; transition: 0.3s; cursor: pointer;
+}
+
+  
+.d-logo:hover { opacity: 1; transform: scale(1.1); }
+.d-sep { width: 1px; height: 24px; background: var(--border); margin: 0 6px; }
+
+
+
+
+  
+.d-btn {
+  padding: 10px 26px; border-radius: 100px; color: var(--muted);
+  font-size: 13px; font-weight: 500; cursor: pointer; transition: 0.3s;
+}
+.d-btn:hover { 
+  color: #fff; 
+  background: 
+    rgba(255,255,255,0.05); 
+}
+
+  
+.d-btn.active { 
+  color: #000; 
+  background: #fff; 
+  font-weight: 600; 
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); 
+}
+
+.trk-widg {
+  background: var(--glass); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+  border: 1px solid var(--border); border-radius: 100px;
+  height: 60px; padding: 6px; display: none; align-items: center; gap: 14px;
+  box-sizing: border-box; overflow: hidden; max-width: 60px; 
+  transition: max-width 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s;
+  cursor: pointer; white-space: nowrap; box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
+.trk-widg:hover { max-width: 340px; background: var(--glass-hover); border-color: rgba(255,255,255,0.2); }
+
+.tw-img {
+  width: 46px; height: 46px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.tw-txt { display: flex; flex-direction: column; flex-shrink: 0; margin-right: 10px; }
+.tw-txt small { font-size: 10px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+.tw-txt strong { font-size: 13px; font-weight: 500; color: #aaa; text-overflow: ellipsis; overflow: hidden; max-width: 130px; }
+
+.tw-btn {
+  background: #fff; color: #000; font-size: 12px; padding: 10px 20px; border-radius: 100px; border: none;
+  cursor: pointer; font-weight: 700; transition: 0.3s;
+  opacity: 0; transform: translateX(15px); pointer-events: none; text-transform: uppercase;
+}
+.trk-widg:hover .tw-btn { opacity: 1; transform: translateX(0); pointer-events: auto; }
+.tw-btn:hover { background: #e0e0e0; transform: scale(1.05); }
+
+.tw-btn.quit { background: rgba(255, 60, 60, 0.15); color: #ff4d4d; border: 1px solid rgba(255, 60, 60, 0.3); }
+.tw-btn.quit:hover { background: #ff4d4d; color: #fff; }
+
+/* ModalSSS */
+#modal-ui {
+  position: fixed; inset: 0; background: var(--bg); z-index: 500; display: none; opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1); overflow-y: auto; scroll-behavior: smooth;
+}
+
+.m-bg {
+  position: absolute; top: 0; left: 0; width: 100%; height: 90vh;
+  object-fit: cover; opacity: 0.15; filter: blur(40px);
+  mask-image: linear-gradient(to bottom, black 10%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 10%, transparent 100%);
+}
+
+.m-close {
+  position: fixed; top: 40px; right: 60px; display:flex; align-items:center; z-index: 10;
+}
+.m-close-btn {
+  width: 45px; height: 45px; border-radius: 50%; background: var(--glass); backdrop-filter: blur(20px);
+  border: 1px solid var(--border); display: flex; justify-content: center; align-items: center;
+  cursor: pointer; transition: 0.3s;
+}
+.m-close-btn:hover { background: #fff; transform: rotate(90deg) scale(1.05); }
+.m-close-btn:hover svg { stroke: #000; }
+
+.m-grid {
+  position: relative; z-index: 2; padding: 100px; max-width: 1400px; margin: 0 auto;
+  display: flex; gap: 70px; align-items: flex-start;
+}
+
+.m-l { width: 340px; flex-shrink: 0; }
+.m-l img { width: 100%; border-radius: 16px; box-shadow: 0 40px 80px rgba(0,0,0,0.8); border: 1px solid var(--border); margin-bottom: 30px;}
+
+.m-play {
+  width: 100%; background: #fff; color: #000; border: none; padding: 20px 0; font-size: 15px; font-weight: 700;
+  border-radius: 12px; cursor: pointer; transition: 0.3s; text-transform: uppercase; letter-spacing: 2px;
+  display: flex; justify-content: center; align-items: center; gap: 12px; margin-bottom: 20px;
+}
+.m-play:hover { background: #e0e0e0; box-shadow: 0 10px 25px rgba(255,255,255,0.15); transform: translateY(-3px); }
+
+.m-actions-row { display:flex; gap:10px; margin-bottom:30px; }
+.m-actions-row .show-login-btn { flex:1; margin:0; padding:12px; font-size:12px; text-decoration:none; text-align:center; display:flex; align-items:center; justify-content:center; }
+
+.m-stats { background: rgba(20,20,20,0.4); border: 1px solid var(--border); border-radius: 16px; padding: 25px; display: flex; flex-direction: column; gap: 20px; backdrop-filter: blur(15px);}
+.m-rw { display: flex; justify-content: space-between; align-items: center; }
+.m-rw small { font-size: 12px; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 1px; }
+.m-rw span { font-size: 14px; font-weight: 500; color: #fff; }
+
+.m-r { flex: 1; padding-top: 10px;}
+.m-t { font-size: 72px; font-weight: 800; letter-spacing: -3px; margin: 0 0 10px 0; line-height: 1; text-shadow: 0 10px 30px rgba(0,0,0,0.5);}
+.m-d { font-size: 16px; color: var(--muted); text-transform: uppercase; letter-spacing: 3px; font-weight: 500; margin-bottom: 35px; }
+
+.m-tgs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 35px; }
+.m-tg { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 100px; font-size: 12px; font-weight: 500; color: #ccc; }
+
+.m-desc { font-size: 16px; line-height: 1.7; color: #aaa; margin-bottom: 50px; max-width: 850px; font-weight: 300; }
+
+.m-req { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; border-top: 1px solid var(--border); padding-top: 40px; }
+.m-rc h4 { font-size: 14px; color: #fff; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 20px 0; font-weight: 600;}
+.m-ri { margin-bottom: 15px; }
+.m-ri small { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; margin-bottom: 4px; font-weight: 600; letter-spacing: 1px;}
+.m-ri span { display: block; font-size: 13px; color: #ccc; font-weight: 400; line-height: 1.5;}
+
+/*  Alert Popups  */
+.popup-wrap {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+  display: flex; justify-content: center; align-items: center; z-index: 999999999999;
+  opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.popup-wrap.show { opacity: 1; visibility: visible; }
+.popup-box {
+  background: rgba(18, 18, 22, 0.85); border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px; border-radius: 24px; text-align: center; max-width: 400px; width: 100%;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.1);
+  transform: scale(0.95); transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.popup-wrap.show .popup-box { transform: scale(1); }
+.popup-icon-container {
+  width: 64px; height: 64px; border-radius: 50%; background: rgba(255, 255, 255, 0.05);
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.popup-box h2 { margin: 0 0 10px 0; font-size: 22px; font-weight: 600; letter-spacing: -0.5px; color: #fff;}
+.popup-box p { color: #aaa; font-size: 15px; line-height: 1.5; margin: 0 0 25px 0; font-weight: 400; }
+.popup-btn-row { display: flex; gap: 12px; justify-content: center; }
+.popup-btn { 
+  padding: 12px 24px; border-radius: 12px; font-weight: 600; cursor: pointer; border: none; font-size: 14px; transition: 0.3s; flex: 1;
+}
+.popup-btn.primary { background: #fff; color: #000; }
+.popup-btn.primary:disabled { background: #555; color: #aaa; cursor: not-allowed; }
+.popup-btn.secondary { background: rgba(255,255,255,0.1); color: #fff; }
+.popup-btn:not(:disabled):hover { transform: translateY(-2px); }
+
+/*  Tutorial Page n iFrames, uh this is the ui for the Tutorial page i made  */
+.tut-cnt { text-align: center; }
+.tut-cnt video { width: 100%; border-radius: 20px; border: 1px solid var(--border); box-shadow: 0 30px 60px rgba(0,0,0,0.6); margin-bottom: 30px; background: #000; }
+
+.show-login-btn {
+  background: transparent; border: 1px solid rgba(255,255,255,0.3); color: #fff;
+  padding: 14px 32px; border-radius: 100px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+  cursor: pointer; transition: 0.3s; margin-bottom: 40px; display: inline-block;
+}
+.show-login-btn:hover { background: #fff; color: #000; transform: translateY(-2px); }
+
+#frame-area {
+  max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.8s ease, opacity 0.8s ease;
+  display: flex; flex-direction: column; gap: 30px; margin-top: 10px;
+}
+#frame-area.show { max-height: 2500px; opacity: 1; }
+
+.f-box { background: #080808; border: 1px solid var(--border); border-radius: 16px; padding: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); text-align: left; }
+.f-box h3 { margin: 0 0 15px 0; font-size: 15px; font-weight: 500; color: #fff; display: flex; align-items: center; gap: 10px;}
+.f-box h3::before { content: ''; width: 4px; height: 14px; background: #fff; border-radius: 4px; }
+.f-box iframe { width: 100%; border: none; border-radius: 10px; background: #fff; }
+.f-rac { height: 501px; }
+.f-mail { height: 602px; }
+
+.auth-success-box {
+  background: rgba(20, 20, 25, 0.8); border: 1px solid var(--border);
+  padding: 30px; border-radius: 16px; display: inline-block;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5); text-align: center; margin-bottom: 30px;
+}
+.auth-success-box h3 { margin: 0 0 8px 0; font-size: 20px; color: #fff; font-weight: 600; }
+.auth-success-box p { margin: 0 0 20px 0; color: #aaa; font-size: 14px; }
+
+.verify-manual-btn {
+  background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2);
+  padding: 10px 20px; border-radius: 8px; font-size: 12px; cursor: pointer; transition: 0.3s;
+  margin-top: 15px; width: 100%;
+}
+.verify-manual-btn:hover { background: #fff; color: #000; }
+
+.settings-box {
+  background:var(--glass); border:1px solid var(--border); padding:30px; border-radius:24px;
+  backdrop-filter:blur(30px); -webkit-backdrop-filter:blur(30px);
+}
+
+.swatch-btn {
+  width: 50px; height: 50px; border-radius: 14px; cursor: pointer;
+  border: 2px solid rgba(255,255,255,0.1); transition: 0.2s;
+}
+.swatch-btn:hover { transform: scale(1.1); }
+.swatch-btn.active { transform: scale(1.15); border-color: #fff; box-shadow: 0 0 15px rgba(255,255,255,0.3); }
+
+.p-card {
+  background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1);
+  padding: 15px; border-radius: 12px; text-align: center; cursor: pointer;
+  transition: 0.2s; min-width: 80px; display: flex; flex-direction: column; gap: 8px; align-items: center;
+}
+.p-card:hover { transform: translateY(-3px); background: rgba(255,255,255,0.05); }
+.p-card-active { border-color: #fff; box-shadow: 0 0 15px rgba(255,255,255,0.1); }
+.p-card span { font-size: 12px; font-weight: 600; color: #fff; }
+.p-card svg { stroke: #fff; opacity: 0.8; }
+
+.gp-focus { outline: 3px solid #fff !important; box-shadow: 0 0 20px #fff !important; border-radius: inherit; }
+
+@media (max-width: 1024px) {
+  #app-wrap { padding: 40px 10px 100px 10px; }
+  .hero-cont { height: 220px; border-radius: 16px; }
+  .h-title { font-size: 28px; letter-spacing: -1px; }
+  .h-stat { font-size: 12px; }
+  .h-over { padding: 20px; }
+  .sec-head { font-size: 18px; margin-top: 30px; margin-bottom: 12px; }
+  
+  .grid-h { display: flex; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 15px; gap: 12px; }
+  .grid-h::-webkit-scrollbar { height: 4px; }
+  .grid-h::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+  .grid-h .c-h { width: 260px; flex-shrink: 0; scroll-snap-align: start; border-radius: 12px; }
+  
+  .grid-v { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; }
+  .c-v { border-radius: 10px; }
+  .c-inf { padding: 15px 10px 10px; background: linear-gradient(to top, rgba(0,0,0,1), transparent); }
+  .c-inf h3 { font-size: 12px; margin-bottom: 4px; }
+  .c-time-hover { font-size: 9px; margin-top: 4px; }
+  .c-time-hover svg { width: 10px; height: 10px; }
+  .c-inf span { font-size: 9px; }
+  
+  .m-grid { flex-direction: column; padding: 0; gap: 0; margin-top: 60px; background: var(--bg); border-top-left-radius: 30px; border-top-right-radius: 30px; position: relative; z-index: 3; box-shadow: 0 -10px 40px rgba(0,0,0,0.8); }
+  .m-bg { height: 280px; opacity: 0.8; filter: blur(2px); mask-image: linear-gradient(to bottom, black 30%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 100%); }
+  .m-l { width: 100%; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; margin-top: -80px; align-items: center; }
+  .m-l img { width: 140px; height: 190px; object-fit: cover; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.9); margin-bottom: 15px; border: 1px solid rgba(255,255,255,0.1); }
+  .m-r { padding: 0 20px 30px 20px; box-sizing: border-box; text-align: center; }
+  .m-t { font-size: 26px; margin-bottom: 8px; text-align: center; line-height: 1.2; }
+  .m-d { font-size: 13px; margin-bottom: 20px; text-align: center; color: var(--accent); }
+  .m-tgs { justify-content: center; margin-bottom: 20px; }
+  .m-actions-row { display: flex; gap: 10px; width: 100%; margin-bottom: 20px; }
+  .m-actions-row .show-login-btn { flex: 1; padding: 12px 0; margin: 0; font-size: 12px; border-radius: 10px; }
+  .m-play { margin-bottom: 15px; padding: 14px 0; border-radius: 12px; font-size: 14px; width: 100%; }
+  .m-stats { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); margin-bottom: 20px; width: 100%; box-sizing: border-box; padding: 15px; }
+  .m-desc { font-size: 13px; text-align: left; line-height: 1.6; }
+  .m-req { grid-template-columns: 1fr; gap: 20px; text-align: left; }
+  .m-close { top: 15px; right: 15px; }
+  
+  .settings-box { padding: 15px; border-radius: 16px; }
+  .p-card { min-width: 60px; padding: 10px; }
+  .swatch-btn { width: 40px; height: 40px; border-radius: 10px; }
+  
+  .dock-wrap { width: 95%; bottom: 15px; }
+  .main-dock { padding: 6px 8px; width: 100%; justify-content: space-around; }
+  .d-logo { margin: 0 4px; width: 20px; height: 20px; }
+  .d-btn { padding: 8px 12px; font-size: 11px; }
+  .d-sep { height: 16px; margin: 0 2px; }
+  .top-notch { padding: 6px 12px; }
+  .top-notch span { font-size: 10px; }
+}
+
+@media (max-width: 480px) {
+  .grid-h .c-h { width: 220px; }
+  .grid-v { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+}
+
+</style>
+</head>
+<body>
+
+<div style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); z-index: 1000; display: flex; gap: 10px;">
+  <div class="top-notch" onclick="tglV('h')" style="position: relative; left: auto; top: auto; transform: none; cursor: pointer;">
+    <img src="https://freepngimg.com/convert-png/89656-icons-circle-computer-black-white-steam" alt="Logo">
+    <span>Cine-Cloud by C.S</span> <! Just incase you dont know C.S stands for Cine-Softwares !>
+  </div>
+  <div class="top-notch" id="n-game" onclick="tglV('g')" style="position: relative; left: auto; top: auto; transform: none; cursor: pointer; display: none; background: rgba(255,255,255,0.15);">
+    <span id="n-game-title" style="color: #fff;">Game</span>
+    <span onclick="clsGm(event)" style="margin-left: 8px; color: #ff4d4d; font-weight: bold; font-size: 16px;">×</span>
+  </div>
+</div>
+
+<! THE Boot Screen !>
+<div id="new-boot">
+  <div class="fig-title">FIGURE</div>
+  <div class="fig-line"></div>
+</div>
+
+<img src="" id="bg-amb">
+<canvas id="bg-particles" style="position:fixed; inset:0; pointer-events:none; z-index:-1;"></canvas>
+
+<div id="app-wrap">
+
+  <div id="v-cine" class="tab-view active">
+    <div id="error-fallback" style="display:none; text-align:center; padding:50px; color:#ff4d4d; font-weight:bold;">Failed to load game library.</div>
+    
+    <div id="cine-content">
+      <div class="sec-head" id="hc-head" style="margin-top:0;">Continue Playing</div>
+      <div class="hero-cont" id="hc-box" onclick="">
+        <img src="" id="hc-img" class="h-img">
+        <div class="h-over">
+         
+          <div class="h-tag" id="hc-tag">RESUME</div>
+          
+          <h1 class="h-title" id="hc-title">...</h1>
+          
+          
+          <div class="h-stat">
+
+            
+            <span id="hc-time"></span>
+            <span id="hc-dev"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-head">Games We Recommend</div> <! NOTE: FIND A REAL !>
+      <div class="marquee-wrap">
+        <div class="marquee-track" id="g-recom-track"></div>
+      </div>
+
+      <div class="sec-head">Poppy Playtime Universe</div>
+      <div class="grid-h" id="g-poppy"></div>
+
+      <div class="sec-head">Racing & Driving</div>
+      <div class="grid-h" id="g-race"></div>
+
+      <div class="sec-head">Daily Picks</div>
+      <div class="grid-h" id="g-day"></div>
+
+      <div class="sec-head">Trending Now</div>
+      <div class="grid-h" id="g-trnd"></div>
+    </div>
+  </div>
+ <! Might add mroe in later updates !>
+  <div id="v-lib" class="tab-view">
+    <div class="sec-head" style="margin-top:0;">Complete Library</div>
+    <div class="lib-search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="text" id="lib-search" placeholder="Search games by name, tag, or genre..." onkeyup="filterLib()">
+    </div>
+    <div class="grid-v" id="g-lib"></div>
+  </div>
+
+  <div id="v-tut" class="tab-view">
+    <div class="tut-cnt">
+      <h1 style="font-weight: 400; font-size: 42px; margin-bottom: 12px; letter-spacing:-1px;">Setup Guide</h1>
+      <p style="color: #888; margin-bottom: 40px; font-size: 15px;">Make sure you watch this quick video so everything runs smoothly.</p>
+      
+      <video controls><source src="Tutorial.mp4" type="video/mp4"></video> <! IF YOUR MAKING YOUR OWN VERSION, You can change the path and title for the tutorial or remove it i guess !>
+      
+      <button class="show-login-btn" id="login-trigger" onclick="openAuthTray()">Log in to play</button>
+
+      <div id="auth-success" style="display:none;">
+        <div class="auth-success-box">
+            <h3>You're All Set!</h3>
+            <p>Your Logged In and ready.</p> <! Auto like detect when the user logs in by checking iframe url !>
+        </div>
+      </div>
+      
+      <div id="frame-area">
+       
+        <div class="f-box" id="frame-wrapper">
+          
+         <h3>Log in with Raccoon</h3>
+          <div style="margin-bottom: 15px; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+            <p style="margin: 0 0 10px 0; color: #fff; font-size: 14px; font-weight: 600;">[BETA]: This is temporary, see if you can login by clicking the button below</p>
+            <a href="https://www.raccoongame.com/login?redirect_uri=https%3A%2F%2Fwww.raccoongame.com%2Fwap%2Fdist%2F%23%2Fplatform%2Fset&lang=en" target="_blank" style="display: inline-block; padding: 10px 20px; background: #fff; color: #000; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 13px;">Open Login in New Tab</a>
+          </div>
+          <iframe id="rac-frame" class="f-rac" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+          <button class="verify-manual-btn" onclick="markAsLoggedIn()">I have successfully logged in</button>
+        </div>
+        <div class="f-box" id="mail-wrapper">
+          <h3>Need a temp email?</h3>
+          <iframe class="f-mail" src="https://tempmail.ing/"></iframe> <! this is the link we iframe to the user to give them a temp link !>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="v-set" class="tab-view">
+    <div class="sec-head" style="margin-top:0;">Settings</div>
+    <div class="settings-box">
+      <h3 style="margin:0 0 15px 0; font-size:18px; color:#fff;">Themes</h3>
+      <div style="display:flex; gap:15px; flex-wrap:wrap;">
+        <div class="swatch-btn btn-dark" style="background:#050505;" onclick="setTheme('dark')"></div>
+        <div class="swatch-btn btn-figure" style="background:#ff4d4d;" onclick="setTheme('figure')"></div>
+        <div class="swatch-btn btn-neon" style="background:#00d2ff;" onclick="setTheme('neon')"></div>
+        <div class="swatch-btn btn-forest" style="background:#05c46b;" onclick="setTheme('forest')"></div>
+        <div class="swatch-btn btn-sunset" style="background:#f53b57;" onclick="setTheme('sunset')"></div>
+        <div class="swatch-btn btn-amethyst" style="background:#a55eea;" onclick="setTheme('amethyst')"></div>
+        <div class="swatch-btn btn-gold" style="background:#f1c40f;" onclick="setTheme('gold')"></div>
+        <div class="swatch-btn btn-hacker" style="background:#0f0;" onclick="setTheme('hacker')"></div>
+        <div class="swatch-btn btn-ocean" style="background:#0abde3;" onclick="setTheme('ocean')"></div>
+        <div class="swatch-btn btn-lava" style="background:#ee5253;" onclick="setTheme('lava')"></div>
+        <div class="swatch-btn btn-cyberp" style="background:#D980FA;" onclick="setTheme('cyberp')"></div>
+        <div class="swatch-btn btn-ice" style="background:#c8d6e5;" onclick="setTheme('ice')"></div>
+        <div class="swatch-btn btn-rose" style="background:#f368e0;" onclick="setTheme('rose')"></div>
+        <div class="swatch-btn btn-mint" style="background:#1dd1a1;" onclick="setTheme('mint')"></div>
+        <div class="swatch-btn btn-crimson" style="background:#c23616;" onclick="setTheme('crimson')"></div>
+      </div>
+      
+      <h3 style="margin:40px 0 15px 0; font-size:18px; color:#fff;">Particles</h3>
+      <div style="display:flex; gap:15px; flex-wrap:wrap;">
+        <div class="p-card card-none" onclick="setParticles('none')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+          <span>None</span>
+        </div>
+        <div class="p-card card-snow" onclick="setParticles('snow')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="12" y1="12" x2="19" y2="19"></line><line x1="12" y1="12" x2="5" y2="5"></line><line x1="12" y1="12" x2="19" y2="5"></line><line x1="12" y1="12" x2="5" y2="19"></line></svg>
+          <span>Snow</span>
+        </div>
+        <div class="p-card card-rain" onclick="setParticles('rain')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="16" y1="13" x2="16" y2="21"></line><line x1="8" y1="13" x2="8" y2="21"></line><line x1="12" y1="15" x2="12" y2="23"></line><path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"></path></svg>
+          <span>Rain</span>
+        </div>
+        <div class="p-card card-stars" onclick="setParticles('stars')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <span>Stars</span>
+        </div>
+        <div class="p-card card-cyber" onclick="setParticles('cyber')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          <span>Cyber</span>
+        </div>
+        <div class="p-card card-matrix" onclick="setParticles('matrix')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 17l6-6-6-6"></path><path d="M12 19h8"></path></svg>
+          <span>Matrix</span>
+        </div>
+        <div class="p-card card-bubbles" onclick="setParticles('bubbles')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg>
+          <span>Bubbles</span>
+        </div>
+        <div class="p-card card-fireflies" onclick="setParticles('fireflies')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path></svg>
+          <span>Fireflies</span>
+        </div>
+        <div class="p-card card-nexus" onclick="setParticles('nexus')">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="6" cy="6" r="3"></circle><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="6" r="3"></circle><line x1="8" y1="8" x2="16" y2="16"></line><line x1="8" y1="16" x2="16" y2="8"></line></svg>
+          <span>Nexus</span>
+        </div>
+      </div>
+
+      <h3 style="margin:40px 0 15px 0; font-size:18px; color:#fff;">Audio</h3>
+      <button id="music-toggle-btn" class="show-login-btn" style="margin:0;" onclick="toggleBGM()">Mute Music</button>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="dock-wrap">
+  <div class="main-dock">
+    <img src="https://freepngimg.com/convert-png/89656-icons-circle-computer-black-white-steam" class="d-logo">
+    <div class="d-sep"></div>
+    <div class="d-btn active" id="b-cine" onclick="chgTab('cine')">Cine</div>
+    <div class="d-btn" id="b-lib" onclick="chgTab('lib')">Library</div>
+    <div class="d-btn" id="b-tut" onclick="chgTab('tut')">Tutorial</div>
+    <div class="d-btn" id="b-set" onclick="chgTab('set')">Settings</div>
+  </div>
+
+  <div class="trk-widg" id="tk">
+    <img src="" class="tw-img" id="tk-img">
+    <div class="tw-txt">
+      <small id="tk-lbl">Last Played</small>
+      <strong id="tk-nm">...</strong>
+    </div>
+    <button class="tw-btn" id="tk-btn" onclick="tkAction()"></button>
+  </div>
+</div>
+
+<div id="modal-ui">
+  <img src="" class="m-bg" id="mdl-bg">
+  <div class="m-close">
+    <div id="b-btn-hint" style="display:none; background:#ff4d4d; color:#fff; font-weight:800; border-radius:50%; width:22px; height:22px; justify-content:center; align-items:center; font-size:12px; margin-right:10px; box-shadow:0 0 10px rgba(255,77,77,0.5);">B</div>
+    <div class="m-close-btn" onclick="clsMdl()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </div>
+  </div>
+  
+  <div class="m-grid">
+    <div class="m-l">
+      <img src="" id="mdl-post">
+      <button class="m-play" onclick="try2launch()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#000"><path d="M8 5v14l11-7z"/></svg>
+        Play
+      </button>
+      <div class="m-actions-row">
+        <button class="show-login-btn" onclick="showEmbedPopup()">Embed</button>
+        <a id="btn-bookmark" class="show-login-btn" href="#">Bookmark</a>
+      </div>
+      <div class="m-stats">
+        <div class="m-rw"><small>Play Time</small><span id="mdl-tm"></span></div>
+        <div class="m-rw"><small>Last Played</small><span id="mdl-lp"></span></div>
+        <div class="m-rw"><small>Achievements</small><span id="mdl-ac"></span></div>
+      </div>
+    </div>
+    
+    <div class="m-r">
+      <h1 class="m-t" id="mdl-t"></h1>
+      <div class="m-d" id="mdl-d"></div>
+      
+      <div class="m-tgs" id="mdl-tg"></div>
+      <div class="m-desc" id="mdl-dc"></div>
+      
+      <div class="m-req">
+        <div class="m-rc">
+          <h4>Minimum</h4>
+          <div class="m-ri"><small>OS</small><span id="qm-os"></span></div>
+          <div class="m-ri"><small>Processor</small><span id="qm-cpu"></span></div>
+          <div class="m-ri"><small>Memory</small><span id="qm-ram"></span></div>
+          <div class="m-ri"><small>Graphics</small><span id="qm-gpu"></span></div>
+        </div>
+        <div class="m-rc">
+          <h4>Recommended</h4>
+          <div class="m-ri"><small>OS</small><span id="qr-os"></span></div>
+          <div class="m-ri"><small>Processor</small><span id="qr-cpu"></span></div>
+          <div class="m-ri"><small>Memory</small><span id="qr-ram"></span></div>
+          <div class="m-ri"><small>Graphics</small><span id="qr-gpu"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<! Disclaimer like pop up !>
+<div class="popup-wrap" id="p-legal-block">
+  <div class="popup-box" style="max-width: 500px;">
+    <div class="popup-icon-container" style="background:rgba(255,200,0,0.1); border:1px solid rgba(255,200,0,0.2);">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffc800" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+    </div> <! putting this here so i dont get in trouble ;) !>
+    <h2>Legal Notice & Disclaimer</h2>
+    <div id="legal-scroll" style="max-height:160px; overflow-y:auto; font-size:13px; line-height: 1.6; color:#aaa; text-align:left; padding:15px; background:rgba(0,0,0,0.3); border-radius:12px; margin-bottom:20px; border: 1px solid var(--border);" onscroll="checkLegalScroll(this)">
+      <p><strong>Please read carefully before proceeding.</strong></p>
+      <p>Cine Softwares and the Cine-Cloud platform are not hosting, storing, or distributing any of the games presented on this application. All games are merely embedded via standard iFrames pointing directly to their original providers.</p>
+      <p>We do not claim ownership of any trademarks, copyrighted materials, or intellectual property displayed within the application. If there are any legal disputes or DMCA claims regarding the hosting and playing of these games, they should be directed towards the source host, <strong>Raccoon Games</strong>.</p>
+      <p>By clicking "I Agree", you acknowledge that Cine Softwares acts solely as a UI aggregator and is free from any liability regarding third-party content.</p>
+      <p><em>Scroll to the bottom to accept. NOTE THIS PLEASE, YOU MUST ALLOW POP UPS!</em></p><br><br><br><br>
+      <p>End of notice.</p>
+    </div>
+
+    
+    <div class="popup-btn-row">
+      
+      <button class="popup-btn primary" id="btn-legal-accept" disabled onclick="acceptLegal()" style="width:100%;">I Agree</button>
+    
+    
+    </div>
+  </div>
+</div>
+
+<div class="popup-wrap" id="p-tut-block" onclick="closePopupClick(event)">
+  <div class="popup-box">
+    <div class="popup-icon-container">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+    </div>
+    <h2>Wait up!</h2>
+    <p>It looks like you haven't completed the setup video yet. IF YOU HAVE WATCHED IT AND FOLLOWED THROUGH PLEASE PRESS ENTER TWICE</p>
+    <div class="popup-btn-row">
+      <button class="popup-btn secondary" onclick="hidePopup('p-tut-block')">Cancel</button>
+      <button class="popup-btn primary" onclick="goToTutorial()">Go to Tutorial</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup-wrap" id="p-launch-mode" onclick="closePopupClick(event)">
+  <div class="popup-box" style="max-width: 400px;">
+    <div class="popup-icon-container">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+    </div>
+    <h2>Launch Options</h2>
+    <p>How would you like to play this game?</p>
+    <div class="popup-btn-row">
+      <button class="popup-btn secondary" onclick="launchGame('iframe')">Play in Browser</button>
+      <button class="popup-btn primary" onclick="launchGame('tab')">Open in New Tab</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup-wrap" id="p-sess-block" onclick="closePopupClick(event)">
+  <div class="popup-box">
+    <div class="popup-icon-container" style="background:rgba(255,77,77,0.1);border:1px solid rgba(255,77,77,0.2);">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff4d4d" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+    </div>
+    <h2>Session Active</h2>
+    <p>You're already playing a game! Make sure to exit your current session before starting a new one.</p> <! feel like i had to add thos cuz why not !>
+    <div class="popup-btn-row">
+      
+      <button class="popup-btn primary" style="width: 100%;" onclick="hidePopup('p-sess-block')">Got it</button>
+    </div>
+  
+  </div>
+</div>
+
+<div class="popup-wrap" id="p-embed-block" onclick="closePopupClick(event)">
+  <div class="popup-box" style="max-width: 500px; padding:30px;">
+    <div class="popup-icon-container" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+    </div>
+    <h2>Developer Embed</h2>
+    <p style="font-size:13px; color:#ccc;">You can skip to the easy work and use Figure Cloud to play PC games.</p>
+    <textarea id="embed-code-area" readonly style="width:100%; height:120px; background:rgba(0,0,0,0.5); color:#aaa; border:1px solid var(--border); border-radius:12px; padding:15px; font-family:monospace; font-size:12px; resize:none; margin-bottom:20px; box-sizing:border-box;"></textarea>
+    <div class="popup-btn-row">
+      <button class="popup-btn secondary" onclick="hidePopup('p-embed-block')">Close</button>
+      <button class="popup-btn primary" onclick="copyEmbedCode()">Copy Code</button>
+    </div>
+  </div>
+</div>
+
+<div id="m-a2hs" style="position:fixed; bottom:-200px; left:0; width:100%; background:var(--glass); backdrop-filter:blur(30px); border-top:1px solid var(--border); border-top-left-radius:24px; border-top-right-radius:24px; padding:25px; box-sizing:border-box; z-index:99999999999; transition:bottom 0.5s cubic-bezier(0.16,1,0.3,1); box-shadow:0 -10px 40px rgba(0,0,0,0.5);">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+    <h3 style="margin:0; color:#fff; font-size:16px;">Add Figure to Home Screen</h3>
+    <svg onclick="clsA2hs()" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" style="cursor:pointer;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+  </div>
+  <p style="margin:0; font-size:13px; color:#aaa; line-height:1.6;">For the ultimate fullscreen experience, tap <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" style="vertical-align:middle;margin:0 2px;"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg> (iOS) or <b style="color:#fff;">&#8942;</b> (Android) and select <b>Add to Home Screen</b>.</p>
+</div>
+
+<div id="game-layer" style="display:none; position:fixed; inset:0; background:#000; z-index:900;">
+  <div id="bS" style="position:absolute; inset:0; background:#000; z-index:9002; display:flex; flex-direction:column; justify-content:center; align-items:center; color:#fff; font-family:sans-serif;">
+    <h2 id="bS-t" style="margin:0 0 20px 0;">Loading...</h2>
+    <span style="font-size:14px; color:#aaa; text-align:center; max-width:450px; line-height:1.6;">Notice: If you exit fullscreen, the mouse lock will break.<br>Use <b>ALT + Z</b> (hold 3s) to lock mouse and fullscreen.<br>Use <b>ALT + C</b> (hold 3s) to safely exit.</span>
+  </div>
+  <div id="lO" style="position:absolute; inset:0; background:rgba(10,10,15,0.95); z-index:9003; display:none; justify-content:center; align-items:center; flex-direction:column; color:#fff; font-family:sans-serif;">
+    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ff4d4d" stroke-width="2" style="margin-bottom:20px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+    <h1 style="margin:0 0 10px 0; font-size:32px; font-weight:700; letter-spacing:-1px;">Session Expired</h1>
+    <p style="color:#aaa; font-size:16px; max-width:450px; line-height:1.6; margin-bottom: 30px;">Logged out. Go to Tutorial tab to log in.</p>
+    <button onclick="clsGm()" style="padding:14px 36px; background:#fff; color:#000; border:none; border-radius:12px; font-size:15px; font-weight:700; cursor:pointer;">Close</button>
+  </div>
+  <button id="fB" onclick="mnLk()" style="position:absolute; top:60px; right:20px; z-index:9001; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#fff; padding:10px; border-radius:8px; cursor:pointer;" title="Hold ALT + Z for 3 secs to lock mouse">🖵</button>
+  <div id="tD" style="position:absolute; top:-100px; left:50%; transform:translateX(-50%); z-index:9004; background:#000; border:2px solid #fff; border-radius:50%; width:50px; height:50px; display:flex; justify-content:center; align-items:center; color:#fff; font-family:sans-serif; font-weight:bold; font-size:20px; transition:top 0.3s ease;">3</div>
+  <div id="eD" style="position:absolute; top:-100px; left:50%; transform:translateX(-50%); z-index:9004; background:#ff4d4d; border:2px solid #fff; border-radius:50%; width:50px; height:50px; display:flex; justify-content:center; align-items:center; color:#fff; font-family:sans-serif; font-weight:bold; font-size:20px; transition:top 0.3s ease;">3</div>
+  
+  <div id="pointer-lock-overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.5); z-index:9000; display:none; justify-content:center; align-items:center; cursor:pointer;">
+    <div style="text-align:center; background:rgba(0,0,0,0.85); border:1px solid rgba(255,255,255,0.2); padding:20px; border-radius:12px; max-width:300px;">
+      <p style="margin:0 0 10px 0; font-weight:bold; color:#fff;">Pointer Lock Lost</p>
+      <p style="margin:0; font-size:13px; color:#aaa;">Click anywhere to lock mouse and resume 360 controls.</p>
+    </div>
+  </div>
+
+  <iframe id="gF" allow="autoplay;fullscreen;pointer-lock;keyboard-map;clipboard-read;clipboard-write;gamepad" style="width:100%; height:100%; border:none; display:block; outline:none;"></iframe>
+</div>
+
+<script src="./random/gamelayout.js"></script>
+
+<script>
+//  THE FUNCTIONALITTTYTYYYYYYYYY!!! 
+let lsDB=JSON.parse(localStorage.getItem('cine_store_v10')||'{}');
+function sLS(){localStorage.setItem('cine_store_v10',JSON.stringify(lsDB));}
+function msToTm(s){if(!s)return"0m";let h=Math.floor(s/3600);let m=Math.floor((s%3600)/60);return h>0?`${h}h ${m}m`:`${m}m`;}
+function tsToDt(t){if(!t)return"Never";let d=Date.now()-t;if(d<86400000)return"Today";if(d<172800000)return"Yesterday";return new Date(t).toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'});}
+function formatPlaytimeHover(secs){if(!secs)return"00d:00h:00m";let d=Math.floor(secs/86400);let h=Math.floor((secs%86400)/3600);let m=Math.floor((secs%3600)/60);return `${d.toString().padStart(2,'0')}d:${h.toString().padStart(2,'0')}h:${m.toString().padStart(2,'0')}m`;}
+
+function showToast(msg) {
+  let t = document.createElement('div');
+  t.innerText = msg;
+  t.style.cssText = "position:fixed; top:20px; left:50%; transform:translateX(-50%); background:rgba(255,255,255,0.1); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.2); padding:12px 24px; border-radius:100px; color:#fff; font-size:14px; font-weight:600; z-index:9999999999; opacity:0; transition:0.4s;";
+  document.body.appendChild(t);
+  setTimeout(()=> t.style.opacity='1', 100);
+  setTimeout(()=> { t.style.opacity='0'; setTimeout(()=>t.remove(), 400); }, 3000);
+}
+
+function clsA2hs() {
+  localStorage.setItem('fig_a2hs', '1');
+  document.getElementById('m-a2hs').style.bottom = '-200px';
+}
+
+window.addEventListener('DOMContentLoaded',()=>{
+  let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 1024;
+  let isStandAlone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone || document.referrer.includes('android-app://');
+  
+  if(isMobile) { 
+    setTimeout(() => { showToast("Welcome to Figure - Mobile"); }, 2500); 
+    if(!localStorage.getItem('fig_a2hs') && !isStandAlone) {
+      setTimeout(() => {
+        let el = document.getElementById('m-a2hs');
+        if(el) el.style.bottom = '0px';
+      }, 5000);
+    }
+  }
+
+  let b=document.getElementById('new-boot');
+  let aw=document.getElementById('app-wrap');
+  
+  setTimeout(()=>{
+    b.style.opacity='0';
+    setTimeout(()=>{b.style.display='none';aw.style.opacity='1';}, 800);
+  }, 3000);
+
+  let t=localStorage.getItem('figure_theme')||'dark';setTheme(t);
+  let p=localStorage.getItem('fig_particles')||'none';setParticles(p);
+  
+  let uP=new URLSearchParams(window.location.search);
+  let gParam=uP.get('game');let embParam=uP.get('embed');
+  
+  if(embParam){
+    let s=document.createElement('script');
+    s.src='./random/gamelayout.js';
+    document.head.appendChild(s);
+    let chI = setInterval(()=>{
+      if(typeof G_DATA!=='undefined') {
+        clearInterval(chI);
+        let f = G_DATA.find(x=>x.id===gParam);
+        if(f) {
+           document.body.innerHTML = '<iframe src="'+(f.url||f.path)+'" style="position:fixed;inset:0;width:100%;height:100%;border:none;z-index:99999999;"></iframe>';
+        }
+      }
+    }, 50);
+    return;
+  }
+  
+  if(!localStorage.getItem('cine_legal_accepted'))showPopup('p-legal-block');
+
+  let checkAttempts=0;
+  let checkG=setInterval(()=>{
+    if(typeof G_DATA!=='undefined'&&Array.isArray(G_DATA)){
+      clearInterval(checkG);
+      let ef=document.getElementById('error-fallback');if(ef)ef.style.display='none';
+      dodeLayout();
+      if(gParam){
+        let g=G_DATA.find(x=>x.id===gParam);
+        if(g){
+          cxG = g;
+          opMdl(g.id);setTimeout(try2launch,500);
+        }
+      }
+    } else {
+      checkAttempts++;
+      if(checkAttempts===20){
+        let s=document.createElement('script');
+        s.src='./random/gamelayout.js';
+        document.head.appendChild(s);
+      }
+      if(checkAttempts>100){
+        clearInterval(checkG);
+        let ef=document.getElementById('error-fallback');
+        if(ef)ef.style.display='block';
+      }
+    }
+  },50);
+  rSz();aP();
+});
+
+let bgM=new Audio('backgroundmusic.mp3');bgM.loop=true;let bgMuted=localStorage.getItem('bg_muted')==='true';let aInit=false;
+function initAudio(){if(!aInit&&!bgMuted){bgM.play().catch(e=>console.log(e));aInit=true;}}
+window.addEventListener('pointerdown',initAudio,{once:true});
+window.addEventListener('keydown',initAudio,{once:true});
+
+let gpLoop, lastGpState={}, focusedEl=null, lastGpMove=0, curTabIdx=0;
+const TABS = ['cine', 'lib', 'tut', 'set'];
+function gpInit() {
+  if(gpLoop) return;
+  gpLoop = requestAnimationFrame(gpUpdate);
+}
+function gpUpdate() {
+  let gps = navigator.getGamepads();
+  if(gps[0]) {
+    let bA = gps[0].buttons[0].pressed;
+    let bB = gps[0].buttons[1].pressed;
+    let LB = gps[0].buttons[4].pressed;
+    let RB = gps[0].buttons[5].pressed;
+    let dU = gps[0].buttons[12].pressed || gps[0].axes[1] < -0.5;
+    let dD = gps[0].buttons[13].pressed || gps[0].axes[1] > 0.5;
+    let dL = gps[0].buttons[14].pressed || gps[0].axes[0] < -0.5;
+    let dR = gps[0].buttons[15].pressed || gps[0].axes[0] > 0.5;
+
+    if(bB && !lastGpState.B) {
+      if(document.getElementById('modal-ui').style.display === 'block') clsMdl();
+    }
+    if(bA && !lastGpState.A && focusedEl) focusedEl.click();
+    
+    if(LB && !lastGpState.LB) { curTabIdx=(curTabIdx-1+TABS.length)%TABS.length; chgTab(TABS[curTabIdx]); }
+    if(RB && !lastGpState.RB) { curTabIdx=(curTabIdx+1)%TABS.length; chgTab(TABS[curTabIdx]); }
+
+    let now = Date.now();
+    if((dU || dD || dL || dR)) {
+      if(now - lastGpMove > 150) {
+        moveFocus(dU, dD, dL, dR);
+        lastGpMove = now;
+      }
+    } else {
+      lastGpMove = 0;
+    }
+
+    lastGpState = {A: bA, B: bB, LB: LB, RB: RB, U: dU, D: dD, L: dL, R: dR};
+    document.getElementById('b-btn-hint').style.display = 'flex';
+  }
+  requestAnimationFrame(gpUpdate);
+}
+
+function moveFocus(u, d, l, r) {
+  let els = Array.from(document.querySelectorAll('.c-h, .c-v, .d-btn, .m-play, .m-close-btn, .show-login-btn, .hero-cont, .swatch-btn, .p-card')).filter(e => e.offsetParent !== null);
+  if(els.length === 0) return;
+  if(!focusedEl || els.indexOf(focusedEl) === -1) {
+    focusedEl = els[0];
+    updateFocusUI();
+    return;
+  }
+  let curRect = focusedEl.getBoundingClientRect();
+  let best = null;
+  let bestDist = Infinity;
+  els.forEach(el => {
+    if(el === focusedEl) return;
+    let rect = el.getBoundingClientRect();
+    let dx = rect.left - curRect.left;
+    let dy = rect.top - curRect.top;
+    let dist = Math.sqrt(dx*dx + dy*dy);
+    let valid = false;
+    if(u && dy < -10 && Math.abs(dx) < Math.abs(dy)*2) valid = true;
+    if(d && dy > 10 && Math.abs(dx) < Math.abs(dy)*2) valid = true;
+    if(l && dx < -10 && Math.abs(dy) < Math.abs(dx)*2) valid = true;
+    if(r && dx > 10 && Math.abs(dy) < Math.abs(dx)*2) valid = true;
+    if(valid && dist < bestDist) { bestDist = dist; best = el; }
+  });
+  if(best) {
+    focusedEl = best;
+    updateFocusUI();
+    best.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+  }
+}
+function updateFocusUI() {
+  document.querySelectorAll('.gp-focus').forEach(e => e.classList.remove('gp-focus'));
+  if(focusedEl) focusedEl.classList.add('gp-focus');
+}
+window.addEventListener("gamepadconnected", (e) => {
+  showToast("🎮 Most games should have controller support");
+  gpInit();
+});
+
+let heroArr=[];let hIdx=0;let heroInterval;
+function dodeLayout(){
+  try{
+    heroArr=[];
+    let pg=Object.keys(lsDB).filter(k=>lsDB[k]&&lsDB[k].t>0).sort((a,b)=>((lsDB[b]?lsDB[b].l:0)-(lsDB[a]?lsDB[a].l:0)));
+    if(pg.length>0){let lp=G_DATA.find(x=>x.id===pg[0]);if(lp)heroArr.push({...lp,tag:'RESUME',sub:msToTm(lsDB[lp.id].t)+' Played'});}
+    let rnd=[...G_DATA].sort(()=>0.5-Math.random()).slice(0,3);
+    rnd.forEach(r=>{if(!heroArr.find(x=>x.id===r.id))heroArr.push({...r,tag:'FEATURED',sub:(r.tags||[]).join(" • ")});});
+    rendertheBanner();
+    if(heroInterval)clearInterval(heroInterval);
+    heroInterval=setInterval(()=>{hIdx=(hIdx+1)%heroArr.length;rendertheBanner();},6000);
+
+    let dayHtml='',trndHtml='',libHtml='';
+    let popFilter=G_DATA.filter(g=>g.n.toLowerCase().includes('poppy'));
+    let raceFilter=G_DATA.filter(g=>(g.tags||[]).includes('Racing')||(g.tags||[]).includes('Driving'));
+    let recFilter=[...G_DATA].sort(()=>0.5-Math.random()).slice(0,10);
+    
+    G_DATA.forEach((g,i)=>{
+      libHtml+=makethecard(g,'v');
+      if(i<4)dayHtml+=makethecard(g,'h');
+      else if(i>=4&&i<8)trndHtml+=makethecard(g,'h');
+    });
+    
+    document.getElementById('g-recom-track').innerHTML=recFilter.map(g=>makethecard(g,'h')).join('').repeat(2);
+    document.getElementById('g-poppy').innerHTML=popFilter.map(g=>makethecard(g,'h')).join('');
+    document.getElementById('g-race').innerHTML=raceFilter.slice(0,4).map(g=>makethecard(g,'h')).join('');
+    document.getElementById('g-day').innerHTML=dayHtml;
+    document.getElementById('g-trnd').innerHTML=trndHtml;
+    document.getElementById('g-lib').innerHTML=libHtml;
+    rfrTrk();
+  }catch(e){console.log(e);}
+}
+
+function rendertheBanner(){
+  if(!heroArr.length)return;let g=heroArr[hIdx];
+  document.getElementById('hc-tag').innerText=g.tag;document.getElementById('hc-title').innerText=g.n;
+  document.getElementById('hc-time').innerText=g.sub;document.getElementById('hc-dev').innerText=g.dev;
+  let imgEl=document.getElementById('hc-img');imgEl.style.opacity=0;
+  setTimeout(()=>{imgEl.src=g.bg;imgEl.style.opacity=0.8;},300);
+  document.getElementById('hc-box').onclick=()=>opMdl(g.id);
+}
+
+function makethecard(g,type){
+  let tStr=formatPlaytimeHover(lsDB[g.id]?lsDB[g.id].t:0);
+  let th=`<div class="c-time-hover"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Time Played: ${tStr}</div>`;
+  let src=(g.n+' '+(g.tags||[]).join(' ')+' '+g.dev).toLowerCase();
+  return `<div class="c-${type}" onclick="opMdl('${g.id}')" data-search="${src}"><img src="${type==='h'?g.bg:g.img}"><div class="c-inf"><h3>${g.n}</h3><span>${g.dev}</span>${th}</div></div>`;
+}
+
+function filterLib(){
+  let q=document.getElementById('lib-search').value.toLowerCase();
+  document.querySelectorAll('#g-lib .c-v').forEach(c=>{c.style.display=c.getAttribute('data-search').includes(q)?'block':'none';});
+}
+
+function chgTab(v){
+  document.querySelectorAll('.d-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-view').forEach(s=>s.classList.remove('active'));
+  let btn=document.getElementById('b-'+v), view=document.getElementById('v-'+v);
+  if(btn)btn.classList.add('active');if(view)view.classList.add('active');
+  if(v === 'tut') {
+    fdM(0, 800);
+  } else {
+    fdM(0.5, 800);
+  }
+}
+
+// the auto detecting like when the user logged in
+let isAuth=false, devMode=false;
+function openAuthTray(){
+  document.getElementById('login-trigger').style.display='none';
+  let isMobile=/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||window.innerWidth<1024;
+  if(isMobile){
+    window.open("https://www.raccoongame.com/login?redirect_uri=https%3A%2F%2Fwww.raccoongame.com%2Fwap%2Fdist%2F%23%2Fplatform%2Fset&lang=en", "_blank");
+    let rf=document.getElementById('rac-frame');if(rf)rf.style.display='none';
+    let mw=document.getElementById('mail-wrapper');if(mw)mw.style.display='none';
+  }else{
+    document.getElementById('rac-frame').src="https://www.raccoongame.com/login?redirect_uri=https%3A%2F%2Fwww.raccoongame.com%2Fwap%2Fdist%2F%23%2Fplatform%2Fset&lang=en";
+  }
+  document.getElementById('frame-area').classList.add('show');
+}
+function markAsLoggedIn(){if(isAuth)return;isAuth=true;document.getElementById('frame-area').classList.remove('show');setTimeout(()=>{document.getElementById('frame-area').style.display='none';},800);document.getElementById('auth-success').style.display='block';document.getElementById('login-trigger').style.display='none';}
+function forceLoginReopen(){
+  document.getElementById('auth-success').style.display='none';
+  let isMobile=/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||window.innerWidth<1024;
+  if(isMobile) window.open("https://www.raccoongame.com/login?redirect_uri=https%3A%2F%2Fwww.raccoongame.com%2Fwap%2Fdist%2F%23%2Fplatform%2Fset&lang=en", "_blank");
+  else document.getElementById('rac-frame').src="https://www.raccoongame.com/login?redirect_uri=https%3A%2F%2Fwww.raccoongame.com%2Fwap%2Fdist%2F%23%2Fplatform%2Fset&lang=en";
+  document.getElementById('frame-area').style.display='flex';
+  setTimeout(()=>{document.getElementById('frame-area').classList.add('show');},50);
+}
+let frC=0;document.getElementById('rac-frame').addEventListener('load',()=>{frC++;if(frC>=2&&!devMode)markAsLoggedIn();});
+window.addEventListener('keydown',(e)=>{if(e.altKey&&e.key.toLowerCase()==='s'){devMode=true;frC=0;forceLoginReopen();}});
+
+function showPopup(id){let el=document.getElementById(id);el.style.display='flex';setTimeout(()=>el.classList.add('show'),10);}
+function hidePopup(id){let el=document.getElementById(id);el.classList.remove('show');setTimeout(()=>el.style.display='none',300);}
+function closePopupClick(e){if(e.target.classList.contains('popup-wrap')&&e.target.id!=='p-legal-block')hidePopup(e.target.id);}
+function goToTutorial(){hidePopup('p-tut-block');clsMdl();chgTab('tut');}
+function checkLegalScroll(el){if(Math.ceil(el.scrollHeight-el.scrollTop)<=el.clientHeight+10)document.getElementById('btn-legal-accept').disabled=false;}
+function acceptLegal(){localStorage.setItem('cine_legal_accepted','true');hidePopup('p-legal-block');}
+
+let cxG=null;
+function opMdl(id){
+  cxG=G_DATA.find(x=>x.id===id);let d=lsDB[id]||{t:0,l:null};
+  document.getElementById('mdl-bg').src=cxG.bg;document.getElementById('mdl-post').src=cxG.img;
+  document.getElementById('mdl-t').innerText=cxG.n;document.getElementById('mdl-d').innerText=cxG.dev;document.getElementById('mdl-dc').innerText=cxG.desc;
+  document.getElementById('mdl-tm').innerText=msToTm(d.t);document.getElementById('mdl-lp').innerText=tsToDt(d.l);document.getElementById('mdl-ac').innerText=cxG.ach;
+  document.getElementById('mdl-tg').innerHTML=cxG.tags.map(t=>`<div class="m-tg">${t}</div>`).join('');
+  document.getElementById('qm-os').innerText=cxG.rm.os;document.getElementById('qm-cpu').innerText=cxG.rm.cpu;document.getElementById('qm-ram').innerText=cxG.rm.ram;document.getElementById('qm-gpu').innerText=cxG.rm.gpu;
+  document.getElementById('qr-os').innerText=cxG.rr.os;document.getElementById('qr-cpu').innerText=cxG.rr.cpu;document.getElementById('qr-ram').innerText=cxG.rr.ram;document.getElementById('qr-gpu').innerText=cxG.rr.gpu;
+  let b=document.getElementById('btn-bookmark');if(b)b.href="javascript:(function(){window.location.href='"+window.location.origin+window.location.pathname+"?game="+cxG.id+"';})()";
+  let m=document.getElementById('modal-ui');m.style.display='block';setTimeout(()=>m.style.opacity='1',10);
+  evalBgMusic();
+}
+function clsMdl(){let m=document.getElementById('modal-ui');m.style.opacity='0';setTimeout(()=>m.style.display='none',500);evalBgMusic();}
+
+let wAt=false;let dEn=0;let tTr;
+function try2launch(){
+  let isMobile=/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||window.innerWidth<1024;
+  if(gmWin&&!gmWin.closed&&!isMobile){showPopup('p-sess-block');return;}
+  if(isMobile) rnLd();
+  else { showPopup('p-tut-block'); wAt=true; }
+}
+
+function launchGame(mode) {
+  hidePopup('p-launch-mode');
+  let tU = cxG.url || cxG.path;
+  if (mode === 'tab') {
+    let nw = window.open(tU, '_blank');
+    gmWin = { closed: false, close: function() { if(nw) nw.close(); clsGm(); } };
+    trStart(cxG.id);
+  } else {
+    rnLd();
+  }
+}
+
+window.addEventListener('keydown',(e)=>{
+  if(e.key==='Enter'&&wAt){
+    e.preventDefault();dEn++;clearTimeout(tTr);tTr=setTimeout(()=>dEn=0,500);
+    if(dEn===2){
+      hidePopup('p-tut-block');wAt=false;dEn=0;
+      showPopup('p-launch-mode');
+    }
+  }
+});
+
+let gmWin=null;let gmId=null;let gInt=null;let gSs=0;
+function tglV(v){
+  if(v==='h'){
+    document.getElementById('app-wrap').style.display='block';document.querySelector('.dock-wrap').style.display='flex';
+    document.getElementById('game-layer').style.display='none';
+    fdM(0.5, 800);
+  }else{
+    document.getElementById('app-wrap').style.display='none';document.querySelector('.dock-wrap').style.display='none';
+    document.getElementById('game-layer').style.display='block';
+    fdM(0, 800);
+  }
+}
+
+function clsGm(e){
+  if(e)e.stopPropagation();document.getElementById('n-game').style.display='none';document.getElementById('gF').src="";
+  if(gmWin)gmWin.closed=true;if(document.exitFullscreen)document.exitFullscreen().catch(()=>{});
+  if(document.exitPointerLock)document.exitPointerLock();if(navigator.keyboard)navigator.keyboard.unlock();
+  tglV('h');
+}
+
+function mnLk(){
+  let f=document.getElementById('gF');let gl=document.getElementById('game-layer');
+  if(!document.fullscreenElement){if(gl.requestFullscreen)gl.requestFullscreen().then(()=>{if(navigator.keyboard)navigator.keyboard.lock(['Escape']);}).catch(()=>{});else if(gl.webkitRequestFullscreen)gl.webkitRequestFullscreen();else if(document.documentElement.requestFullscreen)document.documentElement.requestFullscreen();}
+  if(f.requestPointerLock)f.requestPointerLock();else if(f.webkitRequestPointerLock)f.webkitRequestPointerLock();else document.body.requestPointerLock();f.focus();
+}
+
+let aZc=3,aZi=null,aZd=false;let aCc=3,aCi=null,aCd=false;
+window.addEventListener('keydown',(e)=>{
+  if(e.altKey&&e.key.toLowerCase()==='z'){if(!aZd&&document.getElementById('game-layer').style.display==='block'){let d=document.getElementById('tD');aZd=true;aZc=3;d.innerText=aZc;d.style.top='20px';aZi=setInterval(()=>{aZc--;if(aZc>0)d.innerText=aZc;else{clearInterval(aZi);d.style.top='-100px';mnLk();}},1000);}}
+  if(e.altKey&&e.key.toLowerCase()==='c'){if(!aCd&&document.getElementById('game-layer').style.display==='block'){let d=document.getElementById('eD');aCd=true;aCc=3;d.innerText=aCc;d.style.top='20px';aCi=setInterval(()=>{aCc--;if(aCc>0)d.innerText=aCc;else{clearInterval(aCi);d.style.top='-100px';if(document.exitFullscreen)document.exitFullscreen().catch(()=>{});if(document.exitPointerLock)document.exitPointerLock();if(navigator.keyboard)navigator.keyboard.unlock();}},1000);}}
+});
+window.addEventListener('keyup',(e)=>{if(e.key.toLowerCase()==='z'||e.key==='Alt'){aZd=false;clearInterval(aZi);let td=document.getElementById('tD');if(td)td.style.top='-100px';}if(e.key.toLowerCase()==='c'||e.key==='Alt'){aCd=false;clearInterval(aCi);let ed=document.getElementById('eD');if(ed)ed.style.top='-100px';}});
+
+let sessionPopUp=false,sTo=null,sTg=false;
+setInterval(()=>{if(document.getElementById('game-layer').style.display==='block'){try{let f=document.getElementById('gF');if(f.contentWindow.location.href.includes('https://www.raccoongame.com/login')){if(sessionPopUp&&!sTg){sTg=true;sTo=setTimeout(()=>{document.getElementById('lO').style.display='flex';if(document.exitPointerLock)document.exitPointerLock();},10000);}}else{sTg=false;clearTimeout(sTo);}}catch(e){}}else{sTg=false;clearTimeout(sTo);}},1500);
+
+function rnLd(){
+  clsMdl();let tU=cxG.url||cxG.path;
+  let isM=/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||window.innerWidth<1024;
+  if(isM){
+    showToast("Please note: You will need to click play manually.");
+    let nw=window.open(tU,'_blank');
+    gmWin={closed:false,close:function(){if(nw)nw.close();clsGm();}};
+    trStart(cxG.id);
+    return;
+  }
+  document.getElementById('n-game-title').innerText=cxG.n;document.getElementById('n-game').style.display='flex';
+  let f=document.getElementById('gF'),s=document.getElementById('bS'),bt=document.getElementById('bS-t'),lo=document.getElementById('lO');
+  if(bt)bt.innerText='Loading '+cxG.n+'...';s.style.display='flex';s.style.opacity='1';lo.style.display='none';tglV('g');
+  gmWin={closed:false,close:function(){clsGm();}};setTimeout(()=>{f.src=tU;setTimeout(()=>{if(s){s.style.opacity='0';setTimeout(()=>s.style.display='none',1000);}},1500);},2500);trStart(cxG.id);
+}
+
+function trStart(id){
+  if(gInt)clearInterval(gInt);gmId=id;if(!lsDB[id])lsDB[id]={t:0,l:Date.now()};lsDB[id].l=Date.now();sLS();gSs=lsDB[id].t;rfrTrk();
+  gInt=setInterval(()=>{if(gmWin&&!gmWin.closed){gSs++;if(gSs%5===0){lsDB[id].t=gSs;lsDB[id].l=Date.now();sLS();}}else{clearInterval(gInt);lsDB[id].t=gSs;lsDB[id].l=Date.now();sLS();gmWin=null;gmId=null;gInt=null;rfrTrk();dodeLayout();}},1000);
+}
+
+function rfrTrk(){
+  let widg=document.getElementById('tk');
+  if(gmWin&&gmId){let g=G_DATA.find(x=>x.id===gmId);if(g){document.getElementById('tk-img').src=g.img;document.getElementById('tk-lbl').innerText="Playing Now";document.getElementById('tk-lbl').style.color="#fff";document.getElementById('tk-nm').innerText=g.n;let btn=document.getElementById('tk-btn');btn.className="tw-btn quit";btn.innerText="Quit Game";widg.style.display="flex";}}
+  else{let pg=Object.keys(lsDB).filter(k=>lsDB[k].t>0);if(pg.length>0){let bId=pg.sort((a,b)=>lsDB[b].l-lsDB[a].l)[0];let g=G_DATA.find(x=>x.id===bId);if(g){document.getElementById('tk-img').src=g.img;document.getElementById('tk-lbl').innerText="Last Played";document.getElementById('tk-lbl').style.color="#a1a1a6";document.getElementById('tk-nm').innerText=g.n;let btn=document.getElementById('tk-btn');btn.className="tw-btn";btn.innerText="Launch";widg.style.display="flex";}}else widg.style.display="none";}
+}
+
+function tkAction(){if(gmWin&&!gmWin.closed)gmWin.close();else{let pg=Object.keys(lsDB).filter(k=>lsDB[k].t>0);if(pg.length>0){let bId=pg.sort((a,b)=>lsDB[b].l-lsDB[a].l)[0];cxG=G_DATA.find(x=>x.id===bId);try2launch();}}}
+
+function fdM(tg,d){
+  if(bgMuted)return;
+  if(tg>0&&bgM.paused){bgM.volume=0;bgM.play().catch(()=>{});}
+  let s=bgM.volume,st=Date.now();if(window.fdIv)clearInterval(window.fdIv);
+  window.fdIv=setInterval(()=>{
+    let pct=(Date.now()-st)/d;if(pct>=1){clearInterval(window.fdIv);bgM.volume=tg;if(tg===0)bgM.pause();}else bgM.volume=s+(tg-s)*pct;
+  },16);
+}
+function evalBgMusic(){
+  if(bgMuted||document.getElementById('game-layer').style.display==='block'){if(window.fdIv)clearInterval(window.fdIv);bgM.pause();return;}
+  let vol=0.5;if(document.getElementById('v-tut').classList.contains('active'))vol=0.08;
+  fdM(vol,800);
+}
+function toggleBGM(){
+  bgMuted=!bgMuted;localStorage.setItem('bg_muted',bgMuted);
+  document.getElementById('music-toggle-btn').innerText=bgMuted?"Unmute Music":"Mute Music";
+  if(bgMuted){if(window.fdIv)clearInterval(window.fdIv);bgM.pause();}else{evalBgMusic();}
+}
+
+document.addEventListener('visibilitychange', () => {
+  if(document.hidden) {
+    if(!bgMuted && !bgM.paused) fdM(0, 500);
+  } else {
+    evalBgMusic();
+  }
+});
+window.addEventListener('blur', () => { if(!bgMuted && !bgM.paused) fdM(0, 500); });
+window.addEventListener('focus', () => { evalBgMusic(); });
+
+function setTheme(t){
+  let r=document.documentElement;
+  if(t==='dark'){r.style.setProperty('--bg','#050505');r.style.setProperty('--accent','#ffffff');r.style.setProperty('--border','rgba(255, 255, 255, 0.08)');}
+  else if(t==='figure'){r.style.setProperty('--bg','#0c0202');r.style.setProperty('--accent','#ff3333');r.style.setProperty('--border','rgba(255, 50, 50, 0.15)');}
+  else if(t==='neon'){r.style.setProperty('--bg','#020b14');r.style.setProperty('--accent','#00d2ff');r.style.setProperty('--border','rgba(0, 210, 255, 0.15)');}
+  else if(t==='forest'){r.style.setProperty('--bg','#010f08');r.style.setProperty('--accent','#05c46b');r.style.setProperty('--border','rgba(5, 196, 107, 0.15)');}
+  else if(t==='sunset'){r.style.setProperty('--bg','#120410');r.style.setProperty('--accent','#f53b57');r.style.setProperty('--border','rgba(245, 59, 87, 0.15)');}
+  else if(t==='amethyst'){r.style.setProperty('--bg','#0a0310');r.style.setProperty('--accent','#a55eea');r.style.setProperty('--border','rgba(165, 94, 234, 0.15)');}
+  else if(t==='gold'){r.style.setProperty('--bg','#0f0e05');r.style.setProperty('--accent','#f1c40f');r.style.setProperty('--border','rgba(241, 196, 15, 0.15)');}
+  else if(t==='hacker'){r.style.setProperty('--bg','#020802');r.style.setProperty('--accent','#0f0');r.style.setProperty('--border','rgba(0, 255, 0, 0.15)');}
+  else if(t==='ocean'){r.style.setProperty('--bg','#020914');r.style.setProperty('--accent','#0abde3');r.style.setProperty('--border','rgba(10, 189, 227, 0.15)');}
+  else if(t==='lava'){r.style.setProperty('--bg','#140402');r.style.setProperty('--accent','#ee5253');r.style.setProperty('--border','rgba(238, 82, 83, 0.15)');}
+  else if(t==='cyberp'){r.style.setProperty('--bg','#110214');r.style.setProperty('--accent','#D980FA');r.style.setProperty('--border','rgba(217, 128, 250, 0.15)');}
+  else if(t==='ice'){r.style.setProperty('--bg','#050a0f');r.style.setProperty('--accent','#c8d6e5');r.style.setProperty('--border','rgba(200, 214, 229, 0.15)');}
+  else if(t==='rose'){r.style.setProperty('--bg','#14020a');r.style.setProperty('--accent','#f368e0');r.style.setProperty('--border','rgba(243, 104, 224, 0.15)');}
+  else if(t==='mint'){r.style.setProperty('--bg','#02140d');r.style.setProperty('--accent','#1dd1a1');r.style.setProperty('--border','rgba(29, 209, 161, 0.15)');}
+  else if(t==='crimson'){r.style.setProperty('--bg','#140101');r.style.setProperty('--accent','#c23616');r.style.setProperty('--border','rgba(194, 54, 22, 0.15)');}
+  localStorage.setItem('figure_theme',t);document.querySelectorAll('.swatch-btn').forEach(s=>s.classList.remove('active'));let act=document.querySelector(`.btn-${t}`);if(act)act.classList.add('active');
+}
+
+function getEmbedCode(g){
+  let u=g.url||g.path;
+  let raw=`(function(){var e=document.createElement('div');e.style='position:fixed;top:0;left:0;width:100%;height:100%;background:#050505;z-index:9999999;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:sans-serif;font-size:24px;font-weight:bold;';e.innerHTML='<img src="https://freepngimg.com/convert-png/89656-icons-circle-computer-black-white-steam" style="width:80px;margin-bottom:20px;animation:pulse 1.5s infinite;"><div style="letter-spacing:2px;">Powered By Figure Cloud</div><style>@keyframes pulse{0%{transform:scale(1);}50%{transform:scale(1.1);}100%{transform:scale(1);}}</style>';document.body.appendChild(e);setTimeout(function(){e.style.opacity='0';e.style.transition='opacity 0.5s';setTimeout(function(){e.remove();var i=document.createElement('iframe');i.src='${u}';i.style='position:fixed;top:0;left:0;width:100%;height:100%;border:none;z-index:9999998;';document.body.appendChild(i);},500);},3000);})();`;
+  let obf = btoa(unescape(encodeURIComponent(raw)));
+  return '<script>eval(decodeURIComponent(escape(atob("'+obf+'"))));<\/script>';
+}
+
+function showEmbedPopup(){if(!cxG)return;document.getElementById('embed-code-area').value=getEmbedCode(cxG);showPopup('p-embed-block');}
+function copyEmbedCode(){let a=document.getElementById('embed-code-area');a.select();a.setSelectionRange(0,99999);navigator.clipboard.writeText(a.value);showToast("Embed code copied!");}
+
+document.addEventListener('pointerlockchange',()=>{let o=document.getElementById('pointer-lock-overlay');if(document.getElementById('game-layer').style.display==='block'){if(!document.pointerLockElement)o.style.display='flex';else o.style.display='none';}});
+document.getElementById('pointer-lock-overlay').addEventListener('click',()=>{let f=document.getElementById('gF');f.focus();if(f.requestPointerLock)f.requestPointerLock();else if(document.body.requestPointerLock)document.body.requestPointerLock();if(!document.fullscreenElement){let gl=document.getElementById('game-layer');if(gl.requestFullscreen)gl.requestFullscreen();else if(gl.webkitRequestFullscreen)gl.webkitRequestFullscreen();}});
+
+let mX=0,mY=0;
+window.addEventListener('mousemove',e=>{mX=e.clientX;mY=e.clientY;});
+
+let pC,pCtx,pArr=[],pType='none';
+function rSz(){pC=document.getElementById('bg-particles');if(!pC)return;pCtx=pC.getContext('2d');let dpr=window.devicePixelRatio||1;pC.width=window.innerWidth*dpr;pC.height=window.innerHeight*dpr;pC.style.width=window.innerWidth+'px';pC.style.height=window.innerHeight+'px';pCtx.scale(dpr,dpr);iP();}
+window.addEventListener('resize',rSz);
+function iP(){
+  pArr=[];if(pType==='none')return;let cnt=(pType==='snow'||pType==='rain'||pType==='matrix')?80:(pType==='fireflies'||pType==='nexus')?60:30;
+  for(let i=0;i<cnt;i++){
+    pArr.push({
+      x:Math.random()*window.innerWidth,y:Math.random()*window.innerHeight,
+      r:pType==='snow'?Math.random()*2+1:pType==='stars'?Math.random()*1.5+0.5:pType==='bubbles'?Math.random()*4+2:pType==='fireflies'?Math.random()*2+1.5:2,
+      vy:pType==='snow'?Math.random()*1+0.5:pType==='rain'?Math.random()*15+10:pType==='matrix'?Math.random()*5+2:pType==='bubbles'?-(Math.random()*2+1):pType==='fireflies'?(Math.random()*2-1):pType==='nexus'?(Math.random()*1-0.5):0,
+      vx:pType==='snow'?Math.random()*0.8-0.4:pType==='cyber'?Math.random()*5+3:pType==='bubbles'?Math.random()*1-0.5:pType==='fireflies'?(Math.random()*2-1):pType==='nexus'?(Math.random()*1-0.5):0,
+      l:pType==='rain'?Math.random()*20+10:pType==='cyber'?Math.random()*50+20:0,
+      c:pType==='cyber'?'rgba(0,210,255,0.4)':pType==='stars'?'#fff':pType==='matrix'?'#0f0':pType==='bubbles'?'rgba(255,255,255,0.2)':pType==='fireflies'?'rgba(255,255,100,0.8)':pType==='nexus'?'rgba(255,255,255,0.4)':'rgba(255,255,255,0.5)',
+      o:Math.random(), do:Math.random()*0.02+0.01,
+      char: String.fromCharCode(0x30A0 + Math.random() * 96)
+    });
+  }
+}
+function aP(){
+  if(!pCtx){requestAnimationFrame(aP);return;}pCtx.clearRect(0,0,window.innerWidth,window.innerHeight);
+  if(pType!=='none'){
+    pArr.forEach(p=>{
+      pCtx.beginPath();
+      if(pType==='rain'||pType==='cyber'){pCtx.rect(p.x,p.y,pType==='rain'?1:p.l,pType==='rain'?p.l:1);pCtx.fillStyle=p.c;}
+      else if(pType==='matrix'){pCtx.font="14px monospace";pCtx.fillStyle=p.c;pCtx.fillText(p.char,p.x,p.y);if(Math.random()<0.05)p.char=String.fromCharCode(0x30A0+Math.random()*96);}
+      else{pCtx.arc(p.x,p.y,p.r,0,Math.PI*2);pCtx.fillStyle=p.c; if(pType==='bubbles'){pCtx.strokeStyle='rgba(255,255,255,0.4)';pCtx.stroke();pCtx.fillStyle='transparent';}}
+      if(pType==='stars'||pType==='fireflies'){p.o+=p.do;if(p.o>1||p.o<0.1)p.do*=-1;pCtx.globalAlpha=p.o;}
+      pCtx.fill();pCtx.globalAlpha=1;
+      
+      if(pType==='fireflies'){
+        let dx=mX-p.x;let dy=mY-p.y;let dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<100){p.vx-=dx*0.005;p.vy-=dy*0.005;}
+        p.vx*=(Math.random()*0.1+0.9);p.vy*=(Math.random()*0.1+0.9);
+      }
+      if(pType==='nexus'){
+        let dx=mX-p.x;let dy=mY-p.y;let dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<150){p.x-=dx*0.02;p.y-=dy*0.02;}
+        pArr.forEach(p2=>{
+          let d2=Math.sqrt(Math.pow(p2.x-p.x,2)+Math.pow(p2.y-p.y,2));
+          if(d2<80){pCtx.beginPath();pCtx.moveTo(p.x,p.y);pCtx.lineTo(p2.x,p2.y);pCtx.strokeStyle=`rgba(255,255,255,${1-(d2/80)})`;pCtx.stroke();}
+        });
+      }
+      
+      p.x+=p.vx;p.y+=p.vy;
+      if(pType==='snow'||pType==='rain'||pType==='matrix'){if(p.y>window.innerHeight){p.y=-20;p.x=Math.random()*window.innerWidth;}}
+      else if(pType==='cyber'){if(p.x>window.innerWidth){p.x=-100;p.y=Math.random()*window.innerHeight;}}
+      else if(pType==='bubbles'){if(p.y<0){p.y=window.innerHeight+20;p.x=Math.random()*window.innerWidth;}}
+      else if(pType==='fireflies'||pType==='nexus'){
+        if(p.x<0||p.x>window.innerWidth)p.vx*=-1;
+        if(p.y<0||p.y>window.innerHeight)p.vy*=-1;
+      }
+    });
+  }
+  requestAnimationFrame(aP);
+}
+function setParticles(t){pType=t;localStorage.setItem('fig_particles',t);iP();document.querySelectorAll('.p-card').forEach(c=>c.classList.remove('p-card-active'));let act=document.querySelector(`.card-${t}`);if(act)act.classList.add('p-card-active');}
+
+</script>
+</body>
+</html>

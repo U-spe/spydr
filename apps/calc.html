@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/calc.css">
+
+</head>
+
+<body>
+
+<div class="calculator">
+
+    <header class="calc-header">
+
+        <div class="calc-title">
+
+            <i class="ri-calculator-line"></i>
+
+            <span>Calculator</span>
+
+        </div>
+
+        <button id="historyBtn">
+
+            <i class="ri-history-line"></i>
+
+        </button>
+
+    </header>
+
+    <section class="display">
+
+        <div id="expression"></div>
+
+        <div id="result">0</div>
+
+    </section>
+
+    <section class="buttons">
+
+        <button class="action" data-action="clear">AC</button>
+
+        <button class="action" data-action="delete">
+
+            <i class="ri-delete-back-2-line"></i>
+
+        </button>
+
+        <button class="operator">%</button>
+
+        <button class="operator">÷</button>
+
+        <button>7</button>
+
+        <button>8</button>
+
+        <button>9</button>
+
+        <button class="operator">×</button>
+
+        <button>4</button>
+
+        <button>5</button>
+
+        <button>6</button>
+
+        <button class="operator">−</button>
+
+        <button>1</button>
+
+        <button>2</button>
+
+        <button>3</button>
+
+        <button class="operator">+</button>
+
+        <button class="zero">0</button>
+
+        <button>.</button>
+
+        <button class="equals">=</button>
+
+    </section>
+
+</div>
+
+<aside id="historyPanel">
+
+    <div class="history-header">
+
+        <h2>History</h2>
+
+        <button id="clearHistory">
+
+            <i class="ri-delete-bin-line"></i>
+
+        </button>
+
+    </div>
+
+    <div id="historyList">
+
+        <p class="empty">
+
+            No calculations yet.
+
+        </p>
+
+    </div>
+
+</aside>
+
+<script src="/js/calc.js"></script>
+
+</body>
+</html>

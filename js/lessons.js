@@ -283,7 +283,10 @@ function openGame(game) {
 
   if (gameFrame) gameFrame.src = url;
   
-  if (gameView) gameView.classList.add("open");
+  if (gameView) {
+    gameView.style.display = "flex"; // Failsafe override for inline styles
+    gameView.classList.add("open");
+  }
   
   document.querySelector(".dock")?.classList.add("hidden");
   
@@ -294,7 +297,10 @@ function openGame(game) {
    CLOSE GAME
 ========================= */
 closeGameBtn?.addEventListener("click", () => {
-  if (gameView) gameView.classList.remove("open");
+  if (gameView) {
+    gameView.style.display = "none"; // Failsafe override for inline styles
+    gameView.classList.remove("open");
+  }
   
   if (gameFrame) gameFrame.src = "";
   
@@ -313,7 +319,7 @@ async function init() {
     );
 
     if (!response.ok) {
-      throw new Error("Failed loading gzone-main.json");
+      throw new Error("Failed to load the main json zone");
     }
 
     gameLists = await response.json();

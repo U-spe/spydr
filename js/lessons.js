@@ -281,8 +281,11 @@ function openGame(game) {
     url = `embed.html?url=${encodeURIComponent(url)}`;
   }
 
-  if (gameView) gameView.style.display = "flex";
   if (gameFrame) gameFrame.src = url;
+  
+  if (gameView) gameView.classList.add("open");
+  
+  document.querySelector(".dock")?.classList.add("hidden");
   
   document.body.style.overflow = "hidden"; // Prevent background scrolling
 }
@@ -291,8 +294,11 @@ function openGame(game) {
    CLOSE GAME
 ========================= */
 closeGameBtn?.addEventListener("click", () => {
-  if (gameView) gameView.style.display = "none";
-  if (gameFrame) gameFrame.src = "about:blank";
+  if (gameView) gameView.classList.remove("open");
+  
+  if (gameFrame) gameFrame.src = "";
+  
+  document.querySelector(".dock")?.classList.remove("hidden");
   
   document.body.style.overflow = ""; // Restore background scrolling
 });

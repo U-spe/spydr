@@ -18,55 +18,103 @@
       font-family: "JetBrains Mono", monospace;
       background: #090909;
       color: #fff;
-      text-align: center;
+      overflow: hidden;
     }
 
+    /* universal spydr background hook */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at top, #111 0%, #090909 60%, #000 100%);
+      z-index: -2;
+    }
+
+    /* top bar */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 16px;
+      border-bottom: 1px solid #2b2b2b;
+      background: rgba(17,17,17,0.6);
+      backdrop-filter: blur(10px);
+    }
+
+    .topbar .left,
+    .topbar .right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      color: #bdbdbd;
+    }
+
+    /* global menu placeholder */
+    #global-menu {
+      position: fixed;
+      top: 48px;
+      left: 0;
+    }
+
+    /* main layout */
     .wrap {
+      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      gap: 14px;
+      gap: 18px;
+      padding-top: 48px;
     }
 
-    .title {
+    .logo {
       font-family: "Space Grotesk", sans-serif;
-      font-size: 42px;
+      font-size: 44px;
       letter-spacing: 2px;
     }
 
     .subtitle {
-      font-size: 14px;
-      color: #bdbdbd;
+      font-size: 12px;
+      color: #7c7c7c;
       margin-top: -10px;
     }
 
-    .url-box {
-      width: min(600px, 90vw);
+    .panel {
+      width: min(620px, 92vw);
+      background: #111;
+      border: 1px solid #2b2b2b;
+      border-radius: 10px;
+      padding: 14px;
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
 
     input {
-      background: #111;
-      border: 1px solid #2b2b2b;
+      width: 100%;
       padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #2b2b2b;
+      background: #0d0d0d;
       color: #fff;
       font-family: inherit;
       outline: none;
-      border-radius: 6px;
     }
 
     button {
-      background: transparent;
-      border: 1px solid #3f5efb;
-      color: #3f5efb;
       padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #3f5efb;
+      background: transparent;
+      color: #3f5efb;
       cursor: pointer;
       transition: 0.2s;
-      border-radius: 6px;
       font-family: inherit;
     }
 
@@ -75,33 +123,72 @@
       color: #fff;
     }
 
-    a {
-      font-size: 13px;
-      color: #7c3aed;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+    .hint {
+      font-size: 11px;
+      color: #666;
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
 
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="left">
+      <i class="ri-spy-fill"></i>
+      spydr browser
+    </div>
+
+    <div class="right">
+      <div id="clock">--:--</div>
+      <div id="battery">--%</div>
+    </div>
+  </div>
+
+  <!-- GLOBAL MENU -->
+  <div id="global-menu"></div>
+
+  <!-- MAIN -->
   <div class="wrap">
 
     <div>
-      <div class="title">spydr browser</div>
+      <div class="logo">spydr</div>
       <div class="subtitle">secure fetch gateway</div>
     </div>
 
-    <form class="url-box" method="POST" action="/createSession">
+    <form class="panel" method="POST" action="/createSession">
       <input name="url" id="iurl" type="text" placeholder="enter url or search..." />
       <button type="submit">launch</button>
+      <div class="hint">proxy engine: alloy core // spydr skin layer</div>
     </form>
 
   </div>
+
+  <script>
+    // clock
+    function updateClock() {
+      const now = new Date();
+      document.getElementById("clock").textContent =
+        now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // battery (if supported)
+    if (navigator.getBattery) {
+      navigator.getBattery().then(battery => {
+        function updateBattery() {
+          document.getElementById("battery").textContent =
+            Math.floor(battery.level * 100) + "%";
+        }
+        updateBattery();
+        battery.addEventListener("levelchange", updateBattery);
+      });
+    } else {
+      document.getElementById("battery").textContent = "N/A";
+    }
+  </script>
 
 </body>
 </html>

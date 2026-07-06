@@ -9,7 +9,7 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var sanitizer = require('sanitizer');
 
-var config = JSON.parse(fs.readFileSync('/spydr-web/config.json', 'utf-8'));
+var config = JSON.parse(fs.readFileSync('../config.json', 'utf-8'));
 
 var httpsAgent = new https.Agent({
   rejectUnauthorized: false,
@@ -22,8 +22,8 @@ var httpAgent = new http.Agent({
 });
 
 var ssl = {
-  key: fs.readFileSync('/spydr-web/ssl/default.key', 'utf8'),
-  cert: fs.readFileSync('/spydr-web/ssl/default.crt', 'utf8')
+  key: fs.readFileSync('../ssl/default.key', 'utf8'),
+  cert: fs.readFileSync('../ssl/default.crt', 'utf8')
 };
 
 var server;
@@ -78,7 +78,7 @@ function rewriteURL(dataURL, option) {
 }
 
 function error(statusCode, info) {
-  return fs.readFileSync('/spydr-web/public/error.html', 'utf8')
+  return fs.readFileSync('../error.html', 'utf8')
     .toString()
     .replace('%ERROR%',
       statusCode && info
@@ -177,7 +177,7 @@ app.use(prefix, async (req, res) => {
   res.send(resbody);
 });
 
-app.use('/spydr-web/assets/', express.static('/spydr-web/public/assets'));
+app.use('/spydr-web/assets/', express.static('../assets'));
 
 app.use('/spydr-web/url/', function (req, res) {
   const mainurl = req.url.split('/').slice(1).join('/');
@@ -198,7 +198,7 @@ app.use('/spydr-web/', function (req, res) {
 
 app.use(function (req, res) {
   if (req.url === '/') {
-    return fs.createReadStream('/spydr-web/public/index.html').pipe(res);
+    return fs.createReadStream('../index.html').pipe(res);
   }
 
   if (req.session.fetchURL) {

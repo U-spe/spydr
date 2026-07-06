@@ -3,13 +3,13 @@ var http = require('http');
 var fetch = require('node-fetch');
 var express = require('express');
 var fs = require('fs');
+var path = require('path');
 var app = express();
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var bodyParser = require('body-parser');
-var sanitizer = require('sanitizer');
 
-var config = JSON.parse(fs.readFileSync('../config.json', 'utf-8'));
+var config = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json'), 'utf-8'));
 
 var httpsAgent = new https.Agent({
   rejectUnauthorized: false,
@@ -21,27 +21,8 @@ var httpAgent = new http.Agent({
   keepAlive: true,
 });
 
-var ssl = {
-  key: fs.readFileSync('../ssl/default.key', 'utf8'),
-  cert: fs.readFileSync('../ssl/default.crt', 'utf8')
-};
-
-var server;
-var port = process.env.PORT || config.port;
-
-var ready = () => {
-  var proto = config.ssl ? 'https://' : 'http://';
-  console.log('Spydr Web running at', proto + config.listenip + ':' + port);
-};
-
 http.globalAgent.maxSockets = Infinity;
 https.globalAgent.maxSockets = Infinity;
-
-if (config.ssl) {
-  server = https.createServer(ssl, app).listen(port, config.listenip, ready);
-} else {
-  server = http.createServer(app).listen(port, config.listenip, ready);
-}
 
 app.use(cookieParser());
 app.use(session({
@@ -78,7 +59,7 @@ function rewriteURL(dataURL, option) {
 }
 
 function error(statusCode, info) {
-  return fs.readFileSync('../error.html', 'utf8')
+  return fs.readFileSync(path.join(__dirname, 'error.html'), 'utf8')
     .toString()
     .replace('%ERROR%',
       statusCode && info
@@ -91,19 +72,19 @@ function error(statusCode, info) {
     );
 }
 
-app.post('/spydr-web/createSession', async (req, res) => {
+app.post('/createSession', async (req, res) => {
   if (req.body.url.startsWith('//')) req.body.url = 'http:' + req.body.url;
   else if (!req.body.url.startsWith('http')) req.body.url = 'http://' + req.body.url;
 
   if (req.body.rv) {
     req.session.rvURL = String(req.body.url).split('/').splice(0, 3).join('/');
-    return res.redirect('/spydr-web/fetch/rv/' + String(req.body.url).split('/').splice(3).join('/'));
+    return res.redirect('/fetch/rv/' + String(req.body.url).split('/').splice(3).join('/'));
   }
 
-  return res.redirect('/spydr-web/fetch/' + rewriteURL(String(req.body.url)));
+  return res.redirect('/fetch/' + rewriteURL(String(req.body.url)));
 });
 
-var prefix = '/spydr-web/fetch';
+var prefix = '/fetch';
 
 app.use(prefix, async (req, res) => {
   var location = rewriteURL(req.url.slice(1), 'decode');
@@ -177,33 +158,35 @@ app.use(prefix, async (req, res) => {
   res.send(resbody);
 });
 
-app.use('/spydr-web/assets/', express.static('../assets'));
+app.use('/alloy/assets/', express.static(path.join(__dirname, 'assets')));
 
-app.use('/spydr-web/url/', function (req, res) {
+app.use('/alloy/url/', function (req, res) {
   const mainurl = req.url.split('/').slice(1).join('/');
   const host = mainurl.split('/').slice(0, 3).join('/');
   const host64 = Buffer.from(host).toString('base64');
   const path = mainurl.split('/').slice(3).join('/');
-  res.redirect(307, '/spydr-web/fetch/' + host64 + '/' + path);
+  res.redirect(307, '/fetch/' + host64 + '/' + path);
 });
 
-app.use('/spydr-web/', function (req, res) {
+app.use('/alloy/', function (req, res) {
   if (req.query.url) {
     var clientInput = base64Decode(req.query.url);
     if (!clientInput.startsWith('http')) clientInput = 'http://' + clientInput;
-    return res.redirect(307, '/spydr-web/fetch/' + rewriteURL(clientInput));
+    return res.redirect(307, '/fetch/' + rewriteURL(clientInput));
   }
   return res.redirect('/');
 });
 
 app.use(function (req, res) {
   if (req.url === '/') {
-    return fs.createReadStream('../index.html').pipe(res);
+    return fs.createReadStream(path.join(__dirname, 'index.html')).pipe(res);
   }
 
   if (req.session.fetchURL) {
-    return res.redirect('/spydr-web/fetch/' + req.session.fetchURL + req.url);
+    return res.redirect('/fetch/' + req.session.fetchURL + req.url);
   }
 
   return res.send(error('404', 'No valid directory or file was found!'));
 });
+
+module.exports = app;

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>spydr // browser</title>
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/main.css"/>
+  <link rel="stylesheet" href="/css/menu.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "JetBrains Mono", monospace;
+      background: #090909;
+      color: #fff;
+      text-align: center;
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      gap: 14px;
+    }
+
+    .title {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 42px;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #bdbdbd;
+      margin-top: -10px;
+    }
+
+    .url-box {
+      width: min(600px, 90vw);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input {
+      background: #111;
+      border: 1px solid #2b2b2b;
+      padding: 12px;
+      color: #fff;
+      font-family: inherit;
+      outline: none;
+      border-radius: 6px;
+    }
+
+    button {
+      background: transparent;
+      border: 1px solid #3f5efb;
+      color: #3f5efb;
+      padding: 12px;
+      cursor: pointer;
+      transition: 0.2s;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+
+    button:hover {
+      background: #3f5efb;
+      color: #fff;
+    }
+
+    a {
+      font-size: 13px;
+      color: #7c3aed;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <div>
+      <div class="title">spydr browser</div>
+      <div class="subtitle">secure fetch gateway</div>
+    </div>
+
+    <form class="url-box" method="POST" action="/createSession">
+      <input name="url" id="iurl" type="text" placeholder="enter url or search..." />
+      <button type="submit">launch</button>
+    </form>
+
+  </div>
+
+</body>
+</html>

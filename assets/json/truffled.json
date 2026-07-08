@@ -1,2151 +1,2151 @@
 [
   {
     "name": "1",
-    "url": "/games/1/index.html",
-    "cover": "png/games/1.webp"
+    "url": "/assets/gameassets/truffled/games/1/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/1.webp"
   },
   {
     "name": "1 on 1 Soccer",
-    "url": "/games/1on1soccer/index.html",
-    "cover": "/png/games/12.webp"
+    "url": "/assets/gameassets/truffled/games/1on1soccer/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/12.webp"
   },
   {
     "name": "10 Minutes Till Dawn",
-    "url": "/games/10minutestilldawn/index.html",
-    "cover": "/png/games/10.webp"
+    "url": "/assets/gameassets/truffled/games/10minutestilldawn/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/10.webp"
   },
   {
     "name": "1v1.lol",
-    "url": "/gamefile/1v1.html",
-    "cover": "png/games/1v1.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/1v1.html",
+    "cover": "/assets/gameassets/truffled/imgs/1v1.webp"
   },
   {
     "name": "2048",
-    "url": "/games/2048/index.html",
-    "cover": "png/games/2048.webp"
+    "url": "/assets/gameassets/truffled/games/2048/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/2048.webp"
   },
   {
     "name": "20 Minutes Till Dawn",
-    "url": "/games/20minutesbog/index.html",
-    "cover": "/png/games/20mtd.webp"
+    "url": "/assets/gameassets/truffled/games/20minutesbog/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/20mtd.webp"
   },
   {
     "name": "30",
-    "url": "/games/30dolar/index.html",
-    "cover": "/png/games/30.webp"
+    "url": "/assets/gameassets/truffled/games/30dolar/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/30.webp"
   },
   {
     "name": "-3",
-    "url": "/games/minus3/index.html",
-    "cover": "/png/games/minus3.webp"
+    "url": "/assets/gameassets/truffled/games/minus3/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/minus3.webp"
   },
   {
     "name": "-b",
-    "url": "/games/minusbog/index.html",
-    "cover": "/png/games/qq.webp"
+    "url": "/assets/gameassets/truffled/games/minusbog/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/qq.webp"
   },
   {
     "name": "A Difficult Game About Climbing, Webport",
-    "url": "/gamefile/adgac.html",
-    "cover": "png/games/adgac.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/adgac.html",
+    "cover": "/assets/gameassets/truffled/imgs/adgac.webp"
   },
   {
     "name": "A Game About Feeding A Blackhole",
-    "url": "/gamefile/blackhole.html",
-    "cover": "/png/games/blackhole.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/blackhole.html",
+    "cover": "/assets/gameassets/truffled/imgs/blackhole.webp"
   },
   {
     "name": "A Small World Cup",
-    "url": "/gamefile/aswc.html",
-    "cover": "png/games/worldcup.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/aswc.html",
+    "cover": "/assets/gameassets/truffled/imgs/worldcup.webp"
   },
   {
     "name": "Academytale, Webport",
-    "url": "/games/academytale/index.html",
-    "cover": "/png/games/academytale.webp"
+    "url": "/assets/gameassets/truffled/games/academytale/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/academytale.webp"
   },
   {
     "name": "Achievement Unlocked",
-    "url": "/games/achieveunlocked/index.html",
-    "cover": "/png/games/achieve.webp"
+    "url": "/assets/gameassets/truffled/games/achieveunlocked/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/achieve.webp"
   },
   {
     "name": "ADOFAI",
-    "url": "/games/a-dance-of-fire-and-ice/index.html",
-    "cover": "png/games/adofai.webp"
+    "url": "/assets/gameassets/truffled/games/a-dance-of-fire-and-ice/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/adofai.webp"
   },
   {
     "name": "Adventure Capitalist",
-    "url": "/games/adventure/index.html",
-    "cover": "/png/games/adventure.webp"
+    "url": "/assets/gameassets/truffled/games/adventure/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/adventure.webp"
   },
   {
     "name": "Amanda the adventurer, Webport",
     "altNames": [
       "Amanda the adventurer"
     ],
-    "url": "/games/amanda-the-adventurer/index.html",
-    "cover": "/png/games/aman.webp"
+    "url": "/assets/gameassets/truffled/games/amanda-the-adventurer/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/aman.webp"
   },
   {
     "name": "Among us",
-    "url": "/games/amongus/index.html",
-    "cover": "/png/games/among.webp"
+    "url": "/assets/gameassets/truffled/games/amongus/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/among.webp"
   },
   {
     "name": "Amaze",
-    "url": "/games/amaze/index.html",
-    "cover": "/png/games/amaze.webp"
+    "url": "/assets/gameassets/truffled/games/amaze/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/amaze.webp"
   },
   {
     "name": "Angry Birds",
-    "url": "/gamefile/Angrybirds.html",
-    "cover": "/png/games/angry.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/Angrybirds.html",
+    "cover": "/assets/gameassets/truffled/imgs/angry.webp"
   },
   {
     "name": "Angry Birds Epic, Webport",
-    "url": "/games/Epic/index.html",
-    "cover": "/png/games/epic.webp"
+    "url": "/assets/gameassets/truffled/games/Epic/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/epic.webp"
   },
   {
     "name": "Angry Birds Online",
-    "url": "/gamefile/angrybirdsonline.html",
-    "cover": "/png/games/angrybirdsonline.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/angrybirdsonline.html",
+    "cover": "/assets/gameassets/truffled/imgs/angrybirdsonline.webp"
   },
   {
     "name": "Animal Crossing Population: Growing!, Webport",
-    "url": "/games/slider/index.html",
-    "cover": "/png/games/acpg.webp"
+    "url": "/assets/gameassets/truffled/games/slider/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/acpg.webp"
   },
   {
     "name": "Animal Crossing Wild World",
-    "url": "/gamefile/acww.html",
-    "cover": "/png/games/acww.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/acww.html",
+    "cover": "/assets/gameassets/truffled/imgs/acww.webp"
   },
   {
     "name": "Antonblast",
-    "url": "/gamefile/anton.html",
-    "cover": "/png/games/anton.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/anton.html",
+    "cover": "/assets/gameassets/truffled/imgs/anton.webp"
   },
   {
     "name": "Apes Vs Helium, Webport",
     "altNames": [
       "Apes Vs Helium"
     ],
-    "url": "/games/AVHPort/index.html",
-    "cover": "/png/games/avh.webp"
+    "url": "/assets/gameassets/truffled/games/AVHPort/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/avh.webp"
   },
   {
     "name": "Arthur's Nightmare, Webport",
     "altNames": [
       "Arthur's Nightmare"
     ],
-    "url": "/gamefile/arthur.html",
-    "cover": "/png/games/arthursnight.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/arthur.html",
+    "cover": "/assets/gameassets/truffled/imgs/arthursnight.webp"
   },
   {
     "name": "Bad Icecream 1",
-    "url": "/gamefile/badice1.html",
-    "cover": "/png/games/badice1.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/badice1.html",
+    "cover": "/assets/gameassets/truffled/imgs/badice1.webp"
   },
   {
     "name": "Bad Icecream 2",
-    "url": "/gamefile/badice2.html",
-    "cover": "/png/games/badice2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/badice2.html",
+    "cover": "/assets/gameassets/truffled/imgs/badice2.webp"
   },
   {
     "name": "Bad Icecream 3",
-    "url": "/gamefile/badice3.html",
-    "cover": "/png/games/badice3.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/badice3.html",
+    "cover": "/assets/gameassets/truffled/imgs/badice3.webp"
   },
   {
     "name": "Bad Parenting, Webport",
     "altNames": [
       "Bad Parenting"
     ],
-    "url": "/games/bad/index.html",
-    "cover": "png/games/bad.webp"
+    "url": "/assets/gameassets/truffled/games/bad/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/bad.webp"
   },
   {
     "name": "Bad Piggies",
-    "url": "/gamefile/piggies.html",
-    "cover": "/png/games/badp.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/piggies.html",
+    "cover": "/assets/gameassets/truffled/imgs/badp.webp"
   },
   {
     "name": "Bad time Simulator",
-    "url": "/games/bts/index.html",
-    "cover": "/png/games/badt.webp"
+    "url": "/assets/gameassets/truffled/games/bts/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/badt.webp"
   },
   {
     "name": "Balatro, Webport",
     "altNames": [
       "Balatro"
     ],
-    "url": "/games/balatro/index.html",
-    "cover": "png/games/bal.webp"
+    "url": "/assets/gameassets/truffled/games/balatro/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/bal.webp"
   },
   {
     "name": "Baldi's Basics",
-    "url": "/games/baldis-basics/index.html",
-    "cover": "/png/games/baldi.webp"
+    "url": "/assets/gameassets/truffled/games/baldis-basics/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/baldi.webp"
   },
   {
     "name": "Baldi's Basics Birthday Bash, Webport",
-    "url": "/games/bday/index.html",
-    "cover": "/png/games/bday.webp"
+    "url": "/assets/gameassets/truffled/games/bday/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/bday.webp"
   },
   {
     "name": "Baldi's Basics Classic Remastered, Webport",
     "altNames": [
       "Baldi's Basics Classic Remastered"
     ],
-    "url": "/games/BBCR/index.html",
-    "cover": "/png/games/baldire.webp"
+    "url": "/assets/gameassets/truffled/games/BBCR/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/baldire.webp"
   },
   {
     "name": "Baldi's Basics Plus, Webport",
     "altNames": [
       "Baldi's Basics Plus"
     ],
-    "url": "/gamefile/bbp.html",
-    "cover": "/png/games/baldiplus.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/bbp.html",
+    "cover": "/assets/gameassets/truffled/imgs/baldiplus.webp"
   },
   {
     "name": "Baldi's Fun New School Plus Ultimate Edition",
     "altNames": [
       "Baldi's Basics Classic Remastered"
     ],
-    "url": "/games/bfs/",
-    "cover": "/png/games/bfs.webp"
+    "url": "/assets/gameassets/truffled/games/bfs/",
+    "cover": "/assets/gameassets/truffled/imgs/bfs.webp"
   },
   {
     "name": "Baldi's Basics Ultra Decompile",
-    "url": "/gamefile/baldidecomp.html",
-    "cover": "/png/games/bbudc.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/baldidecomp.html",
+    "cover": "/assets/gameassets/truffled/imgs/bbudc.webp"
   },
   {
     "name": "Baldurs Gate 2, Webport",
     "altNames": [
       "Baldurs Gate 2"
     ],
-    "url": "/games/baldurs-gate-2/index.html",
-    "cover": "/png/games/gate2.webp"
+    "url": "/assets/gameassets/truffled/games/baldurs-gate-2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/gate2.webp"
   },
   {
     "name": "Banjo Kazooie",
-    "url": "/gamefile/banjokazooie.html",
-    "cover": "/png/games/banjokazooie.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/banjokazooie.html",
+    "cover": "/assets/gameassets/truffled/imgs/banjokazooie.webp"
   },
   {
     "name": "Bart Bash",
-    "url": "/gamefile/bartbash.html",
-    "cover": "/png/games/bartbash.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/bartbash.html",
+    "cover": "/assets/gameassets/truffled/imgs/bartbash.webp"
   },
   {
     "name": "Bart Blast",
-    "url": "/gamefile/bart.html",
-    "cover": "/png/games/bart.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/bart.html",
+    "cover": "/assets/gameassets/truffled/imgs/bart.webp"
   },
   {
     "name": "Baseball Bros",
-    "url": "/games/baseballbros/index.html",
-    "cover": "png/games/basebros.webp"
+    "url": "/assets/gameassets/truffled/games/baseballbros/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/basebros.webp"
   },
   {
     "name": "Basket Bros",
-    "url": "/gamefile/basket.html",
-    "cover": "/png/games/basketbro.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/basket.html",
+    "cover": "/assets/gameassets/truffled/imgs/basketbro.webp"
   },
   {
     "name": "Basket Random",
-    "url": "/games/basket-random/index.html",
-    "cover": "png/games/basket.webp"
+    "url": "/assets/gameassets/truffled/games/basket-random/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/basket.webp"
   },
   {
     "name": "Basketball stars",
-    "url": "/games/basketballstars/index.html",
-    "cover": "/png/games/basketstars.webp"
+    "url": "/assets/gameassets/truffled/games/basketballstars/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/basketstars.webp"
   },
   {
     "name": "Beatblock, Webport",
-    "url": "/games/beatblock/index.html",
-    "cover": "png/games/beatblock.webp"
+    "url": "/assets/gameassets/truffled/games/beatblock/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/beatblock.webp"
   },
   {
     "name": "Bee Movie Game",
-    "url": "/games/beemovie/index.html",
-    "cover": "png/games/bee.webp"
+    "url": "/assets/gameassets/truffled/games/beemovie/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/bee.webp"
   },
   {
     "name": "Bendy And The Ink Machine, Webport",
     "altNames": [
       "Bendy And The Ink Machine"
     ],
-    "url": "/games/bendy/index.html",
-    "cover": "png/games/bendy.webp"
+    "url": "/assets/gameassets/truffled/games/bendy/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/bendy.webp"
   },
   {
     "name": "Bergentruck, Webport",
     "altNames": [
       "Bergentruck"
     ],
-    "url": "/games/bergentruck/index.html",
-    "cover": "/png/games/ber.webp"
+    "url": "/assets/gameassets/truffled/games/bergentruck/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/ber.webp"
   },
   {
     "name": "Bfdia 5b",
-    "url": "/games/bfdia 5b/index.html",
-    "cover": "/png/games/bfdia5b.webp"
+    "url": "/assets/gameassets/truffled/games/bfdia 5b/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/bfdia5b.webp"
   },
   {
     "name": "Bitlife",
-    "url": "/games/bitlife/index.html",
-    "cover": "png/games/bit.webp"
+    "url": "/assets/gameassets/truffled/games/bitlife/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/bit.webp"
   },
   {
     "name": "Black Jack",
-    "url": "/gamefile/BlackJack.html",
-    "cover": "/png/games/blackjack.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/BlackJack.html",
+    "cover": "/assets/gameassets/truffled/imgs/blackjack.webp"
   },
   {
     "name": "Block Blast",
-    "url": "/games/block-blast/index.html",
-    "cover": "png/games/unnamed.webp"
+    "url": "/assets/gameassets/truffled/games/block-blast/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/unnamed.webp"
   },
   {
     "name": "Bloodmoney, Webport",
     "altNames": [
       "Bloodmoney"
     ],
-    "url": "/games/bloodmoney/index.html",
-    "cover": "/png/games/blood.webp"
+    "url": "/assets/gameassets/truffled/games/bloodmoney/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/blood.webp"
   },
   {
     "name": "Bloon TD1",
-    "url": "/games/bloonstd/index.html",
-    "cover": "png/games/bloons.webp"
+    "url": "/assets/gameassets/truffled/games/bloonstd/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/bloons.webp"
   },
   {
     "name": "Bloon TD2",
-    "url": "/games/bloonstd2/index.html",
-    "cover": "/png/games/blo2.webp"
+    "url": "/assets/gameassets/truffled/games/bloonstd2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/blo2.webp"
   },
   {
     "name": "Bloon TD3",
-    "url": "/games/btd3/index.html",
-    "cover": "/png/games/blo3.webp"
+    "url": "/assets/gameassets/truffled/games/btd3/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/blo3.webp"
   },
   {
     "name": "Bloon TD4",
-    "url": "/gamefile/bloonstd4.html",
-    "cover": "/png/games/btd4.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/bloonstd4.html",
+    "cover": "/assets/gameassets/truffled/imgs/btd4.webp"
   },
   {
     "name": "Bloons TD5",
-    "url": "/games/btd5/index.html",
-    "cover": "/png/games/blo5.webp"
+    "url": "/assets/gameassets/truffled/games/btd5/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/blo5.webp"
   },
   {
     "name": "Bloons TD6",
-    "url": "/games/btd6/index.html",
-    "cover": "/png/games/blo6.webp"
+    "url": "/assets/gameassets/truffled/games/btd6/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/blo6.webp"
   },
   {
     "name": "Bloxors",
-    "url": "/games/bloxors/index.html",
-    "cover": "/png/games/bloxorz.webp"
+    "url": "/assets/gameassets/truffled/games/bloxors/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/bloxorz.webp"
   },
   {
     "name": "Bombmerman",
-    "url": "/gamefile/bomberman.html",
-    "cover": "png/games/bomberman.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/bomberman.html",
+    "cover": "/assets/gameassets/truffled/imgs/bomberman.webp"
   },
   {
     "name": "Bombmerman 2",
-    "url": "/gamefile/bomberman2.html",
-    "cover": "png/games/bomberman2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/bomberman2.html",
+    "cover": "/assets/gameassets/truffled/imgs/bomberman2.webp"
   },
   {
     "name": "Boxing Random",
-    "url": "/gamefile/boxing.html",
-    "cover": "png/games/boxing.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/boxing.html",
+    "cover": "/assets/gameassets/truffled/imgs/boxing.webp"
   },
   {
     "name": "Brotato Paws And Claws, Webport",
     "altNames": [
       "Brotato"
     ],
-    "url": "/games/brotato2/index.html",
-    "cover": "png/games/paws.webp"
+    "url": "/assets/gameassets/truffled/games/brotato2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/paws.webp"
   },
   {
     "name": "Buckshot Roulette, Webport",
     "altNames": [
       "Buckshot Roulette"
     ],
-    "url": "/games/buckshot/index.html",
-    "cover": "png/games/buck.webp"
+    "url": "/assets/gameassets/truffled/games/buckshot/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/buck.webp"
   },
   {
     "name": "Burrito Bison",
-    "url": "/games/burrito/index.html",
-    "cover": "png/games/burrito.webp"
+    "url": "/assets/gameassets/truffled/games/burrito/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/burrito.webp"
   },
   {
     "name": "Burrito Bison Revenge",
-    "url": "/gamefile/bbe.html",
-    "cover": "png/games/bbe.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/bbe.html",
+    "cover": "/assets/gameassets/truffled/imgs/bbe.webp"
   },
   {
     "name": "Capuchin, Webport",
-    "url": "/games/CapuchinBog/index.html",
-    "cover": "/png/games/capuchin.webp"
+    "url": "/assets/gameassets/truffled/games/CapuchinBog/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/capuchin.webp"
   },
   {
     "name": "CaseOhs Basics in Eating and Fast Food, Webport",
-    "url": "/gamefile/caseoh.html",
-    "cover": "/png/games/caseoh.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/caseoh.html",
+    "cover": "/assets/gameassets/truffled/imgs/caseoh.webp"
   },
   {
     "name": "Celeste, Webport",
-    "url": "/games/celeste/index.html",
-    "cover": "/png/games/celeste.webp"
+    "url": "/assets/gameassets/truffled/games/celeste/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/celeste.webp"
   },
   {
     "name": "Cheese Rolling, Webport",
-    "url": "/gamefile/cheese.html",
-    "cover": "/png/games/cheeser.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/cheese.html",
+    "cover": "/assets/gameassets/truffled/imgs/cheeser.webp"
   },
   {
     "name": "Christmas Massacre, Webport",
-    "url": "/gamefile/christmas.html",
-    "cover": "/png/games/christmas.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/christmas.html",
+    "cover": "/assets/gameassets/truffled/imgs/christmas.webp"
   },
   {
     "name": "Class Of 09, Webport",
     "altNames": [
       "Class Of 09"
     ],
-    "url": "/games/C09/index.html",
-    "cover": "png/games/class.webp"
+    "url": "/assets/gameassets/truffled/games/C09/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/class.webp"
   },
   {
     "name": "Class Of 09 Flipside, Webport",
     "altNames": [
       "Class Of 09 Flipside"
     ],
-    "url": "/games/C09FS/index.html",
-    "cover": "png/games/flip.webp"
+    "url": "/assets/gameassets/truffled/games/C09FS/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/flip.webp"
   },
   {
     "name": "Class Of 09 Re-Up, Webport",
     "altNames": [
       "Class Of 09 Re-Up"
     ],
-    "url": "/games/C09RU/index.html",
-    "cover": "png/games/reup.webp"
+    "url": "/assets/gameassets/truffled/games/C09RU/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/reup.webp"
   },
   {
     "name": "Clover Pit",
-    "url": "/gamefile/cloverpit.html",
-    "cover": "/png/games/clover.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/cloverpit.html",
+    "cover": "/assets/gameassets/truffled/imgs/clover.webp"
   },
   {
     "name": "Cluster Rush",
-    "url": "/games/cluster/index.html",
-    "cover": "/png/games/cluster.webp"
+    "url": "/assets/gameassets/truffled/games/cluster/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/cluster.webp"
   },
   {
     "name": "Coffee Talk",
-    "url": "/games/coffee/index.html",
-    "cover": "png/games/coffee.webp"
+    "url": "/assets/gameassets/truffled/games/coffee/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/coffee.webp"
   },
   {
     "name": "Cookie Clicker",
-    "url": "/games/cookie-clicker/index.html",
-    "cover": "png/games/cookie.webp"
+    "url": "/assets/gameassets/truffled/games/cookie-clicker/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/cookie.webp"
   },
   {
     "name": "Cooking Mama",
-    "url": "/gamefile/cookingmama.html",
-    "cover": "png/games/cookingmama.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/cookingmama.html",
+    "cover": "/assets/gameassets/truffled/imgs/cookingmama.webp"
   },
   {
     "name": "Cooking Mama 2",
-    "url": "/gamefile/cookingmama2.html",
-    "cover": "png/games/cookingmama2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/cookingmama2.html",
+    "cover": "/assets/gameassets/truffled/imgs/cookingmama2.webp"
   },
   {
     "name": "Cooking Mama 3",
-    "url": "/gamefile/cookingmama3.html",
-    "cover": "png/games/cookingmama3.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/cookingmama3.html",
+    "cover": "/assets/gameassets/truffled/imgs/cookingmama3.webp"
   },
   {
     "name": "Counter Stike 0.8",
-    "url": "/games/psp/cs/index.html",
-    "cover": "/png/games/cs08.webp"
+    "url": "/assets/gameassets/truffled/games/psp/cs/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/cs08.webp"
   },
   {
     "name": "Crash Bandicoot 1",
-    "url": "/gamefile/crash1.html",
-    "cover": "/png/games/crash1.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/crash1.html",
+    "cover": "/assets/gameassets/truffled/imgs/crash1.webp"
   },
   {
     "name": "Crash Bandicoot 2",
-    "url": "/gamefile/crash2.html",
-    "cover": "/png/games/crash2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/crash2.html",
+    "cover": "/assets/gameassets/truffled/imgs/crash2.webp"
   },
   {
     "name": "Crash Bandicoot 3",
-    "url": "/gamefile/crash3.html",
-    "cover": "/png/games/crash3.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/crash3.html",
+    "cover": "/assets/gameassets/truffled/imgs/crash3.webp"
   },
   {
     "name": "Crazy Balls",
-    "url": "/gamefile/balls.html",
-    "cover": "/png/games/balls.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/balls.html",
+    "cover": "/assets/gameassets/truffled/imgs/balls.webp"
   },
   {
     "name": "CrazyCattle3D, Webport",
     "altNames": [
       "CrazyCattle3D"
     ],
-    "url": "/games/cattle3d/index.html",
-    "cover": "/png/games/crazyca.webp"
+    "url": "/assets/gameassets/truffled/games/cattle3d/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/crazyca.webp"
   },
   {
     "name": "Crossy Roads",
-    "url": "/gamefile/crossy.html",
-    "cover": "/png/games/crossy.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/crossy.html",
+    "cover": "/assets/gameassets/truffled/imgs/crossy.webp"
   },
   {
     "name": "Cruelty Squad, Webport",
-    "url": "/games/cruelty/index.html",
-    "cover": "/png/games/cruelty.webp"
+    "url": "/assets/gameassets/truffled/games/cruelty/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/cruelty.webp"
   },
   {
     "name": "Csgo Clicker",
-    "url": "/games/csgo-clicker/index.html",
-    "cover": "png/games/csgo.webp"
+    "url": "/assets/gameassets/truffled/games/csgo-clicker/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/csgo.webp"
   },
   {
     "name": "Cuphead, Webport",
     "altNames": [
       "Cuphead"
     ],
-    "url": "/games/Cuphead/index.html",
-    "cover": "/png/games/cup.webp"
+    "url": "/assets/gameassets/truffled/games/Cuphead/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/cup.webp"
   },
   {
     "name": "Customer Support, Webport",
     "altNames": [
       "Customer Support"
     ],
-    "url": "/games/CustomerSupport/index.html",
-    "cover": "/png/games/cus.webp"
+    "url": "/assets/gameassets/truffled/games/CustomerSupport/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/cus.webp"
   },
   {
     "name": "Cut The Rope",
-    "url": "/gamefile/cut.html",
-    "cover": "png/games/cut1.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/cut.html",
+    "cover": "/assets/gameassets/truffled/imgs/cut1.webp"
   },
   {
     "name": "Cut The Rope : Time Travel",
-    "url": "/gamefile/time.html",
-    "cover": "png/games/time.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/time.html",
+    "cover": "/assets/gameassets/truffled/imgs/time.webp"
   },
   {
     "name": "Cut The Rope Holiday",
-    "url": "/gamefile/hol.html",
-    "cover": "/png/games/cut2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/hol.html",
+    "cover": "/assets/gameassets/truffled/imgs/cut2.webp"
   },
   {
     "name": "Dadish",
-    "url": "/gamefile/dadish.html",
-    "cover": "/png/games/dadish.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/dadish.html",
+    "cover": "/assets/gameassets/truffled/imgs/dadish.webp"
   },
   {
     "name": "Dadish 2",
-    "url": "/gamefile/dadish2.html",
-    "cover": "/png/games/dadish2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/dadish2.html",
+    "cover": "/assets/gameassets/truffled/imgs/dadish2.webp"
   },
   {
     "name": "Dadish 3",
-    "url": "/gamefile/dadish3.html",
-    "cover": "/png/games/dadish3.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/dadish3.html",
+    "cover": "/assets/gameassets/truffled/imgs/dadish3.webp"
   },
   {
     "name": "Dadish 3d",
-    "url": "/gamefile/dadish3d.html",
-    "cover": "/png/games/dadish3d.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/dadish3d.html",
+    "cover": "/assets/gameassets/truffled/imgs/dadish3d.webp"
   },
   {
     "name": "Dadish Daily",
-    "url": "/gamefile/daily.html",
-    "cover": "/png/games/daily.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/daily.html",
+    "cover": "/assets/gameassets/truffled/imgs/daily.webp"
   },
   {
     "name": "Danganronpa",
-    "url": "/games/danganronpa/index.html",
-    "cover": "/png/games/dan.webp"
+    "url": "/assets/gameassets/truffled/games/danganronpa/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/dan.webp"
   },
   {
     "name": "DEAD PLATE, Webport",
     "altNames": [
       "DEAD PLATE"
     ],
-    "url": "/gamefile/dead.html",
-    "cover": "/png/games/deadp.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/dead.html",
+    "cover": "/assets/gameassets/truffled/imgs/deadp.webp"
   },
   {
     "name": "Dead Tapes",
-    "url": "/games/deadtapesfinal/index.html",
-    "cover": "/png/games/deadta.webp"
+    "url": "/assets/gameassets/truffled/games/deadtapesfinal/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/deadta.webp"
   },
   {
     "name": "Deadseat, Webport",
     "altNames": [
       "Deadseat"
     ],
-    "url": "/games/deadseat/index.html",
-    "cover": "/png/games/deadseat.webp"
+    "url": "/assets/gameassets/truffled/games/deadseat/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/deadseat.webp"
   },
   {
     "name": "Death Run 3D",
-    "url": "/games/death-run-3d/index.html",
-    "cover": "png/games/death.webp"
+    "url": "/assets/gameassets/truffled/games/death-run-3d/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/death.webp"
   },
   {
     "name": "Deltarune, Webport",
     "altNames": [
       "Deltarune"
     ],
-    "url": "/games/deltarune/index.html",
-    "cover": "/png/games/deltarune.webp"
+    "url": "/assets/gameassets/truffled/games/deltarune/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/deltarune.webp"
   },
   {
     "name": "Deltatraveler, Webport",
     "altNames": [
       "Deltatraveler"
     ],
-    "url": "/gamefile/deltatr.html",
-    "cover": "/png/games/deltatr.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/deltatr.html",
+    "cover": "/assets/gameassets/truffled/imgs/deltatr.webp"
   },
   {
     "name": "Diablo",
-    "url": "/games/diablo/index.html",
-    "cover": "/png/games/diablo.webp"
+    "url": "/assets/gameassets/truffled/games/diablo/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/diablo.webp"
   },
   {
     "name": "Dice A Million, Webport",
-    "url": "/gamefile/diceamillion.html",
-    "cover": "/png/games/diceamillion.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/diceamillion.html",
+    "cover": "/assets/gameassets/truffled/imgs/diceamillion.webp"
   },
   {
     "name": "Dinosaur",
-    "url": "/games/dinosaur/index.html",
-    "cover": "/png/games/dino.webp"
+    "url": "/assets/gameassets/truffled/games/dinosaur/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/dino.webp"
   },
   {
     "name": "Do Not Take This Cat Home, Webport",
     "altNames": [
       "Do Not Take This Cat Home"
     ],
-    "url": "/games/donottakethiscathome/index.html",
-    "cover": "png/games/dont.webp"
+    "url": "/assets/gameassets/truffled/games/donottakethiscathome/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/dont.webp"
   },
   {
     "name": "Doge Miner",
-    "url": "/gamefile/Doge Miner.html",
-    "cover": "/png/games/doge.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/Doge Miner.html",
+    "cover": "/assets/gameassets/truffled/imgs/doge.webp"
   },
   {
     "name": "Doge Miner 2",
-    "url": "/gamefile/dm2.html",
-    "cover": "/png/games/dogeminer2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/dm2.html",
+    "cover": "/assets/gameassets/truffled/imgs/dogeminer2.webp"
   },
   {
     "name": "Dome Keeper, Webport",
-    "url": "/games/domekeeper/index.html",
-    "cover": "/png/games/domekeeper.webp"
+    "url": "/assets/gameassets/truffled/games/domekeeper/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/domekeeper.webp"
   },
   {
     "name": "Doodle Jump",
-    "url": "/gamefile/Doodle Jump.html",
-    "cover": "png/games/doodle.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/Doodle Jump.html",
+    "cover": "/assets/gameassets/truffled/imgs/doodle.webp"
   },
   {
     "name": "Doom",
-    "url": "/games/doom/index.html",
-    "cover": "/png/games/doom.webp"
+    "url": "/assets/gameassets/truffled/games/doom/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/doom.webp"
   },
   {
     "name": "Doom 2",
-    "url": "/gamefile/doom2.html",
-    "cover": "/png/games/doom2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/doom2.html",
+    "cover": "/assets/gameassets/truffled/imgs/doom2.webp"
   },
   {
     "name": "Doom 3",
-    "url": "/games/doom3/index.html",
-    "cover": "/png/games/doom3.webp"
+    "url": "/assets/gameassets/truffled/games/doom3/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/doom3.webp"
   },
   {
     "name": "Doom 64",
-    "url": "/gamefile/doom64.html",
-    "cover": "/png/games/doom64.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/doom64.html",
+    "cover": "/assets/gameassets/truffled/imgs/doom64.webp"
   },
   {
     "name": "Dr. Mario",
-    "url": "/gamefile/drmario.html",
-    "cover": "png/games/drmario.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/drmario.html",
+    "cover": "/assets/gameassets/truffled/imgs/drmario.webp"
   },
   {
     "name": "Dreadhead Parkour",
-    "url": "/gamefile/dread.html",
-    "cover": "png/games/dread.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/dread.html",
+    "cover": "/assets/gameassets/truffled/imgs/dread.webp"
   },
   {
     "name": "Drift Boss",
-    "url": "/games/drift-boss/index.html",
-    "cover": "png/games/driftboss.webp"
+    "url": "/assets/gameassets/truffled/games/drift-boss/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/driftboss.webp"
   },
   {
     "name": "Drift Hunter",
-    "url": "/gamefile/drift.html",
-    "cover": "png/games/hunt.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/drift.html",
+    "cover": "/assets/gameassets/truffled/imgs/hunt.webp"
   },
   {
     "name": "Drive Mad",
-    "url": "/games/drive-mad/index.html",
-    "cover": "png/games/drive.webp"
+    "url": "/assets/gameassets/truffled/games/drive-mad/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/drive.webp"
   },
   {
     "name": "Duck Life 1",
-    "url": "/games/ducklife1/index.html",
-    "cover": "png/games/duck1.webp"
+    "url": "/assets/gameassets/truffled/games/ducklife1/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/duck1.webp"
   },
   {
     "name": "Duck Life 2",
-    "url": "/games/ducklife2/index.html",
-    "cover": "/png/games/duck2.webp"
+    "url": "/assets/gameassets/truffled/games/ducklife2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/duck2.webp"
   },
   {
     "name": "Duck Life 3",
-    "url": "/games/ducklife3/index.html",
-    "cover": "/png/games/duck3.webp"
+    "url": "/assets/gameassets/truffled/games/ducklife3/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/duck3.webp"
   },
   {
     "name": "Duck Life 4",
-    "url": "/games/ducklife4/index.html",
-    "cover": "/png/games/duck4.webp"
+    "url": "/assets/gameassets/truffled/games/ducklife4/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/duck4.webp"
   },
   {
     "name": "Duck Life 5",
-    "url": "/games/ducklife5/index.html",
-    "cover": "/png/games/duck5.webp"
+    "url": "/assets/gameassets/truffled/games/ducklife5/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/duck5.webp"
   },
   {
     "name": "Duck Life 6",
-    "url": "/games/ducklife6/index.html",
-    "cover": "/png/games/ducklife6.webp"
+    "url": "/assets/gameassets/truffled/games/ducklife6/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/ducklife6.webp"
   },
   {
     "name": "Duck Life 7",
-    "url": "/games/ducklife7/index.html",
-    "cover": "/png/games/ducklife7.webp"
+    "url": "/assets/gameassets/truffled/games/ducklife7/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/ducklife7.webp"
   },
   {
     "name": "Duck Life 8, Webport",
-    "url": "/games/ducklifeadv/",
-    "cover": "/png/games/ducklifeadc.webp"
+    "url": "/assets/gameassets/truffled/games/ducklifeadv/",
+    "cover": "/assets/gameassets/truffled/imgs/ducklifeadc.webp"
   },
   {
     "name": "Dumb Ways To Die",
-    "url": "/games/dumb/index.html",
-    "cover": "/png/games/dumb.webp"
+    "url": "/assets/gameassets/truffled/games/dumb/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/dumb.webp"
   },
   {
     "name": "Eggy Car",
-    "url": "/gamefile/eggycar.html",
-    "cover": "/png/games/eggycar.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/eggycar.html",
+    "cover": "/assets/gameassets/truffled/imgs/eggycar.webp"
   },
   {
     "name": "Escape Road",
-    "url": "/gamefile/escape.html",
-    "cover": "/png/games/road.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/escape.html",
+    "cover": "/assets/gameassets/truffled/imgs/road.webp"
   },
   {
     "name": "Escape Road 2",
-    "url": "/gamefile/road2.html",
-    "cover": "/png/games/escape2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/road2.html",
+    "cover": "/assets/gameassets/truffled/imgs/escape2.webp"
   },
   {
     "name": "Escape Road 3",
-    "url": "/gamefile/escape3.html",
-    "cover": "/png/games/escape3.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/escape3.html",
+    "cover": "/assets/gameassets/truffled/imgs/escape3.webp"
   },
   {
     "name": "Escape Road City 2",
-    "url": "/gamefile/roadcity2.html",
-    "cover": "/png/games/roadcity.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/roadcity2.html",
+    "cover": "/assets/gameassets/truffled/imgs/roadcity.webp"
   },
   {
     "name": "Falling Fred",
-    "url": "/games/falling/index.html",
-    "cover": "/png/games/super-falling-fred.webp"
+    "url": "/assets/gameassets/truffled/games/falling/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/super-falling-fred.webp"
   },
   {
     "name": "Fallout",
-    "url": "/gamefile/falloutt.html",
-    "cover": "/png/games/fallout.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/falloutt.html",
+    "cover": "/assets/gameassets/truffled/imgs/fallout.webp"
   },
   {
     "name": "Fallout 2, Webport",
-    "url": "/games/fo2/index.html",
-    "cover": "/png/games/fallout2.webp"
+    "url": "/assets/gameassets/truffled/games/fo2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fallout2.webp"
   },
   {
     "name": "Fancy Pants Adventures",
-    "url": "/games/fancypantsadventures/index.html",
-    "cover": "/png/games/fpa1.webp"
+    "url": "/assets/gameassets/truffled/games/fancypantsadventures/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fpa1.webp"
   },
   {
     "name": "Fancy Pants Adventures 2",
-    "url": "/games/fancypantsadventures2/index.html",
-    "cover": "/png/games/fancy2.webp"
+    "url": "/assets/gameassets/truffled/games/fancypantsadventures2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fancy2.webp"
   },
   {
     "name": "Fancy Pants Adventures 3",
-    "url": "/gamefile/fpa3.html",
-    "cover": "/png/games/fpa3.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/fpa3.html",
+    "cover": "/assets/gameassets/truffled/imgs/fpa3.webp"
   },
   {
     "name": "Fears To Fathom: Home Alone, Webport",
-    "url": "/games/ftf/index.html",
-    "cover": "/png/games/fear.webp"
+    "url": "/assets/gameassets/truffled/games/ftf/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fear.webp"
   },
   {
     "name": "FEZ, Webport",
-    "url": "/games/FEZ/index.html",
-    "cover": "/png/games/fez.webp"
+    "url": "/assets/gameassets/truffled/games/FEZ/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fez.webp"
   },
   {
     "name": "Final Fantasy VII",
-    "url": "/gamefile/ffvii.html",
-    "cover": "/png/games/ffvii.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/ffvii.html",
+    "cover": "/assets/gameassets/truffled/imgs/ffvii.webp"
   },
   {
     "name": "Fireboy and Watergirl",
-    "url": "/games/watergirl-1/index.html",
-    "cover": "/png/games/fire1.webp"
+    "url": "/assets/gameassets/truffled/games/watergirl-1/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fire1.webp"
   },
   {
     "name": "Fireboy and Watergirl 2",
-    "url": "/games/watergirl-2/index.html",
-    "cover": "/png/games/fire2.webp"
+    "url": "/assets/gameassets/truffled/games/watergirl-2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fire2.webp"
   },
   {
     "name": "Fireboy and Watergirl 3",
-    "url": "/games/watergirl-3/index.html",
-    "cover": "/png/games/fire3.webp"
+    "url": "/assets/gameassets/truffled/games/watergirl-3/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fire3.webp"
   },
   {
     "name": "Fireboy and Watergirl 4",
-    "url": "/games/watergirl-4/index.html",
-    "cover": "/png/games/fire4.webp"
+    "url": "/assets/gameassets/truffled/games/watergirl-4/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fire4.webp"
   },
   {
     "name": "FISH, Webport",
-    "url": "/gamefile/fish.html",
-    "cover": "/png/games/fish.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/fish.html",
+    "cover": "/assets/gameassets/truffled/imgs/fish.webp"
   },
   {
     "name": "Five Nights At Candys",
-    "url": "/gamefile/fnac.html",
-    "cover": "/png/games/fnac.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/fnac.html",
+    "cover": "/assets/gameassets/truffled/imgs/fnac.webp"
   },
   {
     "name": "Five Nights At Candys 2",
-    "url": "/gamefile/fnac2.html",
-    "cover": "/png/games/fnac2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/fnac2.html",
+    "cover": "/assets/gameassets/truffled/imgs/fnac2.webp"
   },
   {
     "name": "Five Nights At Epsteins, Webport",
     "altNames": [
       "Five Nights At Epsteins"
     ],
-    "url": "/gamefile/fnae.html",
-    "cover": "/png/games/fnae.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/fnae.html",
+    "cover": "/assets/gameassets/truffled/imgs/fnae.webp"
   },
   {
     "name": "Five Nights At Frickbears 3, Webport",
     "altNames": [
       "Five Nights At Frickbears 3"
     ],
-    "url": "/games/fb3/index.html",
-    "cover": "/png/games/fnafb3.webp"
+    "url": "/assets/gameassets/truffled/games/fb3/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fnafb3.webp"
   },
   {
     "name": "Five Nights At Last Breath, Webport",
-    "url": "/gamefile/breath.html",
-    "cover": "/png/games/breath.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/breath.html",
+    "cover": "/assets/gameassets/truffled/imgs/breath.webp"
   },
   {
     "name": "Flappy bird",
-    "url": "/games/flappybird/index.html",
-    "cover": "/png/games/flapp.webp"
+    "url": "/assets/gameassets/truffled/games/flappybird/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/flapp.webp"
   },
   {
     "name": "Flying Gorilla, Webport",
-    "url": "/gamefile/gorilla.html",
-    "cover": "/png/games/flying.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/gorilla.html",
+    "cover": "/assets/gameassets/truffled/imgs/flying.webp"
   },
   {
     "name": "FNAF",
-    "url": "/games/fnaf/index.html",
-    "cover": "png/games/splash.webp"
+    "url": "/assets/gameassets/truffled/games/fnaf/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/splash.webp"
   },
   {
     "name": "FNAF Sisters Location",
-    "url": "/gamefile/fnafs.html",
-    "cover": "/png/games/sister.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/fnafs.html",
+    "cover": "/assets/gameassets/truffled/imgs/sister.webp"
   },
   {
     "name": "FNAF Ultimate Custom Night",
-    "url": "/gamefile/fnafu.html",
-    "cover": "/png/games/custom.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/fnafu.html",
+    "cover": "/assets/gameassets/truffled/imgs/custom.webp"
   },
   {
     "name": "FNAF World",
-    "url": "/gamefile/fnafw.html",
-    "cover": "/png/games/fnafworld.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/fnafw.html",
+    "cover": "/assets/gameassets/truffled/imgs/fnafworld.webp"
   },
   {
     "name": "FNAF World Refreshed",
-    "url": "/games/fnw/index.html",
-    "cover": "/png/games/fne.webp"
+    "url": "/assets/gameassets/truffled/games/fnw/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fne.webp"
   },
   {
     "name": "FNAF2",
-    "url": "/games/2/index.html",
-    "cover": "/png/games/fnaf2.webp"
+    "url": "/assets/gameassets/truffled/games/2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fnaf2.webp"
   },
   {
     "name": "FNAF3",
-    "url": "/games/3/index.html",
-    "cover": "/png/games/3f.webp"
+    "url": "/assets/gameassets/truffled/games/3/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/3f.webp"
   },
   {
     "name": "FNAF4",
-    "url": "/games/fnaf4/index.html",
-    "cover": "/png/games/fnaf4.webp"
+    "url": "/assets/gameassets/truffled/games/fnaf4/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fnaf4.webp"
   },
   {
     "name": "FNAF4 Halloween",
-    "url": "/gamefile/ween.html",
-    "cover": "/png/games/hollowween.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/ween.html",
+    "cover": "/assets/gameassets/truffled/imgs/hollowween.webp"
   },
   {
     "name": "FNAW",
-    "url": "/gamefile/fnaw.html",
-    "cover": "/png/games/fnaw.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/fnaw.html",
+    "cover": "/assets/gameassets/truffled/imgs/fnaw.webp"
   },
   {
     "name": "FNF, Friday Night Funkin",
     "altNames": [
       "Friday Night Funkin"
     ],
-    "url": "/games/fnf/fnfog.html",
-    "cover": "png/games/fnf.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/fnfog.html",
+    "cover": "/assets/gameassets/truffled/imgs/fnf.webp"
   },
   {
     "name": "Friday Night Funkin Aethos",
-    "url": "/games/fnf/aethos.html",
-    "cover": "png/games/aethos.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/aethos.html",
+    "cover": "/assets/gameassets/truffled/imgs/aethos.webp"
   },
   {
     "name": "Friday Night Funkin Atrocity",
-    "url": "/games/fnf/atrocity.html",
-    "cover": "png/games/atrocity.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/atrocity.html",
+    "cover": "/assets/gameassets/truffled/imgs/atrocity.webp"
   },
   {
     "name": "Friday Night Funkin BFDI 26",
-    "url": "/games/fnf/bfdi26.html",
-    "cover": "png/games/bfdi26.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/bfdi26.html",
+    "cover": "/assets/gameassets/truffled/imgs/bfdi26.webp"
   },
   {
     "name": "Friday Night Funkin Bop City",
-    "url": "/games/fnf/bopcity.html",
-    "cover": "png/games/bopcity.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/bopcity.html",
+    "cover": "/assets/gameassets/truffled/imgs/bopcity.webp"
   },
   {
     "name": "Friday Night Funkin For A BFDI",
-    "url": "/games/fnf/ffabfdi.html",
-    "cover": "png/games/ffabfdi.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/ffabfdi.html",
+    "cover": "/assets/gameassets/truffled/imgs/ffabfdi.webp"
   },
   {
     "name": "Friday Night Funkin Garcello",
-    "url": "/games/fnf/garcello.html",
-    "cover": "png/games/garcello.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/garcello.html",
+    "cover": "/assets/gameassets/truffled/imgs/garcello.webp"
   },
   {
     "name": "Friday Night Funkin Get Digging",
-    "url": "/games/fnf/getdigging.html",
-    "cover": "png/games/getdigging.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/getdigging.html",
+    "cover": "/assets/gameassets/truffled/imgs/getdigging.webp"
   },
   {
     "name": "Friday Night Funkin Golden Apple",
-    "url": "/games/fnf/goldenapple.html",
-    "cover": "png/games/goldenapple.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/goldenapple.html",
+    "cover": "/assets/gameassets/truffled/imgs/goldenapple.webp"
   },
   {
     "name": "Friday Night Funkin Hex",
-    "url": "/games/fnf/hex.html",
-    "cover": "png/games/hex.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/hex.html",
+    "cover": "/assets/gameassets/truffled/imgs/hex.webp"
   },
   {
     "name": "Friday Night Funkin Horkglorpgloop",
-    "url": "/games/fnf/horkglorpgloop.html",
-    "cover": "png/games/infinite.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/horkglorpgloop.html",
+    "cover": "/assets/gameassets/truffled/imgs/infinite.webp"
   },
   {
     "name": "Friday Night Funkin Infinite Irida",
-    "url": "/games/fnf/infiniteiridra.html",
-    "cover": "png/games/hork.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/infiniteiridra.html",
+    "cover": "/assets/gameassets/truffled/imgs/hork.webp"
   },
   {
     "name": "Friday Night Funkin Kapi",
-    "url": "/games/fnf/kapi.html",
-    "cover": "png/games/kapi.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/kapi.html",
+    "cover": "/assets/gameassets/truffled/imgs/kapi.webp"
   },
   {
     "name": "Friday Night Funkin Mario Madness",
-    "url": "/games/fnf/mariomadness.html",
-    "cover": "png/games/mario.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/mariomadness.html",
+    "cover": "/assets/gameassets/truffled/imgs/mario.webp"
   },
   {
     "name": "Friday Night Funkin Hatsune Miku",
-    "url": "/games/fnf/miku.html",
-    "cover": "png/games/miku.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/miku.html",
+    "cover": "/assets/gameassets/truffled/imgs/miku.webp"
   },
   {
     "name": "Friday Night Funkin Nonsense",
-    "url": "/games/fnf/nonsense.html",
-    "cover": "png/games/nonsense.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/nonsense.html",
+    "cover": "/assets/gameassets/truffled/imgs/nonsense.webp"
   },
   {
     "name": "Friday Night Funkin Rewrite",
-    "url": "/games/fnf/rewrite.html",
-    "cover": "png/games/rewrite.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/rewrite.html",
+    "cover": "/assets/gameassets/truffled/imgs/rewrite.webp"
   },
   {
     "name": "Friday Night Funkin Rewrite 2",
-    "url": "/games/fnf/rewrite2.html",
-    "cover": "png/games/rewrite2.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/rewrite2.html",
+    "cover": "/assets/gameassets/truffled/imgs/rewrite2.webp"
   },
   {
     "name": "Friday Night Funkin Ron",
-    "url": "/games/fnf/ron.html",
-    "cover": "png/games/ron.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/ron.html",
+    "cover": "/assets/gameassets/truffled/imgs/ron.webp"
   },
   {
     "name": "Friday Night Funkin Shaggy",
-    "url": "/games/fnf/shaggy.html",
-    "cover": "png/games/shaggy.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/shaggy.html",
+    "cover": "/assets/gameassets/truffled/imgs/shaggy.webp"
   },
   {
     "name": "Friday Night Funkin Shaggy X Matt",
-    "url": "/games/fnf/shaggyxmatt.html",
-    "cover": "png/games/sxm.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/shaggyxmatt.html",
+    "cover": "/assets/gameassets/truffled/imgs/sxm.webp"
   },
   {
     "name": "Friday Night Funkin Shucks V2",
-    "url": "/games/fnf/shucksv2.html",
-    "cover": "png/games/shucksv2.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/shucksv2.html",
+    "cover": "/assets/gameassets/truffled/imgs/shucksv2.webp"
   },
   {
     "name": "Friday Night Funkin Vs. Tord",
-    "url": "/games/fnf/tord.html",
-    "cover": "png/games/tord.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/tord.html",
+    "cover": "/assets/gameassets/truffled/imgs/tord.webp"
   },
   {
     "name": "Friday Night Funkin Tricky",
-    "url": "/games/fnf/tricky.html",
-    "cover": "png/games/tricky.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/tricky.html",
+    "cover": "/assets/gameassets/truffled/imgs/tricky.webp"
   },
   {
     "name": "Friday Night Funkin TWIDDLEFINGER",
-    "url": "/games/fnf/TWIDDLEFINGER.html",
-    "cover": "png/games/twiddle.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/TWIDDLEFINGER.html",
+    "cover": "/assets/gameassets/truffled/imgs/twiddle.webp"
   },
   {
     "name": "Friday Night Funkin Whitty",
-    "url": "/games/fnf/whitty.html",
-    "cover": "png/games/whitty.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/whitty.html",
+    "cover": "/assets/gameassets/truffled/imgs/whitty.webp"
   },
   {
     "name": "Friday Night Funkin Zardy",
-    "url": "/games/fnf/zardy.html",
-    "cover": "png/games/zardy.webp"
+    "url": "/assets/gameassets/truffled/games/fnf/zardy.html",
+    "cover": "/assets/gameassets/truffled/imgs/zardy.webp"
   },
   {
     "name": "Football Bros",
-    "url": "/games/footballbros/index.html",
-    "cover": "png/games/footbros.webp"
+    "url": "/assets/gameassets/truffled/games/footballbros/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/footbros.webp"
   },
   {
     "name": "Fruit Ninja",
-    "url": "/games/fruitninja/index.html",
-    "cover": "/png/games/ninja.webp"
+    "url": "/assets/gameassets/truffled/games/fruitninja/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/ninja.webp"
   },
   {
     "name": "Fused240",
-    "url": "/games/fused240/index.html",
-    "cover": "png/games/fused240.webp"
+    "url": "/assets/gameassets/truffled/games/fused240/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fused240.webp"
   },
   {
     "name": "Gabriel's Awesome Schoolhouse, Webport",
     "altNames": [
       "Gabriel's Awesome Schoolhouse"
     ],
-    "url": "/gamefile/gash.html",
-    "cover": "/png/games/gabriel.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/gash.html",
+    "cover": "/assets/gameassets/truffled/imgs/gabriel.webp"
   },
   {
     "name": "Gacha Life",
-    "url": "/gamefile/life.html",
-    "cover": "/png/games/gachalife.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/life.html",
+    "cover": "/assets/gameassets/truffled/imgs/gachalife.webp"
   },
   {
     "name": "Gacha Verse",
-    "url": "/gamefile/verse.html",
-    "cover": "/png/games/gachaverse.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/verse.html",
+    "cover": "/assets/gameassets/truffled/imgs/gachaverse.webp"
   },
   {
     "name": "Getaway Shootout",
-    "url": "/games/getaway-shootout/index.html",
-    "cover": "/png/games/getaway.webp"
+    "url": "/assets/gameassets/truffled/games/getaway-shootout/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/getaway.webp"
   },
   {
     "name": "Geometry Dash, Webport",
-    "url": "/gamefile/gd.html",
-    "cover": "/png/games/gd.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/gd.html",
+    "cover": "/assets/gameassets/truffled/imgs/gd.webp"
   },
   {
     "name": "Getting Over It, Webport",
-    "url": "/gamefile/goi.html",
-    "cover": "/png/games/gettin.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/goi.html",
+    "cover": "/assets/gameassets/truffled/imgs/gettin.webp"
   },
   {
     "name": "Gladihoppers",
-    "url": "/gamefile/Gladihoppers.html",
-    "cover": "/png/games/glad.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/Gladihoppers.html",
+    "cover": "/assets/gameassets/truffled/imgs/glad.webp"
   },
   {
     "name": "Go to bed, Webport",
     "altNames": [
       "Go to bed"
     ],
-    "url": "/games/GTB/index.html",
-    "cover": "/png/games/gotobed.webp"
+    "url": "/assets/gameassets/truffled/games/GTB/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/gotobed.webp"
   },
   {
     "name": "Google Baseball",
-    "url": "/gamefile/gbase.html",
-    "cover": "/png/games/google.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/gbase.html",
+    "cover": "/assets/gameassets/truffled/imgs/google.webp"
   },
   {
     "name": "Gorilla Tag, Webport",
     "altNames": [
       "Gorilla Tag"
     ],
-    "url": "/games/gtag/index.html",
-    "cover": "/png/games/gtag.webp"
+    "url": "/assets/gameassets/truffled/games/gtag/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/gtag.webp"
   },
   {
     "name": "Granny",
-    "url": "/gamefile/granny.html",
-    "cover": "/png/games/granny.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/granny.html",
+    "cover": "/assets/gameassets/truffled/imgs/granny.webp"
   },
   {
     "name": "Granny 2",
-    "url": "/gamefile/Granny 2.html",
-    "cover": "/png/games/gran2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/Granny 2.html",
+    "cover": "/assets/gameassets/truffled/imgs/gran2.webp"
   },
   {
     "name": "Granny 3",
-    "url": "/gamefile/Granny 3.html",
-    "cover": "/png/games/gran3.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/Granny 3.html",
+    "cover": "/assets/gameassets/truffled/imgs/gran3.webp"
   },
   {
     "name": "Gravity run",
-    "url": "/games/gravity-run/index.html",
-    "cover": "/png/games/gravity.webp"
+    "url": "/assets/gameassets/truffled/games/gravity-run/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/gravity.webp"
   },
   {
     "name": "Greybox",
-    "url": "/games/graybox/index.html",
-    "cover": "/png/games/grey.webp"
+    "url": "/assets/gameassets/truffled/games/graybox/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/grey.webp"
   },
   {
     "name": "GTA I",
-    "url": "/games/gta/index.html",
-    "cover": "/png/games/gta.webp"
+    "url": "/assets/gameassets/truffled/games/gta/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/gta.webp"
   },
   {
     "name": "GTA II",
-    "url": "/games/gta2/index.html",
-    "cover": "/png/games/gta2.webp"
+    "url": "/assets/gameassets/truffled/games/gta2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/gta2.webp"
   },
   {
     "name": "GTA III",
-    "url": "/games/gta3/index.html",
-    "cover": "/png/games/gta3.webp"
+    "url": "/assets/gameassets/truffled/games/gta3/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/gta3.webp"
   },
   {
     "name": "GTA San Andreas",
-    "url": "/games/gtasan/index.html",
-    "cover": "/png/games/gtasan.webp"
+    "url": "/assets/gameassets/truffled/games/gtasan/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/gtasan.webp"
   },
   {
     "name": "GTA Vice City, Webport",
-    "url": "/games/vicecity/index.html",
-    "cover": "/png/games/vice.webp"
+    "url": "/assets/gameassets/truffled/games/vicecity/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/vice.webp"
   },
   {
     "name": "Gun Mayhem",
-    "url": "/games/funmayhem/index.html",
-    "cover": "/png/games/gun.webp"
+    "url": "/assets/gameassets/truffled/games/funmayhem/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/gun.webp"
   },
   {
     "name": "Gun Mayhem 2",
-    "url": "/games/funmayhem2/index.html",
-    "cover": "png/games/gun2.webp"
+    "url": "/assets/gameassets/truffled/games/funmayhem2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/gun2.webp"
   },
   {
     "name": "Gun Mayhem Redux",
-    "url": "/games/funmayhemredux/index.html",
-    "cover": "/png/games/gun3.webp"
+    "url": "/assets/gameassets/truffled/games/funmayhemredux/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/gun3.webp"
   },
   {
     "name": "Gunspin",
-    "url": "/games/gunspin/index.html",
-    "cover": "/png/games/guns.webp"
+    "url": "/assets/gameassets/truffled/games/gunspin/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/guns.webp"
   },
   {
     "name": "Half life",
-    "url": "/games/hl-main/index.html",
-    "cover": "/png/games/halflife.webp"
+    "url": "/assets/gameassets/truffled/games/hl-main/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/halflife.webp"
   },
   {
     "name": "Half life 2",
-    "url": "/games/hl2/index.html",
-    "cover": "/png/games/hl2.webp"
+    "url": "/assets/gameassets/truffled/games/hl2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/hl2.webp"
   },
   {
     "name": "Half life: Opposing Force",
-    "url": "/gamefile/hlof.html",
-    "cover": "/png/games/hlof.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/hlof.html",
+    "cover": "/assets/gameassets/truffled/imgs/hlof.webp"
   },
   {
     "name": "Happy Wheels",
-    "url": "/games/happywheels/index.html",
-    "cover": "/png/games/happy.webp"
+    "url": "/assets/gameassets/truffled/games/happywheels/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/happy.webp"
   },
   {
     "name": "Helltaker, Webport",
-    "url": "/gamefile/helltaker.html",
-    "cover": "/png/games/helltaker.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/helltaker.html",
+    "cover": "/assets/gameassets/truffled/imgs/helltaker.webp"
   },
   {
     "name": "Hobo 1",
-    "url": "/gamefile/hobo1.html",
-    "cover": "png/games/hobo.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/hobo1.html",
+    "cover": "/assets/gameassets/truffled/imgs/hobo.webp"
   },
   {
     "name": "Hobo 2",
-    "url": "/gamefile/hobo2.html",
-    "cover": "png/games/hobo2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/hobo2.html",
+    "cover": "/assets/gameassets/truffled/imgs/hobo2.webp"
   },
   {
     "name": "Hobo 3",
-    "url": "/gamefile/hobo3.html",
-    "cover": "png/games/hobo3.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/hobo3.html",
+    "cover": "/assets/gameassets/truffled/imgs/hobo3.webp"
   },
   {
     "name": "Hobo 4",
-    "url": "/gamefile/hobo4.html",
-    "cover": "png/games/hobo4.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/hobo4.html",
+    "cover": "/assets/gameassets/truffled/imgs/hobo4.webp"
   },
   {
     "name": "Hobo 5",
-    "url": "/gamefile/hobo5.html",
-    "cover": "png/games/hobo5.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/hobo5.html",
+    "cover": "/assets/gameassets/truffled/imgs/hobo5.webp"
   },
   {
     "name": "Hobo 6",
-    "url": "/gamefile/hobo6.html",
-    "cover": "png/games/hobo6.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/hobo6.html",
+    "cover": "/assets/gameassets/truffled/imgs/hobo6.webp"
   },
   {
     "name": "Hobo 7",
-    "url": "/gamefile/hobo7.html",
-    "cover": "png/games/hobo7.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/hobo7.html",
+    "cover": "/assets/gameassets/truffled/imgs/hobo7.webp"
   },
   {
     "name": "Hollow Knight, Webport",
     "altNames": [
       "Hollow Knight"
     ],
-    "url": "/games/hollowknight/index.html",
-    "cover": "png/games/hollow.webp"
+    "url": "/assets/gameassets/truffled/games/hollowknight/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/hollow.webp"
   },
   {
     "name": "Hotline Miami, Webport",
     "altNames": [
       "Hotline Miami"
     ],
-    "url": "/games/whores/index.html",
-    "cover": "png/games/hot.webp"
+    "url": "/assets/gameassets/truffled/games/whores/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/hot.webp"
   },
   {
     "name": "House Of Hazards",
-    "url": "/games/houseofhazards/index.html",
-    "cover": "/png/games/house.webp"
+    "url": "/assets/gameassets/truffled/games/houseofhazards/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/house.webp"
   },
   {
     "name": "HUMAN EXPENDITURE PROGRAM, Webport",
     "altNames": [
       "HUMAN EXPENDITURE PROGRAM"
     ],
-    "url": "/gamefile/human.html",
-    "cover": "png/games/human.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/human.html",
+    "cover": "/assets/gameassets/truffled/imgs/human.webp"
   },
   {
     "name": "Ice Baby Quest 2",
-    "url": "/games/icebaby2/index.html",
-    "cover": "png/games/icebaby2.webp"
+    "url": "/assets/gameassets/truffled/games/icebaby2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/icebaby2.webp"
   },
   {
     "name": "Idle Breakout",
-    "url": "/games/idle-breakout/index.html",
-    "cover": "png/games/idle.webp"
+    "url": "/assets/gameassets/truffled/games/idle-breakout/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/idle.webp"
   },
   {
     "name": "Iron Lung, Webport",
-    "url": "/games/ironlung/index.html",
-    "cover": "png/games/iroonlung.webp"
+    "url": "/assets/gameassets/truffled/games/ironlung/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/iroonlung.webp"
   },
   {
     "name": "Jeffrey Epstein Basics In Education And Kidnapping, Webport",
-    "url": "/gamefile/jeb.html",
-    "cover": "/png/games/jeb.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/jeb.html",
+    "cover": "/assets/gameassets/truffled/imgs/jeb.webp"
   },
   {
     "name": "Jeffys Basics, Webport",
-    "url": "/games/JeffysBasicsBog/index.html",
-    "cover": "/png/games/jeffys.webp"
+    "url": "/assets/gameassets/truffled/games/JeffysBasicsBog/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/jeffys.webp"
   },
   {
     "name": "Jelly Drift",
-    "url": "/gamefile/jelly.html",
-    "cover": "/png/games/jelly.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/jelly.html",
+    "cover": "/assets/gameassets/truffled/imgs/jelly.webp"
   },
   {
     "name": "Jetpack Joyride",
-    "url": "/games/jetpackjoyride/index.html",
-    "cover": "/png/games/jet.webp"
+    "url": "/assets/gameassets/truffled/games/jetpackjoyride/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/jet.webp"
   },
   {
     "name": "Jumbo Mario",
-    "url": "/games/JumboMario/index.html",
-    "cover": "/png/games/jumbo.webp"
+    "url": "/assets/gameassets/truffled/games/JumboMario/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/jumbo.webp"
   },
   {
     "name": "Karlson, Webport",
     "altNames": [
       "Karlson"
     ],
-    "url": "/gamefile/Karlson.html",
-    "cover": "/png/games/karlson.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/Karlson.html",
+    "cover": "/assets/gameassets/truffled/imgs/karlson.webp"
   },
   {
     "name": "Karlson2D, Webport",
     "altNames": [
       "Karlson2D"
     ],
-    "url": "/games/karlson2d/truffledkarlson2d/index.html",
-    "cover": "/png/games/karlson2d.webp"
+    "url": "/assets/gameassets/truffled/games/karlson2d/truffledkarlson2d/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/karlson2d.webp"
   },
   {
     "name": "Kick The Buddy, Webport",
     "altNames": [
       "Kick The Buddy"
     ],
-    "url": "/games/kickthebuddy/index.html",
-    "cover": "/png/games/ktb.webp"
+    "url": "/assets/gameassets/truffled/games/kickthebuddy/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/ktb.webp"
   },
   {
     "name": "Kindergarten 1, Webport",
     "altNames": [
       "Kindergarten 1"
     ],
-    "url": "/games/kindergarten/1/index.html",
-    "cover": "/png/games/kind1.webp"
+    "url": "/assets/gameassets/truffled/games/kindergarten/1/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/kind1.webp"
   },
   {
     "name": "Kindergarten 2, Webport",
     "altNames": [
       "Kindergarten 2"
     ],
-    "url": "/games/kindergarten/2/index.html",
-    "cover": "/png/games/kind2.webp"
+    "url": "/assets/gameassets/truffled/games/kindergarten/2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/kind2.webp"
   },
   {
     "name": "Kindergarten 3, Webport",
     "altNames": [
       "Kindergarten 3"
     ],
-    "url": "/games/Kindergarten3/index.html",
-    "cover": "/png/games/kind3.webp"
+    "url": "/assets/gameassets/truffled/games/Kindergarten3/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/kind3.webp"
   },
   {
     "name": "Kirby Soft And Wet, Webport",
-    "url": "/gamefile/kirbysoftandwet.html",
-    "cover": "/png/games/kirbysoftandwet.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/kirbysoftandwet.html",
+    "cover": "/assets/gameassets/truffled/imgs/kirbysoftandwet.webp"
   },
   {
     "name": "Klifur",
-    "url": "/games/kilfur/index.html",
-    "cover": "/png/games/kil.webp"
+    "url": "/assets/gameassets/truffled/games/kilfur/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/kil.webp"
   },
   {
     "name": "Krunker",
-    "url": "/games/krunker/index.html",
-    "cover": "/png/games/krunker.webp"
+    "url": "/assets/gameassets/truffled/games/krunker/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/krunker.webp"
   },
   {
     "name": "Lacey's Flash Games, Webport",
     "altNames": [
       "Lacey's Flash Games"
     ],
-    "url": "/gamefile/lacy.html",
-    "cover": "png/games/lacey.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/lacy.html",
+    "cover": "/assets/gameassets/truffled/imgs/lacey.webp"
   },
   {
     "name": "Learn To Fly",
-    "url": "/games/learntofly/index.html",
-    "cover": "png/games/learn1.webp"
+    "url": "/assets/gameassets/truffled/games/learntofly/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/learn1.webp"
   },
   {
     "name": "Learn To Fly 2",
-    "url": "/games/learntofly2/index.html",
-    "cover": "/png/games/learn2.webp"
+    "url": "/assets/gameassets/truffled/games/learntofly2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/learn2.webp"
   },
   {
     "name": "Learn To Fly 3",
-    "url": "/games/ltf3/index.html",
-    "cover": "/png/games/learn3.webp"
+    "url": "/assets/gameassets/truffled/games/ltf3/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/learn3.webp"
   },
   {
     "name": "Learn To Fly Idle",
-    "url": "/games/learntoflyidle/index.html",
-    "cover": "/png/games/learni.webp"
+    "url": "/assets/gameassets/truffled/games/learntoflyidle/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/learni.webp"
   },
   {
     "name": "Lego Star Wars",
-    "url": "/gamefile/legostarwars.html",
-    "cover": "/png/games/legostarwars.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/legostarwars.html",
+    "cover": "/assets/gameassets/truffled/imgs/legostarwars.webp"
   },
   {
     "name": "Level Devil",
-    "url": "/games/lvldevil/index.html",
-    "cover": "/png/games/level.webp"
+    "url": "/assets/gameassets/truffled/games/lvldevil/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/level.webp"
   },
   {
     "name": "Line Rider",
-    "url": "/games/linerider/index.html",
-    "cover": "/png/games/line.webp"
+    "url": "/assets/gameassets/truffled/games/linerider/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/line.webp"
   },
   {
     "name": "Little Alchemy",
-    "url": "/games/littlealchemy/index.html",
-    "cover": "/png/games/lil.webp"
+    "url": "/assets/gameassets/truffled/games/littlealchemy/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/lil.webp"
   },
   {
     "name": "Little Alchemy 2",
-    "url": "/gamefile/little2.html",
-    "cover": "/png/games/little2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/little2.html",
+    "cover": "/assets/gameassets/truffled/imgs/little2.webp"
   },
   {
     "name": "Little Big Planet",
-    "url": "/games/lbp/index.html",
-    "cover": "/png/games/lbp.webp"
+    "url": "/assets/gameassets/truffled/games/lbp/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/lbp.webp"
   },
   {
     "name": "Madness Melee",
-    "url": "/games/bogtruffled/index.html",
-    "cover": "/png/games/madness.webp"
+    "url": "/assets/gameassets/truffled/games/bogtruffled/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/madness.webp"
   },
   {
     "name": "Mario Kart 64",
-    "url": "/games/mk64/index.html",
-    "cover": "/png/games/mk64.webp"
+    "url": "/assets/gameassets/truffled/games/mk64/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/mk64.webp"
   },
   {
     "name": "Mario Kart 7",
-    "url": "/games/mk7/index.html",
-    "cover": "/png/games/mk7.webp"
+    "url": "/assets/gameassets/truffled/games/mk7/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/mk7.webp"
   },
   {
     "name": "Mario Kart DS",
-    "url": "/games/mkds/index.html",
-    "cover": "/png/games/mkds.webp"
+    "url": "/assets/gameassets/truffled/games/mkds/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/mkds.webp"
   },
   {
     "name": "Mario Party 1",
-    "url": "/gamefile/marioparty.html",
-    "cover": "/png/games/marioparty1.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/marioparty.html",
+    "cover": "/assets/gameassets/truffled/imgs/marioparty1.webp"
   },
   {
     "name": "Mario Party 2",
-    "url": "/gamefile/marioparty2.html",
-    "cover": "/png/games/marioparty2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/marioparty2.html",
+    "cover": "/assets/gameassets/truffled/imgs/marioparty2.webp"
   },
   {
     "name": "Mario Party 3",
-    "url": "/gamefile/marioparty3.html",
-    "cover": "/png/games/marioparty3.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/marioparty3.html",
+    "cover": "/assets/gameassets/truffled/imgs/marioparty3.webp"
   },
   {
     "name": "Megaman",
-    "url": "/gamefile/megaman.html",
-    "cover": "/png/games/megaman.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/megaman.html",
+    "cover": "/assets/gameassets/truffled/imgs/megaman.webp"
   },
   {
     "name": "Melon Playground",
-    "url": "/games/melon-playground/index.html",
-    "cover": "/png/games/melon.webp"
+    "url": "/assets/gameassets/truffled/games/melon-playground/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/melon.webp"
   },
   {
     "name": "Merge Rot",
-    "url": "/games/mergerot/index.html",
-    "cover": "/png/games/rot.webp"
+    "url": "/assets/gameassets/truffled/games/mergerot/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/rot.webp"
   },
   {
     "name": "Milkman karlson, Webport",
     "altNames": [
       "Milkman karlson"
     ],
-    "url": "/games/milk/index.html",
-    "cover": "png/games/milk.webp"
+    "url": "/assets/gameassets/truffled/games/milk/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/milk.webp"
   },
   {
     "name": "Minecraft 1.12.2",
-    "url": "/games/eglar/1dot12dot2/index.html",
-    "cover": "/games/eglar/1.12.webp"
+    "url": "/assets/gameassets/truffled/games/eglar/1dot12dot2/index.html",
+    "cover": "/assets/gameassets/truffled/games/eglar/1.12.webp"
   },
   {
     "name": "Minecraft 1.8.8",
-    "url": "/games/eglar/EaglercraftX_1dot8_Web/index.html",
-    "cover": "/games/eglar/1.8.webp"
+    "url": "/assets/gameassets/truffled/games/eglar/EaglercraftX_1dot8_Web/index.html",
+    "cover": "/assets/gameassets/truffled/games/eglar/1.8.webp"
   },
   {
     "name": "Minecraft Legacy Console Edition, Webport",
     "altNames": [
       "Minecraft Legacy Console Edition"
     ],
-    "url": "/games/lce/index.html",
-    "cover": "png/games/mclce.webp"
+    "url": "/assets/gameassets/truffled/games/lce/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/mclce.webp"
   },
   {
     "name": "Minecraft Pocket Edition, Webport",
-    "url": "/games/mcpe/index.html",
-    "cover": "/png/games/mcpe.webp"
+    "url": "/assets/gameassets/truffled/games/mcpe/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/mcpe.webp"
   },
   {
     "name": "Minecraft Wurst",
-    "url": "/games/eglar/clwurst.html",
-    "cover": "/games/eglar/wurst.webp"
+    "url": "/assets/gameassets/truffled/games/eglar/clwurst.html",
+    "cover": "/assets/gameassets/truffled/games/eglar/wurst.webp"
   },
   {
     "name": "Minesweeper Mania",
-    "url": "/gamefile/minesweepermania.html",
-    "cover": "/png/games/minese.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/minesweepermania.html",
+    "cover": "/assets/gameassets/truffled/imgs/minese.webp"
   },
   {
     "name": "Minesweeper Plus, Webport",
-    "url": "/gamefile/mineplus.html",
-    "cover": "/png/games/mineseplu.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/mineplus.html",
+    "cover": "/assets/gameassets/truffled/imgs/mineseplu.webp"
   },
   {
     "name": "Miside, Webport",
-    "url": "/gamefile/miside.html",
-    "cover": "/png/games/miside.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/miside.html",
+    "cover": "/assets/gameassets/truffled/imgs/miside.webp"
   },
   {
     "name": "Monkey Mart",
-    "url": "/games/MonkeyMart/index.html",
-    "cover": "png/games/monkey.webp"
+    "url": "/assets/gameassets/truffled/games/MonkeyMart/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/monkey.webp"
   },
   {
     "name": "Moto X3M",
-    "url": "/games/motox3m/index.html",
-    "cover": "/png/games/moto.webp"
+    "url": "/assets/gameassets/truffled/games/motox3m/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/moto.webp"
   },
   {
     "name": "My teardrop, daniel",
     "altNames": [
       "My Teardrop"
     ],
-    "url": "/gamefile/mytear.html",
-    "cover": "/png/games/mytear.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/mytear.html",
+    "cover": "/assets/gameassets/truffled/imgs/mytear.webp"
   },
   {
     "name": "n-gon",
-    "url": "/games/n-gon/index.html",
-    "cover": "/png/games/ngon.webp"
+    "url": "/assets/gameassets/truffled/games/n-gon/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/ngon.webp"
   },
   {
     "name": "Nazi Zombies: Portable",
-    "url": "/gamefile/nzp.html",
-    "cover": "png/games/nazi.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/nzp.html",
+    "cover": "/assets/gameassets/truffled/imgs/nazi.webp"
   },
   {
     "name": "Needy Streamer Overload, Webport",
-    "url": "/games/nso/index.html",
-    "cover": "/png/games/nso.webp"
+    "url": "/assets/gameassets/truffled/games/nso/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/nso.webp"
   },
   {
     "name": "New Super Mario Bros",
-    "url": "/games/nsmb/index.html",
-    "cover": "/png/games/nsmb.webp"
+    "url": "/assets/gameassets/truffled/games/nsmb/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/nsmb.webp"
   },
   {
     "name": "Node Buster, Webport",
-    "url": "/games/nodebuster/index.html",
-    "cover": "/png/games/nodebuster.webp"
+    "url": "/assets/gameassets/truffled/games/nodebuster/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/nodebuster.webp"
   },
   {
     "name": "Nubbys Number Factory, Webport",
-    "url": "/gamefile/nubby.html",
-    "cover": "/png/games/nubby.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/nubby.html",
+    "cover": "/assets/gameassets/truffled/imgs/nubby.webp"
   },
   {
     "name": "Om Nom Run",
-    "url": "/gamefile/omnomrun.html",
-    "cover": "png/games/omnomrun.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/omnomrun.html",
+    "cover": "/assets/gameassets/truffled/imgs/omnomrun.webp"
   },
   {
     "name": "OMORI, Webport",
-    "url": "/gamefile/OMORI.html",
-    "cover": "png/games/omori.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/OMORI.html",
+    "cover": "/assets/gameassets/truffled/imgs/omori.webp"
   },
   {
     "name": "Oneshot, Webport",
-    "url": "/gamefile/oneshot.html",
-    "cover": "png/games/oneshot.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/oneshot.html",
+    "cover": "/assets/gameassets/truffled/imgs/oneshot.webp"
   },
   {
     "name": "Oneshot World Machine Edition, Webport",
-    "url": "/games/worldmachine/index.html",
-    "cover": "png/games/oneshotwm.webp"
+    "url": "/assets/gameassets/truffled/games/worldmachine/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/oneshotwm.webp"
   },
   {
     "name": "Orange Roulette",
-    "url": "/gamefile/orange.html",
-    "cover": "/png/games/orange.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/orange.html",
+    "cover": "/assets/gameassets/truffled/imgs/orange.webp"
   },
   {
     "name": "Oshi Oshi Punch",
-    "url": "/gamefile/onshi.html",
-    "cover": "/png/games/oshi.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/onshi.html",
+    "cover": "/assets/gameassets/truffled/imgs/oshi.webp"
   },
   {
     "name": "Osu!",
-    "url": "/games/osu!/index.html",
-    "cover": "/png/games/osu.webp"
+    "url": "/assets/gameassets/truffled/games/osu!/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/osu.webp"
   },
   {
     "name": "Overburden, Webport",
-    "url": "/gamefile/overburden.html",
-    "cover": "/png/games/overburden.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/overburden.html",
+    "cover": "/assets/gameassets/truffled/imgs/overburden.webp"
   },
   {
     "name": "OvO",
-    "url": "/games/ovo/index.html",
-    "cover": "png/games/ovo.webp"
+    "url": "/assets/gameassets/truffled/games/ovo/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/ovo.webp"
   },
   {
     "name": "OvO 2",
-    "url": "/games/OvO2/index.html",
-    "cover": "/png/games/ovo2.webp"
+    "url": "/assets/gameassets/truffled/games/OvO2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/ovo2.webp"
   },
   {
     "name": "OvO Dimensions",
-    "url": "/games/OvoDimensions/index.html",
-    "cover": "/png/games/ovodi.webp"
+    "url": "/assets/gameassets/truffled/games/OvoDimensions/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/ovodi.webp"
   },
   {
     "name": "Pacman",
-    "url": "/games/pacman/index.html",
-    "cover": "/png/games/pacman.webp"
+    "url": "/assets/gameassets/truffled/games/pacman/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/pacman.webp"
   },
   {
     "name": "Pacman World",
-    "url": "/gamefile/pacmanw.html",
-    "cover": "/png/games/pacmanworld.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/pacmanw.html",
+    "cover": "/assets/gameassets/truffled/imgs/pacmanworld.webp"
   },
   {
     "name": "Pacman World 2",
-    "url": "/gamefile/pacmanw2.html",
-    "cover": "/png/games/pacmanworld2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/pacmanw2.html",
+    "cover": "/assets/gameassets/truffled/imgs/pacmanworld2.webp"
   },
   {
     "name": "Paint Gal Adventures",
-    "url": "/games/paintbog/Paint Gal Adventures.html",
-    "cover": "/png/games/paintgal.webp"
+    "url": "/assets/gameassets/truffled/games/paintbog/Paint Gal Adventures.html",
+    "cover": "/assets/gameassets/truffled/imgs/paintgal.webp"
   },
   {
     "name": "Papas Bakeria",
-    "url": "/games/papasbakeria/index.html",
-    "cover": "/png/games/bake.webp"
+    "url": "/assets/gameassets/truffled/games/papasbakeria/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/bake.webp"
   },
   {
     "name": "Papas Burgeria",
-    "url": "/games/papasburgeria/index.html",
-    "cover": "/png/games/burger.webp"
+    "url": "/assets/gameassets/truffled/games/papasburgeria/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/burger.webp"
   },
   {
     "name": "Papas Cheeseria",
-    "url": "/games/papascheeseria/index.html",
-    "cover": "/png/games/cheese.webp"
+    "url": "/assets/gameassets/truffled/games/papascheeseria/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/cheese.webp"
   },
   {
     "name": "Papas Donuteria",
-    "url": "/games/papasdonuteria/index.html",
-    "cover": "/png/games/donut.webp"
+    "url": "/assets/gameassets/truffled/games/papasdonuteria/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/donut.webp"
   },
   {
     "name": "Papas Freezeria",
-    "url": "/games/papasfreezeria/index.html",
-    "cover": "/png/games/freeze.webp"
+    "url": "/assets/gameassets/truffled/games/papasfreezeria/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/freeze.webp"
   },
   {
     "name": "Papas Pizzaeria",
-    "url": "/games/papaspizza/index.html",
-    "cover": "/png/games/pizza.webp"
+    "url": "/assets/gameassets/truffled/games/papaspizza/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/pizza.webp"
   },
   {
     "name": "Paper Mario",
-    "url": "/gamefile/papermario.html",
-    "cover": "/png/games/papermario.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/papermario.html",
+    "cover": "/assets/gameassets/truffled/imgs/papermario.webp"
   },
   {
     "name": "Paperio 2",
-    "url": "/games/paperio2/index.html",
-    "cover": "/png/games/paperio2.webp"
+    "url": "/assets/gameassets/truffled/games/paperio2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/paperio2.webp"
   },
   {
     "name": "Papers, Please",
-    "url": "/gamefile/papers.html",
-    "cover": "/png/games/papers.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/papers.html",
+    "cover": "/assets/gameassets/truffled/imgs/papers.webp"
   },
   {
     "name": "Parappa The Rapper",
-    "url": "/games/paps/index.html",
-    "cover": "/png/games/rapper.webp"
+    "url": "/assets/gameassets/truffled/games/paps/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/rapper.webp"
   },
   {
     "name": "Parappa The Rapper 2",
-    "url": "/games/parappa2/index.html",
-    "cover": "/png/games/parappa2.webp"
+    "url": "/assets/gameassets/truffled/games/parappa2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/parappa2.webp"
   },
   {
     "name": "Peaks of Yore, Webport",
-    "url": "/gamefile/peaksofyore.html",
-    "cover": "png/games/peaksofyore.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/peaksofyore.html",
+    "cover": "/assets/gameassets/truffled/imgs/peaksofyore.webp"
   },
   {
     "name": "Peggle",
-    "url": "/gamefile/Peggle.html",
-    "cover": "png/games/peggle.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/Peggle.html",
+    "cover": "/assets/gameassets/truffled/imgs/peggle.webp"
   },
   {
     "name": "People Playground, Webport",
-    "url": "/games/ppg/index.html",
-    "cover": "png/games/peoplepg.webp"
+    "url": "/assets/gameassets/truffled/games/ppg/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/peoplepg.webp"
   },
   {
     "name": "Pikuniku, Webport",
     "altNames": [
       "Pikuniku"
     ],
-    "url": "/games/pikubog/index.html",
-    "cover": "/png/games/pikuniku.webp"
+    "url": "/assets/gameassets/truffled/games/pikubog/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/pikuniku.webp"
   },
   {
     "name": "Pixel Gun 3D",
-    "url": "/games/pixl/index.html",
-    "cover": "/png/games/pixelgun.webp"
+    "url": "/assets/gameassets/truffled/games/pixl/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/pixelgun.webp"
   },
   {
     "name": "Pizza Tower, Webport",
-    "url": "/gamefile/Pizza Tower.html",
-    "cover": "/png/games/pizzatower.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/Pizza Tower.html",
+    "cover": "/assets/gameassets/truffled/imgs/pizzatower.webp"
   },
   {
     "name": "Pizza Tower: Scoutdigo",
-    "url": "/gamefile/pts.html",
-    "cover": "/png/games/pts.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/pts.html",
+    "cover": "/assets/gameassets/truffled/imgs/pts.webp"
   },
   {
     "name": "Plants VS Zombies",
-    "url": "/gamefile/pvs.html",
-    "cover": "/png/games/pvz.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/pvs.html",
+    "cover": "/assets/gameassets/truffled/imgs/pvz.webp"
   },
   {
     "name": "Plants VS Zombies Garden Endless",
-    "url": "/games/pvzge/index.html",
-    "cover": "/png/games/pvz2.webp"
+    "url": "/assets/gameassets/truffled/games/pvzge/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/pvz2.webp"
   },
   {
     "name": "Plauge Inc, Webport",
     "altNames": [
       "Plauge Inc"
     ],
-    "url": "/games/PlagueInc/index.html",
-    "cover": "/png/games/plaugeinc.webp"
+    "url": "/assets/gameassets/truffled/games/PlagueInc/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/plaugeinc.webp"
   },
   {
     "name": "Pokemon Academy Life Forever",
-    "url": "/gamefile/pokemonacademy.html",
-    "cover": "/png/games/pokemonacademy.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/pokemonacademy.html",
+    "cover": "/assets/gameassets/truffled/imgs/pokemonacademy.webp"
   },
   {
     "name": "Pokemon Blue",
-    "url": "/gamefile/blue.html",
-    "cover": "/png/games/blue.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/blue.html",
+    "cover": "/assets/gameassets/truffled/imgs/blue.webp"
   },
   {
     "name": "Pokemon Crystal",
-    "url": "/gamefile/blob.html",
-    "cover": "/png/games/crystal.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/blob.html",
+    "cover": "/assets/gameassets/truffled/imgs/crystal.webp"
   },
   {
     "name": "Pokemon Emerald",
-    "url": "/gamefile/em.html",
-    "cover": "/png/games/em.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/em.html",
+    "cover": "/assets/gameassets/truffled/imgs/em.webp"
   },
   {
     "name": "Pokemon Gold",
-    "url": "/gamefile/red.html",
-    "cover": "/png/games/gold.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/red.html",
+    "cover": "/assets/gameassets/truffled/imgs/gold.webp"
   },
   {
     "name": "Pokemon Red",
-    "url": "/gamefile/red.html",
-    "cover": "/png/games/pokemonfirered.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/red.html",
+    "cover": "/assets/gameassets/truffled/imgs/pokemonfirered.webp"
   },
   {
     "name": "Pokemon Stadium",
-    "url": "/gamefile/pokestad.html",
-    "cover": "/png/games/pokestad.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/pokestad.html",
+    "cover": "/assets/gameassets/truffled/imgs/pokestad.webp"
   },
   {
     "name": "Pokemon Stadium 2",
-    "url": "/gamefile/pokestad2.html",
-    "cover": "/png/games/pokestad2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/pokestad2.html",
+    "cover": "/assets/gameassets/truffled/imgs/pokestad2.webp"
   },
   {
     "name": "Polytrack",
-    "url": "/games/polytrack/index.html",
-    "cover": "png/games/poly.webp"
+    "url": "/assets/gameassets/truffled/games/polytrack/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/poly.webp"
   },
   {
     "name": "Portal",
-    "url": "/games/portal/index.html",
-    "cover": "png/games/portal.webp"
+    "url": "/assets/gameassets/truffled/games/portal/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/portal.webp"
   },
   {
     "name": "Postal, Webport",
-    "url": "/gamefile/postal.html",
-    "cover": "/png/games/postal.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/postal.html",
+    "cover": "/assets/gameassets/truffled/imgs/postal.webp"
   },
   {
     "name": "Pretend its not there, Webport",
     "altNames": [
       "Pretend its not there"
     ],
-    "url": "/games/pretenditsnotthere/index.html",
-    "cover": "/png/games/pre.webp"
+    "url": "/assets/gameassets/truffled/games/pretenditsnotthere/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/pre.webp"
   },
   {
     "name": "Quake",
-    "url": "/games/quake/index.html",
-    "cover": "png/games/quake.webp"
+    "url": "/assets/gameassets/truffled/games/quake/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/quake.webp"
   },
   {
     "name": "Quake II",
-    "url": "/games/quakeii/index.html",
-    "cover": "png/games/quakeii.webp"
+    "url": "/assets/gameassets/truffled/games/quakeii/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/quakeii.webp"
   },
   {
     "name": "Quake III",
-    "url": "/games/quakeiii/Quake3.htm",
-    "cover": "png/games/quakeiii.webp"
+    "url": "/assets/gameassets/truffled/games/quakeiii/Quake3.htm",
+    "cover": "/assets/gameassets/truffled/imgs/quakeiii.webp"
   },
   {
     "name": "Raft Wars",
-    "url": "/games/raft-wars/index.html",
-    "cover": "/png/games/raft1.webp"
+    "url": "/assets/gameassets/truffled/games/raft-wars/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/raft1.webp"
   },
   {
     "name": "Raft Wars 2",
-    "url": "/games/raft-wars-2/index.html",
-    "cover": "/png/games/raft2.webp"
+    "url": "/assets/gameassets/truffled/games/raft-wars-2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/raft2.webp"
   },
   {
     "name": "RAFT, Webport",
     "altNames": [
       "RAFT"
     ],
-    "url": "/games/raft/index.html",
-    "cover": "/png/games/raft.webp"
+    "url": "/assets/gameassets/truffled/games/raft/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/raft.webp"
   },
   {
     "name": "Ragdoll Archers",
-    "url": "/games/ragdoll-archers/index.html",
-    "cover": "/png/games/archer.webp"
+    "url": "/assets/gameassets/truffled/games/ragdoll-archers/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/archer.webp"
   },
   {
     "name": "Ragdoll Hit",
-    "url": "/games/ragdoll/index.html",
-    "cover": "/png/games/hit.webp"
+    "url": "/assets/gameassets/truffled/games/ragdoll/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/hit.webp"
   },
   {
     "name": "Raldi's Crack House",
-    "url": "/games/raldi/index.html",
-    "cover": "/png/games/raldi.webp"
+    "url": "/assets/gameassets/truffled/games/raldi/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/raldi.webp"
   },
   {
     "name": "Rayman",
-    "url": "/gamefile/rayman.html",
-    "cover": "/png/games/rayman.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/rayman.html",
+    "cover": "/assets/gameassets/truffled/imgs/rayman.webp"
   },
   {
     "name": "RE:RUN, Webport",
     "altNames": [
       "RE:RUN"
     ],
-    "url": "/games/rerun/index.html",
-    "cover": "png/games/rerun.webp"
+    "url": "/assets/gameassets/truffled/games/rerun/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/rerun.webp"
   },
   {
     "name": "REPO, Webport",
     "altNames": [
       "REPO"
     ],
-    "url": "/games/repo/index.html",
-    "cover": "/png/games/repo.webp"
+    "url": "/assets/gameassets/truffled/games/repo/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/repo.webp"
   },
   {
     "name": "Resident Evil 1",
-    "url": "/gamefile/res1.html",
-    "cover": "png/games/res1.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/res1.html",
+    "cover": "/assets/gameassets/truffled/imgs/res1.webp"
   },
   {
     "name": "Resident Evil 2",
-    "url": "/gamefile/res2.html",
-    "cover": "png/games/res2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/res2.html",
+    "cover": "/assets/gameassets/truffled/imgs/res2.webp"
   },
   {
     "name": "Retro Bowl",
-    "url": "/games/retro-bowl/index.html",
-    "cover": "png/games/retro.webp"
+    "url": "/assets/gameassets/truffled/games/retro-bowl/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/retro.webp"
   },
   {
     "name": "Retro Bowl College",
-    "url": "/games/rbcollege/index.html",
-    "cover": "png/games/retroc.webp"
+    "url": "/assets/gameassets/truffled/games/rbcollege/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/retroc.webp"
   },
   {
     "name": "Rhythm Heaven",
-    "url": "/gamefile/rhythm.html",
-    "cover": "png/games/rhythm.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/rhythm.html",
+    "cover": "/assets/gameassets/truffled/imgs/rhythm.webp"
   },
   {
     "name": "Riddle School",
-    "url": "/games/riddleschool/index.html",
-    "cover": "png/games/riddle1.webp"
+    "url": "/assets/gameassets/truffled/games/riddleschool/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/riddle1.webp"
   },
   {
     "name": "Riddle School 2",
-    "url": "/games/sriddleschool2/index.html",
-    "cover": "/png/games/riddle2.webp"
+    "url": "/assets/gameassets/truffled/games/sriddleschool2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/riddle2.webp"
   },
   {
     "name": "Riddle School 3",
-    "url": "/games/riddleschool3/index.html",
-    "cover": "/png/games/riddle3.webp"
+    "url": "/assets/gameassets/truffled/games/riddleschool3/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/riddle3.webp"
   },
   {
     "name": "Riddle School 4",
-    "url": "/games/riddleschool4/index.html",
-    "cover": "/png/games/riddle4.webp"
+    "url": "/assets/gameassets/truffled/games/riddleschool4/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/riddle4.webp"
   },
   {
     "name": "Riddle School 5",
-    "url": "/games/riddleschool5/index.html",
-    "cover": "/png/games/riddle5.webp"
+    "url": "/assets/gameassets/truffled/games/riddleschool5/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/riddle5.webp"
   },
   {
     "name": "Riddle School Transfer",
-    "url": "/games/riddleschooltransfer/index.html",
-    "cover": "/png/games/riddletr.webp"
+    "url": "/assets/gameassets/truffled/games/riddleschooltransfer/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/riddletr.webp"
   },
   {
     "name": "Riddle School Transfer 2",
-    "url": "/games/riddleschooltransfer2/index.html",
-    "cover": "/png/games/riddletr2.webp"
+    "url": "/assets/gameassets/truffled/games/riddleschooltransfer2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/riddletr2.webp"
   },
   {
     "name": "Rooftop Snipers",
-    "url": "/games/rooftop-snipers/index.html",
-    "cover": "/png/games/roof2.webp"
+    "url": "/assets/gameassets/truffled/games/rooftop-snipers/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/roof2.webp"
   },
   {
     "name": "Rooftop Snipers 2",
-    "url": "/games/rooftop-snipers-2/index.html",
-    "cover": "/png/games/roof1.webp"
+    "url": "/assets/gameassets/truffled/games/rooftop-snipers-2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/roof1.webp"
   },
   {
     "name": "Run",
-    "url": "/gamefile/run.html",
-    "cover": "png/games/run1.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/run.html",
+    "cover": "/assets/gameassets/truffled/imgs/run1.webp"
   },
   {
     "name": "Run 2",
-    "url": "/gamefile/run2.html",
-    "cover": "png/games/run2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/run2.html",
+    "cover": "/assets/gameassets/truffled/imgs/run2.webp"
   },
   {
     "name": "Run 3",
-    "url": "/gamefile/run3.html",
-    "cover": "png/games/run3.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/run3.html",
+    "cover": "/assets/gameassets/truffled/imgs/run3.webp"
   },
   {
     "name": "Running Fred, Webport",
-    "url": "/games/fred/index.html",
-    "cover": "png/games/fred.webp"
+    "url": "/assets/gameassets/truffled/games/fred/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/fred.webp"
   },
   {
     "name": "Saihate Station, Webport",
-    "url": "/gamefile/saihatestation.html",
-    "cover": "png/games/saihatestation.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/saihatestation.html",
+    "cover": "/assets/gameassets/truffled/imgs/saihatestation.webp"
   },
   {
     "name": "Sandboxels",
-    "url": "/gamefile/Sandboxels.html",
-    "cover": "png/games/sand.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/Sandboxels.html",
+    "cover": "/assets/gameassets/truffled/imgs/sand.webp"
   },
   {
     "name": "Sanic Ball, Webport",
     "altNames": [
       "Sanic Ball"
     ],
-    "url": "/games/ball/index.html",
-    "cover": "png/games/sanicball.webp"
+    "url": "/assets/gameassets/truffled/games/ball/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/sanicball.webp"
   },
   {
     "name": "Scary Path",
-    "url": "/games/scary-path/index.html",
-    "cover": "png/games/path.webp"
+    "url": "/assets/gameassets/truffled/games/scary-path/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/path.webp"
   },
   {
     "name": "Schoolboy Runaway, Webport",
-    "url": "/gamefile/runaway.html",
-    "cover": "/png/games/runaway.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/runaway.html",
+    "cover": "/assets/gameassets/truffled/imgs/runaway.webp"
   },
   {
     "name": "Shift At Midnight, Webport",
-    "url": "/gamefile/shift.html",
-    "cover": "/png/games/shift.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/shift.html",
+    "cover": "/assets/gameassets/truffled/imgs/shift.webp"
   },
   {
     "name": "Silksong, Webport",
-    "url": "/games/silk/index.html",
-    "cover": "png/games/silk.webp"
+    "url": "/assets/gameassets/truffled/games/silk/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/silk.webp"
   },
   {
     "name": "Skibidi Shooter",
-    "url": "/games/skibidi-shooter/index.html",
-    "cover": "/png/games/ski.webp"
+    "url": "/assets/gameassets/truffled/games/skibidi-shooter/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/ski.webp"
   },
   {
     "name": "Skiing Fred",
-    "url": "/games/skiing/index.html",
-    "cover": "/png/games/skiing.webp"
+    "url": "/assets/gameassets/truffled/games/skiing/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/skiing.webp"
   },
   {
     "name": "Slender: The 8 Pages, Webport",
     "altNames": [
       "Slender: The 8 Pages"
     ],
-    "url": "/games/slender/index.html",
-    "cover": "/png/games/slender.webp"
+    "url": "/assets/gameassets/truffled/games/slender/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/slender.webp"
   },
   {
     "name": "Slendytubbies I, Webport",
     "altNames": [
       "Slendytubbies I"
     ],
-    "url": "/gamefile/slendy1.html",
-    "cover": "/png/games/slendy1.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/slendy1.html",
+    "cover": "/assets/gameassets/truffled/imgs/slendy1.webp"
   },
   {
     "name": "Slendytubbies II, Webport",
     "altNames": [
       "Slendytubbies II"
     ],
-    "url": "/games/slendy/index.html",
-    "cover": "/png/games/slendy.webp"
+    "url": "/assets/gameassets/truffled/games/slendy/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/slendy.webp"
   },
   {
     "name": "Slendytubbies II 2D, Webport",
     "altNames": [
       "Slendytubbies II"
     ],
-    "url": "/games/slendy2d/index.html",
-    "cover": "/png/games/slendy2d.webp"
+    "url": "/assets/gameassets/truffled/games/slendy2d/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/slendy2d.webp"
   },
   {
     "name": "Slient Hill",
-    "url": "/gamefile/slienthill.html",
-    "cover": "/png/games/slienthill.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/slienthill.html",
+    "cover": "/assets/gameassets/truffled/imgs/slienthill.webp"
   },
   {
     "name": "Slime Ranchers, Webport",
-    "url": "/gamefile/slimeranchers.html",
-    "cover": "png/games/slime.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/slimeranchers.html",
+    "cover": "/assets/gameassets/truffled/imgs/slime.webp"
   },
   {
     "name": "Slither.io, Webport",
     "altNames": [
       "Slither.io"
     ],
-    "url": "/gamefile/sfge.html",
-    "cover": "png/games/sli.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/sfge.html",
+    "cover": "/assets/gameassets/truffled/imgs/sli.webp"
   },
   {
     "name": "Slope",
-    "url": "/games/slope/index.html",
-    "cover": "png/games/slope.webp"
+    "url": "/assets/gameassets/truffled/games/slope/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/slope.webp"
   },
   {
     "name": "Slowroads",
-    "url": "/games/slowroads/index.html",
-    "cover": "/png/games/slow.webp"
+    "url": "/assets/gameassets/truffled/games/slowroads/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/slow.webp"
   },
   {
     "name": "SM64, Super Mario 64",
@@ -2153,8 +2153,8 @@
       "Super Mario 64",
       "SM64"
     ],
-    "url": "/games/sm64/index.html",
-    "cover": "png/games/sm64.webp"
+    "url": "/assets/gameassets/truffled/games/sm64/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/sm64.webp"
   },
   {
     "name": "Super Mario 64, SM64COOP",
@@ -2162,454 +2162,454 @@
       "Super Mario 64",
       "SM64COOP"
     ],
-    "url": "/games/sm64coop/sm64coopdx.html",
-    "cover": "png/games/sm64coop.avif"
+    "url": "/assets/gameassets/truffled/games/sm64coop/sm64coopdx.html",
+    "cover": "/assets/gameassets/truffled/imgs/sm64coop.avif"
   },
   {
     "name": "Super Mario Bros",
-    "url": "/gamefile/smb.html",
-    "cover": "png/games/smb.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/smb.html",
+    "cover": "/assets/gameassets/truffled/imgs/smb.webp"
   },
   {
     "name": "Super Mario Galaxy DS",
-    "url": "/gamefile/smgds.html",
-    "cover": "png/games/smgds.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/smgds.html",
+    "cover": "/assets/gameassets/truffled/imgs/smgds.webp"
   },
   {
     "name": "Super Oliver World",
-    "url": "/gamefile/superoliverworld.html",
-    "cover": "png/games/superoliverworld.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/superoliverworld.html",
+    "cover": "/assets/gameassets/truffled/imgs/superoliverworld.webp"
   },
   {
     "name": "Super Smash Bros",
-    "url": "/gamefile/ssm.html",
-    "cover": "png/games/ssm.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/ssm.html",
+    "cover": "/assets/gameassets/truffled/imgs/ssm.webp"
   },
   {
     "name": "Smash Karts",
-    "url": "/games/smashkarts/index.html",
-    "cover": "png/games/smashkarts.webp"
+    "url": "/assets/gameassets/truffled/games/smashkarts/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/smashkarts.webp"
   },
   {
     "name": "Snow Rider 3D",
-    "url": "/games/snowrider3D-main/index.html",
-    "cover": "png/games/snow.webp"
+    "url": "/assets/gameassets/truffled/games/snowrider3D-main/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/snow.webp"
   },
   {
     "name": "Snow Battle",
-    "url": "/gamefile/snow.html",
-    "cover": "png/games/snowio.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/snow.html",
+    "cover": "/assets/gameassets/truffled/imgs/snowio.webp"
   },
   {
     "name": "Soccer Bros",
-    "url": "/games/soccerbros/index.html",
-    "cover": "png/games/soccer.webp"
+    "url": "/assets/gameassets/truffled/games/soccerbros/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/soccer.webp"
   },
   {
     "name": "Soccer Random",
-    "url": "/games/soccer-random/index.html",
-    "cover": "png/games/soccerra.webp"
+    "url": "/assets/gameassets/truffled/games/soccer-random/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/soccerra.webp"
   },
   {
     "name": "Solar Smash",
-    "url": "/gamefile/solar.html",
-    "cover": "/png/games/solar.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/solar.html",
+    "cover": "/assets/gameassets/truffled/imgs/solar.webp"
   },
   {
     "name": "Solitaire",
-    "url": "/games/solitaire/index.html",
-    "cover": "/png/games/soli.webp"
+    "url": "/assets/gameassets/truffled/games/solitaire/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/soli.webp"
   },
   {
     "name": "Sonic 1",
-    "url": "/games/sonic/index.html",
-    "cover": "png/games/sonic1.webp"
+    "url": "/assets/gameassets/truffled/games/sonic/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/sonic1.webp"
   },
   {
     "name": "Sonic 2",
-    "url": "/games/sonic2/index.html",
-    "cover": "png/games/sonic2.webp"
+    "url": "/assets/gameassets/truffled/games/sonic2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/sonic2.webp"
   },
   {
     "name": "Sonic 3",
-    "url": "/games/sonic3/sonic3.html",
-    "cover": "png/games/sonic3.webp"
+    "url": "/assets/gameassets/truffled/games/sonic3/sonic3.html",
+    "cover": "/assets/gameassets/truffled/imgs/sonic3.webp"
   },
   {
     "name": "Sonic 4",
-    "url": "/games/sonic4/index.html",
-    "cover": "png/games/sonic4.webp"
+    "url": "/assets/gameassets/truffled/games/sonic4/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/sonic4.webp"
   },
   {
     "name": "Sonic 3D Blast",
-    "url": "/gamefile/sonic3dblast.html",
-    "cover": "png/games/sonic3dblast.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/sonic3dblast.html",
+    "cover": "/assets/gameassets/truffled/imgs/sonic3dblast.webp"
   },
   {
     "name": "Sonic CD",
-    "url": "/games/soniccd/soniccd.html",
-    "cover": "png/games/soniccd.webp"
+    "url": "/assets/gameassets/truffled/games/soniccd/soniccd.html",
+    "cover": "/assets/gameassets/truffled/imgs/soniccd.webp"
   },
   {
     "name": "Sonic EXE",
-    "url": "/gamefile/sonicexe.html",
-    "cover": "png/games/sonicexe.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/sonicexe.html",
+    "cover": "/assets/gameassets/truffled/imgs/sonicexe.webp"
   },
   {
     "name": "Sonic Jam",
-    "url": "/gamefile/sonicjam.html",
-    "cover": "png/games/sonicjam.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/sonicjam.html",
+    "cover": "/assets/gameassets/truffled/imgs/sonicjam.webp"
   },
   {
     "name": "Sonic Mania, Webport",
-    "url": "/gamefile/sonic.html",
-    "cover": "png/games/mania.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/sonic.html",
+    "cover": "/assets/gameassets/truffled/imgs/mania.webp"
   },
   {
     "name": "Sonic R",
-    "url": "/gamefile/sonicr.html",
-    "cover": "png/games/sonicr.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/sonicr.html",
+    "cover": "/assets/gameassets/truffled/imgs/sonicr.webp"
   },
   {
     "name": "Sonic Robo Blast 2",
-    "url": "/games/srb2/index.html",
-    "cover": "/png/games/robo.webp"
+    "url": "/assets/gameassets/truffled/games/srb2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/robo.webp"
   },
   {
     "name": "Sonic Robo Blast 2 KART",
-    "url": "/games/kart/index.html",
-    "cover": "/png/games/kart.webp"
+    "url": "/assets/gameassets/truffled/games/kart/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/kart.webp"
   },
   {
     "name": "Sonic World Next",
-    "url": "/games/swn/index.html",
-    "cover": "/png/games/swn.webp"
+    "url": "/assets/gameassets/truffled/games/swn/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/swn.webp"
   },
   {
     "name": "Space Waves",
-    "url": "/gamefile/spacewaves.html",
-    "cover": "png/games/space.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/spacewaves.html",
+    "cover": "/assets/gameassets/truffled/imgs/space.webp"
   },
   {
     "name": "Spaceflight Simulator, Webport",
     "altNames": [
       "Spaceflight Simulator"
     ],
-    "url": "/gamefile/spaceflight.html",
-    "cover": "png/games/ssim.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/spaceflight.html",
+    "cover": "/assets/gameassets/truffled/imgs/ssim.webp"
   },
   {
     "name": "Spank the monkey, bogs favorites",
     "altNames": [
       "Spank the monkey"
     ],
-    "url": "/gamefile/monkey.html",
-    "cover": "/png/games/monk.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/monkey.html",
+    "cover": "/assets/gameassets/truffled/imgs/monk.webp"
   },
   {
     "name": "Speed Stars",
-    "url": "/games/speed-stars/index.html",
-    "cover": "png/games/speed.webp"
+    "url": "/assets/gameassets/truffled/games/speed-stars/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/speed.webp"
   },
   {
     "name": "Spelunky Classic HD",
-    "url": "/gamefile/spelunky.html",
-    "cover": "png/games/spelunkyclassic.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/spelunky.html",
+    "cover": "/assets/gameassets/truffled/imgs/spelunkyclassic.webp"
   },
   {
     "name": "Starbound, Webport",
-    "url": "/games/Starbound/index.html",
-    "cover": "png/games/starbound.webp"
+    "url": "/assets/gameassets/truffled/games/Starbound/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/starbound.webp"
   },
   {
     "name": "Stardew Valley, Webport",
-    "url": "/games/stardew/index.html",
-    "cover": "png/games/stardew.webp"
+    "url": "/assets/gameassets/truffled/games/stardew/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/stardew.webp"
   },
   {
     "name": "Stick War: Legacy",
-    "url": "/gamefile/stickwar.html",
-    "cover": "png/games/stickwar.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/stickwar.html",
+    "cover": "/assets/gameassets/truffled/imgs/stickwar.webp"
   },
   {
     "name": "Stick With It, Webport",
-    "url": "/games/stick/index.html",
-    "cover": "png/games/stick.webp"
+    "url": "/assets/gameassets/truffled/games/stick/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/stick.webp"
   },
   {
     "name": "Stickman Hook",
-    "url": "/games/stickman-hook/index.html",
-    "cover": "png/games/stickman.webp"
+    "url": "/assets/gameassets/truffled/games/stickman-hook/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/stickman.webp"
   },
   {
     "name": "Subway Surfers",
-    "url": "/games/subway-surfers/index.html",
-    "cover": "png/games/sub.webp"
+    "url": "/assets/gameassets/truffled/games/subway-surfers/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/sub.webp"
   },
   {
     "name": "Super Hot",
-    "url": "/games/superhot/index.html",
-    "cover": "/png/games/superhot.webp"
+    "url": "/assets/gameassets/truffled/games/superhot/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/superhot.webp"
   },
   {
     "name": "Super Meat Boy",
-    "url": "/games/meatboy/index.html",
-    "cover": "/png/games/meat.webp"
+    "url": "/assets/gameassets/truffled/games/meatboy/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/meat.webp"
   },
   {
     "name": "Super Monkey Ball 1 & 2",
-    "url": "/gamefile/monk.html",
-    "cover": "/png/games/monkb.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/monk.html",
+    "cover": "/assets/gameassets/truffled/imgs/monkb.webp"
   },
   {
     "name": "Super Monkey Ball JR",
-    "url": "/gamefile/supermonkey.html",
-    "cover": "/png/games/supermonkey.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/supermonkey.html",
+    "cover": "/assets/gameassets/truffled/imgs/supermonkey.webp"
   },
   {
     "name": "Super Smash Flash",
-    "url": "/gamefile/ssf.html",
-    "cover": "/png/games/supersmash.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/ssf.html",
+    "cover": "/assets/gameassets/truffled/imgs/supersmash.webp"
   },
   {
     "name": "Super Smash Flash 2",
-    "url": "/gamefile/ssf2.html",
-    "cover": "/png/games/ssf2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/ssf2.html",
+    "cover": "/assets/gameassets/truffled/imgs/ssf2.webp"
   },
   {
     "name": "Survivor.io, Webport",
-    "url": "/gamefile/survivor.html",
-    "cover": "/png/games/survivorio.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/survivor.html",
+    "cover": "/assets/gameassets/truffled/imgs/survivorio.webp"
   },
   {
     "name": "Taiko No Tatsujini",
-    "url": "/games/psp/tja/index.html",
-    "cover": "/png/games/taiko.webp"
+    "url": "/assets/gameassets/truffled/games/psp/tja/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/taiko.webp"
   },
   {
     "name": "Tanuki Sunset",
-    "url": "/games/tanukisunset/index.html",
-    "cover": "/png/games/tanukisunset.webp"
+    "url": "/assets/gameassets/truffled/games/tanukisunset/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/tanukisunset.webp"
   },
   {
     "name": "Tattle Tail, Webport",
-    "url": "/games/tattletail/index.html",
-    "cover": "/png/games/tat.webp"
+    "url": "/assets/gameassets/truffled/games/tattletail/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/tat.webp"
   },
   {
     "name": "Tax Heaven 3000, Webport",
-    "url": "/games/th3000/index.html",
-    "cover": "/png/games/th3000.webp"
+    "url": "/assets/gameassets/truffled/games/th3000/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/th3000.webp"
   },
   {
     "name": "Ten Basket",
-    "url": "/games/ten-basket/index.html",
-    "cover": "/png/games/ten.webp"
+    "url": "/assets/gameassets/truffled/games/ten-basket/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/ten.webp"
   },
   {
     "name": "Terraria, Webport",
-    "url": "/games/terraria/terraria-wrapper.html",
-    "cover": "/png/games/ter.webp"
+    "url": "/assets/gameassets/truffled/games/terraria/terraria-wrapper.html",
+    "cover": "/assets/gameassets/truffled/imgs/ter.webp"
   },
   {
     "name": "Tetris",
-    "url": "/games/tetris/index.html",
-    "cover": "/png/games/tet.webp"
+    "url": "/assets/gameassets/truffled/games/tetris/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/tet.webp"
   },
   {
     "name": "Tetrisweeper",
-    "url": "/games/tetrisweeper/",
-    "cover": "/png/games/tetriss.webp"
+    "url": "/assets/gameassets/truffled/games/tetrisweeper/",
+    "cover": "/assets/gameassets/truffled/imgs/tetriss.webp"
   },
   {
     "name": "The Binding Of Issac",
-    "url": "/games/binding-of-isaac/index.html",
-    "cover": "/png/games/tboi.webp"
+    "url": "/assets/gameassets/truffled/games/binding-of-isaac/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/tboi.webp"
   },
   {
     "name": "The Binding Of Isaac Wrath Of The Lamb",
-    "url": "/gamefile/tboiw.html",
-    "cover": "/png/games/tboiw.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/tboiw.html",
+    "cover": "/assets/gameassets/truffled/imgs/tboiw.webp"
   },
   {
     "name": "The Binding Of Isaac Wrath Of The Lamb: Eternal",
-    "url": "/gamefile/boilambeternal.html",
-    "cover": "/png/games/boilambeternal.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/boilambeternal.html",
+    "cover": "/assets/gameassets/truffled/imgs/boilambeternal.webp"
   },
   {
     "name": "The Binding Of Issac: Rebirth, Webport",
     "altNames": [
       "The Binding Of Issac: Rebirth"
     ],
-    "url": "/games/psp/tboir/index.html",
-    "cover": "/png/games/tboir.webp"
+    "url": "/assets/gameassets/truffled/games/psp/tboir/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/tboir.webp"
   },
   {
     "name": "The Impossible Quiz",
-    "url": "/games/theimpossiblequiz/index.html",
-    "cover": "/png/games/quiz.webp"
+    "url": "/assets/gameassets/truffled/games/theimpossiblequiz/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/quiz.webp"
   },
   {
     "name": "The Legend of Zelda Ocarina of Time",
-    "url": "/gamefile/tloz.html",
-    "cover": "/png/games/tloz.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/tloz.html",
+    "cover": "/assets/gameassets/truffled/imgs/tloz.webp"
   },
   {
     "name": "Thats Not My Neighbor, Webport",
     "altNames": [
       "Thats Not My Neighbor"
     ],
-    "url": "/gamefile/thatsnot.html",
-    "cover": "/png/games/thatsnot.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/thatsnot.html",
+    "cover": "/assets/gameassets/truffled/imgs/thatsnot.webp"
   },
   {
     "name": "There Is No Game",
-    "url": "/games/there-is-no-game/index.html",
-    "cover": "/png/games/ting.webp"
+    "url": "/assets/gameassets/truffled/games/there-is-no-game/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/ting.webp"
   },
   {
     "name": "Time Shooter 1",
-    "url": "/gamefile/time1.html",
-    "cover": "/png/games/tim1.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/time1.html",
+    "cover": "/assets/gameassets/truffled/imgs/tim1.webp"
   },
   {
     "name": "Time Shooter 2",
-    "url": "/games/timeshooter2/index.html",
-    "cover": "/png/games/tim2.webp"
+    "url": "/assets/gameassets/truffled/games/timeshooter2/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/tim2.webp"
   },
   {
     "name": "Time Shooter 3",
-    "url": "/games/timeshoot3/index.html",
-    "cover": "/png/games/tim3.webp"
+    "url": "/assets/gameassets/truffled/games/timeshoot3/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/tim3.webp"
   },
   {
     "name": "Tiny Fishing",
-    "url": "/games/tiny-fishing/index.html",
-    "cover": "png/games/tiny.webp"
+    "url": "/assets/gameassets/truffled/games/tiny-fishing/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/tiny.webp"
   },
   {
     "name": "To The Core, Webport",
     "altNames": [
       "To The Core"
     ],
-    "url": "/games/tothecore/index.html",
-    "cover": "/png/games/to.webp"
+    "url": "/assets/gameassets/truffled/games/tothecore/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/to.webp"
   },
   {
     "name": "Tomb Of The Mask",
-    "url": "/games/tombofthemask/index.html",
-    "cover": "/png/games/tomb.webp"
+    "url": "/assets/gameassets/truffled/games/tombofthemask/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/tomb.webp"
   },
   {
     "name": "Tomodachi Collection",
-    "url": "/gamefile/tomo.html",
-    "cover": "/png/games/tomo.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/tomo.html",
+    "cover": "/assets/gameassets/truffled/imgs/tomo.webp"
   },
   {
     "name": "Touhou 1 Touhou-Reiiden",
-    "url": "/gamefile/touhou.html",
-    "cover": "/png/games/touhou1.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/touhou.html",
+    "cover": "/assets/gameassets/truffled/imgs/touhou1.webp"
   },
   {
     "name": "Touhou 2 Touhou-Fuumaroku",
-    "url": "/gamefile/touhou2.html",
-    "cover": "/png/games/touhou2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/touhou2.html",
+    "cover": "/assets/gameassets/truffled/imgs/touhou2.webp"
   },
   {
     "name": "Touhou 3 Touhou-Yumejikuu",
-    "url": "/gamefile/touhou3.html",
-    "cover": "/png/games/touhou3.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/touhou3.html",
+    "cover": "/assets/gameassets/truffled/imgs/touhou3.webp"
   },
   {
     "name": "Touhou 4 Touhou-Gensokyou",
-    "url": "/gamefile/touhou4.html",
-    "cover": "/png/games/touhou4.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/touhou4.html",
+    "cover": "/assets/gameassets/truffled/imgs/touhou4.webp"
   },
   {
     "name": "Touhou 5 Touhou-Kaikidan",
-    "url": "/gamefile/touhou5.html",
-    "cover": "/png/games/touhou5.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/touhou5.html",
+    "cover": "/assets/gameassets/truffled/imgs/touhou5.webp"
   },
   {
     "name": "Touhou Mother, Webport",
     "altNames": [
       "Touhou Mother"
     ],
-    "url": "/games/touhoumother/index.html",
-    "cover": "/png/games/touhou.webp"
+    "url": "/assets/gameassets/truffled/games/touhoumother/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/touhou.webp"
   },
   {
     "name": "Tube Jumpers",
-    "url": "/gamefile/tube.html",
-    "cover": "/png/games/tube.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/tube.html",
+    "cover": "/assets/gameassets/truffled/imgs/tube.webp"
   },
   {
     "name": "Tung Tung Basics, Webport",
-    "url": "/games/tungtungbog/index.html",
-    "cover": "/png/games/tungtungbasics.webp"
+    "url": "/assets/gameassets/truffled/games/tungtungbog/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/tungtungbasics.webp"
   },
   {
     "name": "Tung Tung Horror",
-    "url": "/gamefile/tung.html",
-    "cover": "/png/games/tung.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/tung.html",
+    "cover": "/assets/gameassets/truffled/imgs/tung.webp"
   },
   {
     "name": "Ultrakill, Webport",
     "altNames": [
       "Ultrakill"
     ],
-    "url": "/games/ultrakill/ultrakill/index.html",
-    "cover": "png/games/ultra.webp"
+    "url": "/assets/gameassets/truffled/games/ultrakill/ultrakill/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/ultra.webp"
   },
   {
     "name": "Ultrapool, Webport",
     "altNames": [
       "Ultrapool"
     ],
-    "url": "/gamefile/ultrapool.html",
-    "cover": "png/games/ultrapool.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/ultrapool.html",
+    "cover": "/assets/gameassets/truffled/imgs/ultrapool.webp"
   },
   {
     "name": "Um Jammer Lammy",
-    "url": "/gamefile/jemmer.html",
-    "cover": "/png/games/jammer.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/jemmer.html",
+    "cover": "/assets/gameassets/truffled/imgs/jammer.webp"
   },
   {
     "name": "Undertale 10th Anniversary, Webport",
     "altNames": [
       "Undertale 10th Anniversary"
     ],
-    "url": "/games/10th/index.html",
-    "cover": "png/games/undertale10.webp"
+    "url": "/assets/gameassets/truffled/games/10th/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/undertale10.webp"
   },
   {
     "name": "Undertale, Webport",
     "altNames": [
       "Undertale"
     ],
-    "url": "/gamefile/undertale.html",
-    "cover": "png/games/uertale.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/undertale.html",
+    "cover": "/assets/gameassets/truffled/imgs/uertale.webp"
   },
   {
     "name": "Undertale Last Breath",
-    "url": "/gamefile/udlb.html",
-    "cover": "png/games/udlb.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/udlb.html",
+    "cover": "/assets/gameassets/truffled/imgs/udlb.webp"
   },
   {
     "name": "Undertale Yellow, Webport",
     "altNames": [
       "Undertale Yellow"
     ],
-    "url": "/games/uty/play.html",
-    "cover": "/png/games/udy.webp"
+    "url": "/assets/gameassets/truffled/games/uty/play.html",
+    "cover": "/assets/gameassets/truffled/imgs/udy.webp"
   },
   {
     "name": "Untitled Goose Game, Webport",
     "altNames": [
       "Untitled Goose Game"
     ],
-    "url": "/games/UntitledGooseGameBog/index.html",
-    "cover": "/png/games/untitled.webp",
+    "url": "/assets/gameassets/truffled/games/UntitledGooseGameBog/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/untitled.webp",
     "frameType": "unityframe"
   },
   {
@@ -2617,139 +2617,139 @@
     "altNames": [
       "Vampire Survivors"
     ],
-    "url": "/games/vampire/index.html",
-    "cover": "/png/games/vampire.webp"
+    "url": "/assets/gameassets/truffled/games/vampire/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/vampire.webp"
   },
   {
     "name": "Vex",
-    "url": "/games/vex/index.html",
-    "cover": "/png/games/vex.webp"
+    "url": "/assets/gameassets/truffled/games/vex/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/vex.webp"
   },
   {
     "name": "Vex 2",
-    "url": "/gamefile/vex2.html",
-    "cover": "/png/games/vex2.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/vex2.html",
+    "cover": "/assets/gameassets/truffled/imgs/vex2.webp"
   },
   {
     "name": "Vex 3",
-    "url": "/games/vex3/index.html",
-    "cover": "/png/games/vex3.webp"
+    "url": "/assets/gameassets/truffled/games/vex3/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/vex3.webp"
   },
   {
     "name": "Vex 4",
-    "url": "/games/vex4/index.html",
-    "cover": "/png/games/vex4.webp"
+    "url": "/assets/gameassets/truffled/games/vex4/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/vex4.webp"
   },
   {
     "name": "Vex 5",
-    "url": "/games/vex5/index.html",
-    "cover": "/png/games/vex5.webp"
+    "url": "/assets/gameassets/truffled/games/vex5/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/vex5.webp"
   },
   {
     "name": "Vex 6",
-    "url": "/gamefile/vex6.html",
-    "cover": "/png/games/vex6.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/vex6.html",
+    "cover": "/assets/gameassets/truffled/imgs/vex6.webp"
   },
   {
     "name": "Vex 7",
-    "url": "/gamefile/vex7.html",
-    "cover": "/png/games/vex7.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/vex7.html",
+    "cover": "/assets/gameassets/truffled/imgs/vex7.webp"
   },
   {
     "name": "Vex 8",
-    "url": "/gamefile/vex8.html",
-    "cover": "/png/games/vex8.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/vex8.html",
+    "cover": "/assets/gameassets/truffled/imgs/vex8.webp"
   },
   {
     "name": "Vib-Ribbon, Webport",
     "altNames": [
       "Vib-Ribbon"
     ],
-    "url": "/gamefile/vib.html",
-    "cover": "/png/games/vib.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/vib.html",
+    "cover": "/assets/gameassets/truffled/imgs/vib.webp"
   },
   {
     "name": "Volley Random",
-    "url": "/games/volley-random/index.html",
-    "cover": "/games/volley-random/splash.png"
+    "url": "/assets/gameassets/truffled/games/volley-random/index.html",
+    "cover": "/assets/gameassets/truffled/games/volley-random/splash./assets/gameassets/truffled/imgs/"
   },
   {
     "name": "Warioware D.I.Y",
-    "url": "/gamefile/wariowarediy.html",
-    "cover": "png/games/wariowarediy.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/wariowarediy.html",
+    "cover": "/assets/gameassets/truffled/imgs/wariowarediy.webp"
   },
   {
     "name": "We Become What We behold",
-    "url": "/gamefile/wbwwb.html",
-    "cover": "png/games/wbwwb.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/wbwwb.html",
+    "cover": "/assets/gameassets/truffled/imgs/wbwwb.webp"
   },
   {
     "name": "Webfishing, Webport",
     "altNames": [
       "Webfishing"
     ],
-    "url": "/games/webfishing/",
-    "cover": "/png/games/web.webp"
+    "url": "/assets/gameassets/truffled/games/webfishing/",
+    "cover": "/assets/gameassets/truffled/imgs/web.webp"
   },
   {
     "name": "Who's Your Daddy, Webport",
     "altNames": [
       "Who's Your Daddy"
     ],
-    "url": "/games/whoseyourdaddy/index.html",
-    "cover": "png/games/daddy.webp"
+    "url": "/assets/gameassets/truffled/games/whoseyourdaddy/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/daddy.webp"
   },
   {
     "name": "Witch's Heart, Webport",
     "altNames": [
       "Witch's Heart"
     ],
-    "url": "/gamefile/witches.html",
-    "cover": "png/games/witches.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/witches.html",
+    "cover": "/assets/gameassets/truffled/imgs/witches.webp"
   },
   {
     "name": "Wordle",
-    "url": "/games/wordle-unlimited/index.html",
-    "cover": "/png/games/world.webp"
+    "url": "/assets/gameassets/truffled/games/wordle-unlimited/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/world.webp"
   },
   {
     "name": "Worlds Hardest Game",
-    "url": "/gamefile/twhg.html",
-    "cover": "png/games/wrdd.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/twhg.html",
+    "cover": "/assets/gameassets/truffled/imgs/wrdd.webp"
   },
   {
     "name": "Worlds Hardest Game 2",
-    "url": "/games/worlds-hardest-game-2/index.html",
-    "cover": "/games/worlds-hardest-game-2/the-worlds-hardest-game-2.jpg"
+    "url": "/assets/gameassets/truffled/games/worlds-hardest-game-2/index.html",
+    "cover": "/assets/gameassets/truffled/games/worlds-hardest-game-2/the-worlds-hardest-game-2.jpg"
   },
   {
     "name": "Worlds Hardest Game 3",
-    "url": "/games/worlds-hardest-game-3/index.html",
-    "cover": "/png/games/3.webp"
+    "url": "/assets/gameassets/truffled/games/worlds-hardest-game-3/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/3.webp"
   },
   {
     "name": "Woody's Incredible Journey To The Escape From Eternal Terror",
-    "url": "/games/WIJ/index.html",
-    "cover": "/png/games/WIJ.webp"
+    "url": "/assets/gameassets/truffled/games/WIJ/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/WIJ.webp"
   },
   {
     "name": "Yandere Simulator, Webport",
-    "url": "/gamefile/yandere.html",
-    "cover": "/png/games/yandere.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/yandere.html",
+    "cover": "/assets/gameassets/truffled/imgs/yandere.webp"
   },
   {
     "name": "Yoked",
-    "url": "/gamefile/yoked.html",
-    "cover": "/png/games/yoked.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/yoked.html",
+    "cover": "/assets/gameassets/truffled/imgs/yoked.webp"
   },
   {
     "name": "Your Only Move Is HUSTLE, YOMI Hustle, Webport",
-    "url": "/games/YOMIHustle/index.html",
-    "cover": "/png/games/YOMI.webp"
+    "url": "/assets/gameassets/truffled/games/YOMIHustle/index.html",
+    "cover": "/assets/gameassets/truffled/imgs/YOMI.webp"
   },
   {
     "name": "Yume Nikki, Webport",
-    "url": "/gamefile/yume.html",
-    "cover": "/png/games/yumi.webp"
+    "url": "/assets/gameassets/truffled/games/gamefile/yume.html",
+    "cover": "/assets/gameassets/truffled/imgs/yumi.webp"
   }
 ]

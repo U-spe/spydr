@@ -1,4 +1,4 @@
-## i may of gotten out of hand with the branches. they will all be deleted soon
+## 98% of this project is HTML due to physical games in game-assets.
 
 # 🕷️ SPYDR
 

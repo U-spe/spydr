@@ -1,3 +1,5 @@
+## i may of gotten out of hand with the branches. they will all be deleted soon
+
 # 🕷️ SPYDR
 
 > a minimal, grayscale web hub built for speed, clarity, and control.

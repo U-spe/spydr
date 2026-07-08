@@ -1,4 +1,4 @@
-## 98% of this project is HTML due to physical games in game-assets.
+## 64% (and counting) of this project is HTML due to physical games in game-assets.
 
 # 🕷️ SPYDR
 

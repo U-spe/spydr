@@ -13,6 +13,10 @@
   <link rel="stylesheet" href="/css/menu.css"/>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: "JetBrains Mono", monospace;
@@ -21,13 +25,24 @@
       overflow: hidden;
     }
 
-    /* universal spydr background hook */
+    /* background */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      background: radial-gradient(circle at top, #111 0%, #090909 60%, #000 100%);
+      background:
+        radial-gradient(circle at top, #111 0%, #090909 60%, #000 100%);
       z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at center, rgba(63,94,251,.08), transparent 65%);
+      z-index: -1;
+      pointer-events: none;
     }
 
     /* top bar */
@@ -42,8 +57,9 @@
       align-items: center;
       padding: 0 16px;
       border-bottom: 1px solid #2b2b2b;
-      background: rgba(17,17,17,0.6);
-      backdrop-filter: blur(10px);
+      background: rgba(17,17,17,.7);
+      backdrop-filter: blur(12px);
+      z-index: 50;
     }
 
     .topbar .left,
@@ -55,71 +71,112 @@
       color: #bdbdbd;
     }
 
-    /* main layout */
+    /* page wrapper */
     .wrap {
+      width: 100%;
       height: 100vh;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      gap: 18px;
+      align-items: center;
       padding-top: 48px;
     }
 
-    .logo {
+    /* under construction card */
+    .construction {
+      width: min(900px, 92vw);
+      padding: 70px 50px;
+      background: rgba(17,17,17,.9);
+      border: 1px solid #2b2b2b;
+      border-radius: 20px;
+      text-align: center;
+      backdrop-filter: blur(18px);
+      box-shadow:
+        0 0 40px rgba(0,0,0,.55),
+        inset 0 0 0 1px rgba(255,255,255,.02);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .construction::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          -45deg,
+          rgba(255,196,0,.08) 0px,
+          rgba(255,196,0,.08) 18px,
+          transparent 18px,
+          transparent 36px
+        );
+      pointer-events: none;
+      opacity: .4;
+    }
+
+    .icon {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 25px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(255,196,0,.08);
+      border: 1px solid rgba(255,196,0,.25);
+      font-size: 52px;
+      color: #ffc400;
+    }
+
+    h1 {
+      margin: 0;
       font-family: "Space Grotesk", sans-serif;
-      font-size: 44px;
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1;
       letter-spacing: 2px;
     }
 
-    .subtitle {
-      font-size: 12px;
-      color: #7c7c7c;
+    .status {
       margin-top: 10px;
+      color: #3f5efb;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 13px;
+      font-weight: 600;
     }
 
-    .panel {
-      width: min(620px, 92vw);
-      background: #111;
-      border: 1px solid #2b2b2b;
-      border-radius: 10px;
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
+    .desc {
+      max-width: 620px;
+      margin: 28px auto 40px;
+      color: #9f9f9f;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       gap: 10px;
-    }
-
-    input {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #2b2b2b;
-      background: #0d0d0d;
-      color: #fff;
-      font-family: inherit;
-      outline: none;
-    }
-
-    button {
-      padding: 12px;
-      border-radius: 8px;
+      padding: 14px 28px;
+      border-radius: 10px;
       border: 1px solid #3f5efb;
       background: transparent;
       color: #3f5efb;
-      cursor: pointer;
-      transition: 0.2s;
-      font-family: inherit;
+      text-decoration: none;
+      transition: .25s;
+      font-size: 14px;
     }
 
-    button:hover {
+    .home-btn:hover {
       background: #3f5efb;
       color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(63,94,251,.35);
     }
 
-    .hint {
-      font-size: 11px;
+    .footer-note {
+      margin-top: 28px;
       color: #666;
-      text-align: center;
+      font-size: 12px;
     }
   </style>
 </head>
@@ -139,44 +196,66 @@
     </div>
   </div>
 
-
   <!-- MAIN -->
   <div class="wrap">
 
-    <div>
-      <div class="logo">spydr</div>
-      <div class="subtitle">secure fetch gateway</div>
-    </div>
+    <div class="construction">
 
-    <form class="panel" method="POST" action="/createSession">
-      <input name="url" id="iurl" type="text" placeholder="enter url or search..." />
-      <button type="submit">launch</button>
-      <div class="hint">proxy engine: alloy core // spydr skin layer</div>
-    </form>
+      <div class="icon">
+        <i class="ri-tools-fill"></i>
+      </div>
+
+      <div class="status">
+        browser module
+      </div>
+
+      <h1>UNDER<br>CONSTRUCTION</h1>
+
+      <div class="desc">
+        The Spydr Browser is currently being rebuilt from the ground up.
+        We're improving performance, security, and adding a completely new experience.
+        Check back soon.
+      </div>
+
+      <a class="home-btn" href="/">
+        <i class="ri-arrow-left-line"></i>
+        Return Home
+      </a>
+
+      <div class="footer-note">
+        spydr browser • unavailable
+      </div>
+
+    </div>
 
   </div>
 
   <div id="global-menu"></div>
 
   <script>
-    // clock
     function updateClock() {
       const now = new Date();
       document.getElementById("clock").textContent =
-        now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+        now.toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit"
+        });
     }
+
     setInterval(updateClock, 1000);
     updateClock();
 
-    // battery (if supported)
     if (navigator.getBattery) {
-      navigator.getBattery().then(battery => {
+      navigator.getBattery().then((battery) => {
+
         function updateBattery() {
           document.getElementById("battery").textContent =
             Math.floor(battery.level * 100) + "%";
         }
+
         updateBattery();
         battery.addEventListener("levelchange", updateBattery);
+
       });
     } else {
       document.getElementById("battery").textContent = "N/A";

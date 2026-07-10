@@ -34,6 +34,28 @@ body {
     line-height: 1.5;
 }
 
+/* FIX: Force the background container behind everything */
+#bg-effects-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;          /* Pushes it firmly behind all content */
+    pointer-events: none; /* Ensures mouse clicks pass through to the buttons */
+    overflow: hidden;
+}
+
+/* Ensure the canvas/fog inside the container fills the screen */
+#stars-canvas, 
+#fog-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* MASTER WRAPPER FOR EXTENSIBLE GLOBAL SIDEBARS/MENUS */
 .spydr-app-wrapper {
     position: relative;

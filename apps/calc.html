@@ -1,129 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Calculator</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="/css/calc.css">
+    <title>spydr // ti-30x</title>
+    
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/calculator.css">
     <link rel="stylesheet" href="/css/menu.css">
-
 </head>
 
-<body>
+<body data-bg-style="stars">
+
+    <div id="bg-effects-container">
+        <canvas id="stars-canvas"></canvas>
+    </div>
+
     <div id="global-menu"></div>
 
-<div class="calculator">
+    <main class="spydr-workspace calc-workspace">
+        
+        <div class="calculator-chassis glass-panel">
+            
+            <header class="calc-header">
+                <div class="brand">spydr <span>TI-30X</span></div>
+                <div class="indicators">
+                    <span id="deg-ind" class="active">DEG</span>
+                    <span id="rad-ind">RAD</span>
+                </div>
+            </header>
 
-    <header class="calc-header">
+            <div class="calc-screen">
+                <div id="calc-history" class="history-line"></div>
+                <div id="calc-current" class="current-line">0</div>
+            </div>
 
-        <div class="calc-title">
+            <div class="calc-keypad">
+                <button class="calc-btn btn-fn" data-action="deg-rad">RAD/DEG</button>
+                <button class="calc-btn btn-fn" data-value="sin(">sin</button>
+                <button class="calc-btn btn-fn" data-value="cos(">cos</button>
+                <button class="calc-btn btn-fn" data-value="tan(">tan</button>
+                <button class="calc-btn btn-fn" data-value="!">x!</button>
 
-            <i class="ri-calculator-line"></i>
+                <button class="calc-btn btn-fn" data-value="√(">√x</button>
+                <button class="calc-btn btn-fn" data-value="^">xʸ</button>
+                <button class="calc-btn btn-fn" data-value="log(">log</button>
+                <button class="calc-btn btn-fn" data-value="ln(">ln</button>
+                <button class="calc-btn btn-fn" data-value="π">π</button>
 
-            <span>Calculator</span>
+                <button class="calc-btn btn-ctrl" data-value="(">(</button>
+                <button class="calc-btn btn-ctrl" data-value=")">)</button>
+                <button class="calc-btn btn-ctrl" data-value="e">e</button>
+                <button class="calc-btn btn-danger" data-action="delete">DEL</button>
+                <button class="calc-btn btn-danger" data-action="clear">AC</button>
+
+                <button class="calc-btn btn-num" data-value="7">7</button>
+                <button class="calc-btn btn-num" data-value="8">8</button>
+                <button class="calc-btn btn-num" data-value="9">9</button>
+                <button class="calc-btn btn-fn" data-value="ANS">ANS</button>
+                <button class="calc-btn btn-op" data-value="÷">÷</button>
+
+                <button class="calc-btn btn-num" data-value="4">4</button>
+                <button class="calc-btn btn-num" data-value="5">5</button>
+                <button class="calc-btn btn-num" data-value="6">6</button>
+                <button class="calc-btn btn-op" data-value="×">×</button>
+                <button class="calc-btn btn-op" data-value="-">-</button>
+
+                <button class="calc-btn btn-num" data-value="1">1</button>
+                <button class="calc-btn btn-num" data-value="2">2</button>
+                <button class="calc-btn btn-num" data-value="3">3</button>
+                <button class="calc-btn btn-op plus-btn" data-value="+">+</button>
+
+                <button class="calc-btn btn-num zero-btn" data-value="0">0</button>
+                <button class="calc-btn btn-num" data-value=".">.</button>
+                <button class="calc-btn btn-equal" data-action="calculate">=</button>
+            </div>
 
         </div>
 
-        <button id="historyBtn">
+    </main>
 
-            <i class="ri-history-line"></i>
-
-        </button>
-
-    </header>
-
-    <section class="display">
-
-        <div id="expression"></div>
-
-        <div id="result">0</div>
-
-    </section>
-
-    <section class="buttons">
-
-        <button class="action" data-action="clear">AC</button>
-
-        <button class="action" data-action="delete">
-
-            <i class="ri-delete-back-2-line"></i>
-
-        </button>
-
-        <button class="operator">%</button>
-
-        <button class="operator">÷</button>
-
-        <button>7</button>
-
-        <button>8</button>
-
-        <button>9</button>
-
-        <button class="operator">×</button>
-
-        <button>4</button>
-
-        <button>5</button>
-
-        <button>6</button>
-
-        <button class="operator">−</button>
-
-        <button>1</button>
-
-        <button>2</button>
-
-        <button>3</button>
-
-        <button class="operator">+</button>
-
-        <button class="zero">0</button>
-
-        <button>.</button>
-
-        <button class="equals">=</button>
-
-    </section>
-
-</div>
-
-<aside id="historyPanel">
-
-    <div class="history-header">
-
-        <h2>History</h2>
-
-        <button id="clearHistory">
-
-            <i class="ri-delete-bin-line"></i>
-
-        </button>
-
-    </div>
-
-    <div id="historyList">
-
-        <p class="empty">
-
-            No calculations yet.
-
-        </p>
-
-    </div>
-
-</aside>
-
-<script src="/js/calc.js"></script>
-<script src="/js/globalmenu.js"></script>
-<script type="module" src="/js/global.js"></script>
+    <script src="/js/globalmenu.js"></script>
+    <script type="module" src="/js/global.js"></script>
+    
+    <script type="module" src="/js/calculator.js"></script>
 
 </body>
 </html>

@@ -5,7 +5,7 @@ export default class CloakManager {
         this.presets = {
             'spydr': {
                 title: "spydr",
-                icon: "assets/images.png"
+                icon: "/assets/images/favicon.png"
             },
             'google': {
                 title: "Google",

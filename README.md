@@ -1,4 +1,4 @@
-## 64% (and counting) of this project is HTML due to physical games in game-assets.
+### 94% (and counting) of this project is HTML due to physical games in gameassets. below is also ai slop.
 
 # 🕷️ SPYDR
 

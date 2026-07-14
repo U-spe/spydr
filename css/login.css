@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  background-color: #050505;
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.auth-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.auth-box {
+  background: rgba(15, 15, 15, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 40px 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-header img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.auth-header h2 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #a3a3a3;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.auth-tabs button {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  color: #666;
+  padding: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-tabs button.active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.input-group input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  font-family: 'Space Grotesk', sans-serif;
+  outline: none;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #fff;
+}
+
+#submit-btn {
+  width: 100%;
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
+}
+
+#submit-btn:hover {
+  opacity: 0.8;
+}
+
+.guest-btn {
+  width: 100%;
+  background: transparent;
+  color: #666;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.guest-btn:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.error-msg {
+  color: #ff4a4a;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  text-align: center;
+  min-height: 20px;
+  font-family: 'JetBrains Mono', monospace;
+}

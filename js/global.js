@@ -4,6 +4,7 @@ import ThemeManager from './theme.js';
 import CloakManager from './cloak.js';
 import HotkeyManager from './hotkeys.js';
 import UIManager from './ui.js';
+import AuthManager from './auth-user.js'; // New Auth Import
 
 class SpydrCoreRegistry {
     constructor() {
@@ -35,6 +36,10 @@ class SpydrCoreRegistry {
         const ui = new UIManager(this);
         this.register('ui', ui);
 
+        // Register Auth Layer
+        const auth = new AuthManager(this);
+        this.register('auth', auth);
+
         // Core initialization execution cascade
         settings.init();
 
@@ -50,6 +55,7 @@ class SpydrCoreRegistry {
         cloak.init();
         hotkeys.init();
         ui.init();
+        auth.init(); // Boot Auth UI checks
         
         console.log("spydr engine // Core Stack Booted & Themes Injected.");
     }

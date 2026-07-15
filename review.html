@@ -38,25 +38,24 @@
       
       <div class="channel-list">
         <div class="channel-category">TEXT CHANNELS</div>
-        <div class="channel active"><i class="ri-hashtag"></i> global</div>
-        <div class="channel"><i class="ri-hashtag"></i> dev-logs</div>
-        <div class="channel"><i class="ri-hashtag"></i> off-topic</div>
+        <div class="channel active" data-channel="global"><i class="ri-hashtag"></i> global</div>
+        <div class="channel" data-channel="dev-logs"><i class="ri-hashtag"></i> dev-logs</div>
+        <div class="channel" data-channel="off-topic"><i class="ri-hashtag"></i> off-topic</div>
         
         <div class="channel-category category-header" style="margin-top: 20px;">
           <span>PRIVATE CHATS</span>
           <button id="create-dm-btn" title="Create Private Chat"><i class="ri-add-line"></i></button>
         </div>
-        </div>
+      </div>
     </div>
 
     <div class="chat-main">
       <div class="chat-header">
-        <div class="chat-title"><i class="ri-hashtag"></i> global</div>
-        <div class="chat-desc">Welcome to the main spydr network.</div>
+        <div class="chat-title" id="chat-title"><i class="ri-hashtag"></i> global</div>
+        <div class="chat-desc" id="chat-desc">Welcome to the main spydr network.</div>
       </div>
 
-      <div class="chat-messages" id="chat-messages">
-        </div>
+      <div class="chat-messages" id="chat-messages"></div>
 
       <div class="chat-input-area">
         <form id="chat-form">

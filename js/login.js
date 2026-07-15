@@ -51,7 +51,7 @@ authForm.addEventListener("submit", async (e) => {
         if (error) {
             handleError(error.message);
         } else {
-            window.location.href = "/"; // Navigate back to main chat
+            window.location.href = "/database.html"; // *moans*
         }
     } else {
         // --- SIGN UP ---
@@ -59,7 +59,7 @@ authForm.addEventListener("submit", async (e) => {
         if (error) {
             handleError(error.message);
         } else {
-            window.location.href = "/"; // Navigate back to main chat
+            window.location.href = "/database.html"; // you really have nothing better to do, snooping around my code.
         }
     }
 });

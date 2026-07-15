@@ -9,6 +9,7 @@ export default class AuthManager {
         this.registry = registry;
         this.user = null;
         this.profile = null;
+        this.widget = null;
     }
 
     async init() {
@@ -19,7 +20,11 @@ export default class AuthManager {
             return;
         }
 
-        // 2. Check current authentication state
+        // 2. Inject CSS and grab/create the widget
+        this.injectStyles();
+        this.setupWidgetContainer();
+
+        // 3. Check current authentication state
         const { data: { user } } = await supabase.auth.getUser();
         
         if (user) {
@@ -28,6 +33,147 @@ export default class AuthManager {
             this.updateUI();
         } else {
             this.setGuestUI();
+        }
+    }
+
+    // --- CSS INJECTION ---
+    injectStyles() {
+        if (document.getElementById('spydr-auth-styles')) return; // Prevent duplicate styles
+        
+        const style = document.createElement('style');
+        style.id = 'spydr-auth-styles';
+        style.textContent = `
+            /* FORCE WIDGET INTO THE CORNER */
+            .top-right-profile {
+                position: fixed;
+                top: 25px;
+                right: 35px;
+                z-index: 9999;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                cursor: pointer;
+                font-family: 'Space Grotesk', sans-serif;
+                color: #fff;
+            }
+
+            .pfp-icon {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background-color: #1a1a24;
+                border: 2px solid #b026ff;
+                box-shadow: 0 0 10px rgba(176, 38, 255, 0.4);
+            }
+
+            /* THE MINI DASHBOARD (Hidden by default) */
+            .profile-dropdown {
+                position: absolute;
+                top: 130%;
+                right: 0;
+                width: 250px;
+                background: rgba(10, 10, 15, 0.95);
+                border: 1px solid rgba(176, 38, 255, 0.3);
+                border-radius: 8px;
+                padding: 15px;
+                box-shadow: 0 5px 25px rgba(0, 0, 0, 0.9), 0 0 15px rgba(176, 38, 255, 0.2);
+                backdrop-filter: blur(10px);
+                
+                /* Hover Transition Logic */
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(-10px);
+                transition: all 0.3s ease;
+            }
+
+            /* Activate the dropdown on hover */
+            .top-right-profile.logged-in-widget:hover .profile-dropdown {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+
+            /* Inner Dropdown Layout */
+            .dropdown-user-info {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+                border-bottom: 1px dashed rgba(176, 38, 255, 0.3);
+            }
+
+            .dropdown-pfp {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                border: 2px solid #b026ff;
+                box-shadow: 0 0 8px rgba(176, 38, 255, 0.5);
+            }
+
+            .dropdown-text {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .dropdown-name {
+                color: #fff;
+                font-weight: 700;
+                font-size: 1.1rem;
+            }
+
+            .dropdown-xp {
+                color: #b026ff;
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 0.75rem;
+                letter-spacing: 1px;
+                margin-top: 4px;
+            }
+
+            /* Dropdown Buttons */
+            .dropdown-links button {
+                width: 100%;
+                background: transparent;
+                color: #8b8b8f;
+                border: none;
+                text-align: left;
+                padding: 12px 10px;
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 0.85rem;
+                cursor: pointer;
+                border-radius: 4px;
+                transition: all 0.2s;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .dropdown-links button i { font-size: 1.1rem; }
+
+            .dropdown-links button:hover {
+                background: rgba(176, 38, 255, 0.15);
+                color: #fff;
+                text-shadow: 0 0 5px #b026ff;
+            }
+
+            #btn-logout:hover {
+                background: rgba(255, 74, 74, 0.15);
+                color: #ff4a4a;
+                text-shadow: 0 0 5px #ff4a4a;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    // --- DOM SETUP ---
+    setupWidgetContainer() {
+        this.widget = document.querySelector('.top-right-profile');
+        
+        // If the HTML doesn't exist on the page at all, build it from scratch
+        if (!this.widget) {
+            this.widget = document.createElement('div');
+            this.widget.className = 'top-right-profile';
+            document.body.appendChild(this.widget);
         }
     }
 
@@ -43,34 +189,65 @@ export default class AuthManager {
         }
     }
 
-    updateUI() {
-        const profileWidget = document.querySelector('.top-right-profile');
-        const nameSpan = document.getElementById('top-right-name');
-        const pfpIcon = document.querySelector('.pfp-icon');
-
-        if (!profileWidget || !nameSpan) return;
-
-        // Update Text & Image
-        nameSpan.innerText = this.profile?.username || this.user.email.split('@')[0];
-        
-        if (this.profile?.avatar_url) {
-            pfpIcon.style.backgroundImage = `url('${this.profile.avatar_url}')`;
-            pfpIcon.style.backgroundSize = 'cover';
-            pfpIcon.style.backgroundPosition = 'center';
-        }
-
-        // Overwrite the click action to go to database instead of login
-        profileWidget.onclick = (e) => {
-            e.preventDefault();
-            this.transitionTo('/database.html');
-        };
+    calculateLevel(xp) {
+        if (!xp || xp === 0) return 1;
+        return Math.floor(Math.sqrt(xp / 100)) + 1;
     }
 
-    setGuestUI() {
-        const profileWidget = document.querySelector('.top-right-profile');
-        if (!profileWidget) return;
+    // --- LOGGED IN STATE ---
+    updateUI() {
+        if (!this.widget) return;
 
-        profileWidget.onclick = (e) => {
+        this.widget.onclick = null; // Clear old guest redirects
+        this.widget.classList.add('logged-in-widget');
+
+        const username = this.profile?.username || this.user.email.split('@')[0];
+        const pfpUrl = this.profile?.avatar_url || '/assets/images/favicon.png';
+        const xp = this.profile?.xp || 0;
+        const level = this.calculateLevel(xp);
+
+        // Build the HTML structure
+        this.widget.innerHTML = `
+            <span id="top-right-name">${username}</span>
+            <div class="pfp-icon" style="background-image: url('${pfpUrl}'); background-size: cover; background-position: center;"></div>
+            
+            <div class="profile-dropdown">
+                <div class="dropdown-user-info">
+                    <div class="dropdown-pfp" style="background-image: url('${pfpUrl}'); background-size: cover; background-position: center;"></div>
+                    <div class="dropdown-text">
+                        <div class="dropdown-name">${username}</div>
+                        <div class="dropdown-xp">LVL ${level} // ${xp} XP</div>
+                    </div>
+                </div>
+                <div class="dropdown-links">
+                    <button id="btn-dashboard"><i class="ri-dashboard-3-line"></i> Command Center</button>
+                    <button id="btn-logout"><i class="ri-logout-box-r-line"></i> Disconnect</button>
+                </div>
+            </div>
+        `;
+
+        // Attach Button Listeners
+        document.getElementById('btn-dashboard').addEventListener('click', () => {
+            this.transitionTo('/database.html');
+        });
+
+        document.getElementById('btn-logout').addEventListener('click', async () => {
+            await supabase.auth.signOut();
+            this.transitionTo('/login.html');
+        });
+    }
+
+    // --- GUEST STATE ---
+    setGuestUI() {
+        if (!this.widget) return;
+        
+        this.widget.classList.remove('logged-in-widget');
+        this.widget.innerHTML = `
+            <span id="top-right-name">Login</span>
+            <div class="pfp-icon"></div>
+        `;
+
+        this.widget.onclick = (e) => {
             e.preventDefault();
             this.transitionTo('/login.html');
         };
@@ -79,62 +256,5 @@ export default class AuthManager {
     transitionTo(url) {
         document.body.style.opacity = "0";
         setTimeout(() => location.href = url, 300);
-    }
-
-    // --- API FOR DATABASE.HTML TO USE LATER ---
-
-    async updateUsername(newName) {
-        if (!this.user || !this.profile) return { success: false, msg: "Not logged in." };
-
-        // Check the 7-day restriction
-        const lastChange = new Date(this.profile.last_name_change).getTime();
-        const now = new Date().getTime();
-        const daysSinceChange = (now - lastChange) / (1000 * 3600 * 24);
-
-        if (daysSinceChange < 7) {
-            const daysLeft = Math.ceil(7 - daysSinceChange);
-            return { success: false, msg: `You must wait ${daysLeft} more day(s) to change your tag.` };
-        }
-
-        // Process update
-        const { error } = await supabase
-            .from('profiles')
-            .update({ username: newName, last_name_change: new Date().toISOString() })
-            .eq('id', this.user.id);
-
-        if (error) return { success: false, msg: error.message };
-        
-        this.profile.username = newName;
-        this.updateUI();
-        return { success: true, msg: "Username updated successfully." };
-    }
-
-    async uploadPfp(file) {
-        if (!this.user) return { success: false, msg: "Not logged in." };
-
-        const fileExt = file.name.split('.').pop();
-        const filePath = `${this.user.id}-${Math.random()}.${fileExt}`;
-
-        // Upload to Storage
-        const { error: uploadError } = await supabase.storage
-            .from('avatars')
-            .upload(filePath, file);
-
-        if (uploadError) return { success: false, msg: uploadError.message };
-
-        // Get public URL
-        const { data: { publicUrl } } = supabase.storage.from('avatars').getPublicUrl(filePath);
-
-        // Update profiles table
-        const { error: updateError } = await supabase
-            .from('profiles')
-            .update({ avatar_url: publicUrl })
-            .eq('id', this.user.id);
-
-        if (updateError) return { success: false, msg: updateError.message };
-
-        this.profile.avatar_url = publicUrl;
-        this.updateUI();
-        return { success: true, msg: "Profile picture updated." };
     }
 }

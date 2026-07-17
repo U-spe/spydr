@@ -1,6 +1,6 @@
 ### 94% (and counting) of this project is HTML due to physical games in gameassets. below is also ai slop.
 
-# 🕷️ SPYDR
+# 🕷️ spydr
 
 > a minimal, grayscale web hub built for speed, clarity, and control.
 
@@ -8,7 +8,7 @@
 
 ## ⚙️ overview
 
-SPYDR is a lightweight web interface designed like a system dashboard — clean UI, fast navigation, and a cinematic boot experience.
+spydr is a lightweight web interface designed like a system dashboard — clean UI, fast navigation, and a cinematic boot experience.
 
 it’s built to feel less like a website and more like a live environment.
 
@@ -53,7 +53,7 @@ it’s built to feel less like a website and more like a live environment.
 
 ## 🕸️ philosophy
 
-SPYDR is built around one idea:
+spydr is built around one idea:
 
 > less interface, more system.
 

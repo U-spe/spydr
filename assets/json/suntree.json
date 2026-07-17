@@ -2,968 +2,968 @@
   {
     "id": 1,
     "name": "Amanda the Adventurer",
-    "url": "/assets/gameassets/suntree/games/amanda-the-adventurer/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/capsule_616x353.png"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/amanda-the-adventurer/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/capsule_616x353.png"
   },
   {
     "id": 2,
     "name": "Andy's Apple Farm",
-    "url": "/assets/gameassets/suntree/games/andys-apple-farm/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/ne3tan.webp"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/andys-apple-farm/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/ne3tan.webp"
   },
   {
     "id": 3,
     "name": "Bad Parenting 1",
-    "url": "/assets/gameassets/suntree/games/bad-parenting/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/Bad_parenting_1.webp"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/bad-parenting/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/Bad_parenting_1.webp"
   },
   {
     "id": 4,
     "name": "Bendy and the Ink Machine",
-    "url": "/assets/gameassets/suntree/games/bendy/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/9381c82bcb85d723252de06ea9f1dda0c62a45ccbabcfaf1e35afa4d27ddadf7.avif"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/bendy/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/9381c82bcb85d723252de06ea9f1dda0c62a45ccbabcfaf1e35afa4d27ddadf7.avif"
   },
   {
     "id": 5,
     "name": "BLOODMONEY!",
-    "url": "/assets/gameassets/suntree/games/bloodmoney/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/bloodmoney-main.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/bloodmoney/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/bloodmoney-main.jpg"
   },
   {
     "id": 6,
     "name": "Buckshot Roulette",
-    "url": "/assets/gameassets/suntree/games/buckshot-roulette/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/Site-logo.webp"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/buckshot-roulette/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/Site-logo.webp"
   },
   {
     "id": 7,
     "name": "Celeste",
-    "url": "/assets/gameassets/suntree/games/celeste/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/691ba3e0801180a9864cc8a7694b6f98097f9d9799bc7e3dc6db92f086759252.avif",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/celeste/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/691ba3e0801180a9864cc8a7694b6f98097f9d9799bc7e3dc6db92f086759252.avif",
     "controls": "arrows"
   },
   {
     "id": 8,
     "name": "Fears to Fathom: Home Alone",
-    "url": "/assets/gameassets/suntree/games/fears-to-fathom/home-alone/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/capsule_616x353.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/fears-to-fathom/home-alone/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/capsule_616x353.jpg"
   },
   {
     "id": 9,
     "name": "Gorilla Tag",
-    "url": "/assets/gameassets/suntree/games/gorilla-tag/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/4744c1ac34e78d50f9ecfbc9958ca6375a2011b1bcf9b9b6.avif"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/gorilla-tag/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/4744c1ac34e78d50f9ecfbc9958ca6375a2011b1bcf9b9b6.avif"
   },
   {
     "id": 10,
     "name": "Half Life",
-    "url": "/assets/gameassets/suntree/games/half-life/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/half-life.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/half-life/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/half-life.webp",
     "controls": "arrows"
   },
   {
     "id": 11,
     "name": "Hollow Knight",
-    "url": "/assets/gameassets/suntree/games/hollow-knight/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/4643fb058642335c523910f3a7910575f56372f612f7c0c9a497aaae978d3e51.avif",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/hollow-knight/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/4643fb058642335c523910f3a7910575f56372f612f7c0c9a497aaae978d3e51.avif",
     "controls": "arrows"
   },
   {
     "id": 12,
     "name": "Hotline Miami",
-    "url": "/assets/gameassets/suntree/games/hotline-miami/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/124e6f1066799ec18bb6722d4e312773ec9570b16ce450736cd64ba9730c91e0.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/hotline-miami/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/124e6f1066799ec18bb6722d4e312773ec9570b16ce450736cd64ba9730c91e0.jpg"
   },
   {
     "id": 13,
     "name": "Karlson",
-    "url": "/assets/gameassets/suntree/games/karlson/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/i5U2n+.png"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/karlson/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/i5U2n+.png"
   },
   {
     "id": 14,
     "name": "Kindergarten 1",
-    "url": "/assets/gameassets/suntree/games/kindergarten/1/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/Wiki-background.webp"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/kindergarten/1/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/Wiki-background.webp"
   },
   {
     "id": 15,
     "name": "Kindergarten 2",
-    "url": "/assets/gameassets/suntree/games/kindergarten/2/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/aasdasdasdasdasdasd.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/kindergarten/2/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/aasdasdasdasdasdasd.jpg"
   },
   {
     "id": 16,
     "name": "Kindergarten 3",
-    "url": "/assets/gameassets/suntree/games/kindergarten3/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/caasdasdsule_616x353.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/kindergarten3/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/caasdasdsule_616x353.jpg"
   },
   {
     "id": 17,
     "name": "OMORI",
-    "url": "/assets/gameassets/suntree/games/omori/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/capsuxasdle_616x353.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/omori/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/capsuxasdle_616x353.jpg",
     "controls": "arrows"
   },
   {
     "id": 18,
     "name": "People Playground",
-    "url": "/assets/gameassets/suntree/games/people-playground/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/capsuxczxcle_616x353.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/people-playground/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/capsuxczxcle_616x353.jpg"
   },
   {
     "id": 19,
     "name": "Pizza Tower",
-    "url": "/assets/gameassets/suntree/games/pizza-tower/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/pizza-tower-button-02-1670021139476.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/pizza-tower/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/pizza-tower-button-02-1670021139476.jpg"
   },
   {
     "id": 20,
     "name": "R.E.P.O",
-    "url": "/assets/gameassets/suntree/games/repo/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/Repo-Titulo.jpg.webp"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/repo/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/Repo-Titulo.jpg.webp"
   },
   {
     "id": 21,
     "name": "Raft",
-    "url": "/assets/gameassets/suntree/games/raft/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/heaxder.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/raft/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/heaxder.jpg"
   },
   {
     "id": 22,
     "name": "RE:RUN",
-    "url": "/assets/gameassets/suntree/games/rerun/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/8XI5Ic.png"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/rerun/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/8XI5Ic.png"
   },
   {
     "id": 23,
     "name": "Schoolboy Runaway",
-    "url": "/assets/gameassets/suntree/games/schoolboy-runaway/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/schoolboyrunaway.webp"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/schoolboy-runaway/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/schoolboyrunaway.webp"
   },
   {
     "id": 24,
     "name": "Slender: The 8 Pages",
-    "url": "/assets/gameassets/suntree/games/slender/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/Slender_Logo.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/slender/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/Slender_Logo.jpg"
   },
   {
     "id": 25,
     "name": "Slime Rancher",
-    "url": "/assets/gameassets/suntree/games/slime-rancher/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/SlimeRancher-Keyart_Wishlist-Landscape-2560x1440-b2f7b22e6d19dff415daf5dbe4d8e78c.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/slime-rancher/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/SlimeRancher-Keyart_Wishlist-Landscape-2560x1440-b2f7b22e6d19dff415daf5dbe4d8e78c.jpg"
   },
   {
     "id": 26,
     "name": "Sonic CD",
-    "url": "/assets/gameassets/suntree/games/sonic-cd/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/8793_Sonic_CD.webp"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/sonic-cd/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/8793_Sonic_CD.webp"
   },
   {
     "id": 27,
     "name": "Sonic Mania",
-    "url": "/assets/gameassets/suntree/games/sonicmania/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/capsule_6zxzxzx16x353.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/sonicmania/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/capsule_6zxzxzx16x353.jpg"
   },
   {
     "id": 28,
     "name": "Tattletail",
-    "url": "/assets/gameassets/suntree/games/tattletail/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/Tattletail_Steam_cover.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/tattletail/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/Tattletail_Steam_cover.jpg"
   },
   {
     "id": 29,
     "name": "Terraria",
-    "url": "/assets/gameassets/suntree/games/Terraria.html",
-    "cover": "/assets/gameassets/suntree/thumbs/heaasdasdasdasdder.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/Terraria.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/heaasdasdasdasdder.jpg"
   },
   {
     "id": 30,
     "name": "ULTRAKILL",
-    "url": "/assets/gameassets/suntree/games/ultrakill/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/91iQcC7apEL.png"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/ultrakill/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/91iQcC7apEL.png"
   },
   {
     "id": 31,
     "name": "WebFishing",
-    "url": "/assets/gameassets/suntree/games/web-fishing/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/capsule_6zxczxczxc16x353.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/web-fishing/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/capsule_6zxczxczxc16x353.jpg"
   },
   {
     "id": 32,
     "name": "Yandere Simulator",
-    "url": "/assets/gameassets/suntree/games/yandere-simulator/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/Logo_Yandere_Simulator.svg.png"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/yandere-simulator/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/Logo_Yandere_Simulator.svg.png"
   },
   {
     "id": 33,
     "name": "Doki Doki Literature Club+",
-    "url": "/assets/gameassets/suntree/games/ddlcplus/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/cfef7634adfd013fc6429f00e0284ddef85c0f857ed5da8d319710cbc249cac3.avif",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/ddlcplus/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/cfef7634adfd013fc6429f00e0284ddef85c0f857ed5da8d319710cbc249cac3.avif",
     "controls": "none"
   },
   {
     "id": 34,
     "name": "Peggle",
-    "url": "/assets/gameassets/suntree/games/peggle/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/maxzxczxczxczxczxcresdefault.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/peggle/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/maxzxczxczxczxczxcresdefault.jpg",
     "controls": "none"
   },
   {
     "id": 35,
     "name": "Untitled Goose Game",
-    "url": "/assets/gameassets/suntree/games/untitled-goose-game/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/e3549b645ea3dc77411280ba4a83f018235bbdb6f0b32039a5519cee985f0f4f.avif"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/untitled-goose-game/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/e3549b645ea3dc77411280ba4a83f018235bbdb6f0b32039a5519cee985f0f4f.avif"
   },
   {
     "id": 36,
     "name": "A Difficult Game About Climbing",
-    "url": "/assets/gameassets/suntree/games/adgac/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/m12123axresdefault.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/adgac/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/m12123axresdefault.jpg"
   },
   {
     "id": 37,
     "name": "Undertale",
-    "url": "/assets/gameassets/suntree/games/undertale/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/44bea8c565db26c0c470a6325a47c9ea031633945cb91e4b5e1b1a39b01a2cdb.avif",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/undertale/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/44bea8c565db26c0c470a6325a47c9ea031633945cb91e4b5e1b1a39b01a2cdb.avif",
     "controls": "arrows"
   },
   {
     "id": 38,
     "name": "Five Nights at Freddy's",
-    "url": "/assets/gameassets/suntree/games/fnaf1/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/FNaF1.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/fnaf1/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/FNaF1.webp",
     "controls": "arrows"
   },
   {
     "id": 39,
     "name": "Five Nights at Freddy's 2",
-    "url": "/assets/gameassets/suntree/games/fnaf2/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/fnaf-2-banner-fnaf2io.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/fnaf2/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/fnaf-2-banner-fnaf2io.jpg",
     "controls": "arrows"
   },
   {
     "id": 40,
     "name": "Five Nights at Freddy's 3",
-    "url": "/assets/gameassets/suntree/games/fnaf3/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/71Pib7x9NbL.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/fnaf3/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/71Pib7x9NbL.jpg",
     "controls": "arrows"
   },
   {
     "id": 41,
     "name": "Five Nights at Freddy's 4",
-    "url": "/assets/gameassets/suntree/games/fnaf4/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/baf1a457fbdeb042db36a38d16ffb7c67866736bb4795905be133826ed8b4fa7.avif",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/fnaf4/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/baf1a457fbdeb042db36a38d16ffb7c67866736bb4795905be133826ed8b4fa7.avif",
     "controls": "arrows"
   },
   {
     "id": 42,
     "name": "Five Nights at Freddy's 5: Sister Location",
-    "url": "/assets/gameassets/suntree/games/fnafsl/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/afb4fd16215e81ad263af66ffa6c3e384092bef0d3742b2f227b35bc60fa189b.avif"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/fnafsl/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/afb4fd16215e81ad263af66ffa6c3e384092bef0d3742b2f227b35bc60fa189b.avif"
   },
   {
     "id": 43,
     "name": "Five Nights at Freddy's: Ultimate Custom Night",
-    "url": "/assets/gameassets/suntree/games/fnafucn/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/06710fa7c3370a536005813c75f650148b38bb419f8dfd5b7f6e9712ec50196f.avif",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/fnafucn/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/06710fa7c3370a536005813c75f650148b38bb419f8dfd5b7f6e9712ec50196f.avif",
     "controls": "arrows"
   },
   {
     "id": 44,
     "name": "FNAF World",
-    "url": "/assets/gameassets/suntree/games/fnafw/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/FNAFWorldlogo.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/fnafw/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/FNAFWorldlogo.jpg"
   },
   {
     "id": 45,
     "name": "Five Nights at Freddy's: Pizzaria Simulator",
-    "url": "/assets/gameassets/suntree/games/fnafps/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/zczxczxczxczxczxc.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/fnafps/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/zczxczxczxczxczxc.jpg",
     "controls": "arrows"
   },
   {
     "id": 46,
     "name": "Iron Lung",
-    "url": "/assets/gameassets/suntree/games/iron-lung/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/1d825d77d4a37747fbed529203a93266d97f29ccbaddbe022af52a55b477bafe.avif"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/iron-lung/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/1d825d77d4a37747fbed529203a93266d97f29ccbaddbe022af52a55b477bafe.avif"
   },
   {
     "id": 47,
     "name": "Polytrack",
-    "url": "/assets/gameassets/suntree/games/polytrack/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/maxresdezxczxczxczxcfault.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/polytrack/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/maxresdezxczxczxczxcfault.jpg"
   },
   {
     "id": 48,
     "name": "Klifur",
-    "url": "/assets/gameassets/suntree/games/klifur/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/prmajD.png",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/klifur/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/prmajD.png",
     "controls": "none"
   },
   {
     "id": 49,
     "name": "Balatro",
-    "url": "/assets/gameassets/suntree/games/balatro/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/asdasdasdasder.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/balatro/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/asdasdasdasder.jpg",
     "controls": "arrows"
   },
   {
     "id": 50,
     "name": "Five Nights at Epstein's",
-    "url": "/assets/gameassets/suntree/games/fnae/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/maxzxczxczxcresdefault.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/fnae/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/maxzxczxczxcresdefault.jpg",
     "controls": "arrows"
   },
   {
     "id": 51,
     "name": "Friday Night Funkin'",
-    "url": "/assets/gameassets/suntree/games/FNF/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/769f9db715608f22e9174283d0f050e0_fgraphic.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/FNF/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/769f9db715608f22e9174283d0f050e0_fgraphic.jpg",
     "controls": "arrows"
   },
   {
     "id": 52,
     "name": "Blockblast",
-    "url": "/assets/gameassets/suntree/games/BlockBlast/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/block-blast-online1.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/BlockBlast/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/block-blast-online1.webp",
     "controls": "none"
   },
   {
     "id": 53,
     "name": "Bloons Tower Defense",
-    "url": "/assets/gameassets/suntree/games//btd/btd.html",
-    "cover": "/assets/gameassets/suntree/thumbs/Bloons_TD_iOS_Logo.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games//btd/btd.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/Bloons_TD_iOS_Logo.jpg",
     "controls": "none"
   },
   {
     "id": 54,
     "name": "Bloons Tower Defense 2",
-    "url": "/assets/gameassets/suntree/games//btd/btd2.html",
-    "cover": "/assets/gameassets/suntree/thumbs/cover-1638358840555.png",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games//btd/btd2.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/cover-1638358840555.png",
     "controls": "none"
   },
   {
     "id": 55,
     "name": "Bloons Tower Defense 3",
-    "url": "/assets/gameassets/suntree/games//btd/btd3.html",
-    "cover": "/assets/gameassets/suntree/thumbs/bloonstd3.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games//btd/btd3.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/bloonstd3.webp",
     "controls": "none"
   },
   {
     "id": 56,
     "name": "Drift Boss",
-    "url": "/assets/gameassets/suntree/games//drift-boss/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/drift-boss-game.png",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games//drift-boss/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/drift-boss-game.png",
     "controls": "none"
   },
   {
     "id": 57,
     "name": "Rise Higher",
-    "url": "/assets/gameassets/suntree/games//rise-higher/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/maxrezxczxczczxcsdefault.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games//rise-higher/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/maxrezxczxczczxcsdefault.jpg",
     "controls": "none"
   },
   {
     "id": 58,
     "name": "HexGL",
-    "url": "/assets/gameassets/suntree/games/HexGL/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/U1_bAe.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/HexGL/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/U1_bAe.jpg",
     "controls": "arrows"
   },
   {
     "id": 59,
     "name": "Geometry Dash Lite",
-    "url": "/assets/gameassets/suntree/games/gdlite/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/61CCVhzkDeL.png",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/gdlite/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/61CCVhzkDeL.png",
     "controls": "arrows"
   },
   {
     "id": 60,
     "name": "Duck Life",
-    "url": "/assets/gameassets/suntree/games/dl/dl.html",
-    "cover": "/assets/gameassets/suntree/thumbs/dl.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/dl/dl.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/dl.webp",
     "controls": "arrows"
   },
   {
     "id": 61,
     "name": "Baldi's Basics Plus",
-    "url": "/assets/gameassets/suntree/games/baldi-plus/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/f0ce23ce5af5eb2b016249919eef7fc28aa4fc83_400x225.png"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/baldi-plus/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/f0ce23ce5af5eb2b016249919eef7fc28aa4fc83_400x225.png"
   },
   {
     "id": 62,
     "name": "Class of '09",
-    "url": "/assets/gameassets/suntree/games/class-of-09/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/class-of-09-1hav5.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/class-of-09/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/class-of-09-1hav5.webp",
     "controls": "none"
   },
   {
     "id": 63,
     "name": "Cuphead",
-    "url": "/assets/gameassets/suntree/games/cuphead/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/d94d2186ef03c930392253c83c84af0c73b7e57cd902a526b09b4155a25930fe.avif"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/cuphead/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/d94d2186ef03c930392253c83c84af0c73b7e57cd902a526b09b4155a25930fe.avif"
   },
   {
     "id": 64,
     "name": "Getting Over It",
-    "url": "/assets/gameassets/suntree/games/getting-over-it/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/capsule_616x353.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/getting-over-it/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/capsule_616x353.jpg",
     "controls": "none"
   },
   {
     "id": 65,
     "name": "Duck Life 2",
-    "url": "/assets/gameassets/suntree/games/dl/dl2.html",
-    "cover": "/assets/gameassets/suntree/thumbs/dl2.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/dl/dl2.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/dl2.jpg",
     "controls": "arrows"
   },
   {
     "id": 66,
     "name": "Duck Life 3",
-    "url": "/assets/gameassets/suntree/games/dl/dl3.html",
-    "cover": "/assets/gameassets/suntree/thumbs/DuckLife3_OG-logo.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/dl/dl3.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/DuckLife3_OG-logo.jpg",
     "controls": "arrows"
   },
   {
     "id": 67,
     "name": "Duck Life 4",
-    "url": "/assets/gameassets/suntree/games/dl/dl4.html",
-    "cover": "/assets/gameassets/suntree/thumbs/DuckLife4_OG-logo.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/dl/dl4.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/DuckLife4_OG-logo.jpg",
     "controls": "arrows"
   },
   {
     "id": 68,
     "name": "The Coffin of Andy and Leyley",
-    "url": "/assets/gameassets/suntree/games/tcoaal/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/The_Coffin_of_Andy_and_Leyley_Banner.png",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/tcoaal/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/The_Coffin_of_Andy_and_Leyley_Banner.png",
     "controls": "arrows"
   },
   {
     "id": 69,
     "name": "Minesweeper",
-    "url": "/assets/gameassets/suntree/games/minesweeper/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/minesweeper-logo.png",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/minesweeper/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/minesweeper-logo.png",
     "controls": "none"
   },
   {
     "id": 70,
     "name": "Minecraft",
-    "url": "/assets/gameassets/suntree/games/minecraft/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/MSPromotionalBackground.webp"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/minecraft/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/MSPromotionalBackground.webp"
   },
   {
     "id": 71,
     "name": "Project Diva Extended",
-    "url": "/assets/gameassets/suntree/games/divaextend/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/artworks-000287662511-lm5vi5-t500x500.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/divaextend/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/artworks-000287662511-lm5vi5-t500x500.jpg",
     "controls": "arrows"
   },
   {
     "id": 72,
     "name": "NBA 2K13",
-    "url": "/assets/gameassets/suntree/games/nba2k13/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/NBA-2k13.jpeg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/nba2k13/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/NBA-2k13.jpeg",
     "controls": "arrows"
   },
   {
     "id": 73,
     "name": "Little Big Planet",
-    "url": "/assets/gameassets/suntree/games/lbp/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/dtrbirjxbmwjymd-800x450-nopad.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/lbp/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/dtrbirjxbmwjymd-800x450-nopad.jpg",
     "controls": "arrows"
   },
   {
     "id": 74,
     "name": "Lego Batman: The Videogame",
-    "url": "/assets/gameassets/suntree/games/lego-batman/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/lego-batman-the-videogame-ds.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/lego-batman/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/lego-batman-the-videogame-ds.webp",
     "controls": "arrows"
   },
   {
     "id": 75,
     "name": "Assassin's Creed: Bloodlines",
-    "url": "/assets/gameassets/suntree/games/assassin-creed-bloodline/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/ac-title.png",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/assassin-creed-bloodline/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/ac-title.png",
     "controls": "arrows"
   },
   {
     "id": 76,
     "name": "God of War: Ghost of Sparta",
-    "url": "/assets/gameassets/suntree/games/god-of-war-ghost-of-sparta/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/Kratos-Ghost-of-Sparta-God-of-War.avif",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/god-of-war-ghost-of-sparta/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/Kratos-Ghost-of-Sparta-God-of-War.avif",
     "controls": "arrows"
   },
   {
     "id": 77,
     "name": "God of War: Chains of Olympus",
-    "url": "/assets/gameassets/suntree/games/god-of-war-chains-of-olympus",
-    "cover": "/assets/gameassets/suntree/thumbs/102504-1.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/god-of-war-chains-of-olympus",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/102504-1.jpg",
     "controls": "arrows"
   },
   {
     "id": 78,
     "name": "Orange Roulette",
-    "url": "/assets/gameassets/suntree/games/orange-roulette/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/header.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/orange-roulette/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/header.jpg",
     "controls": "arrows"
   },
   {
     "id": 79,
     "name": "Raldi's Crackhouse",
-    "url": "/assets/gameassets/suntree/games/raldi/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/65862c6feaf80.webp"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/raldi/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/65862c6feaf80.webp"
   },
   {
     "id": 80,
     "name": "Undertale Yellow",
-    "url": "/assets/gameassets/suntree/games/undertale-yellow/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/136925-ee65ajxb-v4.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/undertale-yellow/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/136925-ee65ajxb-v4.webp",
     "controls": "arrows"
   },
   {
     "id": 81,
     "name": "Needy Streamer Overload",
-    "url": "/assets/gameassets/suntree/games/nso/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/product_img_624afa2401fc34d1dd73e94189379d44.png",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/nso/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/product_img_624afa2401fc34d1dd73e94189379d44.png",
     "controls": "arrows"
   },
   {
     "id": 82,
     "name": "Tanuki Sunset",
-    "url": "/assets/gameassets/suntree/games/tanuki-sunset/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/40b2e5a70c32922326de3732b6b2f17f7773e14caa70296ff43379e6ca92676e.avif",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/tanuki-sunset/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/40b2e5a70c32922326de3732b6b2f17f7773e14caa70296ff43379e6ca92676e.avif",
     "controls": "none"
   },
   {
     "id": 83,
     "name": "Roblox",
     "url": "/embed.html#https://nowgg.fun/apps/a/19900/b.html",
-    "cover": "/assets/gameassets/suntree/thumbs/28ab48fcd5d5b19b03c126d2b6aef4b8.jpg",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/28ab48fcd5d5b19b03c126d2b6aef4b8.jpg",
     "controls": "none"
   },
   {
     "id": 84,
     "name": "Fortnite",
     "url": "/embed.html#https://play.geforcenow.com/mall/#/deeplink?game-id=46bfab06-d864-465d-9e56-2d9e45cdee0a",
-    "cover": "/assets/gameassets/suntree/thumbs/maxresdefault.jpg",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/maxresdefault.jpg",
     "controls": "none"
   },
   {
     "id": 85,
     "name": "Stumble Guys",
     "url": "/embed.html#https://nowgg.fun/apps/a/10011/b.html",
-    "cover": "/assets/gameassets/suntree/thumbs/45dc1c4949a8a343f123a3eef6c5ba8aade31d8ad4f945706a4f4745e74d8573.avif",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/45dc1c4949a8a343f123a3eef6c5ba8aade31d8ad4f945706a4f4745e74d8573.avif",
     "controls": "none"
   },
   {
     "id": 86,
     "name": "CookieRun: Kingdom",
     "url": "/embed.html#https://nowgg.fun/apps/a/10019/b.html",
-    "cover": "/assets/gameassets/suntree/thumbs/og-en.jpg",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/og-en.jpg",
     "controls": "none"
   },
   {
     "id": 87,
     "name": "Call of Duty: Mobile",
     "url": "/embed.html#https://nowgg.fun/apps/a/10008/b.html",
-    "cover": "/assets/gameassets/suntree/thumbs/call-of-duty-mobile-made-more-money-in-a-month-than-warzone-mobile-did-in-a-year-cover682f42117bccc.jpg",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/call-of-duty-mobile-made-more-money-in-a-month-than-warzone-mobile-did-in-a-year-cover682f42117bccc.jpg",
     "controls": "none"
   },
   {
     "id": 88,
     "name": "Silent Hill",
-    "url": "/assets/gameassets/suntree/games/silent-hill/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/hq720.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/silent-hill/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/hq720.jpg",
     "controls": "arrows"
   },
   {
     "id": 89,
     "name": "Danganronpa: Trigger Happy Havoc",
-    "url": "/assets/gameassets/suntree/games/danganronpa/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/6a84ae122ee090fb34e921775ed4c8d3f29fece6ba746c9b557202a62f10b542.avif"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/danganronpa/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/6a84ae122ee090fb34e921775ed4c8d3f29fece6ba746c9b557202a62f10b542.avif"
   },
   {
     "id": 90,
     "name": "Granny",
-    "url": "/assets/gameassets/suntree/games/granny/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/granny.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/granny/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/granny.jpg"
   },
   {
     "id": 91,
     "name": "Deltarune",
-    "url": "/assets/gameassets/suntree/games/deltarune/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/deltarune.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/deltarune/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/deltarune.webp",
     "controls": "arrows"
   },
   {
     "id": 92,
     "name": "Moto X3M",
-    "url": "/assets/gameassets/suntree/games/motox3m/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/MotoX3M_OG-logo.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/motox3m/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/MotoX3M_OG-logo.jpg",
     "controls": "arrows"
   },
   {
     "id": 93,
     "name": "Pokemon Blue",
-    "url": "/assets/gameassets/suntree/games/pokemon-blue-version/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/H2x1_GB_PokemonBlue_enGB.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/pokemon-blue-version/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/H2x1_GB_PokemonBlue_enGB.jpg",
     "controls": "arrows"
   },
   {
     "id": 94,
     "name": "Pokemon Red",
-    "url": "/assets/gameassets/suntree/games/pokemon-red-version/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/H2x1_GB_PokemonRed_enGB_cover1280w.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/pokemon-red-version/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/H2x1_GB_PokemonRed_enGB_cover1280w.jpg",
     "controls": "arrows"
   },
   {
     "id": 95,
     "name": "Pokemon Yellow",
-    "url": "/assets/gameassets/suntree/games/pokemon-yellow-version/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/H2x1_GB_PokemonYellow_enGB_cover1600w.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/pokemon-yellow-version/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/H2x1_GB_PokemonYellow_enGB_cover1600w.jpg",
     "controls": "arrows"
   },
   {
     "id": 96,
     "name": "Pokemon Gold",
-    "url": "/assets/gameassets/suntree/games/pokemon-gold-version/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/H2x1_GBC_PokemonGold_enGB.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/pokemon-gold-version/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/H2x1_GBC_PokemonGold_enGB.jpg",
     "controls": "arrows"
   },
   {
     "id": 97,
     "name": "Pokemon Silver",
-    "url": "/assets/gameassets/suntree/games/pokemon-silver-version/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/pokemon-silver.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/pokemon-silver-version/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/pokemon-silver.jpg",
     "controls": "arrows"
   },
   {
     "id": 98,
     "name": "Pokemon Crystal",
-    "url": "/assets/gameassets/suntree/games/pokemon-crystal-version/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/H2x1_GBC_PokemonCrystal_enGB.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/pokemon-crystal-version/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/H2x1_GBC_PokemonCrystal_enGB.jpg",
     "controls": "arrows"
   },
   {
     "id": 99,
     "name": "Pokemon Ruby",
-    "url": "/assets/gameassets/suntree/games/pokemon-ruby-version/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/SI_GBA_PokemonRuby_enGB_cover1280w.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/pokemon-ruby-version/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/SI_GBA_PokemonRuby_enGB_cover1280w.jpg",
     "controls": "arrows"
   },
   {
     "id": 100,
     "name": "Pokemon Sapphire",
-    "url": "/assets/gameassets/suntree/games/pokemon-sapphire-version/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/SI_GBA_PokemonSapphire_enGB_cover1600w.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/pokemon-sapphire-version/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/SI_GBA_PokemonSapphire_enGB_cover1600w.jpg",
     "controls": "arrows"
   },
   {
     "id": 101,
     "name": "Pokemon Fire Red",
-    "url": "/assets/gameassets/suntree/games/pokemon-fire-red-version/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/16x9_NSwitch_PokemonFireRed_UK_cover1600w.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/pokemon-fire-red-version/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/16x9_NSwitch_PokemonFireRed_UK_cover1600w.jpg",
     "controls": "arrows"
   },
   {
     "id": 102,
     "name": "Pokemon Leaf Green",
-    "url": "/assets/gameassets/suntree/games/pokemon-leaf-green-version/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/16x9_NSwitch_PokemonLeafGreen_UK.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/pokemon-leaf-green-version/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/16x9_NSwitch_PokemonLeafGreen_UK.jpg",
     "controls": "arrows"
   },
   {
     "id": 103,
     "name": "Pokemon Emerald",
-    "url": "/assets/gameassets/suntree/games/pokemon-emerald-version/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/emerald.png",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/pokemon-emerald-version/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/emerald.png",
     "controls": "arrows"
   },
   {
     "id": 104,
     "name": "Look Outside",
-    "url": "/assets/gameassets/suntree/games/look-outside/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/lookoutside.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/look-outside/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/lookoutside.jpg",
     "controls": "arrows"
   },
   {
     "id": 105,
     "name": "Five Nights At Candy's",
-    "url": "/assets/gameassets/suntree/games/fnac1/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/fnac.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/fnac1/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/fnac.webp",
     "controls": "arrows"
   },
   {
     "id": 106,
     "name": "Five Nights At Candy's 2",
-    "url": "/assets/gameassets/suntree/games/fnac2/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/fnac2.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/fnac2/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/fnac2.webp",
     "controls": "arrows"
   },
   {
     "id": 107,
     "name": "Jelly Drift",
-    "url": "/assets/gameassets/suntree/games/jelly-drift/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/5e798B.png"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/jelly-drift/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/5e798B.png"
   },
   {
     "id": 108,
     "name": "The Man from the Window",
-    "url": "/assets/gameassets/suntree/games/the-man-in-the-window/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/the-man-from-the-window.avif"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/the-man-in-the-window/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/the-man-from-the-window.avif"
   },
   {
     "id": 109,
     "name": "That's Not My Neighbor",
-    "url": "/assets/gameassets/suntree/games/thats-not-my-neighbor/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/thatsnotmyneighbor.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/thats-not-my-neighbor/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/thatsnotmyneighbor.jpg",
     "controls": "arrows"
   },
   {
     "id": 110,
     "name": "Sonic.EXE",
-    "url": "/assets/gameassets/suntree/games/sonicexe/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/1311560123.jc-the-hyena_soniccreepy1.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/sonicexe/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/1311560123.jc-the-hyena_soniccreepy1.webp",
     "controls": "arrows"
   },
   {
     "id": 111,
     "name": "Dumb Ways To Die",
-    "url": "/assets/gameassets/suntree/games/dumb-ways-to-die/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/1_Al_9A_Usj2VY15kRVNdmKg.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/dumb-ways-to-die/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/1_Al_9A_Usj2VY15kRVNdmKg.jpg",
     "controls": "arrows"
   },
   {
     "id": 112,
     "name": "DOOM",
-    "url": "/assets/gameassets/suntree/games/doom/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/1200.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/doom/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/1200.webp",
     "controls": "arrows"
   },
   {
     "id": 113,
     "name": "QWOP",
-    "url": "/assets/gameassets/suntree/games/qwop/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/qwop.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/qwop/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/qwop.webp",
     "controls": "qwop"
   },
   {
     "id": 114,
     "name": "Hollow Knight: Silksong",
-    "url": "/assets/gameassets/suntree/games/silksong/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/silky.avif",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/silksong/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/silky.avif",
     "controls": "arrows"
   },
   {
     "id": 115,
     "name": "Baldis Basics Classic Remasterd",
-    "url": "/assets/gameassets/suntree/games/baldis-basics/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/aisiodjakjxncjnasbdfhjags.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/baldis-basics/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/aisiodjakjxncjnasbdfhjags.jpg"
   },
   {
     "id": 116,
     "name": "Brotato",
-    "url": "/assets/gameassets/suntree/games/brotato/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/imcrine.jpeg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/brotato/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/imcrine.jpeg"
   },
   {
     "id": 117,
     "name": "Baldi's Birthday Bash",
-    "url": "/assets/gameassets/suntree/games/BaldiBirthdayBash.html",
-    "cover": "/assets/gameassets/suntree/thumbs/BaldiBirthdayBash.png"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/BaldiBirthdayBash.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/BaldiBirthdayBash.png"
   },
   {
     "id": 118,
     "name": "The Powder Toy",
-    "url": "/assets/gameassets/suntree/games/tpt/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/tpt.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/tpt/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/tpt.jpg"
   },
   {
     "id": 119,
     "name": "killer chat",
-    "url": "/assets/gameassets/suntree/games/killerchat/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/killerchat.webp",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/killerchat/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/killerchat.webp",
     "controls": "none"
   },
   {
     "id": 120,
     "name": "class of '09: the flipside",
-    "url": "/assets/gameassets/suntree/games/co09tfs/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/co09tfs.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/co09tfs/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/co09tfs.jpg",
     "controls": "none"
   },
   {
     "id": 121,
     "name": "class of '09: the reup",
-    "url": "/assets/gameassets/suntree/games/co09tru/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/co09tru.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/co09tru/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/co09tru.jpg",
     "controls": "none"
   },
   {
     "id": 122,
     "name": "do not take this cat home",
-    "url": "/assets/gameassets/suntree/games/donottakethiscathome/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/dnttch.png",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/donottakethiscathome/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/dnttch.png",
     "controls": "none"
   },
   {
     "id": 123,
     "name": "a date with death",
-    "url": "/assets/gameassets/suntree/games/adatewithdeath/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/adatewithdeath.jpg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/adatewithdeath/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/adatewithdeath.jpg",
     "controls": "none"
   },
   {
     "id": 124,
     "name": "cookie run kingdom",
     "url": "embed.html#https://nowgg.fun/apps/a/10019/b.html",
-    "cover": "/assets/gameassets/suntree/thumbs/crk.jpeg"
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/crk.jpeg"
   },
   {
     "id": 125,
     "name": "call of duty mobile",
     "url": "embed.html#https://68.ip.nowgg.fun/apps/a/10008/b.html",
-    "cover": "/assets/gameassets/suntree/thumbs/cod.jpg"
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/cod.jpg"
   },
   {
     "id": 126,
     "name": "rocket league sideswipe",
     "url": "embed.html#https://nowgg.fun/apps/psyonix-studios/4656/rocket-league.html",
-    "cover": "/assets/gameassets/suntree/thumbs/rocketleague.webp"
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/rocketleague.webp"
   },
   {
     "id": 127,
     "name": "shift at midnight",
-    "url": "/assets/gameassets/suntree/games/shift-at-midnight/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/shiftatmidnight.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/shift-at-midnight/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/shiftatmidnight.jpg"
   },
   {
     "id": 128,
     "name": "cruelty squad",
-    "url": "/assets/gameassets/suntree/games/crueltysquad/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/crueltysquad.jpeg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/crueltysquad/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/crueltysquad.jpeg",
     "controls": "none"
   },
   {
     "id": 129,
     "name": "windowkill",
-    "url": "/assets/gameassets/suntree/games/windowkill/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/windowkill.jpeg",
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/windowkill/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/windowkill.jpeg",
     "controls": "none"
   },
   {
     "id": 130,
     "name": "peaks of yore",
-    "url": "/assets/gameassets/suntree/games/peaksofyore/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/peaksofyore.png"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/peaksofyore/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/peaksofyore.png"
   },
   {
     "id": 131,
     "name": "saihate station",
-    "url": "/assets/gameassets/suntree/games/saihate/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/saihate.webp"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/saihate/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/saihate.webp"
   },
   {
     "id": 132,
     "name": "inscryption",
-    "url": "/assets/gameassets/suntree/games/inscryption/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/inscryption.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/inscryption/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/inscryption.jpg"
   },
   {
     "id": 133,
     "name": "youtubers life",
-    "url": "/assets/gameassets/suntree/games/ytlife/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/ytlife.jpeg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/ytlife/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/ytlife.jpeg"
   },
   {
     "id": 134,
     "name": "plague inc: evolved",
-    "url": "/assets/gameassets/suntree/games/plagueinc/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/plagueinc.png"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/plagueinc/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/plagueinc.png"
   },
   {
     "id": 135,
     "name": "in stars and time",
-    "url": "/assets/gameassets/suntree/games/isat/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/isat.png"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/isat/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/isat.png"
   },
   {
     "id": 136,
     "name": "whos your daddy",
-    "url": "/assets/gameassets/suntree/games/whosyourdaddy/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/wyd.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/whosyourdaddy/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/wyd.jpg"
   },
   {
     "id": 137,
     "name": "fear and hunger",
-    "url": "/assets/gameassets/suntree/games/fah/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/fah.jpeg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/fah/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/fah.jpeg"
   },
   {
     "id": 138,
     "name": "fear and hunger 2: termina",
-    "url": "/assets/gameassets/suntree/games/fah2/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/fah2.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/fah2/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/fah2.jpg"
   },
   {
     "id": 139,
     "name": "cloverpit",
-    "url": "/assets/gameassets/suntree/games/cloverpit/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/cloverpit.jpeg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/cloverpit/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/cloverpit.jpeg"
   },
   {
     "id": 140,
     "name": "gabriels awesome schoolhouse",
-    "url": "/assets/gameassets/suntree/games/gash/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/gash.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/gash/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/gash.jpg"
   },
   {
     "id": 141,
     "name": "power hover",
-    "url": "/assets/gameassets/suntree/games/powerhover/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/powerhover.webp"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/powerhover/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/powerhover.webp"
   },
   {
     "id": 142,
     "name": "stardew valley",
-    "url": "/assets/gameassets/suntree/games/stardew/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/stardew.avif"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/stardew/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/stardew.avif"
   },
   {
     "id": 143,
     "name": "approaches",
-    "url": "/assets/gameassets/suntree/games/approaches/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/approaches.gif"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/approaches/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/approaches.gif"
   },
   {
     "id": 144,
     "name": "agafabh",
-    "url": "/assets/gameassets/suntree/games/agafabh/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/agafabh.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/agafabh/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/agafabh.jpg"
   },
   {
     "id": 145,
     "name": "purrgatory",
-    "url": "/assets/gameassets/suntree/games/purrgatory/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/purrgatory.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/purrgatory/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/purrgatory.jpg"
   },
   {
     "id": 146,
     "name": "dictators: no peace countryballs",
-    "url": "/assets/gameassets/suntree/games/npc/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/npc.jpg"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/npc/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/npc.jpg"
   },
   {
     "id": 147,
     "name": "Road of the Dead",
-    "url": "/assets/gameassets/suntree/games/rotd/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/rotd.webp"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/rotd/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/rotd.webp"
   },
   {
     "id": 148,
     "name": "Road of the Dead 2",
-    "url": "/assets/gameassets/suntree/games/rotd2/index.html",
-    "cover": "/assets/gameassets/suntree/thumbs/rotd2.png"
+    "url": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/games/rotd2/index.html",
+    "cover": "https://raw.githubusercontent.com/u-spe/spydr/g-assets/assets/gameassets/suntree/thumbs/rotd2.png"
   }
 ]

@@ -1,4 +1,4 @@
-### 94% (and counting) of this project is HTML due to physical games in gameassets. below is also ai slop.
+## THIS IS JUST THE BRANCH FOR GAME ASSETS! ITS FULL HTML AND NOTHING BUT HTML!
 
 # 🕷️ spydr
 

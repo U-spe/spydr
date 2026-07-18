@@ -6,39 +6,59 @@ const scramjet = new ScramjetController({
     prefix: "/scram/"
 });
 
-async function init() {
+
+async function initScramjet() {
     if ("serviceWorker" in navigator) {
-        await navigator.serviceWorker.register("/scram/sw.js", {
-            scope: "/scram/"
-        });
+
+        try {
+            await navigator.serviceWorker.register("/scram/sw.js", {
+                scope: "/scram/"
+            });
+
+            console.log("Scramjet service worker registered");
+
+        } catch (err) {
+            console.error("Scramjet SW failed:", err);
+        }
     }
 }
 
-init();
+
+initScramjet();
+
 
 button.onclick = async () => {
+
     let query = input.value.trim();
 
     if (!query) return;
 
-    // Search Google if it isn't a URL
+
+    // Search if not URL
     if (!/^https?:\/\//i.test(query) && !query.includes(".")) {
-        query = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+        query = `https://search.brave.com/search?q=${encodeURIComponent(query)}`;
     }
 
-    // Add https:// if missing
+
+    // Add protocol
     if (!/^https?:\/\//i.test(query)) {
         query = "https://" + query;
     }
 
+
     browser.innerHTML = "";
 
+
     const frame = document.createElement("iframe");
+
     frame.style.width = "100%";
     frame.style.height = "100vh";
     frame.style.border = "none";
 
     frame.src = scramjet.encodeUrl(query);
 
+
     browser.appendChild(frame);
+
+    console.log("Opening:", query);
 };

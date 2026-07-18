@@ -1,172 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>spydr // virtual machine & proxy control</title>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/spydr-vm.css">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="icon" href="/assets/images/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/menu.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spydr web</title>
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #090909;
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-  <div class="spydr-app-container">
-    <aside class="spydr-sidebar">
-      <div class="sidebar-header">
-        <span class="system-tag">SPYDR // CORE</span>
-        <h1>VM ENGINE</h1>
-        <p class="subtitle">Secure Sandbox & Proxy Node</p>
-      </div>
 
-      <nav class="sidebar-sections">
-        <div class="config-group">
-          <label class="group-title">Target Environment</label>
-          
-          <div class="input-field">
-            <span class="field-icon">🌐</span>
-            <select id="vm-browser">
-              <option value="chrome" selected>Google Chrome</option>
-              <option value="tor">Tor Browser (Isolated)</option>
-              <option value="brave">Brave (Shields Active)</option>
-              <option value="firefox">Mozilla Firefox</option>
-              <option value="safari">Safari (WebKit)</option>
-              <option value="edge">Microsoft Edge</option>
-            </select>
-          </div>
+<iframe src="/public/sp1dr.html"></iframe>
 
-          <div class="input-field">
-            <span class="field-icon">💻</span>
-            <select id="vm-platform">
-              <option value="windows-11" selected>Windows 11 Enterprise</option>
-              <option value="ubuntu-24">Ubuntu Linux 24.04 LTS</option>
-              <option value="macos-sonoma">macOS Sonoma</option>
-              <option value="ios-17">iOS 17.4 (iPhone Simulator)</option>
-              <option value="android-14">Android 14 (Pixel Emulator)</option>
-            </select>
-          </div>
-        </div>
+  <script src="/js/lessons.js"></script>
+  <script src="/js/globalmenu.js"></script>
+  <script type="module" src="/js/global.js"></script>
 
-        <div class="config-group">
-          <label class="group-title">Cloaking & Proxy Routing</label>
-          
-          <div class="input-field">
-            <span class="field-icon">🛡️</span>
-            <select id="proxy-mode">
-              <option value="direct" selected>Direct Connection</option>
-              <option value="tor-network">Tor Multi-Hop routing</option>
-              <option value="ssh-tunnel">SSH Remote Tunnel</option>
-              <option value="http-proxy">Private HTTP/S Proxy</option>
-            </select>
-          </div>
-
-          <div class="tunnel-details hidden" id="ssh-config-pane">
-            <div class="sub-input-row">
-              <input type="text" id="tunnel-host" placeholder="ssh.spydr.network:22">
-            </div>
-            <div class="sub-input-row">
-              <input type="text" id="tunnel-auth" placeholder="username:password_or_key">
-            </div>
-          </div>
-        </div>
-
-        <div class="config-group">
-          <label class="group-title">Display Metrics</label>
-          
-          <div class="input-field">
-            <span class="field-icon">📺</span>
-            <select id="vm-resolution">
-              <option value="1920x1080" selected>1080p (1920×1080)</option>
-              <option value="1440x900">Retina WXGA+ (1440×900)</option>
-              <option value="1280x720">720p HD (1280×720)</option>
-              <option value="1024x768">Legacy XGA (1024×768)</option>
-              <option value="390x844">iPhone 13/14 Pro Aspect</option>
-            </select>
-          </div>
-          
-          <div class="toggle-row">
-            <span>Scaling to Fit</span>
-            <label class="switch">
-              <input type="checkbox" id="toggle-scaling" checked>
-              <span class="slider"></span>
-            </label>
-          </div>
-        </div>
-      </nav>
-
-      <div class="sidebar-actions">
-        <button id="btn-init-vm" class="btn btn-primary">INITIALIZE SESSION</button>
-        <button id="btn-kill-vm" class="btn btn-danger hidden">TERMINATE INSTANCE</button>
-      </div>
-    </aside>
-
-    <main class="spydr-main-viewport">
-      <header class="viewport-header">
-        <div class="connection-status">
-          <span class="status-indicator offline" id="status-glow"></span>
-          <span class="status-text" id="status-label">OFFLINE</span>
-        </div>
-        <div class="url-bar-container">
-          <span class="lock-icon">🔒</span>
-          <input type="url" id="target-url" placeholder="Enter target URL to proxy..." value="https://google.com">
-          <button id="btn-go-url" class="btn btn-go">LOAD</button>
-        </div>
-        <div class="utility-actions">
-          <button class="util-btn" id="btn-screenshot" title="Capture VM Display">📸</button>
-          <button class="util-btn" id="btn-clipboard" title="Manage Clipboard">📋</button>
-          <button class="util-btn panic-btn" id="btn-panic" title="Panic Kill Switch">⚠️</button>
-        </div>
-      </header>
-
-      <div class="viewport-canvas-wrapper" id="viewport-canvas-wrapper">
-        <div class="loading-overlay hidden" id="vm-loading">
-          <div class="spinner"></div>
-          <p id="loading-msg">Spawning sandbox instance...</p>
-        </div>
-        
-        <canvas id="vm-render-target" class="interactive-canvas" tabindex="1"></canvas>
-      </div>
-
-      <footer class="telemetry-bar">
-        <div class="telemetry-metric">
-          <span class="label">LATENCY</span>
-          <span class="value" id="tele-ping">-- ms</span>
-        </div>
-        <div class="telemetry-metric">
-          <span class="label">RESOLUTION</span>
-          <span class="value" id="tele-resolution">0x0</span>
-        </div>
-        <div class="telemetry-metric">
-          <span class="label">BANDWIDTH</span>
-          <span class="value" id="tele-traffic">IN: 0.00 KB | OUT: 0.00 KB</span>
-        </div>
-        <div class="telemetry-metric console-output">
-          <span class="label">ENGINE LOG:</span>
-          <span class="value terminal-log" id="tele-log">System idle. Press Initialize.</span>
-        </div>
-      </footer>
-    </main>
-  </div>
-
-  <div class="modal-overlay hidden" id="modal-clipboard">
-    <div class="modal-card">
-      <div class="modal-header">
-        <h2>Virtual Sync Clipboard</h2>
-        <button class="close-modal" id="btn-close-clip">×</button>
-      </div>
-      <div class="modal-body">
-        <p>Synchronize text content directly to or from the remote virtual machine's OS clipboard buffer.</p>
-        <textarea id="clip-text" placeholder="Type text to send to VM or read from it..."></textarea>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-secondary" id="btn-clip-read">Pull from VM</button>
-        <button class="btn btn-primary" id="btn-clip-write">Push to VM</button>
-      </div>
-    </div>
-  </div>
-
-<script src="/js/global.js"></script>
-<script src="/js/globalmenu.js"></script>
-<script src="/js/spydr-vm-client.js"></script>
-  
 </body>
 </html>

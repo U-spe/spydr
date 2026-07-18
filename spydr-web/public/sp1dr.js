@@ -1,10 +1,10 @@
-
 const input = document.getElementById("url");
 const button = document.getElementById("go");
 const browser = document.getElementById("browser");
 
 const scramjet = new ScramjetController({
-    prefix: "/scram/"
+    prefix: "/scram/",
+    bare: "/bare/"
 });
 
 
@@ -65,3 +65,4 @@ button.onclick = async () => {
 };
 
 // SIX SEVEN EEEEEEEE EEEEEEEE
+

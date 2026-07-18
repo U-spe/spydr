@@ -1,19 +1,15 @@
 //sw.js
 
-importScripts("/scram/scramjet.bundle.js");
+importScripts("/scram/scramjet.all.js");
 
-const controller = new ScramjetController();
-
-self.addEventListener("install", () => {
-    self.skipWaiting();
+const controller = new ScramjetController({
+    prefix: "/scram/"
 });
 
-self.addEventListener("activate", (event) => {
-    event.waitUntil(self.clients.claim());
-});
+controller.init();
 
 self.addEventListener("fetch", (event) => {
-    if (controller.shouldRoute(event.request)) {
-        event.respondWith(controller.route(event.request));
+    if (controller.shouldRoute(event)) {
+        event.respondWith(controller.route(event));
     }
 });

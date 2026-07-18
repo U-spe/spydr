@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/scram/:path*",
+      "destination": "/scram/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/public/$1"
+    }
+  ]
+}

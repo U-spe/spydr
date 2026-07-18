@@ -5,6 +5,10 @@
       "destination": "/scram/:path*"
     },
     {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/public/$1"
     }

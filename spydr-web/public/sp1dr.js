@@ -63,4 +63,5 @@ button.onclick = async () => {
 
     console.log("Opening:", query);
 };
-```
+
+// SIX SEVEN EEEEEEEE EEEEEEEE

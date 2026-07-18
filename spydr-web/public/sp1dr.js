@@ -1,3 +1,4 @@
+
 const input = document.getElementById("url");
 const button = document.getElementById("go");
 const browser = document.getElementById("browser");
@@ -8,18 +9,19 @@ const scramjet = new ScramjetController({
 
 
 async function initScramjet() {
-    if ("serviceWorker" in navigator) {
+    if (!("serviceWorker" in navigator)) {
+        console.error("Service workers are not supported");
+        return;
+    }
 
-        try {
-            await navigator.serviceWorker.register("/scram/sw.js", {
-                scope: "/scram/"
-            });
+    try {
+        await navigator.serviceWorker.register("/sw.js", {
+            scope: "/scram/"
+        });
 
-            console.log("Scramjet service worker registered");
-
-        } catch (err) {
-            console.error("Scramjet SW failed:", err);
-        }
+        console.log("Scramjet service worker registered");
+    } catch (err) {
+        console.error("Scramjet SW failed:", err);
     }
 }
 
@@ -28,19 +30,18 @@ initScramjet();
 
 
 button.onclick = async () => {
-
     let query = input.value.trim();
 
     if (!query) return;
 
 
-    // Search if not URL
+    // If query instead of url
     if (!/^https?:\/\//i.test(query) && !query.includes(".")) {
         query = `https://search.brave.com/search?q=${encodeURIComponent(query)}`;
     }
 
 
-    // Add protocol
+    // Add https:// if missing
     if (!/^https?:\/\//i.test(query)) {
         query = "https://" + query;
     }
@@ -62,3 +63,4 @@ button.onclick = async () => {
 
     console.log("Opening:", query);
 };
+```

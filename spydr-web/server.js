@@ -6,7 +6,7 @@ const app = express();
 
 const bare = createBareServer("/bare/");
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use((req, res, next) => {
     if (bare.shouldRoute(req)) {
@@ -16,19 +16,12 @@ app.use((req, res, next) => {
     }
 });
 
-app.get("/*", (req, res) => {
+app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "sp1dr.html"));
 });
 
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log(`spydr running on ${PORT}`);
+    console.log(`spydr running on port ${PORT}`);
 });
-
-app.use(express.static("public"));
-
-app.use((req, res, next) => {
-    if (bare.shouldRoute(req)) {
-        bare.routeRequest(req, res);
-    } else 

@@ -40,28 +40,6 @@ Built with speed, simplicity, and clean visuals in mind, it provides a centraliz
 
 ---
 
-## Project Structure
-
-```text
-spydr/
-├── assets/
-│   ├── css/
-│   ├── js/
-│   ├── json/
-│   ├── icons/
-│   ├── images/
-│   └── videos/
-├── games/
-├── apps/
-├── proxy/
-├── ai/
-├── settings/
-├── index.html
-└── README.md
-```
-
----
-
 ## Getting Started
 
 Clone the repository.
@@ -85,19 +63,21 @@ npm start
 
 Or simply serve the project using any static web server.
 
+It may also vary depending on your OS (e.g., Mac, Windows, Linux/Chrome, e.t.c)
+
 ---
 
 ## Configuration
 
-Most site content is loaded through JSON files.
+Most site content (such as games) is loaded through JSON files.
 
 Example:
 
 ```json
 {
   "title": "Minecraft",
-  "url": "/games/minecraft/",
-  "image": "/assets/images/minecraft.webp"
+  "url": "/assets/gameassets/hydra/games/minecraft/index.html",
+  "image": "/assets/gameassets/hydra/images/minecraft.webp"
 }
 ```
 
@@ -105,12 +85,15 @@ Example:
 
 ## Tech Stack
 
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- JSON
+- Hyper Text Markup Language 5th Edition (HTML5)
+- Cascading Style Sheets 3rd Edition (CSS3)
+- JavaScript (Vanilla)
+- JavaScript Object Notation (JSON)
 - Service Workers
+- WebAssembly (WASM)
 - Vercel (Deployment)
+
+and yes, i spellt out everything bc I was bored
 
 ---
 
@@ -133,12 +116,12 @@ spydr focuses on:
 - [x] Game library
 - [x] App launcher
 - [x] Browser
-- [x] AI page
+- [ ] AI page
 - [x] Settings
 - [x] Theme system
-- [ ] Search improvements
-- [ ] Plugin system
-- [ ] Sync settings
+- [x] Search improvements
+- [x] Plugin system
+- [x] Sync settings
 - [ ] Offline support
 - [ ] User profiles
 
@@ -163,7 +146,7 @@ This project is licensed under the Creative Commons By NC-ND License. View LICEN
 
 ## Credits
 
-Created and maintained by **CJ Jack**.
+Created and maintained by **Solar Games**.
 
 Special thanks to everyone who has contributed ideas, bug reports, and feedback.
 

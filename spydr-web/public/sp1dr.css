@@ -1,4 +1,4 @@
-/* Original "spydr" styling architecture by Web Creation Studios */
+/* spydr styling architecture by Web Creation Studios */
 
 * {
     margin: 0;
@@ -8,7 +8,7 @@
 }
 
 body {
-    background: #000000; /* Deep black to match browser framing */
+    background: #000000;
     color: white;
     height: 100vh;
     display: flex;
@@ -16,231 +16,63 @@ body {
     overflow: hidden;
 }
 
-/* --- BROWSER CHROME --- */
-.browser-chrome {
+/* --- TOP BROWSER CHROME --- */
+.top-chrome {
+    height: 40px;
+    background: #090909;
+    border-bottom: 1px solid #1f1f1f;
     display: flex;
-    flex-direction: column;
-    background: #09090b; /* Very dark grey for the top window frame */
-    border-bottom: 1px solid #1f1f22;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
     z-index: 10;
 }
 
-/* --- TABS BAR --- */
-.tabs-bar {
+.window-controls {
     display: flex;
-    align-items: flex-end;
-    height: 40px;
-    padding: 0 12px;
     gap: 8px;
-    background: #000000; /* Darker background behind tabs */
+    width: 80px; /* Fixed width to balance the right placeholder */
 }
 
-.tab {
+.placeholder {
+    width: 80px; /* Balances the window controls so branding is perfectly centered */
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot.close { background: #ff5f56; }
+.dot.minimize { background: #ffbd2e; }
+.dot.maximize { background: #27c93f; }
+
+.brand {
     display: flex;
     align-items: center;
-    gap: 8px;
-    height: 34px;
-    min-width: 200px;
-    max-width: 240px;
-    padding: 0 12px;
-    border-radius: 8px 8px 0 0;
-    cursor: default;
-    position: relative;
-}
-
-.active-tab {
-    background: #18181b; /* Matches toolbar color */
-    color: #ffffff;
-}
-
-.tab-icon {
-    font-size: 1.1rem;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
     color: #a1a1aa;
-}
-
-.tab-title {
-    flex: 1;
-    font-size: 0.85rem;
-    font-weight: 500;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     letter-spacing: 0.5px;
 }
 
-.close-tab {
-    background: transparent;
-    border: none;
-    color: #a1a1aa;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
-}
-
-.close-tab:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-}
-
-.new-tab-btn {
-    background: transparent;
-    border: none;
-    color: #a1a1aa;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-bottom: 2px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
-}
-
-.new-tab-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-}
-
-/* --- TOOLBAR --- */
-.toolbar {
-    display: flex;
-    align-items: center;
-    height: 50px;
-    padding: 0 16px;
-    gap: 16px;
-    background: #18181b; /* Toolbar background */
-}
-
-.nav-controls {
-    display: flex;
-    gap: 4px;
-}
-
-.nav-btn {
-    background: transparent;
-    border: none;
-    color: #d4d4d8;
-    width: 32px;
-    height: 32px;
-    border-radius: 6px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
-}
-
-.nav-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* --- ADDRESS BAR --- */
-.address-bar {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    background: #27272a; /* Lighter inset for the URL bar */
-    border: 1px solid #3f3f46;
-    border-radius: 20px;
-    padding: 0 16px;
-    height: 36px;
-    transition: all 0.2s ease;
-}
-
-.address-bar:focus-within {
-    border-color: #52525b;
-    background: #27272a;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05);
-}
-
-.secure-badge, .bookmark-badge {
-    color: #a1a1aa;
+.spydr-icon {
     font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-}
-
-.secure-badge {
-    margin-right: 12px;
-}
-
-.bookmark-badge {
-    margin-left: 12px;
-    cursor: pointer;
-}
-
-.bookmark-badge:hover {
     color: #ffffff;
 }
 
-input {
-    flex: 1;
-    background: transparent;
-    color: white;
-    border: none;
-    font-size: 0.95rem;
-    outline: none;
-}
-
-input::placeholder {
-    color: #a1a1aa;
-}
-
-/* --- MENU / ACTION BUTTONS --- */
-.action-controls {
-    display: flex;
-    gap: 10px;
-}
-
-.menu-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 16px;
-    height: 34px;
-    background: #ffffff; /* Requested white buttons */
-    color: #000000;
-    border: none;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background 0.2s ease, transform 0.1s ease;
-}
-
-.menu-btn.icon-only {
-    padding: 0;
-    width: 34px;
-    font-size: 1.2rem;
-}
-
-.menu-btn:hover {
-    background: #e4e4e7;
-    transform: translateY(-1px);
-}
-
-.menu-btn:active {
-    transform: translateY(1px);
-}
-
-/* --- BROWSER VIEWPORT --- */
+/* --- MAIN VIEWPORT --- */
 #browser {
     flex: 1;
     width: 100%;
-    background: #090909;
-    border: none;
-    display: block;
+    background: #050505;
     position: relative;
+    display: block;
 }
 
-/* Optional: Subtle grid overlay on the empty browser viewport */
+/* Subtle tech grid over the empty browser area */
 #browser::before {
     content: '';
     position: absolute;
@@ -250,5 +82,115 @@ input::placeholder {
         linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 40px 40px;
     pointer-events: none;
-    z-index: 1;
+}
+
+/* --- BOTTOM INTERFACE (SEARCH & MENU) --- */
+.bottom-interface {
+    background: #090909;
+    border-top: 1px solid #1f1f1f;
+    padding: 16px 20px 24px 20px; /* Extra padding on the absolute floor */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 10;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Search Box Area */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.address-bar {
+    width: 100%;
+    max-width: 800px;
+    height: 44px;
+    background: #121212;
+    border: 1px solid #2b2b2b;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 12px;
+    transition: all 0.2s ease;
+}
+
+.address-bar:focus-within {
+    border-color: #555;
+    background: #171717;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05);
+}
+
+.lock-icon {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+input {
+    flex: 1;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+}
+
+input::placeholder {
+    color: #666;
+}
+
+/* The Floor Menu */
+.bottom-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.menu-group {
+    display: flex;
+    gap: 8px;
+}
+
+/* White Menu Buttons */
+.white-btn {
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.1s ease, background 0.15s ease;
+}
+
+.menu-btn {
+    padding: 0 12px;
+}
+
+.menu-btn i {
+    font-size: 1.2rem;
+}
+
+.main-go {
+    padding: 0 24px;
+    min-width: 80px;
+    letter-spacing: 0.5px;
+}
+
+.white-btn:hover {
+    background: #e6e6e6;
+}
+
+.white-btn:active {
+    transform: scale(0.95);
 }

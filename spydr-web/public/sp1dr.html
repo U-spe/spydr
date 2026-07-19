@@ -1,40 +1,63 @@
-<!--- here idc if you copy this stuff, but i need credit for anything spydr --->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Remix Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    
+    <!-- Google Fonts for Modern UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/sp1dr.css">
 
-<link rel="stylesheet" href="/sp1dr.css">
-
-<title>spydr web</title>
-
+    <title>spydr web</title>
 </head>
 
 <body>
 
-<header>
+    <!--- here idc if you copy this stuff, but i need credit for anything spydr --->
 
-<input
-id="url"
-type="text"
-placeholder="Search Google or enter a URL..."
-autocomplete="off">
+    <header class="spydr-header">
+        <div class="brand-logo">
+            <i class="ri-spider-line brand-icon"></i>
+            <span class="brand-name">spydr<span class="accent-dot">.</span></span>
+        </div>
 
-<button id="go">
-Go
-</button>
+        <div class="search-container">
+            <i class="ri-global-line search-icon"></i>
+            <input
+                id="url"
+                type="text"
+                placeholder="Search the web or enter a URL..."
+                autocomplete="off"
+                spellcheck="false">
+        </div>
 
-</header>
+        <div class="action-buttons">
+            <button id="go" class="btn-white">
+                <span>Go</span>
+                <i class="ri-arrow-right-line"></i>
+            </button>
+        </div>
+    </header>
 
-<main id="browser"></main>
+    <main id="browser">
+        <div class="viewport-placeholder">
+            <div class="watermark-container">
+                <i class="ri-spider-fill watermark-icon"></i>
+                <p class="watermark-text">spydr-web</p>
+                <p class="watermark-subtext">caught on a spydr-web</p>
+            </div>
+        </div>
+    </main>
 
-<!-- Scram, Jet! -->
-<script src="/scram/scramjet.all.js"></script>
-<script src="/sp1dr.js"></script>
-  
+    <!-- Scram, Jet! -->
+    <script src="/scram/scramjet.all.js"></script>
+    <script src="/sp1dr.js"></script>
+    
 </body>
 </html>

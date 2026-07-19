@@ -1,57 +1,226 @@
+/* ==========================================================================
+   SPYDR WEB ENGINE - THEME & UI STYLES
+   ========================================================================== */
+
+:root {
+    --bg-main: #060608;
+    --bg-header: #0d0d11;
+    --bg-input: #14141a;
+    --border-color: #22222d;
+    --border-focus: #ff2a4b;
+    --accent-red: #ff2a4b;
+    --accent-glow: rgba(255, 42, 75, 0.25);
+    --text-primary: #ffffff;
+    --text-secondary: #888896;
+    --btn-bg: #ffffff;
+    --btn-text: #060608;
+    --header-height: 70px;
+}
+
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: Inter, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    background: #090909;
-    color: white;
-}
-
-header {
-    height: 60px;
-
+    background: var(--bg-main);
+    color: var(--text-primary);
+    overflow: hidden;
+    height: 100vh;
     display: flex;
-    gap: 10px;
-
-    padding: 10px;
+    flex-direction: column;
 }
 
-input {
+/* --- HEADER BAR --- */
+.spydr-header {
+    height: var(--header-height);
+    background: var(--bg-header);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
 
+/* --- BRANDING --- */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.5px;
+    user-select: none;
+    padding-right: 10px;
+}
+
+.brand-icon {
+    font-size: 1.6rem;
+    color: var(--accent-red);
+    filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+
+.brand-name {
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.accent-dot {
+    color: var(--accent-red);
+}
+
+/* --- SEARCH INPUT CONTAINER --- */
+.search-container {
     flex: 1;
-
-    background: #171717;
-
-    color: white;
-
-    border: 1px solid #2b2b2b;
-
-    padding: 12px;
-
-    border-radius: 10px;
-
+    display: flex;
+    align-items: center;
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0 16px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 
-button {
+.search-container:focus-within {
+    border-color: var(--border-focus);
+    background: #181820;
+    box-shadow: 0 0 15px var(--accent-glow);
+}
 
-    padding: 0 18px;
+.search-icon {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-right: 12px;
+    transition: color 0.25s ease;
+}
 
-    background: white;
+.search-container:focus-within .search-icon {
+    color: var(--accent-red);
+}
 
-    color: black;
-
+input#url {
+    flex: 1;
+    background: transparent;
+    color: var(--text-primary);
     border: none;
-
-    border-radius: 10px;
-
-    cursor: pointer;
-
+    padding: 14px 0;
+    font-size: 0.95rem;
+    outline: none;
+    font-family: 'JetBrains Mono', monospace;
 }
 
+input#url::placeholder {
+    color: var(--text-secondary);
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- MENU & ACTION BUTTONS --- */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button.btn-white {
+    height: 46px;
+    padding: 0 22px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+button.btn-white:hover {
+    background: #eaeaea;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+button.btn-white:active {
+    transform: translateY(0);
+    background: #dcdcdc;
+}
+
+button.btn-white i {
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+button.btn-white:hover i {
+    transform: translateX(3px);
+}
+
+/* --- BROWSER VIEWPORT & SPYDR THEME WATERMARK --- */
 #browser {
+    flex: 1;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    position: relative;
+    background-color: var(--bg-main);
+    
+    /* Subtle Spider-Web / Radar Grid Background */
+    background-image: 
+        radial-gradient(circle at center, rgba(34, 34, 45, 0.4) 0%, transparent 70%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 40px 40px, 40px 40px;
+    background-position: center center;
+}
 
-    height: calc(100vh - 60px);
+/* Placeholder styling shown before iframes or web pages are injected */
+.viewport-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
 
+.watermark-container {
+    text-align: center;
+    opacity: 0.25;
+    transition: opacity 0.3s ease;
+}
+
+.watermark-icon {
+    font-size: 5rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.watermark-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.watermark-subtext {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Hide watermark automatically when your script injects an iframe or elements */
+#browser > *:not(.viewport-placeholder) ~ .viewport-placeholder,
+#browser iframe ~ .viewport-placeholder {
+    display: none;
 }

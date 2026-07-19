@@ -1,4 +1,4 @@
-![Spydr Logo](/assets/images/logo.png)
+<img src="assets/images/logo.png" alt="Spydr Logo" width="200">
 
 # DMCA Policy
 

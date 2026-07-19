@@ -1,4 +1,6 @@
-<img src="/assets/images/logo.png" alt="Spydr Logo" width="200">
+<p align="center">
+  <img src="/assets/images/logo.png" alt="Spydr Logo" width="200">
+</p>
 
 # DMCA Policy
 

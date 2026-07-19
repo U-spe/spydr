@@ -1,4 +1,5 @@
-![Spydr Logo](assets/images/logo.png)
+![Spydr Logo](/assets/images/logo.png)
+
 # DMCA Policy
 
 ## Spydr DMCA Notice and Takedown Policy

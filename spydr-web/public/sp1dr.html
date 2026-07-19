@@ -4,60 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Remix Icons CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- Original "spydr" concept, branding, and core architecture created by Web Creation Studios -->
     
-    <!-- Google Fonts for Modern UI -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <title>spydr web</title>
 
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="/spydr-web/public/sp1dr.css">
 
-    <title>spydr web</title>
 </head>
-
 <body>
 
-    <!--- here idc if you copy this stuff, but i need credit for anything spydr --->
-
-    <header class="spydr-header">
-        <div class="brand-logo">
-            <i class="ri-spider-line brand-icon"></i>
-            <span class="brand-name">spydr<span class="accent-dot">.</span></span>
-        </div>
-
-        <div class="search-container">
-            <i class="ri-global-line search-icon"></i>
-            <input
-                id="url"
-                type="text"
-                placeholder="Search the web or enter a URL..."
-                autocomplete="off"
-                spellcheck="false">
-        </div>
-
-        <div class="action-buttons">
-            <button id="go" class="btn-white">
-                <span>Go</span>
-                <i class="ri-arrow-right-line"></i>
+    <!-- Browser Chrome Header -->
+    <header class="browser-chrome">
+        
+        <!-- Top Tab Bar -->
+        <div class="tabs-bar">
+            <div class="tab active-tab">
+                <i class="ri-radar-line tab-icon"></i>
+                <span class="tab-title">spydr</span>
+                <button class="close-tab"><i class="ri-close-line"></i></button>
+            </div>
+            <button class="new-tab-btn">
+                <i class="ri-add-line"></i>
             </button>
         </div>
-    </header>
 
-    <main id="browser">
-        <div class="viewport-placeholder">
-            <div class="watermark-container">
-                <i class="ri-spider-fill watermark-icon"></i>
-                <p class="watermark-text">spydr-web</p>
-                <p class="watermark-subtext">caught on a spydr-web</p>
+        <!-- Main Toolbar -->
+        <div class="toolbar">
+            <!-- Navigation Controls -->
+            <div class="nav-controls">
+                <button class="nav-btn" title="Back"><i class="ri-arrow-left-line"></i></button>
+                <button class="nav-btn" title="Forward"><i class="ri-arrow-right-line"></i></button>
+                <button class="nav-btn" title="Refresh"><i class="ri-refresh-line"></i></button>
+            </div>
+
+            <!-- Address Bar -->
+            <div class="address-bar">
+                <div class="secure-badge" title="Secure Connection">
+                    <i class="ri-lock-2-line"></i>
+                </div>
+                <input
+                    id="url"
+                    type="text"
+                    placeholder="Search Google or enter a URL..."
+                    autocomplete="off"
+                >
+                <div class="bookmark-badge">
+                    <i class="ri-star-line"></i>
+                </div>
+            </div>
+
+            <!-- Action & Menu Buttons -->
+            <div class="action-controls">
+                <!-- Kept the #go ID as requested -->
+                <button id="go" class="menu-btn">
+                    <span>Go</span>
+                </button>
+                <!-- Browser menu button -->
+                <button class="menu-btn icon-only" title="Settings">
+                    <i class="ri-more-2-fill"></i>
+                </button>
             </div>
         </div>
-    </main>
+
+    </header>
+
+    <!-- Main Proxy Viewport -->
+    <main id="browser"></main>
 
     <!-- Scram, Jet! -->
     <script src="/scram/scramjet.all.js"></script>
     <script src="/spydr-web/public/sp1dr.js"></script>
-    
+  
 </body>
 </html>

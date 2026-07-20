@@ -10,17 +10,19 @@ const proxy = new Corrosion({
 
 proxy.bundleScripts();
 
+// serve the bundled client FIRST
+app.get("/service/index.js", (req, res) => {
+    res.type("application/javascript");
+    res.send(proxy.script);
+});
+
+// then let corrosion handle everything else
 app.use((req, res, next) => {
     if (req.url.startsWith(proxy.prefix)) {
         return proxy.request(req, res);
     }
 
     next();
-});
-
-app.get("/service/index.js", (req, res) => {
-    res.type("application/javascript");
-    res.send(proxy.script);
 });
 
 app.get("/", (req, res) => {

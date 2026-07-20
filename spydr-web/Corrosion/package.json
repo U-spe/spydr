@@ -13,8 +13,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "start": "NODE_OPTIONS=--openssl-legacy-provider node server.js"
+},
   "author": "",
   "license": "ISC",
   "description": ""

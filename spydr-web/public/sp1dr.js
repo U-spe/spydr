@@ -15,7 +15,7 @@ async function initScramjet() {
     }
 
     try {
-        await navigator.serviceWorker.register("/sw.js", {
+        await navigator.serviceWorker.register("/spydr-web/sw.js", {
             scope: "/scram/"
         });
 

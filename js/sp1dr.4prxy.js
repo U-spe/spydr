@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     const input = document.getElementById("url");
     const go = document.getElementById("go");
     const frame = document.getElementById("proxy-frame");
@@ -14,108 +13,68 @@ document.addEventListener("DOMContentLoaded", () => {
     const maximize = document.querySelector(".dot.maximize");
 
     function getTarget() {
-
         let value = input.value.trim();
 
         if (!value) return null;
 
-        const isURL =
-            value.includes(".") &&
-            !value.includes(" ");
+        const isURL = value.includes(".") && !value.includes(" ");
 
-        if (isURL) {
-
-            if (!/^https?:\/\//i.test(value)) {
-                value = "https://" + value;
-            }
-
-            return value;
-
+        if (isURL && !/^https?:\/\//i.test(value)) {
+            value = "https://" + value;
         }
 
-        return "https://www.google.com/search?q=" + encodeURIComponent(value);
-
+        return isURL
+            ? value
+            : "https://www.google.com/search?q=" + encodeURIComponent(value);
     }
 
     function navigate() {
-
         const target = getTarget();
-
         if (!target) return;
 
-        frame.src =
-            "/service/gateway?url=" +
-            encodeURIComponent(target);
-
+        // Let Corrosion handle the redirect
+        window.location.href =
+            "/service/gateway?url=" + encodeURIComponent(target);
     }
 
-    go.onclick = navigate;
+    go.addEventListener("click", navigate);
 
-    input.addEventListener("keydown", e => {
-
+    input.addEventListener("keydown", (e) => {
         if (e.key === "Enter") {
             e.preventDefault();
             navigate();
         }
-
     });
 
-    back.onclick = () => {
+    back?.addEventListener("click", () => history.back());
 
-        try {
-            frame.contentWindow.history.back();
-        } catch {}
+    forward?.addEventListener("click", () => history.forward());
 
-    };
-
-    forward.onclick = () => {
-
-        try {
-            frame.contentWindow.history.forward();
-        } catch {}
-
-    };
-
-    home.onclick = () => {
-
+    home?.addEventListener("click", () => {
         input.value = "";
-        frame.removeAttribute("src");
+        window.location.href = "/";
+    });
 
-    };
-
-    settings.onclick = () => {
-
+    settings?.addEventListener("click", () => {
         console.log("settings");
+    });
 
-    };
-
-    close.onclick = () => {
-
+    close?.addEventListener("click", () => {
         window.location.replace("https://classroom.google.com");
+    });
 
-    };
-
-    minimize.onclick = () => {
+    minimize?.addEventListener("click", () => {
+        if (!frame) return;
 
         frame.style.display =
-            frame.style.display === "none"
-                ? "block"
-                : "none";
-
-    };
-
-    maximize.onclick = () => {
-
-        if (!document.fullscreenElement) {
-
-            document.documentElement.requestFullscreen();
-
-        } else {
-
-            document.exitFullscreen();
-
-        }
-
+            frame.style.display === "none" ? "block" : "none";
     });
 
+    maximize?.addEventListener("click", () => {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(() => {});
+        } else {
+            document.exitFullscreen();
+        }
+    });
 });

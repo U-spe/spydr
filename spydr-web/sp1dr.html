@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Original "spydr" concept, branding, and core architecture by Web Creation Studios -->
+
+    <title>spydr web</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/sp1dr.4prxy.css">
+</head>
+<body>
+
+    <div class="top-chrome">
+        <div class="window-controls">
+            <span class="dot close"></span>
+            <span class="dot minimize"></span>
+            <span class="dot maximize"></span>
+        </div>
+
+        <div class="brand">
+            <i class="ri-radar-line spydr-icon"></i>
+            <span>spydr</span>
+        </div>
+
+        <div class="placeholder"></div>
+    </div>
+
+    <main id="browser">
+        <iframe
+            id="proxy-frame"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </main>
+
+    <header class="bottom-interface">
+
+        <div class="search-bar-container">
+            <div class="address-bar">
+                <i class="ri-lock-2-line lock-icon"></i>
+
+                <input
+                    id="url"
+                    type="text"
+                    placeholder="Search Google or enter a URL..."
+                    autocomplete="off">
+            </div>
+        </div>
+
+        <div class="bottom-menu">
+
+            <div class="menu-group">
+                <button class="menu-btn white-btn" id="backBtn" title="Back">
+                    <i class="ri-arrow-left-line"></i>
+                </button>
+
+                <button class="menu-btn white-btn" id="forwardBtn" title="Forward">
+                    <i class="ri-arrow-right-line"></i>
+                </button>
+            </div>
+
+            <button id="go" class="menu-btn white-btn main-go">
+                <span>Go</span>
+            </button>
+
+            <div class="menu-group">
+
+                <button class="menu-btn white-btn" id="homeBtn" title="Home">
+                    <i class="ri-home-5-line"></i>
+                </button>
+
+                <button class="menu-btn white-btn" id="settingsBtn" title="Settings">
+                    <i class="ri-menu-line"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <script src="/spydr-web/service/index.js"></script>
+    <script src="/js/sp1dr.4prxy.js"></script>
+
+</body>
+</html>

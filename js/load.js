@@ -36,7 +36,7 @@ loadVideo.addEventListener("ended", () => {
 
         loadingScreen.remove();
 
-    }, 600);
+    }, 1000);
 
 });
 

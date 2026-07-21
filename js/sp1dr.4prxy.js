@@ -37,16 +37,18 @@ document.addEventListener("DOMContentLoaded", () => {
             encodeURIComponent(value);
     }
 
-    function navigate() {
+   function navigate() {
     const target = getTarget();
 
     if (!target || !frame) return;
 
     console.log("Navigating to:", target);
 
-    frame.src = CORROSION_URL + target;
+    frame.src =
+        "https://spydr-corrosion.onrender.com/proxy?url=" +
+        encodeURIComponent(target);
 }
-
+    
     go?.addEventListener("click", navigate);
 
     input?.addEventListener("keydown", (e) => {

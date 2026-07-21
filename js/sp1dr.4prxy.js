@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("spydr proxy UI loaded");
+
     const input = document.getElementById("url");
     const go = document.getElementById("go");
     const frame = document.getElementById("proxy-frame");

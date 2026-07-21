@@ -12,51 +12,74 @@ document.addEventListener("DOMContentLoaded", () => {
     const minimize = document.querySelector(".dot.minimize");
     const maximize = document.querySelector(".dot.maximize");
 
+    const CORROSION_URL = "https://spydr-corrosion.onrender.com/service/";
+
     function getTarget() {
         let value = input.value.trim();
 
         if (!value) return null;
 
-        const isURL = value.includes(".") && !value.includes(" ");
+        const isURL =
+            value.includes(".") &&
+            !value.includes(" ");
 
-        if (isURL && !/^https?:\/\//i.test(value)) {
-            value = "https://" + value;
+        if (isURL) {
+            if (!/^https?:\/\//i.test(value)) {
+                value = "https://" + value;
+            }
+
+            return value;
         }
 
-        return isURL
-            ? value
-            : "https://www.google.com/search?q=" + encodeURIComponent(value);
+        return "https://www.google.com/search?q=" +
+            encodeURIComponent(value);
     }
 
     function navigate() {
         const target = getTarget();
-        if (!target) return;
 
-        // Let Corrosion handle the redirect
-        window.location.href =
-            "/service/gateway?url=" + encodeURIComponent(target);
+        if (!target || !frame) return;
+
+        frame.src =
+            CORROSION_URL +
+            encodeURIComponent(target);
     }
 
-    go.addEventListener("click", navigate);
+    go?.addEventListener("click", navigate);
 
-    input.addEventListener("keydown", (e) => {
+    input?.addEventListener("keydown", (e) => {
         if (e.key === "Enter") {
             e.preventDefault();
             navigate();
         }
     });
 
-    back?.addEventListener("click", () => history.back());
+    back?.addEventListener("click", () => {
+        try {
+            frame.contentWindow.history.back();
+        } catch (e) {
+            console.warn("Back navigation blocked");
+        }
+    });
 
-    forward?.addEventListener("click", () => history.forward());
+    forward?.addEventListener("click", () => {
+        try {
+            frame.contentWindow.history.forward();
+        } catch (e) {
+            console.warn("Forward navigation blocked");
+        }
+    });
 
     home?.addEventListener("click", () => {
         input.value = "";
-        window.location.href = "/";
+
+        if (frame) {
+            frame.removeAttribute("src");
+        }
     });
 
     settings?.addEventListener("click", () => {
-        console.log("settings");
+        console.log("spydr settings opened");
     });
 
     close?.addEventListener("click", () => {
@@ -67,14 +90,20 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!frame) return;
 
         frame.style.display =
-            frame.style.display === "none" ? "block" : "none";
+            frame.style.display === "none"
+                ? "block"
+                : "none";
     });
 
-    maximize?.addEventListener("click", () => {
-        if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen().catch(() => {});
-        } else {
-            document.exitFullscreen();
+    maximize?.addEventListener("click", async () => {
+        try {
+            if (!document.fullscreenElement) {
+                await document.documentElement.requestFullscreen();
+            } else {
+                await document.exitFullscreen();
+            }
+        } catch (e) {
+            console.warn("Fullscreen unavailable");
         }
     });
 });

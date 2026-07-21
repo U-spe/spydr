@@ -10,6 +10,9 @@ const proxy = new Corrosion({
 
 proxy.bundleScripts();
 
+console.log("Script exists:", !!proxy.script);
+console.log("Script length:", proxy.script ? proxy.script.length : 0);
+
 // serve the bundled client FIRST
 app.get("/service/index.js", (req, res) => {
     res.type("application/javascript");

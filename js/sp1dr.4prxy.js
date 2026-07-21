@@ -42,9 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!target || !frame) return;
 
-        frame.src =
-            CORROSION_URL +
-            encodeURIComponent(target);
+        frame.src = CORROSION_URL + target;
     }
 
     go?.addEventListener("click", navigate);

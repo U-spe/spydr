@@ -38,12 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function navigate() {
-        const target = getTarget();
+    const target = getTarget();
 
-        if (!target || !frame) return;
+    if (!target || !frame) return;
 
-        frame.src = CORROSION_URL + target;
-    }
+    console.log("Navigating to:", target);
+
+    frame.src = CORROSION_URL + target;
+}
 
     go?.addEventListener("click", navigate);
 

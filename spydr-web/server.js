@@ -1,3 +1,5 @@
+// hey devs looking at this project, i diddint feel like going through a scramjet/uv bare project. 
+
 const express = require("express");
 const Corrosion = require("./Corrosion/lib/server");
 
@@ -15,7 +17,7 @@ console.log("Script length:", proxy.script ? proxy.script.length : 0);
 
 // serve the bundled client FIRST
 app.get("/service/index.js", (req, res) => {
-    res.type("application/javascript");
+    res.setHeader("Content-Type", "application/javascript; charset=utf-8");
     res.send(proxy.script);
 });
 

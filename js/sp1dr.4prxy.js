@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("spydr proxy UI loaded");
 
     const input = document.getElementById("url");
     const go = document.getElementById("go");
     const frame = document.getElementById("proxy-frame");
+
+    console.log("GO BUTTON:", go);
 
     const back = document.getElementById("backBtn");
     const forward = document.getElementById("forwardBtn");
@@ -14,8 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const minimize = document.querySelector(".dot.minimize");
     const maximize = document.querySelector(".dot.maximize");
 
-    const CORROSION_URL = "https://spydr-corrosion.onrender.com/service/";
-
     function getTarget() {
         let value = input.value.trim();
 
@@ -25,33 +24,34 @@ document.addEventListener("DOMContentLoaded", () => {
             value.includes(".") &&
             !value.includes(" ");
 
-        if (isURL) {
-            if (!/^https?:\/\//i.test(value)) {
-                value = "https://" + value;
-            }
-
-            return value;
+        if (isURL && !/^https?:\/\//i.test(value)) {
+            value = "https://" + value;
         }
 
-        return "https://www.google.com/search?q=" +
-            encodeURIComponent(value);
+        return isURL
+            ? value
+            : "https://www.google.com/search?q=" +
+              encodeURIComponent(value);
     }
 
-   function navigate() {
-    const target = getTarget();
+    function navigate() {
+        const target = getTarget();
 
-    if (!target || !frame) return;
+        if (!target) return;
 
-    console.log("Navigating to:", target);
+        console.log("Navigating to:", target);
 
-    frame.src =
-        "https://spydr-corrosion.onrender.com/proxy?url=" +
-        encodeURIComponent(target);
-}
-    
-    go?.addEventListener("click", navigate);
+        frame.src =
+            "https://spydr-corrosion.onrender.com/service/" +
+            encodeURIComponent(target);
+    }
 
-    input?.addEventListener("keydown", (e) => {
+    // THIS is where the Go button gets connected
+    if (go) {
+        go.addEventListener("click", navigate);
+    }
+
+    input.addEventListener("keydown", (e) => {
         if (e.key === "Enter") {
             e.preventDefault();
             navigate();
@@ -59,31 +59,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     back?.addEventListener("click", () => {
-        try {
-            frame.contentWindow.history.back();
-        } catch (e) {
-            console.warn("Back navigation blocked");
-        }
+        frame.contentWindow.history.back();
     });
 
     forward?.addEventListener("click", () => {
-        try {
-            frame.contentWindow.history.forward();
-        } catch (e) {
-            console.warn("Forward navigation blocked");
-        }
+        frame.contentWindow.history.forward();
     });
 
     home?.addEventListener("click", () => {
         input.value = "";
-
-        if (frame) {
-            frame.removeAttribute("src");
-        }
+        frame.removeAttribute("src");
     });
 
     settings?.addEventListener("click", () => {
-        console.log("spydr settings opened");
+        console.log("settings");
     });
 
     close?.addEventListener("click", () => {
@@ -91,23 +80,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     minimize?.addEventListener("click", () => {
-        if (!frame) return;
-
         frame.style.display =
             frame.style.display === "none"
                 ? "block"
                 : "none";
     });
 
-    maximize?.addEventListener("click", async () => {
-        try {
-            if (!document.fullscreenElement) {
-                await document.documentElement.requestFullscreen();
-            } else {
-                await document.exitFullscreen();
-            }
-        } catch (e) {
-            console.warn("Fullscreen unavailable");
+    maximize?.addEventListener("click", () => {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(() => {});
+        } else {
+            document.exitFullscreen();
         }
     });
+
 });

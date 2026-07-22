@@ -1,10 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     const input = document.getElementById("url");
     const go = document.getElementById("go");
     const frame = document.getElementById("proxy-frame");
-
-    console.log("GO BUTTON:", go);
 
     const back = document.getElementById("backBtn");
     const forward = document.getElementById("forwardBtn");
@@ -15,10 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const minimize = document.querySelector(".dot.minimize");
     const maximize = document.querySelector(".dot.maximize");
 
+    console.log("spydr proxy UI loaded");
+    console.log("GO BUTTON:", go);
+
     function getTarget() {
         let value = input.value.trim();
 
-        if (!value) return null;
+        if (!value) {
+            return null;
+        }
 
         const isURL =
             value.includes(".") &&
@@ -28,77 +30,139 @@ document.addEventListener("DOMContentLoaded", () => {
             value = "https://" + value;
         }
 
-        return isURL
-            ? value
-            : "https://www.google.com/search?q=" +
-              encodeURIComponent(value);
+        if (isURL) {
+            return value;
+        }
+
+        return (
+            "https://www.google.com/search?q=" +
+            encodeURIComponent(value)
+        );
     }
 
     function navigate() {
-    const target = getTarget();
+        const target = getTarget();
 
-    if (!target) {
-        console.log("No target found");
-        return;
+        if (!target) {
+            console.log("No target found");
+            return;
+        }
+
+        /*
+         * Corrosion's plain/xor URL encoding is handled by the
+         * Corrosion client script loaded in sp1dr.html.
+         *
+         * The backend expects the target URL after /service/.
+         */
+
+        const proxyUrl =
+            "https://spydr-corrosion.onrender.com/service/" +
+            target;
+
+        console.log("Navigating to:", target);
+        console.log("Proxy URL:", proxyUrl);
+
+        if (frame) {
+            frame.src = proxyUrl;
+        }
     }
 
-    const proxyUrl =
-        "https://spydr-corrosion.onrender.com/service/" +
-        encodeURIComponent(target);
+    /*
+     * GO BUTTON
+     */
 
-    console.log("Navigating to:", target);
-    console.log("Proxy URL:", proxyUrl);
-
-    // navigate the iframe
-    frame.src = proxyUrl;
-}
-
-    // THIS is where the Go button gets connected
     if (go) {
         go.addEventListener("click", navigate);
     }
 
-    input.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-            e.preventDefault();
-            navigate();
+    /*
+     * ENTER KEY
+     */
+
+    if (input) {
+        input.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                navigate();
+            }
+        });
+    }
+
+    /*
+     * BACK
+     */
+
+    back?.addEventListener("click", () => {
+        try {
+            frame.contentWindow.history.back();
+        } catch (error) {
+            console.warn("Unable to go back:", error);
         }
     });
 
-    back?.addEventListener("click", () => {
-        frame.contentWindow.history.back();
-    });
+    /*
+     * FORWARD
+     */
 
     forward?.addEventListener("click", () => {
-        frame.contentWindow.history.forward();
+        try {
+            frame.contentWindow.history.forward();
+        } catch (error) {
+            console.warn("Unable to go forward:", error);
+        }
     });
+
+    /*
+     * HOME
+     */
 
     home?.addEventListener("click", () => {
         input.value = "";
         frame.removeAttribute("src");
     });
 
+    /*
+     * SETTINGS
+     */
+
     settings?.addEventListener("click", () => {
         console.log("settings");
     });
+
+    /*
+     * CLOSE / PANIC BUTTON
+     */
 
     close?.addEventListener("click", () => {
         window.location.replace("https://classroom.google.com");
     });
 
+    /*
+     * MINIMIZE
+     */
+
     minimize?.addEventListener("click", () => {
+        if (!frame) return;
+
         frame.style.display =
             frame.style.display === "none"
                 ? "block"
                 : "none";
     });
 
+    /*
+     * MAXIMIZE
+     */
+
     maximize?.addEventListener("click", () => {
         if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen().catch(() => {});
+            document.documentElement
+                .requestFullscreen()
+                .catch((error) => {
+                    console.warn("Fullscreen failed:", error);
+                });
         } else {
             document.exitFullscreen();
         }
     });
-
 });

@@ -29,6 +29,7 @@ app.get("/service/index.js", (req, res) => {
 // let Corrosion handle all /service/ requests
 app.use((req, res, next) => {
     if (req.url.startsWith(proxy.prefix)) {
+        console.log("Corrosion request:", req.url);
         return proxy.request(req, res);
     }
 

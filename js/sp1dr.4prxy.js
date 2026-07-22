@@ -6,11 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const back = document.getElementById("backBtn");
     const forward = document.getElementById("forwardBtn");
     const home = document.getElementById("homeBtn");
-    const settings = document.getElementById("settingsBtn");
 
     const close = document.querySelector(".dot.close");
     const minimize = document.querySelector(".dot.minimize");
     const maximize = document.querySelector(".dot.maximize");
+
+    const BACKEND =
+        "https://spydr-corrosion.onrender.com";
 
     console.log("spydr proxy UI loaded");
     console.log("GO BUTTON:", go);
@@ -40,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     }
 
-    function navigate() {
+    async function navigate() {
         const target = getTarget();
 
         if (!target) {
@@ -48,22 +50,40 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        /*
-         * Corrosion's plain/xor URL encoding is handled by the
-         * Corrosion client script loaded in sp1dr.html.
-         *
-         * The backend expects the target URL after /service/.
-         */
-
-        const proxyUrl =
-            "https://spydr-corrosion.onrender.com/service/" +
-            target;
-
         console.log("Navigating to:", target);
-        console.log("Proxy URL:", proxyUrl);
 
-        if (frame) {
-            frame.src = proxyUrl;
+        try {
+            const response = await fetch(
+                BACKEND +
+                "/service/encode?url=" +
+                encodeURIComponent(target)
+            );
+
+            if (!response.ok) {
+                throw new Error(
+                    `Encoder returned HTTP ${response.status}`
+                );
+            }
+
+            const data = await response.json();
+
+            if (!data.encoded) {
+                throw new Error("No encoded URL returned");
+            }
+
+            const proxyUrl =
+                BACKEND +
+                "/service/" +
+                data.encoded;
+
+            console.log("Proxy URL:", proxyUrl);
+
+            if (frame) {
+                frame.src = proxyUrl;
+            }
+
+        } catch (error) {
+            console.error("Proxy navigation failed:", error);
         }
     }
 
@@ -71,22 +91,18 @@ document.addEventListener("DOMContentLoaded", () => {
      * GO BUTTON
      */
 
-    if (go) {
-        go.addEventListener("click", navigate);
-    }
+    go?.addEventListener("click", navigate);
 
     /*
      * ENTER KEY
      */
 
-    if (input) {
-        input.addEventListener("keydown", (event) => {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                navigate();
-            }
-        });
-    }
+    input?.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            navigate();
+        }
+    });
 
     /*
      * BACK
@@ -118,23 +134,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     home?.addEventListener("click", () => {
         input.value = "";
-        frame.removeAttribute("src");
+
+        if (frame) {
+            frame.removeAttribute("src");
+        }
     });
 
     /*
-     * SETTINGS
-     */
-
-    settings?.addEventListener("click", () => {
-        console.log("settings");
-    });
-
-    /*
-     * CLOSE / PANIC BUTTON
+     * CLOSE
      */
 
     close?.addEventListener("click", () => {
-        window.location.replace("https://classroom.google.com");
+        window.location.replace(
+            "https://classroom.google.com"
+        );
     });
 
     /*
@@ -159,7 +172,10 @@ document.addEventListener("DOMContentLoaded", () => {
             document.documentElement
                 .requestFullscreen()
                 .catch((error) => {
-                    console.warn("Fullscreen failed:", error);
+                    console.warn(
+                        "Fullscreen failed:",
+                        error
+                    );
                 });
         } else {
             document.exitFullscreen();

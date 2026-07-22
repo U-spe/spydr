@@ -35,16 +35,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function navigate() {
-        const target = getTarget();
+    const target = getTarget();
 
-        if (!target) return;
-
-        console.log("Navigating to:", target);
-
-        frame.src =
-            "https://spydr-corrosion.onrender.com/service/" +
-            encodeURIComponent(target);
+    if (!target) {
+        console.log("No target found");
+        return;
     }
+
+    const proxyUrl =
+        "https://spydr-corrosion.onrender.com/service/" +
+        encodeURIComponent(target);
+
+    console.log("Navigating to:", target);
+    console.log("Proxy URL:", proxyUrl);
+
+    // navigate the iframe
+    frame.src = proxyUrl;
+}
 
     // THIS is where the Go button gets connected
     if (go) {

@@ -2,9 +2,19 @@
 // i will soon make a scramjet project with a scramjet proxy instead of using corrosion.
 
 const express = require("express");
+const cors = require("cors");
 const Corrosion = require("./Corrosion/lib/server");
 
 const app = express();
+
+/*
+ * allow the Spydr frontend to communicate
+ * with this Render backend
+ */
+
+app.use(cors({
+    origin: "https://spydr-delta.vercel.app"
+}));
 
 const proxy = new Corrosion({
     prefix: "/service/",
@@ -14,7 +24,10 @@ const proxy = new Corrosion({
 proxy.bundleScripts();
 
 console.log("Script exists:", !!proxy.script);
-console.log("Script length:", proxy.script ? proxy.script.length : 0);
+console.log(
+    "Script length:",
+    proxy.script ? proxy.script.length : 0
+);
 
 /*
  * serve the bundled Corrosion client
@@ -30,15 +43,7 @@ app.get("/service/index.js", (req, res) => {
 });
 
 /*
- * encode a normal URL into Corrosion's URL format
- *
- * Example:
- *
- * https://example.com
- *
- * becomes something like:
- *
- * hvtrs8%2F-wuw%2Cexample%2Ccom
+ * URL encoder endpoint
  */
 
 app.get("/service/encode", (req, res) => {
@@ -68,12 +73,15 @@ app.get("/service/encode", (req, res) => {
 });
 
 /*
- * let Corrosion handle encoded proxy requests
+ * let Corrosion handle proxy requests
  */
 
 app.use((req, res, next) => {
     if (req.url.startsWith(proxy.prefix)) {
-        console.log("Corrosion request:", req.url);
+        console.log(
+            "Corrosion request:",
+            req.url
+        );
 
         return proxy.request(req, res);
     }
@@ -86,11 +94,16 @@ app.use((req, res, next) => {
  */
 
 app.get("/", (req, res) => {
-    res.send("Spydr Corrosion backend online");
+    res.send(
+        "Spydr Corrosion backend online"
+    );
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT =
+    process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log(`Spydr running on ${PORT}`);
+    console.log(
+        `Spydr running on ${PORT}`
+    );
 });

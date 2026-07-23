@@ -6,6 +6,7 @@ To find the README, and other MD files, view the MD docs page. (It also included
 
 
 
+
 take that,
 
-some random dude from Solar
+some random dude from Solar, made by web creation studios

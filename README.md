@@ -2,7 +2,7 @@
 
 Your probably looking for the README, hence you scrolled so far. Well it got moved with the most recent update.
 
-To find the README, and other [MD files](/md-docs/README.md), view the MD docs page. (It also included our license!)
+To find the README, and other MD files, view the [MD docs](/md-docs/README.md) page. (It also included our license!)
 
 
 

@@ -2,9 +2,9 @@
 
 > A fast, minimal, grayscale web platform built for games, apps, and browsing.
 
-![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-dc6f35?style=for-the-badge)
-![Status](https://img.shields.io/badge/status-active-success?style=flat-square)
-![Made%20With](https://img.shields.io/badge/made%20with-HTML%20%7C%20CSS%20%7C%20JavaScript-black?style=flat-square)
+![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey?style=flat-square&logo=creativecommons)
+![Commits](https://img.shields.io/github/commit-activity/t/u-spe/spydr?style=flat-square&logo=github)
+![Last Commmit](https://img.shields.io/github/last-commit/u-spe/spydr?style=flat-square&logo=github)
 
 ---
 

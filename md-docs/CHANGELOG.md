@@ -4,38 +4,47 @@ All notable changes to spydr are documented here.
 
 ---
 
-# v2.7.0 - Current Release
+# v2.7.2 - CURRENT
+
+## 🛠️ Beginning
+- Starting Scramjet build
+- Starting venomous build with Wispr LLM
+- Finishing Hydra Game Files
+
+
+---
+
+# v2.7.1 - PREVIOUS
 
 ## ✨ Added
 
-### New spydr Interface
-- Redesigned the UI into a cleaner, minimal grayscale environment
-- Added updated dashboard layout
-- Added improved navigation system
-- Added dock-style menu interface
-- Added animated starfield background system
+- Started build of proxy using Corrosion (CHANGED TO SCRAMJET IN v2.7.2)
+- Used Render to host backend for proxy
+- Installed CORS locally to connect to backend
+  
 
-### Game System
-- Added JSON-powered game zones
-- Added dynamic game loading
+## 🐛 Fixed
+
+- Fixed proxy embed linking
+- Fixed go button (backend problem)
+
+
+---
+
+# v2.7.0 
+
+## ✨ Added
+
 - Improved game card organization
-- Added better iframe game handling
-- Added automatic content loading
-
-### Apps & Features
-- Added Apps section
-- Added Browser section
-- Added AI section
-- Added Settings section
-- Added About and Changelog pages
-
-### Settings
-- Added theme customization
-- Added background effect controls
-- Added starfield toggle
+- Added Browser section (previously a VM)
 - Added hotkey support
 - Added tab cloaking options
 
+## 🐛 Fixed
+
+- Fixed Login
+- Improved navigation system
+- Fixed JSON-powered game zones
 ---
 
 # v2.6.0
@@ -107,7 +116,7 @@ Planned:
 - More themes
 - Improved AI integrations
 - Better search system
-- Offline capabilities
+- Offline capabilities (via downloads)
 - More customization options
 
 ---

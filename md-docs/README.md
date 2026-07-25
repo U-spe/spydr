@@ -1,3 +1,5 @@
+[/assets/images/checkers-mate.png](github.com/u-spe/spydr)
+
 # 🕷️ spydr
 
 > A fast, minimal, grayscale web platform built for games, apps, and browsing.

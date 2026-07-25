@@ -1,4 +1,4 @@
-[/assets/images/checkers-mate.png](github.com/u-spe/spydr)
+[![Checkers Mate](/assets/images/checkers-mate.png)](https://github.com/u-spe/spydr)
 
 # 🕷️ spydr
 

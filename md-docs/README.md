@@ -13,7 +13,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/github/commit-activity/t/u-spe/spydr?style=for-the-badge&label=COMMITS">
-  <img src="[https://img.shields.io/github/license/u-spe/spydr?style=for-the-badge&label=LICENSE](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey?style=flat-square)">
+  <img src="[https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey?style=flat-square]">
 </p>
 
 # 🕷️ spydr

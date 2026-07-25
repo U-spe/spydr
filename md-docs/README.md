@@ -3,7 +3,7 @@
     <img src="https://cdn-icons-png.flaticon.com/256/733/733609.png">
   </a>
   <a href="https://spydr-delta.vercel.app">
-    <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">
+    <img src="https://cdn-icons-png.flaticon.com/256/16116/16116463.png">
   </a>
 </p>
 

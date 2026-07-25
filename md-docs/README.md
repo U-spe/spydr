@@ -1,4 +1,20 @@
-[![Checkers Mate](/assets/images/checkers-mate.png)](https://github.com/u-spe/spydr)
+<p align="center">
+  <a href="https://github.com/u-spe/spydr">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
+  </a>
+  <a href="https://spydr-delta.vercel.app">
+    <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">
+  </a>
+</p>
+
+<p align="center">
+  <b>Created by Solar/u-spe (WCS)</b>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/commit-activity/t/u-spe/spydr?style=for-the-badge&label=COMMITS">
+  <img src="https://img.shields.io/github/license/u-spe/spydr?style=for-the-badge&label=LICENSE">
+</p>
 
 # 🕷️ spydr
 

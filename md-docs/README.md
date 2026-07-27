@@ -14,15 +14,12 @@
 <p align="center">
   <img src="https://img.shields.io/github/commit-activity/t/u-spe/spydr?style=for-the-badge&label=COMMITS">
   <img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey?style=for-the-badge">
+  <img scr="https://img.shields.io/github/last-commit/u-spe/spydr?style=flat-square&logo=github">
 </p>
 
 # 🕷️ spydr
 
 > A fast, minimal, grayscale web platform built for games, apps, and browsing.
-
-![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey?style=flat-square&logo=creativecommons)
-![Commits](https://img.shields.io/github/commit-activity/t/u-spe/spydr?style=flat-square&logo=github)
-![Last Commmit](https://img.shields.io/github/last-commit/u-spe/spydr?style=flat-square&logo=github)
 
 ---
 

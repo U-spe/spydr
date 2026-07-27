@@ -14,7 +14,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/commit-activity/t/u-spe/spydr?style=for-the-badge&label=COMMITS">
   <img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey?style=for-the-badge">
-  <img src="https://img.shields.io/github/last-commit/u-spe/spydr?style=flat-square&logo=github">
+  <img src="https://img.shields.io/github/last-commit/u-spe/spydr?style=for-the-badge&logo=github">
 </p>
 
 # 🕷️ spydr

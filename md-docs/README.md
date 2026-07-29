@@ -90,9 +90,19 @@ Example:
 
 ```json
 {
-  "title": "Minecraft",
-  "url": "/assets/gameassets/hydra/games/minecraft/index.html",
-  "image": "/assets/gameassets/hydra/images/minecraft.webp"
+  "title": "AMAZE ME",
+  "url": "/assets/gameassets/hydra/games/AMAZE-ME/index.html",
+  "image": "/assets/gameassets/hydra/images/AMAZE-ME.webp"
+}
+```
+
+OR:
+
+```json
+{
+  "title": "AMAZE ME",
+  "url": "/assets/gameassets/hydra/games/AMAZE-ME.html",
+  "image": "/assets/gameassets/hydra/images/AMAZE-ME.jpg (or another image format)"
 }
 ```
 
@@ -130,7 +140,7 @@ spydr focuses on:
 - [x] Home page
 - [x] Game library
 - [x] App launcher
-- [x] Browser
+- [ ] Browser (NEAR FINISH!)
 - [ ] AI page
 - [x] Settings
 - [x] Theme system

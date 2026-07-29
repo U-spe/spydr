@@ -112,10 +112,10 @@ Older builds included:
 
 Planned:
 
-- Plugin support
-- More themes
+- Seasonal Themes
+- Deploy On Surge
 - Improved AI integrations
-- Better search system
+- Using Scramjet (IN PROGRESS)
 - Offline capabilities (via downloads)
 - More customization options
 

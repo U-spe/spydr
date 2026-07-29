@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <b>Created by Solar/u-spe (WCS)</b>
+  <b>Created by Solar/u-spe (yeah, we doubled it)</b>
 </p>
 
 <p align="center">

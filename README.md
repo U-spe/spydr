@@ -1,17 +1,3 @@
-# README HAS MOVED
-
-Your probably looking for the README, hence you scrolled so far. Well it got moved with the most recent update.
-
-To find the README, and other MD files, view the [MD docs](/md-docs/README.md) page. (It also included our license!)
-
-
-
-
-take that,
-
-some random dude from Solar, made by web creation studios
-
-
 <p align="center">
   <a href="https://github.com/u-spe/spydr">
     <img src="https://cdn-icons-png.flaticon.com/256/733/733609.png">
@@ -30,3 +16,17 @@ some random dude from Solar, made by web creation studios
   <img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey?style=for-the-badge">
   <img src="https://img.shields.io/github/last-commit/u-spe/spydr?style=for-the-badge&logo=github">
 </p>
+
+
+# README HAS MOVED
+
+Your probably looking for the README, hence you scrolled so far. Well it got moved with the most recent update.
+
+To find the README, and other MD files, view the [MD docs](/md-docs/README.md) page. (It also included our license!)
+
+
+
+
+take that,
+
+some random dude from Solar, made by web creation studios

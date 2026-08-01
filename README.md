@@ -18,15 +18,13 @@
 </p>
 
 
-# README HAS MOVED
+# read below
 
-Your probably looking for the README, hence you scrolled so far. Well it got moved with the most recent update.
+this branch is different...
 
-To find the README, and other MD files, view the [MD docs](/md-docs/README.md) page. (It also included our license!)
+for some dang reason I need to put a . infront of all the linking shi for downloads and running offline. 
 
+## REMINDER: this is still in beta, no guarentee this will work
 
-
-
-take that,
-
-some random dude from Solar, made by web creation studios
+you might be able to run this locally through a personal system or even better (a USB DRIVE 🙂😉)
+soo...yeah, idek anymore soo.. gday?

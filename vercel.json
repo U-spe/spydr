@@ -1,4 +1,5 @@
 {
+  "cleanUrls": true,
   "routes": [
     { "handle": "filesystem" },
     { "src": "/.*", "dest": "/404.html" }

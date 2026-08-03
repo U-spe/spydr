@@ -30,3 +30,7 @@ To find the README, and other MD files, view the [MD docs](/md-docs/README.md) p
 take that,
 
 some random dude from Solar, made by web creation studios
+
+
+
+# BTW: I AM TAKING A 2 DAY BREAK ON SPYDR TO WORK ON SCRAMJET ON MY SYSTEM! PROXY SHOULD BE DONE BY 8.7.26 

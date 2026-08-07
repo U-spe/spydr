@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+<meta charset="utf-8" />
+<meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JustFall.LOL - Ultimate Multiplayer Knockout Guys Game</title>
+<script src="mobileRedirect.js" type="text/javascript"></script>
+
+<link rel="shortcut icon" type="image/png" href="favicon.png" />
+<meta name="description" content="Play the fun Fall Ultimate Knockout Guys game directly from your PC without download, just in your browser! Try out the penguin hexagon Fall Multiplayer Game from the Guys of JustFall.LOL" />
+
+<meta property="og:description" content="Play the fun Fall Ultimate Knockout Guys game directly from your PC without download, just in your browser! Try out the penguin hexagon Fall Multiplayer Game from the Guys of JustFall.LOL" />
+<link rel="stylesheet" href="style.css" />
+    
+<script src="rise.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="gameContainer"></div>
+<div id="loader">
+<div class="spinner"></div>
+<div class="progress">
+<div class="full"></div>
+</div>
+</div>
+<script src="fullscreen.js" type="text/javascript"></script>
+<script id="unity-loader" src="UnityLoader.js" type="text/javascript"></script>
+<script type="text/javascript">
+      var gameJsonUrl = "Build/WebGL.json"; //%gameJsonUrl
+      var urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has("v")) {
+        gameJsonUrl = gameJsonUrl.replace(/[0-9][0-9]+/i, urlParams.get("v"));
+      }
+      var gameInstance = UnityLoader.instantiate("gameContainer", gameJsonUrl, {
+        onProgress: UnityProgress,
+      });
+
+      function UnityProgress(gameInstance, progress) {
+        if (!gameInstance.Module) {
+          return;
+        }
+        const loader = document.querySelector("#loader");
+        if (!gameInstance.progress) {
+          const progress = document.querySelector("#loader .progress");
+          progress.style.display = "block";
+          gameInstance.progress = progress.querySelector(".full");
+          loader.querySelector(".spinner").style.display = "none";
+        }
+        gameInstance.progress.style.transform = `scaleX(${progress})`;
+        if (progress === 1 && !gameInstance.removeTimeout) {
+          loader.style.display = "none";
+          gameLoaded = true;
+        }
+      }
+
+      initializeFullscreenEvents();
+
+      document.addEventListener("visibilitychange", function () {
+        if (!gameInstance) return;
+
+        if (document.visibilityState == "hidden") {
+          gameInstance.SendMessage(
+            "FocusManager",
+            "ApplicationFocusChangedWebCallback",
+            0
+          );
+        } else {
+          gameInstance.SendMessage(
+            "FocusManager",
+            "ApplicationFocusChangedWebCallback",
+            1
+          );
+        }
+      });
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"82e3ada07bc0ec84","b":1,"version":"2023.10.0","token":"c843b8c381814d58b40d4597a1bf7962"}' crossorigin="anonymous"></script>
+</body>
+</html>

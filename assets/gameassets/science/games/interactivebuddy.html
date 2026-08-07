@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <div id="ruffle" width="100%" height="100%"></div>
+        <script src="ruffle/ruffle.js"></script>
+        <script>
+            window.RufflePlayer = window.RufflePlayer || {};
+            window.RufflePlayer.config = {
+                // Options affecting the whole page
+                publicPath: undefined,
+                polyfills: true,
+
+                // Options affecting files only
+                autoplay: 'on',
+                unmuteOverlay: 'hidden',
+                backgroundColor: null,
+                wmode: 'window',
+                letterbox: 'fullscreen',
+                warnOnUnsupportedContent: true,
+                contextMenu: true,
+                showSwfDownload: false,
+                upgradeToHttps: window.location.protocol === 'https:',
+                maxExecutionDuration: { secs: 15, nanos: 0 },
+                logLevel: 'error',
+                base: null,
+                menu: true,
+                salign: '',
+                scale: 'showAll',
+                quality: 'high',
+                preloader: true,
+            };
+            window.addEventListener('load', (event) => {
+                const ruffle = window.RufflePlayer.newest();
+                const player = ruffle.createPlayer();
+                const container = document.getElementById('ruffle');
+                player.id = 'player';
+                player.style.width = '100%';
+                player.style.height = '100%';
+                container.appendChild(player);
+                player.load('flash_games/interactivebuddy.swf');
+            });
+        </script>
+    </body>
+</html>

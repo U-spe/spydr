@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset='utf-8' />
+	<meta name='renderer' content='webkit' />
+	<meta name='viewport'
+		content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' />
+
+	<meta name='apple-mobile-web-app-capable' content='yes' />
+	<meta name='full-screen' content='true' />
+	<meta name='x5-fullscreen' content='true' />
+	<meta name='360-fullscreen' content='true' />
+	<meta name='laya' screenorientation='landscape' />
+	<meta http-equiv='expires' content='0' />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+	<meta http-equiv='expires' content='0' />
+	<meta http-equiv='Cache-Control' content='no-siteapp' />
+	<title>Super Football Fever / Играть на igroutka.ru</title>
+	<style>
+		@font-face {
+			font-family: "Arial";
+			src: url("rrzzhh.ttf");
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		body {
+			overflow: 'hidden';
+			/* 页面背景颜色 */
+			background: #AD9EE7
+		}
+
+		#unity-container {
+			z-index: 1000;
+			background: #AD9EE7;
+			position: absolute;
+			overflow: hidden;
+		}
+
+		#LoadingView {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			transform: translate(-50%, -50%);
+
+			text-align: center;
+		}
+
+		#top-container {
+			flex: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			/* 距离顶部位置 */
+			margin-top: 10%;
+		}
+
+		#progress {
+			flex: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: absolute;
+			bottom: 10%;
+		}
+
+		div {
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript" src="https://m.igroutka.ru/files/scripts/h5gamessdk.yyggames.com/sdk/YYGGames.js" data-adapter="laya"
+		data-channel="yad"></script><script type="text/javascript" src="version1637913883.js"></script>
+	<!-- <script type="text/javascript" src="libs/htmlfs.js"></script> -->
+<link rel="canonical" href="https://igroutka.ru/onlayn-igry.html" />
+
+<body>
+	<script src="./adapter/Adapter.js"></script>
+	<div id="unity-container">
+		<div id="LoadingView">
+			<div id="top-container">
+				<img id="logo" src="./adapter/logo.png"></img>
+				<!-- //大图距离logo 的位置 margin-top: -->
+				<img id="thumbnail" src="./adapter/banner.jpg"
+                style="margin-top: 20%; border-radius:10px;border:2px solid #FFF; "></img>
+
+
+			</div>
+
+			<div id="progress" style="position:absolute;bottom:5%;width: 100%;">
+				<p id="LoadingText" style="position:absolute;width: 100%; color:#faf6f6;text-align:center;font-family: Arial;
+						font-size:24px;">
+					Loading...
+				</p>
+				<!-- abcdefghijlmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.0123456789;:''"",。<>/?\|-_=+/*`~!@#$%^&*()~！@#￥%……&*（）·《》，。？、：”{}|；’【】、 -->
+				<img id="floot" src="https://m.igroutka.ru/files/scripts/h5gamessdk.yyggames.com/forgame/logo-v2.png" style="padding-top:20%;" width="200px" height="150px"
+					onclick="Adapter.navigate('yad')"></img>
+			</div>
+	
+
+
+		</div>
+	</div>
+
+	<script>
+		console.log = console.info = console.warn = function () { };
+		Adapter.init(750, 1334);
+		// Adapter.hideLoading()
+		const keysToBlockWhenFramed = [32, 33, 34, 35, 36, 37, 38, 39, 40, 44];
+		document.addEventListener('keydown', function (info) {
+			if (window != window.top && keysToBlockWhenFramed.indexOf(info.which) > -1) {
+				info.preventDefault();
+				info.stopPropagation();
+			}
+		}, true)
+		document.addEventListener("mousedown", function () {
+			window.focus();
+		}, true);
+		document.addEventListener("touchstart", function () {
+			window.focus();
+		}, true);
+
+		//游戏加载时关闭触控
+		document.addEventListener('gesturestart', function (event) {
+			event.preventDefault()
+		})
+
+
+		function loadLib(url) {
+			var script = document.createElement("script");
+			script.async = false;
+			script.src = url;
+			document.body.appendChild(script);
+		}
+	</script>
+	<script type="text/javascript" src="index.js"></script>
+
+</body>
+
+</html>

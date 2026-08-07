@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#2d3331" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <title>Paper.io 2</title>
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/png" href="assets/images/icon192.png" />
+    <link rel="stylesheet" href="css/style.css?1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap");
+    </style>
+  </head>
+  <body>
+    <div id="game"></div>
+    <div id="zahvatio_multisize"></div>
+    <div id="bottom">
+      <a href="https://3kh0.github.io" target="_blank">3kh0.github.io</a>
+    </div>
+    <script src="afs2.js"></script>
+    <script type="text/javascript">
+      window.ads = new window.afs.SingleAdManager();
+      window.ads.setProvider(
+        new window.afs.AdProviderGD({
+          gameId: "c5d4966b176246748d6c847103ebfd51",
+          prefix: "paperio_gd",
+          advertisementSettings: {
+            debug: false, // Enable IMA SDK debugging.
+            autoplay: false, // Don't use this because of browser video autoplay restrictions.
+            locale: "en", // Locale used in IMA SDK, this will localize the "Skip ad after x seconds" phrases.
+          },
+        })
+      );
+
+      function HideAds() {
+        //HideAbout();
+        var ad = document.getElementById("zahvatio_multisize");
+        ad.className = "hide";
+
+        var bottom = document.getElementById("bottom");
+        bottom.style.display = "none";
+      }
+      HideAds();
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
+<!--https://html5.gamedistribution.com/rvvASMiM/c5d4966b176246748d6c847103ebfd51/?gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL3BhcGVyaW8yLm9ubGluZS8iLCJwYXJlbnREb21haW4iOiJwYXBlcmlvMi5vbmxpbmUiLCJ0b3BEb21haW4iOiJwYXBlcmlvMi5vbmxpbmUiLCJoYXNJbXByZXNzaW9uIjpmYWxzZSwibG9hZGVyRW5hYmxlZCI6dHJ1ZSwiaG9zdCI6Imh0bWw1LmdhbWVkaXN0cmlidXRpb24uY29tIiwidmVyc2lvbiI6IjEuNS40In0%253D-->

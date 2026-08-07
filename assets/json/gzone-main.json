@@ -1,5 +1,15 @@
 
 [
+   {
+    "Name": "The Pizza Edition",
+    "File": "assets/json/zaapiz.json",
+    "Icon": "ri-restaurant-2-line"
+  }, 
+   {
+    "Name": "Totally Science",
+    "File": "assets/json/science.json",
+    "Icon": "ri-flask-line"
+  },
     {
     "Name": "Hydra",
     "File": "assets/json/hydra.json",
@@ -11,19 +21,9 @@
     "Icon": "ri-fire-line"
   },
   {
-    "Name": "GN-Math",
-    "File": "assets/json/gnmath.json",
-    "Icon": "ri-book-line"
-  },
-  {
     "Name": "Truffled",
     "File": "assets/json/truffled.json",
     "Icon": "ri-ghost-line"
-  },
-  {
-    "Name": "Zaapiz/GN-Math",
-    "File": "assets/json/zaapiz.json",
-    "Icon": "ri-flashlight-line"
   },
   {
     "Name": "SunTree",

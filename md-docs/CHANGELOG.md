@@ -7,10 +7,10 @@ All notable changes to spydr are documented here.
 # v2.7.2 - CURRENT
 
 ## 🛠️ Beginning
-[ ] Starting Scramjet build
-[ ] Starting venomous build with Wispr LLM
-[ ] Finishing Hydra Game Files
-[ ] Adding Pizza Edition (To Replace With Totally Science)
+- [ ] Starting Scramjet build
+- [ ] Starting venomous build with Wispr LLM
+- [ ] Finishing Hydra Game Files
+- [ ] Adding Pizza Edition (To Replace With Totally Science)
 
 
 ---

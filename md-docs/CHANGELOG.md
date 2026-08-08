@@ -19,15 +19,15 @@ All notable changes to spydr are documented here.
 
 ## ✨ Added
 
-[x] Started build of proxy using Corrosion (CHANGED TO SCRAMJET IN v2.7.2)
-- Used Render to host backend for proxy
-- Installed CORS locally to connect to backend
+- [x] Started build of proxy using Corrosion (CHANGED TO SCRAMJET IN v2.7.2)
+- [x] Used Render to host backend for proxy
+- [x] Installed CORS locally to connect to backend
   
 
 ## 🐛 Fixed
 
-- Fixed proxy embed linking
-- Fixed go button (backend problem)
+- [x] Fixed proxy embed linking
+- [x] Fixed go button (backend problem)
 
 
 ---
@@ -36,34 +36,36 @@ All notable changes to spydr are documented here.
 
 ## ✨ Added
 
-- Improved game card organization
-- Added Browser section (previously a VM)
-- Added hotkey support
-- Added tab cloaking options
+- [x] Improved game card organization
+- [x] Added Browser section (previously a VM)
+
 
 ## 🐛 Fixed
 
-- Fixed Login
-- Improved navigation system
-- Fixed JSON-powered game zones
+- [x] Fixed Login
+- [x] Improved navigation system
+- [x] Fixed JSON-powered game zones
+- [x] Added hotkey support
+- [x] Added tab cloaking options
+
 ---
 
 # v2.6.0
 
 ## 🔧 Changed
 
-- Improved overall project structure
-- Updated asset organization
-- Converted static content into JSON systems
-- Improved JavaScript modularity
-- Improved loading performance
+- [x] Improved overall project structure
+- [x] Updated asset organization
+- [x] Converted static content into JSON systems
+- [x] Improved JavaScript modularity
+- [x] Improved loading performance
 
 ## 🐛 Fixed
 
-- Fixed broken asset paths
-- Fixed incorrect JSON fetch locations
-- Fixed menu variable conflicts
-- Fixed game launching issues
+- [x] Fixed broken asset paths
+- [x] Fixed incorrect JSON fetch locations
+- [x] Fixed menu variable conflicts
+- [x] Fixed game launching issues
 
 ---
 
@@ -71,16 +73,16 @@ All notable changes to spydr are documented here.
 
 ## ✨ Added
 
-- Added new spydr branding
-- Added redesigned visual style
-- Added new navigation layout
-- Added improved animations
+- [x] Added new spydr branding
+- [x] Added redesigned visual style
+- [x] Added new navigation layout
+- [x] Added improved animations
 
 ## 🔧 Changed
 
-- Moved away from the previous Neo/JetX structure
-- Rebuilt core components
-- Improved maintainability
+- [x] Moved away from the previous Neo/JetX structure
+- [x] Rebuilt core components
+- [x] Improved maintainability
 
 ---
 
@@ -88,11 +90,11 @@ All notable changes to spydr are documented here.
 
 ## 🚀 Major Update
 
-- Rebuilt spydr from the ground up
-- Introduced new architecture
-- Added modular systems
-- Added improved content management
-- Created a stronger foundation for future updates
+- [x] Rebuilt spydr from the ground up
+- [x] Introduced new architecture
+- [x] Added modular systems
+- [x] Added improved content management
+- [x] Created a stronger foundation for future updates
 
 ---
 
@@ -102,10 +104,10 @@ All notable changes to spydr are documented here.
 
 Older builds included:
 
-- Initial dashboard design
-- Game launcher prototypes
-- Early browser experiments
-- First UI concepts
+- [x] Initial dashboard design
+- [x] Game launcher prototypes
+- [x] Early browser experiments
+- [x] First UI concepts
 
 ---
 
@@ -114,7 +116,7 @@ Older builds included:
 Planned:
 
 - Seasonal Themes
-- Deploy On Surge
+- Deploy On Surge & B-CDN
 - Improved AI integrations
 - Using Scramjet (IN PROGRESS)
 - Offline capabilities (via downloads)

@@ -10,7 +10,11 @@ All notable changes to spydr are documented here.
 - [ ] Starting Scramjet build
 - [ ] Starting venomous build with Wispr LLM
 - [ ] Finishing Hydra Game Files
-- [ ] Adding Pizza Edition (To Replace With Totally Science)
+- [x] Adding Pizza Edition (To Replace With Totally Science)
+
+## 🐛 Fixed
+
+- [x] Fixed JSON (MANY TIMES ITS NOT EVEN FUNNY)
 
 
 ---

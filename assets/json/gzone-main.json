@@ -1,12 +1,12 @@
 
 [
    {
-    "Name": "The Pizza Edition",
+    "Name": "Pizza Edition",
     "File": "assets/json/zaapiz.json",
     "Icon": "ri-restaurant-2-line"
   }, 
    {
-    "Name": "Totally Science",
+    "Name": "Nates Games",
     "File": "assets/json/science.json",
     "Icon": "ri-flask-line"
   },

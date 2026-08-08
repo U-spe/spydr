@@ -1,13 +1,6 @@
 /* =========================
-   SPYDR GAME LOADER (CLEAN ARCHITECTURE)
+   spydr GAME LOADER (CLEAN ARCHITECTURE)
 ========================= */
-
-/* CONSTANTS FOR PLACEHOLDERS */
-const HTML_URL_REPLACEMENT =
-  "https://cdn.jsdelivr.net/gh/freebuisness/html@main";
-
-const COVER_URL_REPLACEMENT =
-  "https://cdn.jsdelivr.net/gh/freebuisness/covers@main";
 
 /* ELEMENTS */
 const dropdownButton = document.getElementById("dropdownButton");
@@ -135,7 +128,7 @@ async function loadGames() {
     );
 
     if (!response.ok) {
-      throw new Error("throw: failed to load this game library");
+      throw new Error("throw: failed to load lib");
     }
 
     const data = await response.json();
@@ -155,10 +148,6 @@ async function loadGames() {
         game.icon ||
         "assets/images/no-image.png";
 
-      if (typeof coverStr === "string") {
-        coverStr = coverStr.replaceAll("{COVER_URL}", COVER_URL_REPLACEMENT);
-      }
-
       // Normalize URL
       let urlStr = 
         game.url ||
@@ -169,10 +158,6 @@ async function loadGames() {
         game.src ||
         game.play ||
         "";
-
-      if (typeof urlStr === "string") {
-        urlStr = urlStr.replaceAll("{HTML_URL}", HTML_URL_REPLACEMENT);
-      }
 
       return {
         id: game.id || (crypto?.randomUUID?.() ?? Math.random().toString(36)),
@@ -189,7 +174,7 @@ async function loadGames() {
   } catch (err) {
     console.error(err);
     if (gameGrid) {
-      gameGrid.innerHTML = `<div style="padding:20px;color:#fff;">throw: failed to load this game</div>`;
+      gameGrid.innerHTML = `<div style="padding:20px;color:#fff;">throw: failed to load games</div>`;
     }
   }
 }
@@ -319,7 +304,7 @@ async function init() {
     );
 
     if (!response.ok) {
-      throw new Error("throw: something is wrong with the main JSON");
+      throw new Error("throw: failed to load lib loader");
     }
 
     gameLists = await response.json();
@@ -333,7 +318,7 @@ async function init() {
   } catch (err) {
     console.error(err);
     if (gameGrid) {
-      gameGrid.innerHTML = `<div style="padding:20px;color:white;">throw: failed to start</div>`;
+      gameGrid.innerHTML = `<div style="padding:20px;color:white;">failed to initialize</div>`;
     }
   }
 }

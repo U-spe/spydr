@@ -7,9 +7,10 @@ All notable changes to spydr are documented here.
 # v2.7.2 - CURRENT
 
 ## 🛠️ Beginning
-- Starting Scramjet build
-- Starting venomous build with Wispr LLM
-- Finishing Hydra Game Files
+[ ] Starting Scramjet build
+[ ] Starting venomous build with Wispr LLM
+[ ] Finishing Hydra Game Files
+[ ] Adding Pizza Edition (To Replace With Totally Science)
 
 
 ---
@@ -18,7 +19,7 @@ All notable changes to spydr are documented here.
 
 ## ✨ Added
 
-- Started build of proxy using Corrosion (CHANGED TO SCRAMJET IN v2.7.2)
+[x] Started build of proxy using Corrosion (CHANGED TO SCRAMJET IN v2.7.2)
 - Used Render to host backend for proxy
 - Installed CORS locally to connect to backend
   

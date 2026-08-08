@@ -135,7 +135,7 @@ async function loadGames() {
     );
 
     if (!response.ok) {
-      throw new Error("Failed loading source JSON");
+      throw new Error("throw: failed to load this game library");
     }
 
     const data = await response.json();
@@ -189,7 +189,7 @@ async function loadGames() {
   } catch (err) {
     console.error(err);
     if (gameGrid) {
-      gameGrid.innerHTML = `<div style="padding:20px;color:#fff;">failed to load games</div>`;
+      gameGrid.innerHTML = `<div style="padding:20px;color:#fff;">throw: failed to load this game</div>`;
     }
   }
 }
@@ -319,7 +319,7 @@ async function init() {
     );
 
     if (!response.ok) {
-      throw new Error("Failed to load the main json zone");
+      throw new Error("throw: something is wrong with the main JSON");
     }
 
     gameLists = await response.json();
@@ -333,7 +333,7 @@ async function init() {
   } catch (err) {
     console.error(err);
     if (gameGrid) {
-      gameGrid.innerHTML = `<div style="padding:20px;color:white;">failed to initialize</div>`;
+      gameGrid.innerHTML = `<div style="padding:20px;color:white;">throw: failed to start</div>`;
     }
   }
 }

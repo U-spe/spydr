@@ -1,0 +1,16 @@
+{
+  "name": "spydr-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "start": "NODE_OPTIONS=--openssl-legacy-provider node server.js"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tomphttp/bare-server-node": "^2.0.6",
+    "express": "^5.2.1"
+  }
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" translate="no">
+<head>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="color-scheme" content="only dark">
+  <meta name="robots" content="max-image-preview:large">
+  <meta name="format-detection" content="telephone=no">
+  <title>404 - The Pizza Edition</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/searchpage.css?v=4">
+  <link rel="preload" href="/css/BebasNeue-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <script defer src="/analytics.js?v=6"></script>
+
+  <style>
+    .notfound-wrap {
+      max-width: 1500px;
+      margin: 56px auto 0;
+      padding: 0 16px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .notfound-card {
+      width: min(100%, 980px);
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      text-align: center;
+      box-shadow: none;
+      overflow: visible;
+      position: relative;
+    }
+
+    .notfound-code {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      font-family: 'Press Start 2P', 'Bebas Neue', sans-serif;
+      font-size: clamp(48px, 10vw, 132px);
+      line-height: 0.98;
+      letter-spacing: 1px;
+      color: #f7f7f7;
+      isolation: isolate;
+      animation: error-glitch-main 6s linear infinite;
+    }
+
+    .notfound-code::before,
+    .notfound-code::after {
+      content: attr(data-text);
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.95;
+      mix-blend-mode: screen;
+    }
+
+    .notfound-code::before {
+      color: #58b8ff;
+      animation: error-glitch-blue 6s linear infinite;
+    }
+
+    .notfound-code::after {
+      color: #fc5849;
+      animation: error-glitch-pink 6s linear infinite;
+    }
+
+    .notfound-text {
+      margin: 14px auto 0;
+      max-width: 760px;
+      font-size: clamp(24px, 2.8vw, 34px);
+      color: #f4f4f4;
+      line-height: 1.15;
+      letter-spacing: 0.4px;
+    }
+
+    @keyframes error-glitch-main {
+      0%, 90% { transform: translate(0, 0) scaleX(1) scaleY(1) skew(0deg); }
+      91% { transform: translate(-1px, 0) scaleX(1.02) scaleY(0.99) skew(-1deg); }
+      92% { transform: translate(3px, -1px) scaleX(1.35) scaleY(0.92) skew(8deg); }
+      93% { transform: translate(-3px, 1px) scaleX(0.82) scaleY(1.06) skew(-8deg); }
+      94% { transform: translate(4px, -2px) scaleX(1.25) scaleY(0.95) skew(6deg); }
+      95% { transform: translate(-4px, 2px) scaleX(0.9) scaleY(1.03) skew(-6deg); }
+      96% { transform: translate(1px, 0) scaleX(1.12) scaleY(0.98) skew(3deg); }
+      97%, 100% { transform: translate(0, 0) scaleX(1) scaleY(1) skew(0deg); }
+    }
+
+    @keyframes error-glitch-blue {
+      0%, 90% { transform: translate(0, 0); clip-path: inset(0 0 0 0); opacity: 0; }
+      91% { opacity: 0.95; }
+      92% { transform: translate(-11px, -2px); clip-path: inset(3% 0 54% 0); }
+      93% { transform: translate(8px, 2px); clip-path: inset(50% 0 8% 0); }
+      94% { transform: translate(-7px, -1px); clip-path: inset(20% 0 32% 0); }
+      95% { transform: translate(5px, 1px); clip-path: inset(62% 0 2% 0); }
+      96% { transform: translate(-3px, 0); clip-path: inset(0 0 0 0); opacity: 0.85; }
+      97%, 100% { transform: translate(0, 0); clip-path: inset(0 0 0 0); opacity: 0; }
+    }
+
+    @keyframes error-glitch-pink {
+      0%, 90% { transform: translate(0, 0); clip-path: inset(0 0 0 0); opacity: 0; }
+      91% { opacity: 0.95; }
+      92% { transform: translate(11px, 2px); clip-path: inset(56% 0 4% 0); }
+      93% { transform: translate(-8px, -2px); clip-path: inset(10% 0 48% 0); }
+      94% { transform: translate(7px, 1px); clip-path: inset(36% 0 30% 0); }
+      95% { transform: translate(-5px, -1px); clip-path: inset(70% 0 1% 0); }
+      96% { transform: translate(3px, 0); clip-path: inset(0 0 0 0); opacity: 0.85; }
+      97%, 100% { transform: translate(0, 0); clip-path: inset(0 0 0 0); opacity: 0; }
+    }
+
+    .notfound-actions {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .notfound-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      border-radius: 999px;
+      min-width: clamp(260px, 52vw, 520px);
+      padding: 12px 34px;
+      border: 0;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .notfound-btn-label {
+      display: inline-block;
+    }
+
+    .notfound-btn-primary {
+      background: #f0d210;
+      color: #1b1b1b;
+    }
+
+    .notfound-btn-primary:hover {
+      background: #f0d210;
+      animation: btn-breathe 0.92s ease-in-out infinite alternate;
+    }
+
+    .notfound-btn-primary:hover .notfound-btn-label {
+      animation: btn-label-breathe 1.19s ease-in-out infinite alternate-reverse;
+    }
+
+    .notfound-btn-ghost {
+      background: #272727;
+      color: #fff;
+      border: 1px solid #444;
+    }
+
+    .notfound-btn-ghost:hover {
+      background: #313131;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 760px) {
+      .notfound-wrap {
+        margin-top: 28px;
+      }
+
+      .notfound-card {
+        padding: 22px 16px;
+      }
+
+      .notfound-code {
+        font-size: clamp(36px, 12vw, 82px);
+        letter-spacing: 0;
+      }
+
+      .notfound-btn {
+        min-width: min(92vw, 420px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .notfound-code {
+        font-size: clamp(28px, 10.2vw, 52px);
+        line-height: 1;
+      }
+
+      .notfound-text {
+        font-size: clamp(18px, 6.2vw, 24px);
+      }
+
+      .notfound-btn {
+        min-width: min(94vw, 360px);
+        font-size: 22px;
+        padding: 11px 24px;
+      }
+    }
+
+    @keyframes btn-breathe {
+      0% { transform: scale(1); }
+      100% { transform: scaleX(1.12) scaleY(1.04); }
+    }
+
+    @keyframes btn-label-breathe {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.04); }
+    }
+  </style>
+<script src="/jsload/loadbar.js"></script>
+</head>
+<body>
+  
+
+  <div class="navbar">
+    <div class="navbar-left">
+      <a href="/">
+        <img src="/images/pizzalogo.png" alt="Site Logo" width="30" height="30">
+      </a>
+      <a href="/">The Pizza Edition</a>
+    </div>
+
+    <div class="navbar-right">
+      <a href="/g/?sort=popular">
+        <img src="/images/whitefire.png" alt="Popular Icon" style="width: 24px; height: auto;">
+        Popular
+      </a>
+
+      <a href="/g">
+        <img src="/images/whitegame.png" alt="Games Icon" style="width: 25px; height: auto;">
+        Games
+      </a>
+
+      <div class="navbar-search" id="navbarSearch">
+        <form action="/search" method="GET">
+          <img src="/images/home/search.png" alt="" class="search-input-icon">
+          <input type="text" name="q" placeholder="Search for games" aria-label="Search for games" autocomplete="off">
+        </form>
+        <div class="search-dropdown">
+          <div class="search-dropdown-grid">
+            <div class="search-left">
+              <div class="search-trending-title">Trending Searches</div>
+              <ul class="search-trending-list">
+                <li data-query="Polytrack"><img src="/images/home/search.png" alt="" class="search-trending-icon"><span>Polytrack</span></li>
+                <li data-query="Ragdoll Archers"><img src="/images/home/search.png" alt="" class="search-trending-icon"><span>Ragdoll Archers</span></li>
+                <li data-query="Escape Road"><img src="/images/home/search.png" alt="" class="search-trending-icon"><span>Escape Road</span></li>
+                <li data-query="Tiny Towers"><img src="/images/home/search.png" alt="" class="search-trending-icon"><span>Tiny Towers</span></li>
+                <li data-query="Stunt Bike Extreme"><img src="/images/home/search.png" alt="" class="search-trending-icon"><span>Stunt Bike Extreme</span></li>
+              </ul>
+            </div>
+            <div class="search-right" id="searchResults"></div>
+          </div>
+        </div>
+      </div>
+
+      <a href="/settings" class="navbar-img-link">
+        <img src="/images/icons8-settings-288.png" alt="Settings Icon" style="width: 29px; height: auto;">
+      </a>
+    </div>
+  </div>
+
+  <main class="template-spacer" aria-label="Not found page">
+    <section class="notfound-wrap">
+      <article class="notfound-card">
+        <h1 class="notfound-code" data-text="ERROR">ERROR</h1>
+        <p class="notfound-text" data-text="Sorry, the page you requested does not exist on this site.">Sorry, the page you requested does not exist on this site.</p>
+
+        <div class="notfound-actions">
+          <a class="notfound-btn notfound-btn-primary" href="/g"><span class="notfound-btn-label">Go to All Games</span></a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-divider"></div>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-brand-head">
+          <img src="/images/pizzalogo.png" alt="The Pizza Edition Logo" class="footer-logo">
+          <a href="/" class="footer-name">The Pizza Edition</a>
+        </div>
+        <p class="footer-quote">Hot picks, fast loading, zero hassle. Jump in instantly.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="footer-title">Pages</div>
+          <ul class="footer-list">
+            <li><a href="/" class="footer-link">Home</a></li>
+            <li><a href="/popular" class="footer-link">Popular</a></li>
+            <li><a href="/g" class="footer-link">All</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-title">Legal</div>
+          <ul class="footer-list">
+            <li><a href="/privacy" class="footer-link">Privacy Policy</a></li>
+            <li><a href="/dmca" class="footer-link">Copyright Policy</a></li>
+            <li><a href="/tos" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-title">Contact</div>
+          <ul class="footer-list">
+            <li>
+              <a href="/cdn-cgi/l/email-protection#8eede1e0faefedfacefee7f4f4efebeae7fae7e1e0a0ede1e3" class="footer-link">
+                <svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4z"></path><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6l8 7 8-7"></path></svg>
+                <span><span class="__cf_email__" data-cfemail="45262a2b3124263105352c3f3f2420212c312c2a2b6b262a28">[email&#160;protected]</span></span>
+              </a>
+            </li>
+            <li><a href="/about" class="footer-link"><svg class="footer-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"></circle><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 11v5"></path><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 7.5v.01"></path></svg><span>About Us</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 The Pizza Edition. All rights reserved.</div>
+  </footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/jsload/searchicons.js?v=18"></script>
+<script src="/jsload/searchlogic.js?v=7"></script>
+
+<script src="/jsload/backtotop.js" defer></script>
+</body>
+</html>

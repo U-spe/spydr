@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spydr // live engine</title>
+    
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/allcode-edit.css">
+    <link rel="stylesheet" href="/css/menu.css">
+</head>
+
+<body data-bg-style="stars">
+
+    <div id="bg-effects-container">
+        <canvas id="stars-canvas"></canvas>
+    </div>
+
+    <div id="global-menu"></div>
+
+    <main class="spydr-workspace">
+        
+        <section class="editor-panel glass-card">
+            <header class="panel-header">
+                <div class="tab-group">
+                    <button class="file-tab active" data-lang="html"><i class="ri-html5-fill"></i> index.html</button>
+                    <button class="file-tab" data-lang="css"><i class="ri-css3-fill"></i> style.css</button>
+                    <button class="file-tab" data-lang="js"><i class="ri-javascript-fill"></i> script.js</button>
+                </div>
+                <div class="action-group">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="auto-run-toggle" checked>
+                        <span class="slider"></span>
+                        <span class="toggle-label">Auto-Run</span>
+                    </label>
+                    <button id="run-btn" class="spydr-btn"><i class="ri-play-fill"></i> Run</button>
+                </div>
+            </header>
+            
+            <div class="editor-body">
+                <textarea id="code-editor" spellcheck="false" placeholder=""></textarea>
+            </div>
+        </section>
+
+        <section class="preview-panel glass-card">
+            <header class="panel-header window-bar">
+                <div class="window-controls">
+                    <span class="dot close"></span>
+                    <span class="dot min"></span>
+                    <span class="dot max"></span>
+                </div>
+                <div class="window-title">sys_output // live execution</div>
+            </header>
+            <div class="preview-body">
+                <iframe id="live-frame" sandbox="allow-scripts allow-same-origin allow-modals"></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="/js/globalmenu.js"></script>
+    <script type="module" src="/js/global.js"></script>
+    <script type="module" src="/js/allcode-edit.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="robots" content="noindex, follow">
+    <title>MR RACER</title>
+
+    <style>
+        @font-face {
+            font-family: "Bebas Neue";
+            src: url("/css/BebasNeue-Regular.woff2") format("woff2");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #002B50;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
+        }
+
+        #gameframe {
+            flex-grow: 1;
+            border: none;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Fullscreen loader */
+        #loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #202f4e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        /* Dot container */
+        #loader .inline-flex {
+            display: flex;
+            gap: 6px;
+        }
+
+        /* Square dots */
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 2px;
+            animation: dotPulse 1.2s infinite ease-in-out;
+        }
+
+        .dot:nth-child(1) { animation-delay: 0s; }
+        .dot:nth-child(2) { animation-delay: 0.15s; }
+        .dot:nth-child(3) { animation-delay: 0.3s; }
+
+        @keyframes dotPulse {
+            0%, 100% {
+                opacity: 0.3;
+                transform: translateY(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-4px);
+            }
+        }
+
+        .fullscreen-game-bar {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 64px;
+            background: rgb(30, 30, 30);
+            border-top: 0;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 8px;
+            padding-left: 12px;
+            box-sizing: border-box;
+            z-index: 99999;
+            align-self: stretch;
+            flex-grow: 0;
+            flex-shrink: 0;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            font-family: Arial, sans-serif;
+            color: rgb(255, 255, 255);
+        }
+
+        .fullscreen-game-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 0;
+        }
+
+        .fullscreen-game-bar-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex: 0 0 auto;
+        }
+
+        .fullscreen-game-bar-title {
+            color: rgb(255, 255, 255);
+            font-size: 1.155rem;
+            font-family: "Bebas Neue", sans-serif;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #minimize-btn {
+            width: 48px;
+            height: 48px;
+            margin: 5px 6px auto;
+            border: 0;
+            background: transparent;
+            color: rgb(255, 255, 255);
+            border-radius: 9999px;
+            position: relative;
+            cursor: pointer;
+            display: block;
+        }
+
+        #minimize-btn:hover {
+            background: #2a2a2a;
+        }
+
+        #minimize-btn:active {
+            background: #1f1f1f;
+        }
+
+        #minimize-btn .size-6 {
+            width: 24px;
+            height: 24px;
+            color: rgb(255, 255, 255);
+        }
+
+        #minimize-btn .tooltip-wrap {
+            position: absolute;
+            left: 50%;
+            bottom: 8px;
+            transform: translateX(-50%);
+            font-size: 11.5px;
+            font-weight: 700;
+            pointer-events: none;
+        }
+
+        #minimize-btn .tooltip-wrap span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateX(-50%);
+            background: #f0d210;
+            color: #000;
+            line-height: 1rem;
+            padding: 0 6px;
+            border-radius: 9999px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.15s ease;
+            font-size: 11.5px;
+            font-weight: 700;
+        }
+
+        #minimize-btn:hover .tooltip-wrap span {
+            opacity: 1;
+        }
+
+        body.is-game-fullscreen {
+            padding-bottom: 64px;
+        }
+
+        body.is-game-fullscreen .fullscreen-game-bar {
+            display: flex;
+        }
+
+        body.is-game-fullscreen #gameframe {
+            height: 100%;
+            min-height: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="exitFullscreenIcon" viewBox="0 0 24 24">
+            <path d="M11 13V19H7V17H5V13H11ZM19 17H17V19H13V13H19V17ZM11 11H5V7H7V5H11V11ZM17 7H19V11H13V5H17V7Z" fill="currentColor"/>
+        </symbol>
+    </svg>
+
+    <div id="loader">
+        <div class="inline-flex items-center text-2xl">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <iframe
+        id="gameframe"
+        src="https://games.pizzaedition.com/mrracer/1/index.html"
+        allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad; keyboard-map *; xr-spatial-tracking; clipboard-write; web-share; accelerometer; magnetometer; gyroscope; microphone *"
+        scrolling="no">
+    </iframe>
+
+    <div class="fullscreen-game-bar" id="fullscreen-game-bar">
+        <div class="fullscreen-game-bar-left">
+            <picture>
+                <source srcset="/avifgames/mrracer.avif" type="image/avif">
+                <img class="fullscreen-game-bar-icon" src="/apnggames/mrracer.png" alt="MR RACER icon">
+            </picture>
+            <div class="fullscreen-game-bar-title">MR RACER</div>
+        </div>
+        <button type="button" id="minimize-btn">
+            <div style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;">
+                <svg class="size-6" xmlns="http://www.w3.org/2000/svg">
+                    <use href="#exitFullscreenIcon"></use>
+                </svg>
+            </div>
+            <div class="tooltip-wrap">
+                <span>Minimize</span>
+            </div>
+        </button>
+    </div>
+
+    <script>
+        const iframe = document.getElementById('gameframe');
+        const loader = document.getElementById('loader');
+
+        function hideLoadingScreen() {
+            if (loader) {
+                loader.remove();
+            }
+        }
+
+        if (iframe) {
+            iframe.addEventListener('load', hideLoadingScreen);
+
+            setTimeout(() => {
+                hideLoadingScreen();
+            }, 5000);
+        } else {
+            setTimeout(() => {
+                hideLoadingScreen();
+            }, 2000);
+        }
+
+        (function () {
+            function hasFullscreenElement(doc) {
+                return Boolean(
+                    doc.fullscreenElement ||
+                    doc.webkitFullscreenElement ||
+                    doc.mozFullScreenElement ||
+                    doc.msFullscreenElement
+                );
+            }
+
+            function isFrameFullscreenInTop() {
+                try {
+                    if (!window.top || !window.frameElement) return false;
+                    const topDoc = window.top.document;
+                    const fullscreenHost =
+                        topDoc.fullscreenElement ||
+                        topDoc.webkitFullscreenElement ||
+                        topDoc.mozFullScreenElement ||
+                        topDoc.msFullscreenElement;
+
+                    if (!fullscreenHost) return false;
+
+                    return (
+                        fullscreenHost === window.frameElement ||
+                        (typeof fullscreenHost.contains === "function" && fullscreenHost.contains(window.frameElement))
+                    );
+                } catch (_) {
+                    return false;
+                }
+            }
+
+            function isGameFullscreen() {
+                return hasFullscreenElement(document) || isFrameFullscreenInTop();
+            }
+
+            function syncFullscreenClass() {
+                document.body.classList.toggle("is-game-fullscreen", isGameFullscreen());
+            }
+
+            async function exitFullscreenAnyContext() {
+                if (hasFullscreenElement(document)) {
+                    if (document.exitFullscreen) return document.exitFullscreen();
+                    if (document.webkitExitFullscreen) return document.webkitExitFullscreen();
+                    if (document.mozCancelFullScreen) return document.mozCancelFullScreen();
+                    if (document.msExitFullscreen) return document.msExitFullscreen();
+                }
+
+                try {
+                    if (window.top && window.frameElement) {
+                        const topDoc = window.top.document;
+                        const fullscreenHost =
+                            topDoc.fullscreenElement ||
+                            topDoc.webkitFullscreenElement ||
+                            topDoc.mozFullScreenElement ||
+                            topDoc.msFullscreenElement;
+                        const ownsFrame =
+                            fullscreenHost &&
+                            (fullscreenHost === window.frameElement ||
+                                (typeof fullscreenHost.contains === "function" && fullscreenHost.contains(window.frameElement)));
+
+                        if (ownsFrame && topDoc.exitFullscreen) {
+                            return topDoc.exitFullscreen();
+                        }
+                        if (ownsFrame && topDoc.webkitExitFullscreen) {
+                            return topDoc.webkitExitFullscreen();
+                        }
+                        if (ownsFrame && topDoc.mozCancelFullScreen) {
+                            return topDoc.mozCancelFullScreen();
+                        }
+                        if (ownsFrame && topDoc.msExitFullscreen) {
+                            return topDoc.msExitFullscreen();
+                        }
+                    }
+                } catch (_) {}
+            }
+
+            const minimizeBtn = document.getElementById("minimize-btn");
+            if (minimizeBtn) {
+                minimizeBtn.addEventListener("click", async function () {
+                    try {
+                        await exitFullscreenAnyContext();
+                    } catch (_) {}
+                    syncFullscreenClass();
+                });
+            }
+
+            document.addEventListener("fullscreenchange", syncFullscreenClass);
+            document.addEventListener("webkitfullscreenchange", syncFullscreenClass);
+            document.addEventListener("mozfullscreenchange", syncFullscreenClass);
+            document.addEventListener("MSFullscreenChange", syncFullscreenClass);
+
+            try {
+                if (window.top && window.top.document) {
+                    window.top.document.addEventListener("fullscreenchange", syncFullscreenClass);
+                    window.top.document.addEventListener("webkitfullscreenchange", syncFullscreenClass);
+                    window.top.document.addEventListener("mozfullscreenchange", syncFullscreenClass);
+                    window.top.document.addEventListener("MSFullscreenChange", syncFullscreenClass);
+                }
+            } catch (_) {}
+
+            syncFullscreenClass();
+        })();
+    </script>
+
+<script src="/jsload/backtotop.js" defer></script>
+</body>
+</html>

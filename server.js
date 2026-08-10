@@ -1,34 +1,78 @@
 const express = require("express");
-const Corrosion = require("./Corrosion/lib/server");
+const cors = require("cors");
+const http = require("http");
+
+const { createBareServer } = require("@nebula-services/bare-server-node");
+const { scramjetPath } = require("@mercuryworkshop/scramjet/path");
 
 const app = express();
 
-const proxy = new Corrosion({
-    prefix: "/service/",
-    codec: "xor",
+app.use(
+  cors({
+    origin: "https://spydr-delta.vercel.app",
+  })
+);
+
+// Serve Scramjet browser assets
+app.use("/scramjet", express.static(scramjetPath));
+
+// Create the Bare server used by Scramjet
+const bare = createBareServer("/bare/");
+
+// Health check
+app.get("/", (req, res) => {
+  res.send("Spydr Scramjet backend online");
 });
 
-proxy.bundleScripts();
+app.get("/health", (req, res) => {
+  res.json({
+    status: "ok",
+    scramjet: true,
+    bare: true,
+  });
+});
 
-app.use((req, res, next) => {
-    if (req.url.startsWith(proxy.prefix)) {
-        return proxy.request(req, res);
+// Create HTTP server
+const server = http.createServer(async (req, res) => {
+  try {
+    // Let Bare handle Scramjet proxy requests
+    if (bare.shouldRoute(req)) {
+      await bare.routeRequest(req, res);
+      return;
     }
 
-    next();
+    // Everything else goes through Express
+    app(req, res);
+  } catch (error) {
+    console.error("Request error:", error);
+
+    if (!res.headersSent) {
+      res.statusCode = 500;
+      res.end("Internal server error");
+    }
+  }
 });
 
-app.get("/service/index.js", (req, res) => {
-    res.type("application/javascript");
-    res.send(proxy.script);
-});
+// Handle WebSocket upgrades required by Bare
+server.on("upgrade", async (req, socket, head) => {
+  try {
+    if (bare.shouldRoute(req)) {
+      await bare.routeUpgrade(req, socket, head);
+      return;
+    }
 
-app.get("/", (req, res) => {
-    res.send("Spydr Corrosion backend online");
+    socket.destroy();
+  } catch (error) {
+    console.error("Upgrade error:", error);
+    socket.destroy();
+  }
 });
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-    console.log(`Spydr running on ${PORT}`);
+server.listen(PORT, "0.0.0.0", () => {
+  console.log(`Spydr Scramjet backend running on port ${PORT}`);
+  console.log(`Scramjet assets: ${scramjetPath}`);
 });
+
+

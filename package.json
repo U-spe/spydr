@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_OPTIONS=--openssl-legacy-provider node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tomphttp/bare-server-node": "^2.0.6",
-    "cors": "^2.8.6",
+    "@mercuryworkshop/scramjet": "^1.1.0",
+    "@nebula-services/bare-server-node": "^2.0.4",
     "express": "^5.2.1"
   }
 }

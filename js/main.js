@@ -28,31 +28,32 @@ updateClock();
 // CONST TEXT
 // =====================
 const lines = [
-  "system says suck my dih",
+  "system says suck my di-",
   "this one didnt load properly",
   "render engine online",
   "at this point, i dont even know",
   "*moans* UwU",
   "look whos back...",
-  "bomboclat wahllai ✌️🥀😭",
+  "bomboclat wahllai 😭",
   "i know you diddint do your math homework",
-  "yo do your work bro",
+  "will you fuck me???",
   "damn goguardian again",
   "damn securly again",
-  "green fn",
+  "whats crazy is this RATIO 😭",
   "slow ahh school wifi",
-  "PLEASE cover your camera, your face is ugly (jk)",
+  "PLEASE cover your camera",
   "so now, jetx is gone so...",
-      "sony",
-      "sonny d",
-      "sonion ring",
-      "folk valley✌️",
+      "so your gay, right?",
+      "just admit your gay already",
+      "food dont call, but onion rings",
+      "folk valley ✌️",
       "huss valley ✌️",
       "what are you still doing here???",
-      "good boy",
-      "good girl",
-      "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
-];
+      "i found your name here (https://bit.ly/4wxJiKQ)",
+      "whos MY good little femboy?",
+      "https://bit.ly/grritb26",
+  "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
+]
 
 const constText = document.querySelector(".const");
 

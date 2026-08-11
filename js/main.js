@@ -24,7 +24,7 @@ setInterval(updateClock, 1000);
 updateClock();
 
 
-T// =====================
+// =====================
 // CONST TEXT
 // =====================
 const lines = [

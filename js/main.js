@@ -24,7 +24,7 @@ setInterval(updateClock, 1000);
 updateClock();
 
 
-// =====================
+T// =====================
 // CONST TEXT
 // =====================
 const lines = [
@@ -43,24 +43,32 @@ const lines = [
   "slow ahh school wifi",
   "PLEASE cover your camera",
   "so now, jetx is gone so...",
-      "so your gay, right?",
-      "just admit your gay already",
-      "food dont call, but onion rings",
-      "folk valley ✌️",
-      "huss valley ✌️",
-      "what are you still doing here???",
-      "i found your name here (https://bit.ly/4wxJiKQ)",
-      "whos MY good little femboy?",
-      "https://bit.ly/grritb26",
-  "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
-]
+  "so your gay, right?",
+  "just admit your gay already",
+  "food dont call, but onion rings",
+  "folk valley ✌️",
+  "huss valley ✌️",
+   "what are you still doing here???",
+  "i found your name here (https://bit.ly/4wxJiKQ)",
+  "whos MY good little femboy?",
+  "https://bit.ly/grritb26",
+"AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
+];
 
 const constText = document.querySelector(".const");
 
+let lineIndex = 0;
+
 setInterval(() => {
   if (!constText) return;
-  constText.textContent =
-    lines[Math.floor(Math.random() * lines.length)];
+
+  constText.textContent = lines[lineIndex];
+
+  lineIndex++;
+
+  if (lineIndex >= lines.length) {
+    lineIndex = 0;
+  }
 }, 2400);
 
 
@@ -85,7 +93,7 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       if (loading) loading.style.display = "none";
       if (app) app.style.opacity = "1";
-    }, 600);
+    }, 1000);
   }
 
   if (video) video.onended = finish;

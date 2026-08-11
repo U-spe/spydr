@@ -36,7 +36,7 @@ const lines = [
   "look whos back...",
   "bomboclat wahllai 😭",
   "i know you diddint do your math homework",
-  "will you fuck me???",
+  "AH~! FUCK ME HARDER DADDY~~",
   "damn goguardian again",
   "damn securly again",
   "whats crazy is this RATIO 😭",

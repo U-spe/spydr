@@ -33,4 +33,6 @@ some random dude from Solar, made by web creation studios
 
 
 
-# AYYYY WERE BACK! (tbh i diddint do shi for the prxy) but now, we are gonna get some games from Totally Science + The Pizza Edition!
+# what??
+
+bye totally science, ur too complicated.

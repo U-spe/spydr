@@ -33,6 +33,6 @@ some random dude from Solar, made by web creation studios
 
 
 
-# what??
+# back??
 
-bye totally science, ur too complicated.
+i had 2 do 2 more projects on my company. now, I can work on spydr for a lil

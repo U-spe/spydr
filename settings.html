@@ -52,25 +52,14 @@
 
     <!-- =========================================================
          GLOBAL BACKGROUND FX
-         
-         The FX system can now switch between:
-         none
-         stars
-         fog
-         gradient
-         theme
     ========================================================== -->
 
     <div id="bg-effects-container">
 
-        <!-- Star Particles -->
         <canvas id="stars-canvas"></canvas>
 
-        <!-- Fog -->
         <div id="fog-overlay"></div>
 
-        <!-- Theme FX
-             /js/global.themes.js injects particles here -->
         <div id="theme-fx-container"></div>
 
     </div>
@@ -103,60 +92,60 @@
 
             <nav class="sidebar-nav">
 
-                <!-- General -->
                 <button
                     class="nav-btn active"
                     data-target="general"
+                    type="button"
                 >
                     <span class="btn-icon">⚙_</span>
                     General Settings/Quick Settings
                 </button>
 
 
-                <!-- Background FX -->
                 <button
                     class="nav-btn"
                     data-target="background-fx"
+                    type="button"
                 >
                     <span class="btn-icon">✦_</span>
                     Background FX
                 </button>
 
 
-                <!-- Themes -->
                 <button
                     class="nav-btn"
                     data-target="themes"
+                    type="button"
                 >
                     <span class="btn-icon">🎨_</span>
                     Themes and Colors
                 </button>
 
 
-                <!-- Hotkeys -->
                 <button
                     class="nav-btn"
                     data-target="hotkeys"
+                    type="button"
                 >
                     <span class="btn-icon">⌨_</span>
                     Hotkeys
                 </button>
 
 
-                <!-- Cloaking -->
                 <button
                     class="nav-btn"
                     data-target="cloaking"
+                    type="button"
                 >
                     <span class="btn-icon">🕶_</span>
                     Cloaking Tabs & A:B
                 </button>
 
 
-                <!-- About -->
                 <button
                     class="nav-btn"
                     data-target="about"
+                    type="button"
                 >
                     <span class="btn-icon">ℹ_</span>
                     About & Changelog
@@ -267,31 +256,27 @@
                             Background FX Variant
                         </h3>
 
+
                         <div class="select-wrapper">
 
                             <select id="bg-fx-variant">
 
-                                <!-- Normal Spydr -->
                                 <option value="none">
                                     Regular Spydr
                                 </option>
 
-                                <!-- Star particles -->
                                 <option value="stars">
                                     Star Particles
                                 </option>
 
-                                <!-- Fog -->
                                 <option value="fog">
                                     Fog
                                 </option>
 
-                                <!-- Gradient -->
                                 <option value="gradient">
                                     Gradient Colors
                                 </option>
 
-                                <!-- Theme-specific particles -->
                                 <option value="theme">
                                     Theme FX
                                 </option>
@@ -345,11 +330,7 @@
 
                         <div
                             class="radio-group"
-                            style="
-                                display: flex;
-                                flex-wrap: wrap;
-                                gap: 10px;
-                            "
+                            id="theme-selector"
                         >
 
                             <!-- Christmas -->
@@ -436,7 +417,6 @@
                                     type="radio"
                                     name="ui-theme"
                                     value="neegy"
-                                    checked
                                 >
                                 <span class="tile-label">
                                     Neegy
@@ -482,6 +462,24 @@
                                 </span>
                             </label>
 
+                        </div>
+
+
+                        <!-- Current Theme -->
+                        <div
+                            id="current-theme-display"
+                            class="theme-status"
+                        >
+                            <span class="theme-status-label">
+                                ACTIVE THEME:
+                            </span>
+
+                            <span
+                                id="current-theme-name"
+                                class="theme-status-value"
+                            >
+                                Neegy
+                            </span>
                         </div>
 
                     </div>
@@ -537,6 +535,7 @@
                             <button
                                 id="panic-key-btn"
                                 class="hotkey-btn"
+                                type="button"
                             >
                                 Click to bind
                             </button>
@@ -567,6 +566,7 @@
                             <button
                                 id="boss-key-btn"
                                 class="hotkey-btn"
+                                type="button"
                             >
                                 Click to bind
                             </button>
@@ -597,6 +597,7 @@
                             <button
                                 id="dev-mode-key-btn"
                                 class="hotkey-btn"
+                                type="button"
                             >
                                 Click to bind
                             </button>
@@ -627,6 +628,7 @@
                             <button
                                 id="quick-settings-key-btn"
                                 class="hotkey-btn"
+                                type="button"
                             >
                                 Click to bind
                             </button>
@@ -701,6 +703,7 @@
                         <h3>
                             Disguise Target Identity
                         </h3>
+
 
                         <div class="select-wrapper">
 
@@ -878,7 +881,7 @@
 
 
     <!-- =========================================================
-         SCRIPTS
+         CORE SCRIPTS
     ========================================================== -->
 
     <script
@@ -892,3 +895,5 @@
 
 </body>
 </html>
+
+

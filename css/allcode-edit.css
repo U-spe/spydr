@@ -22,7 +22,7 @@ body {
     color: var(--text-primary);
     font-family: var(--font-heading);
     min-height: 100vh;
-    overflow: hidden; /* Prevent page scroll, internal scrolling only */
+    overflow: hidden;
 }
 
 /* Background Fix */
@@ -33,13 +33,13 @@ body {
 #stars-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 #global-menu { position: relative; z-index: 9999; }
 
-/* Workspace Layout (OpenProcessing Style Split) */
+/* Workspace Layout */
 .spydr-workspace {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     height: 100vh;
-    padding: 5rem 2rem 2rem 2rem; /* Top padding accommodates global menu */
+    padding: 5rem 2rem 2rem 2rem;
     max-width: 1800px;
     margin: 0 auto;
     position: relative;
@@ -67,23 +67,35 @@ body {
     padding: 0.75rem 1.25rem;
     background: rgba(0, 0, 0, 0.4);
     border-bottom: 1px solid var(--border-color);
+    gap: 1rem;
 }
 
-.tab-group { display: flex; gap: 0.5rem; }
+.tab-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow-x: auto;
+    max-width: 70%;
+}
+.tab-container::-webkit-scrollbar { height: 4px; }
+.tab-container::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 4px; }
+
+.tab-group { display: flex; gap: 0.5rem; align-items: center; }
 
 .file-tab {
     background: transparent;
-    border: none;
+    border: 1px solid transparent;
     color: var(--text-secondary);
     font-family: var(--font-code);
     font-size: 0.85rem;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 8px;
     cursor: pointer;
     transition: var(--transition);
     display: flex;
     align-items: center;
     gap: 0.4rem;
+    white-space: nowrap;
 }
 
 .file-tab:hover { background: rgba(255,255,255,0.05); color: var(--text-primary); }
@@ -96,9 +108,40 @@ body {
 }
 .file-tab[data-lang="css"].active { color: #00ffcc; border-color: rgba(0, 255, 204, 0.3); background: rgba(0, 255, 204, 0.1); }
 .file-tab[data-lang="js"].active { color: #ffb86c; border-color: rgba(255, 184, 108, 0.3); background: rgba(255, 184, 108, 0.1); }
+.file-tab[data-lang="ts"].active { color: #3178c6; border-color: rgba(49, 120, 198, 0.3); background: rgba(49, 120, 198, 0.1); }
+.file-tab[data-lang="rs"].active { color: #dea584; border-color: rgba(222, 165, 132, 0.3); background: rgba(222, 165, 132, 0.1); }
+.file-tab[data-lang="sh"].active { color: #4ebd35; border-color: rgba(78, 189, 53, 0.3); background: rgba(78, 189, 53, 0.1); }
+
+.tab-close {
+    font-size: 0.75rem;
+    margin-left: 0.3rem;
+    opacity: 0.5;
+    transition: var(--transition);
+}
+.tab-close:hover { opacity: 1; color: #ff5f56; }
+
+.add-tab-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+.add-tab-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+}
 
 /* Controls */
-.action-group { display: flex; align-items: center; gap: 1.5rem; }
+.action-group { display: flex; align-items: center; gap: 1.5rem; flex-shrink: 0; }
 
 .spydr-btn {
     background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
@@ -137,12 +180,11 @@ body {
 }
 #code-editor::placeholder { color: #475569; }
 
-/* Scrollbars for Editor */
 #code-editor::-webkit-scrollbar { width: 10px; height: 10px; }
 #code-editor::-webkit-scrollbar-track { background: var(--code-bg); }
 #code-editor::-webkit-scrollbar-thumb { background: #333; border-radius: 5px; }
 
-/* Preview Window Controls (Mac OS style dots) */
+/* Preview Window Controls */
 .window-controls { display: flex; gap: 6px; }
 .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
 .dot.close { background: #ff5f56; }
@@ -160,7 +202,7 @@ body {
 .preview-body { flex: 1; background: #ffffff; }
 #live-frame { width: 100%; height: 100%; border: none; background: white; }
 
-/* Custom Toggle Switch for Auto-run */
+/* Custom Toggle Switch */
 .toggle-switch { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; }
 .toggle-switch input { display: none; }
 .slider {
@@ -176,7 +218,6 @@ body {
 .toggle-switch input:checked + .slider::before { transform: translateX(16px); }
 .toggle-label { font-family: var(--font-code); font-size: 0.8rem; color: var(--text-secondary); }
 
-/* Responsive Grid */
 @media (max-width: 1024px) {
     .spydr-workspace { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; padding-top: 4rem; }
 }

@@ -4,89 +4,80 @@
       "name": "Christmas",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/christmas-tree.png",
-        "/assets/images/themes/present.png"
+        "christmas-tree",
+        "present"
       ]
     },
-
     "halloween": {
       "name": "Halloween",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/candy.png",
-        "/assets/images/themes/jack-o-lantern.png"
+        "candy",
+        "jack-o-lantern"
       ]
     },
-
     "fourth-of-july": {
       "name": "4th Of July",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/firework.png",
-        "/assets/images/themes/american-flag.png"
+        "firework",
+        "american-flag"
       ]
     },
-
     "valentines": {
       "name": "Valentines",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/heart.png",
-        "/assets/images/themes/rose.png"
+        "heart",
+        "rose"
       ]
     },
-
     "easter": {
       "name": "Easter",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/chocolate-bunny.png",
-        "/assets/images/themes/easter-egg.png"
+        "chocolate-bunny",
+        "easter-egg"
       ]
     },
-
     "sunny-day": {
       "name": "Sunny Day",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/sunshine.png",
-        "/assets/images/themes/rainbow.png"
+        "sunshine",
+        "rainbow"
       ]
     },
-
     "neegy": {
       "name": "Neegy",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/money.png",
-        "/assets/images/themes/gold.png"
+        "money",
+        "gold"
       ]
     },
-
     "flowstate": {
       "name": "Flowstate",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/retro-glasses.png",
-        "/assets/images/themes/glow-stick.png"
+        "retro-glasses",
+        "glow-stick"
       ]
     },
-
     "ducky": {
       "name": "Ducky",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/rubber-duck.png",
-        "/assets/images/themes/baby-chick.png"
+        "rubber-duck",
+        "baby-chick"
       ]
     },
-
     "coffee-shop": {
       "name": "Coffee Shop",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/coffee.png",
-        "/assets/images/themes/pastry.png"
+        "coffee",
+        "pastry"
       ]
     }
   }

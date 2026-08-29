@@ -1,93 +1,93 @@
-{
-  "themeFX": {
-    "christmas": {
-      "name": "Christmas",
-      "script": "/js/themes/christmas.js",
-      "assets": [
-        "christmas-tree",
-        "present"
-      ]
+const themeFX = {
+    christmas: {
+        name: "Christmas",
+        script: "/js/themes/christmas.js",
+        assets: [
+            "/assets/images/themes/christmas/tree.png",
+            "/assets/images/themes/christmas/present.png"
+        ]
     },
 
-    "halloween": {
-      "name": "Halloween",
-      "script": "/js/themes/halloween.js",
-      "assets": [
-        "candy",
-        "jack-o-lantern"
-      ]
+    halloween: {
+        name: "Halloween",
+        script: "/js/themes/halloween.js",
+        assets: [
+            "/assets/images/themes/halloween/candy.png",
+            "/assets/images/themes/halloween/jack-o-lantern.png"
+        ]
     },
 
     "fourth-of-july": {
-      "name": "4th Of July",
-      "script": "/js/themes/fourth-of-july.js",
-      "assets": [
-        "firework",
-        "american-flag"
-      ]
+        name: "4th Of July",
+        script: "/js/themes/fourth-of-july.js",
+        assets: [
+            "/assets/images/themes/fourth-of-july/firework.png",
+            "/assets/images/themes/fourth-of-july/american-flag.png"
+        ]
     },
 
-    "valentines": {
-      "name": "Valentines",
-      "script": "/js/themes/valentines.js",
-      "assets": [
-        "heart",
-        "rose"
-      ]
+    valentines: {
+        name: "Valentines",
+        script: "/js/themes/valentines.js",
+        assets: [
+            "/assets/images/themes/valentines/heart.png",
+            "/assets/images/themes/valentines/rose.png"
+        ]
     },
 
-    "easter": {
-      "name": "Easter",
-      "script": "/js/themes/easter.js",
-      "assets": [
-        "chocolate-bunny",
-        "easter-egg"
-      ]
+    easter: {
+        name: "Easter",
+        script: "/js/themes/easter.js",
+        assets: [
+            "/assets/images/themes/easter/chocolate-bunny.png",
+            "/assets/images/themes/easter/easter-egg.png"
+        ]
     },
 
     "sunny-day": {
-      "name": "Sunny Day",
-      "script": "/js/themes/sunny-day.js",
-      "assets": [
-        "sunshine",
-        "rainbow"
-      ]
+        name: "Sunny Day",
+        script: "/js/themes/sunny-day.js",
+        assets: [
+            "/assets/images/themes/sunny-day/sunshine.png",
+            "/assets/images/themes/sunny-day/rainbow.png"
+        ]
     },
 
-    "neegy": {
-      "name": "Neegy",
-      "script": "/js/themes/neegy.js",
-      "assets": [
-        "money",
-        "gold"
-      ]
+    neegy: {
+        name: "Neegy",
+        script: "/js/themes/neegy.js",
+        assets: [
+            "/assets/images/themes/neegy/money.png",
+            "/assets/images/themes/neegy/gold.png"
+        ]
     },
 
-    "flowstate": {
-      "name": "Flowstate",
-      "script": "/js/themes/flowstate.js",
-      "assets": [
-        "retro-glasses",
-        "glow-stick"
-      ]
+    flowstate: {
+        name: "Flowstate",
+        script: "/js/themes/flowstate.js",
+        assets: [
+            "/assets/images/themes/flowstate/retro-glasses.png",
+            "/assets/images/themes/flowstate/glow-stick.png"
+        ]
     },
 
-    "ducky": {
-      "name": "Ducky",
-      "script": "/js/themes/ducky.js",
-      "assets": [
-        "rubber-duck",
-        "baby-chick"
-      ]
+    ducky: {
+        name: "Ducky",
+        script: "/js/themes/ducky.js",
+        assets: [
+            "/assets/images/themes/ducky/rubber-duck.png",
+            "/assets/images/themes/ducky/baby-chick.png"
+        ]
     },
 
     "coffee-shop": {
-      "name": "Coffee Shop",
-      "script": "/js/themes/coffee-shop.js",
-      "assets": [
-        "coffee",
-        "pastry"
-      ]
+        name: "Coffee Shop",
+        script: "/js/themes/coffee-shop.js",
+        assets: [
+            "/assets/images/themes/coffee-shop/coffee.png",
+            "/assets/images/themes/coffee-shop/pastry.png"
+        ]
     }
-  }
-}
+};
+
+export default themeFX;

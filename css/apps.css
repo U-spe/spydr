@@ -1,387 +1,958 @@
-/* css/apps.css */
+/* =========================================================
+   SPYDR // APPS CSS
+   Theme-Aware Application Dashboard
+   ========================================================= */
+
+
+/* =========================================================
+   THEME VARIABLE MAPPING
+   Uses the global theme system from main.css
+   ========================================================= */
+
 :root {
-    --bg-primary: #090909;
-    --bg-secondary: #111111;
-    --card-bg: rgba(23, 23, 23, 0.72);
-    --border-color: rgba(255, 255, 255, 0.08);
-    --accent-blue: #3f5efb;
-    --accent-purple: #7c3aed;
-    --text-primary: #ffffff;
-    --text-secondary: #bdbdbd;
-    
+    --bg-primary: var(--theme-background);
+    --bg-secondary: var(--theme-surface);
+
+    --card-bg: color-mix(
+        in srgb,
+        var(--theme-surface) 82%,
+        transparent
+    );
+
+    --border-color: color-mix(
+        in srgb,
+        var(--theme-border) 25%,
+        transparent
+    );
+
+    --accent-blue: var(--theme-primary);
+    --accent-purple: var(--theme-secondary);
+
+    --text-primary: var(--theme-text);
+    --text-secondary: var(--theme-muted);
+
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'JetBrains Mono', monospace;
-    
+
     --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-* {
-    margin: 0;
-    padding: 0;
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+.spydr-app-wrapper *,
+.spydr-app-wrapper *::before,
+.spydr-app-wrapper *::after {
     box-sizing: border-box;
 }
 
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
 body {
-    background-color: var(--bg-primary);
-    background-image: 
-        radial-gradient(circle at 10% 20%, rgba(124, 58, 237, 0.04), transparent 30%),
-        radial-gradient(circle at 90% 80%, rgba(63, 94, 251, 0.04), transparent 30%);
-    color: var(--text-primary);
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            color-mix(
+                in srgb,
+                var(--theme-primary) 8%,
+                transparent
+            ),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            color-mix(
+                in srgb,
+                var(--theme-primary) 7%,
+                transparent
+            ),
+            transparent 35%
+        ),
+        var(--theme-background);
+
+    color: var(--theme-text);
+
     font-family: var(--font-body);
+
     min-height: 100vh;
+
     overflow-x: hidden;
+
     line-height: 1.5;
 }
 
-/* FIX: Force the background container behind everything */
+
+/* =========================================================
+   BACKGROUND FX CONTAINER
+   ========================================================= */
+
 #bg-effects-container {
     position: fixed;
-    top: 0;
-    left: 0;
+
+    inset: 0;
+
     width: 100vw;
     height: 100vh;
-    z-index: -1;          /* Pushes it firmly behind all content */
-    pointer-events: none; /* Ensures mouse clicks pass through to the buttons */
+
+    z-index: -10;
+
+    pointer-events: none;
+
     overflow: hidden;
 }
 
-/* Ensure the canvas/fog inside the container fills the screen */
-#stars-canvas, 
+
+/* Make the background FX elements fill the viewport */
+
+#stars-canvas,
 #fog-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
+
+    inset: 0;
+
     width: 100%;
     height: 100%;
 }
 
-/* MASTER WRAPPER FOR EXTENSIBLE GLOBAL SIDEBARS/MENUS */
+
+/* =========================================================
+   MASTER APP WRAPPER
+   ========================================================= */
+
 .spydr-app-wrapper {
     position: relative;
+
     width: 100%;
+
     min-height: 100vh;
+
     z-index: 1;
+
     display: flex;
+
     flex-direction: column;
 }
 
-/* FIX: ENFORCE HAMBURGER AND MENU WRAPPERS TO RENDER HIGHER THAN MAIN INTERFACE */
+
+/* =========================================================
+   GLOBAL MENU
+   ========================================================= */
+
 #global-menu {
     position: relative;
+
     z-index: 9999;
 }
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
 
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-    background: var(--bg-primary);
+    background: var(--theme-background);
 }
+
 ::-webkit-scrollbar-thumb {
-    background: var(--border-color);
+    background:
+        color-mix(
+            in srgb,
+            var(--theme-primary) 25%,
+            var(--theme-surface)
+        );
+
     border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255,255,255,0.2);
+    background:
+        color-mix(
+            in srgb,
+            var(--theme-primary) 45%,
+            var(--theme-surface)
+        );
 }
+
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
 
 .spydr-dashboard {
     max-width: 1600px;
+
     width: 100%;
+
     margin: 0 auto;
+
     padding: 3rem 4rem;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 3rem;
 }
+
+
+/* =========================================================
+   DASHBOARD HEADER
+   ========================================================= */
 
 .dashboard-header {
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     gap: 2rem;
+
     flex-wrap: wrap;
 }
 
+
+/* =========================================================
+   PAGE TITLE
+   ========================================================= */
+
 .page-title {
     font-family: var(--font-heading);
+
     font-size: 2.5rem;
+
     font-weight: 700;
+
     letter-spacing: -0.02em;
-    background: linear-gradient(to right, var(--text-primary), var(--text-secondary));
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--theme-text),
+            var(--theme-primary),
+            var(--theme-muted)
+        );
+
+    background-size: 200% 200%;
+
     -webkit-background-clip: text;
+    background-clip: text;
+
     -webkit-text-fill-color: transparent;
+
+    animation: titleGradient 8s ease infinite;
 }
+
+
+@keyframes titleGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
 
 .search-container {
     position: relative;
+
     width: 100%;
+
     max-width: 400px;
 }
 
+
 .search-container i {
     position: absolute;
+
     left: 1.2rem;
+
     top: 50%;
+
     transform: translateY(-50%);
-    color: var(--text-secondary);
+
+    color: var(--theme-muted);
+
     font-size: 1.2rem;
+
     pointer-events: none;
+
     transition: var(--transition-smooth);
 }
+
 
 #app-search {
     width: 100%;
+
     padding: 1rem 1rem 1rem 3.5rem;
-    background: rgba(255, 255, 255, 0.02);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--theme-surface) 75%,
+            transparent
+        );
+
     border: 1px solid var(--border-color);
+
     border-radius: 16px;
-    color: var(--text-primary);
+
+    color: var(--theme-text);
+
     font-family: var(--font-body);
+
     font-size: 0.95rem;
+
     backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
     transition: var(--transition-smooth);
+
     outline: none;
 }
 
-#app-search:focus {
-    background: rgba(255, 255, 255, 0.04);
-    border-color: var(--accent-blue);
-    box-shadow: 0 0 0 4px rgba(63, 94, 251, 0.1);
+
+#app-search::placeholder {
+    color: var(--theme-muted);
+
+    opacity: 0.7;
 }
 
-#app-search:focus + i {
-    color: var(--accent-blue);
+
+#app-search:focus {
+    background:
+        color-mix(
+            in srgb,
+            var(--theme-surface) 90%,
+            transparent
+        );
+
+    border-color: var(--theme-primary);
+
+    box-shadow:
+        0 0 0 4px
+        color-mix(
+            in srgb,
+            var(--theme-primary) 12%,
+            transparent
+        );
 }
+
+
+#app-search:focus + i {
+    color: var(--theme-primary);
+}
+
+
+/* =========================================================
+   DASHBOARD CONTENT
+   ========================================================= */
 
 .dashboard-content {
     display: flex;
+
     flex-direction: column;
+
     gap: 3rem;
 }
 
+
+/* =========================================================
+   APP SECTIONS
+   ========================================================= */
+
 .app-section {
     display: flex;
+
     flex-direction: column;
+
     gap: 1.5rem;
-    transition: opacity var(--transition-smooth), transform var(--transition-smooth);
+
+    transition:
+        opacity var(--transition-smooth),
+        transform var(--transition-smooth);
 }
+
 
 .app-section.hidden {
     display: none;
 }
 
+
+/* =========================================================
+   SECTION TITLES
+   ========================================================= */
+
 .section-title {
     font-family: var(--font-heading);
+
     font-size: 1.25rem;
-    color: var(--text-secondary);
+
+    color: var(--theme-muted);
+
     font-weight: 500;
+
     text-transform: uppercase;
+
     letter-spacing: 0.1em;
+
     display: flex;
+
     align-items: center;
+
     gap: 1rem;
 }
 
+
 .section-title::after {
     content: '';
+
     flex: 1;
+
     height: 1px;
-    background: linear-gradient(90deg, var(--border-color) 0%, transparent 100%);
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--border-color),
+            transparent
+        );
 }
+
+
+/* =========================================================
+   APP GRID
+   ========================================================= */
 
 .app-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(280px, 1fr)
+        );
+
     gap: 1.5rem;
 }
 
+
+/* =========================================================
+   APP CARD
+   ========================================================= */
+
 .app-card {
-    background: var(--card-bg);
+    background:
+        color-mix(
+            in srgb,
+            var(--theme-surface) 78%,
+            transparent
+        );
+
     border: 1px solid var(--border-color);
+
     border-radius: 16px;
+
     padding: 1.5rem;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 1.25rem;
+
     position: relative;
+
     backdrop-filter: blur(16px);
+
     -webkit-backdrop-filter: blur(16px);
+
     cursor: default;
+
     opacity: 0;
+
     transform: translateY(20px);
-    animation: cardAppear 0.5s var(--transition-bounce) forwards;
-    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+
+    animation:
+        cardAppear
+        0.5s
+        var(--transition-bounce)
+        forwards;
+
+    transition:
+        transform var(--transition-smooth),
+        box-shadow var(--transition-smooth),
+        border-color var(--transition-smooth);
 }
 
-.app-card:focus-visible {
-    outline: none;
-    border-color: var(--accent-blue);
-    box-shadow: 0 0 0 4px rgba(63, 94, 251, 0.2);
-}
+
+/* =========================================================
+   THEME BORDER EFFECT
+   ========================================================= */
 
 .app-card::before {
     content: '';
+
     position: absolute;
+
     inset: 0;
+
     border-radius: 16px;
+
     padding: 1px;
-    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--theme-primary),
+            var(--theme-secondary),
+            var(--theme-primary)
+        );
+
+    background-size: 200% 200%;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
     -webkit-mask-composite: xor;
+
     mask-composite: exclude;
+
     opacity: 0;
-    transition: opacity var(--transition-smooth);
+
+    transition:
+        opacity var(--transition-smooth);
+
     pointer-events: none;
+
+    animation:
+        cardBorderGradient
+        6s
+        ease
+        infinite;
 }
+
+
+@keyframes cardBorderGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =========================================================
+   CARD INTERACTION
+   ========================================================= */
 
 .app-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+
+    box-shadow:
+        0 12px 32px
+        color-mix(
+            in srgb,
+            var(--theme-primary) 15%,
+            transparent
+        );
 }
+
 
 .app-card:hover::before {
     opacity: 1;
 }
 
+
 .app-card:active {
-    transform: translateY(-2px) scale(0.98);
+    transform:
+        translateY(-2px)
+        scale(0.98);
 }
+
+
+.app-card:focus-visible {
+    outline: none;
+
+    border-color: var(--theme-primary);
+
+    box-shadow:
+        0 0 0 4px
+        color-mix(
+            in srgb,
+            var(--theme-primary) 15%,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
 
 .card-header {
     display: flex;
+
     justify-content: space-between;
+
     align-items: flex-start;
 }
 
+
+/* =========================================================
+   APP ICON
+   ========================================================= */
+
 .app-icon {
     width: 48px;
+
     height: 48px;
-    background: var(--bg-secondary);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--theme-background) 75%,
+            var(--theme-surface)
+        );
+
     border: 1px solid var(--border-color);
+
     border-radius: 12px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     font-size: 1.75rem;
-    transition: transform var(--transition-smooth), background var(--transition-smooth);
+
+    transition:
+        transform var(--transition-smooth),
+        background var(--transition-smooth),
+        color var(--transition-smooth);
 }
 
-.app-icon.icon-proxy {
-    color: var(--accent-purple);
-}
 
+/*
+   Everything uses the CURRENT theme now.
+   No permanent blue/purple.
+*/
+
+.app-icon.icon-proxy,
 .app-icon.icon-local {
-    color: var(--accent-blue);
+    color: var(--theme-primary);
 }
+
 
 .app-card:hover .app-icon {
-    transform: scale(1.1) rotate(-5deg);
-    background: rgba(255, 255, 255, 0.05);
+    transform:
+        scale(1.1)
+        rotate(-5deg);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--theme-primary) 8%,
+            var(--theme-surface)
+        );
+
+    color: var(--theme-primary);
 }
+
+
+/* =========================================================
+   APP BADGES
+   ========================================================= */
 
 .app-badge {
     font-family: var(--font-heading);
+
     font-size: 0.7rem;
+
     text-transform: uppercase;
+
     letter-spacing: 0.05em;
+
     padding: 0.25rem 0.6rem;
+
     border-radius: 100px;
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text-secondary);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--theme-text) 5%,
+            transparent
+        );
+
+    color: var(--theme-muted);
+
     border: 1px solid transparent;
 }
 
+
 .app-badge.featured-badge {
-    background: rgba(124, 58, 237, 0.1);
-    color: #a78bfa;
-    border: 1px solid rgba(124, 58, 237, 0.3);
+    background:
+        color-mix(
+            in srgb,
+            var(--theme-primary) 10%,
+            transparent
+        );
+
+    color: var(--theme-primary);
+
+    border:
+        1px solid
+        color-mix(
+            in srgb,
+            var(--theme-primary) 30%,
+            transparent
+        );
 }
+
+
+/* =========================================================
+   CARD BODY
+   ========================================================= */
 
 .card-body {
     flex: 1;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 0.25rem;
 }
 
+
 .app-name {
     font-family: var(--font-heading);
+
     font-size: 1.15rem;
+
     font-weight: 700;
-    color: var(--text-primary);
+
+    color: var(--theme-text);
 }
+
 
 .app-desc {
     font-size: 0.85rem;
-    color: var(--text-secondary);
+
+    color: var(--theme-muted);
+
     line-height: 1.4;
 }
+
+
+/* =========================================================
+   CARD FOOTER
+   ========================================================= */
 
 .card-footer {
     margin-top: 0.5rem;
 }
 
+
+/* =========================================================
+   LAUNCH BUTTON
+   ========================================================= */
+
 .launch-btn {
     width: 100%;
+
     padding: 0.75rem;
+
     border-radius: 10px;
+
     border: 1px solid var(--border-color);
-    background: rgba(255, 255, 255, 0.03);
-    color: var(--text-primary);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--theme-text) 3%,
+            transparent
+        );
+
+    color: var(--theme-text);
+
     font-family: var(--font-body);
+
     font-weight: 600;
+
     font-size: 0.9rem;
+
     cursor: pointer;
+
     transition: var(--transition-smooth);
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 0.5rem;
 }
 
-.app-card:hover .launch-btn {
-    background: var(--text-primary);
-    color: var(--bg-primary);
-    border-color: var(--text-primary);
-    box-shadow: 0 0 16px rgba(255, 255, 255, 0.15);
+
+.launch-btn:hover {
+    border-color: var(--theme-primary);
+
+    background:
+        var(--theme-primary);
+
+    color:
+        var(--theme-secondary);
+
+    box-shadow:
+        0 0 20px
+        color-mix(
+            in srgb,
+            var(--theme-primary) 25%,
+            transparent
+        );
 }
+
+
+.app-card:hover .launch-btn {
+    background:
+        color-mix(
+            in srgb,
+            var(--theme-primary) 12%,
+            transparent
+        );
+
+    color: var(--theme-text);
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--theme-primary) 40%,
+            transparent
+        );
+
+    box-shadow: none;
+}
+
 
 .app-card .launch-btn:active {
     transform: scale(0.96);
 }
 
+
+/* =========================================================
+   NO RESULTS
+   ========================================================= */
+
 .no-results-state {
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
     padding: 4rem 0;
+
     gap: 1rem;
-    color: var(--text-secondary);
+
+    color: var(--theme-muted);
+
     opacity: 0;
-    animation: fadeIn 0.4s ease forwards;
+
+    animation:
+        fadeIn
+        0.4s
+        ease
+        forwards;
 }
+
 
 .no-results-state i {
     font-size: 3rem;
-    color: rgba(255,255,255,0.1);
+
+    color:
+        color-mix(
+            in srgb,
+            var(--theme-primary) 15%,
+            transparent
+        );
 }
+
 
 .no-results-state.hidden {
     display: none;
 }
 
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
 @keyframes cardAppear {
-    0% { opacity: 0; transform: translateY(20px) scale(0.95); }
-    100% { opacity: 1; transform: translateY(0) scale(1); }
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
 }
 
+
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
 @media (max-width: 1024px) {
     .spydr-dashboard {
@@ -389,27 +960,35 @@ body {
     }
 }
 
+
 @media (max-width: 768px) {
     .dashboard-header {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 1.5rem;
     }
-    
+
     .search-container {
         max-width: 100%;
     }
-    
+
     .app-grid {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        grid-template-columns:
+            repeat(
+                auto-fill,
+                minmax(240px, 1fr)
+            );
     }
 }
+
 
 @media (max-width: 480px) {
     .spydr-dashboard {
         padding: 1.5rem;
     }
-    
+
     .page-title {
         font-size: 2rem;
     }

@@ -27,12 +27,8 @@ To find the README, and other MD files, view the [MD docs](/md-docs/README.md) p
 
 
 
-take that,
-
-some random dude from Solar, made by web creation studios
 
 
+# OMFG!
 
-# back??
-
-i had 2 do 2 more projects on my company. now, I can work on spydr for a lil
+r u seein what im seein? 5 hundo commits! lets go! (mostly from me deleting 1 line stuff) but lets go!!

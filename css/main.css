@@ -1,6 +1,13 @@
-/* --- CORE VARIABLES & THEMES --- */
+/* =========================================================
+   SPYDR // MAIN CSS
+   Dynamic Theme + Background FX System
+   ========================================================= */
+
+/* =========================================================
+   CORE THEME VARIABLES
+   ========================================================= */
+
 :root {
-  /* New Theme System */
   --theme-primary: #00ff66;
   --theme-secondary: #000000;
   --theme-background: #050805;
@@ -20,18 +27,50 @@
   --accent-color: var(--theme-primary);
   --accent-glow: var(--theme-glow);
 
-  /* Original Main CSS Variables (Mapped to the New Theme) */
+  /* Legacy aliases */
   --bg: var(--background-color);
-  --bg2: #111111;
+  --bg2: var(--theme-secondary);
   --card: var(--surface-color);
   --border: var(--border-color);
   --white: var(--text-color);
   --gray: var(--muted-color);
-  --darkgray: #8a8a8a;
+  --darkgray: var(--muted-color);
   --accent: var(--accent-color);
-  
+
+  /* Dynamic gradient colors */
+  --gradient-1: var(--theme-background);
+  --gradient-2: var(--theme-secondary);
+  --gradient-3: var(--theme-primary);
+
   --t: 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+
+/* =========================================================
+   GLOBAL RESETS
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: var(--t);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: "JetBrains Mono", monospace;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   THEME COMPATIBILITY
+   ========================================================= */
 
 [data-theme="light"] {
   --bg: #f5f5f5;
@@ -43,12 +82,15 @@
   --darkgray: #666666;
   --accent: #3f5efb;
 
-  /* Keep base components in sync with Light Theme */
   --background-color: var(--bg);
   --surface-color: var(--card);
   --text-color: var(--white);
   --border-color: var(--border);
   --muted-color: var(--gray);
+
+  --gradient-1: #f5f5f5;
+  --gradient-2: #e0e0e0;
+  --gradient-3: #3f5efb;
 }
 
 [data-theme="spydr-neon"] {
@@ -61,31 +103,22 @@
   --darkgray: #9ca3af;
   --accent: #7c3aed;
 
-  /* Keep base components in sync with Spydr-Neon Theme */
   --background-color: var(--bg);
   --surface-color: var(--card);
   --text-color: var(--white);
   --border-color: var(--border);
   --muted-color: var(--gray);
+
+  --gradient-1: #05050a;
+  --gradient-2: #131333;
+  --gradient-3: #7c3aed;
 }
 
-/* --- GLOBAL STYLES & RESETS --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: var(--t);
-}
 
-html,
-body {
-  background: var(--bg);
-  color: var(--white);
-  font-family: "JetBrains Mono", monospace;
-  overflow: hidden;
-}
+/* =========================================================
+   BASE ELEMENTS
+   ========================================================= */
 
-/* Base Form & UI Elements */
 button,
 .btn,
 .button {
@@ -115,51 +148,263 @@ a {
   color: var(--secondary-color);
 }
 
-/* --- DYNAMIC BACKGROUND SYSTEM --- */
+
+/* =========================================================
+   DYNAMIC BACKGROUND SYSTEM
+   ========================================================= */
+
 #bg-effects-container {
-  position: absolute;
+  position: fixed;
   inset: 0;
-  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: -10;
+
   pointer-events: none;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      color-mix(in srgb, var(--theme-primary) 12%, transparent),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      color-mix(in srgb, var(--theme-primary) 8%, transparent),
+      transparent 45%
+    ),
+    var(--theme-background);
 }
 
+
+/* =========================================================
+   ANIMATED GRADIENT BACKGROUND
+   ========================================================= */
+
+body[data-bg-style="gradient"] #bg-effects-container,
+body[data-bg-style="theme"] #bg-effects-container {
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      color-mix(
+        in srgb,
+        var(--theme-primary) 22%,
+        transparent
+      ),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 85% 25%,
+      color-mix(
+        in srgb,
+        var(--theme-secondary) 35%,
+        transparent
+      ),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 50% 90%,
+      color-mix(
+        in srgb,
+        var(--theme-primary) 15%,
+        transparent
+      ),
+      transparent 45%
+    ),
+    linear-gradient(
+      135deg,
+      var(--theme-background),
+      var(--theme-secondary),
+      var(--theme-background)
+    );
+
+  background-size: 250% 250%;
+
+  animation: spydrGradientMove 14s ease-in-out infinite;
+}
+
+
+@keyframes spydrGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 100% 20%;
+  }
+
+  50% {
+    background-position: 100% 80%;
+  }
+
+  75% {
+    background-position: 0% 100%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* =========================================================
+   STARS
+   ========================================================= */
+
 #stars-canvas {
+  position: absolute;
+  inset: 0;
+
   width: 100%;
   height: 100%;
+
   display: block;
+
+  opacity: 1;
+
+  pointer-events: none;
+
+  z-index: 0;
 }
+
+
+/* =========================================================
+   FOG
+   ========================================================= */
 
 #fog-overlay {
   position: absolute;
-  inset: 0;
+  inset: -25%;
+
+  width: 150%;
+  height: 150%;
+
   opacity: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.15), transparent 70%);
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at 20% 30%,
+      color-mix(
+        in srgb,
+        var(--theme-primary) 22%,
+        transparent
+      ),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 80% 70%,
+      color-mix(
+        in srgb,
+        var(--theme-primary) 16%,
+        transparent
+      ),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 50% 50%,
+      color-mix(
+        in srgb,
+        var(--theme-secondary) 35%,
+        transparent
+      ),
+      transparent 60%
+    );
+
+  filter: blur(45px);
+
+  transform: translate3d(0, 0, 0);
+
+  z-index: 1;
 }
 
-body[data-bg-style="fog"] #fog-overlay { opacity: 1; }
 
-/* LOADING */
-#loader, #loading-screen {
+body[data-bg-style="fog"] #fog-overlay {
+  opacity: 1;
+  animation: spydrFogMove 18s ease-in-out infinite;
+}
+
+
+@keyframes spydrFogMove {
+  0% {
+    transform: translate(-8%, -4%) scale(1);
+  }
+
+  25% {
+    transform: translate(6%, 5%) scale(1.08);
+  }
+
+  50% {
+    transform: translate(10%, -6%) scale(1.15);
+  }
+
+  75% {
+    transform: translate(-5%, 7%) scale(1.08);
+  }
+
+  100% {
+    transform: translate(-8%, -4%) scale(1);
+  }
+}
+
+
+/* =========================================================
+   THEME FX PARTICLES
+   ========================================================= */
+
+.spydr-theme-fx {
+  pointer-events: none;
+}
+
+#bg-effects-container,
+#stars-canvas,
+#fog-overlay {
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LOADING SCREEN
+   ========================================================= */
+
+#loader,
+#loading-screen {
   position: fixed;
   inset: 0;
-  background: black;
+
+  background: var(--theme-background);
+
   z-index: 9999;
 }
 
-#loader video, #loading-screen video {
+#loader video,
+#loading-screen video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* TOP */
+
+/* =========================================================
+   TOP
+   ========================================================= */
+
 .top {
   position: absolute;
+
   top: 20px;
   left: 50%;
+
   transform: translateX(-50%);
+
   text-align: center;
+
   color: var(--gray);
+
+  z-index: 10;
 }
 
 #time {
@@ -172,120 +417,297 @@ body[data-bg-style="fog"] #fog-overlay { opacity: 1; }
   font-size: 13px;
 }
 
-/* MENU WRAPPER */
+
+/* =========================================================
+   MENU WRAPPER
+   ========================================================= */
+
 .menu-wrapper {
   position: absolute;
+
   left: 20px;
   bottom: 20px;
+
   z-index: 100;
 }
 
-/* MENU BUTTON */
+
+/* =========================================================
+   MENU BUTTON
+   ========================================================= */
+
 #menu-btn {
   background: var(--card);
+
   border: 1px solid var(--border);
+
   color: var(--white);
+
   padding: 12px 14px;
+
   cursor: pointer;
 }
 
-/* MENU BOX */
+
+/* =========================================================
+   MENU BOX
+   ========================================================= */
+
 #menu {
   position: absolute;
+
   bottom: 55px;
   left: 0;
+
   width: 190px;
+
   background: var(--bg2);
+
   border: 1px solid var(--border);
+
   border-radius: 12px;
+
   padding: 8px;
+
   opacity: 0;
+
   pointer-events: none;
+
   transform: translateY(10px);
+
   transition: var(--t);
+
+  z-index: 101;
 }
 
-/* OPEN STATES */
+
+/* =========================================================
+   MENU OPEN STATES
+   ========================================================= */
+
 .menu-wrapper:hover #menu,
 #menu.open {
   opacity: 1;
+
   pointer-events: auto;
+
   transform: translateY(0);
 }
 
-/* MENU ITEMS */
+
+/* =========================================================
+   MENU ITEMS
+   ========================================================= */
+
 #menu button {
   width: 100%;
+
   background: transparent;
+
   border: none;
+
   color: var(--white);
+
   padding: 10px;
+
   text-align: left;
+
   cursor: pointer;
+
   display: flex;
+
   gap: 8px;
+
   align-items: center;
 }
 
 #menu button:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: color-mix(
+    in srgb,
+    var(--theme-primary) 8%,
+    transparent
+  );
+
   transform: translateX(4px);
 }
 
-/* HERO */
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
 .center {
   position: absolute;
+
   inset: 0;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
+  z-index: 5;
 }
+
 
 .hero-wrap {
   display: flex;
+
   align-items: center;
+
   gap: 20px;
 }
 
+
+/* =========================================================
+   ANIMATED LOGO
+   ========================================================= */
+
 .logo-img {
   width: 240px;
-  filter: grayscale(100%);
+
+  filter:
+    drop-shadow(
+      0 0 20px
+      color-mix(
+        in srgb,
+        var(--theme-primary) 35%,
+        transparent
+      )
+    );
+
+  position: relative;
+
+  z-index: 6;
 }
+
+
+/*
+   If the homepage JS applies the animated gradient
+   to the logo, this class will be available.
+*/
+
+.logo-gradient {
+  background:
+    linear-gradient(
+      120deg,
+      var(--theme-primary),
+      var(--theme-secondary),
+      var(--theme-primary)
+    );
+
+  background-size: 300% 300%;
+
+  animation: spydrLogoGradient 6s ease infinite;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+
+@keyframes spydrLogoGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 .hero-text h1 {
   font-family: "Space Grotesk", sans-serif;
+
   font-size: 110px;
+
+  color: var(--theme-text);
 }
+
 
 .const {
   color: var(--darkgray);
+
   font-size: 14px;
+
   margin-top: 6px;
 }
 
-/* GAMES */
+
+/* =========================================================
+   GAMES
+   ========================================================= */
+
 .games {
   position: absolute;
+
   bottom: 110px;
   left: 50%;
+
   transform: translateX(-50%);
+
   display: flex;
+
   gap: 12px;
+
+  z-index: 20;
 }
 
-/* Inheriting standard styles for Game Cards */
+
+/* =========================================================
+   GAME CARDS
+   ========================================================= */
+
 .game-card {
   background: var(--card);
+
   border: 1px solid var(--border);
+
   padding: 12px 14px;
+
   border-radius: 10px;
+
   font-size: 13px;
+
   color: var(--gray);
+
   cursor: pointer;
 }
 
 .game-card:hover {
-  border-color: var(--white);
+  border-color: var(--theme-primary);
+
   color: var(--white);
+
   transform: translateY(-3px);
+
+  box-shadow:
+    0 0 20px
+    color-mix(
+      in srgb,
+      var(--theme-primary) 18%,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }

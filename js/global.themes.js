@@ -13,7 +13,7 @@ export default async function initThemeFX({ theme, assets }) {
         width: '100vw',
         height: '100vh',
         pointerEvents: 'none',
-        zIndex: '1',
+        zIndex: '0',
         overflow: 'hidden'
     });
 

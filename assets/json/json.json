@@ -4,8 +4,8 @@
       "name": "Christmas",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/christmas/christmas-tree.png",
-        "/assets/images/themes/christmas/present.png"
+        "/assets/images/themes/christmas-tree.png",
+        "/assets/images/themes/present.png"
       ]
     },
 
@@ -13,8 +13,8 @@
       "name": "Halloween",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/halloween/candy.png",
-        "/assets/images/themes/halloween/jack-o-lantern.png"
+        "/assets/images/themes/candy.png",
+        "/assets/images/themes/jack-o-lantern.png"
       ]
     },
 
@@ -22,8 +22,8 @@
       "name": "4th Of July",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/fourth-of-july/firework.png",
-        "/assets/images/themes/fourth-of-july/american-flag.png"
+        "/assets/images/themes/firework.png",
+        "/assets/images/themes/american-flag.png"
       ]
     },
 
@@ -31,8 +31,8 @@
       "name": "Valentines",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/valentines/heart.png",
-        "/assets/images/themes/valentines/rose.png"
+        "/assets/images/themes/heart.png",
+        "/assets/images/themes/rose.png"
       ]
     },
 
@@ -40,8 +40,8 @@
       "name": "Easter",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/easter/chocolate-bunny.png",
-        "/assets/images/themes/easter/easter-egg.png"
+        "/assets/images/themes/chocolate-bunny.png",
+        "/assets/images/themes/easter-egg.png"
       ]
     },
 
@@ -49,8 +49,8 @@
       "name": "Sunny Day",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/sunny-day/sunshine.png",
-        "/assets/images/themes/sunny-day/rainbow.png"
+        "/assets/images/themes/sunshine.png",
+        "/assets/images/themes/rainbow.png"
       ]
     },
 
@@ -58,8 +58,8 @@
       "name": "Neegy",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/neegy/money.png",
-        "/assets/images/themes/neegy/gold.png"
+        "/assets/images/themes/money.png",
+        "/assets/images/themes/gold.png"
       ]
     },
 
@@ -67,8 +67,8 @@
       "name": "Flowstate",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/flowstate/retro-glasses.png",
-        "/assets/images/themes/flowstate/glow-stick.png"
+        "/assets/images/themes/retro-glasses.png",
+        "/assets/images/themes/glow-stick.png"
       ]
     },
 
@@ -76,8 +76,8 @@
       "name": "Ducky",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/ducky/rubber-duck.png",
-        "/assets/images/themes/ducky/baby-chick.png"
+        "/assets/images/themes/rubber-duck.png",
+        "/assets/images/themes/baby-chick.png"
       ]
     },
 
@@ -85,8 +85,8 @@
       "name": "Coffee Shop",
       "script": "/js/global.themes.js",
       "assets": [
-        "/assets/images/themes/coffee-shop/coffee.png",
-        "/assets/images/themes/coffee-shop/pastry.png"
+        "/assets/images/themes/coffee.png",
+        "/assets/images/themes/pastry.png"
       ]
     }
   }

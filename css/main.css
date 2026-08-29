@@ -1,17 +1,35 @@
 /* --- CORE VARIABLES & THEMES --- */
 :root {
-  /* Default Theme (Your Original Colors) */
-  --bg: #090909;
+  /* New Theme System */
+  --theme-primary: #00ff66;
+  --theme-secondary: #000000;
+  --theme-background: #050805;
+  --theme-surface: #0c140e;
+  --theme-text: #ffffff;
+  --theme-muted: #a9c7b0;
+  --theme-border: #00ff66;
+  --theme-glow: rgba(0, 255, 102, 0.4);
+
+  --primary-color: var(--theme-primary);
+  --secondary-color: var(--theme-secondary);
+  --background-color: var(--theme-background);
+  --surface-color: var(--theme-surface);
+  --text-color: var(--theme-text);
+  --muted-color: var(--theme-muted);
+  --border-color: var(--theme-border);
+  --accent-color: var(--theme-primary);
+  --accent-glow: var(--theme-glow);
+
+  /* Original Main CSS Variables (Mapped to the New Theme) */
+  --bg: var(--background-color);
   --bg2: #111111;
-  --card: #171717;
-  --border: #2b2b2b;
-
-  --white: #ffffff;
-  --gray: #bdbdbd;
+  --card: var(--surface-color);
+  --border: var(--border-color);
+  --white: var(--text-color);
+  --gray: var(--muted-color);
   --darkgray: #8a8a8a;
+  --accent: var(--accent-color);
   
-  --accent: #3f5efb;
-
   --t: 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -24,6 +42,13 @@
   --gray: #555555;
   --darkgray: #666666;
   --accent: #3f5efb;
+
+  /* Keep base components in sync with Light Theme */
+  --background-color: var(--bg);
+  --surface-color: var(--card);
+  --text-color: var(--white);
+  --border-color: var(--border);
+  --muted-color: var(--gray);
 }
 
 [data-theme="spydr-neon"] {
@@ -35,8 +60,16 @@
   --gray: #d1d5db;
   --darkgray: #9ca3af;
   --accent: #7c3aed;
+
+  /* Keep base components in sync with Spydr-Neon Theme */
+  --background-color: var(--bg);
+  --surface-color: var(--card);
+  --text-color: var(--white);
+  --border-color: var(--border);
+  --muted-color: var(--gray);
 }
 
+/* --- GLOBAL STYLES & RESETS --- */
 * {
   margin: 0;
   padding: 0;
@@ -44,11 +77,42 @@
   transition: var(--t);
 }
 
+html,
 body {
   background: var(--bg);
   color: var(--white);
   font-family: "JetBrains Mono", monospace;
   overflow: hidden;
+}
+
+/* Base Form & UI Elements */
+button,
+.btn,
+.button {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+}
+
+input,
+textarea,
+select,
+.card,
+.panel,
+.menu,
+.dropdown-menu {
+  background: var(--surface-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+::selection {
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 /* --- DYNAMIC BACKGROUND SYSTEM --- */
@@ -116,7 +180,7 @@ body[data-bg-style="fog"] #fog-overlay { opacity: 1; }
   z-index: 100;
 }
 
-/* BUTTON */
+/* MENU BUTTON */
 #menu-btn {
   background: var(--card);
   border: 1px solid var(--border);
@@ -130,17 +194,14 @@ body[data-bg-style="fog"] #fog-overlay { opacity: 1; }
   position: absolute;
   bottom: 55px;
   left: 0;
-
   width: 190px;
   background: var(--bg2);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 8px;
-
   opacity: 0;
   pointer-events: none;
   transform: translateY(10px);
-
   transition: var(--t);
 }
 
@@ -152,7 +213,7 @@ body[data-bg-style="fog"] #fog-overlay { opacity: 1; }
   transform: translateY(0);
 }
 
-/* ITEMS */
+/* MENU ITEMS */
 #menu button {
   width: 100%;
   background: transparent;
@@ -167,7 +228,7 @@ body[data-bg-style="fog"] #fog-overlay { opacity: 1; }
 }
 
 #menu button:hover {
-  background: rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.06);
   transform: translateX(4px);
 }
 
@@ -212,6 +273,7 @@ body[data-bg-style="fog"] #fog-overlay { opacity: 1; }
   gap: 12px;
 }
 
+/* Inheriting standard styles for Game Cards */
 .game-card {
   background: var(--card);
   border: 1px solid var(--border);

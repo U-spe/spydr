@@ -16,7 +16,7 @@ export default async function initThemeFX({ theme, assets }) {
     document.body.appendChild(container);
 
     const particles = [];
-    const numParticles = 65;
+    const numParticles = 100;
     let animationFrameId;
     let isRunning = true;
 
@@ -38,7 +38,7 @@ export default async function initThemeFX({ theme, assets }) {
             el,
             x: Math.random() * window.innerWidth,
             y: (Math.random() * window.innerHeight) - window.innerHeight,
-            speedY: Math.random() * 1.5 + 0.5,
+            speedY: Math.random() * 3 + 2,
             speedX: (Math.random() - 0.5) * 1.0,
             rotation: Math.random() * 360,
             rotationSpeed: (Math.random() - 0.5) * 2.0,

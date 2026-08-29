@@ -1,5 +1,21 @@
 /* spydr styling architecture by Web Creation Studios */
 
+/* --- THEME BRIDGE --- */
+:root {
+    --browser-bg: var(--theme-background);
+    --browser-surface: var(--theme-surface);
+    --browser-primary: var(--theme-primary);
+    --browser-secondary: var(--theme-secondary);
+    --browser-text: var(--theme-text);
+    --browser-muted: var(--theme-muted);
+    --browser-border: var(--theme-border);
+    --browser-glow: var(--theme-glow);
+
+    --browser-grid: color-mix(in srgb, var(--theme-primary) 8%, transparent);
+    --browser-input: color-mix(in srgb, var(--theme-background) 75%, var(--theme-surface));
+}
+
+/* --- RESET --- */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +24,8 @@
 }
 
 body {
-    background: #000000;
-    color: white;
+    background: var(--browser-bg);
+    color: var(--browser-text);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -19,8 +35,8 @@ body {
 /* --- TOP BROWSER CHROME --- */
 .top-chrome {
     height: 40px;
-    background: #090909;
-    border-bottom: 1px solid #1f1f1f;
+    background: var(--browser-surface);
+    border-bottom: 1px solid var(--browser-border);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,11 +47,11 @@ body {
 .window-controls {
     display: flex;
     gap: 8px;
-    width: 80px; /* Fixed width to balance the right placeholder */
+    width: 80px;
 }
 
 .placeholder {
-    width: 80px; /* Balances the window controls so branding is perfectly centered */
+    width: 80px;
 }
 
 .dot {
@@ -44,9 +60,18 @@ body {
     border-radius: 50%;
 }
 
-.dot.close { background: #ff5f56; }
-.dot.minimize { background: #ffbd2e; }
-.dot.maximize { background: #27c93f; }
+/* Keep browser window controls recognizable */
+.dot.close {
+    background: #ff5f56;
+}
+
+.dot.minimize {
+    background: #ffbd2e;
+}
+
+.dot.maximize {
+    background: #27c93f;
+}
 
 .brand {
     display: flex;
@@ -54,49 +79,63 @@ body {
     gap: 6px;
     font-weight: 600;
     font-size: 0.9rem;
-    color: #a1a1aa;
+    color: var(--browser-muted);
     letter-spacing: 0.5px;
 }
 
 .spydr-icon {
     font-size: 1.1rem;
-    color: #ffffff;
+    color: var(--browser-primary);
 }
 
 /* --- MAIN VIEWPORT --- */
 #browser {
     flex: 1;
     width: 100%;
-    background: #050505;
+    background: var(--browser-bg);
     position: relative;
     display: block;
 }
 
-/* Subtle tech grid over the empty browser area */
+/* Subtle theme-responsive tech grid */
 #browser::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-image:
+        linear-gradient(
+            var(--browser-grid) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            var(--browser-grid) 1px,
+            transparent 1px
+        );
+
     background-size: 40px 40px;
     pointer-events: none;
 }
 
-/* --- BOTTOM INTERFACE (SEARCH & MENU) --- */
+/* --- BOTTOM INTERFACE --- */
 .bottom-interface {
-    background: #090909;
-    border-top: 1px solid #1f1f1f;
-    padding: 16px 20px 24px 20px; /* Extra padding on the absolute floor */
+    background: var(--browser-surface);
+    border-top: 1px solid var(--browser-border);
+    padding: 16px 20px 24px 20px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     z-index: 10;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+
+    box-shadow:
+        0 -4px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Search Box Area */
+/* --- SEARCH BOX --- */
 .search-bar-container {
     display: flex;
     justify-content: center;
@@ -107,31 +146,53 @@ body {
     width: 100%;
     max-width: 800px;
     height: 44px;
-    background: #121212;
-    border: 1px solid #2b2b2b;
+
+    background: var(--browser-input);
+    border: 1px solid var(--browser-border);
     border-radius: 12px;
+
     display: flex;
     align-items: center;
     padding: 0 16px;
     gap: 12px;
-    transition: all 0.2s ease;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .address-bar:focus-within {
-    border-color: #555;
-    background: #171717;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05);
+    border-color: var(--browser-primary);
+
+    background: color-mix(
+        in srgb,
+        var(--browser-surface) 85%,
+        var(--browser-primary)
+    );
+
+    box-shadow:
+        0 0 0 2px color-mix(
+            in srgb,
+            var(--browser-primary) 12%,
+            transparent
+        ),
+        0 0 20px color-mix(
+            in srgb,
+            var(--browser-primary) 10%,
+            transparent
+        );
 }
 
 .lock-icon {
-    color: #666;
+    color: var(--browser-muted);
     font-size: 1.1rem;
 }
 
 input {
     flex: 1;
     background: transparent;
-    color: white;
+    color: var(--browser-text);
     border: none;
     font-size: 1rem;
     outline: none;
@@ -139,10 +200,11 @@ input {
 }
 
 input::placeholder {
-    color: #666;
+    color: var(--browser-muted);
+    opacity: 0.65;
 }
 
-/* The Floor Menu */
+/* --- BOTTOM MENU --- */
 .bottom-menu {
     display: flex;
     justify-content: space-between;
@@ -157,20 +219,29 @@ input::placeholder {
     gap: 8px;
 }
 
-/* White Menu Buttons */
+/* --- THEMED MENU BUTTONS --- */
 .white-btn {
-    background: #7c3aed;
-    color: #ffffff;
-    border: none;
+    background: var(--browser-primary);
+    color: var(--browser-secondary);
+    border: 1px solid var(--browser-primary);
     border-radius: 8px;
+
     font-weight: 600;
     font-size: 0.95rem;
+
     height: 38px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     cursor: pointer;
-    transition: transform 0.1s ease, background 0.15s ease;
+
+    transition:
+        transform 0.1s ease,
+        background 0.15s ease,
+        box-shadow 0.15s ease,
+        color 0.15s ease;
 }
 
 .menu-btn {
@@ -188,9 +259,70 @@ input::placeholder {
 }
 
 .white-btn:hover {
-    background: #e6e6e6;
+    background: color-mix(
+        in srgb,
+        var(--browser-primary) 80%,
+        var(--browser-text)
+    );
+
+    border-color: var(--browser-primary);
+
+    box-shadow:
+        0 0 16px color-mix(
+            in srgb,
+            var(--browser-primary) 25%,
+            transparent
+        );
+
+    transform: translateY(-1px);
 }
 
 .white-btn:active {
     transform: scale(0.95);
+}
+
+/* --- THEME GLOW HELPERS --- */
+.spydr-icon,
+.lock-icon {
+    transition:
+        color 0.3s ease,
+        filter 0.3s ease;
+}
+
+.spydr-icon {
+    filter: drop-shadow(
+        0 0 6px color-mix(
+            in srgb,
+            var(--browser-primary) 40%,
+            transparent
+        )
+    );
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+    .bottom-interface {
+        padding: 12px 12px 18px 12px;
+    }
+
+    .address-bar {
+        height: 42px;
+    }
+
+    .bottom-menu {
+        gap: 8px;
+    }
+
+    .menu-group {
+        gap: 5px;
+    }
+
+    .main-go {
+        padding: 0 18px;
+        min-width: 70px;
+    }
+
+    .menu-btn {
+        padding: 0 9px;
+    }
 }

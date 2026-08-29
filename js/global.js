@@ -4,7 +4,7 @@ import ThemeManager from './theme.js';
 import CloakManager from './cloak.js';
 import HotkeyManager from './hotkeys.js';
 import UIManager from './ui.js';
-import AuthManager from './auth-user.js'; // New Auth Import
+import AuthManager from './auth-user.js';
 
 class SpydrCoreRegistry {
     constructor() {
@@ -20,7 +20,10 @@ class SpydrCoreRegistry {
     }
 
     async boot() {
-        // Instantiate decoupled operational layers
+        // =========================================
+        // CREATE MODULES
+        // =========================================
+
         const settings = new SettingsManager();
         this.register('settings', settings);
 
@@ -36,49 +39,162 @@ class SpydrCoreRegistry {
         const ui = new UIManager(this);
         this.register('ui', ui);
 
-        // Register Auth Layer
         const auth = new AuthManager(this);
         this.register('auth', auth);
 
-        // Core initialization execution cascade
+
+        // =========================================
+        // INITIALIZE SETTINGS FIRST
+        // =========================================
+
         settings.init();
 
-        // --- AUTOMATIC THEME INJECTION ---
-        const currentTheme = settings.get('theme') || 'default';
-        const currentBg = settings.get('bgStyle') || 'stars';
-        
-        document.body.setAttribute('data-theme', currentTheme);
-        document.body.setAttribute('data-bg-style', currentBg);
 
-        // Initialize remaining managers
-        theme.init();
+        // =========================================
+        // INITIAL THEME STATE
+        // =========================================
+
+        const currentTheme =
+            settings.get('theme') || 'neegy';
+
+        const currentBg =
+            settings.get('bgStyle') || 'stars';
+
+
+        /*
+         * Keep the initial state on BOTH html and body.
+         *
+         * This prevents older CSS that uses body[data-theme]
+         * from breaking while the ThemeManager uses
+         * html[data-theme].
+         */
+
+        document.documentElement.setAttribute(
+            'data-theme',
+            currentTheme
+        );
+
+        document.body.setAttribute(
+            'data-theme',
+            currentTheme
+        );
+
+        document.body.setAttribute(
+            'data-bg-style',
+            currentBg
+        );
+
+
+        // =========================================
+        // INITIALIZE THEME SYSTEM
+        // =========================================
+
+        /*
+         * IMPORTANT:
+         *
+         * ThemeManager.init() is async because it loads:
+         *
+         * /assets/json/syfbau-neegy.json
+         * /assets/json/json.json
+         *
+         * We MUST await it before continuing.
+         */
+
+        await theme.init();
+
+
+        // =========================================
+        // KEEP BODY THEME IN SYNC
+        // =========================================
+
+        const appliedTheme =
+            document.documentElement.getAttribute(
+                'data-theme'
+            );
+
+        if (appliedTheme) {
+            document.body.setAttribute(
+                'data-theme',
+                appliedTheme
+            );
+        }
+
+
+        // =========================================
+        // INITIALIZE REMAINING MANAGERS
+        // =========================================
+
         cloak.init();
         hotkeys.init();
         ui.init();
-        auth.init(); // Boot Auth UI checks
-        
-        console.log("spydr engine // Core Stack Booted & Themes Injected.");
+        auth.init();
+
+
+        // =========================================
+        // CORE READY
+        // =========================================
+
+        console.log(
+            'spydr engine // Core Stack Booted & Themes Injected.'
+        );
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Hide the local server warning on the control panel if it exists
-    const warning = document.getElementById('js-warning');
-    if (warning) {
-        warning.remove();
-    }
 
-    // Boot the core spydr kernel
-    window.SpydrKernel = new SpydrCoreRegistry();
-    window.SpydrKernel.boot();
+// =========================================
+// DOM READY
+// =========================================
 
-    // --- LOADER FAILSAFE FIX ---
-    const loader = document.getElementById('loader') || document.getElementById('loading-screen');
-    if (loader) {
-        setTimeout(() => {
-            loader.style.opacity = '0';
-            loader.style.pointerEvents = 'none';
-            setTimeout(() => loader.remove(), 500);
-        }, 300);
+document.addEventListener(
+    'DOMContentLoaded',
+    async () => {
+
+        // Hide local server warning
+        const warning =
+            document.getElementById('js-warning');
+
+        if (warning) {
+            warning.remove();
+        }
+
+
+        // Create kernel
+        window.SpydrKernel =
+            new SpydrCoreRegistry();
+
+
+        // Boot core
+        try {
+            await window.SpydrKernel.boot();
+
+        } catch (error) {
+            console.error(
+                'spydr engine // Core boot failed:',
+                error
+            );
+        }
+
+
+        // =========================================
+        // LOADER FAILSAFE
+        // =========================================
+
+        const loader =
+            document.getElementById('loader') ||
+            document.getElementById('loading-screen');
+
+        if (loader) {
+
+            setTimeout(() => {
+
+                loader.style.opacity = '0';
+                loader.style.pointerEvents = 'none';
+
+                setTimeout(() => {
+                    loader.remove();
+                }, 500);
+
+            }, 300);
+        }
     }
-});
+);

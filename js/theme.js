@@ -1,12 +1,19 @@
 // js/theme.js
+
 export default class ThemeManager {
     constructor(kernel) {
         this.kernel = kernel;
+
         this.canvas = null;
         this.ctx = null;
         this.animationId = null;
+
         this.stars = [];
         this.themes = {};
+        this.themeFX = {};
+
+        this.currentFXScript = null;
+        this.currentFXCleanup = null;
     }
 
     async init() {
@@ -14,22 +21,31 @@ export default class ThemeManager {
 
         this.canvas = document.getElementById('stars-canvas');
 
-        // Load theme definitions
+        if (this.canvas) {
+            this.ctx = this.canvas.getContext('2d');
+
+            window.addEventListener(
+                'resize',
+                () => this.resizeCanvas()
+            );
+
+            this.resizeCanvas();
+        }
+
         await this.loadThemes();
+        await this.loadThemeFX();
 
-        // Apply saved settings
-        this.applyTheme(this.settings.get('theme'));
-        this.applyAccent(this.settings.get('accent'));
-        this.applyBgStyle(this.settings.get('bgStyle'));
-        this.toggleStars(this.settings.get('starsEnabled'));
+        this.applyTheme(
+            this.settings.get('theme')
+        );
 
-        if (!this.canvas) return;
+        this.applyAccent(
+            this.settings.get('accent')
+        );
 
-        this.ctx = this.canvas.getContext('2d');
-
-        window.addEventListener('resize', () => this.resizeCanvas());
-
-        this.resizeCanvas();
+        await this.applyBgStyle(
+            this.settings.get('bgStyle')
+        );
     }
 
     async loadThemes() {
@@ -39,7 +55,9 @@ export default class ThemeManager {
             );
 
             if (!response.ok) {
-                throw new Error(`Theme file failed to load: ${response.status}`);
+                throw new Error(
+                    `Theme JSON failed: ${response.status}`
+                );
             }
 
             const data = await response.json();
@@ -47,85 +65,155 @@ export default class ThemeManager {
             this.themes = data.themes || {};
 
             console.log(
-                `spydr themes // ${Object.keys(this.themes).length} themes loaded.`
+                `spydr themes // ${Object.keys(this.themes).length} themes loaded`
             );
 
         } catch (error) {
-            console.error('spydr themes // Failed to load themes:', error);
+            console.error(
+                'spydr themes // Failed to load:',
+                error
+            );
+
             this.themes = {};
         }
     }
 
-    applyTheme(theme) {
-        const root = document.documentElement;
+    async loadThemeFX() {
+        try {
+            const response = await fetch(
+                '/assets/json/json.json?t=' + Date.now()
+            );
 
-        // Default theme if setting doesn't exist
+            if (!response.ok) {
+                throw new Error(
+                    `Theme FX JSON failed: ${response.status}`
+                );
+            }
+
+            const data = await response.json();
+
+            this.themeFX = data.themeFX || {};
+
+            console.log(
+                `spydr fx // ${Object.keys(this.themeFX).length} theme FX loaded`
+            );
+
+        } catch (error) {
+            console.error(
+                'spydr fx // Failed to load:',
+                error
+            );
+
+            this.themeFX = {};
+        }
+    }
+
+    applyTheme(theme) {
         if (!theme || !this.themes[theme]) {
             theme = 'neegy';
         }
 
         const profile = this.themes[theme];
 
-        if (!profile) return;
+        const root = document.documentElement;
 
-        // One global theme tag
-        root.setAttribute('data-theme', theme);
+        root.setAttribute(
+            'data-theme',
+            theme
+        );
 
-        // Global CSS variables
-        root.style.setProperty('--theme-primary', profile.primary);
-        root.style.setProperty('--theme-secondary', profile.secondary);
-        root.style.setProperty('--theme-background', profile.background);
-        root.style.setProperty('--theme-surface', profile.surface);
-        root.style.setProperty('--theme-text', profile.text);
-        root.style.setProperty('--theme-muted', profile.muted);
-        root.style.setProperty('--theme-border', profile.border);
-        root.style.setProperty('--theme-glow', profile.glow);
+        root.style.setProperty(
+            '--theme-primary',
+            profile.primary
+        );
 
-        // Make the existing accent system follow the theme
-        root.style.setProperty('--accent-color', profile.primary);
-        root.style.setProperty('--accent-glow', profile.glow);
+        root.style.setProperty(
+            '--theme-secondary',
+            profile.secondary
+        );
 
-        // Useful aliases for existing Spydr CSS
-        root.style.setProperty('--primary-color', profile.primary);
-        root.style.setProperty('--secondary-color', profile.secondary);
-        root.style.setProperty('--background-color', profile.background);
-        root.style.setProperty('--surface-color', profile.surface);
-        root.style.setProperty('--text-color', profile.text);
-        root.style.setProperty('--muted-color', profile.muted);
-        root.style.setProperty('--border-color', profile.border);
+        root.style.setProperty(
+            '--theme-background',
+            profile.background
+        );
 
-        // Update stars
-        if (this.animationId) {
-            this.toggleStars(true);
-        }
+        root.style.setProperty(
+            '--theme-surface',
+            profile.surface
+        );
+
+        root.style.setProperty(
+            '--theme-text',
+            profile.text
+        );
+
+        root.style.setProperty(
+            '--theme-muted',
+            profile.muted
+        );
+
+        root.style.setProperty(
+            '--theme-border',
+            profile.border
+        );
+
+        root.style.setProperty(
+            '--theme-glow',
+            profile.glow
+        );
+
+        root.style.setProperty(
+            '--accent-color',
+            profile.primary
+        );
+
+        root.style.setProperty(
+            '--accent-glow',
+            profile.glow
+        );
     }
 
     applyAccent(accent) {
         const root = document.documentElement;
 
-        // If a custom Spydr theme is active, let the theme control accent.
-        const currentTheme = root.getAttribute('data-theme');
+        const currentTheme =
+            root.getAttribute('data-theme');
 
         if (currentTheme && this.themes[currentTheme]) {
-            const profile = this.themes[currentTheme];
+            const profile =
+                this.themes[currentTheme];
 
-            root.style.setProperty('--accent-color', profile.primary);
-            root.style.setProperty('--accent-glow', profile.glow);
+            root.style.setProperty(
+                '--accent-color',
+                profile.primary
+            );
+
+            root.style.setProperty(
+                '--accent-glow',
+                profile.glow
+            );
 
             return;
         }
 
-        // Legacy accent support
         if (accent === 'blue') {
-            root.style.setProperty('--accent-color', 'var(--blue-accent)');
+            root.style.setProperty(
+                '--accent-color',
+                'var(--blue-accent)'
+            );
+
             root.style.setProperty(
                 '--accent-glow',
                 'rgba(63, 94, 251, 0.4)'
             );
         }
 
-        else if (accent === 'purple') {
-            root.style.setProperty('--accent-color', 'var(--purple-accent)');
+        if (accent === 'purple') {
+            root.style.setProperty(
+                '--accent-color',
+                'var(--purple-accent)'
+            );
+
             root.style.setProperty(
                 '--accent-glow',
                 'rgba(124, 58, 237, 0.4)'
@@ -133,74 +221,115 @@ export default class ThemeManager {
         }
     }
 
-    applyBgStyle(style) {
-        document.body.setAttribute('data-bg-style', style);
-
-        const canvasEl = document.getElementById('stars-canvas');
-
-        if (!canvasEl) return;
-
-        if (
-            style === 'stars' &&
-            this.settings.get('starsEnabled')
-        ) {
-            canvasEl.style.opacity = '1';
-        }
-
-        else {
-            canvasEl.style.opacity = '0';
-        }
-    }
-
-    toggleStars(enabled) {
-        const canvasEl = document.getElementById('stars-canvas');
-
-        if (!canvasEl) return;
-
-        if (
-            enabled &&
-            this.settings.get('bgStyle') === 'stars'
-        ) {
-            canvasEl.style.opacity = '1';
-            this.startStarsLoop();
-        }
-
-        else {
-            canvasEl.style.opacity = '0';
-            this.stopStarsLoop();
-        }
-    }
-
-    resizeCanvas() {
-        if (!this.canvas) return;
-
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
-
-        this.generateStars();
-    }
-
-    generateStars() {
-        if (!this.canvas) return;
-
-        this.stars = [];
-
-        const count = Math.floor(
-            (this.canvas.width * this.canvas.height) / 3000
+    async applyBgStyle(style) {
+        document.body.setAttribute(
+            'data-bg-style',
+            style
         );
 
-        for (let i = 0; i < count; i++) {
-            this.stars.push({
-                x: Math.random() * this.canvas.width,
-                y: Math.random() * this.canvas.height,
-                size: Math.random() * 1.5 + 0.5,
-                speed: Math.random() * 0.5 + 0.1
-            });
+        this.stopStars();
+        await this.stopThemeFX();
+
+        const canvas =
+            document.getElementById('stars-canvas');
+
+        if (canvas) {
+            canvas.style.opacity =
+                style === 'stars' ? '1' : '0';
+        }
+
+        if (style === 'stars') {
+            this.startStars();
+        }
+
+        if (style === 'fog') {
+            this.enableFog();
+        }
+
+        if (style === 'gradient') {
+            this.enableGradient();
+        }
+
+        if (style === 'theme') {
+            await this.enableThemeFX();
         }
     }
 
-    startStarsLoop() {
-        if (this.animationId || !this.canvas || !this.ctx) return;
+    async enableThemeFX() {
+        const theme =
+            document.documentElement
+                .getAttribute('data-theme');
+
+        const fx =
+            this.themeFX[theme];
+
+        if (!fx || !fx.script) {
+            console.warn(
+                `spydr fx // No FX registered for ${theme}`
+            );
+
+            return;
+        }
+
+        try {
+            const module =
+                await import(fx.script);
+
+            if (typeof module.default === 'function') {
+                this.currentFXCleanup =
+                    await module.default({
+                        theme,
+                        assets: fx.assets
+                    });
+            }
+
+            this.currentFXScript =
+                fx.script;
+
+        } catch (error) {
+            console.error(
+                `spydr fx // Failed to load ${fx.script}`,
+                error
+            );
+        }
+    }
+
+    async stopThemeFX() {
+        if (typeof this.currentFXCleanup === 'function') {
+            try {
+                await this.currentFXCleanup();
+            } catch (error) {
+                console.error(
+                    'spydr fx // Cleanup failed:',
+                    error
+                );
+            }
+        }
+
+        this.currentFXCleanup = null;
+        this.currentFXScript = null;
+
+        document
+            .querySelectorAll('.spydr-theme-fx')
+            .forEach(el => el.remove());
+    }
+
+    enableFog() {
+        document.body.classList.add(
+            'spydr-fog-enabled'
+        );
+    }
+
+    enableGradient() {
+        document.body.classList.add(
+            'spydr-gradient-enabled'
+        );
+    }
+
+    startStars() {
+        if (!this.canvas || !this.ctx) return;
+
+        if (this.animationId) return;
 
         const render = () => {
             this.ctx.clearRect(
@@ -210,22 +339,25 @@ export default class ThemeManager {
                 this.canvas.height
             );
 
-            const currentTheme =
-                document.documentElement.getAttribute('data-theme');
+            const theme =
+                document.documentElement
+                    .getAttribute('data-theme');
 
-            const profile = this.themes[currentTheme];
+            const profile =
+                this.themes[theme];
 
-            // Stars automatically adapt to the theme
-            this.ctx.fillStyle = profile
-                ? profile.text
-                : 'rgba(255,255,255,0.8)';
+            this.ctx.fillStyle =
+                profile?.text ||
+                'rgba(255,255,255,0.8)';
 
             this.stars.forEach(star => {
                 star.y -= star.speed;
 
                 if (star.y < 0) {
                     star.y = this.canvas.height;
-                    star.x = Math.random() * this.canvas.width;
+                    star.x =
+                        Math.random() *
+                        this.canvas.width;
                 }
 
                 this.ctx.beginPath();
@@ -241,16 +373,64 @@ export default class ThemeManager {
                 this.ctx.fill();
             });
 
-            this.animationId = requestAnimationFrame(render);
+            this.animationId =
+                requestAnimationFrame(render);
         };
 
         render();
     }
 
-    stopStarsLoop() {
+    stopStars() {
         if (this.animationId) {
-            cancelAnimationFrame(this.animationId);
+            cancelAnimationFrame(
+                this.animationId
+            );
+
             this.animationId = null;
+        }
+    }
+
+    resizeCanvas() {
+        if (!this.canvas) return;
+
+        this.canvas.width =
+            window.innerWidth;
+
+        this.canvas.height =
+            window.innerHeight;
+
+        this.generateStars();
+    }
+
+    generateStars() {
+        if (!this.canvas) return;
+
+        this.stars = [];
+
+        const count =
+            Math.floor(
+                (
+                    this.canvas.width *
+                    this.canvas.height
+                ) / 3000
+            );
+
+        for (let i = 0; i < count; i++) {
+            this.stars.push({
+                x:
+                    Math.random() *
+                    this.canvas.width,
+
+                y:
+                    Math.random() *
+                    this.canvas.height,
+
+                size:
+                    Math.random() * 1.5 + 0.5,
+
+                speed:
+                    Math.random() * 0.5 + 0.1
+            });
         }
     }
 }

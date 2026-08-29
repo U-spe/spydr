@@ -1,93 +1,93 @@
-const themeFX = {
-    christmas: {
-        name: "Christmas",
-        script: "/js/themes/christmas.js",
-        assets: [
-            "/assets/images/themes/christmas/tree.png",
-            "/assets/images/themes/christmas/present.png"
-        ]
+{
+  "themeFX": {
+    "christmas": {
+      "name": "Christmas",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "christmas-tree",
+        "present"
+      ]
     },
 
-    halloween: {
-        name: "Halloween",
-        script: "/js/themes/halloween.js",
-        assets: [
-            "/assets/images/themes/halloween/candy.png",
-            "/assets/images/themes/halloween/jack-o-lantern.png"
-        ]
+    "halloween": {
+      "name": "Halloween",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "candy",
+        "jack-o-lantern"
+      ]
     },
 
     "fourth-of-july": {
-        name: "4th Of July",
-        script: "/js/themes/fourth-of-july.js",
-        assets: [
-            "/assets/images/themes/fourth-of-july/firework.png",
-            "/assets/images/themes/fourth-of-july/american-flag.png"
-        ]
+      "name": "4th Of July",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "firework",
+        "american-flag"
+      ]
     },
 
-    valentines: {
-        name: "Valentines",
-        script: "/js/themes/valentines.js",
-        assets: [
-            "/assets/images/themes/valentines/heart.png",
-            "/assets/images/themes/valentines/rose.png"
-        ]
+    "valentines": {
+      "name": "Valentines",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "heart",
+        "rose"
+      ]
     },
 
-    easter: {
-        name: "Easter",
-        script: "/js/themes/easter.js",
-        assets: [
-            "/assets/images/themes/easter/chocolate-bunny.png",
-            "/assets/images/themes/easter/easter-egg.png"
-        ]
+    "easter": {
+      "name": "Easter",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "chocolate-bunny",
+        "easter-egg"
+      ]
     },
 
     "sunny-day": {
-        name: "Sunny Day",
-        script: "/js/themes/sunny-day.js",
-        assets: [
-            "/assets/images/themes/sunny-day/sunshine.png",
-            "/assets/images/themes/sunny-day/rainbow.png"
-        ]
+      "name": "Sunny Day",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "sunshine",
+        "rainbow"
+      ]
     },
 
-    neegy: {
-        name: "Neegy",
-        script: "/js/themes/neegy.js",
-        assets: [
-            "/assets/images/themes/neegy/money.png",
-            "/assets/images/themes/neegy/gold.png"
-        ]
+    "neegy": {
+      "name": "Neegy",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "money",
+        "gold"
+      ]
     },
 
-    flowstate: {
-        name: "Flowstate",
-        script: "/js/themes/flowstate.js",
-        assets: [
-            "/assets/images/themes/flowstate/retro-glasses.png",
-            "/assets/images/themes/flowstate/glow-stick.png"
-        ]
+    "flowstate": {
+      "name": "Flowstate",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "retro-glasses",
+        "glow-stick"
+      ]
     },
 
-    ducky: {
-        name: "Ducky",
-        script: "/js/themes/ducky.js",
-        assets: [
-            "/assets/images/themes/ducky/rubber-duck.png",
-            "/assets/images/themes/ducky/baby-chick.png"
-        ]
+    "ducky": {
+      "name": "Ducky",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "rubber-duck",
+        "baby-chick"
+      ]
     },
 
     "coffee-shop": {
-        name: "Coffee Shop",
-        script: "/js/themes/coffee-shop.js",
-        assets: [
-            "/assets/images/themes/coffee-shop/coffee.png",
-            "/assets/images/themes/coffee-shop/pastry.png"
-        ]
+      "name": "Coffee Shop",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "coffee",
+        "pastry"
+      ]
     }
-};
-
-export default themeFX;
+  }
+}

@@ -4,13 +4,19 @@ All notable changes to spydr are documented here.
 
 ---
 
-# v2.7.2 - CURRENT
+# v2.7.3 - CURRENT
 
 ## 🛠️ Beginning
 - [ ] Starting Scramjet build
 - [ ] Starting venomous build with Wispr LLM
 - [ ] Finishing Hydra Game Files
 - [x] Adding Pizza Edition (To Replace With Totally Science)
+- [x] Fix Game Loader (Set Pizza Edition to first properly)
+- [x] Make Colored Themes Work (Add more themes with custom colors that update on the whole site with one tag)
+- [ ] Deploy on Surge.sh and temporarily on B-CDN
+- [ ] Fix Menu Bar (Make it thinner so it doesn't cover items on some pages)
+- [ ] Make a page on Search to embed a custom error message
+- [ ] Add a notice on the Apps page explaining that proxied apps currently don't work
 
 ## 🐛 Fixed
 

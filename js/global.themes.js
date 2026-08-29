@@ -16,7 +16,7 @@ export default async function initThemeFX({ theme, assets }) {
     document.body.appendChild(container);
 
     const particles = [];
-    const numParticles = 25;
+    const numParticles = 65;
     let animationFrameId;
     let isRunning = true;
 

@@ -4,21 +4,32 @@ export default class ThemeManager {
     constructor(kernel) {
         this.kernel = kernel;
 
+        // Star system
         this.canvas = null;
         this.ctx = null;
         this.animationId = null;
-
         this.stars = [];
+
+        // Theme system
         this.themes = {};
         this.themeFX = {};
 
+        // Theme FX system
         this.currentFXScript = null;
         this.currentFXCleanup = null;
+
+        // Current background FX
+        this.currentBgStyle = 'none';
     }
+
+    /* =========================================================
+       INIT
+    ========================================================== */
 
     async init() {
         this.settings = this.kernel.get('settings');
 
+        // Star canvas
         this.canvas = document.getElementById('stars-canvas');
 
         if (this.canvas) {
@@ -30,23 +41,39 @@ export default class ThemeManager {
             );
 
             this.resizeCanvas();
+
+            this.canvas.style.opacity = '0';
         }
 
+        // Load theme data
         await this.loadThemes();
+
+        // Load Theme FX data
         await this.loadThemeFX();
 
+        // Apply current theme
         this.applyTheme(
             this.settings.get('theme')
         );
 
+        // Apply accent
         this.applyAccent(
             this.settings.get('accent')
         );
 
+        // Apply background FX
         await this.applyBgStyle(
-            this.settings.get('bgStyle')
+            this.settings.get('bgStyle') || 'none'
+        );
+
+        console.log(
+            'spydr themes // Theme Manager initialized'
         );
     }
+
+    /* =========================================================
+       LOAD THEMES
+    ========================================================== */
 
     async loadThemes() {
         try {
@@ -78,6 +105,10 @@ export default class ThemeManager {
         }
     }
 
+    /* =========================================================
+       LOAD THEME FX
+    ========================================================== */
+
     async loadThemeFX() {
         try {
             const response = await fetch(
@@ -95,7 +126,7 @@ export default class ThemeManager {
             this.themeFX = data.themeFX || {};
 
             console.log(
-                `spydr fx // ${Object.keys(this.themeFX).length} theme FX loaded`
+                `spydr fx // ${Object.keys(this.themeFX).length} Theme FX loaded`
             );
 
         } catch (error) {
@@ -107,6 +138,10 @@ export default class ThemeManager {
             this.themeFX = {};
         }
     }
+
+    /* =========================================================
+       APPLY THEME
+    ========================================================== */
 
     applyTheme(theme) {
         if (!theme || !this.themes[theme]) {
@@ -122,6 +157,7 @@ export default class ThemeManager {
             theme
         );
 
+        // Theme colors
         root.style.setProperty(
             '--theme-primary',
             profile.primary
@@ -162,6 +198,7 @@ export default class ThemeManager {
             profile.glow
         );
 
+        // Accent follows theme
         root.style.setProperty(
             '--accent-color',
             profile.primary
@@ -171,7 +208,19 @@ export default class ThemeManager {
             '--accent-glow',
             profile.glow
         );
+
+        /*
+         * If Theme FX is currently active,
+         * reload the FX using the new theme.
+         */
+        if (this.currentBgStyle === 'theme') {
+            this.reloadThemeFX();
+        }
     }
+
+    /* =========================================================
+       APPLY ACCENT
+    ========================================================== */
 
     applyAccent(accent) {
         const root = document.documentElement;
@@ -179,7 +228,14 @@ export default class ThemeManager {
         const currentTheme =
             root.getAttribute('data-theme');
 
-        if (currentTheme && this.themes[currentTheme]) {
+        /*
+         * Theme colors take priority over
+         * the old standalone accent system.
+         */
+        if (
+            currentTheme &&
+            this.themes[currentTheme]
+        ) {
             const profile =
                 this.themes[currentTheme];
 
@@ -221,70 +277,190 @@ export default class ThemeManager {
         }
     }
 
+    /* =========================================================
+       BACKGROUND FX CONTROLLER
+    ========================================================== */
+
     async applyBgStyle(style) {
+        /*
+         * Safety fallback
+         */
+        const validStyles = [
+            'none',
+            'stars',
+            'fog',
+            'gradient',
+            'theme'
+        ];
+
+        if (!validStyles.includes(style)) {
+            style = 'none';
+        }
+
+        this.currentBgStyle = style;
+
         document.body.setAttribute(
             'data-bg-style',
             style
         );
 
+        /*
+         * Stop EVERYTHING first.
+         *
+         * This prevents stars + fog + gradient +
+         * Theme FX from stacking accidentally.
+         */
         this.stopStars();
+
         await this.stopThemeFX();
 
-        const canvas =
-            document.getElementById('stars-canvas');
+        this.disableFog();
+        this.disableGradient();
 
-        if (canvas) {
-            canvas.style.opacity =
-                style === 'stars' ? '1' : '0';
+        /*
+         * Hide stars canvas by default.
+         */
+        if (this.canvas) {
+            this.canvas.style.opacity = '0';
         }
 
+        /*
+         * REGULAR SPYDR
+         */
+        if (style === 'none') {
+            console.log(
+                'spydr fx // Regular Spydr background'
+            );
+
+            return;
+        }
+
+        /*
+         * STAR PARTICLES
+         */
         if (style === 'stars') {
+            console.log(
+                'spydr fx // Star Particles enabled'
+            );
+
+            if (this.canvas) {
+                this.canvas.style.opacity = '1';
+            }
+
             this.startStars();
+
+            return;
         }
 
+        /*
+         * FOG
+         */
         if (style === 'fog') {
+            console.log(
+                'spydr fx // Fog enabled'
+            );
+
             this.enableFog();
+
+            return;
         }
 
+        /*
+         * GRADIENT
+         */
         if (style === 'gradient') {
+            console.log(
+                'spydr fx // Gradient enabled'
+            );
+
             this.enableGradient();
+
+            return;
         }
 
+        /*
+         * THEME FX
+         */
         if (style === 'theme') {
+            console.log(
+                'spydr fx // Theme FX enabled'
+            );
+
             await this.enableThemeFX();
+
+            return;
         }
     }
 
+    /* =========================================================
+       THEME FX
+    ========================================================== */
+
     async enableThemeFX() {
         const theme =
-            document.documentElement
-                .getAttribute('data-theme');
+            document.documentElement.getAttribute(
+                'data-theme'
+            );
 
-        const fx =
-            this.themeFX[theme];
-
-        if (!fx || !fx.script) {
+        if (!theme) {
             console.warn(
-                `spydr fx // No FX registered for ${theme}`
+                'spydr fx // No active theme'
+            );
+
+            return;
+        }
+
+        const fx = this.themeFX[theme];
+
+        if (!fx) {
+            console.warn(
+                `spydr fx // No FX registered for theme: ${theme}`
+            );
+
+            return;
+        }
+
+        if (!fx.script) {
+            console.warn(
+                `spydr fx // Theme ${theme} has no script`
             );
 
             return;
         }
 
         try {
+            /*
+             * Load the universal Theme FX engine.
+             *
+             * Example:
+             * /js/global.themes.js
+             */
             const module =
                 await import(fx.script);
 
-            if (typeof module.default === 'function') {
-                this.currentFXCleanup =
-                    await module.default({
-                        theme,
-                        assets: fx.assets
-                    });
+            if (
+                typeof module.default !== 'function'
+            ) {
+                throw new Error(
+                    'Theme FX module has no default function'
+                );
             }
+
+            /*
+             * Start the universal FX engine.
+             */
+            this.currentFXCleanup =
+                await module.default({
+                    theme,
+                    assets: fx.assets || []
+                });
 
             this.currentFXScript =
                 fx.script;
+
+            console.log(
+                `spydr fx // ${theme} FX running`
+            );
 
         } catch (error) {
             console.error(
@@ -294,8 +470,29 @@ export default class ThemeManager {
         }
     }
 
+    /* =========================================================
+       RELOAD THEME FX
+    ========================================================== */
+
+    async reloadThemeFX() {
+        if (this.currentBgStyle !== 'theme') {
+            return;
+        }
+
+        await this.stopThemeFX();
+
+        await this.enableThemeFX();
+    }
+
+    /* =========================================================
+       STOP THEME FX
+    ========================================================== */
+
     async stopThemeFX() {
-        if (typeof this.currentFXCleanup === 'function') {
+        if (
+            typeof this.currentFXCleanup ===
+            'function'
+        ) {
             try {
                 await this.currentFXCleanup();
             } catch (error) {
@@ -309,10 +506,32 @@ export default class ThemeManager {
         this.currentFXCleanup = null;
         this.currentFXScript = null;
 
+        /*
+         * Extra failsafe cleanup.
+         */
         document
-            .querySelectorAll('.spydr-theme-fx')
+            .querySelectorAll(
+                '.spydr-theme-fx'
+            )
             .forEach(el => el.remove());
+
+        /*
+         * Also clean the dedicated container
+         * if one exists.
+         */
+        const container =
+            document.getElementById(
+                'theme-fx-container'
+            );
+
+        if (container) {
+            container.innerHTML = '';
+        }
     }
+
+    /* =========================================================
+       FOG
+    ========================================================== */
 
     enableFog() {
         document.body.classList.add(
@@ -320,18 +539,52 @@ export default class ThemeManager {
         );
     }
 
+    disableFog() {
+        document.body.classList.remove(
+            'spydr-fog-enabled'
+        );
+    }
+
+    /* =========================================================
+       GRADIENT
+    ========================================================== */
+
     enableGradient() {
         document.body.classList.add(
             'spydr-gradient-enabled'
         );
     }
 
-    startStars() {
-        if (!this.canvas || !this.ctx) return;
+    disableGradient() {
+        document.body.classList.remove(
+            'spydr-gradient-enabled'
+        );
+    }
 
-        if (this.animationId) return;
+    /* =========================================================
+       STARS
+    ========================================================== */
+
+    startStars() {
+        if (!this.canvas || !this.ctx) {
+            return;
+        }
+
+        if (this.animationId) {
+            return;
+        }
 
         const render = () => {
+
+            /*
+             * Stop rendering if Stars is no longer
+             * the selected FX.
+             */
+            if (this.currentBgStyle !== 'stars') {
+                this.stopStars();
+                return;
+            }
+
             this.ctx.clearRect(
                 0,
                 0,
@@ -351,10 +604,13 @@ export default class ThemeManager {
                 'rgba(255,255,255,0.8)';
 
             this.stars.forEach(star => {
+
                 star.y -= star.speed;
 
                 if (star.y < 0) {
-                    star.y = this.canvas.height;
+                    star.y =
+                        this.canvas.height;
+
                     star.x =
                         Math.random() *
                         this.canvas.width;
@@ -377,21 +633,38 @@ export default class ThemeManager {
                 requestAnimationFrame(render);
         };
 
-        render();
+        this.animationId =
+            requestAnimationFrame(render);
     }
 
     stopStars() {
         if (this.animationId) {
+
             cancelAnimationFrame(
                 this.animationId
             );
 
             this.animationId = null;
         }
+
+        if (this.ctx && this.canvas) {
+            this.ctx.clearRect(
+                0,
+                0,
+                this.canvas.width,
+                this.canvas.height
+            );
+        }
     }
 
+    /* =========================================================
+       CANVAS RESIZE
+    ========================================================== */
+
     resizeCanvas() {
-        if (!this.canvas) return;
+        if (!this.canvas) {
+            return;
+        }
 
         this.canvas.width =
             window.innerWidth;
@@ -402,8 +675,14 @@ export default class ThemeManager {
         this.generateStars();
     }
 
+    /* =========================================================
+       GENERATE STARS
+    ========================================================== */
+
     generateStars() {
-        if (!this.canvas) return;
+        if (!this.canvas) {
+            return;
+        }
 
         this.stars = [];
 
@@ -415,8 +694,13 @@ export default class ThemeManager {
                 ) / 3000
             );
 
-        for (let i = 0; i < count; i++) {
+        for (
+            let i = 0;
+            i < count;
+            i++
+        ) {
             this.stars.push({
+
                 x:
                     Math.random() *
                     this.canvas.width,
@@ -426,10 +710,12 @@ export default class ThemeManager {
                     this.canvas.height,
 
                 size:
-                    Math.random() * 1.5 + 0.5,
+                    Math.random() *
+                    1.5 + 0.5,
 
                 speed:
-                    Math.random() * 0.5 + 0.1
+                    Math.random() *
+                    0.5 + 0.1
             });
         }
     }

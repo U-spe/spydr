@@ -1,0 +1,123 @@
+{
+  "themes": {
+    "christmas": {
+      "name": "Christmas",
+      "primary": "#d62828",
+      "secondary": "#16803c",
+      "background": "#0b0f0c",
+      "surface": "#121a14",
+      "text": "#ffffff",
+      "muted": "#b8c7ba",
+      "border": "#245c37",
+      "glow": "rgba(214, 40, 40, 0.4)"
+    },
+
+    "halloween": {
+      "name": "Halloween",
+      "primary": "#ff7a00",
+      "secondary": "#000000",
+      "background": "#080808",
+      "surface": "#141414",
+      "text": "#ffffff",
+      "muted": "#bdbdbd",
+      "border": "#ff7a00",
+      "glow": "rgba(255, 122, 0, 0.4)"
+    },
+
+    "fourth-of-july": {
+      "name": "4th Of July",
+      "primary": "#e63946",
+      "secondary": "#2563eb",
+      "background": "#090b12",
+      "surface": "#121827",
+      "text": "#ffffff",
+      "muted": "#c4c9d4",
+      "border": "#2563eb",
+      "glow": "rgba(37, 99, 235, 0.4)"
+    },
+
+    "valentines": {
+      "name": "Valentines",
+      "primary": "#ef233c",
+      "secondary": "#ff6fae",
+      "background": "#12090d",
+      "surface": "#1d1017",
+      "text": "#ffffff",
+      "muted": "#d9b9c5",
+      "border": "#ff6fae",
+      "glow": "rgba(255, 111, 174, 0.4)"
+    },
+
+    "easter": {
+      "name": "Easter",
+      "primary": "#fff176",
+      "secondary": "#ff9fba",
+      "background": "#17150b",
+      "surface": "#24200f",
+      "text": "#ffffff",
+      "muted": "#ded9b4",
+      "border": "#ff9fba",
+      "glow": "rgba(255, 159, 186, 0.4)"
+    },
+
+    "sunny-day": {
+      "name": "Sunny Day",
+      "primary": "#fff200",
+      "secondary": "#000000",
+      "background": "#111100",
+      "surface": "#202000",
+      "text": "#ffffff",
+      "muted": "#ddddaa",
+      "border": "#fff200",
+      "glow": "rgba(255, 242, 0, 0.45)"
+    },
+
+    "neegy": {
+      "name": "Neegy",
+      "primary": "#00ff66",
+      "secondary": "#000000",
+      "background": "#050805",
+      "surface": "#0c140e",
+      "text": "#ffffff",
+      "muted": "#a9c7b0",
+      "border": "#00ff66",
+      "glow": "rgba(0, 255, 102, 0.4)"
+    },
+
+    "flowstate": {
+      "name": "Flowstate",
+      "primary": "#8b5cf6",
+      "secondary": "#ff6a00",
+      "background": "#0d0814",
+      "surface": "#171022",
+      "text": "#ffffff",
+      "muted": "#c5b9d6",
+      "border": "#ff6a00",
+      "glow": "rgba(139, 92, 246, 0.4)"
+    },
+
+    "ducky": {
+      "name": "Ducky",
+      "primary": "#ff8c00",
+      "secondary": "#ffd600",
+      "background": "#141006",
+      "surface": "#211a09",
+      "text": "#ffffff",
+      "muted": "#d8c99d",
+      "border": "#ffd600",
+      "glow": "rgba(255, 214, 0, 0.4)"
+    },
+
+    "coffee-shop": {
+      "name": "Coffee Shop",
+      "primary": "#c87533",
+      "secondary": "#6f4e37",
+      "background": "#100b08",
+      "surface": "#1c130e",
+      "text": "#ffffff",
+      "muted": "#cbb9aa",
+      "border": "#c87533",
+      "glow": "rgba(200, 117, 51, 0.4)"
+    }
+  }
+}

@@ -7,16 +7,21 @@ All notable changes to spydr are documented here.
 # v2.7.3 - CURRENT
 
 ## 🛠️ Beginning
-- [ ] Starting Scramjet build
-- [ ] Starting venomous build with Wispr LLM
-- [ ] Finishing Hydra Game Files
-- [x] Adding Pizza Edition (To Replace With Totally Science)
-- [x] Fix Game Loader (Set Pizza Edition to first properly)
-- [x] Make Colored Themes Work (Add more themes with custom colors that update on the whole site with one tag)
+- [x] Add More Colored Themes And Cool Stuff
 - [ ] Deploy on Surge.sh and temporarily on B-CDN
 - [ ] Fix Menu Bar (Make it thinner so it doesn't cover items on some pages)
 - [ ] Make a page on Search to embed a custom error message
 - [ ] Add a notice on the Apps page explaining that proxied apps currently don't work
+
+
+# v2.7.2 - PREVIOUS
+
+## 🛠️ Beginning
+- [ ] Starting Scramjet build 
+- [ ] Starting venomous build with Wispr LLM
+- [ ] Finishing Hydra Game Files
+- [x] Adding Pizza Edition (To Replace With Totally Science)
+- [x] Fix Game Loader
 
 ## 🐛 Fixed
 
@@ -25,7 +30,7 @@ All notable changes to spydr are documented here.
 
 ---
 
-# v2.7.1 - PREVIOUS
+# v2.7.1
 
 ## ✨ Added
 
@@ -48,6 +53,7 @@ All notable changes to spydr are documented here.
 
 - [x] Improved game card organization
 - [x] Added Browser section (previously a VM)
+- [x] Move README and all other MD files to md-docs
 
 
 ## 🐛 Fixed

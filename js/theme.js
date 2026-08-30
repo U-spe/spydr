@@ -22,6 +22,7 @@ export default class ThemeManager {
 
         this.activeTheme = null;
         this.cleanupFX = null;
+        this.customGradientFX = null;
 
         this.ready = false;
     }
@@ -39,7 +40,7 @@ export default class ThemeManager {
             const settings = this.kernel.get("settings");
 
             const savedTheme =
-                settings?.get("theme") || "neegy";
+                settings?.get("theme") || "spydr";
 
             await this.applyTheme(savedTheme);
 
@@ -118,6 +119,11 @@ export default class ThemeManager {
      */
 
     async applyTheme(themeName) {
+        if (themeName === "custom") {
+            await this.applyCustomTheme();
+            return;
+        }
+
         let selectedTheme = this.themes[themeName];
 
         if (!selectedTheme) {
@@ -136,6 +142,7 @@ export default class ThemeManager {
         }
 
         this.activeTheme = selectedTheme;
+        this.currentTheme = themeName;
 
         /*
          * Apply the actual color variables.
@@ -157,9 +164,132 @@ export default class ThemeManager {
         /*
          * Apply Theme FX if configured.
          */
-        await this.applyThemeFX(themeName);
+        await this.applyBgStyle(
+            settings?.get("bgStyle") || "stars"
+        );
     }
+    
+    /*
+     * =========================================================
+     * CUSTOM THEME HANDLER
+     * =========================================================
+     */
 
+    async applyCustomTheme() {
+        const settings =
+            this.kernel.get("settings");
+    
+        if (!settings) {
+            return;
+        }
+    
+        const custom =
+            settings.get("customTheme");
+    
+        if (!custom) {
+            return;
+        }
+    
+        const colors = [
+            custom.color1,
+            custom.color2
+        ];
+    
+        if (
+            custom.useColor3 &&
+            custom.color3
+        ) {
+            colors.push(custom.color3);
+        }
+    
+    
+        if (colors.length < 2) {
+            console.warn(
+                "spydr theme // Custom requires at least two colors."
+            );
+    
+            return;
+        }
+    
+    
+        const root =
+            document.documentElement;
+    
+    
+        root.style.setProperty(
+            "--theme-primary",
+            colors[0]
+        );
+    
+        root.style.setProperty(
+            "--theme-secondary",
+            colors[1]
+        );
+    
+        root.style.setProperty(
+            "--theme-background",
+            "#080808"
+        );
+    
+        root.style.setProperty(
+            "--theme-surface",
+            "#111111"
+        );
+    
+        root.style.setProperty(
+            "--theme-text",
+            "#ffffff"
+        );
+    
+        root.style.setProperty(
+            "--theme-muted",
+            "#bdbdbd"
+        );
+    
+        root.style.setProperty(
+            "--theme-border",
+            colors[0]
+        );
+    
+        root.style.setProperty(
+            "--theme-glow",
+            `${colors[0]}66`
+        );
+    
+    
+        root.style.setProperty(
+            "--custom-color-1",
+            colors[0]
+        );
+    
+        root.style.setProperty(
+            "--custom-color-2",
+            colors[1]
+        );
+    
+        root.style.setProperty(
+            "--custom-color-3",
+            colors[2] || colors[0]
+        );
+    
+    
+        document.documentElement.dataset.theme =
+            "custom";
+    
+        document.body.dataset.theme =
+            "custom";
+    
+    
+        this.currentTheme =
+            "custom";
+    
+    
+        await this.applyBgStyle(
+            this.kernel
+                .get("settings")
+                ?.get("bgStyle") || "stars"
+        );
+    }
 
     /*
      * =========================================================
@@ -285,6 +415,82 @@ export default class ThemeManager {
 
     /*
      * =========================================================
+     * BACKGROUND FX & ROUTING
+     * =========================================================
+     */
+    
+    async applyBgStyle(style) {
+        if (style === "theme") {
+
+            const theme =
+                this.currentTheme ||
+                document.documentElement.dataset.theme;
+        
+        
+            // SPYDR THEME FX = STARS
+            if (theme === "spydr") {
+                this.disableCustomGradientFX();
+                if (typeof this.enableStars === "function") this.enableStars();
+                return;
+            }
+        
+        
+            // CUSTOM THEME FX = MOVING GRADIENT
+            if (theme === "custom") {
+                this.enableCustomGradientFX();
+                return;
+            }
+        
+        
+            // Normal image-based Theme FX
+            this.disableCustomGradientFX();
+            await this.applyThemeFX(theme);
+        
+            return;
+        } else {
+            this.disableCustomGradientFX();
+            // Handle regular non-theme backgrounds here if needed
+        }
+    }
+    
+    enableCustomGradientFX() {
+    
+        this.disableCustomGradientFX();
+    
+    
+        const fx =
+            document.createElement("div");
+    
+        fx.id =
+            "custom-gradient-theme-fx";
+    
+    
+        document
+            .getElementById("bg-effects-container")
+            ?.appendChild(fx);
+    
+    
+        this.customGradientFX =
+            fx;
+    }
+    
+    disableCustomGradientFX() {
+    
+        if (this.customGradientFX) {
+            this.customGradientFX.remove();
+            this.customGradientFX = null;
+        }
+    
+        document
+            .getElementById(
+                "custom-gradient-theme-fx"
+            )
+            ?.remove();
+    }
+
+
+    /*
+     * =========================================================
      * THEME FX
      * =========================================================
      */
@@ -306,6 +512,8 @@ export default class ThemeManager {
 
             this.cleanupFX = null;
         }
+        
+        this.disableCustomGradientFX();
 
         const fxConfig = this.themeFX[themeName];
 
@@ -428,7 +636,7 @@ export default class ThemeManager {
      */
 
     async setTheme(themeName) {
-        if (!this.themes[themeName]) {
+        if (!this.themes[themeName] && themeName !== "custom") {
             console.warn(
                 `spydr theme // cannot switch to unknown theme "${themeName}"`
             );
@@ -491,6 +699,8 @@ export default class ThemeManager {
 
             this.cleanupFX = null;
         }
+        
+        this.disableCustomGradientFX();
 
         this.activeTheme = null;
         this.ready = false;

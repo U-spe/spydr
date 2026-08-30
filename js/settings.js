@@ -1,102 +1,253 @@
-// /js/settings.js
+async applyBgStyle(style) {
+    const body = document.body;
 
-export default class SettingsManager {
-    constructor() {
-        this.storageKey = 'spydr_config_matrix';
+    const canvas =
+        document.getElementById("stars-canvas");
 
-        this.state = {
-            autoSave: true,
+    const fog =
+        document.getElementById("fog-overlay");
 
-            theme: "spydr",
-            bgStyle: "stars",
+    // Save body state for CSS
+    body.dataset.bgStyle = style;
 
-            customTheme: {
-                color1: "#7c3aed",
-                color2: "#3f5efb",
-                color3: "#ff4fd8",
-                useColor3: false
-            },
+    // Kill old custom FX
+    this.disableCustomGradientFX();
 
-            panicKey: "`",
-            bossKey: "Escape",
-            devModeKey: "F4",
-            quickSettingsKey: "F9",
-
-            cloakEnabled: false,
-            cloakTarget: "spydr"
-        };
-
-        this.listeners = [];
-    }
-
-    init() {
-        const stored =
-            localStorage.getItem(this.storageKey);
-
-        if (!stored) return;
-
+    // Kill image Theme FX
+    if (this.cleanupFX) {
         try {
-            this.state = {
-                ...this.state,
-                ...JSON.parse(stored)
-            };
-
-            // Kill old invalid theme values
-            if (
-                !this.state.theme ||
-                this.state.theme === 'dark' ||
-                this.state.theme === 'light' ||
-                this.state.theme === 'spydr-neon'
-            ) {
-                this.state.theme = 'spydr';
-                this.save();
-            }
-
+            await this.cleanupFX();
         } catch (error) {
-            console.error(
-                'spydr settings // Failed to load settings:',
+            console.warn(
+                "spydr theme // FX cleanup failed:",
                 error
             );
         }
+
+        this.cleanupFX = null;
     }
 
-    get(key) {
-        return this.state[key];
+    // Stop stars
+    this.stopStars?.();
+
+    // Reset layers
+    if (canvas) {
+        canvas.style.display = "none";
     }
 
-    set(key, value) {
-        this.state[key] = value;
+    if (fog) {
+        fog.style.opacity = "0";
+    }
 
-        this.notify(
-            key,
-            value
-        );
 
-        if (this.state.autoSave) {
-            this.save();
+    // =====================================================
+    // REGULAR spydr
+    // =====================================================
+
+    if (style === "none") {
+        return;
+    }
+
+
+    // =====================================================
+    // STARS
+    // =====================================================
+
+    if (style === "stars") {
+        this.enableStars();
+        return;
+    }
+
+
+    // =====================================================
+    // FOG
+    // =====================================================
+
+    if (style === "fog") {
+        if (fog) {
+            fog.style.opacity = "1";
         }
+
+        return;
     }
 
-    save() {
-        localStorage.setItem(
-            this.storageKey,
-            JSON.stringify(this.state)
+
+    // =====================================================
+    // GRADIENT
+    // CSS handles body[data-bg-style="gradient"]
+    // =====================================================
+
+    if (style === "gradient") {
+        return;
+    }
+
+
+    // =====================================================
+    // THEME FX
+    // =====================================================
+
+    if (style === "theme") {
+
+        const theme =
+            this.currentTheme ||
+            document.documentElement.dataset.theme ||
+            "spydr";
+
+
+        // spydr = STARS
+        if (theme === "spydr") {
+            this.enableStars();
+            return;
+        }
+
+
+        // CUSTOM = MOVING CUSTOM GRADIENT
+        if (theme === "custom") {
+            this.enableCustomGradientFX();
+            return;
+        }
+
+
+        // EVERYTHING ELSE = IMAGE PARTICLES
+        await this.applyThemeFX(theme);
+    }
+}
+
+enableStars() {
+    const canvas =
+        document.getElementById("stars-canvas");
+
+    if (!canvas) {
+        console.warn(
+            "spydr theme // stars canvas missing"
         );
+        return;
     }
 
-    subscribe(callback) {
-        if (typeof callback !== 'function') return;
+    this.stopStars();
 
-        this.listeners.push(callback);
-    }
+    canvas.style.display = "block";
 
-    notify(key, value) {
-        this.listeners.forEach(callback => {
-            callback(
-                key,
-                value,
-                this.state
-            );
+    const ctx =
+        canvas.getContext("2d");
+
+    if (!ctx) return;
+
+    let width;
+    let height;
+
+    const stars = [];
+
+    const resize = () => {
+        width = canvas.width =
+            window.innerWidth;
+
+        height = canvas.height =
+            window.innerHeight;
+    };
+
+    resize();
+
+    for (let i = 0; i < 160; i++) {
+        stars.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            size: Math.random() * 1.7 + 0.3,
+            speed: Math.random() * 0.25 + 0.05,
+            alpha: Math.random() * 0.7 + 0.2
         });
+    }
+
+    const draw = () => {
+        ctx.clearRect(
+            0,
+            0,
+            width,
+            height
+        );
+
+        for (const star of stars) {
+            star.y += star.speed;
+
+            if (star.y > height) {
+                star.y = 0;
+                star.x =
+                    Math.random() * width;
+            }
+
+            ctx.globalAlpha =
+                star.alpha;
+
+            ctx.fillStyle =
+                "#ffffff";
+
+            ctx.beginPath();
+
+            ctx.arc(
+                star.x,
+                star.y,
+                star.size,
+                0,
+                Math.PI * 2
+            );
+
+            ctx.fill();
+        }
+
+        ctx.globalAlpha = 1;
+
+        this.starAnimationFrame =
+            requestAnimationFrame(draw);
+    };
+
+    window.addEventListener(
+        "resize",
+        resize
+    );
+
+    this.starResizeHandler =
+        resize;
+
+    draw();
+}
+
+stopStars() {
+    if (this.starAnimationFrame) {
+        cancelAnimationFrame(
+            this.starAnimationFrame
+        );
+
+        this.starAnimationFrame =
+            null;
+    }
+
+    if (this.starResizeHandler) {
+        window.removeEventListener(
+            "resize",
+            this.starResizeHandler
+        );
+
+        this.starResizeHandler =
+            null;
+    }
+
+    const canvas =
+        document.getElementById(
+            "stars-canvas"
+        );
+
+    if (canvas) {
+        const ctx =
+            canvas.getContext("2d");
+
+        ctx?.clearRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+        canvas.style.display =
+            "none";
     }
 }

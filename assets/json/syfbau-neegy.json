@@ -1,5 +1,17 @@
 {
   "themes": {
+    "spydr": {
+      "name": "Spydr",
+      "primary": "#ffffff",
+      "secondary": "#7c3aed",
+      "background": "#090909",
+      "surface": "#111111",
+      "text": "#ffffff",
+      "muted": "#bdbdbd",
+      "border": "#2b2b2b",
+      "glow": "rgba(124, 58, 237, 0.45)"
+    },
+
     "christmas": {
       "name": "Christmas",
       "primary": "#d62828",

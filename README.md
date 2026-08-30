@@ -20,7 +20,7 @@
 
 # README HAS MOVED
 
-Your probably looking for the README, hence you scrolled so far. Well it got moved with the most recent update.
+Your probably looking for the README, hence you scrolled so far. Well it got moved with the most recent update (that happened like i think in 2.7 or 2.6?).
 
 To find the README, and other MD files, view the [MD docs](/md-docs/README.md) page. (It also included our license!)
 

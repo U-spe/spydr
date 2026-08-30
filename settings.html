@@ -316,6 +316,28 @@
 
 
                     <div class="radio-group">
+                    
+                        <label class="radio-tile">
+                            <input
+                                type="radio"
+                                name="ui-theme"
+                                value="spydr"
+                            >
+                            <span class="tile-label">
+                                Spydr
+                            </span>
+                        </label>
+                        
+                        <label class="radio-tile">
+                            <input
+                                type="radio"
+                                name="ui-theme"
+                                value="custom"
+                            >
+                            <span class="tile-label">
+                                Custom
+                            </span>
+                        </label>
 
 
                         <label class="radio-tile">
@@ -437,6 +459,78 @@
                             </span>
                         </label>
 
+                    </div>
+                    
+                    <div id="custom-theme-panel" hidden>
+
+                        <h3 style="margin-top: 22px;">
+                            Custom Theme Colors
+                        </h3>
+                    
+                        <p class="custom-theme-help">
+                            Choose at least 2 colors. You can use up to 3.
+                        </p>
+                    
+                        <div id="custom-color-wheel"></div>
+                    
+                    
+                        <div class="custom-color-slots">
+                    
+                            <button
+                                type="button"
+                                class="custom-color-slot active"
+                                data-color-slot="1"
+                            >
+                                <span>Color 1</span>
+                                <span
+                                    class="custom-color-preview"
+                                    id="custom-preview-1"
+                                ></span>
+                            </button>
+                    
+                    
+                            <button
+                                type="button"
+                                class="custom-color-slot"
+                                data-color-slot="2"
+                            >
+                                <span>Color 2</span>
+                                <span
+                                    class="custom-color-preview"
+                                    id="custom-preview-2"
+                                ></span>
+                            </button>
+                    
+                    
+                            <button
+                                type="button"
+                                class="custom-color-slot"
+                                data-color-slot="3"
+                            >
+                                <span>Color 3</span>
+                                <span
+                                    class="custom-color-preview"
+                                    id="custom-preview-3"
+                                ></span>
+                            </button>
+                    
+                        </div>
+                    
+                    
+                        <label class="custom-color-third-toggle">
+                    
+                            <input
+                                type="checkbox"
+                                id="custom-color-3-enabled"
+                            >
+                    
+                            Use third color
+                    
+                        </label>
+                    
+                    
+                        <div class="custom-theme-preview"></div>
+                        
                     </div>
 
                 </div>
@@ -833,6 +927,8 @@
      CORE
 ========================================================== -->
 
+<script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+
 <script
     type="module"
     src="/js/global.js"
@@ -841,5 +937,206 @@
 <script
     src="/js/globalmenu.js"
 ></script>
+
+<script>
+window.addEventListener("load", () => {
+
+    const waitForSpydr = setInterval(() => {
+
+        const settings =
+            window.SpydrKernel?.get?.("settings");
+
+        const theme =
+            window.SpydrKernel?.get?.("theme");
+
+        if (!settings || !theme || !window.iro) {
+            return;
+        }
+
+        clearInterval(waitForSpydr);
+
+
+        const customPanel =
+            document.getElementById(
+                "custom-theme-panel"
+            );
+
+        const themeRadios =
+            document.querySelectorAll(
+                'input[name="ui-theme"]'
+            );
+
+
+        let custom =
+            settings.get("customTheme") || {
+                color1: "#7c3aed",
+                color2: "#3f5efb",
+                color3: "#ff4fd8",
+                useColor3: false
+            };
+
+
+        let activeSlot = 1;
+
+
+        const picker =
+            new iro.ColorPicker(
+                "#custom-color-wheel",
+                {
+                    width: 220,
+                    color: custom.color1
+                }
+            );
+
+
+        function updatePreviews() {
+
+            document.getElementById(
+                "custom-preview-1"
+            ).style.background =
+                custom.color1;
+
+
+            document.getElementById(
+                "custom-preview-2"
+            ).style.background =
+                custom.color2;
+
+
+            document.getElementById(
+                "custom-preview-3"
+            ).style.background =
+                custom.color3;
+        }
+
+
+        async function saveCustom() {
+
+            settings.set(
+                "customTheme",
+                custom
+            );
+
+
+            if (
+                settings.get("theme") ===
+                "custom"
+            ) {
+                await theme.applyTheme(
+                    "custom"
+                );
+            }
+        }
+
+
+        document
+            .querySelectorAll(
+                ".custom-color-slot"
+            )
+            .forEach(button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        activeSlot =
+                            Number(
+                                button.dataset.colorSlot
+                            );
+
+
+                        document
+                            .querySelectorAll(
+                                ".custom-color-slot"
+                            )
+                            .forEach(btn =>
+                                btn.classList.remove(
+                                    "active"
+                                )
+                            );
+
+
+                        button.classList.add(
+                            "active"
+                        );
+
+
+                        picker.color.hexString =
+                            custom[
+                                `color${activeSlot}`
+                            ];
+                    }
+                );
+            });
+
+
+        picker.on(
+            "color:change",
+            color => {
+
+                custom[
+                    `color${activeSlot}`
+                ] =
+                    color.hexString;
+
+                updatePreviews();
+
+                saveCustom();
+            }
+        );
+
+
+        const thirdColor =
+            document.getElementById(
+                "custom-color-3-enabled"
+            );
+
+
+        thirdColor.checked =
+            custom.useColor3;
+
+
+        thirdColor.addEventListener(
+            "change",
+            () => {
+
+                custom.useColor3 =
+                    thirdColor.checked;
+
+                saveCustom();
+            }
+        );
+
+
+        function updatePanel() {
+
+            const selected =
+                document.querySelector(
+                    'input[name="ui-theme"]:checked'
+                )?.value;
+
+
+            customPanel.hidden =
+                selected !== "custom";
+        }
+
+
+        themeRadios.forEach(radio => {
+
+            radio.addEventListener(
+                "change",
+                updatePanel
+            );
+        });
+
+
+        updatePreviews();
+
+        updatePanel();
+
+    }, 100);
+
+});
+</script>
 </body>
 </html>

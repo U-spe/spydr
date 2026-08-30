@@ -7,22 +7,23 @@ export default class SettingsManager {
         this.state = {
             autoSave: true,
 
-            // Theme
-            theme: 'neegy',
-            accent: 'blue',
+            theme: "spydr",
+            bgStyle: "stars",
 
-            // Background FX
-            bgStyle: 'stars',
+            customTheme: {
+                color1: "#7c3aed",
+                color2: "#3f5efb",
+                color3: "#ff4fd8",
+                useColor3: false
+            },
 
-            // Hotkeys
-            panicKey: '`',
-            bossKey: 'Escape',
-            devModeKey: 'F4',
-            quickSettingsKey: 'F9',
+            panicKey: "`",
+            bossKey: "Escape",
+            devModeKey: "F4",
+            quickSettingsKey: "F9",
 
-            // Cloaking
             cloakEnabled: false,
-            cloakTarget: 'spydr'
+            cloakTarget: "spydr"
         };
 
         this.listeners = [];
@@ -47,7 +48,7 @@ export default class SettingsManager {
                 this.state.theme === 'light' ||
                 this.state.theme === 'spydr-neon'
             ) {
-                this.state.theme = 'neegy';
+                this.state.theme = 'spydr';
                 this.save();
             }
 

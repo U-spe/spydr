@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,6 +21,8 @@
 <link rel="stylesheet" href="/css/settings.css">
 <link rel="stylesheet" href="/css/menu.css">
 
+<!-- Include marked.js for markdown rendering -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 </head>
 
@@ -852,87 +853,8 @@
 
                 <div class="changelog-scroll">
 
-                    <div class="log-entry">
-
-                        <h4>
-                            v2.7.3 - CURRENT
-                        </h4>
-
-                        <p>
-                            - Add More Colored Themes And Cool Stuff
-                        </p>
-
-                        <p>
-                            - Deploy on Surge.sh and temporarily on B-CDN
-                        </p>
-
-                        <p>
-                            - Fix Menu Bar (Make it thinner so it doesn't cover items on some pages)
-                        </p>
-
-                        <p>
-                            - Make a page on Search to embed a custom error message
-                        </p>
-
-                        <p>
-                            - Add a notice on the Apps page explaining that proxied apps currently don't work
-                        </p>
-
-                    </div>
-
-
-                    <div class="log-entry">
-
-                        <h4>
-                            v2.7.2 - PREVIOUS (STILL WORKING ON!)
-                        </h4>
-
-                        <p>
-                            - Starting Scramjet build 
-                        </p>
-
-                        <p>
-                            - Starting venomous build with Wispr LLM
-                        </p>
-
-                        <p>
-                            - Finishing Hydra Game Files
-                        </p>
-
-                        <p>
-                            - Adding Pizza Edition (To Replace With Totally Science)
-                        </p>
-
-                        <p>
-                            - Fix Game Loader
-                        </p>
-
-                        <p>
-                            - Fixed JSON (MANY TIMES ITS NOT EVEN FUNNY)
-                        </p>
-
-                    </div>
-
-
-                    <div class="log-entry">
-
-                        <h4>
-                            v2.7.0 // Integration & Expansion Update
-                        </h4>
-
-                        <p>
-                            - Redesigned the UI into a cleaner, minimal grayscale environment
-                        </p>
-
-                        <p>
-                            - Started to build Venomous, our AI.
-                        </p>
-
-                        <p>
-                            - Remade chat features.
-                        </p>
-
-                    </div>
+                    <!-- Markdown Render Container -->
+                    <div id="changelog"></div>
 
                 </div>
 
@@ -966,6 +888,17 @@
 <script
     src="/js/globalmenu.js"
 ></script>
+
+<script>
+    // Render the Markdown into the HTML div
+    const markdownText = `
+# Changelog
+- [x] Fixed a bug with U+2611
+- [ ] Upcoming feature
+    `;
+
+    document.getElementById('changelog').innerHTML = marked.parse(markdownText);
+</script>
 
 <script>
 window.addEventListener("load", () => {

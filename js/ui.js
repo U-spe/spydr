@@ -53,6 +53,12 @@ export default class UIManager {
 
         this.dom.themeRadios?.forEach(radio => {
             radio.addEventListener('change', (e) => {
+                this.settings.set('bgStyle', 'theme');
+
+                if (this.dom.bgStyleSelect) {
+                    this.dom.bgStyleSelect.value = 'theme';
+                }
+
                 this.settings.set('theme', e.target.value);
             });
         });
@@ -150,6 +156,10 @@ export default class UIManager {
                 if (themeMgr) themeMgr.applyAccent(val);
                 break;
             case 'bgStyle':
+                if (this.dom.bgStyleSelect) {
+                    this.dom.bgStyleSelect.value = val;
+                }
+
                 if (themeMgr) {
                     themeMgr.applyBgStyle(val).catch(error => {
                         console.error('spydr ui // background update failed:', error);

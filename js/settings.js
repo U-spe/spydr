@@ -50,14 +50,8 @@ export default class SettingsManager {
         try {
             const parsed = JSON.parse(stored);
 
-            if (
-                !parsed ||
-                typeof parsed !== "object" ||
-                Array.isArray(parsed)
-            ) {
-                throw new TypeError(
-                    "Stored settings must be an object."
-                );
+            if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+                throw new TypeError("Stored settings must be an object.");
             }
 
             this.state = {
@@ -71,11 +65,7 @@ export default class SettingsManager {
 
             this.migrateLegacyValues();
         } catch (error) {
-            console.error(
-                "spydr settings // failed to load settings:",
-                error
-            );
-
+            console.error("spydr settings // failed to load settings:", error);
             this.state = this.createDefaultState();
         }
     }
@@ -87,10 +77,7 @@ export default class SettingsManager {
             "spydr-neon"
         ]);
 
-        if (
-            !this.state.theme ||
-            legacyThemes.has(this.state.theme)
-        ) {
+        if (!this.state.theme || legacyThemes.has(this.state.theme)) {
             this.state.theme = "spydr";
         }
 
@@ -132,10 +119,7 @@ export default class SettingsManager {
             this.notify(key, value);
         }
 
-        if (
-            key === "autoSave" ||
-            this.state.autoSave
-        ) {
+        if (key === "autoSave" || this.state.autoSave) {
             this.save();
         }
 
@@ -149,10 +133,7 @@ export default class SettingsManager {
                 JSON.stringify(this.state)
             );
         } catch (error) {
-            console.error(
-                "spydr settings // failed to save settings:",
-                error
-            );
+            console.error("spydr settings // failed to save settings:", error);
         }
     }
 
@@ -175,10 +156,7 @@ export default class SettingsManager {
             try {
                 callback(key, value, this.state);
             } catch (error) {
-                console.error(
-                    "spydr settings // listener failed:",
-                    error
-                );
+                console.error("spydr settings // listener failed:", error);
             }
         }
     }

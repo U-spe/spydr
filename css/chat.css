@@ -56,7 +56,6 @@ body {
   width: 100vw;
   height: 100vh;
 
-  z-index: -1;
   pointer-events: none;
 
   overflow: hidden;
@@ -100,6 +99,16 @@ body {
 
 body[data-bg-style="fog"] #fog-overlay {
   opacity: 1;
+}
+
+#theme-gradient-background,
+#theme-fx-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
 }
 
 @keyframes spydrFogMove {
@@ -725,7 +734,11 @@ body[data-bg-style="fog"] #fog-overlay {
     padding: 10px 5px;
   }
 
-  .channel span:not(.channel-icon) {
+  .channel-label {
+    display: none;
+  }
+
+  .chat-desc {
     display: none;
   }
 }

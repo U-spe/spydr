@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>Changelog</title>
 </head>
 <body>
-&#x2611;
+
+    <!-- This is where your Markdown will be rendered -->
+    <div id="changelog"></div>
+
+    <!-- Include the marked.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <script>
+        // Put your Markdown text right here
+        const markdownText = `
+# Changelog
+- [x] Fixed a bug with U+2611
+- [ ] Upcoming feature
+        `;
+
+        // Render the Markdown into the HTML div
+        document.getElementById('changelog').innerHTML = marked.parse(markdownText);
+    </script>
 </body>
 </html>

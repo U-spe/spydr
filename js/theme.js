@@ -1,486 +1,766 @@
 // /js/theme.js
-//
-// spydr Theme Manager
-// Theme definitions:
-//   /assets/json/syfbau-neegy.json
-//
-// Theme FX definitions:
-//   /assets/json/json.json
-//
-// Rendering:
-//   /js/global.themes.js
 
 export default class ThemeManager {
     constructor(kernel) {
         this.kernel = kernel;
 
-        this.themeConfigPath = "/assets/json/syfbau-neegy.json";
-        this.themeFXConfigPath = "/assets/json/json.json";
+        this.themeConfigPath =
+            "/assets/json/syfbau-neegy.json";
+
+        this.themeFXConfigPath =
+            "/assets/json/json.json";
 
         this.themes = {};
         this.themeFX = {};
 
         this.activeTheme = null;
+        this.currentTheme = null;
         this.cleanupFX = null;
-        this.customGradientFX = null;
 
+        this.customGradientFX = null;
+        this.customGradientAnimation = null;
+
+        this.starAnimationFrame = null;
+        this.starResizeHandler = null;
+
+        this.fxRequestId = 0;
         this.ready = false;
     }
 
-    /*
-     * =========================================================
-     * INITIALIZATION
-     * =========================================================
-     */
-
     async init() {
-        try {
-            await this.loadThemeData();
+        await this.loadThemeData();
 
-            const settings = this.kernel.get("settings");
+        const settings =
+            this.kernel.get("settings");
 
-            const savedTheme =
-                settings?.get("theme") || "spydr";
+        let savedTheme =
+            settings?.get("theme") || "spydr";
 
-            await this.applyTheme(savedTheme);
+        if (
+            savedTheme !== "custom" &&
+            !this.themes[savedTheme]
+        ) {
+            savedTheme = "spydr";
 
-            this.ready = true;
-
-            console.log(
-                `spydr theme // ${this.activeTheme?.name || savedTheme} loaded`
+            settings?.set(
+                "theme",
+                savedTheme,
+                { notify: false }
             );
-
-        } catch (error) {
-            console.error(
-                "spydr theme // failed to initialize:",
-                error
-            );
-
-            // Fall back to Neegy if the JSON files fail.
-            try {
-                if (this.themes.neegy) {
-                    this.applyThemeColors(
-                        "neegy",
-                        this.themes.neegy
-                    );
-                }
-            } catch (fallbackError) {
-                console.error(
-                    "spydr theme // fallback failed:",
-                    fallbackError
-                );
-            }
         }
+
+        await this.applyTheme(savedTheme);
+
+        this.ready = true;
+
+        console.log(
+            `spydr theme // ${
+                this.activeTheme?.name || savedTheme
+            } loaded`
+        );
     }
 
-
-    /*
-     * =========================================================
-     * LOAD JSON CONFIGURATION
-     * =========================================================
-     */
-
     async loadThemeData() {
-        const [themeResponse, fxResponse] = await Promise.all([
-            fetch(this.themeConfigPath),
-            fetch(this.themeFXConfigPath)
-        ]);
+        const [themeResponse, fxResponse] =
+            await Promise.all([
+                fetch(this.themeConfigPath),
+                fetch(this.themeFXConfigPath)
+            ]);
 
         if (!themeResponse.ok) {
             throw new Error(
-                `Failed to load theme configuration: ${themeResponse.status}`
+                `Failed to load theme configuration: ${
+                    themeResponse.status
+                }`
             );
         }
 
-        if (!fxResponse.ok) {
-            throw new Error(
-                `Failed to load theme FX configuration: ${fxResponse.status}`
-            );
-        }
+        const themeData =
+            await themeResponse.json();
 
-        const themeData = await themeResponse.json();
-        const fxData = await fxResponse.json();
+        this.themes =
+            themeData?.themes || {};
 
-        this.themes = themeData?.themes || {};
-        this.themeFX = fxData?.themeFX || {};
-
-        if (Object.keys(this.themes).length === 0) {
+        if (
+            Object.keys(this.themes).length === 0
+        ) {
             throw new Error(
                 "No themes were found in syfbau-neegy.json"
             );
         }
+
+        if (fxResponse.ok) {
+            try {
+                const fxData =
+                    await fxResponse.json();
+
+                this.themeFX =
+                    fxData?.themeFX || {};
+            } catch (error) {
+                this.themeFX = {};
+
+                console.warn(
+                    "spydr theme // invalid FX configuration:",
+                    error
+                );
+            }
+        } else {
+            this.themeFX = {};
+
+            console.warn(
+                `spydr theme // FX configuration unavailable: ${
+                    fxResponse.status
+                }`
+            );
+        }
     }
-
-
-    /*
-     * =========================================================
-     * APPLY THEME
-     * =========================================================
-     */
 
     async applyTheme(themeName) {
         if (themeName === "custom") {
             await this.applyCustomTheme();
-            return;
+            return true;
         }
 
-        let selectedTheme = this.themes[themeName];
+        let selectedTheme =
+            this.themes[themeName];
 
         if (!selectedTheme) {
             console.warn(
-                `spydr theme // unknown theme "${themeName}", using neegy`
+                `spydr theme // unknown theme "${
+                    themeName
+                }", using spydr`
             );
 
-            themeName = "neegy";
-            selectedTheme = this.themes[themeName];
+            themeName = "spydr";
+            selectedTheme =
+                this.themes.spydr;
         }
 
         if (!selectedTheme) {
             throw new Error(
-                "Neegy theme is unavailable."
+                "The built-in Spydr theme is unavailable."
             );
         }
 
         this.activeTheme = selectedTheme;
         this.currentTheme = themeName;
 
-        /*
-         * Apply the actual color variables.
-         */
         this.applyThemeColors(
             themeName,
             selectedTheme
         );
 
-        /*
-         * Save the selected theme.
-         */
-        const settings = this.kernel.get("settings");
+        const settings =
+            this.kernel.get("settings");
 
-        if (settings) {
-            settings.set("theme", themeName);
-        }
-
-        /*
-         * Apply Theme FX if configured.
-         */
         await this.applyBgStyle(
-            settings?.get("bgStyle") || "stars"
+            settings?.get("bgStyle") ||
+            "stars"
         );
+
+        return true;
     }
-    
-    /*
-     * =========================================================
-     * CUSTOM THEME HANDLER
-     * =========================================================
-     */
 
     async applyCustomTheme() {
         const settings =
             this.kernel.get("settings");
-    
-        if (!settings) {
-            return;
-        }
-    
-        const custom =
-            settings.get("customTheme");
-    
-        if (!custom) {
-            return;
-        }
-    
-        const colors = [
-            custom.color1,
-            custom.color2
-        ];
-    
-        if (
-            custom.useColor3 &&
-            custom.color3
-        ) {
-            colors.push(custom.color3);
-        }
-    
-    
-        if (colors.length < 2) {
-            console.warn(
-                "spydr theme // Custom requires at least two colors."
-            );
-    
-            return;
-        }
-    
-    
+
+        const savedCustom =
+            settings?.get("customTheme") || {};
+
+        const color1 =
+            savedCustom.color1 || "#7c3aed";
+
+        const color2 =
+            savedCustom.color2 || "#3f5efb";
+
+        const color3 =
+            savedCustom.color3 || "#ff4fd8";
+
+        const useColor3 =
+            Boolean(savedCustom.useColor3);
+
+        const customTheme = {
+            name: "Custom",
+            primary: color1,
+            secondary: color2,
+            background: "#080808",
+            surface: "#111111",
+            text: "#ffffff",
+            muted: "#bdbdbd",
+            border: color1,
+            glow: this.colorWithAlpha(
+                color1,
+                0.4
+            )
+        };
+
+        this.activeTheme = customTheme;
+        this.currentTheme = "custom";
+
+        this.applyThemeColors(
+            "custom",
+            customTheme
+        );
+
         const root =
             document.documentElement;
-    
-    
-        root.style.setProperty(
-            "--theme-primary",
-            colors[0]
-        );
-    
-        root.style.setProperty(
-            "--theme-secondary",
-            colors[1]
-        );
-    
-        root.style.setProperty(
-            "--theme-background",
-            "#080808"
-        );
-    
-        root.style.setProperty(
-            "--theme-surface",
-            "#111111"
-        );
-    
-        root.style.setProperty(
-            "--theme-text",
-            "#ffffff"
-        );
-    
-        root.style.setProperty(
-            "--theme-muted",
-            "#bdbdbd"
-        );
-    
-        root.style.setProperty(
-            "--theme-border",
-            colors[0]
-        );
-    
-        root.style.setProperty(
-            "--theme-glow",
-            `${colors[0]}66`
-        );
-    
-    
+
         root.style.setProperty(
             "--custom-color-1",
-            colors[0]
+            color1
         );
-    
+
         root.style.setProperty(
             "--custom-color-2",
-            colors[1]
+            color2
         );
-    
+
         root.style.setProperty(
             "--custom-color-3",
-            colors[2] || colors[0]
+            useColor3 ? color3 : color1
         );
-    
-    
-        document.documentElement.dataset.theme =
-            "custom";
-    
-        document.body.dataset.theme =
-            "custom";
-    
-    
-        this.currentTheme =
-            "custom";
-    
-    
+
         await this.applyBgStyle(
-            this.kernel
-                .get("settings")
-                ?.get("bgStyle") || "stars"
+            settings?.get("bgStyle") ||
+            "stars"
         );
+
+        return true;
     }
 
-    /*
-     * =========================================================
-     * CSS VARIABLE INJECTION
-     * =========================================================
-     */
+    colorWithAlpha(color, alpha) {
+        const hex =
+            String(color).trim();
+
+        const match =
+            /^#([\da-f]{2})([\da-f]{2})([\da-f]{2})$/i
+                .exec(hex);
+
+        if (!match) {
+            return `color-mix(
+                in srgb,
+                ${color} ${alpha * 100}%,
+                transparent
+            )`;
+        }
+
+        const red =
+            parseInt(match[1], 16);
+
+        const green =
+            parseInt(match[2], 16);
+
+        const blue =
+            parseInt(match[3], 16);
+
+        return `rgba(
+            ${red},
+            ${green},
+            ${blue},
+            ${alpha}
+        )`;
+    }
 
     applyThemeColors(themeName, theme) {
-        const root = document.documentElement;
+        const root =
+            document.documentElement;
 
-        root.style.setProperty(
-            "--theme-primary",
-            theme.primary
-        );
+        const variables = {
+            "--theme-primary":
+                theme.primary,
 
-        root.style.setProperty(
-            "--theme-secondary",
-            theme.secondary
-        );
+            "--theme-secondary":
+                theme.secondary,
 
-        root.style.setProperty(
-            "--theme-background",
-            theme.background
-        );
+            "--theme-background":
+                theme.background,
 
-        root.style.setProperty(
-            "--theme-surface",
-            theme.surface
-        );
+            "--theme-surface":
+                theme.surface,
 
-        root.style.setProperty(
-            "--theme-text",
-            theme.text
-        );
+            "--theme-text":
+                theme.text,
 
-        root.style.setProperty(
-            "--theme-muted",
-            theme.muted
-        );
+            "--theme-muted":
+                theme.muted,
 
-        root.style.setProperty(
-            "--theme-border",
-            theme.border
-        );
+            "--theme-border":
+                theme.border,
 
-        root.style.setProperty(
-            "--theme-glow",
-            theme.glow
-        );
+            "--theme-glow":
+                theme.glow,
 
-        /*
-         * Generic aliases.
-         *
-         * These allow existing Spydr CSS files to gradually
-         * adopt the new theme system without needing every
-         * stylesheet rewritten immediately.
-         */
+            "--primary-color":
+                theme.primary,
 
-        root.style.setProperty(
-            "--accent-blue",
-            theme.primary
-        );
+            "--secondary-color":
+                theme.secondary,
 
-        root.style.setProperty(
-            "--accent-purple",
-            theme.secondary
-        );
+            "--background-color":
+                theme.background,
 
-        root.style.setProperty(
-            "--bg-primary",
-            theme.background
-        );
+            "--surface-color":
+                theme.surface,
 
-        root.style.setProperty(
-            "--card-bg",
-            theme.surface
-        );
+            "--text-color":
+                theme.text,
 
-        root.style.setProperty(
-            "--text-primary",
-            theme.text
-        );
+            "--muted-color":
+                theme.muted,
 
-        root.style.setProperty(
-            "--text-secondary",
-            theme.muted
-        );
+            "--border-color":
+                theme.border,
 
-        root.style.setProperty(
-            "--border-color",
-            theme.border
-        );
+            "--accent-color":
+                theme.primary,
 
-        /*
-         * Theme identification.
-         *
-         * Useful for CSS selectors like:
-         *
-         * html[data-spydr-theme="christmas"] {}
-         */
+            "--accent-glow":
+                theme.glow,
 
-        root.dataset.spydrTheme = themeName;
+            "--accent-blue":
+                theme.primary,
 
-        /*
-         * Also expose the theme on body.
-         * This makes theme-specific CSS easier later.
-         */
+            "--accent-purple":
+                theme.secondary,
+
+            "--bg-primary":
+                theme.background,
+
+            "--bg-secondary":
+                theme.surface,
+
+            "--card-bg":
+                theme.surface,
+
+            "--text-primary":
+                theme.text,
+
+            "--text-secondary":
+                theme.muted,
+
+            "--text-white":
+                theme.text,
+
+            "--text-gray":
+                theme.muted
+        };
+
+        for (
+            const [name, value]
+            of Object.entries(variables)
+        ) {
+            root.style.setProperty(
+                name,
+                value
+            );
+        }
+
+        root.dataset.theme =
+            themeName;
+
+        root.dataset.spydrTheme =
+            themeName;
 
         if (document.body) {
-            document.body.dataset.spydrTheme = themeName;
+            document.body.dataset.theme =
+                themeName;
+
+            document.body.dataset.spydrTheme =
+                themeName;
+
+            document.body.style.backgroundColor =
+                theme.background;
         }
-
-        /*
-         * Direct background fallback.
-         *
-         * Existing pages can still override this if needed.
-         */
-
-        document.body.style.backgroundColor =
-            theme.background;
     }
 
+    async applyBgStyle(requestedStyle) {
+        const allowedStyles = new Set([
+            "none",
+            "stars",
+            "fog",
+            "gradient",
+            "theme"
+        ]);
 
-    /*
-     * =========================================================
-     * BACKGROUND FX & ROUTING
-     * =========================================================
-     */
-    
-    async applyBgStyle(style) {
-        if (style === "theme") {
+        const style =
+            allowedStyles.has(requestedStyle)
+                ? requestedStyle
+                : "stars";
 
-            const theme =
-                this.currentTheme ||
-                document.documentElement.dataset.theme;
-        
-        
-            // SPYDR THEME FX = STARS
-            if (theme === "spydr") {
-                this.disableCustomGradientFX();
-                if (typeof this.enableStars === "function") this.enableStars();
-                return;
-            }
-        
-        
-            // CUSTOM THEME FX = MOVING GRADIENT
-            if (theme === "custom") {
-                this.enableCustomGradientFX();
-                return;
-            }
-        
-        
-            // Normal image-based Theme FX
-            this.disableCustomGradientFX();
-            await this.applyThemeFX(theme);
-        
+        const requestId =
+            ++this.fxRequestId;
+
+        document.body.dataset.bgStyle =
+            style;
+
+        await this.cleanupBackgroundFX();
+
+        if (
+            requestId !==
+            this.fxRequestId
+        ) {
             return;
-        } else {
-            this.disableCustomGradientFX();
-            // Handle regular non-theme backgrounds here if needed
         }
+
+        if (
+            style === "none" ||
+            style === "fog" ||
+            style === "gradient"
+        ) {
+            return;
+        }
+
+        if (style === "stars") {
+            const starsEnabled =
+                this.kernel
+                    .get("settings")
+                    ?.get("starsEnabled") !== false;
+
+            if (starsEnabled) {
+                this.enableStars();
+            }
+
+            return;
+        }
+
+        if (
+            this.currentTheme === "spydr"
+        ) {
+            this.enableStars();
+            return;
+        }
+
+        if (
+            this.currentTheme === "custom"
+        ) {
+            this.enableCustomGradientFX();
+            return;
+        }
+
+        await this.applyThemeFX(
+            this.currentTheme,
+            requestId
+        );
     }
-    
-    enableCustomGradientFX() {
-    
+
+    async cleanupBackgroundFX() {
+        this.stopStars();
         this.disableCustomGradientFX();
-    
-    
-        const fx =
-            document.createElement("div");
-    
-        fx.id =
-            "custom-gradient-theme-fx";
-    
-    
-        document
-            .getElementById("bg-effects-container")
-            ?.appendChild(fx);
-    
-    
-        this.customGradientFX =
-            fx;
-    }
-    
-    disableCustomGradientFX() {
-    
-        if (this.customGradientFX) {
-            this.customGradientFX.remove();
-            this.customGradientFX = null;
+
+        const cleanup =
+            this.cleanupFX;
+
+        this.cleanupFX = null;
+
+        if (
+            typeof cleanup === "function"
+        ) {
+            try {
+                await cleanup();
+            } catch (error) {
+                console.warn(
+                    "spydr theme // FX cleanup failed:",
+                    error
+                );
+            }
         }
-    
+
+        document
+            .querySelectorAll(
+                ".spydr-theme-fx"
+            )
+            .forEach(element =>
+                element.remove()
+            );
+    }
+
+    enableStars() {
+        const canvas =
+            document.getElementById(
+                "stars-canvas"
+            );
+
+        if (!canvas) {
+            console.warn(
+                "spydr theme // stars canvas missing"
+            );
+
+            return;
+        }
+
+        this.stopStars();
+
+        canvas.style.display =
+            "block";
+
+        const context =
+            canvas.getContext("2d");
+
+        if (!context) {
+            canvas.style.display =
+                "none";
+
+            return;
+        }
+
+        let width = 0;
+        let height = 0;
+
+        const stars = [];
+
+        const resize = () => {
+            width =
+                canvas.width =
+                window.innerWidth;
+
+            height =
+                canvas.height =
+                window.innerHeight;
+        };
+
+        resize();
+
+        for (
+            let index = 0;
+            index < 160;
+            index += 1
+        ) {
+            stars.push({
+                x:
+                    Math.random() *
+                    width,
+
+                y:
+                    Math.random() *
+                    height,
+
+                size:
+                    Math.random() *
+                    1.7 + 0.3,
+
+                speed:
+                    Math.random() *
+                    0.25 + 0.05,
+
+                alpha:
+                    Math.random() *
+                    0.7 + 0.2
+            });
+        }
+
+        const draw = () => {
+            context.clearRect(
+                0,
+                0,
+                width,
+                height
+            );
+
+            for (const star of stars) {
+                star.y += star.speed;
+
+                if (star.y > height) {
+                    star.y = 0;
+
+                    star.x =
+                        Math.random() *
+                        width;
+                }
+
+                context.globalAlpha =
+                    star.alpha;
+
+                context.fillStyle =
+                    "#ffffff";
+
+                context.beginPath();
+
+                context.arc(
+                    star.x,
+                    star.y,
+                    star.size,
+                    0,
+                    Math.PI * 2
+                );
+
+                context.fill();
+            }
+
+            context.globalAlpha = 1;
+
+            this.starAnimationFrame =
+                requestAnimationFrame(
+                    draw
+                );
+        };
+
+        window.addEventListener(
+            "resize",
+            resize
+        );
+
+        this.starResizeHandler =
+            resize;
+
+        draw();
+    }
+
+    stopStars() {
+        if (
+            this.starAnimationFrame !==
+            null
+        ) {
+            cancelAnimationFrame(
+                this.starAnimationFrame
+            );
+
+            this.starAnimationFrame =
+                null;
+        }
+
+        if (this.starResizeHandler) {
+            window.removeEventListener(
+                "resize",
+                this.starResizeHandler
+            );
+
+            this.starResizeHandler =
+                null;
+        }
+
+        const canvas =
+            document.getElementById(
+                "stars-canvas"
+            );
+
+        if (!canvas) {
+            return;
+        }
+
+        const context =
+            canvas.getContext("2d");
+
+        context?.clearRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+        canvas.style.display =
+            "none";
+    }
+
+    toggleStars(enabled) {
+        if (!enabled) {
+            this.stopStars();
+            return;
+        }
+
+        const style =
+            this.kernel
+                .get("settings")
+                ?.get("bgStyle");
+
+        if (
+            style === "stars" ||
+            (
+                style === "theme" &&
+                this.currentTheme ===
+                "spydr"
+            )
+        ) {
+            this.enableStars();
+        }
+    }
+
+    enableCustomGradientFX() {
+        this.disableCustomGradientFX();
+
+        const element =
+            document.createElement("div");
+
+        element.id =
+            "custom-gradient-theme-fx";
+
+        Object.assign(
+            element.style,
+            {
+                position: "absolute",
+                inset: "0",
+                pointerEvents: "none",
+                zIndex: "0",
+                opacity: "0.28",
+
+                background: [
+                    "linear-gradient(120deg,",
+                    "var(--custom-color-1),",
+                    "var(--custom-color-2),",
+                    "var(--custom-color-3),",
+                    "var(--custom-color-1))"
+                ].join(" "),
+
+                backgroundSize:
+                    "400% 400%"
+            }
+        );
+
+        const host =
+            document.getElementById(
+                "bg-effects-container"
+            ) ||
+            document.body;
+
+        host.appendChild(element);
+
+        this.customGradientFX =
+            element;
+
+        if (
+            typeof element.animate ===
+            "function"
+        ) {
+            this.customGradientAnimation =
+                element.animate(
+                    [
+                        {
+                            backgroundPosition:
+                                "0% 50%"
+                        },
+                        {
+                            backgroundPosition:
+                                "100% 50%"
+                        },
+                        {
+                            backgroundPosition:
+                                "0% 50%"
+                        }
+                    ],
+                    {
+                        duration: 9000,
+                        easing:
+                            "ease-in-out",
+                        iterations:
+                            Infinity
+                    }
+                );
+        }
+    }
+
+    disableCustomGradientFX() {
+        this.customGradientAnimation
+            ?.cancel();
+
+        this.customGradientAnimation =
+            null;
+
+        this.customGradientFX
+            ?.remove();
+
+        this.customGradientFX =
+            null;
+
         document
             .getElementById(
                 "custom-gradient-theme-fx"
@@ -488,176 +768,171 @@ export default class ThemeManager {
             ?.remove();
     }
 
+    async applyThemeFX(
+        themeName,
+        requestId = this.fxRequestId
+    ) {
+        const fxConfig =
+            this.themeFX[themeName];
 
-    /*
-     * =========================================================
-     * THEME FX
-     * =========================================================
-     */
-
-    async applyThemeFX(themeName) {
-        /*
-         * Stop the previous FX engine first.
-         */
-
-        if (this.cleanupFX) {
-            try {
-                await this.cleanupFX();
-            } catch (error) {
-                console.warn(
-                    "spydr theme // previous FX cleanup failed:",
-                    error
-                );
-            }
-
-            this.cleanupFX = null;
-        }
-        
-        this.disableCustomGradientFX();
-
-        const fxConfig = this.themeFX[themeName];
-
-        if (!fxConfig) {
-            return;
-        }
-
-        /*
-         * The JSON specifies which script handles the FX.
-         */
-
-        const scriptPath = fxConfig.script;
-
-        if (!scriptPath) {
+        if (!fxConfig?.script) {
             return;
         }
 
         try {
-            const module = await import(
-                /* @vite-ignore */
-                scriptPath
-            );
+            const module =
+                await import(
+                    /* @vite-ignore */
+                    fxConfig.script
+                );
 
             if (
-                !module ||
-                typeof module.default !== "function"
+                requestId !==
+                this.fxRequestId
             ) {
-                console.warn(
-                    `spydr theme // FX module for "${themeName}" has no default initializer`
+                return;
+            }
+
+            if (
+                typeof module?.default !==
+                "function"
+            ) {
+                throw new TypeError(
+                    `FX module for "${
+                        themeName
+                    }" has no default initializer.`
                 );
+            }
+
+            const assets =
+                (
+                    fxConfig.assets ||
+                    []
+                )
+                    .map(asset =>
+                        this.resolveAsset(
+                            asset
+                        )
+                    )
+                    .filter(Boolean);
+
+            const cleanup =
+                await module.default({
+                    theme:
+                        this.themes[
+                            themeName
+                        ],
+
+                    assets
+                });
+
+            if (
+                requestId !==
+                this.fxRequestId
+            ) {
+                if (
+                    typeof cleanup ===
+                    "function"
+                ) {
+                    await cleanup();
+                }
 
                 return;
             }
 
-            /*
-             * Convert the asset identifiers from json.json
-             * into usable asset paths.
-             *
-             * If an asset is already a URL/path, leave it alone.
-             */
-
-            const assets = (fxConfig.assets || [])
-                .map(asset => this.resolveAsset(asset))
-                .filter(Boolean);
-
-            /*
-             * Start the FX renderer.
-             */
-
-            this.cleanupFX = await module.default({
-                theme: this.themes[themeName],
-                assets
-            });
-
-            /*
-             * Always keep cleanup safe.
-             */
-
-            if (typeof this.cleanupFX !== "function") {
-                this.cleanupFX = null;
-            }
-
+            this.cleanupFX =
+                typeof cleanup ===
+                "function"
+                    ? cleanup
+                    : null;
         } catch (error) {
             console.error(
-                `spydr theme // failed to load FX for "${themeName}":`,
+                `spydr theme // failed to load FX for "${
+                    themeName
+                }":`,
                 error
             );
         }
     }
-
-
-    /*
-     * =========================================================
-     * ASSET RESOLUTION
-     * =========================================================
-     *
-     * json.json stores identifiers such as:
-     *
-     *   "money"
-     *   "gold"
-     *   "christmas-tree"
-     *
-     * The FX renderer needs actual image URLs.
-     *
-     * If an asset is already a URL, we don't touch it.
-     *
-     * Otherwise we use Spydr's theme asset directory.
-     */
 
     resolveAsset(asset) {
         if (!asset) {
             return null;
         }
 
-        /*
-         * Already a complete URL.
-         */
-
         if (
-            asset.startsWith("http://") ||
-            asset.startsWith("https://") ||
-            asset.startsWith("data:") ||
+            asset.startsWith(
+                "http://"
+            ) ||
+            asset.startsWith(
+                "https://"
+            ) ||
+            asset.startsWith(
+                "data:"
+            ) ||
             asset.startsWith("/")
         ) {
             return asset;
         }
 
-        /*
-         * Theme FX assets.
-         */
-
         return `/assets/images/themes/${asset}.png`;
     }
 
+    applyAccent(accent) {
+        const accents = {
+            blue: "#3f5efb",
+            purple: "#7c3aed"
+        };
 
-    /*
-     * =========================================================
-     * CHANGE THEME
-     * =========================================================
-     */
+        const color =
+            accents[accent] || accent;
+
+        if (
+            typeof color === "string" &&
+            color
+        ) {
+            document
+                .documentElement
+                .style
+                .setProperty(
+                    "--accent-color",
+                    color
+                );
+        }
+    }
 
     async setTheme(themeName) {
-        if (!this.themes[themeName] && themeName !== "custom") {
+        if (
+            themeName !== "custom" &&
+            !this.themes[themeName]
+        ) {
             console.warn(
-                `spydr theme // cannot switch to unknown theme "${themeName}"`
+                `spydr theme // cannot switch to unknown theme "${
+                    themeName
+                }"`
             );
 
             return false;
         }
+
+        this.kernel
+            .get("settings")
+            ?.set(
+                "theme",
+                themeName,
+                { notify: false }
+            );
 
         await this.applyTheme(themeName);
 
         return true;
     }
 
-
-    /*
-     * =========================================================
-     * GETTERS
-     * =========================================================
-     */
-
     getTheme(themeName) {
-        return this.themes[themeName] || null;
+        return (
+            this.themes[themeName] ||
+            null
+        );
     }
 
     getCurrentTheme() {
@@ -666,8 +941,8 @@ export default class ThemeManager {
 
     getCurrentThemeName() {
         return (
-            document.documentElement.dataset.spydrTheme ||
-            "neegy"
+            this.currentTheme ||
+            "spydr"
         );
     }
 
@@ -676,33 +951,19 @@ export default class ThemeManager {
     }
 
     getThemeFX(themeName) {
-        return this.themeFX[themeName] || null;
+        return (
+            this.themeFX[themeName] ||
+            null
+        );
     }
 
-
-    /*
-     * =========================================================
-     * CLEANUP
-     * =========================================================
-     */
-
     async destroy() {
-        if (this.cleanupFX) {
-            try {
-                await this.cleanupFX();
-            } catch (error) {
-                console.warn(
-                    "spydr theme // FX cleanup failed:",
-                    error
-                );
-            }
+        this.fxRequestId += 1;
 
-            this.cleanupFX = null;
-        }
-        
-        this.disableCustomGradientFX();
+        await this.cleanupBackgroundFX();
 
         this.activeTheme = null;
+        this.currentTheme = null;
         this.ready = false;
     }
 }

@@ -1,12 +1,3 @@
-/* =========================================================
-   SPYDR // MAIN CSS
-   Dynamic Theme + Background FX System
-   ========================================================= */
-
-/* =========================================================
-   CORE THEME VARIABLES
-   ========================================================= */
-
 :root {
   --theme-primary: #00ff66;
   --theme-secondary: #000000;
@@ -159,7 +150,7 @@ a {
   width: 100vw;
   height: 100vh;
 
-  z-index: -10;
+  z-index: 0;
 
   pointer-events: none;
   overflow: hidden;
@@ -357,6 +348,37 @@ body[data-bg-style="fog"] #fog-overlay {
 
 .spydr-theme-fx {
   pointer-events: none;
+}
+
+#custom-gradient-theme-fx {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.28;
+  background: linear-gradient(
+    120deg,
+    var(--custom-color-1),
+    var(--custom-color-2),
+    var(--custom-color-3),
+    var(--custom-color-1)
+  );
+  background-size: 400% 400%;
+  animation: spydrCustomGradient 9s ease infinite;
+}
+
+@keyframes spydrCustomGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #bg-effects-container,

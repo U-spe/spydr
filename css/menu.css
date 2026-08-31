@@ -1,21 +1,17 @@
-/* ==========================================
-   SPYDR FLOATING DOCK
-========================================== */
-
 .dock {
 
     position: fixed;
 
     left: 50%;
-    bottom: 22px;
+    bottom: 16px;
 
     transform: translateX(-50%);
 
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 
-    padding: 10px;
+    padding: 7px;
 
     background: rgba(23, 23, 23, 0.78);
 
@@ -59,8 +55,8 @@
 
     position:relative;
 
-    width:52px;
-    height:52px;
+    width:44px;
+    height:44px;
 
     display:flex;
     align-items:center;
@@ -69,7 +65,7 @@
     border:none;
     outline:none;
 
-    border-radius:14px;
+    border-radius:12px;
 
     background:transparent;
 
@@ -87,7 +83,7 @@
 
 .dock button i{
 
-    font-size:24px;
+    font-size:21px;
 
     transition:inherit;
 
@@ -104,7 +100,7 @@
     background:rgba(255,255,255,.06);
 
     transform:
-        translateY(-8px)
+        translateY(-6px)
         scale(1.08);
 
     box-shadow:
@@ -145,12 +141,12 @@
     position:absolute;
 
     left:50%;
-    bottom:-8px;
+    bottom:-6px;
 
     transform:translateX(-50%);
 
-    width:6px;
-    height:6px;
+    width:5px;
+    height:5px;
 
     border-radius:50%;
 
@@ -168,7 +164,7 @@
 
     position:absolute;
 
-    bottom:68px;
+    bottom:58px;
 
     left:50%;
 
@@ -227,24 +223,24 @@
 
     .dock{
 
-        bottom:18px;
+        bottom:12px;
 
-        gap:5px;
+        gap:4px;
 
-        padding:8px;
+        padding:6px;
 
     }
 
     .dock button{
 
-        width:46px;
-        height:46px;
+        width:40px;
+        height:40px;
 
     }
 
     .dock button i{
 
-        font-size:21px;
+        font-size:19px;
 
     }
 

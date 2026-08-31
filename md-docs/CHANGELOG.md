@@ -9,12 +9,12 @@ All notable changes to spydr are documented here.
 ## 🛠️ Beginning
 - [x] Add More Colored Themes And Cool Stuff
 - [ ] Deploy on Surge.sh and temporarily on B-CDN
-- [ ] Fix Menu Bar (Make it thinner so it doesn't cover items on some pages)
-- [ ] Make a page on Search to embed a custom error message
+- [x] Fix Menu Bar (Make it thinner so it doesn't cover items on some pages)
+- [x] Make a page on Search to embed a custom error message
 - [ ] Add a notice on the Apps page explaining that proxied apps currently don't work
 
 
-# v2.7.2 - PREVIOUS
+# v2.7.2 - PREVIOUS (STILL WORKING ON!)
 
 ## 🛠️ Beginning
 - [ ] Starting Scramjet build 

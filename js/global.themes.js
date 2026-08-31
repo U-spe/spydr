@@ -1,226 +1,190 @@
-export default async function initThemeFX({ theme, assets }) {
-    if (!assets || assets.length === 0) {
-        return async () => {};
+export default async function initThemeFX({
+    theme = {},
+    assets = [],
+    container = null
+} = {}) {
+    const target =
+        container ||
+        document.getElementById(
+            "theme-fx-container"
+        );
+
+    if (!target) {
+        console.warn(
+            "spydr theme fx // #theme-fx-container not found"
+        );
+
+        return () => {};
     }
 
-    const container = document.createElement('div');
-    container.className = 'spydr-theme-fx';
+    // Clean previous run.
+    target.replaceChildren();
+    target.hidden = false;
 
-    Object.assign(container.style, {
-        position: 'fixed',
-        top: '0',
-        left: '0',
-        width: '100vw',
-        height: '100vh',
-        pointerEvents: 'none',
-        zIndex: '0',
-        overflow: 'hidden'
-    });
+    if (!Array.isArray(assets) || assets.length === 0) {
+        return () => {
+            target.replaceChildren();
+            target.hidden = true;
+        };
+    }
 
-    document.body.appendChild(container);
+    target.classList.add(
+        "spydr-theme-fx"
+    );
+
+    const reduceMotion =
+        window.matchMedia?.(
+            "(prefers-reduced-motion: reduce)"
+        )?.matches;
+
+    const viewportArea =
+        window.innerWidth *
+        window.innerHeight;
+
+    // Responsive amount. Keep the screen alive but not buried.
+    const particleCount =
+        reduceMotion
+            ? Math.min(10, assets.length * 3)
+            : Math.max(
+                20,
+                Math.min(
+                    38,
+                    Math.round(
+                        viewportArea / 43000
+                    )
+                )
+            );
+
+    const fragment =
+        document.createDocumentFragment();
 
     const particles = [];
-    const numParticles = 250;
 
-    let animationFrameId;
-    let isRunning = true;
+    for (
+        let index = 0;
+        index < particleCount;
+        index += 1
+    ) {
+        const particle =
+            document.createElement("img");
 
-    for (let i = 0; i < numParticles; i++) {
-        const el = document.createElement('img');
+        const src =
+            assets[
+                Math.floor(
+                    Math.random() *
+                    assets.length
+                )
+            ];
 
-        el.className = 'spydr-theme-fx';
-        el.src = assets[Math.floor(Math.random() * assets.length)];
-        el.draggable = false;
+        particle.className =
+            "spydr-theme-particle";
 
-        const size = Math.random() * 30 + 15;
+        particle.src = src;
+        particle.alt = "";
+        particle.draggable = false;
+        particle.decoding = "async";
 
-        Object.assign(el.style, {
-            position: 'absolute',
-            width: `${size}px`,
-            height: `${size}px`,
-            willChange: 'transform, opacity',
-            opacity: Math.random() * 0.3 + 0.7,
-            userSelect: 'none'
-        });
+        const size =
+            26 + Math.random() * 44;
 
-        const particle = {
-            el,
+        const left =
+            Math.random() * 100;
 
-            x: Math.random() * window.innerWidth,
+        const duration =
+            9 + Math.random() * 13;
 
-            // Start spread throughout the screen
-            y: Math.random() * window.innerHeight - window.innerHeight,
+        const delay =
+            -(Math.random() * duration);
 
-            // Faster falling
-            speedY: Math.random() * 3 + 2,
+        const sway =
+            20 + Math.random() * 75;
 
-            // Slight horizontal movement
-            speedX: (Math.random() - 0.5) * 1.0,
+        const rotate =
+            (Math.random() - 0.5) * 220;
 
-            rotation: Math.random() * 360,
+        const opacity =
+            0.42 + Math.random() * 0.48;
 
-            rotationSpeed:
-                (Math.random() - 0.5) * 2.0,
+        particle.style.setProperty(
+            "--fx-size",
+            `${size}px`
+        );
 
-            wobblePhase:
-                Math.random() * Math.PI * 2,
+        particle.style.setProperty(
+            "--fx-left",
+            `${left}%`
+        );
 
-            wobbleSpeed:
-                Math.random() * 0.03 + 0.01,
+        particle.style.setProperty(
+            "--fx-duration",
+            `${duration}s`
+        );
 
-            wobbleAmplitude:
-                Math.random() * 1.5,
+        particle.style.setProperty(
+            "--fx-delay",
+            `${delay}s`
+        );
 
-            size,
+        particle.style.setProperty(
+            "--fx-sway",
+            `${sway}px`
+        );
 
-            // Time before respawning
-            respawnDelay: 0
-        };
+        particle.style.setProperty(
+            "--fx-rotate",
+            `${rotate}deg`
+        );
 
-        particles.push(particle);
-        container.appendChild(el);
+        particle.style.setProperty(
+            "--fx-opacity",
+            opacity.toFixed(2)
+        );
+
+        fragment.appendChild(
+            particle
+        );
+
+        particles.push(
+            particle
+        );
     }
 
-    let lastTime = performance.now();
-
-    function animate(time) {
-        if (!isRunning) return;
-
-        let delta =
-            (time - lastTime) / 16.66;
-
-        // Prevent huge jumps after tab inactivity
-        if (delta > 2) {
-            delta = 2;
-        }
-
-        lastTime = time;
-
-        const width = window.innerWidth;
-        const height = window.innerHeight;
-
-        for (let i = 0; i < particles.length; i++) {
-            const p = particles[i];
-
-            /*
-             * WAITING TO RESPAWN
-             */
-            if (p.respawnDelay > 0) {
-                p.respawnDelay -= delta;
-
-                // Completely invisible while waiting
-                p.el.style.opacity = '0';
-
-                if (p.respawnDelay <= 0) {
-                    // Spawn ABOVE the screen
-                    p.y =
-                        -p.size -
-                        Math.random() * 150;
-
-                    // New random horizontal position
-                    p.x =
-                        Math.random() * width;
-
-                    // New random rotation
-                    p.rotation =
-                        Math.random() * 360;
-
-                    // New random falling speed
-                    p.speedY =
-                        Math.random() * 3 + 2;
-
-                    // Bring it back
-                    p.el.style.opacity =
-                        Math.random() * 0.3 + 0.7;
-                }
-
-                continue;
-            }
-
-            /*
-             * FALLING MOVEMENT
-             */
-
-            p.y +=
-                p.speedY * delta;
-
-            p.x +=
-                (
-                    Math.sin(p.wobblePhase) *
-                    p.wobbleAmplitude +
-                    p.speedX
-                ) * delta;
-
-            p.wobblePhase +=
-                p.wobbleSpeed * delta;
-
-            p.rotation +=
-                p.rotationSpeed * delta;
-
-            /*
-             * LEFT / RIGHT WRAPPING
-             */
-
-            if (p.x > width + p.size) {
-                p.x = -p.size;
-            }
-
-            if (p.x < -p.size) {
-                p.x = width + p.size;
-            }
-
-            /*
-             * BOTTOM OF SCREEN
-             *
-             * Don't teleport immediately.
-             * Let it disappear first.
-             */
-
-            if (p.y > height + p.size) {
-                p.respawnDelay =
-                    Math.random() * 30 + 15;
-
-                p.el.style.opacity = '0';
-
-                continue;
-            }
-
-            /*
-             * DRAW PARTICLE
-             */
-
-            p.el.style.transform =
-                `translate(${p.x}px, ${p.y}px) rotate(${p.rotation}deg)`;
-        }
-
-        animationFrameId =
-            requestAnimationFrame(animate);
-    }
+    target.appendChild(
+        fragment
+    );
 
     /*
-     * START ENGINE
+     * Preload failures should not break the whole FX engine.
+     * A missing image simply disappears.
      */
+    const onError = event => {
+        event.currentTarget?.remove();
+    };
 
-    animationFrameId =
-        requestAnimationFrame(animate);
-
-    /*
-     * CLEANUP
-     */
-
-    return async function cleanup() {
-        isRunning = false;
-
-        if (animationFrameId) {
-            cancelAnimationFrame(
-                animationFrameId
+    particles.forEach(
+        particle => {
+            particle.addEventListener(
+                "error",
+                onError,
+                { once: true }
             );
         }
+    );
 
-        container.remove();
+    return () => {
+        particles.forEach(
+            particle => {
+                particle.removeEventListener(
+                    "error",
+                    onError
+                );
+            }
+        );
 
-        document
-            .querySelectorAll('.spydr-theme-fx')
-            .forEach(el => el.remove());
+        target.replaceChildren();
+        target.classList.remove(
+            "spydr-theme-fx"
+        );
+        target.hidden = true;
     };
 }

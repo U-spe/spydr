@@ -50,14 +50,22 @@ class SpydrCoreRegistry {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const warning = document.getElementById('js-warning');
-    if (warning) {
-        warning.remove();
-    }
 
     window.SpydrKernel = new SpydrCoreRegistry();
-    window.SpydrKernel.boot();
+
+    try {
+        await window.SpydrKernel.boot();
+        warning?.remove();
+    } catch (error) {
+        console.error('spydr engine // failed to boot:', error);
+
+        if (warning) {
+            warning.innerHTML =
+                '<strong>SYS_ERROR:</strong> Spydr failed to start. Check the browser console.';
+        }
+    }
 
     const loader = document.getElementById('loader') || document.getElementById('loading-screen');
     if (loader) {

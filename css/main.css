@@ -1,12 +1,36 @@
+/* =========================================================
+   SPYDR // MAIN CSS
+   Dynamic Theme + Background FX System
+   ========================================================= */
+
+
+/* =========================================================
+   CORE THEME VARIABLES
+   ========================================================= */
+
 :root {
-  --theme-primary: #00ff66;
-  --theme-secondary: #000000;
-  --theme-background: #050805;
-  --theme-surface: #0c140e;
+  /*
+   * Default Spydr fallback.
+   * theme.js replaces these with the selected theme values.
+   */
+  --theme-primary: #7c3aed;
+  --theme-secondary: #3f5efb;
+  --theme-background: #090909;
+  --theme-surface: #171717;
   --theme-text: #ffffff;
-  --theme-muted: #a9c7b0;
-  --theme-border: #00ff66;
-  --theme-glow: rgba(0, 255, 102, 0.4);
+  --theme-muted: #bdbdbd;
+  --theme-border: #2b2b2b;
+  --theme-glow: rgba(124, 58, 237, 0.4);
+
+  /*
+   * THE actual background-gradient colors.
+   *
+   * For normal themes theme.js maps these to that theme.
+   * For Custom it maps them to the user's 2 or 3 picked colors.
+   */
+  --theme-gradient-1: var(--theme-primary);
+  --theme-gradient-2: var(--theme-secondary);
+  --theme-gradient-3: var(--theme-background);
 
   --primary-color: var(--theme-primary);
   --secondary-color: var(--theme-secondary);
@@ -28,11 +52,6 @@
   --darkgray: var(--muted-color);
   --accent: var(--accent-color);
 
-  /* Dynamic gradient colors */
-  --gradient-1: var(--theme-background);
-  --gradient-2: var(--theme-secondary);
-  --gradient-3: var(--theme-primary);
-
   --t: 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -45,64 +64,36 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: var(--t);
 }
 
 html,
 body {
   width: 100%;
-  height: 100%;
-  background: var(--background-color);
+  min-height: 100%;
+}
+
+html {
+  background: var(--theme-background);
+}
+
+body {
+  position: relative;
+
+  background: var(--theme-background);
   color: var(--text-color);
+
   font-family: "JetBrains Mono", monospace;
+
   overflow: hidden;
 }
 
 
-/* =========================================================
-   THEME COMPATIBILITY
-   ========================================================= */
-
-[data-theme="light"] {
-  --bg: #f5f5f5;
-  --bg2: #e0e0e0;
-  --card: #d1d1d1;
-  --border: #aaaaaa;
-  --white: #111111;
-  --gray: #555555;
-  --darkgray: #666666;
-  --accent: #3f5efb;
-
-  --background-color: var(--bg);
-  --surface-color: var(--card);
-  --text-color: var(--white);
-  --border-color: var(--border);
-  --muted-color: var(--gray);
-
-  --gradient-1: #f5f5f5;
-  --gradient-2: #e0e0e0;
-  --gradient-3: #3f5efb;
-}
-
-[data-theme="spydr-neon"] {
-  --bg: #05050a;
-  --bg2: #0a0a14;
-  --card: #131333;
-  --border: #4c1d95;
-  --white: #ffffff;
-  --gray: #d1d5db;
-  --darkgray: #9ca3af;
-  --accent: #7c3aed;
-
-  --background-color: var(--bg);
-  --surface-color: var(--card);
-  --text-color: var(--white);
-  --border-color: var(--border);
-  --muted-color: var(--gray);
-
-  --gradient-1: #05050a;
-  --gradient-2: #131333;
-  --gradient-3: #7c3aed;
+/*
+ * Keep the normal UI transitions without forcing transitions
+ * onto the particle/background elements.
+ */
+body *:not(#bg-effects-container):not(#bg-effects-container *) {
+  transition: var(--t);
 }
 
 
@@ -141,101 +132,176 @@ a {
 
 
 /* =========================================================
-   DYNAMIC BACKGROUND SYSTEM
+   GLOBAL BACKGROUND SYSTEM
    ========================================================= */
+
+/*
+ * IMPORTANT:
+ *
+ * No negative z-index.
+ * No z-index on the FX children.
+ *
+ * Put this element BEFORE your actual page/dashboard content
+ * in the HTML, which your current Spydr settings page already does.
+ * Because the UI comes later in document order, it naturally paints
+ * over this fixed background layer.
+ */
 
 #bg-effects-container {
   position: fixed;
   inset: 0;
+
   width: 100vw;
   height: 100vh;
 
-  z-index: 0;
-
-  pointer-events: none;
   overflow: hidden;
+  pointer-events: none;
 
   background:
     radial-gradient(
-      circle at 20% 20%,
-      color-mix(in srgb, var(--theme-primary) 12%, transparent),
-      transparent 40%
+      circle at 18% 18%,
+      color-mix(
+        in srgb,
+        var(--theme-primary) 12%,
+        transparent
+      ),
+      transparent 38%
     ),
     radial-gradient(
-      circle at 80% 80%,
-      color-mix(in srgb, var(--theme-primary) 8%, transparent),
-      transparent 45%
+      circle at 82% 82%,
+      color-mix(
+        in srgb,
+        var(--theme-secondary) 10%,
+        transparent
+      ),
+      transparent 42%
     ),
     var(--theme-background);
 }
 
 
 /* =========================================================
-   ANIMATED GRADIENT BACKGROUND
+   GRADIENT COLORS
    ========================================================= */
+
+/*
+ * Gradient Colors now means:
+ *
+ * "use the SELECTED THEME'S colors as the background"
+ *
+ * Theme FX uses this exact same background, then adds the falling
+ * images/stars inside #bg-effects-container.
+ */
 
 body[data-bg-style="gradient"] #bg-effects-container,
 body[data-bg-style="theme"] #bg-effects-container {
   background:
     radial-gradient(
-      circle at 15% 20%,
+      circle at 12% 18%,
       color-mix(
         in srgb,
-        var(--theme-primary) 22%,
+        var(--theme-gradient-1) 88%,
         transparent
       ),
-      transparent 38%
+      transparent 43%
     ),
+
     radial-gradient(
-      circle at 85% 25%,
+      circle at 88% 22%,
       color-mix(
         in srgb,
-        var(--theme-secondary) 35%,
+        var(--theme-gradient-2) 82%,
         transparent
       ),
-      transparent 42%
+      transparent 46%
     ),
+
     radial-gradient(
-      circle at 50% 90%,
+      circle at 50% 92%,
       color-mix(
         in srgb,
-        var(--theme-primary) 15%,
+        var(--theme-gradient-3) 76%,
         transparent
       ),
-      transparent 45%
+      transparent 48%
     ),
+
     linear-gradient(
       135deg,
-      var(--theme-background),
-      var(--theme-secondary),
-      var(--theme-background)
+      color-mix(
+        in srgb,
+        var(--theme-gradient-1) 62%,
+        var(--theme-background)
+      ),
+      color-mix(
+        in srgb,
+        var(--theme-gradient-2) 66%,
+        var(--theme-background)
+      ),
+      color-mix(
+        in srgb,
+        var(--theme-gradient-3) 58%,
+        var(--theme-background)
+      ),
+      color-mix(
+        in srgb,
+        var(--theme-gradient-1) 58%,
+        var(--theme-background)
+      )
     );
 
-  background-size: 250% 250%;
+  background-size:
+    180% 180%,
+    180% 180%,
+    190% 190%,
+    320% 320%;
 
-  animation: spydrGradientMove 14s ease-in-out infinite;
+  animation:
+    spydrThemeGradient 16s
+    cubic-bezier(0.45, 0, 0.55, 1)
+    infinite;
 }
 
 
-@keyframes spydrGradientMove {
+@keyframes spydrThemeGradient {
   0% {
-    background-position: 0% 50%;
+    background-position:
+      0% 0%,
+      100% 0%,
+      50% 100%,
+      0% 50%;
   }
 
   25% {
-    background-position: 100% 20%;
+    background-position:
+      35% 15%,
+      75% 35%,
+      60% 75%,
+      65% 25%;
   }
 
   50% {
-    background-position: 100% 80%;
+    background-position:
+      85% 35%,
+      30% 70%,
+      42% 25%,
+      100% 50%;
   }
 
   75% {
-    background-position: 0% 100%;
+    background-position:
+      45% 75%,
+      15% 25%,
+      75% 65%,
+      35% 85%;
   }
 
   100% {
-    background-position: 0% 50%;
+    background-position:
+      0% 0%,
+      100% 0%,
+      50% 100%,
+      0% 50%;
   }
 }
 
@@ -252,12 +318,11 @@ body[data-bg-style="theme"] #bg-effects-container {
   height: 100%;
 
   display: block;
-
-  opacity: 1;
-
   pointer-events: none;
+}
 
-  z-index: 0;
+#stars-canvas[hidden] {
+  display: none;
 }
 
 
@@ -272,8 +337,6 @@ body[data-bg-style="theme"] #bg-effects-container {
   width: 150%;
   height: 150%;
 
-  opacity: 0;
-
   pointer-events: none;
 
   background:
@@ -281,25 +344,27 @@ body[data-bg-style="theme"] #bg-effects-container {
       ellipse at 20% 30%,
       color-mix(
         in srgb,
-        var(--theme-primary) 22%,
+        var(--theme-primary) 30%,
         transparent
       ),
       transparent 45%
     ),
+
     radial-gradient(
       ellipse at 80% 70%,
       color-mix(
         in srgb,
-        var(--theme-primary) 16%,
+        var(--theme-secondary) 28%,
         transparent
       ),
       transparent 50%
     ),
+
     radial-gradient(
       ellipse at 50% 50%,
       color-mix(
         in srgb,
-        var(--theme-secondary) 35%,
+        var(--theme-primary) 18%,
         transparent
       ),
       transparent 60%
@@ -309,81 +374,186 @@ body[data-bg-style="theme"] #bg-effects-container {
 
   transform: translate3d(0, 0, 0);
 
-  z-index: 1;
+  animation:
+    spydrFogMove 18s
+    ease-in-out
+    infinite;
 }
 
-
-body[data-bg-style="fog"] #fog-overlay {
-  opacity: 1;
-  animation: spydrFogMove 18s ease-in-out infinite;
+#fog-overlay[hidden] {
+  display: none;
 }
 
 
 @keyframes spydrFogMove {
   0% {
-    transform: translate(-8%, -4%) scale(1);
+    transform:
+      translate(-8%, -4%)
+      scale(1);
   }
 
   25% {
-    transform: translate(6%, 5%) scale(1.08);
+    transform:
+      translate(6%, 5%)
+      scale(1.08);
   }
 
   50% {
-    transform: translate(10%, -6%) scale(1.15);
+    transform:
+      translate(10%, -6%)
+      scale(1.15);
   }
 
   75% {
-    transform: translate(-5%, 7%) scale(1.08);
+    transform:
+      translate(-5%, 7%)
+      scale(1.08);
   }
 
   100% {
-    transform: translate(-8%, -4%) scale(1);
+    transform:
+      translate(-8%, -4%)
+      scale(1);
   }
 }
 
 
 /* =========================================================
-   THEME FX PARTICLES
+   THEME FX CONTAINER
    ========================================================= */
+
+/*
+ * This is NOT another "background layer".
+ *
+ * It is just a full-size child of the actual background container.
+ * The gradient belongs to #bg-effects-container itself.
+ */
+
+#theme-fx-container {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#theme-fx-container[hidden] {
+  display: none;
+}
 
 .spydr-theme-fx {
   pointer-events: none;
 }
 
-#custom-gradient-theme-fx {
+
+/* =========================================================
+   FALLING THEME IMAGES
+   ========================================================= */
+
+.spydr-theme-particle {
   position: absolute;
-  inset: 0;
+
+  top: -18vh;
+  left: var(--fx-left, 50%);
+
+  width: var(--fx-size, 42px);
+  height: var(--fx-size, 42px);
+
+  object-fit: contain;
+
+  opacity: var(--fx-opacity, 0.72);
+
   pointer-events: none;
-  z-index: 0;
-  opacity: 0.28;
-  background: linear-gradient(
-    120deg,
-    var(--custom-color-1),
-    var(--custom-color-2),
-    var(--custom-color-3),
-    var(--custom-color-1)
-  );
-  background-size: 400% 400%;
-  animation: spydrCustomGradient 9s ease infinite;
+  user-select: none;
+
+  filter:
+    drop-shadow(
+      0 0 10px
+      color-mix(
+        in srgb,
+        var(--theme-primary) 25%,
+        transparent
+      )
+    );
+
+  will-change:
+    transform,
+    opacity;
+
+  animation:
+    spydrThemeParticleFall
+    var(--fx-duration, 14s)
+    linear
+    var(--fx-delay, 0s)
+    infinite;
 }
 
-@keyframes spydrCustomGradient {
+
+@keyframes spydrThemeParticleFall {
   0% {
-    background-position: 0% 50%;
+    transform:
+      translate3d(
+        calc(var(--fx-sway, 40px) * -0.35),
+        -12vh,
+        0
+      )
+      rotate(
+        calc(var(--fx-rotate, 90deg) * -0.25)
+      );
+
+    opacity: 0;
   }
 
-  50% {
-    background-position: 100% 50%;
+  8% {
+    opacity:
+      var(--fx-opacity, 0.72);
+  }
+
+  45% {
+    transform:
+      translate3d(
+        var(--fx-sway, 40px),
+        48vh,
+        0
+      )
+      rotate(
+        calc(var(--fx-rotate, 90deg) * 0.5)
+      );
+  }
+
+  82% {
+    opacity:
+      var(--fx-opacity, 0.72);
   }
 
   100% {
-    background-position: 0% 50%;
+    transform:
+      translate3d(
+        calc(var(--fx-sway, 40px) * -0.45),
+        122vh,
+        0
+      )
+      rotate(
+        var(--fx-rotate, 90deg)
+      );
+
+    opacity: 0;
   }
 }
 
+
+/* =========================================================
+   BACKGROUND INPUT SAFETY
+   ========================================================= */
+
 #bg-effects-container,
+#bg-effects-container *,
 #stars-canvas,
-#fog-overlay {
+#fog-overlay,
+#theme-fx-container {
   pointer-events: none;
 }
 
@@ -397,7 +567,8 @@ body[data-bg-style="fog"] #fog-overlay {
   position: fixed;
   inset: 0;
 
-  background: var(--theme-background);
+  background:
+    var(--theme-background);
 
   z-index: 9999;
 }
@@ -406,6 +577,7 @@ body[data-bg-style="fog"] #fog-overlay {
 #loading-screen video {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
 
@@ -420,7 +592,8 @@ body[data-bg-style="fog"] #fog-overlay {
   top: 20px;
   left: 50%;
 
-  transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 
   text-align: center;
 
@@ -430,8 +603,12 @@ body[data-bg-style="fog"] #fog-overlay {
 }
 
 #time {
-  font-family: "Space Grotesk", sans-serif;
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
   font-size: 30px;
+
   color: var(--white);
 }
 
@@ -459,15 +636,21 @@ body[data-bg-style="fog"] #fog-overlay {
    ========================================================= */
 
 #menu-btn {
-  background: var(--card);
+  background:
+    var(--card);
 
-  border: 1px solid var(--border);
+  border:
+    1px solid
+    var(--border);
 
-  color: var(--white);
+  color:
+    var(--white);
 
-  padding: 12px 14px;
+  padding:
+    12px 14px;
 
-  cursor: pointer;
+  cursor:
+    pointer;
 }
 
 
@@ -483,21 +666,27 @@ body[data-bg-style="fog"] #fog-overlay {
 
   width: 190px;
 
-  background: var(--bg2);
+  background:
+    var(--bg2);
 
-  border: 1px solid var(--border);
+  border:
+    1px solid
+    var(--border);
 
-  border-radius: 12px;
+  border-radius:
+    12px;
 
-  padding: 8px;
+  padding:
+    8px;
 
   opacity: 0;
-
   pointer-events: none;
 
-  transform: translateY(10px);
+  transform:
+    translateY(10px);
 
-  transition: var(--t);
+  transition:
+    var(--t);
 
   z-index: 101;
 }
@@ -513,7 +702,8 @@ body[data-bg-style="fog"] #fog-overlay {
 
   pointer-events: auto;
 
-  transform: translateY(0);
+  transform:
+    translateY(0);
 }
 
 
@@ -524,33 +714,44 @@ body[data-bg-style="fog"] #fog-overlay {
 #menu button {
   width: 100%;
 
-  background: transparent;
+  background:
+    transparent;
 
-  border: none;
+  border:
+    none;
 
-  color: var(--white);
+  color:
+    var(--white);
 
-  padding: 10px;
+  padding:
+    10px;
 
-  text-align: left;
+  text-align:
+    left;
 
-  cursor: pointer;
+  cursor:
+    pointer;
 
-  display: flex;
+  display:
+    flex;
 
-  gap: 8px;
+  gap:
+    8px;
 
-  align-items: center;
+  align-items:
+    center;
 }
 
 #menu button:hover {
-  background: color-mix(
-    in srgb,
-    var(--theme-primary) 8%,
-    transparent
-  );
+  background:
+    color-mix(
+      in srgb,
+      var(--theme-primary) 8%,
+      transparent
+    );
 
-  transform: translateX(4px);
+  transform:
+    translateX(4px);
 }
 
 
@@ -560,18 +761,15 @@ body[data-bg-style="fog"] #fog-overlay {
 
 .center {
   position: absolute;
-
   inset: 0;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   z-index: 5;
 }
-
 
 .hero-wrap {
   display: flex;
@@ -606,60 +804,79 @@ body[data-bg-style="fog"] #fog-overlay {
 
 
 /*
-   If the homepage JS applies the animated gradient
-   to the logo, this class will be available.
-*/
+ * Optional animated text gradient.
+ */
 
 .logo-gradient {
   background:
     linear-gradient(
       120deg,
-      var(--theme-primary),
-      var(--theme-secondary),
-      var(--theme-primary)
+      var(--theme-gradient-1),
+      var(--theme-gradient-2),
+      var(--theme-gradient-3),
+      var(--theme-gradient-1)
     );
 
-  background-size: 300% 300%;
+  background-size:
+    300% 300%;
 
-  animation: spydrLogoGradient 6s ease infinite;
+  animation:
+    spydrLogoGradient
+    6s
+    ease
+    infinite;
 
-  -webkit-background-clip: text;
-  background-clip: text;
+  -webkit-background-clip:
+    text;
 
-  color: transparent;
+  background-clip:
+    text;
+
+  color:
+    transparent;
 }
 
 
 @keyframes spydrLogoGradient {
   0% {
-    background-position: 0% 50%;
+    background-position:
+      0% 50%;
   }
 
   50% {
-    background-position: 100% 50%;
+    background-position:
+      100% 50%;
   }
 
   100% {
-    background-position: 0% 50%;
+    background-position:
+      0% 50%;
   }
 }
 
 
 .hero-text h1 {
-  font-family: "Space Grotesk", sans-serif;
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
-  font-size: 110px;
+  font-size:
+    110px;
 
-  color: var(--theme-text);
+  color:
+    var(--theme-text);
 }
 
 
 .const {
-  color: var(--darkgray);
+  color:
+    var(--darkgray);
 
-  font-size: 14px;
+  font-size:
+    14px;
 
-  margin-top: 6px;
+  margin-top:
+    6px;
 }
 
 
@@ -673,7 +890,8 @@ body[data-bg-style="fog"] #fog-overlay {
   bottom: 110px;
   left: 50%;
 
-  transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 
   display: flex;
 
@@ -688,27 +906,38 @@ body[data-bg-style="fog"] #fog-overlay {
    ========================================================= */
 
 .game-card {
-  background: var(--card);
+  background:
+    var(--card);
 
-  border: 1px solid var(--border);
+  border:
+    1px solid
+    var(--border);
 
-  padding: 12px 14px;
+  padding:
+    12px 14px;
 
-  border-radius: 10px;
+  border-radius:
+    10px;
 
-  font-size: 13px;
+  font-size:
+    13px;
 
-  color: var(--gray);
+  color:
+    var(--gray);
 
-  cursor: pointer;
+  cursor:
+    pointer;
 }
 
 .game-card:hover {
-  border-color: var(--theme-primary);
+  border-color:
+    var(--theme-primary);
 
-  color: var(--white);
+  color:
+    var(--white);
 
-  transform: translateY(-3px);
+  transform:
+    translateY(-3px);
 
   box-shadow:
     0 0 20px
@@ -725,11 +954,12 @@ body[data-bg-style="fog"] #fog-overlay {
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
+  body[data-bg-style="gradient"] #bg-effects-container,
+  body[data-bg-style="theme"] #bg-effects-container,
+  #fog-overlay,
+  .spydr-theme-particle,
+  .logo-gradient {
+    animation:
+      none !important;
   }
 }

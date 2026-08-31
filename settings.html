@@ -855,31 +855,60 @@
                     <div class="log-entry">
 
                         <h4>
-                            v2.7.3 // Background FX Expansion
+                            v2.7.3 - CURRENT
                         </h4>
 
                         <p>
-                            - Added Regular Spydr background mode
+                            - Add More Colored Themes And Cool Stuff
                         </p>
 
                         <p>
-                            - Added Star Particles background mode
+                            - Deploy on Surge.sh and temporarily on B-CDN
                         </p>
 
                         <p>
-                            - Added Fog background mode
+                            - Fix Menu Bar (Make it thinner so it doesn't cover items on some pages)
                         </p>
 
                         <p>
-                            - Added Gradient Colors background mode
+                            - Make a page on Search to embed a custom error message
                         </p>
 
                         <p>
-                            - Added Theme FX particle system
+                            - Add a notice on the Apps page explaining that proxied apps currently don't work
+                        </p>
+
+                    </div>
+
+
+                    <div class="log-entry">
+
+                        <h4>
+                            v2.7.2 - PREVIOUS (STILL WORKING ON!)
+                        </h4>
+
+                        <p>
+                            - Starting Scramjet build 
                         </p>
 
                         <p>
-                            - Added seasonal and custom theme support
+                            - Starting venomous build with Wispr LLM
+                        </p>
+
+                        <p>
+                            - Finishing Hydra Game Files
+                        </p>
+
+                        <p>
+                            - Adding Pizza Edition (To Replace With Totally Science)
+                        </p>
+
+                        <p>
+                            - Fix Game Loader
+                        </p>
+
+                        <p>
+                            - Fixed JSON (MANY TIMES ITS NOT EVEN FUNNY)
                         </p>
 
                     </div>
@@ -1106,37 +1135,9 @@ window.addEventListener("load", () => {
                 saveCustom();
             }
         );
-
-
-        function updatePanel() {
-
-            const selected =
-                document.querySelector(
-                    'input[name="ui-theme"]:checked'
-                )?.value;
-
-
-            customPanel.hidden =
-                selected !== "custom";
-        }
-
-
-        themeRadios.forEach(radio => {
-
-            radio.addEventListener(
-                "change",
-                updatePanel
-            );
-        });
-
-
-        updatePreviews();
-
-        updatePanel();
-
-    }, 100);
-
+    });
 });
 </script>
+
 </body>
 </html>

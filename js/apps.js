@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             icon: 'ri-tiktok-fill',
             category: 'proxy',
             featured: false,
-            launchType: 'proxy',
-            url: 'https://tiktok.com'
+            url: '/app/no-app.html'
         },
         {
             id: 'yt',
@@ -18,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             icon: 'ri-youtube-fill',
             category: 'proxy',
             featured: true,
-            launchType: 'proxy',
-            url: 'https://youtube.com'
+            url: '/app/no-app.html'
         },
         {
             id: 'tw',
@@ -28,8 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             icon: 'ri-twitch-fill',
             category: 'proxy',
             featured: false,
-            launchType: 'proxy',
-            url: 'https://twitch.tv'
+            url: '/app/no-app.html'
         },
         {
             id: 'calc',
@@ -38,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
             icon: 'ri-calculator-fill',
             category: 'local',
             featured: false,
-            launchType: 'local',
             url: '/apps/calc.html'
         },
         {
@@ -48,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
             icon: 'ri-file-list-3-fill',
             category: 'local',
             featured: false,
-            launchType: 'local',
             url: '/apps/notes.html'
         },
         {
@@ -58,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
             icon: 'ri-html5-fill',
             category: 'local',
             featured: true,
-            launchType: 'local',
             url: '/apps/edit.html'
         },
         {
@@ -68,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
             icon: 'ri-film-fill',
             category: 'local',
             featured: false,
-            launchType: 'local',
             url: '/apps/movies.html'
         },
         {
@@ -78,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
             icon: 'ri-cloud-windy-fill',
             category: 'local',
             featured: true,
-            launchType: 'local',
             url: '/apps/c-os.html'
         }
     ];
@@ -98,32 +90,73 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('app-search');
     const noResults = document.getElementById('no-results');
 
-    function launchProxy(url) {
-        console.log(`[Spydr OS] Initiating proxy launch sequence for: ${url}`);
-        window.open(`/proxy?url=${encodeURIComponent(url)}`, '_blank');
+    function createAppView() {
+        const existingView = document.getElementById('app-view');
+        if (existingView) return existingView;
+
+        const view = document.createElement('div');
+        view.id = 'app-view';
+        view.setAttribute('aria-hidden', 'true');
+        view.innerHTML = `
+            <button id="closeAppBtn" type="button" aria-label="Exit application">
+                <i class="ri-arrow-left-line"></i> exit
+            </button>
+            <iframe id="app-frame" title="Spydr application"></iframe>
+        `;
+
+        document.body.appendChild(view);
+        return view;
     }
 
-    function launchLocal(url) {
-        console.log(`[Spydr OS] Launching local application: ${url}`);
-        window.location.href = url;
+    function withEmbedMode(url) {
+        const parsed = new URL(url, window.location.origin);
+        parsed.searchParams.set('embed', '1');
+        return `${parsed.pathname}${parsed.search}${parsed.hash}`;
+    }
+
+    function openApp(url, name) {
+        const view = createAppView();
+        const frame = view.querySelector('#app-frame');
+
+        frame.title = `${name} // Spydr application`;
+        frame.src = withEmbedMode(url);
+        view.style.display = 'flex';
+        view.classList.add('open');
+        view.setAttribute('aria-hidden', 'false');
+
+        document.querySelector('.dock')?.classList.add('hidden');
+        document.body.classList.add('app-open');
+        view.querySelector('#closeAppBtn')?.focus();
+    }
+
+    function closeApp() {
+        const view = document.getElementById('app-view');
+        const frame = document.getElementById('app-frame');
+
+        if (view) {
+            view.style.display = 'none';
+            view.classList.remove('open');
+            view.setAttribute('aria-hidden', 'true');
+        }
+        if (frame) frame.src = 'about:blank';
+
+        document.querySelector('.dock')?.classList.remove('hidden');
+        document.body.classList.remove('app-open');
     }
 
     function handleLaunch(e) {
         const btn = e.currentTarget;
-        const type = btn.getAttribute('data-type');
         const url = btn.getAttribute('data-url');
+        const name = btn.getAttribute('data-name') || 'Application';
+        const originalHTML = btn.innerHTML;
 
         btn.innerHTML = `<i class="ri-loader-4-line ri-spin"></i> Launching...`;
+        btn.disabled = true;
 
         setTimeout(() => {
-            if (type === 'proxy') {
-                launchProxy(url);
-            } else if (type === 'local') {
-                launchLocal(url);
-            }
-            setTimeout(() => {
-                btn.innerHTML = `Launch <i class="ri-arrow-right-line"></i>`;
-            }, 1000);
+            openApp(url, name);
+            btn.innerHTML = originalHTML;
+            btn.disabled = false;
         }, 400);
     }
 
@@ -147,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="app-desc">${app.description}</p>
             </div>
             <div class="card-footer">
-                <button class="launch-btn" aria-label="Launch ${app.name}" data-type="${app.launchType}" data-url="${app.url}">
+                <button class="launch-btn" aria-label="Launch ${app.name}" data-name="${app.name}" data-url="${app.url}">
                     Launch <i class="ri-arrow-right-line"></i>
                 </button>
             </div>
@@ -195,6 +228,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchInput.addEventListener('input', (e) => {
         renderApps(e.target.value);
+    });
+
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('#closeAppBtn')) closeApp();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && document.getElementById('app-view')?.classList.contains('open')) {
+            closeApp();
+        }
     });
 
     renderApps();

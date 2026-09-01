@@ -25,17 +25,29 @@
     }
 
     html {
+      width: 100%;
+      height: auto !important;
       min-height: 100%;
+      overflow-x: hidden !important;
+      overflow-y: scroll !important;
       background: var(--theme-background, #090909);
+      scroll-behavior: smooth;
     }
 
     body.movie-page {
+      position: static !important;
+      width: 100%;
       min-height: 100vh;
-      height: auto;
-      overflow-x: hidden;
-      overflow-y: auto;
+      height: auto !important;
+      max-height: none !important;
+      overflow-x: hidden !important;
+      overflow-y: visible !important;
       color: var(--theme-text, #fff);
       background: var(--theme-background, #090909);
+    }
+
+    body.movie-page.modal-open {
+      overflow: hidden !important;
     }
 
     body.movie-page::before {
@@ -59,8 +71,20 @@
       position: relative;
       width: min(1500px, 100%);
       min-height: 100vh;
+      height: auto !important;
+      max-height: none !important;
+      overflow: visible !important;
       margin: 0 auto;
       padding: 0 28px 118px;
+    }
+
+    .movie-shell main,
+    #browse-view,
+    #details-view,
+    #sections {
+      height: auto !important;
+      max-height: none !important;
+      overflow: visible !important;
     }
 
     .movie-header {
@@ -716,7 +740,7 @@
 
   <div class="movie-shell">
     <header class="movie-header">
-      <a class="movie-brand" href="/app/movie.html" aria-label="Spydr Movies home">
+      <a class="movie-brand" href="./movie.html" aria-label="Spydr Movies home">
         <span class="movie-brand-mark"><i class="ri-movie-2-line"></i></span>
         <span>
           <strong>spydr mov</strong><br>
@@ -785,6 +809,7 @@
       const API = "/api/mov";
       const IMAGE = "https://image.tmdb.org/t/p/";
       const PLACEHOLDER = "/mov/public/images/no-image.png";
+      const PAGE_PATH = window.location.pathname;
 
       const state = {
         sections: [],
@@ -1002,7 +1027,7 @@
         elements.searchInput.value = "";
         setDocumentTitle("");
 
-        if (updateHistory) history.pushState({ view: "home" }, "", "/app/movie.html");
+        if (updateHistory) history.pushState({ view: "home" }, "", PAGE_PATH);
 
         try {
           const payload = await getJSON(`${API}/home`);
@@ -1032,7 +1057,7 @@
 
         if (updateHistory) {
           const url = new URL(location.href);
-          url.pathname = "/app/movie.html";
+          url.pathname = PAGE_PATH;
           url.search = "";
           url.searchParams.set("q", cleanQuery);
           history.pushState({ view: "search", query: cleanQuery }, "", url);
@@ -1068,7 +1093,7 @@
 
         if (updateHistory) {
           const url = new URL(location.href);
-          url.pathname = "/app/movie.html";
+          url.pathname = PAGE_PATH;
           url.search = "";
           url.searchParams.set("type", type);
           url.searchParams.set("id", id);
@@ -1154,7 +1179,7 @@
 
           elements.trailerFrame.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(key)}?autoplay=1&rel=0`;
           elements.modal.classList.add("active");
-          document.body.style.overflow = "hidden";
+          document.body.classList.add("modal-open");
         } catch (error) {
           if (error.name !== "AbortError") alert(error.message);
         }
@@ -1163,7 +1188,7 @@
       function closeTrailer() {
         elements.modal.classList.remove("active");
         elements.trailerFrame.src = "about:blank";
-        document.body.style.overflow = "";
+        document.body.classList.remove("modal-open");
       }
 
       elements.searchForm.addEventListener("submit", event => {

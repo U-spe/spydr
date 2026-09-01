@@ -87,6 +87,57 @@ body {
     line-height: 1.5;
 }
 
+body.app-open {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   FULLSCREEN APP VIEW
+   Matches the games embed layer
+   ========================================================= */
+
+#app-view {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: none;
+    flex-direction: column;
+    background: #000;
+}
+
+#app-view.open {
+    display: flex;
+}
+
+#app-frame {
+    width: 100%;
+    min-height: 0;
+    flex: 1;
+    border: 0;
+    background: var(--theme-background, #090909);
+}
+
+#closeAppBtn {
+    width: 100%;
+    min-height: 44px;
+    flex: 0 0 auto;
+    padding: 12px;
+    border: 0;
+    cursor: pointer;
+    color: var(--theme-text, #fff);
+    background: var(--theme-surface, #111);
+    font: 600 0.78rem var(--font-body);
+    text-align: left;
+}
+
+#closeAppBtn:hover,
+#closeAppBtn:focus-visible {
+    color: var(--theme-background, #090909);
+    background: var(--theme-primary, #fff);
+    outline: none;
+}
+
 
 /* =========================================================
    BACKGROUND FX CONTAINER

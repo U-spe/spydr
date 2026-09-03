@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             icon: 'ri-film-fill',
             category: 'local',
             featured: false,
-            url: '/apps/movies.html'
+            url: '/apps/movie.html'
         },
         {
             id: 'cine',

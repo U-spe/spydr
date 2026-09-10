@@ -75,7 +75,7 @@
             <h2>spydr</h2>
 
             <span class="status-badge">
-                os_v2.7.3
+                os_v3.0
             </span>
 
         </div>
@@ -824,7 +824,7 @@
                     </span>
 
                     <span class="manifest-val">
-                        spydr os v2.7.3
+                        spydr os v3.0
                     </span>
 
                 </div>
@@ -892,7 +892,15 @@
 <script>
     // Render the Markdown into the HTML div
     const markdownText = `
-## v2.7.3 - CURRENT
+# v3.0 - CURRENT
+
+## 🛠️ Beginning
+- [ ] Starting Scramjet build 
+- [x] Make Homepage Text Buttons
+- [ ] Redownload Locally and Deploy On surge.sh
+
+
+## v2.7.3 - PREVIOUS
 
 ### 🛠️ Beginning
 - [x] Add More Colored Themes And Cool Stuff
@@ -901,17 +909,6 @@
 - [x] Make a page on Search to embed a custom error message
 - [ ] Add a notice on the Apps page explaining that proxied apps currently don't work
 
-## v2.7.2 - PREVIOUS (STILL WORKING ON!)
-
-### 🛠️ Beginning
-- [ ] Starting Scramjet build 
-- [ ] Starting venomous build with Wispr LLM
-- [ ] Finishing Hydra Game Files
-- [x] Adding Pizza Edition (To Replace With Totally Science)
-- [x] Fix Game Loader
-
-### 🐛 Fixed
-- [x] Fixed JSON (MANY TIMES ITS NOT EVEN FUNNY)
     `;
 
     document.getElementById('changelog').innerHTML = marked.parse(markdownText);

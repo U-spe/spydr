@@ -1,550 +1,665 @@
-<!DOCTYPE html>
+<!--
+  venomous ai
+  part of spydr
 
+  if you're using/forking this code:
+  give cj/spydr some credit bro 😭
+
+  love u :3
+-->
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
 
-  <title>spydr // venomous</title>
+  <title>venomous | spydr</title>
 
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Venomous AI by Spydr"
+  />
 
-  <link rel="stylesheet" href="/css/main.css">
+  <link
+    rel="icon"
+    type="image/png"
+    href="/assets/images/favicon.png"
+  >
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- SPYDR GLOBAL -->
+  <link rel="stylesheet" href="/css/main.css"/>
   <link rel="stylesheet" href="/css/menu.css">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "JetBrains Mono", monospace;
-      color: var(--theme-text);
-      overflow: hidden;
-      background: var(--theme-background);
-    }
-
-    /* =========================================
-       VENOMOUS PAGE
-       ========================================= */
-
-    .venomous-page {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      z-index: 1;
-    }
-
-    /* =========================================
-       TOP BAR
-       ========================================= */
-
-    .topbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 48px;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      padding: 0 16px;
-
-      border-bottom: 1px solid var(--theme-border);
-
-      background: color-mix(
-        in srgb,
-        var(--theme-surface) 78%,
-        transparent
-      );
-
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-
-      color: var(--theme-muted);
-
-      z-index: 50;
-    }
-
-    .topbar .left,
-    .topbar .right {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-
-      font-size: 13px;
-    }
-
-    .topbar .left i {
-      color: var(--theme-primary);
-      font-size: 17px;
-    }
-
-    #clock,
-    #battery {
-      color: var(--theme-text);
-    }
-
-    /* =========================================
-       MAIN WRAPPER
-       ========================================= */
-
-    .wrap {
-      position: relative;
-
-      width: 100%;
-      height: 100vh;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      padding: 48px 20px 20px;
-
-      z-index: 2;
-    }
-
-    /* =========================================
-       CONSTRUCTION CARD
-       ========================================= */
-
-    .construction {
-      width: min(900px, 92vw);
-
-      padding: 70px 50px;
-
-      background: color-mix(
-        in srgb,
-        var(--theme-surface) 90%,
-        transparent
-      );
-
-      border: 1px solid var(--theme-border);
-
-      border-radius: 20px;
-
-      text-align: center;
-
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-
-      box-shadow:
-        0 0 40px color-mix(
-          in srgb,
-          var(--theme-primary) 10%,
-          transparent
-        ),
-        inset 0 0 0 1px color-mix(
-          in srgb,
-          var(--theme-text) 3%,
-          transparent
-        );
-
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Theme colored animated glow */
-
-    .construction::before {
-      content: "";
-
-      position: absolute;
-      inset: -50%;
-
-      background:
-        radial-gradient(
-          circle at 20% 30%,
-          color-mix(
-            in srgb,
-            var(--theme-primary) 12%,
-            transparent
-          ),
-          transparent 30%
-        ),
-        radial-gradient(
-          circle at 80% 70%,
-          color-mix(
-            in srgb,
-            var(--theme-secondary) 12%,
-            transparent
-          ),
-          transparent 30%
-        );
-
-      animation: constructionGlow 10s ease-in-out infinite alternate;
-
-      pointer-events: none;
-    }
-
-    @keyframes constructionGlow {
-      0% {
-        transform: translate(-5%, -5%) rotate(0deg);
-      }
-
-      50% {
-        transform: translate(5%, 5%) rotate(8deg);
-      }
-
-      100% {
-        transform: translate(-3%, 7%) rotate(-5deg);
-      }
-    }
-
-    .construction > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    /* =========================================
-       ICON
-       ========================================= */
-
-    .icon {
-      width: 110px;
-      height: 110px;
-
-      margin: 0 auto 25px;
-
-      border-radius: 50%;
-
-      display: grid;
-      place-items: center;
-
-      background: color-mix(
-        in srgb,
-        var(--theme-primary) 10%,
-        transparent
-      );
-
-      border: 1px solid color-mix(
-        in srgb,
-        var(--theme-primary) 35%,
-        transparent
-      );
-
-      font-size: 52px;
-
-      color: var(--theme-primary);
-
-      box-shadow:
-        0 0 30px color-mix(
-          in srgb,
-          var(--theme-primary) 15%,
-          transparent
-        );
-
-      animation: iconFloat 4s ease-in-out infinite;
-    }
-
-    @keyframes iconFloat {
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-7px);
-      }
-    }
-
-    /* =========================================
-       TEXT
-       ========================================= */
-
-    h1 {
-      margin: 0;
-
-      font-family: "Space Grotesk", sans-serif;
-
-      font-size: clamp(42px, 7vw, 82px);
-
-      line-height: 1;
-
-      letter-spacing: 2px;
-
-      color: var(--theme-text);
-    }
-
-    .status {
-      margin-top: 10px;
-
-      color: var(--theme-primary);
-
-      text-transform: uppercase;
-
-      letter-spacing: 4px;
-
-      font-size: 13px;
-
-      font-weight: 600;
-
-      text-shadow:
-        0 0 15px var(--theme-glow);
-    }
-
-    .desc {
-      max-width: 620px;
-
-      margin: 28px auto 40px;
-
-      color: var(--theme-muted);
-
-      font-size: 15px;
-
-      line-height: 1.8;
-    }
-
-    /* =========================================
-       HOME BUTTON
-       ========================================= */
-
-    .home-btn {
-      display: inline-flex;
-
-      align-items: center;
-      justify-content: center;
-
-      gap: 10px;
-
-      padding: 14px 28px;
-
-      border-radius: 10px;
-
-      border: 1px solid var(--theme-primary);
-
-      background: transparent;
-
-      color: var(--theme-primary);
-
-      text-decoration: none;
-
-      transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-    }
-
-    .home-btn:hover {
-      background: var(--theme-primary);
-
-      color: var(--theme-background);
-
-      transform: translateY(-2px);
-
-      box-shadow:
-        0 0 20px var(--theme-glow);
-    }
-
-    .home-btn:active {
-      transform: translateY(0) scale(0.98);
-    }
-
-    /* =========================================
-       FOOTER
-       ========================================= */
-
-    .footer-note {
-      margin-top: 28px;
-
-      color: var(--theme-muted);
-
-      opacity: 0.55;
-
-      font-size: 12px;
-    }
-
-    /* =========================================
-       MOBILE
-       ========================================= */
-
-    @media (max-width: 600px) {
-      .construction {
-        padding: 50px 25px;
-      }
-
-      .icon {
-        width: 85px;
-        height: 85px;
-        font-size: 40px;
-      }
-
-      .desc {
-        font-size: 13px;
-        line-height: 1.7;
-      }
-
-      .home-btn {
-        width: 100%;
-        padding: 13px 18px;
-      }
-    }
-  </style>
-
+  <!-- VENOMOUS -->
+  <link rel="stylesheet" href="/css/study.css">
 </head>
 
-<body>
+<body data-bg-style="stars">
 
-  <!-- =========================================
-       GLOBAL BACKGROUND
-       ========================================= -->
+  <!-- SPYDR LOADER -->
+  <div id="loader"></div>
 
+
+  <!-- SPYDR GLOBAL BACKGROUND EFFECTS -->
   <div id="bg-effects-container">
     <canvas id="stars-canvas"></canvas>
     <div id="fog-overlay"></div>
   </div>
 
-  <!-- =========================================
-       VENOMOUS PAGE
-       ========================================= -->
 
-  <div class="venomous-page">
-
-```
-<!-- TOP BAR -->
-
-<div class="topbar">
-
-  <div class="left">
-    <i class="ri-chat-smile-ai-3-line"></i>
-    <span>spydr: venomous</span>
-  </div>
-
-  <div class="right">
-    <div id="clock">--:--</div>
-    <div id="battery">--%</div>
-  </div>
-
-</div>
-
-<!-- MAIN -->
-
-<div class="wrap">
-
-  <div class="construction">
-
-    <div class="icon">
-      <i class="ri-tools-fill"></i>
-    </div>
-
-    <div class="status">
-      ai module
-    </div>
-
-    <h1>
-      UNDER<br>
-      CONSTRUCTION
-    </h1>
-
-    <div class="desc">
-      venomous is currently being built from the ground up.
-      we are improving performance, security, and adding a completely new experience.
-      check back soon.
-    </div>
-
-    <a class="home-btn" href="/">
-      <i class="ri-arrow-left-line"></i>
-      there is no point of being here. just go home.
-    </a>
-
-    <div class="footer-note">
-      spydr: venomous • unavailable
-    </div>
-
-  </div>
-
-</div>
-```
-
-  </div>
-
-  <!-- GLOBAL MENU -->
-
+  <!-- SPYDR GLOBAL MENU -->
   <div id="global-menu"></div>
 
-  <!-- =========================================
-       CLOCK / BATTERY
-       ========================================= -->
 
-  <script>
-    function updateClock() {
-      const clock = document.getElementById("clock");
+  <!-- ==================================================== -->
+  <!-- VENOMOUS APP -->
+  <!-- ==================================================== -->
 
-      if (!clock) return;
-
-      const now = new Date();
-
-      clock.textContent =
-        now.toLocaleTimeString([], {
-          hour: "2-digit",
-          minute: "2-digit"
-        });
-    }
-
-    updateClock();
-
-    setInterval(updateClock, 1000);
+  <div id="venomous-app">
 
 
-    if (navigator.getBattery) {
+    <!-- ======================== -->
+    <!-- SIDEBAR -->
+    <!-- ======================== -->
 
-      navigator.getBattery().then((battery) => {
+    <aside
+      id="venomous-sidebar"
+      class="venomous-sidebar"
+    >
 
-        const batteryElement =
-          document.getElementById("battery");
+      <div class="sidebar-header">
 
-        if (!batteryElement) return;
+        <div class="venomous-brand">
 
-        function updateBattery() {
+          <div class="brand-icon">
+            <i class="ri-spider-line"></i>
+          </div>
 
-          batteryElement.textContent =
-            Math.floor(battery.level * 100) + "%";
-        }
+          <div class="brand-text">
+            <strong>venomous</strong>
+            <span>spydr intelligence</span>
+          </div>
 
-        updateBattery();
+        </div>
 
-        battery.addEventListener(
-          "levelchange",
-          updateBattery
-        );
 
-      }).catch(() => {
+        <button
+          id="close-sidebar"
+          class="icon-button mobile-only"
+          aria-label="Close sidebar"
+        >
+          <i class="ri-close-line"></i>
+        </button>
 
-        const batteryElement =
-          document.getElementById("battery");
+      </div>
 
-        if (batteryElement) {
-          batteryElement.textContent = "N/A";
-        }
 
-      });
+      <!-- NEW CHAT -->
 
-    } else {
+      <button
+        id="new-chat"
+        class="new-chat-button"
+      >
+        <i class="ri-add-line"></i>
+        <span>new chat</span>
+      </button>
 
-      const batteryElement =
-        document.getElementById("battery");
 
-      if (batteryElement) {
-        batteryElement.textContent = "N/A";
-      }
+      <!-- HISTORY -->
 
-    }
-  </script>
+      <div class="sidebar-label">
+        recent
+      </div>
 
-  <!-- =========================================
-       SPYDR CORE
-       ========================================= -->
 
+      <div
+        id="chat-history"
+        class="chat-history"
+      >
+      </div>
+
+
+      <!-- SIDEBAR FOOTER -->
+
+      <div class="sidebar-footer">
+
+        <button
+          id="customize-open"
+          class="sidebar-option"
+        >
+
+          <i class="ri-equalizer-2-line"></i>
+
+          <div>
+            <strong>customize</strong>
+            <span>rules & preferences</span>
+          </div>
+
+        </button>
+
+
+        <button
+          id="clear-chats"
+          class="sidebar-option"
+        >
+
+          <i class="ri-delete-bin-6-line"></i>
+
+          <div>
+            <strong>clear chats</strong>
+            <span>delete local history</span>
+          </div>
+
+        </button>
+
+      </div>
+
+    </aside>
+
+
+
+    <!-- ======================== -->
+    <!-- MAIN -->
+    <!-- ======================== -->
+
+    <main class="venomous-main">
+
+
+      <!-- HEADER -->
+
+      <header class="venomous-header">
+
+        <div class="header-left">
+
+          <button
+            id="open-sidebar"
+            class="icon-button sidebar-open-button"
+            aria-label="Open sidebar"
+          >
+            <i class="ri-menu-2-line"></i>
+          </button>
+
+
+          <div class="venomous-status">
+
+            <span class="online-dot"></span>
+
+            <div>
+              <strong>venomous</strong>
+              <span>online</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="header-right">
+
+          <div class="vision-badge">
+            <i class="ri-eye-line"></i>
+            vision
+          </div>
+
+
+          <button
+            id="header-new-chat"
+            class="icon-button"
+            aria-label="New chat"
+            title="New chat"
+          >
+            <i class="ri-edit-box-line"></i>
+          </button>
+
+        </div>
+
+      </header>
+
+
+
+      <!-- ======================== -->
+      <!-- CHAT AREA -->
+      <!-- ======================== -->
+
+      <section
+        id="chat-scroll"
+        class="chat-scroll"
+      >
+
+        <div
+          id="chat-content"
+          class="chat-content"
+        >
+
+
+          <!-- WELCOME -->
+
+          <section
+            id="welcome"
+            class="welcome"
+          >
+
+            <div class="welcome-icon">
+              <i class="ri-spider-line"></i>
+            </div>
+
+
+            <h1>
+              what's up?
+            </h1>
+
+
+            <p>
+              ask venomous anything. code, school stuff,
+              random questions, screenshots, images, whatever.
+            </p>
+
+
+            <div class="quick-prompts">
+
+              <button
+                class="quick-prompt"
+                data-message="Help me understand something I'm studying."
+              >
+                <i class="ri-graduation-cap-line"></i>
+
+                <div>
+                  <strong>study</strong>
+                  <span>learn something</span>
+                </div>
+              </button>
+
+
+              <button
+                class="quick-prompt"
+                data-message="Help me debug some code."
+              >
+                <i class="ri-code-s-slash-line"></i>
+
+                <div>
+                  <strong>debug</strong>
+                  <span>fix some code</span>
+                </div>
+              </button>
+
+
+              <button
+                class="quick-prompt"
+                data-message="Help me brainstorm an idea."
+              >
+                <i class="ri-lightbulb-flash-line"></i>
+
+                <div>
+                  <strong>brainstorm</strong>
+                  <span>build an idea</span>
+                </div>
+              </button>
+
+
+              <button
+                class="quick-prompt"
+                id="quick-image"
+              >
+                <i class="ri-image-line"></i>
+
+                <div>
+                  <strong>image</strong>
+                  <span>analyze a screenshot</span>
+                </div>
+              </button>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ======================== -->
+      <!-- INPUT AREA -->
+      <!-- ======================== -->
+
+      <section class="composer-section">
+
+
+        <!-- IMAGE PREVIEW -->
+
+        <div
+          id="attachment-preview"
+          class="attachment-preview hidden"
+        >
+
+          <div class="attachment-thumb">
+            <img
+              id="attachment-image"
+              src=""
+              alt="Selected attachment"
+            >
+          </div>
+
+
+          <div class="attachment-details">
+
+            <strong id="attachment-name">
+              image
+            </strong>
+
+            <span id="attachment-info">
+              ready
+            </span>
+
+          </div>
+
+
+          <button
+            id="remove-attachment"
+            class="attachment-remove"
+            aria-label="Remove image"
+          >
+            <i class="ri-close-line"></i>
+          </button>
+
+        </div>
+
+
+
+        <!-- COMPOSER -->
+
+        <div
+          id="composer"
+          class="composer"
+        >
+
+          <button
+            id="attach-button"
+            class="composer-button"
+            title="Upload image"
+            aria-label="Upload image"
+          >
+            <i class="ri-add-line"></i>
+          </button>
+
+
+          <input
+            id="image-input"
+            type="file"
+            accept="image/png,image/jpeg,image/webp"
+            hidden
+          >
+
+
+          <textarea
+            id="message-input"
+            rows="1"
+            maxlength="12000"
+            placeholder="message venomous..."
+            spellcheck="true"
+          ></textarea>
+
+
+          <button
+            id="send-button"
+            class="send-button"
+            title="Send"
+            aria-label="Send"
+          >
+            <i class="ri-arrow-up-line"></i>
+          </button>
+
+
+          <button
+            id="stop-button"
+            class="send-button hidden"
+            title="Stop"
+            aria-label="Stop"
+          >
+            <i class="ri-stop-fill"></i>
+          </button>
+
+        </div>
+
+
+        <div class="ai-disclaimer">
+          venomous can make mistakes. check important info.
+        </div>
+
+      </section>
+
+
+    </main>
+
+  </div>
+
+
+
+  <!-- ==================================================== -->
+  <!-- CUSTOMIZATION MODAL -->
+  <!-- ==================================================== -->
+
+  <div
+    id="customize-modal"
+    class="modal-overlay hidden"
+  >
+
+    <div class="customize-modal">
+
+
+      <div class="customize-header">
+
+        <div>
+          <h2>customize venomous</h2>
+
+          <p>
+            tell venomous how you want it to act.
+          </p>
+        </div>
+
+
+        <button
+          id="customize-close"
+          class="icon-button"
+          aria-label="Close"
+        >
+          <i class="ri-close-line"></i>
+        </button>
+
+      </div>
+
+
+
+      <div class="customize-body">
+
+
+        <div class="setting">
+
+          <label for="custom-name">
+            what should venomous call you?
+          </label>
+
+          <input
+            id="custom-name"
+            type="text"
+            maxlength="40"
+            placeholder="name or nickname"
+          >
+
+        </div>
+
+
+
+        <div class="settings-row">
+
+
+          <div class="setting">
+
+            <label for="custom-tone">
+              response style
+            </label>
+
+            <select id="custom-tone">
+
+              <option value="adaptive">
+                adaptive
+              </option>
+
+              <option value="casual">
+                casual
+              </option>
+
+              <option value="professional">
+                professional
+              </option>
+
+              <option value="direct">
+                direct
+              </option>
+
+              <option value="friendly">
+                friendly
+              </option>
+
+              <option value="technical">
+                technical
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <div class="setting">
+
+            <label for="custom-length">
+              response length
+            </label>
+
+            <select id="custom-length">
+
+              <option value="adaptive">
+                adaptive
+              </option>
+
+              <option value="short">
+                short
+              </option>
+
+              <option value="medium">
+                medium
+              </option>
+
+              <option value="detailed">
+                detailed
+              </option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="setting">
+
+          <label for="custom-rules">
+            custom rules
+          </label>
+
+          <span class="setting-description">
+            add your own instructions for venomous.
+          </span>
+
+          <textarea
+            id="custom-rules"
+            maxlength="3000"
+            placeholder="example: when giving me code, always give the full updated file."
+          ></textarea>
+
+          <div class="character-counter">
+            <span id="rules-count">0</span>/3000
+          </div>
+
+        </div>
+
+
+
+        <div class="setting">
+
+          <label for="custom-about">
+            what should venomous know about you?
+          </label>
+
+          <span class="setting-description">
+            optional context venomous can use in chats.
+          </span>
+
+          <textarea
+            id="custom-about"
+            maxlength="2000"
+            placeholder="projects, preferences, stuff you're working on, etc."
+          ></textarea>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="customize-footer">
+
+        <button
+          id="custom-reset"
+          class="secondary-button"
+        >
+          reset
+        </button>
+
+
+        <button
+          id="custom-save"
+          class="primary-button"
+        >
+          save
+        </button>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ==================================================== -->
+  <!-- SPYDR GLOBAL JS -->
+  <!-- ==================================================== -->
+
+  <script src="/js/load.js"></script>
+  <script src="/js/globalmenu.js"></script>
   <script type="module" src="/js/global.js"></script>
 
-  <script src="/js/globalmenu.js"></script>
+  <!-- VENOMOUS -->
+  <script src="/js/study.js"></script>
 
 </body>
 </html>

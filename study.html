@@ -1,15 +1,6 @@
-<!--
-  venomous ai
-  part of spydr
-
-  if you're using/forking this code:
-  give cj/spydr some credit bro 😭
-
-  love u :3
--->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
 
@@ -18,11 +9,6 @@
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
-  />
-
-  <meta
-    name="description"
-    content="Venomous AI by Spydr"
   />
 
   <link
@@ -41,48 +27,59 @@
     rel="stylesheet"
   >
 
-  <!-- SPYDR GLOBAL -->
-  <link rel="stylesheet" href="/css/main.css"/>
+  <!-- SPYDR -->
+  <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/menu.css">
 
   <!-- VENOMOUS -->
   <link rel="stylesheet" href="/css/study.css">
 </head>
 
+
 <body data-bg-style="stars">
 
-  <!-- SPYDR LOADER -->
-  <div id="loader"></div>
+  <!--
+    NO /js/load.js
+    NO intro loader
+  -->
 
 
-  <!-- SPYDR GLOBAL BACKGROUND EFFECTS -->
+  <!-- SPYDR BACKGROUND SYSTEM -->
+
   <div id="bg-effects-container">
+
     <canvas id="stars-canvas"></canvas>
+
     <div id="fog-overlay"></div>
+
   </div>
 
 
   <!-- SPYDR GLOBAL MENU -->
+
   <div id="global-menu"></div>
 
 
+
   <!-- ==================================================== -->
-  <!-- VENOMOUS APP -->
+  <!-- VENOMOUS -->
   <!-- ==================================================== -->
 
   <div id="venomous-app">
 
 
-    <!-- ======================== -->
+    <!-- ================================================== -->
     <!-- SIDEBAR -->
-    <!-- ======================== -->
+    <!-- ================================================== -->
 
     <aside
       id="venomous-sidebar"
       class="venomous-sidebar"
     >
 
+
       <div class="sidebar-header">
+
 
         <div class="venomous-brand">
 
@@ -90,9 +87,17 @@
             <i class="ri-spider-line"></i>
           </div>
 
-          <div class="brand-text">
-            <strong>venomous</strong>
-            <span>spydr intelligence</span>
+
+          <div class="brand-copy">
+
+            <strong>
+              venomous
+            </strong>
+
+            <span>
+              spydr intelligence
+            </span>
+
           </div>
 
         </div>
@@ -109,34 +114,37 @@
       </div>
 
 
-      <!-- NEW CHAT -->
 
       <button
         id="new-chat"
         class="new-chat-button"
       >
+
         <i class="ri-add-line"></i>
-        <span>new chat</span>
+
+        <span>
+          new chat
+        </span>
+
       </button>
 
 
-      <!-- HISTORY -->
 
       <div class="sidebar-label">
-        recent
+        recent chats
       </div>
+
 
 
       <div
         id="chat-history"
         class="chat-history"
-      >
-      </div>
+      ></div>
 
 
-      <!-- SIDEBAR FOOTER -->
 
       <div class="sidebar-footer">
+
 
         <button
           id="customize-open"
@@ -146,11 +154,19 @@
           <i class="ri-equalizer-2-line"></i>
 
           <div>
-            <strong>customize</strong>
-            <span>rules & preferences</span>
+
+            <strong>
+              customize venomous
+            </strong>
+
+            <span>
+              rules, style & background
+            </span>
+
           </div>
 
         </button>
+
 
 
         <button
@@ -161,11 +177,19 @@
           <i class="ri-delete-bin-6-line"></i>
 
           <div>
-            <strong>clear chats</strong>
-            <span>delete local history</span>
+
+            <strong>
+              clear chats
+            </strong>
+
+            <span>
+              remove local history
+            </span>
+
           </div>
 
         </button>
+
 
       </div>
 
@@ -173,9 +197,9 @@
 
 
 
-    <!-- ======================== -->
+    <!-- ================================================== -->
     <!-- MAIN -->
-    <!-- ======================== -->
+    <!-- ================================================== -->
 
     <main class="venomous-main">
 
@@ -184,7 +208,9 @@
 
       <header class="venomous-header">
 
+
         <div class="header-left">
+
 
           <button
             id="open-sidebar"
@@ -195,26 +221,46 @@
           </button>
 
 
+
           <div class="venomous-status">
+
 
             <span class="online-dot"></span>
 
+
             <div>
-              <strong>venomous</strong>
-              <span>online</span>
+
+              <strong>
+                venomous
+              </strong>
+
+              <span>
+                online
+              </span>
+
             </div>
 
+
           </div>
+
 
         </div>
 
 
+
         <div class="header-right">
 
+
           <div class="vision-badge">
+
             <i class="ri-eye-line"></i>
-            vision
+
+            <span>
+              vision
+            </span>
+
           </div>
+
 
 
           <button
@@ -223,23 +269,28 @@
             aria-label="New chat"
             title="New chat"
           >
+
             <i class="ri-edit-box-line"></i>
+
           </button>
 
+
         </div>
+
 
       </header>
 
 
 
-      <!-- ======================== -->
-      <!-- CHAT AREA -->
-      <!-- ======================== -->
+      <!-- ================================================= -->
+      <!-- CHAT -->
+      <!-- ================================================= -->
 
       <section
         id="chat-scroll"
         class="chat-scroll"
       >
+
 
         <div
           id="chat-content"
@@ -247,12 +298,13 @@
         >
 
 
-          <!-- WELCOME -->
+          <!-- DEFAULT EMPTY CHAT SCREEN -->
 
           <section
             id="welcome"
             class="welcome"
           >
+
 
             <div class="welcome-icon">
               <i class="ri-spider-line"></i>
@@ -260,100 +312,150 @@
 
 
             <h1>
-              what's up?
+              venomous.
             </h1>
 
 
             <p>
-              ask venomous anything. code, school stuff,
-              random questions, screenshots, images, whatever.
+              ask something, paste a screenshot,
+              upload an image, debug code, study,
+              or just start talking.
             </p>
 
 
+
             <div class="quick-prompts">
+
 
               <button
                 class="quick-prompt"
                 data-message="Help me understand something I'm studying."
               >
+
                 <i class="ri-graduation-cap-line"></i>
 
                 <div>
-                  <strong>study</strong>
-                  <span>learn something</span>
+
+                  <strong>
+                    study
+                  </strong>
+
+                  <span>
+                    explain something
+                  </span>
+
                 </div>
+
               </button>
+
 
 
               <button
                 class="quick-prompt"
                 data-message="Help me debug some code."
               >
+
                 <i class="ri-code-s-slash-line"></i>
 
                 <div>
-                  <strong>debug</strong>
-                  <span>fix some code</span>
+
+                  <strong>
+                    debug
+                  </strong>
+
+                  <span>
+                    fix some code
+                  </span>
+
                 </div>
+
               </button>
+
 
 
               <button
                 class="quick-prompt"
                 data-message="Help me brainstorm an idea."
               >
+
                 <i class="ri-lightbulb-flash-line"></i>
 
                 <div>
-                  <strong>brainstorm</strong>
-                  <span>build an idea</span>
+
+                  <strong>
+                    brainstorm
+                  </strong>
+
+                  <span>
+                    build an idea
+                  </span>
+
                 </div>
+
               </button>
+
 
 
               <button
-                class="quick-prompt"
                 id="quick-image"
+                class="quick-prompt"
               >
+
                 <i class="ri-image-line"></i>
 
                 <div>
-                  <strong>image</strong>
-                  <span>analyze a screenshot</span>
+
+                  <strong>
+                    image
+                  </strong>
+
+                  <span>
+                    analyze a screenshot
+                  </span>
+
                 </div>
+
               </button>
+
 
             </div>
 
+
           </section>
 
+
         </div>
+
 
       </section>
 
 
 
-      <!-- ======================== -->
-      <!-- INPUT AREA -->
-      <!-- ======================== -->
+      <!-- ================================================= -->
+      <!-- COMPOSER -->
+      <!-- ================================================= -->
 
       <section class="composer-section">
 
 
-        <!-- IMAGE PREVIEW -->
+        <!-- IMAGE ATTACHMENT -->
 
         <div
           id="attachment-preview"
           class="attachment-preview hidden"
         >
 
+
           <div class="attachment-thumb">
+
             <img
               id="attachment-image"
               src=""
-              alt="Selected attachment"
+              alt="attachment"
             >
+
           </div>
+
 
 
           <div class="attachment-details">
@@ -369,89 +471,121 @@
           </div>
 
 
+
           <button
             id="remove-attachment"
             class="attachment-remove"
-            aria-label="Remove image"
+            aria-label="Remove attachment"
           >
+
             <i class="ri-close-line"></i>
+
           </button>
+
 
         </div>
 
 
 
-        <!-- COMPOSER -->
+        <!-- ACTUAL TEXTBOX -->
 
         <div
           id="composer"
           class="composer"
+          data-composer-background="theme"
         >
 
-          <button
-            id="attach-button"
-            class="composer-button"
-            title="Upload image"
-            aria-label="Upload image"
-          >
-            <i class="ri-add-line"></i>
-          </button>
+
+          <div
+            id="composer-background-image"
+            class="composer-background-image"
+          ></div>
 
 
-          <input
-            id="image-input"
-            type="file"
-            accept="image/png,image/jpeg,image/webp"
-            hidden
-          >
+          <div class="composer-inner">
 
 
-          <textarea
-            id="message-input"
-            rows="1"
-            maxlength="12000"
-            placeholder="message venomous..."
-            spellcheck="true"
-          ></textarea>
+            <button
+              id="attach-button"
+              class="composer-button"
+              aria-label="Attach image"
+              title="Attach image"
+            >
+
+              <i class="ri-add-line"></i>
+
+            </button>
 
 
-          <button
-            id="send-button"
-            class="send-button"
-            title="Send"
-            aria-label="Send"
-          >
-            <i class="ri-arrow-up-line"></i>
-          </button>
+
+            <input
+              id="image-input"
+              type="file"
+              accept="image/png,image/jpeg,image/webp"
+              hidden
+            >
 
 
-          <button
-            id="stop-button"
-            class="send-button hidden"
-            title="Stop"
-            aria-label="Stop"
-          >
-            <i class="ri-stop-fill"></i>
-          </button>
+
+            <textarea
+              id="message-input"
+              rows="1"
+              maxlength="12000"
+              placeholder="message venomous..."
+              spellcheck="true"
+            ></textarea>
+
+
+
+            <button
+              id="send-button"
+              class="send-button"
+              aria-label="Send"
+              title="Send"
+            >
+
+              <i class="ri-arrow-up-line"></i>
+
+            </button>
+
+
+
+            <button
+              id="stop-button"
+              class="send-button stop-button hidden"
+              aria-label="Stop"
+              title="Stop"
+            >
+
+              <i class="ri-stop-fill"></i>
+
+            </button>
+
+
+          </div>
+
 
         </div>
+
 
 
         <div class="ai-disclaimer">
           venomous can make mistakes. check important info.
         </div>
 
+
       </section>
 
 
     </main>
+
 
   </div>
 
 
 
   <!-- ==================================================== -->
-  <!-- CUSTOMIZATION MODAL -->
+  <!-- CUSTOMIZE MODAL -->
   <!-- ==================================================== -->
 
   <div
@@ -459,18 +593,25 @@
     class="modal-overlay hidden"
   >
 
+
     <div class="customize-modal">
 
 
       <div class="customize-header">
 
+
         <div>
-          <h2>customize venomous</h2>
+
+          <h2>
+            customize venomous
+          </h2>
 
           <p>
-            tell venomous how you want it to act.
+            stored locally on this device.
           </p>
+
         </div>
+
 
 
         <button
@@ -478,8 +619,11 @@
           class="icon-button"
           aria-label="Close"
         >
+
           <i class="ri-close-line"></i>
+
         </button>
+
 
       </div>
 
@@ -487,6 +631,8 @@
 
       <div class="customize-body">
 
+
+        <!-- NAME -->
 
         <div class="setting">
 
@@ -504,6 +650,8 @@
         </div>
 
 
+
+        <!-- RESPONSE OPTIONS -->
 
         <div class="settings-row">
 
@@ -524,16 +672,16 @@
                 casual
               </option>
 
-              <option value="professional">
-                professional
+              <option value="friendly">
+                friendly
               </option>
 
               <option value="direct">
                 direct
               </option>
 
-              <option value="friendly">
-                friendly
+              <option value="professional">
+                professional
               </option>
 
               <option value="technical">
@@ -574,9 +722,12 @@
 
           </div>
 
+
         </div>
 
 
+
+        <!-- CUSTOM RULES -->
 
         <div class="setting">
 
@@ -585,32 +736,37 @@
           </label>
 
           <span class="setting-description">
-            add your own instructions for venomous.
+            tell venomous how you want it to respond.
           </span>
 
           <textarea
             id="custom-rules"
             maxlength="3000"
-            placeholder="example: when giving me code, always give the full updated file."
+            placeholder="example: always give me the full updated code file."
           ></textarea>
 
+
           <div class="character-counter">
-            <span id="rules-count">0</span>/3000
+
+            <span id="rules-count">
+              0
+            </span>
+
+            /3000
+
           </div>
 
         </div>
 
 
 
+        <!-- ABOUT -->
+
         <div class="setting">
 
           <label for="custom-about">
             what should venomous know about you?
           </label>
-
-          <span class="setting-description">
-            optional context venomous can use in chats.
-          </span>
 
           <textarea
             id="custom-about"
@@ -620,11 +776,219 @@
 
         </div>
 
+
+
+        <!-- ================================================= -->
+        <!-- TEXTBOX BACKGROUND -->
+        <!-- ================================================= -->
+
+        <div class="settings-divider"></div>
+
+
+        <div class="setting-section-heading">
+
+          <div>
+
+            <strong>
+              textbox background
+            </strong>
+
+            <span>
+              customize the venomous prompt box
+            </span>
+
+          </div>
+
+          <i class="ri-palette-line"></i>
+
+        </div>
+
+
+
+        <div class="setting">
+
+
+          <label for="composer-background-mode">
+            background style
+          </label>
+
+
+          <select id="composer-background-mode">
+
+            <option value="theme">
+              spydr theme
+            </option>
+
+            <option value="glass">
+              glass
+            </option>
+
+            <option value="gradient">
+              custom gradient
+            </option>
+
+            <option value="image">
+              custom image
+            </option>
+
+          </select>
+
+
+        </div>
+
+
+
+        <!-- GRADIENT OPTIONS -->
+
+        <div
+          id="gradient-options"
+          class="background-options hidden"
+        >
+
+
+          <span class="setting-description">
+            choose 2 or 3 colors.
+          </span>
+
+
+          <div class="color-picker-row">
+
+
+            <div class="color-input-wrap">
+
+              <input
+                id="gradient-color-1"
+                type="color"
+                value="#3f5efb"
+              >
+
+              <span>
+                color 1
+              </span>
+
+            </div>
+
+
+
+            <div class="color-input-wrap">
+
+              <input
+                id="gradient-color-2"
+                type="color"
+                value="#7c3aed"
+              >
+
+              <span>
+                color 2
+              </span>
+
+            </div>
+
+
+
+            <div class="color-input-wrap">
+
+              <input
+                id="gradient-color-3"
+                type="color"
+                value="#111111"
+              >
+
+              <span>
+                color 3
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+          <label class="checkbox-setting">
+
+            <input
+              id="use-third-color"
+              type="checkbox"
+              checked
+            >
+
+            <span>
+              use third color
+            </span>
+
+          </label>
+
+
+        </div>
+
+
+
+        <!-- IMAGE OPTIONS -->
+
+        <div
+          id="background-image-options"
+          class="background-options hidden"
+        >
+
+
+          <button
+            id="background-image-upload"
+            class="background-upload-button"
+          >
+
+            <i class="ri-image-add-line"></i>
+
+            <span>
+              choose background image
+            </span>
+
+          </button>
+
+
+          <input
+            id="background-image-input"
+            type="file"
+            accept="image/png,image/jpeg,image/webp"
+            hidden
+          >
+
+
+          <div
+            id="background-image-preview"
+            class="background-image-preview hidden"
+          >
+
+            <img
+              id="background-preview-image"
+              alt="Textbox background preview"
+            >
+
+
+            <button
+              id="background-image-remove"
+              type="button"
+            >
+
+              <i class="ri-delete-bin-line"></i>
+
+              remove
+
+            </button>
+
+          </div>
+
+
+        </div>
+
+
       </div>
 
 
 
+      <!-- FOOTER -->
+
       <div class="customize-footer">
+
 
         <button
           id="custom-reset"
@@ -638,28 +1002,34 @@
           id="custom-save"
           class="primary-button"
         >
-          save
+          save changes
         </button>
+
 
       </div>
 
 
     </div>
 
+
   </div>
 
 
 
-  <!-- ==================================================== -->
-  <!-- SPYDR GLOBAL JS -->
-  <!-- ==================================================== -->
+  <!-- SPYDR -->
 
-  <script src="/js/load.js"></script>
   <script src="/js/globalmenu.js"></script>
-  <script type="module" src="/js/global.js"></script>
+
+  <script
+    type="module"
+    src="/js/global.js"
+  ></script>
+
 
   <!-- VENOMOUS -->
+
   <script src="/js/study.js"></script>
+
 
 </body>
 </html>

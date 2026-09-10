@@ -1,5 +1,5 @@
 /* =========================================================
-   VENOMOUS AI
+   VENOMOUS
    /js/study.js
    ========================================================= */
 
@@ -12,21 +12,57 @@
      CONFIG
      ======================================================= */
 
-  const API_ENDPOINT = "/api/venomous";
+  const API_ENDPOINT =
+    "/api/venomous";
+
 
   const STORAGE = {
-    chats: "spydr.venomous.chats",
-    activeChat: "spydr.venomous.activeChat",
-    preferences: "spydr.venomous.preferences"
+
+    chats:
+      "spydr.venomous.chats",
+
+    activeChat:
+      "spydr.venomous.activeChat",
+
+    preferences:
+      "spydr.venomous.preferences"
+
   };
 
 
   const DEFAULT_PREFERENCES = {
+
     name: "",
-    tone: "adaptive",
-    length: "adaptive",
+
+    tone:
+      "adaptive",
+
+    length:
+      "adaptive",
+
     rules: "",
-    about: ""
+
+    about: "",
+
+
+    composerBackground:
+      "theme",
+
+    gradientColor1:
+      "#3f5efb",
+
+    gradientColor2:
+      "#7c3aed",
+
+    gradientColor3:
+      "#111111",
+
+    useThirdColor:
+      true,
+
+    composerImage:
+      ""
+
   };
 
 
@@ -34,109 +70,161 @@
      ELEMENTS
      ======================================================= */
 
+  const $ =
+    id =>
+      document.getElementById(id);
+
+
   const el = {
 
     sidebar:
-      document.getElementById("venomous-sidebar"),
+      $("venomous-sidebar"),
 
     openSidebar:
-      document.getElementById("open-sidebar"),
+      $("open-sidebar"),
 
     closeSidebar:
-      document.getElementById("close-sidebar"),
+      $("close-sidebar"),
 
 
     newChat:
-      document.getElementById("new-chat"),
+      $("new-chat"),
 
     headerNewChat:
-      document.getElementById("header-new-chat"),
+      $("header-new-chat"),
 
     history:
-      document.getElementById("chat-history"),
+      $("chat-history"),
 
     clearChats:
-      document.getElementById("clear-chats"),
+      $("clear-chats"),
 
 
     chatScroll:
-      document.getElementById("chat-scroll"),
+      $("chat-scroll"),
 
     chatContent:
-      document.getElementById("chat-content"),
+      $("chat-content"),
 
     welcome:
-      document.getElementById("welcome"),
+      $("welcome"),
+
+
+    composer:
+      $("composer"),
+
+    composerBackgroundImage:
+      $("composer-background-image"),
 
 
     messageInput:
-      document.getElementById("message-input"),
+      $("message-input"),
 
     sendButton:
-      document.getElementById("send-button"),
+      $("send-button"),
 
     stopButton:
-      document.getElementById("stop-button"),
+      $("stop-button"),
 
 
     attachButton:
-      document.getElementById("attach-button"),
+      $("attach-button"),
 
     imageInput:
-      document.getElementById("image-input"),
+      $("image-input"),
 
     quickImage:
-      document.getElementById("quick-image"),
+      $("quick-image"),
 
 
     attachmentPreview:
-      document.getElementById("attachment-preview"),
+      $("attachment-preview"),
 
     attachmentImage:
-      document.getElementById("attachment-image"),
+      $("attachment-image"),
 
     attachmentName:
-      document.getElementById("attachment-name"),
+      $("attachment-name"),
 
     attachmentInfo:
-      document.getElementById("attachment-info"),
+      $("attachment-info"),
 
     removeAttachment:
-      document.getElementById("remove-attachment"),
+      $("remove-attachment"),
 
 
     customizeOpen:
-      document.getElementById("customize-open"),
+      $("customize-open"),
 
     customizeModal:
-      document.getElementById("customize-modal"),
+      $("customize-modal"),
 
     customizeClose:
-      document.getElementById("customize-close"),
+      $("customize-close"),
+
 
     customName:
-      document.getElementById("custom-name"),
+      $("custom-name"),
 
     customTone:
-      document.getElementById("custom-tone"),
+      $("custom-tone"),
 
     customLength:
-      document.getElementById("custom-length"),
+      $("custom-length"),
 
     customRules:
-      document.getElementById("custom-rules"),
+      $("custom-rules"),
 
     customAbout:
-      document.getElementById("custom-about"),
-
-    customSave:
-      document.getElementById("custom-save"),
-
-    customReset:
-      document.getElementById("custom-reset"),
+      $("custom-about"),
 
     rulesCount:
-      document.getElementById("rules-count")
+      $("rules-count"),
+
+
+    composerBackgroundMode:
+      $("composer-background-mode"),
+
+    gradientOptions:
+      $("gradient-options"),
+
+    gradientColor1:
+      $("gradient-color-1"),
+
+    gradientColor2:
+      $("gradient-color-2"),
+
+    gradientColor3:
+      $("gradient-color-3"),
+
+    useThirdColor:
+      $("use-third-color"),
+
+
+    backgroundImageOptions:
+      $("background-image-options"),
+
+    backgroundImageUpload:
+      $("background-image-upload"),
+
+    backgroundImageInput:
+      $("background-image-input"),
+
+    backgroundImagePreview:
+      $("background-image-preview"),
+
+    backgroundPreviewImage:
+      $("background-preview-image"),
+
+    backgroundImageRemove:
+      $("background-image-remove"),
+
+
+    customSave:
+      $("custom-save"),
+
+    customReset:
+      $("custom-reset")
 
   };
 
@@ -152,11 +240,16 @@
     );
 
 
-  let preferences =
-    readJSON(
+  let preferences = {
+
+    ...DEFAULT_PREFERENCES,
+
+    ...readJSON(
       STORAGE.preferences,
-      DEFAULT_PREFERENCES
-    );
+      {}
+    )
+
+  };
 
 
   let activeChatId =
@@ -165,51 +258,69 @@
     );
 
 
-  let currentAttachment = null;
+  let currentAttachment =
+    null;
 
-  let requestController = null;
 
-  let isGenerating = false;
+  let requestController =
+    null;
+
+
+  let isGenerating =
+    false;
 
 
   /*
-    Runtime image data.
+    Chat images stay in memory.
 
-    Images are NOT permanently written to localStorage.
-    Storing large base64 screenshots there would hit
-    browser storage limits pretty quickly.
-
-    Text chat history IS saved.
+    We don't save every uploaded image
+    into localStorage because screenshots
+    can fill it fast.
   */
 
-  const runtimeImages = new Map();
+  const runtimeImages =
+    new Map();
 
 
   /* =======================================================
-     STORAGE HELPERS
+     STORAGE
      ======================================================= */
 
-  function readJSON(key, fallback) {
+  function readJSON(
+    key,
+    fallback
+  ) {
 
     try {
 
-      const value =
-        localStorage.getItem(key);
+      const raw =
+        localStorage.getItem(
+          key
+        );
 
-      if (!value) {
+
+      if (!raw) {
+
         return fallback;
+
       }
 
-      return JSON.parse(value);
+
+      return JSON.parse(
+        raw
+      );
+
 
     } catch (error) {
 
       console.warn(
-        "[Venomous] storage read failed:",
+        "[Venomous] storage:",
         error
       );
 
+
       return fallback;
+
     }
 
   }
@@ -224,10 +335,11 @@
         JSON.stringify(chats)
       );
 
+
     } catch (error) {
 
       console.warn(
-        "[Venomous] could not save chats:",
+        "[Venomous] chat save failed:",
         error
       );
 
@@ -238,10 +350,52 @@
 
   function savePreferences() {
 
-    localStorage.setItem(
-      STORAGE.preferences,
-      JSON.stringify(preferences)
-    );
+    try {
+
+      localStorage.setItem(
+        STORAGE.preferences,
+        JSON.stringify(
+          preferences
+        )
+      );
+
+
+    } catch (error) {
+
+      /*
+        Most likely the custom background
+        image made localStorage too large.
+      */
+
+      console.warn(
+        "[Venomous] preference save failed:",
+        error
+      );
+
+
+      if (
+        preferences.composerImage
+      ) {
+
+        preferences.composerImage =
+          "";
+
+
+        alert(
+          "that background image was too large to save locally. try a smaller image."
+        );
+
+
+        localStorage.setItem(
+          STORAGE.preferences,
+          JSON.stringify(
+            preferences
+          )
+        );
+
+      }
+
+    }
 
   }
 
@@ -253,26 +407,32 @@
   function makeId() {
 
     if (
-      window.crypto &&
-      crypto.randomUUID
+      crypto?.randomUUID
     ) {
 
       return crypto.randomUUID();
 
     }
 
+
     return (
-      Date.now().toString(36) +
+
+      Date.now()
+        .toString(36)
+
+      +
+
       Math.random()
         .toString(36)
         .slice(2)
+
     );
 
   }
 
 
   /* =======================================================
-     CHAT HELPERS
+     ACTIVE CHAT
      ======================================================= */
 
   function getActiveChat() {
@@ -287,24 +447,42 @@
 
   function createChat() {
 
+    if (
+      isGenerating
+    ) {
+
+      stopGeneration();
+
+    }
+
+
     const chat = {
 
-      id: makeId(),
+      id:
+        makeId(),
 
-      title: "new chat",
+      title:
+        "new chat",
 
-      createdAt: Date.now(),
+      createdAt:
+        Date.now(),
 
-      updatedAt: Date.now(),
+      updatedAt:
+        Date.now(),
 
-      messages: []
+      messages:
+        []
 
     };
 
 
-    chats.unshift(chat);
+    chats.unshift(
+      chat
+    );
 
-    activeChatId = chat.id;
+
+    activeChatId =
+      chat.id;
 
 
     localStorage.setItem(
@@ -330,30 +508,27 @@
 
   function ensureChat() {
 
-    let chat =
-      getActiveChat();
-
-
-    if (!chat) {
-
-      chat =
-        createChat();
-
-    }
-
-    return chat;
+    return (
+      getActiveChat() ||
+      createChat()
+    );
 
   }
 
 
   function openChat(id) {
 
-    if (isGenerating) {
+    if (
+      isGenerating
+    ) {
+
       stopGeneration();
+
     }
 
 
-    activeChatId = id;
+    activeChatId =
+      id;
 
 
     localStorage.setItem(
@@ -373,16 +548,6 @@
 
   function deleteChat(id) {
 
-    if (
-      id === activeChatId &&
-      isGenerating
-    ) {
-
-      stopGeneration();
-
-    }
-
-
     chats =
       chats.filter(
         chat =>
@@ -395,12 +560,15 @@
     ) {
 
       activeChatId =
-        chats[0]?.id || null;
+        chats[0]?.id ||
+        null;
 
     }
 
 
-    if (activeChatId) {
+    if (
+      activeChatId
+    ) {
 
       localStorage.setItem(
         STORAGE.activeChat,
@@ -435,11 +603,13 @@
 
 
     if (!chat) {
+
       return;
+
     }
 
 
-    const result =
+    const newTitle =
       prompt(
         "rename chat",
         chat.title
@@ -447,7 +617,7 @@
 
 
     if (
-      result === null
+      newTitle === null
     ) {
 
       return;
@@ -455,8 +625,8 @@
     }
 
 
-    const title =
-      result
+    const cleaned =
+      newTitle
         .trim()
         .slice(
           0,
@@ -464,13 +634,15 @@
         );
 
 
-    if (!title) {
+    if (!cleaned) {
+
       return;
+
     }
 
 
     chat.title =
-      title;
+      cleaned;
 
 
     chat.updatedAt =
@@ -495,37 +667,37 @@
     }
 
 
-    const confirmed =
-      confirm(
+    if (
+      !confirm(
         "delete all venomous chats from this device?"
-      );
+      )
+    ) {
 
-
-    if (!confirmed) {
       return;
+
     }
 
 
-    if (isGenerating) {
-      stopGeneration();
-    }
+    stopGeneration();
 
 
     chats = [];
 
-    activeChatId = null;
+    activeChatId =
+      null;
+
+
+    runtimeImages.clear();
 
 
     localStorage.removeItem(
       STORAGE.chats
     );
 
+
     localStorage.removeItem(
       STORAGE.activeChat
     );
-
-
-    runtimeImages.clear();
 
 
     renderHistory();
@@ -536,14 +708,19 @@
 
 
   /* =======================================================
-     CHAT TITLES
+     TITLE
      ======================================================= */
 
   function makeChatTitle(text) {
 
     let title =
-      String(text || "")
-        .replace(/\s+/g, " ")
+      String(
+        text || ""
+      )
+        .replace(
+          /\s+/g,
+          " "
+        )
         .trim();
 
 
@@ -555,13 +732,14 @@
 
 
     if (
-      title.length > 38
+      title.length >
+      42
     ) {
 
       title =
         title.slice(
           0,
-          38
+          42
         ) + "...";
 
     }
@@ -578,25 +756,35 @@
 
   function renderHistory() {
 
-    el.history.innerHTML = "";
+    el.history.innerHTML =
+      "";
 
 
-    if (!chats.length) {
+    if (
+      !chats.length
+    ) {
 
       const empty =
-        document.createElement("div");
+        document.createElement(
+          "div"
+        );
+
 
       empty.className =
         "no-chats";
 
+
       empty.textContent =
         "no chats yet.";
+
 
       el.history.appendChild(
         empty
       );
 
+
       return;
+
     }
 
 
@@ -608,150 +796,146 @@
       );
 
 
-    ordered.forEach(chat => {
+    ordered.forEach(
+      chat => {
 
-      const row =
-        document.createElement("div");
+        const row =
+          document.createElement(
+            "div"
+          );
 
 
-      row.className =
-        "history-chat";
+        row.className =
+          "history-chat";
 
 
-      if (
-        chat.id === activeChatId
-      ) {
+        if (
+          chat.id ===
+          activeChatId
+        ) {
 
-        row.classList.add(
-          "active"
+          row.classList.add(
+            "active"
+          );
+
+        }
+
+
+        const open =
+          document.createElement(
+            "button"
+          );
+
+
+        open.className =
+          "history-chat-button";
+
+
+        open.textContent =
+          chat.title;
+
+
+        open.onclick =
+          () =>
+            openChat(
+              chat.id
+            );
+
+
+        const actions =
+          document.createElement(
+            "div"
+          );
+
+
+        actions.className =
+          "history-actions";
+
+
+        const rename =
+          document.createElement(
+            "button"
+          );
+
+
+        rename.className =
+          "history-action";
+
+
+        rename.innerHTML =
+          '<i class="ri-pencil-line"></i>';
+
+
+        rename.title =
+          "Rename";
+
+
+        rename.onclick =
+          event => {
+
+            event.stopPropagation();
+
+            renameChat(
+              chat.id
+            );
+
+          };
+
+
+        const remove =
+          document.createElement(
+            "button"
+          );
+
+
+        remove.className =
+          "history-action";
+
+
+        remove.innerHTML =
+          '<i class="ri-delete-bin-line"></i>';
+
+
+        remove.title =
+          "Delete";
+
+
+        remove.onclick =
+          event => {
+
+            event.stopPropagation();
+
+            deleteChat(
+              chat.id
+            );
+
+          };
+
+
+        actions.append(
+          rename,
+          remove
+        );
+
+
+        row.append(
+          open,
+          actions
+        );
+
+
+        el.history.appendChild(
+          row
         );
 
       }
-
-
-      const open =
-        document.createElement(
-          "button"
-        );
-
-
-      open.className =
-        "history-chat-button";
-
-
-      open.textContent =
-        chat.title ||
-        "new chat";
-
-
-      open.title =
-        chat.title;
-
-
-      open.addEventListener(
-        "click",
-        () =>
-          openChat(chat.id)
-      );
-
-
-      const actions =
-        document.createElement(
-          "div"
-        );
-
-
-      actions.className =
-        "history-actions";
-
-
-      const rename =
-        document.createElement(
-          "button"
-        );
-
-
-      rename.className =
-        "history-action";
-
-
-      rename.innerHTML =
-        '<i class="ri-pencil-line"></i>';
-
-
-      rename.title =
-        "Rename";
-
-
-      rename.addEventListener(
-        "click",
-        event => {
-
-          event.stopPropagation();
-
-          renameChat(
-            chat.id
-          );
-
-        }
-      );
-
-
-      const remove =
-        document.createElement(
-          "button"
-        );
-
-
-      remove.className =
-        "history-action";
-
-
-      remove.innerHTML =
-        '<i class="ri-delete-bin-line"></i>';
-
-
-      remove.title =
-        "Delete";
-
-
-      remove.addEventListener(
-        "click",
-        event => {
-
-          event.stopPropagation();
-
-          deleteChat(
-            chat.id
-          );
-
-        }
-      );
-
-
-      actions.append(
-        rename,
-        remove
-      );
-
-
-      row.append(
-        open,
-        actions
-      );
-
-
-      el.history.appendChild(
-        row
-      );
-
-    });
+    );
 
   }
 
 
   /* =======================================================
-     CURRENT CHAT
+     RENDER CHAT
      ======================================================= */
 
   function renderCurrentChat() {
@@ -760,26 +944,24 @@
       getActiveChat();
 
 
-    /*
-      Remove old rendered messages.
-      Keep welcome node.
-    */
-
     Array
       .from(
         el.chatContent.children
       )
-      .forEach(child => {
+      .forEach(
+        child => {
 
-        if (
-          child !== el.welcome
-        ) {
+          if (
+            child !==
+            el.welcome
+          ) {
 
-          child.remove();
+            child.remove();
+
+          }
 
         }
-
-      });
+      );
 
 
     if (
@@ -787,30 +969,33 @@
       !chat.messages.length
     ) {
 
-      el.welcome.classList.remove(
-        "hidden"
-      );
+      el.welcome
+        .classList
+        .remove(
+          "hidden"
+        );
+
 
       scrollBottom();
 
       return;
+
     }
 
 
-    el.welcome.classList.add(
-      "hidden"
-    );
+    el.welcome
+      .classList
+      .add(
+        "hidden"
+      );
 
 
     chat.messages.forEach(
-      message => {
-
+      message =>
         appendMessageElement(
           message,
           false
-        );
-
-      }
+        )
     );
 
 
@@ -819,18 +1004,16 @@
   }
 
 
-  /* =======================================================
-     MESSAGE RENDERER
-     ======================================================= */
-
   function appendMessageElement(
     message,
-    shouldScroll = true
+    scroll = true
   ) {
 
-    el.welcome.classList.add(
-      "hidden"
-    );
+    el.welcome
+      .classList
+      .add(
+        "hidden"
+      );
 
 
     const row =
@@ -843,12 +1026,9 @@
       `message ${message.role}`;
 
 
-    row.dataset.messageId =
-      message.id;
-
-
     if (
-      message.role === "assistant"
+      message.role ===
+      "assistant"
     ) {
 
       const avatar =
@@ -882,10 +1062,6 @@
       "message-body";
 
 
-    /*
-      Render runtime image if available.
-    */
-
     if (
       message.imageId &&
       runtimeImages.has(
@@ -909,10 +1085,6 @@
         );
 
 
-      image.alt =
-        "Uploaded image";
-
-
       body.appendChild(
         image
       );
@@ -931,18 +1103,19 @@
 
 
     if (
-      message.role === "assistant"
+      message.role ===
+      "assistant"
     ) {
 
       text.innerHTML =
         formatAIText(
-          message.content || ""
+          message.content
         );
 
     } else {
 
       text.textContent =
-        message.content || "";
+        message.content;
 
     }
 
@@ -950,89 +1123,6 @@
     body.appendChild(
       text
     );
-
-
-    if (
-      message.role === "assistant" &&
-      message.content
-    ) {
-
-      const actions =
-        document.createElement(
-          "div"
-        );
-
-
-      actions.className =
-        "message-actions";
-
-
-      const copy =
-        document.createElement(
-          "button"
-        );
-
-
-      copy.className =
-        "message-action";
-
-
-      copy.title =
-        "Copy";
-
-
-      copy.innerHTML =
-        '<i class="ri-file-copy-line"></i>';
-
-
-      copy.addEventListener(
-        "click",
-        async () => {
-
-          try {
-
-            await navigator.clipboard.writeText(
-              message.content
-            );
-
-
-            copy.innerHTML =
-              '<i class="ri-check-line"></i>';
-
-
-            setTimeout(
-              () => {
-
-                copy.innerHTML =
-                  '<i class="ri-file-copy-line"></i>';
-
-              },
-              1200
-            );
-
-          } catch (error) {
-
-            console.warn(
-              "[Venomous] clipboard failed",
-              error
-            );
-
-          }
-
-        }
-      );
-
-
-      actions.appendChild(
-        copy
-      );
-
-
-      body.appendChild(
-        actions
-      );
-
-    }
 
 
     row.appendChild(
@@ -1045,43 +1135,45 @@
     );
 
 
-    if (
-      shouldScroll
-    ) {
+    if (scroll) {
 
       scrollBottom();
 
     }
 
-
-    return row;
-
   }
 
 
   /* =======================================================
-     SAFE SIMPLE MARKDOWN
+     MARKDOWN
      ======================================================= */
 
   function escapeHTML(value) {
 
-    return String(value)
+    return String(
+      value || ""
+    )
+
       .replace(
         /&/g,
         "&amp;"
       )
+
       .replace(
         /</g,
         "&lt;"
       )
+
       .replace(
         />/g,
         "&gt;"
       )
+
       .replace(
         /"/g,
         "&quot;"
       )
+
       .replace(
         /'/g,
         "&#039;"
@@ -1092,153 +1184,165 @@
 
   function formatAIText(input) {
 
-    let text =
-      escapeHTML(
+    /*
+      Safety fallback.
+
+      API should already remove reasoning,
+      but we ALSO strip think tags here
+      so old stored messages won't show them.
+    */
+
+    let cleaned =
+      String(
         input || ""
       );
 
 
-    /*
-      code blocks
-    */
+    cleaned =
+      cleaned.replace(
+        /<think>[\s\S]*?<\/think>/gi,
+        ""
+      );
 
-    const blocks = [];
+
+    let text =
+      escapeHTML(
+        cleaned.trim()
+      );
+
+
+    const codeBlocks =
+      [];
 
 
     text =
       text.replace(
-        /```([\s\S]*?)```/g,
+        /```(?:\w+)?\n?([\s\S]*?)```/g,
         (_, code) => {
 
           const index =
-            blocks.length;
+            codeBlocks.length;
 
 
-          blocks.push(
+          codeBlocks.push(
+
             `<pre><code>${code.trim()}</code></pre>`
+
           );
 
 
           return (
-            `VENOMCODEBLOCK${index}END`
+            `VENOMCODE${index}END`
           );
 
         }
       );
 
 
-    /*
-      headings
-    */
-
     text =
       text
+
         .replace(
           /^### (.+)$/gm,
           "<h3>$1</h3>"
         )
+
         .replace(
           /^## (.+)$/gm,
           "<h2>$1</h2>"
         )
+
         .replace(
           /^# (.+)$/gm,
           "<h1>$1</h1>"
+        )
+
+        .replace(
+          /\*\*(.+?)\*\*/g,
+          "<strong>$1</strong>"
+        )
+
+        .replace(
+          /`([^`\n]+)`/g,
+          "<code>$1</code>"
         );
 
 
-    /*
-      bold
-    */
-
-    text =
-      text.replace(
-        /\*\*(.+?)\*\*/g,
-        "<strong>$1</strong>"
-      );
-
-
-    /*
-      inline code
-    */
-
-    text =
-      text.replace(
-        /`([^`\n]+)`/g,
-        "<code>$1</code>"
-      );
-
-
-    /*
-      line breaks
-    */
-
-    const paragraphs =
+    let result =
       text
-        .split(/\n{2,}/)
-        .map(block => {
 
-          const trimmed =
-            block.trim();
+        .split(
+          /\n{2,}/
+        )
+
+        .map(
+          block => {
+
+            const trimmed =
+              block.trim();
 
 
-          if (!trimmed) {
-            return "";
+            if (!trimmed) {
+
+              return "";
+
+            }
+
+
+            if (
+              /^<h[1-3]>/.test(
+                trimmed
+              )
+            ) {
+
+              return trimmed;
+
+            }
+
+
+            if (
+              trimmed.startsWith(
+                "VENOMCODE"
+              )
+            ) {
+
+              return trimmed;
+
+            }
+
+
+            return (
+              "<p>" +
+
+              trimmed.replace(
+                /\n/g,
+                "<br>"
+              )
+
+              +
+
+              "</p>"
+            );
+
           }
+        )
 
-
-          if (
-            /^<h[1-3]>/.test(
-              trimmed
-            )
-          ) {
-
-            return trimmed;
-
-          }
-
-
-          if (
-            trimmed.startsWith(
-              "VENOMCODEBLOCK"
-            )
-          ) {
-
-            return trimmed;
-
-          }
-
-
-          return (
-            "<p>" +
-            trimmed.replace(
-              /\n/g,
-              "<br>"
-            ) +
-            "</p>"
-          );
-
-        })
         .join("");
 
 
-    let result =
-      paragraphs;
-
-
-    blocks.forEach(
+    codeBlocks.forEach(
       (block, index) => {
 
         result =
           result.replace(
-            `<p>VENOMCODEBLOCK${index}END</p>`,
+            `<p>VENOMCODE${index}END</p>`,
             block
           );
 
 
         result =
           result.replace(
-            `VENOMCODEBLOCK${index}END`,
+            `VENOMCODE${index}END`,
             block
           );
 
@@ -1252,7 +1356,7 @@
 
 
   /* =======================================================
-     THINKING INDICATOR
+     THINKING ANIMATION
      ======================================================= */
 
   function showThinking() {
@@ -1272,19 +1376,28 @@
 
 
     row.innerHTML = `
+
       <div class="ai-avatar">
+
         <i class="ri-spider-line"></i>
+
       </div>
 
+
       <div class="message-body">
-        <div class="message-text">
-          <div class="thinking">
-            <span class="thinking-dot"></span>
-            <span class="thinking-dot"></span>
-            <span class="thinking-dot"></span>
-          </div>
+
+        <div class="thinking">
+
+          <span class="thinking-dot"></span>
+
+          <span class="thinking-dot"></span>
+
+          <span class="thinking-dot"></span>
+
         </div>
+
       </div>
+
     `;
 
 
@@ -1310,7 +1423,54 @@
 
 
   /* =======================================================
-     SEND MESSAGE
+     API MESSAGE HISTORY
+     ======================================================= */
+
+  function buildAPIMessages(chat) {
+
+    return chat.messages
+
+      .slice(-24)
+
+      .filter(
+        message =>
+
+          message.role ===
+            "user"
+
+          ||
+
+          message.role ===
+            "assistant"
+      )
+
+      .map(
+        message => ({
+
+          role:
+            message.role,
+
+          content:
+            String(
+              message.content || ""
+            )
+              .replace(
+                /<think>[\s\S]*?<\/think>/gi,
+                ""
+              )
+              .slice(
+                0,
+                12000
+              )
+
+        })
+      );
+
+  }
+
+
+  /* =======================================================
+     SEND
      ======================================================= */
 
   async function sendMessage(
@@ -1327,7 +1487,7 @@
 
 
     const text =
-      (
+      String(
         forcedText ??
         el.messageInput.value
       ).trim();
@@ -1353,6 +1513,18 @@
         : null;
 
 
+    const outgoingImage =
+      currentAttachment
+        ? {
+            dataUrl:
+              currentAttachment.dataUrl,
+
+            mimeType:
+              currentAttachment.mimeType
+          }
+        : null;
+
+
     if (
       currentAttachment &&
       imageId
@@ -1368,47 +1540,23 @@
 
     const userMessage = {
 
-      id: makeId(),
+      id:
+        makeId(),
 
-      role: "user",
+      role:
+        "user",
 
       content:
         text ||
         "Analyze this image.",
 
+      imageId,
+
       createdAt:
-        Date.now(),
-
-      imageId:
-        imageId,
-
-      hadImage:
-        Boolean(
-          currentAttachment
-        )
+        Date.now()
 
     };
 
-
-    /*
-      Save actual image separately for the outgoing request.
-    */
-
-    const outgoingImage =
-      currentAttachment
-        ? {
-            dataUrl:
-              currentAttachment.dataUrl,
-
-            mimeType:
-              currentAttachment.mimeType
-          }
-        : null;
-
-
-    /*
-      Add user message.
-    */
 
     chat.messages.push(
       userMessage
@@ -1420,7 +1568,8 @@
 
 
     if (
-      chat.messages.length === 1
+      chat.messages.length ===
+      1
     ) {
 
       chat.title =
@@ -1431,20 +1580,13 @@
     }
 
 
-    /*
-      Clear composer.
-    */
+    el.messageInput.value =
+      "";
 
-    el.messageInput.value = "";
 
     autoResize();
 
     clearAttachment();
-
-
-    /*
-      Save + render.
-    */
 
     saveChats();
 
@@ -1455,11 +1597,10 @@
     );
 
 
-    /*
-      Start request.
-    */
+    setGenerating(
+      true
+    );
 
-    setGenerating(true);
 
     showThinking();
 
@@ -1470,29 +1611,19 @@
 
     try {
 
-      const payloadMessages =
-        buildAPIMessages(
-          chat
-        );
-
-
-      /*
-        Attach current image only to latest user message.
-
-        The API accepts it separately and builds
-        Groq's multimodal message structure server-side.
-      */
-
       const response =
         await fetch(
           API_ENDPOINT,
           {
 
-            method: "POST",
+            method:
+              "POST",
 
             headers: {
+
               "Content-Type":
                 "application/json"
+
             },
 
             signal:
@@ -1502,12 +1633,15 @@
               JSON.stringify({
 
                 messages:
-                  payloadMessages,
+                  buildAPIMessages(
+                    chat
+                  ),
 
                 image:
                   outgoingImage,
 
                 preferences: {
+
                   name:
                     preferences.name,
 
@@ -1522,6 +1656,7 @@
 
                   about:
                     preferences.about
+
                 }
 
               })
@@ -1531,7 +1666,8 @@
 
 
       const data =
-        await response.json()
+        await response
+          .json()
           .catch(
             () => ({})
           );
@@ -1552,11 +1688,23 @@
       hideThinking();
 
 
+      /*
+        API already hides reasoning.
+        Extra stripping is just a backup.
+      */
+
       const content =
         String(
           data.message ||
           ""
-        ).trim();
+        )
+
+          .replace(
+            /<think>[\s\S]*?<\/think>/gi,
+            ""
+          )
+
+          .trim();
 
 
       if (!content) {
@@ -1570,7 +1718,8 @@
 
       const assistantMessage = {
 
-        id: makeId(),
+        id:
+          makeId(),
 
         role:
           "assistant",
@@ -1596,7 +1745,6 @@
 
       renderHistory();
 
-
       appendMessageElement(
         assistantMessage
       );
@@ -1612,10 +1760,6 @@
         "AbortError"
       ) {
 
-        console.log(
-          "[Venomous] generation stopped"
-        );
-
         return;
 
       }
@@ -1629,13 +1773,19 @@
 
       const assistantMessage = {
 
-        id: makeId(),
+        id:
+          makeId(),
 
         role:
           "assistant",
 
         content:
-          `i couldn't finish that request.\n\n${error.message}`,
+
+          "i couldn't finish that request.\n\n"
+
+          +
+
+          error.message,
 
         createdAt:
           Date.now()
@@ -1654,7 +1804,6 @@
 
       saveChats();
 
-
       appendMessageElement(
         assistantMessage
       );
@@ -1662,9 +1811,13 @@
 
     } finally {
 
-      requestController = null;
+      requestController =
+        null;
 
-      setGenerating(false);
+
+      setGenerating(
+        false
+      );
 
     }
 
@@ -1672,49 +1825,7 @@
 
 
   /* =======================================================
-     API CONTEXT
-     ======================================================= */
-
-  function buildAPIMessages(chat) {
-
-    /*
-      Prevent the client from sending the user's
-      entire lifetime of Venomous conversations.
-
-      We only need recent context.
-
-      Server ALSO validates everything again.
-    */
-
-    return chat.messages
-      .slice(-24)
-      .filter(
-        message =>
-          message.role === "user" ||
-          message.role === "assistant"
-      )
-      .map(
-        message => ({
-
-          role:
-            message.role,
-
-          content:
-            String(
-              message.content || ""
-            ).slice(
-              0,
-              12000
-            )
-
-        })
-      );
-
-  }
-
-
-  /* =======================================================
-     GENERATION STATE
+     GENERATING STATE
      ======================================================= */
 
   function setGenerating(value) {
@@ -1723,16 +1834,20 @@
       Boolean(value);
 
 
-    el.sendButton.classList.toggle(
-      "hidden",
-      isGenerating
-    );
+    el.sendButton
+      .classList
+      .toggle(
+        "hidden",
+        isGenerating
+      );
 
 
-    el.stopButton.classList.toggle(
-      "hidden",
-      !isGenerating
-    );
+    el.stopButton
+      .classList
+      .toggle(
+        "hidden",
+        !isGenerating
+      );
 
 
     el.messageInput.disabled =
@@ -1758,37 +1873,45 @@
 
     hideThinking();
 
-    setGenerating(false);
+    setGenerating(
+      false
+    );
 
   }
 
 
   /* =======================================================
-     IMAGE HANDLING
+     CHAT IMAGE
      ======================================================= */
 
   async function handleImage(file) {
 
     if (!file) {
+
       return;
+
     }
 
 
-    const allowedTypes = [
+    const supported = [
+
       "image/jpeg",
+
       "image/png",
+
       "image/webp"
+
     ];
 
 
     if (
-      !allowedTypes.includes(
+      !supported.includes(
         file.type
       )
     ) {
 
       alert(
-        "Venomous supports PNG, JPG, and WEBP images."
+        "use PNG, JPG, or WEBP."
       );
 
       return;
@@ -1796,60 +1919,155 @@
     }
 
 
-    try {
-
-      const optimized =
-        await optimizeImage(
-          file
-        );
-
-
-      currentAttachment = {
-
-        name:
-          file.name ||
-          "image",
-
-        originalSize:
-          file.size,
-
-        dataUrl:
-          optimized.dataUrl,
-
-        mimeType:
-          optimized.mimeType
-
-      };
-
-
-      renderAttachment();
-
-
-    } catch (error) {
-
-      console.error(
-        "[Venomous] image error:",
-        error
+    const optimized =
+      await optimizeImage(
+        file,
+        1600,
+        0.84
       );
 
 
-      alert(
-        "couldn't load that image."
-      );
+    currentAttachment = {
 
-    }
+      name:
+        file.name ||
+        "image",
+
+      size:
+        file.size,
+
+      dataUrl:
+        optimized,
+
+      mimeType:
+        "image/jpeg"
+
+    };
+
+
+    renderAttachment();
 
   }
 
 
-  /*
-    Resize screenshots before sending them.
+  function renderAttachment() {
 
-    This is VERY important because the browser sends
-    the image to our Vercel function as base64.
-  */
+    if (
+      !currentAttachment
+    ) {
 
-  function optimizeImage(file) {
+      el.attachmentPreview
+        .classList
+        .add(
+          "hidden"
+        );
+
+      return;
+
+    }
+
+
+    el.attachmentImage.src =
+      currentAttachment.dataUrl;
+
+
+    el.attachmentName.textContent =
+      currentAttachment.name;
+
+
+    el.attachmentInfo.textContent =
+      formatBytes(
+        currentAttachment.size
+      );
+
+
+    el.attachmentPreview
+      .classList
+      .remove(
+        "hidden"
+      );
+
+  }
+
+
+  function clearAttachment() {
+
+    currentAttachment =
+      null;
+
+
+    el.imageInput.value =
+      "";
+
+
+    el.attachmentImage.src =
+      "";
+
+
+    el.attachmentPreview
+      .classList
+      .add(
+        "hidden"
+      );
+
+  }
+
+
+  function formatBytes(bytes) {
+
+    if (
+      bytes < 1024
+    ) {
+
+      return `${bytes} B`;
+
+    }
+
+
+    if (
+      bytes <
+      1024 * 1024
+    ) {
+
+      return (
+        (
+          bytes / 1024
+        ).toFixed(1)
+
+        +
+
+        " KB"
+      );
+
+    }
+
+
+    return (
+
+      (
+        bytes /
+        1024 /
+        1024
+      ).toFixed(1)
+
+      +
+
+      " MB"
+
+    );
+
+  }
+
+
+  /* =======================================================
+     IMAGE OPTIMIZER
+     ======================================================= */
+
+  function optimizeImage(
+    file,
+    maxSize,
+    quality
+  ) {
 
     return new Promise(
       (resolve, reject) => {
@@ -1876,10 +2094,6 @@
             image.onload =
               () => {
 
-                const MAX_DIMENSION =
-                  1600;
-
-
                 let width =
                   image.width;
 
@@ -1889,28 +2103,33 @@
 
 
                 if (
-                  width >
-                    MAX_DIMENSION ||
-                  height >
-                    MAX_DIMENSION
+                  width > maxSize ||
+                  height > maxSize
                 ) {
 
                   const ratio =
                     Math.min(
-                      MAX_DIMENSION / width,
-                      MAX_DIMENSION / height
+
+                      maxSize /
+                      width,
+
+                      maxSize /
+                      height
+
                     );
 
 
                   width =
                     Math.round(
-                      width * ratio
+                      width *
+                      ratio
                     );
 
 
                   height =
                     Math.round(
-                      height * ratio
+                      height *
+                      ratio
                     );
 
                 }
@@ -1945,27 +2164,14 @@
                 );
 
 
-                /*
-                  Convert to JPEG for smaller requests.
+                resolve(
 
-                  PNG screenshots often become multiple MB.
-                */
-
-                const dataUrl =
                   canvas.toDataURL(
                     "image/jpeg",
-                    0.84
-                  );
+                    quality
+                  )
 
-
-                resolve({
-
-                  dataUrl,
-
-                  mimeType:
-                    "image/jpeg"
-
-                });
+                );
 
               };
 
@@ -1986,144 +2192,42 @@
   }
 
 
-  function renderAttachment() {
-
-    if (
-      !currentAttachment
-    ) {
-
-      el.attachmentPreview
-        .classList
-        .add(
-          "hidden"
-        );
-
-      return;
-
-    }
-
-
-    el.attachmentImage.src =
-      currentAttachment.dataUrl;
-
-
-    el.attachmentName.textContent =
-      currentAttachment.name;
-
-
-    el.attachmentInfo.textContent =
-      formatBytes(
-        currentAttachment.originalSize
-      );
-
-
-    el.attachmentPreview
-      .classList
-      .remove(
-        "hidden"
-      );
-
-  }
-
-
-  function clearAttachment() {
-
-    currentAttachment = null;
-
-
-    el.imageInput.value =
-      "";
-
-
-    el.attachmentPreview
-      .classList
-      .add(
-        "hidden"
-      );
-
-
-    el.attachmentImage.src =
-      "";
-
-  }
-
-
-  function formatBytes(bytes) {
-
-    if (
-      !Number.isFinite(bytes)
-    ) {
-
-      return "";
-    }
-
-
-    if (
-      bytes < 1024
-    ) {
-
-      return `${bytes} B`;
-
-    }
-
-
-    if (
-      bytes <
-      1024 * 1024
-    ) {
-
-      return (
-        `${(
-          bytes / 1024
-        ).toFixed(1)} KB`
-      );
-
-    }
-
-
-    return (
-      `${(
-        bytes /
-        (1024 * 1024)
-      ).toFixed(1)} MB`
-    );
-
-  }
-
-
   /* =======================================================
-     PASTE SCREENSHOTS
+     PASTE SCREENSHOT
      ======================================================= */
 
   function handlePaste(event) {
 
-    const items =
+    const item =
       Array.from(
-        event.clipboardData?.items ||
+        event.clipboardData
+          ?.items ||
         []
-      );
+      )
+        .find(
+          entry =>
+            entry.type
+              .startsWith(
+                "image/"
+              )
+        );
 
 
-    const imageItem =
-      items.find(
-        item =>
-          item.type.startsWith(
-            "image/"
-          )
-      );
+    if (!item) {
 
-
-    if (!imageItem) {
       return;
+
     }
 
 
     const file =
-      imageItem.getAsFile();
+      item.getAsFile();
 
 
     if (!file) {
+
       return;
+
     }
 
 
@@ -2138,37 +2242,260 @@
 
 
   /* =======================================================
+     COMPOSER BACKGROUND
+     ======================================================= */
+
+  function applyComposerBackground() {
+
+    const mode =
+      preferences
+        .composerBackground ||
+      "theme";
+
+
+    el.composer.dataset
+      .composerBackground =
+      mode;
+
+
+    el.composer.style
+      .setProperty(
+        "--composer-color-one",
+        preferences.gradientColor1
+      );
+
+
+    el.composer.style
+      .setProperty(
+        "--composer-color-two",
+        preferences.gradientColor2
+      );
+
+
+    const thirdColor =
+      preferences.useThirdColor
+        ? preferences.gradientColor3
+        : preferences.gradientColor2;
+
+
+    el.composer.style
+      .setProperty(
+        "--composer-color-three",
+        thirdColor
+      );
+
+
+    if (
+      mode === "image" &&
+      preferences.composerImage
+    ) {
+
+      el.composerBackgroundImage
+        .style
+        .backgroundImage =
+        `url("${preferences.composerImage}")`;
+
+    } else {
+
+      el.composerBackgroundImage
+        .style
+        .backgroundImage =
+        "";
+
+    }
+
+  }
+
+
+  /* =======================================================
+     BACKGROUND IMAGE
+     ======================================================= */
+
+  async function handleBackgroundImage(
+    file
+  ) {
+
+    if (!file) {
+
+      return;
+
+    }
+
+
+    if (
+      !file.type
+        .startsWith(
+          "image/"
+        )
+    ) {
+
+      return;
+
+    }
+
+
+    /*
+      Smaller compression because this
+      DOES get saved locally.
+    */
+
+    const data =
+      await optimizeImage(
+        file,
+        1200,
+        0.70
+      );
+
+
+    el.backgroundPreviewImage.src =
+      data;
+
+
+    el.backgroundImagePreview
+      .classList
+      .remove(
+        "hidden"
+      );
+
+
+    /*
+      Temporarily store it on element
+      until Save is clicked.
+    */
+
+    el.backgroundPreviewImage
+      .dataset
+      .value =
+      data;
+
+  }
+
+
+  function removeBackgroundImage() {
+
+    el.backgroundPreviewImage.src =
+      "";
+
+
+    el.backgroundPreviewImage
+      .dataset
+      .value =
+      "";
+
+
+    el.backgroundImageInput.value =
+      "";
+
+
+    el.backgroundImagePreview
+      .classList
+      .add(
+        "hidden"
+      );
+
+  }
+
+
+  /* =======================================================
      CUSTOMIZATION
      ======================================================= */
+
+  function refreshBackgroundOptions() {
+
+    const mode =
+      el.composerBackgroundMode.value;
+
+
+    el.gradientOptions
+      .classList
+      .toggle(
+        "hidden",
+        mode !== "gradient"
+      );
+
+
+    el.backgroundImageOptions
+      .classList
+      .toggle(
+        "hidden",
+        mode !== "image"
+      );
+
+  }
+
 
   function openCustomize() {
 
     el.customName.value =
-      preferences.name ||
-      "";
+      preferences.name;
 
 
     el.customTone.value =
-      preferences.tone ||
-      "adaptive";
+      preferences.tone;
 
 
     el.customLength.value =
-      preferences.length ||
-      "adaptive";
+      preferences.length;
 
 
     el.customRules.value =
-      preferences.rules ||
-      "";
+      preferences.rules;
 
 
     el.customAbout.value =
-      preferences.about ||
-      "";
+      preferences.about;
+
+
+    el.composerBackgroundMode.value =
+      preferences.composerBackground;
+
+
+    el.gradientColor1.value =
+      preferences.gradientColor1;
+
+
+    el.gradientColor2.value =
+      preferences.gradientColor2;
+
+
+    el.gradientColor3.value =
+      preferences.gradientColor3;
+
+
+    el.useThirdColor.checked =
+      preferences.useThirdColor;
+
+
+    if (
+      preferences.composerImage
+    ) {
+
+      el.backgroundPreviewImage.src =
+        preferences.composerImage;
+
+
+      el.backgroundPreviewImage
+        .dataset
+        .value =
+        preferences.composerImage;
+
+
+      el.backgroundImagePreview
+        .classList
+        .remove(
+          "hidden"
+        );
+
+    } else {
+
+      removeBackgroundImage();
+
+    }
 
 
     updateRuleCount();
+
+    refreshBackgroundOptions();
 
 
     el.customizeModal
@@ -2195,6 +2522,9 @@
 
     preferences = {
 
+      ...preferences,
+
+
       name:
         el.customName
           .value
@@ -2204,13 +2534,16 @@
             40
           ),
 
+
       tone:
         el.customTone
           .value,
 
+
       length:
         el.customLength
           .value,
+
 
       rules:
         el.customRules
@@ -2221,6 +2554,7 @@
             3000
           ),
 
+
       about:
         el.customAbout
           .value
@@ -2228,12 +2562,46 @@
           .slice(
             0,
             2000
-          )
+          ),
+
+
+      composerBackground:
+        el.composerBackgroundMode
+          .value,
+
+
+      gradientColor1:
+        el.gradientColor1
+          .value,
+
+
+      gradientColor2:
+        el.gradientColor2
+          .value,
+
+
+      gradientColor3:
+        el.gradientColor3
+          .value,
+
+
+      useThirdColor:
+        el.useThirdColor
+          .checked,
+
+
+      composerImage:
+        el.backgroundPreviewImage
+          .dataset
+          .value ||
+        ""
 
     };
 
 
     savePreferences();
+
+    applyComposerBackground();
 
     closeCustomize();
 
@@ -2242,23 +2610,27 @@
 
   function resetCustomize() {
 
-    const confirmed =
-      confirm(
-        "reset your venomous preferences?"
-      );
+    if (
+      !confirm(
+        "reset venomous customization?"
+      )
+    ) {
 
-
-    if (!confirmed) {
       return;
+
     }
 
 
     preferences = {
+
       ...DEFAULT_PREFERENCES
+
     };
 
 
     savePreferences();
+
+    applyComposerBackground();
 
     openCustomize();
 
@@ -2268,52 +2640,55 @@
   function updateRuleCount() {
 
     el.rulesCount.textContent =
-      el.customRules.value.length;
+      el.customRules
+        .value
+        .length;
 
   }
 
 
   /* =======================================================
-     SIDEBAR
+     UI
      ======================================================= */
 
   function openSidebar() {
 
-    el.sidebar.classList.add(
-      "open"
-    );
+    el.sidebar
+      .classList
+      .add(
+        "open"
+      );
 
   }
 
 
   function closeSidebar() {
 
-    el.sidebar.classList.remove(
-      "open"
-    );
+    el.sidebar
+      .classList
+      .remove(
+        "open"
+      );
 
   }
 
 
-  /* =======================================================
-     TEXTAREA
-     ======================================================= */
-
   function autoResize() {
 
-    const input =
-      el.messageInput;
-
-
-    input.style.height =
+    el.messageInput.style.height =
       "auto";
 
 
-    input.style.height =
+    el.messageInput.style.height =
+
       Math.min(
-        input.scrollHeight,
-        170
-      ) + "px";
+        el.messageInput.scrollHeight,
+        210
+      )
+
+      +
+
+      "px";
 
   }
 
@@ -2344,75 +2719,89 @@
 
 
   /* =======================================================
-     EVENT LISTENERS
+     EVENTS
      ======================================================= */
 
-  el.newChat.addEventListener(
-    "click",
-    createChat
-  );
+  el.newChat.onclick =
+    createChat;
 
 
-  el.headerNewChat.addEventListener(
-    "click",
-    createChat
-  );
+  el.headerNewChat.onclick =
+    createChat;
 
 
-  el.clearChats.addEventListener(
-    "click",
-    clearAllChats
-  );
+  el.clearChats.onclick =
+    clearAllChats;
 
 
-  el.openSidebar.addEventListener(
-    "click",
-    openSidebar
-  );
+  el.openSidebar.onclick =
+    openSidebar;
 
 
-  el.closeSidebar.addEventListener(
-    "click",
-    closeSidebar
-  );
+  el.closeSidebar.onclick =
+    closeSidebar;
 
 
-  el.sendButton.addEventListener(
-    "click",
+  el.sendButton.onclick =
     () =>
-      sendMessage()
-  );
+      sendMessage();
 
 
-  el.stopButton.addEventListener(
-    "click",
-    stopGeneration
-  );
+  el.stopButton.onclick =
+    stopGeneration;
 
 
-  el.messageInput.addEventListener(
-    "input",
-    autoResize
-  );
+  el.attachButton.onclick =
+    () =>
+      el.imageInput.click();
 
 
-  el.messageInput.addEventListener(
-    "keydown",
-    event => {
+  el.quickImage.onclick =
+    () =>
+      el.imageInput.click();
 
-      if (
-        event.key === "Enter" &&
-        !event.shiftKey
-      ) {
 
-        event.preventDefault();
+  el.removeAttachment.onclick =
+    clearAttachment;
 
-        sendMessage();
+
+  el.imageInput.onchange =
+    event =>
+      handleImage(
+        event.target
+          .files?.[0]
+      );
+
+
+  el.messageInput
+    .addEventListener(
+      "input",
+      autoResize
+    );
+
+
+  el.messageInput
+    .addEventListener(
+      "keydown",
+      event => {
+
+        if (
+          event.key ===
+            "Enter"
+
+          &&
+
+          !event.shiftKey
+        ) {
+
+          event.preventDefault();
+
+          sendMessage();
+
+        }
 
       }
-
-    }
-  );
+    );
 
 
   document.addEventListener(
@@ -2421,102 +2810,80 @@
   );
 
 
-  el.attachButton.addEventListener(
-    "click",
-    () =>
-      el.imageInput.click()
-  );
-
-
-  el.quickImage.addEventListener(
-    "click",
-    () =>
-      el.imageInput.click()
-  );
-
-
-  el.imageInput.addEventListener(
-    "change",
-    event => {
-
-      handleImage(
-        event.target.files?.[0]
-      );
-
-    }
-  );
-
-
-  el.removeAttachment.addEventListener(
-    "click",
-    clearAttachment
-  );
-
-
   document
     .querySelectorAll(
       ".quick-prompt[data-message]"
     )
-    .forEach(button => {
+    .forEach(
+      button => {
 
-      button.addEventListener(
-        "click",
-        () => {
+        button.onclick =
+          () => {
 
-          const message =
-            button.dataset.message;
-
-
-          el.messageInput.value =
-            message;
+            el.messageInput.value =
+              button.dataset
+                .message;
 
 
-          autoResize();
+            autoResize();
 
-          focusInput();
+            focusInput();
 
-        }
+          };
+
+      }
+    );
+
+
+  /* CUSTOMIZER */
+
+  el.customizeOpen.onclick =
+    openCustomize;
+
+
+  el.customizeClose.onclick =
+    closeCustomize;
+
+
+  el.customSave.onclick =
+    saveCustomize;
+
+
+  el.customReset.onclick =
+    resetCustomize;
+
+
+  el.customRules.oninput =
+    updateRuleCount;
+
+
+  el.composerBackgroundMode
+    .onchange =
+    refreshBackgroundOptions;
+
+
+  el.backgroundImageUpload
+    .onclick =
+    () =>
+      el.backgroundImageInput
+        .click();
+
+
+  el.backgroundImageInput
+    .onchange =
+    event =>
+      handleBackgroundImage(
+        event.target
+          .files?.[0]
       );
 
-    });
+
+  el.backgroundImageRemove
+    .onclick =
+    removeBackgroundImage;
 
 
-  /*
-    Customization
-  */
-
-  el.customizeOpen.addEventListener(
-    "click",
-    openCustomize
-  );
-
-
-  el.customizeClose.addEventListener(
-    "click",
-    closeCustomize
-  );
-
-
-  el.customSave.addEventListener(
-    "click",
-    saveCustomize
-  );
-
-
-  el.customReset.addEventListener(
-    "click",
-    resetCustomize
-  );
-
-
-  el.customRules.addEventListener(
-    "input",
-    updateRuleCount
-  );
-
-
-  el.customizeModal.addEventListener(
-    "click",
+  el.customizeModal.onclick =
     event => {
 
       if (
@@ -2528,51 +2895,43 @@
 
       }
 
-    }
-  );
+    };
 
-
-  /*
-    Escape closes stuff.
-  */
 
   document.addEventListener(
     "keydown",
     event => {
 
       if (
-        event.key !==
+        event.key ===
         "Escape"
       ) {
 
-        return;
+        closeSidebar();
+
+        closeCustomize();
 
       }
-
-
-      closeSidebar();
-
-      closeCustomize();
 
     }
   );
 
 
   /* =======================================================
-     INITIALIZE
+     INIT
      ======================================================= */
 
   function initialize() {
 
-    /*
-      Remove invalid active chat.
-    */
-
     if (
-      activeChatId &&
+      activeChatId
+
+      &&
+
       !chats.some(
         chat =>
-          chat.id === activeChatId
+          chat.id ===
+          activeChatId
       )
     ) {
 
@@ -2589,11 +2948,13 @@
 
       activeChatId =
         [...chats]
+
           .sort(
             (a, b) =>
               b.updatedAt -
               a.updatedAt
-          )[0].id;
+          )[0]
+          .id;
 
 
       localStorage.setItem(
@@ -2603,6 +2964,8 @@
 
     }
 
+
+    applyComposerBackground();
 
     renderHistory();
 
@@ -2614,5 +2977,6 @@
 
 
   initialize();
+
 
 })();

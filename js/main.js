@@ -28,9 +28,10 @@ updateClock();
 // CONST TEXT
 // =====================
 const lines = [
+  "single handedly saving the school year",
   "system says suck my di-",
   "this one didnt load properly",
-  "render engine online",
+  "something was gonna be there fr but idk where it went",
   "at this point, i dont even know",
   "*moans* UwU",
   "look whos back...",

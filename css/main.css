@@ -166,7 +166,17 @@ a {
     var(--theme-background);
 }
 
+.game-card {
+  appearance: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
 
+.game-card:active {
+  transform: scale(0.97);
+}
 /* =========================================================
    ANIMATED GRADIENT BACKGROUND
    ========================================================= */

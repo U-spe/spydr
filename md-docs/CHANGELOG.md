@@ -6,7 +6,7 @@ All notable changes to spydr are documented here.
 
 ## 🛠️ Beginning
 - [ ] Starting Scramjet build 
-- [ ] Make Homepage Text Buttons
+- [x] Make Homepage Text Buttons
 - [ ] Redownload Locally and Deploy On surge.sh
 
 ---

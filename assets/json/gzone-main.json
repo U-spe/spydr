@@ -1,6 +1,21 @@
 
 [
    {
+    "Name": "Hydra",
+    "File": "assets/json/hydra.json",
+    "Icon": "ri-aliens-line"
+  },
+   {
+    "Name": "Truffled",
+    "File": "assets/json/truffled.json",
+    "Icon": "ri-ghost-line"
+  },
+  {
+    "Name": "SunTree",
+    "File": "assets/json/suntree.json",
+    "Icon": "ri-tree-line"
+  },
+   {
     "Name": "Pizza Edition",
     "File": "assets/json/pizza.json",
     "Icon": "ri-restaurant-2-line"
@@ -10,24 +25,9 @@
     "File": "assets/json/science.json",
     "Icon": "ri-flask-line"
   },
-    {
-    "Name": "Hydra",
-    "File": "assets/json/hydra.json",
-    "Icon": "ri-aliens-line"
-  },
   {
     "Name": "TGLSC",
     "File": "assets/json/tglsc.json",
     "Icon": "ri-fire-line"
-  },
-  {
-    "Name": "Truffled",
-    "File": "assets/json/truffled.json",
-    "Icon": "ri-ghost-line"
-  },
-  {
-    "Name": "SunTree",
-    "File": "assets/json/suntree.json",
-    "Icon": "ri-tree-line"
   }
 ]

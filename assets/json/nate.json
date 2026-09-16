@@ -1,0 +1,2838 @@
+{
+  "source": "TrapjawwS/funnyemulatorjs script.js",
+  "count": 472,
+  "games": [
+    {
+      "id": 1,
+      "name": "Pokemon Clover",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Clover%20v1.3.3.zip"
+    },
+    {
+      "id": 2,
+      "name": "Pokemon Flora Sky",
+      "system": "gba",
+      "url": "https://rawcdn.githack.com/srojam/gba/58893088e3805baaf716e0af6801aaeeae1a0efb/Binaries/pokemonflorasky.gba"
+    },
+    {
+      "id": 3,
+      "name": "Pokemon Leaf Green",
+      "system": "gba",
+      "url": "https://rawcdn.githack.com/srojam/gba/58893088e3805baaf716e0af6801aaeeae1a0efb/Binaries/pokemongreen.gba"
+    },
+    {
+      "id": 4,
+      "name": "Pokemon Moon Galaxy",
+      "system": "gba",
+      "url": "https://rawcdn.githack.com/vbaemulator/GBA-Roms/f8ff9ba91598a5e996f29c7c27342f062faa989d/Pokemon%20Moon%20Galaxy.zip"
+    },
+    {
+      "id": 5,
+      "name": "Pokemon Dark Worship",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Dark%20Worship%20ENGLISH%20COMPLETE.Gba"
+    },
+    {
+      "id": 6,
+      "name": "Pokemon Emerald Horizions",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/EmeraldHorizonsv1.09.gba"
+    },
+    {
+      "id": 7,
+      "name": "Pokemon Exceeded",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Exceeded%20v11.5.gba"
+    },
+    {
+      "id": 8,
+      "name": "Pokemon LGPika",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/LGPika%20(v8.0).gba"
+    },
+    {
+      "id": 9,
+      "name": "Pokemon Mirage of Tales",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Mirage%20of%20Tales%20(Alpha%20v3.3).gba"
+    },
+    {
+      "id": 10,
+      "name": "Pokemon Odyssey",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Odyssey%20Beta%20v2.6.gba"
+    },
+    {
+      "id": 11,
+      "name": "Pokemon Theta (Play this and let me know if it's worth playing, there's like 721 pokemon or smth)",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/PK%20Theta%20EM%20721%20Ex%2027-02-17.gba"
+    },
+    {
+      "id": 12,
+      "name": "Pokemon Elysium",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Pokemon%20Elysium_A.gba"
+    },
+    {
+      "id": 13,
+      "name": "Pokemon Mercury Azoth",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Pokemon%20Mercury%20Azoth%20Project%20(Demo%20v0.011).gba"
+    },
+    {
+      "id": 14,
+      "name": "Pokemon Ultra Gold Sigma",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Pokemon%20Ultra%20Shiny%20Gold%20Sigma%20Completo%201.5.0.gba"
+    },
+    {
+      "id": 15,
+      "name": "Pokemon Yuval",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/PokemonYuvalVersion.gba"
+    },
+    {
+      "id": 16,
+      "name": "Pokemon Re:Verse",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/RE%20Verse%20v0.9.1.gba"
+    },
+    {
+      "id": 17,
+      "name": "Pokemon ROWE",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/ROWE%20(v1.9.4).gba"
+    },
+    {
+      "id": 18,
+      "name": "Pokemon Radical Red",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Radical%20Red.gba"
+    },
+    {
+      "id": 19,
+      "name": "Pokemon Ruby Renev",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/RubyRenev%20v1.4.2.gba"
+    },
+    {
+      "id": 20,
+      "name": "Pokemon Shiron Castle",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Shiron%20Castle%20(v2.0).gba"
+    },
+    {
+      "id": 21,
+      "name": "Pokemon Unknown",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Unknown%20(v1.0).gba"
+    },
+    {
+      "id": 22,
+      "name": "Pokemon Crest",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/crest%20v1.0.9.6.3.gba"
+    },
+    {
+      "id": 23,
+      "name": "Pokemon Nameless",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/nameless%20v5.30.gba"
+    },
+    {
+      "id": 24,
+      "name": "Pokemon Regis' Origin (cool af flying (its 3d and you can actually fly around))",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/regis'origin.gba"
+    },
+    {
+      "id": 25,
+      "name": "Pokemon Ash's Quest",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20-%20Ash's%20Quest.zip"
+    },
+    {
+      "id": 26,
+      "name": "Pokemon Ash Grey",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20-%20AshGray%204.5.3.zip"
+    },
+    {
+      "id": 27,
+      "name": "Pokemon Battle Final",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20-%20Battle%20Fire%20bfinal.zip"
+    },
+    {
+      "id": 28,
+      "name": "Pokemon Fire Red",
+      "system": "gba",
+      "url": "https://raw.githack.com/srojam/gba/gh-pages/Binaries/pokemonred.gba"
+    },
+    {
+      "id": 29,
+      "name": "Pokemon Emerald",
+      "system": "gba",
+      "url": "https://raw.githack.com/srojam/gba/gh-pages/Binaries/pokemonemerald.gba"
+    },
+    {
+      "id": 30,
+      "name": "Pokemon Green",
+      "system": "gba",
+      "url": "https://raw.githack.com/srojam/gba/gh-pages/Binaries/pokemongreen.gba"
+    },
+    {
+      "id": 31,
+      "name": "Pokemon Ruby",
+      "system": "gba",
+      "url": "https://raw.githack.com/srojam/gba/gh-pages/Binaries/pokemonruby.gba"
+    },
+    {
+      "id": 32,
+      "name": "Pokemon Sapphire",
+      "system": "gba",
+      "url": "https://raw.githack.com/srojam/gba/gh-pages/Binaries/pokemonsapphire.gba"
+    },
+    {
+      "id": 33,
+      "name": "Pokemon Better Than Fire Red",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20-%20Better%20than%20Fire%20Red%20v1.1.zip"
+    },
+    {
+      "id": 34,
+      "name": "Pokemon Doubles Fire Red",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20-%20DoublesFireRed%201.1.zip"
+    },
+    {
+      "id": 35,
+      "name": "Pokemon Emerald Essence",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20-%20Emerald%20Essence%20v1.zip"
+    },
+    {
+      "id": 36,
+      "name": "Pokemon The Teal Mask",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20-%20The%20Teal%20Mask%20GBA%201.0.zip"
+    },
+    {
+      "id": 37,
+      "name": "Pokemon Thunder Yellow",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20-%20Thunder%20Yellow.zip"
+    },
+    {
+      "id": 38,
+      "name": "Pokemon Water Blue",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20-%20Water%20Blue.zip"
+    },
+    {
+      "id": 39,
+      "name": "Pokemon 2 Heroes",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%202%20Heroes.zip"
+    },
+    {
+      "id": 40,
+      "name": "Pokemon 2050",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%202050%20v0.0.1.zip"
+    },
+    {
+      "id": 41,
+      "name": "Pokemon 2 Awesome",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%202Awesome.zip"
+    },
+    {
+      "id": 42,
+      "name": "Pokemon A Grand Day Out",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20A%20Grand%20Day%20Out.zip"
+    },
+    {
+      "id": 43,
+      "name": "Pokemon A New Dawn",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20A%20New%20Dawn%20v0.2.zip"
+    },
+    {
+      "id": 44,
+      "name": "Pokemon Abandoned Ruby",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Abandoned%20Ruby.zip"
+    },
+    {
+      "id": 45,
+      "name": "Pokemon Abra Adventure",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Abra%20Adventure%20v1%20(1).zip"
+    },
+    {
+      "id": 46,
+      "name": "Pokemon Accecpt Defeat",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Accept%20Defeat%20V2.zip"
+    },
+    {
+      "id": 47,
+      "name": "Pokemon Adamantite",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Adamantite.zip"
+    },
+    {
+      "id": 48,
+      "name": "Pokemon Blue",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20-%20Blue%20Version%20(USA,%20Europe)%20(SGB%20Enhanced).zip"
+    },
+    {
+      "id": 49,
+      "name": "Pokemon Red Version",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20-%20Red%20Version%20(USA,%20Europe)%20(SGB%20Enhanced).zip"
+    },
+    {
+      "id": 50,
+      "name": "Pokemon Yellow Version",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20-%20Yellow%20Version%20-%20Special%20Pikachu%20Edition%20(USA,%20Europe)%20(CGB+SGB%20Enhanced).zip"
+    },
+    {
+      "id": 51,
+      "name": "Pokemon Baby Blue",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Baby%20Blue%20v19-08-23.zip"
+    },
+    {
+      "id": 52,
+      "name": "Pokemon Celebrations",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Blue%20Celebrations%20v1.8.zip"
+    },
+    {
+      "id": 53,
+      "name": "Pokemon Blueberry",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Blueberry%20v1.0.18.zip"
+    },
+    {
+      "id": 54,
+      "name": "Pokemon Carmine Red",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Carmine%20Red%20v1.1.zip"
+    },
+    {
+      "id": 55,
+      "name": "Pokemon Green",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Green%20v3.0%20(English).zip"
+    },
+    {
+      "id": 56,
+      "name": "Pokemon Kanto Expansion Pack",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Kanto%20Expansion%20Pak.zip"
+    },
+    {
+      "id": 57,
+      "name": "Pokemon Let's Go Meltan",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Lets%20Go%20Meltan.zip"
+    },
+    {
+      "id": 58,
+      "name": "Pokemon Project Neo",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Project%20Neo.zip"
+    },
+    {
+      "id": 59,
+      "name": "Pokemon Pure Blue",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20PureBlue%20v2.5.5.zip"
+    },
+    {
+      "id": 60,
+      "name": "Pokemon Pure Green",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20PureGreen%20v2.5.5.zip"
+    },
+    {
+      "id": 61,
+      "name": "Pokemon Pure Red",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20PureRed%20v2.5.5.zip"
+    },
+    {
+      "id": 62,
+      "name": "Pokemon Red Expert",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Red%20Expert%20v1.0.zip"
+    },
+    {
+      "id": 63,
+      "name": "Pokemon Redcurrant",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Redcurrant%20v1.0.18.zip"
+    },
+    {
+      "id": 64,
+      "name": "Pokemon Roaming Red",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Roaming%20Red%20v3.1.zip"
+    },
+    {
+      "id": 65,
+      "name": "Pokemon Shin Blue",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Shin%20Blue%20v1.24.5.zip"
+    },
+    {
+      "id": 66,
+      "name": "Pokemon Shin Green",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Shin%20Green%20v1.24.5.zip"
+    },
+    {
+      "id": 67,
+      "name": "Pokemon Shin Red",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Shin%20Red%20v1.24.5.zip"
+    },
+    {
+      "id": 68,
+      "name": "Pokemon Strike Yellow",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Strike%20Yellow%20v0.4.zip"
+    },
+    {
+      "id": 69,
+      "name": "Pokemon Yellow Kaizo",
+      "system": "unknown",
+      "url": "https://github.com/vbaemulator/GB-Roms/raw/main/Pokemon%20Strike%20Yellow%20v0.4.zip"
+    },
+    {
+      "id": 70,
+      "name": "Pokemon Yellow Supreme",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Pokemon%20Yellow%20Supreme%20v2.0.zip"
+    },
+    {
+      "id": 71,
+      "name": "Kirby and the Amazing Mirror",
+      "system": "gba",
+      "url": "https://raw.githack.com/srojam/gba/gh-pages/Binaries/kirbymirror.gba"
+    },
+    {
+      "id": 72,
+      "name": "Kirby Nightmare In Dreamland",
+      "system": "gba",
+      "url": "https://raw.githack.com/srojam/gba/gh-pages/Binaries/kirbynightmare.gba"
+    },
+    {
+      "id": 73,
+      "name": "Mario Kart",
+      "system": "gba",
+      "url": "https://raw.githack.com/srojam/gba/gh-pages/Binaries/mariokart.gba"
+    },
+    {
+      "id": 74,
+      "name": "Mario Pinball",
+      "system": "gba",
+      "url": "https://raw.githack.com/srojam/gba/gh-pages/Binaries/mariopinball.gba"
+    },
+    {
+      "id": 75,
+      "name": "Monopoly",
+      "system": "gba",
+      "url": "https://github.com/srojam/gba/raw/gh-pages/Binaries/monopoly.gba"
+    },
+    {
+      "id": 76,
+      "name": "Guilty Gear X - Advance Edition",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Guilty%20Gear%20X%20-%20Advance%20Edition%20(USA).zip"
+    },
+    {
+      "id": 77,
+      "name": "GTA",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Grand%20Theft%20Auto%20(USA).zip"
+    },
+    {
+      "id": 78,
+      "name": "Garfield and His Nine Lives",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Garfield%20and%20His%20Nine%20Lives%20(USA).zip"
+    },
+    {
+      "id": 79,
+      "name": "Garfield and the Search For Pooky",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Garfield%20-%20The%20Search%20for%20Pooky%20(USA)%20(En,Fr,De,Es,It).zip"
+    },
+    {
+      "id": 80,
+      "name": "Earthworm Jim 2",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Earthworm%20Jim%202%20(USA).zip"
+    },
+    {
+      "id": 81,
+      "name": "Earthworm Jim",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Earthworm%20Jim%20(USA,%20Europe).zip"
+    },
+    {
+      "id": 82,
+      "name": "Crash Bandicoot Purple - Ripto's Rampage",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Crash%20Bandicoot%20Purple%20-%20Ripto's%20Rampage%20(USA)%20(Rev%201).zip"
+    },
+    {
+      "id": 83,
+      "name": "Crash Bandicoot - The Huge Adventure",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Crash%20Bandicoot%20-%20The%20Huge%20Adventure%20(USA).zip"
+    },
+    {
+      "id": 84,
+      "name": "Crash Bandicoot 2 - N Tranced",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Crash%20Bandicoot%202%20-%20N-Tranced%20(USA).zip"
+    },
+    {
+      "id": 85,
+      "name": "Excite Bike",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Classic%20NES%20Series%20-%20Excitebike%20(USA,%20Europe).zip"
+    },
+    {
+      "id": 86,
+      "name": "Dr. Mario",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Classic%20NES%20Series%20-%20Dr.%20Mario%20(USA,%20Europe).zip"
+    },
+    {
+      "id": 87,
+      "name": "Bomberman",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Classic%20NES%20Series%20-%20Bomberman%20(USA,%20Europe).zip"
+    },
+    {
+      "id": 88,
+      "name": "Chessmaster",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Chessmaster%20(USA).zip"
+    },
+    {
+      "id": 89,
+      "name": "Castlevania - Circle of the Moon",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Castlevania%20-%20Circle%20of%20the%20Moon%20(USA).zip"
+    },
+    {
+      "id": 90,
+      "name": "Caslevania - Harmony of Dissonance",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Castlevania%20-%20Harmony%20of%20Dissonance%20(USA).zip"
+    },
+    {
+      "id": 91,
+      "name": "Castlevania - Aria of Sorrow",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Castlevania%20-%20Aria%20of%20Sorrow%20(USA).zip"
+    },
+    {
+      "id": 92,
+      "name": "Banjo-Pilot",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Banjo-Pilot%20(USA).zip"
+    },
+    {
+      "id": 93,
+      "name": "Banjo-Kazooi - Grunty's Revenge",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Banjo-Kazooie%20-%20Grunty's%20Revenge%20(USA,%20Europe).zip"
+    },
+    {
+      "id": 94,
+      "name": "Pokemon Blue Ice MX",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Blue%20Ice%20Mx.zip"
+    },
+    {
+      "id": 95,
+      "name": "Pokemon Blu Idro",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Blu%20Idro.zip"
+    },
+    {
+      "id": 96,
+      "name": "Pokemon Blue Acqua",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Blu%20Acqua.zip"
+    },
+    {
+      "id": 97,
+      "name": "Pokemon Blossom",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Blossom%20v073118.zip"
+    },
+    {
+      "id": 98,
+      "name": "Pokemon Blazing",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Blazing.zip"
+    },
+    {
+      "id": 99,
+      "name": "Pokemon Blazing FireRed",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Blazing%20FireRed%20(v2.4)%20(1).zip"
+    },
+    {
+      "id": 100,
+      "name": "Pokemon Blazed Glazed",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Blazed-Glazed-v1.3.zip"
+    },
+    {
+      "id": 101,
+      "name": "Pokemon Blasting Off",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Blasting%20Off.zip"
+    },
+    {
+      "id": 102,
+      "name": "Pokemon Blackened Night",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Blackened%20Night%20v3.1.zip"
+    },
+    {
+      "id": 103,
+      "name": "Pokemon Black Granite X",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20BlackGranite%20X.zip"
+    },
+    {
+      "id": 104,
+      "name": "Pokemon Black and WHite GBA",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Black%20and%20White%20GBA.zip"
+    },
+    {
+      "id": 105,
+      "name": "Pokemon Black Orb",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Black%20Orb%20v2.zip"
+    },
+    {
+      "id": 106,
+      "name": "Pokemon Black Dark",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Black%20Dark.zip"
+    },
+    {
+      "id": 107,
+      "name": "Pokemon Bizarre Version",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Bizarre%20Version.zip"
+    },
+    {
+      "id": 108,
+      "name": "Pokemon Bidoof",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Bidoof%20v0.3.0.zip"
+    },
+    {
+      "id": 109,
+      "name": "Pokemon Better than Better Emerald",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Better%20than%20Better%20Emerald.zip"
+    },
+    {
+      "id": 110,
+      "name": "Pokemon Better than Better Emerald 2",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Better%20Than%20Better%20Emerald%202.zip"
+    },
+    {
+      "id": 111,
+      "name": "Pokemon Gold Remake Alpha 1",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Beta%20Gold%20Remake%20Alpha%201.zip"
+    },
+    {
+      "id": 112,
+      "name": "Pokemon Battle World",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Battle%20World%20v2.0.zip"
+    },
+    {
+      "id": 113,
+      "name": "Pokemon Battle Ultimate",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Battle%20Ultimate.zip"
+    },
+    {
+      "id": 114,
+      "name": "Pokemon Battle Labrynth",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Battle%20Labyrinth-v1.3.1.zip"
+    },
+    {
+      "id": 115,
+      "name": "Pokemon Balanced Sapphire",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Balanced%20Sapphire.zip"
+    },
+    {
+      "id": 116,
+      "name": "Pokemon Azure Horizions",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Azure%20Horizons%20(True%20Continued%20Version%202023).zip"
+    },
+    {
+      "id": 117,
+      "name": "Pokemon Azotic Fire",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Azotic%20Fire.zip"
+    },
+    {
+      "id": 118,
+      "name": "Pokemon Awful",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Awful%20v2.05.zip"
+    },
+    {
+      "id": 119,
+      "name": "Pokemon Awesome Version XD",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Awesome%20Version%20XD.zip"
+    },
+    {
+      "id": 120,
+      "name": "Pokemon Aurora Stone",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Aurora%20Stone.zip"
+    },
+    {
+      "id": 121,
+      "name": "Pokemon Atlas Emerald",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Atlas%20Emerald%20(Deluxe%20v0.9yi).zip"
+    },
+    {
+      "id": 122,
+      "name": "Pokemon Aspera",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Aspera.zip"
+    },
+    {
+      "id": 123,
+      "name": "Pokemon Ashes",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Ashes%20v1.1.zip"
+    },
+    {
+      "id": 124,
+      "name": "Pokemon Ashe's Journey",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Ashes%20Journey.zip"
+    },
+    {
+      "id": 125,
+      "name": "Pokemon Ash Grey",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20AshGray%20v4.6.zip"
+    },
+    {
+      "id": 126,
+      "name": "Pokemon Ash Red",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Ash%20Red.zip"
+    },
+    {
+      "id": 127,
+      "name": "Pokemon Ash Orange League",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Ash%20Orange%20League.zip"
+    },
+    {
+      "id": 128,
+      "name": "Pokemon Ash Kanto MSB",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Ash%20Kanto%20MSB%20(USA).zip"
+    },
+    {
+      "id": 129,
+      "name": "Pokemon Ash Johto Version",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Ash%20Johto%20Version.zip"
+    },
+    {
+      "id": 130,
+      "name": "Pokemon Ash Hoenn Version",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Ash%20Hoenn%20Version%20(USA).zip"
+    },
+    {
+      "id": 131,
+      "name": "Pokemon Ash H2K Battle Fronteir",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Ash%20H2K%20Battle%20Frontier%20(Completed).zip"
+    },
+    {
+      "id": 132,
+      "name": "Pokemon Ascent Alpha",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Ascent%20Alpha%20v5.zip"
+    },
+    {
+      "id": 133,
+      "name": "Pokemon Armageddon",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Armageddon.zip"
+    },
+    {
+      "id": 134,
+      "name": "Pokemon Arcoiris",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Arcoiris%20V2.1.zip"
+    },
+    {
+      "id": 135,
+      "name": "Pokemon Arceus Legend",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Arceus%20Legend.zip"
+    },
+    {
+      "id": 136,
+      "name": "Pokemon Aquilla 2",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Aquila%202%20v0.21.zip"
+    },
+    {
+      "id": 137,
+      "name": "Pokemon Aquamarine",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Aquamarine%203.0.0.zip"
+    },
+    {
+      "id": 138,
+      "name": "Pokemon Aqua Splash",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Aqua%20Splash%20v4.0.zip"
+    },
+    {
+      "id": 139,
+      "name": "Pokemon Aqua Blue",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Aqua%20Blue.zip"
+    },
+    {
+      "id": 140,
+      "name": "Pokemon Apollo",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Apollo%20v0.3.zip"
+    },
+    {
+      "id": 141,
+      "name": "Pokemon Another Emerald",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Another%20Emerald%20v1.11b.zip"
+    },
+    {
+      "id": 142,
+      "name": "Pokemon Animon",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Animon%20v1.13.zip"
+    },
+    {
+      "id": 143,
+      "name": "Pokemon Ancient",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Ancient.zip"
+    },
+    {
+      "id": 144,
+      "name": "Pokemon Amnesia",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Amnesia.zip"
+    },
+    {
+      "id": 145,
+      "name": "Pokemon Ambar",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Ambar.zip"
+    },
+    {
+      "id": 146,
+      "name": "Pokemon Amazing Cortana",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Amazing%20Cortana%20v2.0.zip"
+    },
+    {
+      "id": 147,
+      "name": "Pokemon Amarillo Solar",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Amarillo%20Solar.zip"
+    },
+    {
+      "id": 148,
+      "name": "Pokemon Amalga Magenta",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Amalga%20Magenta%20v1.4.zip"
+    },
+    {
+      "id": 149,
+      "name": "Pokemon Alternate Nusantara",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Alternate%20Nusantara%20v0.1.6.zip"
+    },
+    {
+      "id": 150,
+      "name": "Pokemon Alternate Evolutions",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Alternate%20Evolutions.zip"
+    },
+    {
+      "id": 151,
+      "name": "Pokemon Altered Emerald",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Altered%20Emerald%20v4.2c.zip"
+    },
+    {
+      "id": 152,
+      "name": "Pokemon AlteRed",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20AlteRed%20v2.5.3.zip"
+    },
+    {
+      "id": 153,
+      "name": "Pokemon Altair Minus",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Altair%20Minus%20v11-22-2020.zip"
+    },
+    {
+      "id": 154,
+      "name": "Pokemon Adventure to Empire Isle",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Adventure%20to%20Empire%20Isle%20v0.6.2.zip"
+    },
+    {
+      "id": 155,
+      "name": "Pokemon Yellow Chapter Adventures",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Adventure%20Yellow%20Chapter.zip"
+    },
+    {
+      "id": 156,
+      "name": "Pokemon Green Chapter Adventures",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Adventure%20Green%20Chapter%20b3.zip"
+    },
+    {
+      "id": 157,
+      "name": "Pokemon Gold Chapter Adventures",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Adventure%20Gold%20Chapter%20v1.2.zip"
+    },
+    {
+      "id": 158,
+      "name": "Pokemon Blue Chapter Adventures",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Adventure%20Blue%20Chapter%20b1.1.zip"
+    },
+    {
+      "id": 159,
+      "name": "Pokemon Advanced Version",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Advanced%20Version%20v3.0.zip"
+    },
+    {
+      "id": 160,
+      "name": "Pokemon Adavanced Adventure",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Advanced%20Adventure%202018-final.zip"
+    },
+    {
+      "id": 161,
+      "name": "Nictoons Unite",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Nicktoons%20Unite!%20(USA).zip"
+    },
+    {
+      "id": 162,
+      "name": "Nictoons Racing",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Nicktoons%20Racing%20(USA).zip"
+    },
+    {
+      "id": 163,
+      "name": "Pokemon Creepy",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Creepy%20v1.4.zip"
+    },
+    {
+      "id": 164,
+      "name": "Pokemon Bloody Red",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Bloody%20Red.zip"
+    },
+    {
+      "id": 165,
+      "name": "Pokemon Blossom",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Blossom%20v073118.zip"
+    },
+    {
+      "id": 166,
+      "name": "Pokemon Blue G1S",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Blue%20G1S%20v2.zip"
+    },
+    {
+      "id": 167,
+      "name": "Pokemon Blue Sea Edition",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Blue%20Sea%20Edition%20v1.0.gba.zip"
+    },
+    {
+      "id": 168,
+      "name": "Pokemon Blue Stars 4",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Blue%20Stars%204.zip"
+    },
+    {
+      "id": 169,
+      "name": "Pokemon Blue Stars Battle",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Blue%20Stars%20Battle.zip"
+    },
+    {
+      "id": 170,
+      "name": "Pokemon Blue Dream",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20BlueDream.zip"
+    },
+    {
+      "id": 171,
+      "name": "Pokemon Brasul",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Brasul%20v2.1.zip"
+    },
+    {
+      "id": 172,
+      "name": "Pokemon Brown",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Brown-tpp.zip"
+    },
+    {
+      "id": 173,
+      "name": "Pokemon Brunocity Adventures",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Brunocity%20Adventures%20v2.zip"
+    },
+    {
+      "id": 174,
+      "name": "Pokemon Brutal Version",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Brutal%20Version.zip"
+    },
+    {
+      "id": 175,
+      "name": "Pokemon Bubble Blue",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Bubbleblue.zip"
+    },
+    {
+      "id": 176,
+      "name": "Pokemon Bug Version",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Bug%20Version.zip"
+    },
+    {
+      "id": 177,
+      "name": "Pokemon Burning Ruby",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Burning%20Ruby.zip"
+    },
+    {
+      "id": 178,
+      "name": "Pokemon CAOS 2",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20CAOS%202.zip"
+    },
+    {
+      "id": 179,
+      "name": "Pokemon CAOS",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20CAOS.zip"
+    },
+    {
+      "id": 180,
+      "name": "Pokemon CAWPS",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20CAWPS%20Full.zip"
+    },
+    {
+      "id": 181,
+      "name": "Pokemon Camp Baker",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Camp%20Baker%20v1.1.zip"
+    },
+    {
+      "id": 182,
+      "name": "Pokemon Camp",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Camp%20v1.3.zip"
+    },
+    {
+      "id": 183,
+      "name": "Pokemon Castform Killed my Father",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Castform%20Killed%20my%20Father.zip"
+    },
+    {
+      "id": 184,
+      "name": "Pokemon Catastrophe",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Catastrophe%20v0.6.zip"
+    },
+    {
+      "id": 185,
+      "name": "Pokemon Celebi's Return",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Celebi%E2%80%99s%20Return%20v1.02.zip"
+    },
+    {
+      "id": 186,
+      "name": "Pokemon Celestial Version",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Celestial%20Version%20Beta_Release_1_Nov_2021.zip"
+    },
+    {
+      "id": 187,
+      "name": "Pokemon Celestium",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Celestium.zip"
+    },
+    {
+      "id": 188,
+      "name": "Pokemon Cerice",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Cerice%20v1.5.zip"
+    },
+    {
+      "id": 189,
+      "name": "Pokemon Chalice",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Chalice.zip"
+    },
+    {
+      "id": 190,
+      "name": "Pokemon Champions",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Champions%20v10.0%20Final.zip"
+    },
+    {
+      "id": 191,
+      "name": "Pokemon Charcoal",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Charcoal%20v16.0.zip"
+    },
+    {
+      "id": 192,
+      "name": "Pokemon Charged Red",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Charged%20Red%20v3.zip"
+    },
+    {
+      "id": 193,
+      "name": "Pokemon Charmeleon Version",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Charmeleon%20Version.zip"
+    },
+    {
+      "id": 194,
+      "name": "Pokemon Chilneo",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Chileno%20v6.0.zip"
+    },
+    {
+      "id": 195,
+      "name": "Pokemon Chonky Red",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20ChonkyRed.zip"
+    },
+    {
+      "id": 196,
+      "name": "Pokemon Chroma",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Chroma%20b1.zip"
+    },
+    {
+      "id": 197,
+      "name": "Pokemon Chrome",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Chrome%20v0.6.zip"
+    },
+    {
+      "id": 198,
+      "name": "Pokemon Ciano's Quest Alpha 1",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Ciano%E2%80%99s%20Quest%20Alpha%201.zip"
+    },
+    {
+      "id": 199,
+      "name": "Pokemon Citrite",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Citrite%20v1.3.1.zip"
+    },
+    {
+      "id": 200,
+      "name": "Pokemon Classic",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Classic%20(v1.3).zip"
+    },
+    {
+      "id": 201,
+      "name": "Pokemon Classified",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Classified.zip"
+    },
+    {
+      "id": 202,
+      "name": "Pokemon Clay's Calamity",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Clays%20Calamity%20v10.zip"
+    },
+    {
+      "id": 203,
+      "name": "Pokemon Clear Ocean",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Clear%20Ocean.zip"
+    },
+    {
+      "id": 204,
+      "name": "Pokemon CLimax",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Climax%20v3.0.zip"
+    },
+    {
+      "id": 205,
+      "name": "Pokemon Cloud White",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Cloud%20White%20v523d.zip"
+    },
+    {
+      "id": 206,
+      "name": "Pokemon Cobalt",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Cobalt%20v1.4.zip"
+    },
+    {
+      "id": 207,
+      "name": "Pokemon Cobalt Azul",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Cobalto%20Azul.zip"
+    },
+    {
+      "id": 208,
+      "name": "Pokemon Coliseo Eternal",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Coliseo%20Eterno.zip"
+    },
+    {
+      "id": 209,
+      "name": "Pokemon Coltan Edition",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Coltan%20Edition.zip"
+    },
+    {
+      "id": 210,
+      "name": "Pokemon Congbu",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Congbu.zip"
+    },
+    {
+      "id": 211,
+      "name": "Pokemon Conjure",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Conjure%20v0.0.1.zip"
+    },
+    {
+      "id": 212,
+      "name": "Pokemon Constraint of Evil Idea",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Constraint%20Of%20Evil%20Idea%201.zip"
+    },
+    {
+      "id": 213,
+      "name": "Pokemon Conversion Emerald",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Conversion%20Emerald%20v1.76.zip"
+    },
+    {
+      "id": 214,
+      "name": "Pokemon Corona Edition",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Corona%20Edition.zip"
+    },
+    {
+      "id": 215,
+      "name": "Pokemon Cosmic Emerald",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Cosmic%20Emerald%20v12-24-019.zip"
+    },
+    {
+      "id": 216,
+      "name": "Pokemon Crazy Vie",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Crazy%20Vie%20v1.3.zip"
+    },
+    {
+      "id": 217,
+      "name": "Pokemon Creepy Black",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Creepy%20Black%20v0.05.zip"
+    },
+    {
+      "id": 218,
+      "name": "Pokemon Crimson",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Crimson.zip"
+    },
+    {
+      "id": 219,
+      "name": "Pokemon Cristal De Jade",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Cristal%20de%20Jade.zip"
+    },
+    {
+      "id": 220,
+      "name": "Pokemon Crono",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Crono.zip"
+    },
+    {
+      "id": 221,
+      "name": "Pokemon Crown Beta",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Crown%20(Beta%201%20v9).zip"
+    },
+    {
+      "id": 222,
+      "name": "Pokemon Crush",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Crush%20final.zip"
+    },
+    {
+      "id": 223,
+      "name": "Pokemon Cryptic Lynch",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Cryptic%20Lynch%20v1.2.zip"
+    },
+    {
+      "id": 224,
+      "name": "Pokemon Crystal Advance Redux",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Crystal%20Advance%20Redux%20(28-8-23).zip"
+    },
+    {
+      "id": 225,
+      "name": "Pokemon Crystal Clear Standard Version",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Crystal%20Clear%20Standard%20Version%20(v2.5.9).zip"
+    },
+    {
+      "id": 226,
+      "name": "Pokemon Crystal Dust",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Crystal%20Dust%20v3.0.0.zip"
+    },
+    {
+      "id": 227,
+      "name": "Pokemon Crystal Kaizo",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Crystal%20Kaizo.zip"
+    },
+    {
+      "id": 228,
+      "name": "Pokemon Crystal Shards",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Crystal%20Shards%20v1.0.zip"
+    },
+    {
+      "id": 229,
+      "name": "Pokemon Crystallos",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Crystallos.zip"
+    },
+    {
+      "id": 230,
+      "name": "Pokemon Cursed",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Cursed%20v1.2.zip"
+    },
+    {
+      "id": 231,
+      "name": "Pokemon Cyan",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Cyan%20b3.zip"
+    },
+    {
+      "id": 232,
+      "name": "Pokemon DAVD Edition",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20DAVD%20Edition%20v2.2.zip"
+    },
+    {
+      "id": 233,
+      "name": "Pokemon DNA",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20DNA.zip"
+    },
+    {
+      "id": 234,
+      "name": "Pokemon DPS Ultimate",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20DPS%20Ultimate%20v1.1.zip"
+    },
+    {
+      "id": 235,
+      "name": "Pokemon DR",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20DR%20v1.0.2.zip"
+    },
+    {
+      "id": 236,
+      "name": "Pokemon Daia",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Daia.zip"
+    },
+    {
+      "id": 237,
+      "name": "Pokemon Dardusk",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dardusk%20v0.1.zip"
+    },
+    {
+      "id": 238,
+      "name": "Pokemon Dark Begin",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dark%20Begin.zip"
+    },
+    {
+      "id": 239,
+      "name": "Pokemon Dark Knight",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dark%20Knight%20v1.2.zip"
+    },
+    {
+      "id": 240,
+      "name": "Pokemon Dark Pearl Ruby",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dark%20Pearl%20Ruby.7z"
+    },
+    {
+      "id": 241,
+      "name": "Pokemon Dark Realm",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dark%20Realm%20b3.0.zip"
+    },
+    {
+      "id": 242,
+      "name": "Pokemon Dark Rising Order Destroyed",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dark%20Rising%20Order%20Destroyed.zip"
+    },
+    {
+      "id": 243,
+      "name": "Pokemon Dark Rising Origins World Colide",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dark%20Rising%20Origins%20Worlds%20Collide.zip"
+    },
+    {
+      "id": 244,
+      "name": "Pokemon Dark Jasper",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20DarkJasper.zip"
+    },
+    {
+      "id": 245,
+      "name": "Pokemon Darkfire",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Darkfire%20v2.0.5.zip"
+    },
+    {
+      "id": 246,
+      "name": "Pokemon Delta Fusion",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Delta%20Fusion.zip"
+    },
+    {
+      "id": 247,
+      "name": "Pokemon Delta Green",
+      "system": "gba",
+      "url": "https://github.com/vbaemulator/GBA-Roms/blob/main/Pokemon%20Delta%20Green.zip"
+    },
+    {
+      "id": 248,
+      "name": "Pokemon Demon Island",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Demon%20Island%20v1.3d.zip"
+    },
+    {
+      "id": 249,
+      "name": "Pokemon Derpizard",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Derpizard.zip"
+    },
+    {
+      "id": 250,
+      "name": "Pokemon Desert Bus",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Desert%20Bus.zip"
+    },
+    {
+      "id": 251,
+      "name": "Pokemon Desert",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Desert%20Version%20a0.2.zip"
+    },
+    {
+      "id": 252,
+      "name": "Pokemon Desolate",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Desolate.zip"
+    },
+    {
+      "id": 253,
+      "name": "Pokemon Destiny",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Destiny%20(v1).zip"
+    },
+    {
+      "id": 254,
+      "name": "Pokemon Diabound",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Diabound%20b1.zip"
+    },
+    {
+      "id": 255,
+      "name": "Pokemon Digimon Nova Red",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Digimon%20Nova%20Red%20(v3.1).zip"
+    },
+    {
+      "id": 256,
+      "name": "Pokemon Digimon Legends",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dimension%20Legends.zip"
+    },
+    {
+      "id": 257,
+      "name": "Pokemon Discovery",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Discovery.zip"
+    },
+    {
+      "id": 258,
+      "name": "Pokemon Distoreted Realms",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Distorted%20Realms.zip"
+    },
+    {
+      "id": 259,
+      "name": "Pokemon Double Battle",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Double%20Battle.zip"
+    },
+    {
+      "id": 260,
+      "name": "Pokemon Double Emerald",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Double%20Emerald.zip"
+    },
+    {
+      "id": 261,
+      "name": "Pokemon Drab Conspiracy",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Drab%20Conspiracy%201.5.zip"
+    },
+    {
+      "id": 262,
+      "name": "Pokemon Dragonball Z Team Training",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dragon%20Ball%20Z%20Team%20Training.zip"
+    },
+    {
+      "id": 263,
+      "name": "Pokemon Dragon World",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dragon%20World%20b3.zip"
+    },
+    {
+      "id": 264,
+      "name": "Pokemon Dragon's Bane",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dragon's%20Bane.zip"
+    },
+    {
+      "id": 265,
+      "name": "Pokemon Dragonstone Alpha",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dragonstone%20alpha%20v1.63.zip"
+    },
+    {
+      "id": 266,
+      "name": "Pokemon Dreams",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dreams_v.1.5.1.gba.zip"
+    },
+    {
+      "id": 267,
+      "name": "Pokemon Dreary",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dreary%20v1.4.zip"
+    },
+    {
+      "id": 268,
+      "name": "Pokemon Dying Sun",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Dying%20Sun.zip"
+    },
+    {
+      "id": 269,
+      "name": "Pokemon E'merald",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20E'merald%20v1.4.zip"
+    },
+    {
+      "id": 270,
+      "name": "Pokemon ELAF Gold",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20ELAF%20Gold.zip"
+    },
+    {
+      "id": 271,
+      "name": "Pokemon Easter Revolution",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Easter%20Revolution.zip"
+    },
+    {
+      "id": 272,
+      "name": "Pokemon Ebony Phantom",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Ebony%20Phantom%20v5.0.zip"
+    },
+    {
+      "id": 273,
+      "name": "Pokemon Eccentric Emerald",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Eccentric%20Emerald%20v1.41.zip"
+    },
+    {
+      "id": 274,
+      "name": "Pokemon Echo Emerald Version",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Echo%20Emerald%20Version.zip"
+    },
+    {
+      "id": 275,
+      "name": "Pokemon Eclat Pourpre",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Eclat%20Pourpre%20V2%20Eng.zip"
+    },
+    {
+      "id": 276,
+      "name": "Pokemon Eclipse",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Eclipse%20v0.11.zip"
+    },
+    {
+      "id": 277,
+      "name": "Pokemon Eevee Emerald",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Eevee%20Emerald%20v1.zip"
+    },
+    {
+      "id": 278,
+      "name": "Pokemon Electro Ball",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Electro%20Ball.zip"
+    },
+    {
+      "id": 279,
+      "name": "Pokemon ELegant Emerald",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Elegant%20Emerald%20(v1.3).zip"
+    },
+    {
+      "id": 280,
+      "name": "Pokemon Elemental Rift",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Elemental%20Rift.zip"
+    },
+    {
+      "id": 281,
+      "name": "Pokemon Elite Quest",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Elite%20Quest.zip"
+    },
+    {
+      "id": 282,
+      "name": "Pokemon Elite Redux",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Elite%20Redux%20v1.7.zip"
+    },
+    {
+      "id": 283,
+      "name": "Pokemon Elysium Part A",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Elysium%20Part%20A%20v2.0.0.zip"
+    },
+    {
+      "id": 284,
+      "name": "Pokemon Elysium Part B",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Elysium%20Part%20B%20v2.0.0.zip"
+    },
+    {
+      "id": 285,
+      "name": "Pokemon Emerald 2",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Emerald%202.zip"
+    },
+    {
+      "id": 286,
+      "name": "Pokemon Emerald 386",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Emerald%20386.zip"
+    },
+    {
+      "id": 287,
+      "name": "Pokemon Emerald Advanced",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Emerald%20Advanced%20v.0.7.gba.zip"
+    },
+    {
+      "id": 288,
+      "name": "Pokemon Emerald BR Deluxe",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Emerald%20BR%20Deluxe.zip"
+    },
+    {
+      "id": 289,
+      "name": "Pokemon Emerald Balanced",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Emerald%20Balanced%20v1.05.zip"
+    },
+    {
+      "id": 290,
+      "name": "Pokemon Emerald Battle Tower Challenge",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Emerald%20Battle%20Tower%20Challenge%20b0.1.zip"
+    },
+    {
+      "id": 291,
+      "name": "Pokemon Emerald Boss Rush",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Emerald%20Boss%20Rush%20v2.zip"
+    },
+    {
+      "id": 292,
+      "name": "Pokemon Emerald Cross",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Emerald%20Cross%20v2.0.5.zip"
+    },
+    {
+      "id": 293,
+      "name": "Pokemon Emerald DX Beta",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Emerald%20DX%20Beta%200d5.zip"
+    },
+    {
+      "id": 294,
+      "name": "Pokemon Emerald Double Up Delevelled",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Emerald%20Double%20Up%20Delevelled%20v2.5.1.zip"
+    },
+    {
+      "id": 295,
+      "name": "Pokemon Emerald Double Version",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Emerald%20Double%20Version%20v1.2.zip"
+    },
+    {
+      "id": 296,
+      "name": "Pokemon Emerald Dreams Alpha",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Emerald%20Dreams%20alpha_1.zip"
+    },
+    {
+      "id": 297,
+      "name": "Pokemon Emerald Enhanced",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Pokemon%20Emerald%20Enhanced%20v10.005.zip"
+    },
+    {
+      "id": 298,
+      "name": "WarioWare Twisted",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/WarioWare%20-%20Twisted!%20(USA,%20Australia).zip"
+    },
+    {
+      "id": 299,
+      "name": "Legend of Zelda, The - A Link to the Past & Four Swords",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Legend%20of%20Zelda,%20The%20-%20A%20Link%20to%20the%20Past%20&%20Four%20Swords%20(USA).zip"
+    },
+    {
+      "id": 300,
+      "name": "Advance Wars",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Advance%20Wars%20(USA)%20(Rev%201).zip"
+    },
+    {
+      "id": 301,
+      "name": "Mario Golf - Advance Tour",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Mario%20Golf%20-%20Advance%20Tour%20(USA).zip"
+    },
+    {
+      "id": 302,
+      "name": "Super Mario Advance 3 Yoshi's Island",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Super%20Mario%20Advance%203%20-%20Yoshi's%20Island%20(USA).zip"
+    },
+    {
+      "id": 303,
+      "name": "Final Fantasy VI",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Final%20Fantasy%20VI%20Advance%20(USA).zip"
+    },
+    {
+      "id": 304,
+      "name": "Metriod - Zero Mission",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Metroid%20-%20Zero%20Mission%20(USA).zip"
+    },
+    {
+      "id": 305,
+      "name": "Super Mario Advance 4 - Super Mario Bros. 3",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Super%20Mario%20Advance%204%20-%20Super%20Mario%20Bros.%203%20(USA,%20Australia)%20(Rev%201).zip"
+    },
+    {
+      "id": 306,
+      "name": "Mario & Luigi: Superstar Saga",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Mario%20&%20Luigi%20-%20Superstar%20Saga%20(USA).zip"
+    },
+    {
+      "id": 307,
+      "name": "Final Fantasy Tactics Advance",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Final%20Fantasy%20Tactics%20Advance%20(USA).zip"
+    },
+    {
+      "id": 308,
+      "name": "Mario Tennis Power Tour",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Mario%20Tennis%20-%20Power%20Tour%20(USA,%20Australia)%20(En,Fr,De,Es,It).zip"
+    },
+    {
+      "id": 309,
+      "name": "Fire Emblem",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Fire%20Emblem%20(USA,%20Australia).zip"
+    },
+    {
+      "id": 310,
+      "name": "Super Mario Advance 2: Super Mario World",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Super%20Mario%20Advance%202%20-%20Super%20Mario%20World%20(USA,%20Australia).zip"
+    },
+    {
+      "id": 311,
+      "name": "Metroid Fusion",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Metroid%20Fusion%20(USA).zip"
+    },
+    {
+      "id": 312,
+      "name": "Legend of Zelda, The - The Minish Cap",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Legend%20of%20Zelda,%20The%20-%20The%20Minish%20Cap%20(USA).zip"
+    },
+    {
+      "id": 313,
+      "name": "Double Dragon Advance",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Double%20Dragon%20Advance%20(USA).zip"
+    },
+    {
+      "id": 314,
+      "name": "Rhythm Tengoku",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Rhythm%20Tengoku%20(Japan)%20(Rev%201).zip"
+    },
+    {
+      "id": 315,
+      "name": "Harvest Moon - Friends of Mineral Town",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Harvest%20Moon%20-%20Friends%20of%20Mineral%20Town%20(USA).zip"
+    },
+    {
+      "id": 316,
+      "name": "Kuru Kuru Kururin",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Kurukuru%20Kururin%20(Europe).zip"
+    },
+    {
+      "id": 317,
+      "name": "Spongebob Squarepants: Revenge of the Flying Dutchman",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/SpongeBob%20SquarePants%20-%20Revenge%20of%20the%20Flying%20Dutchman%20(USA,%20Europe).zip"
+    },
+    {
+      "id": 318,
+      "name": "Yugioh Worldwide Edition: Stairway to the Destined Duel",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Yu-Gi-Oh!%20-%20Worldwide%20Edition%20-%20Stairway%20to%20the%20Destined%20Duel%20(USA)%20(En,Ja,Fr,De,Es,It).zip"
+    },
+    {
+      "id": 319,
+      "name": "Shrek 2",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Shrek%202%20(USA,%20Europe).zip"
+    },
+    {
+      "id": 320,
+      "name": "Mario vs Donkey Kong",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Mario%20vs.%20Donkey%20Kong%20(USA,%20Australia).zip"
+    },
+    {
+      "id": 321,
+      "name": "Pokemon Unbound",
+      "system": "unknown",
+      "url": "https://rawcdn.githack.com/TrapjawwS/seraph/75a901643d7506ed070d7002aa1d91221c2189de/games/pokemonunbound/pokemonunbound.zip"
+    },
+    {
+      "id": 322,
+      "name": "Pokemon Sun Sky",
+      "system": "gba",
+      "url": "https://rawcdn.githack.com/vbaemulator/GBA-Roms/f8ff9ba91598a5e996f29c7c27342f062faa989d/Pokemon%20Sun%20Sky.zip"
+    },
+    {
+      "id": 323,
+      "name": "Pokemon Moonlight",
+      "system": "gba",
+      "url": "https://rawcdn.githack.com/vbaemulator/GBA-Roms/f8ff9ba91598a5e996f29c7c27342f062faa989d/Pokemon%20Moonlight.zip"
+    },
+    {
+      "id": 324,
+      "name": "Good Boy Galaxy Demo",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/seraph/main/games/goodboygalaxy/goodboy-demo-en.gba"
+    },
+    {
+      "id": 325,
+      "name": "Kirby 1",
+      "system": "gb",
+      "url": "https://raw.githack.com/TrapjawwS/seraph/main/games/kirby1/Kirby.GB"
+    },
+    {
+      "id": 326,
+      "name": "Kirby 2",
+      "system": "gb",
+      "url": "https://raw.githack.com/TrapjawwS/seraph/main/games/kirby2/Kirby2.GB"
+    },
+    {
+      "id": 327,
+      "name": "Lego Star Wars 2",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/seraph/main/games/legostarwars2gba/legostarwars2.gba"
+    },
+    {
+      "id": 328,
+      "name": "Lego Star Wars",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/seraph/main/games/legostarwarsgba/LEGO-StarWars-theVideoGame.gba"
+    },
+    {
+      "id": 329,
+      "name": "Super Monkey Ball Jr.",
+      "system": "gbc",
+      "url": "https://rawcdn.githack.com/moondoges/cyanidegames/2b6f82aeaf5312e53bd79d101ad683ade0bd1d8f/grimacebday%20v.1.6.gbc"
+    },
+    {
+      "id": 330,
+      "name": "Bonk's Adventure",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/seraph/main/games/supermonkeyballjr/super-monkey-ball-jr.zip"
+    },
+    {
+      "id": 331,
+      "name": "Board Game Classics",
+      "system": "gb",
+      "url": "archive.org/download/gb-vs-recommended-games/Bonk%27s%20Adventure%20%28USA%29.gb"
+    },
+    {
+      "id": 332,
+      "name": "LOZ - Link's Awakening",
+      "system": "gba",
+      "url": "https://rawcdn.githack.com/vbaemulator/GBA-Roms/f8ff9ba91598a5e996f29c7c27342f062faa989d/Board%20Game%20Classics%20(USA).zip"
+    },
+    {
+      "id": 333,
+      "name": "Garfield Gets Real",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/seraph/main/games/garfieldgetsreal/Garfield%20Gets%20Real%20(USA).zip"
+    },
+    {
+      "id": 334,
+      "name": "Kirby Mass Attack",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/seraph/main/games/kirbymassattack/kirby-mass-attack.zip"
+    },
+    {
+      "id": 335,
+      "name": "The Simpsons Arcade Game",
+      "system": "unknown",
+      "url": "https://raw.githack.com/thisismyaltaccountt/yes/main/app/stuff/simpsons.zip"
+    },
+    {
+      "id": 336,
+      "name": "Street Fighter 3 | 3rd Strike",
+      "system": "unknown",
+      "url": "https://raw.githack.com/thisismyaltaccountt/stuff/main/sfiii3.zip"
+    },
+    {
+      "id": 337,
+      "name": "Marvel VS Capcom 1",
+      "system": "unknown",
+      "url": "https://raw.githack.com/thisismyaltaccountt/yes/main/app/stuff/mvsc.zip"
+    },
+    {
+      "id": 338,
+      "name": "Mario Kart 64",
+      "system": "n64",
+      "url": "https://raw.githack.com/TrapjawwS/seraph/main/games/mariokart64/mariokart64.zip"
+    },
+    {
+      "id": 339,
+      "name": "Sonic Battle",
+      "system": "gba",
+      "url": "https://rawcdn.githack.com/srojam/gba/58893088e3805baaf716e0af6801aaeeae1a0efb/Binaries/sonicbattle.gba"
+    },
+    {
+      "id": 340,
+      "name": "Pokemon Blazing Emerald",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/blazing-emerald-v1.6.zip"
+    },
+    {
+      "id": 341,
+      "name": "Pokemon Stupid Celias",
+      "system": "unknown",
+      "url": "https://github.com/TrapjawwS/funnyemulatorjs/blob/main/romhacks/blazing-emerald-v1.6.zip"
+    },
+    {
+      "id": 342,
+      "name": "Pokemon Crest",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/crest%20v1.0.9.6.3.gba"
+    },
+    {
+      "id": 343,
+      "name": "Pokemon Dark Rising",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/darkrising-kaizo-fixed%20(1).zip"
+    },
+    {
+      "id": 344,
+      "name": "Pokemon Elite Redux",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/eliteredux%20v2.0%20beta%201.zip"
+    },
+    {
+      "id": 345,
+      "name": "Pokemon Fool's Gold",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Fools%20Gold%20(v1.3.1).zip"
+    },
+    {
+      "id": 346,
+      "name": "Pokemon Fri-Ret (not sure exactly what this is)",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/fri-ret%20cartridge%20ver.zip"
+    },
+    {
+      "id": 347,
+      "name": "Pokemon Glazed",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Glazed%20v8.6.3.zip"
+    },
+    {
+      "id": 348,
+      "name": "Pokemon Lost Artifacts",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/HE%205.5%20Lost%20Artifacts%20(English).zip"
+    },
+    {
+      "id": 349,
+      "name": "Pokemon Megapower",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/megapower%20v5.71.zip"
+    },
+    {
+      "id": 350,
+      "name": "Pokemon Obsidianem",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/obsidianem%20(v1.0).zip"
+    },
+    {
+      "id": 351,
+      "name": "Pokemon Rebirth or Alpha",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/PK%20OR%20Rebirth%20Alpha%200.2%20(N).zip"
+    },
+    {
+      "id": 352,
+      "name": "Pokemon Vietnamese Crystal (cursed af lmfao)",
+      "system": "gbc",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Pokemon%20Vietnamese%20Crystal.gbc"
+    },
+    {
+      "id": 353,
+      "name": "Pokemon Fat Kid Beta",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/pokemon_fat_kid_beta_1.2.4.gba.zip"
+    },
+    {
+      "id": 354,
+      "name": "Pokemon Snakewood (GORY)",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/snakewood-final-fixed.zip"
+    },
+    {
+      "id": 355,
+      "name": "Pokemon Sweet",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Sweet%20v1.0.zip"
+    },
+    {
+      "id": 356,
+      "name": "Pokemon Sweet 2",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Poke%CC%81mon%20Sweet%202th.gba"
+    },
+    {
+      "id": 357,
+      "name": "Pokemon Wings of Chaos",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Wings%20of%20Chaos%20(Alpha%202).zip"
+    },
+    {
+      "id": 358,
+      "name": "Pokemon Azure Platinum",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/AzurePlat%20(ENG).zip"
+    },
+    {
+      "id": 359,
+      "name": "Pokemon Extended",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Extended%20v3.5.1.zip"
+    },
+    {
+      "id": 360,
+      "name": "Pokemon Fusion 3 (PLAY THIS)",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Fusion%203%20-%20Red&Blue.zip"
+    },
+    {
+      "id": 361,
+      "name": "Pokemon Giritinas Legend",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Giratinas%20Legend%20Demo%201.0.2%20(English%20Version).zip"
+    },
+    {
+      "id": 362,
+      "name": "Pokemon Life Version",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/life-version-a1.9.zip"
+    },
+    {
+      "id": 363,
+      "name": "Pokemon Saiph",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/PK%20Saiph%20Full%20v2020%20Patch.zip"
+    },
+    {
+      "id": 364,
+      "name": "Pokemon Crown",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Pokemon%20Crown%20(Beta%201%20v9)%20(1)%20(1).zip"
+    },
+    {
+      "id": 365,
+      "name": "Pokemon Emerald Rogue EX",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Pokemon%20Emerald%20Rogue%20EX%20(v1.3.2a)%20(1).zip"
+    },
+    {
+      "id": 366,
+      "name": "Pokemon Fused Dimensions",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Pokemon%20Fused%20Dimensions%20(v2.3)%20(1).zip"
+    },
+    {
+      "id": 367,
+      "name": "Pokemon Indian Ruby",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Pokemon%20Indian%20Ruby.zip"
+    },
+    {
+      "id": 368,
+      "name": "Pokemon Stranded",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Pokemon%20Stranded%20v0.1.7.zip"
+    },
+    {
+      "id": 369,
+      "name": "Pokemon The Last Fire Red",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Pokemon%20The%20Last%20Fire%20Red%20(v4.0.3).zip"
+    },
+    {
+      "id": 370,
+      "name": "Pokemon Trick or Treat House",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Pokemon%20Trick-or-Treat%20House%20v3d0d7.zip"
+    },
+    {
+      "id": 371,
+      "name": "Pokemon Ultimate Fusion (PLAY THIS)",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Pokemon%20Ultimate%20Fusion%20(1).zip"
+    },
+    {
+      "id": 372,
+      "name": "Pokemon Wally Quest",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Pokemon%20Wally%20Quest%20(v1.1).zip"
+    },
+    {
+      "id": 373,
+      "name": "Pokemon Destiny Reign of Legends",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/pokemon_ruby_destiny_reign_of_legends_2016_4.1.gba.zip"
+    },
+    {
+      "id": 374,
+      "name": "Pokemon Resolute",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/resolute%20v2.91%20+%20fixed.zip"
+    },
+    {
+      "id": 375,
+      "name": "Pokemon Adventure Red (PLAY THIS)",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/U_FR_Adventure_Red_Beta_15_Expansion_Fix_Patch_C.gba.zip"
+    },
+    {
+      "id": 376,
+      "name": "Pokemon Vega",
+      "system": "gba",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/vega_20190420.gba.zip"
+    },
+    {
+      "id": 377,
+      "name": "Pokemon Voyager",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Voyager%20(v0.3.6)%20(1).zip"
+    },
+    {
+      "id": 378,
+      "name": "Alien Homid (PLAY THIS)",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Alien%20Hominid%20(Europe)%20(En,Fr,De,Es,It).zip"
+    },
+    {
+      "id": 379,
+      "name": "TMNT",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Teenage%20Mutant%20Ninja%20Turtles%20(USA).zip"
+    },
+    {
+      "id": 380,
+      "name": "Capcom Classics",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Capcom%20Classics%20Mini%20Mix%20(USA).zip"
+    },
+    {
+      "id": 381,
+      "name": "Shrek Super Slam",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Shrek%20-%20Super%20Slam%20(USA).zip"
+    },
+    {
+      "id": 382,
+      "name": "Jet Grind Radio",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Jet%20Grind%20Radio%20(USA).zip"
+    },
+    {
+      "id": 383,
+      "name": "Lego Racers 2",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/LEGO%20Racers%202%20(USA)%20(En,Fr).zip"
+    },
+    {
+      "id": 384,
+      "name": "M&M's Blast!",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/M&M's%20-%20Blast!%20(USA).zip"
+    },
+    {
+      "id": 385,
+      "name": "M&M's Break 'Em",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/M&M's%20-%20Break'%20Em%20(USA)%20(Rev%201).zip"
+    },
+    {
+      "id": 386,
+      "name": "The Simpsons Road Rage",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Simpsons,%20The%20-%20Road%20Rage%20(USA,%20Europe).zip"
+    },
+    {
+      "id": 387,
+      "name": "Super Punch Out",
+      "system": "unknown",
+      "url": "https://raw.githack.com/dolchi21-retroarch/snes-roms/master/Super%20Punch-Out!!.7z"
+    },
+    {
+      "id": 388,
+      "name": "Super Mario RPG",
+      "system": "unknown",
+      "url": "https://raw.githack.com/dolchi21-retroarch/snes-roms/master/Super%20Mario%20RPG%20-%20Legend%20of%20the%20Seven%20Stars%20(USA).7z"
+    },
+    {
+      "id": 389,
+      "name": "The Binding of Isaac",
+      "system": "flash",
+      "url": "https://trapjawws.github.io/josh/The%20Binding%20of%20Isaac.swf"
+    },
+    {
+      "id": 390,
+      "name": "Duck Life 1",
+      "system": "flash",
+      "url": "https://thisismyaltaccountt.github.io/flasharchive/Duck%20Life%201.swf"
+    },
+    {
+      "id": 391,
+      "name": "Duck Life 2 - World Champion",
+      "system": "flash",
+      "url": "https://thisismyaltaccountt.github.io/flasharchive/Duck%20Life%202%20-%20World%20Champion.swf"
+    },
+    {
+      "id": 392,
+      "name": "Duck Life 3 - Evolution",
+      "system": "flash",
+      "url": "https://thisismyaltaccountt.github.io/flasharchive/Duck%20Life%203%20-%20Evolution.swf"
+    },
+    {
+      "id": 393,
+      "name": "Duck Life 4",
+      "system": "flash",
+      "url": "https://thisismyaltaccountt.github.io/flasharchive/Duck%20Life%204.swf"
+    },
+    {
+      "id": 394,
+      "name": "Henry Stickmin - Breaking the Bank",
+      "system": "flash",
+      "url": "https://thisismyaltaccountt.github.io/flasharchive/Henry%20Stickmin%20-%20Breaking%20the%20Bank.swf"
+    },
+    {
+      "id": 395,
+      "name": "Henry Stickmin - Escaping the Prison",
+      "system": "flash",
+      "url": "https://thisismyaltaccountt.github.io/flasharchive/Henry%20Stickmin%20-%20Escaping%20the%20Prison.swf"
+    },
+    {
+      "id": 396,
+      "name": "Henry Stickmin - Fleeing the Complex",
+      "system": "flash",
+      "url": "https://thisismyaltaccountt.github.io/flasharchive/Henry%20Stickmin%20-%20Fleeing%20the%20Complex.swf"
+    },
+    {
+      "id": 397,
+      "name": "Henry Stickmin - Infiltrating the Airship",
+      "system": "flash",
+      "url": "https://thisismyaltaccountt.github.io/flasharchive/Henry%20Stickmin%20-%20Infiltrating%20the%20Airship.swf"
+    },
+    {
+      "id": 398,
+      "name": "Henry Stickmin - Stealing the Diamond",
+      "system": "flash",
+      "url": "https://thisismyaltaccountt.github.io/flasharchive/Henry%20Stickmin%20-%20Stealing%20the%20Diamond.swf"
+    },
+    {
+      "id": 399,
+      "name": "Super Meat Boy",
+      "system": "flash",
+      "url": "https://thisismyaltaccountt.github.io/flasharchive/Super%20Meat%20Boy.swf"
+    },
+    {
+      "id": 400,
+      "name": "Super Smash Flash",
+      "system": "flash",
+      "url": "https://thisismyaltaccountt.github.io/flasharchive/Super%20Smash%20Flash.swf"
+    },
+    {
+      "id": 401,
+      "name": "Alien Homid (Flash version?!?!?)",
+      "system": "flash",
+      "url": "https://raw.githack.com/waitwhosjoe/Flash-Game-Archive/main/Files/Flash/AlienHominid.swf"
+    },
+    {
+      "id": 402,
+      "name": "Angry Birds Halloween",
+      "system": "flash",
+      "url": "https://raw.githack.com/waitwhosjoe/Flash-Game-Archive/main/Files/Flash/AngryBirdHalloween.swf"
+    },
+    {
+      "id": 403,
+      "name": "Angry Birds Rio",
+      "system": "flash",
+      "url": "https://raw.githack.com/waitwhosjoe/Flash-Game-Archive/main/Files/Flash/AngryBirdsRio.swf"
+    },
+    {
+      "id": 404,
+      "name": "BTD1",
+      "system": "flash",
+      "url": "https://raw.githack.com/waitwhosjoe/Flash-Game-Archive/main/Files/Flash/BloonsTD.swf"
+    },
+    {
+      "id": 405,
+      "name": "BTD2",
+      "system": "flash",
+      "url": "https://raw.githack.com/waitwhosjoe/Flash-Game-Archive/main/Files/Flash/BloonsTD2.swf"
+    },
+    {
+      "id": 406,
+      "name": "BTD3",
+      "system": "flash",
+      "url": "https://raw.githack.com/waitwhosjoe/Flash-Game-Archive/main/Files/Flash/BloonsTD3.swf"
+    },
+    {
+      "id": 407,
+      "name": "BTD5",
+      "system": "flash",
+      "url": "https://raw.githack.com/SJRNoodles/Flash-Game-Archive/master/bloons-tower-defense-5.swf"
+    },
+    {
+      "id": 408,
+      "name": "Plants VS Zombies",
+      "system": "flash",
+      "url": "https://raw.githack.com/waitwhosjoe/Flash-Game-Archive/main/Files/Flash/PlantsVsZombies.swf"
+    },
+    {
+      "id": 409,
+      "name": "Run 2",
+      "system": "flash",
+      "url": "https://raw.githack.com/SJRNoodles/Flash-Game-Archive/master/run2.swf"
+    },
+    {
+      "id": 410,
+      "name": "Duck Life 5",
+      "system": "flash",
+      "url": "https://raw.githack.com/mountain658/mountain658.github.io/main/zswfs/ducklife5.swf"
+    },
+    {
+      "id": 411,
+      "name": "Burrito Bison",
+      "system": "flash",
+      "url": "https://raw.githack.com/mountain658/mountain658.github.io/main/zswfs/burritobison.swf"
+    },
+    {
+      "id": 412,
+      "name": "10 Minutes till Dawn",
+      "system": "html",
+      "url": "10 Minutes till Dawn filler"
+    },
+    {
+      "id": 413,
+      "name": "2048",
+      "system": "html",
+      "url": "2048 filler"
+    },
+    {
+      "id": 414,
+      "name": "Celeste",
+      "system": "html",
+      "url": "Celeste filler"
+    },
+    {
+      "id": 415,
+      "name": "Space Bar Clicker",
+      "system": "html",
+      "url": "Space Bar Clicker filler"
+    },
+    {
+      "id": 416,
+      "name": "Stack",
+      "system": "html",
+      "url": "Stack filler"
+    },
+    {
+      "id": 417,
+      "name": "Stickman Hook",
+      "system": "html",
+      "url": "Stickman Hook filler"
+    },
+    {
+      "id": 418,
+      "name": "Tanuki Sunset",
+      "system": "html",
+      "url": "Tanuki Sunset filler"
+    },
+    {
+      "id": 419,
+      "name": "Pokemon Red",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/pokemonred.zip"
+    },
+    {
+      "id": 420,
+      "name": "Lilo and Stich",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Lilo%20%26%20Stitch%20(USA).zip"
+    },
+    {
+      "id": 421,
+      "name": "Advance Wars 2",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Advance%20Wars%202%20-%20Black%20Hole%20Rising%20(USA).zip"
+    },
+    {
+      "id": 422,
+      "name": "Advance Wars 1",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Advance%20Wars%20(USA)%20(Rev%201).zip"
+    },
+    {
+      "id": 423,
+      "name": "Tetris Attack",
+      "system": "unknown",
+      "url": "https://raw.githack.com/vbaemulator/GB-Roms/main/Tetris%20Attack%20(USA%2C%20Europe)%20(Rev%201)%20(SGB%20Enhanced).zip"
+    },
+    {
+      "id": 424,
+      "name": "Warioware Micro Games",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/warioware.zip"
+    },
+    {
+      "id": 425,
+      "name": "Dr. Mario & Puzzle League",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/puzzleleague.zip"
+    },
+    {
+      "id": 426,
+      "name": "Puyo Pop",
+      "system": "gba",
+      "url": "https://raw.githack.com/vbaemulator/GBA-Roms/main/Puyo%20Pop%20(USA)%20(En%2CJa).zip"
+    },
+    {
+      "id": 427,
+      "name": "Mario Kart DS",
+      "system": "nds",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/mariokartds.zip"
+    },
+    {
+      "id": 428,
+      "name": "Pokemon Heart Gold",
+      "system": "nds",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/heartgold.zip"
+    },
+    {
+      "id": 429,
+      "name": "New Super Mario Bros",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/newmario.zip"
+    },
+    {
+      "id": 430,
+      "name": "Need For Speed Prostreet",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/nfsprostreet.zip"
+    },
+    {
+      "id": 431,
+      "name": "Mario and Luigi: Partners in Time",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/mlpartnersintime.zip"
+    },
+    {
+      "id": 432,
+      "name": "Mario and Luigi: Bowser's Inside Story",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/mlbowsersinsidestory.zip"
+    },
+    {
+      "id": 433,
+      "name": "M&M Kart",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/mmkart.zip"
+    },
+    {
+      "id": 434,
+      "name": "Cooking Mama",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/cookingmama.zip"
+    },
+    {
+      "id": 435,
+      "name": "Cartoon Network Racing",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/cnracing.zip"
+    },
+    {
+      "id": 436,
+      "name": "Call of Duty: Black Ops (it sucks)",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/codbo.zip"
+    },
+    {
+      "id": 437,
+      "name": "Cookie Clicker",
+      "system": "unknown",
+      "url": "https://uniub.github.io/UniUBGamefiles/gamefiles/cookie-clicker/index.html"
+    },
+    {
+      "id": 438,
+      "name": "Doom",
+      "system": "unknown",
+      "url": "data:application/xhtml+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiID8+CjwhRE9DVFlQRSBodG1sIFBVQkxJQyAiLS8vVzNDLy9EVEQgWEhUTUwgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL1RSL3hodG1sMTEvRFREL3hodG1sMTEuZHRkIj4KPGh0bWwgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIGxhbmc9ImVuIj4KCTxoZWFkPgoJCTxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sO2NoYXJzZXQ9dXRmLTgiIC8+CgkJPG1ldGEgaHR0cC1lcXVpdj0iUmVmZXJyZXItUG9saWN5IiBjb250ZW50PSJuby1yZWZlcnJlciIgLz4KCQk8bWV0YSBuYW1lPSJyZWZlcnJlciIgY29udGVudD0ibm8tcmVmZXJyZXIiIC8+CgkJPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCxpbml0aWFsLXNjYWxlPTEiIC8+CgkJPGJhc2UgaHJlZj0iaHR0cHM6Ly9uZXR0bGV3ZWIucGFnZXMuZGV2IiB0YXJnZXQ9Il9ibGFuayIgLz4KCQk8bGluayByZWw9Imljb24iIHR5cGU9ImltYWdlL3gtaWNvbiIgaHJlZj0icmVzL2dvb2dsZS5pY28iIC8+CgkJPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgaHJlZj0iZGF0YTp0ZXh0L2NzcztiYXNlNjQsWW05a2VTeGxiV0psWkN4cFpuSmhiV1Y3Y0c5emFYUnBiMjQ2WVdKemIyeDFkR1U3WkdsemNHeGhlVHBpYkc5amF6dDNhV1IwYURveE1EQWxPMmhsYVdkb2REb3hNREFsTzIxaGNtZHBiam93Y0hnN2NHRmtaR2x1Wnpvd2NIZzdZbTl5WkdWeU9tNXZibVU3YjNabGNtWnNiM2M2YUdsa1pHVnVPMzBLIiAvPgoJCTx0aXRsZT5Hb29nbGU8L3RpdGxlPgoJPC9oZWFkPgoJPGJvZHk+CgkJPGVtYmVkIHR5cGU9InRleHQvcGxhaW4iIHdpZHRoPSIxMDI0IiBoZWlnaHQ9Ijc2OCIgc3JjPSIvcGxheWVyLmh0bWw/bmFtZT1Eb29tJmFtcDt0eXBlPWRvcyZhbXA7dXJsPSUyRnIlMkZiOWMxNmE3OC0yYTliLTQyZGQtODljMC0zYTNlY2E5MzVlMjgiIC8+Cgk8L2JvZHk+CjwvaHRtbD4="
+    },
+    {
+      "id": 439,
+      "name": "Ssspicy",
+      "system": "unknown",
+      "url": "https://trapjawws.github.io/seraph/games/ssssspicy/index.html"
+    },
+    {
+      "id": 440,
+      "name": "Bad Time Simulator",
+      "system": "unknown",
+      "url": "https://thisismyaltaccountt.github.io/games/sans/index.html"
+    },
+    {
+      "id": 441,
+      "name": "Ballistic Chickens",
+      "system": "unknown",
+      "url": "https://trapjawws.github.io/seraph/games/ballisticchickens/index.html"
+    },
+    {
+      "id": 442,
+      "name": "Snake",
+      "system": "unknown",
+      "url": "https://trapjawws.github.io/seraph/games/snake/index.html"
+    },
+    {
+      "id": 443,
+      "name": "Chess",
+      "system": "unknown",
+      "url": "https://trapjawws.github.io/seraph/games/chess/index.html"
+    },
+    {
+      "id": 444,
+      "name": "JsPaint",
+      "system": "unknown",
+      "url": "https://thisismyaltaccountt.github.io/jspaint"
+    },
+    {
+      "id": 445,
+      "name": "Crossy Road",
+      "system": "unknown",
+      "url": "https://thisismyaltaccountt.github.io/moregames/crossy-road"
+    },
+    {
+      "id": 446,
+      "name": "Subway Surfers",
+      "system": "unknown",
+      "url": "https://thisismyaltaccountt.github.io/moregames/subway-surfers"
+    },
+    {
+      "id": 447,
+      "name": "Temple Run 2",
+      "system": "unknown",
+      "url": "https://thisismyaltaccountt.github.io/moregames/temple-run-2"
+    },
+    {
+      "id": 448,
+      "name": "Polytrack",
+      "system": "unknown",
+      "url": "https://blobby-boi.github.io/polytrack/"
+    },
+    {
+      "id": 449,
+      "name": "LAST BREATH",
+      "system": "unknown",
+      "url": "https://thisismyaltaccountt.github.io/LAST-BREATH/"
+    },
+    {
+      "id": 450,
+      "name": "Top Speed Racing 3d",
+      "system": "unknown",
+      "url": "https://artedu1808.github.io/g/top-speed-racing-3d"
+    },
+    {
+      "id": 451,
+      "name": "Yggdra Union",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/yggdraunion.zip"
+    },
+    {
+      "id": 452,
+      "name": "Wario Land 4",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/warioland4.zip"
+    },
+    {
+      "id": 453,
+      "name": "TMNT",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/tmnt.zip"
+    },
+    {
+      "id": 454,
+      "name": "Puzzle Fighter 2",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/puzzlefighter2.zip"
+    },
+    {
+      "id": 455,
+      "name": "Racing Gears Advance",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/racinggears.zip"
+    },
+    {
+      "id": 456,
+      "name": "Pinball of the Dead",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/pinballofthedead.zip"
+    },
+    {
+      "id": 457,
+      "name": "Koro Koro Puzzle",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/korokoropuzzle.zip"
+    },
+    {
+      "id": 458,
+      "name": "Juka and the Monophonic Menace",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/jujaandthemonphonicmenace.zip"
+    },
+    {
+      "id": 459,
+      "name": "Iridion 2",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/iridion2.zip"
+    },
+    {
+      "id": 460,
+      "name": "Invader",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/invader.zip"
+    },
+    {
+      "id": 461,
+      "name": "Drill Dozer",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/drilldozer.zip"
+    },
+    {
+      "id": 462,
+      "name": "Astro Boy Omega Factor",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/astroboyomegafactor.zip"
+    },
+    {
+      "id": 463,
+      "name": "Godzilla Domination",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/godzilladomination.zip"
+    },
+    {
+      "id": 464,
+      "name": "Metal Slug Advance",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/metalslugadvance.zip"
+    },
+    {
+      "id": 465,
+      "name": "Puyo Pop Fever",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/puyopopfever.zip"
+    },
+    {
+      "id": 466,
+      "name": "Apotris (Better tetris)",
+      "system": "unknown",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/apotris.zip"
+    },
+    {
+      "id": 467,
+      "name": "Bloxorz",
+      "system": "flash",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/bloxors.swf"
+    },
+    {
+      "id": 468,
+      "name": "Super Mario 63",
+      "system": "flash",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/supermario63.swf"
+    },
+    {
+      "id": 469,
+      "name": "Dad 'n Me",
+      "system": "flash",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/dadnme.swf"
+    },
+    {
+      "id": 470,
+      "name": "Super Mario Sunshine 64",
+      "system": "flash",
+      "url": "https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/roms/super-mario-sunshine-64.swf"
+    },
+    {
+      "id": 471,
+      "name": "Crazy Cattle 3d",
+      "system": "unknown",
+      "url": "https://thisismyaltaccountt.github.io/cattle3d/"
+    },
+    {
+      "id": 472,
+      "name": "Cheese Chompers 3d (WIP)",
+      "system": "unknown",
+      "url": "https://cheesechompers3d.io/"
+    }
+  ]
+}

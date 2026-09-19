@@ -1,0 +1,177 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #578a34;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#scoreContainer {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 60px;
+  background-color: #20632f;
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+#current-score,
+#high-score {
+  margin: 28px 10px;
+  font: 400 28px Roboto, Arial, sans-serif;
+  color: #000;
+  text-align: center;
+  margin-bottom: 12%;
+}
+
+#scoreNumber,
+#highScoreNumber {
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+.game_buttons {
+  display: flex;
+  gap: 5px;
+  width: 300px;
+}
+
+#startGame,
+#twoPlayer,
+#versusBtn {
+  background-color: #11b2cc;
+  color: #FFF;
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.website_text {
+  position: absolute;
+  top: 97%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.website_text h5 {
+  font-size: 20px;
+}
+
+#gameControlPanel {
+  position: absolute;
+}
+
+.message1 {
+  background-image: url("./assets/startscene.png");
+  background-size: cover;
+  border-radius: 8px;
+  height: 300px;
+  margin-bottom: 5px;
+}
+
+.win-message {
+  display: flex;
+  justify-content: space-around;
+}
+
+#gameMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Modal Overlay */
+#phaser-example {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  display: block; /* Make canvas a block element */
+  margin: auto; /* Center the canvas */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal Content */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#singlePlayer, #twoPlayerscore {
+  height: 60px;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+#twoPlayerscore {
+  justify-content: space-between;
+}
+
+#twoPlayerscore #player2Score {
+  padding-left: 5%;
+}
+
+.win-message {
+  padding-top: 10%;
+}
+
+#winMessageText {
+  padding-left: 20px;
+  font-size: 30px;
+  color: #F53812;
+  text-align: center;
+  font-weight: 800;
+  animation: scaleUp 1s ease-in-out forwards;  /* You can adjust the timing as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  /* Adds a subtle shadow */
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);  /* Start with no scale (completely small) */
+    opacity: 0;           /* Start fully transparent */
+  }
+  50% {
+    transform: scale(1.2); /* Grow slightly larger */
+    opacity: 1;            /* Make the text visible */
+  }
+  100% {
+    transform: scale(1);   /* End with the original scale */
+    opacity: 1;            /* Keep it visible */
+  }
+}

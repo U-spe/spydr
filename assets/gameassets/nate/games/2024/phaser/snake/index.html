@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <title>Snake - FreezeNova</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./assets/js/custom-phaser-3.80.1.min.js"></script>
+  
+  
+<style type="text/css">
+	html, body, canvas {
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+	}
+</style>
+
+
+	<link rel="canonical" href="https://unblocked-games.s3.amazonaws.com/snake.html" />
+	
+	<script src="/assets/scripts/game.js"></script>
+
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXS04HS5MX"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-GXS04HS5MX');
+	</script>
+	
+
+	<script src="/assets/promo/promo.js" async></script>
+	<script type="text/javascript" async>
+		!function(e, t) {
+			var a = e.createElement("script"),
+				m = e.getElementsByTagName("script")[0];
+
+			a.async = 1;
+			a.src = t;
+
+			a.onload = function() {
+				console.log("Dynamic script loaded wg");
+				if (typeof window.syncPromoManager === "function") window.syncPromoManager(false);
+				window.wgLoaded = 1;
+			};
+
+			a.onerror = function() {
+				console.error("Failed to load wg");
+				if (typeof window.syncPromoManager === "function") window.syncPromoManager(true);
+				window.wgLoaded = 2;
+			};
+
+			m.parentNode.insertBefore(a, m);
+		}(document, "https://universal.wgplayer.com/tag/?lh=" + window.location.hostname + "&wp=" + window.location.pathname + "&ws=" + window.location.search);
+	</script>
+	
+</head>
+
+<body>
+  <div id="phaser-example">
+    <div id="scoreContainer">
+      <div id="singlePlayer">
+        <img src="./assets/apple.png"><span id="scoreNumber">0</span>
+        <img src="./assets/trophy.png" style="height: 40px; width: 40px; margin-left: 6%; display: none;" />
+        <span id="highScoreNumber" style="display: none;">0</span>
+      </div>
+      <div id="twoPlayerscore" style="display: none;">
+        <div id="player1Score">P1: 0</div>
+        <div id="player2Score">P2: 0</div>
+      </div>
+    </div>
+    <div id="modalOverlay" class="overlay" style="display: none;">
+      <div id="gameControlPanel" class="modal">
+        <div class="message1">
+          <div id="gameMessage" style="display: none;">
+            <div id="current-score">
+              <img src="./assets/apple.png" style="height: 60px; width: 60px;" />
+              <p id="currentFinalScore">0</p>
+            </div>
+
+            <div id="high-score">
+              <img src="./assets/trophy.png" style="height: 60px; width: 60px;" />
+              <p id="highFinalScore">0</p>
+            </div>
+          </div>
+          <div id="win-message" class="win-message" style="display: block;">
+            <p id="winMessageText">
+
+            </p>
+          </div>
+        </div>
+        <div>
+          <img src="./assets/freezenovagames.png" />
+        </div>
+        <div class="game_buttons">
+          <button id="startGame">Play</button>
+          <button id="twoPlayer">2P</button>
+        </div>
+        <br>
+        <div class="game_buttons">
+          <button id="versusBtn">Versus</button>
+        </div>
+      </div>
+    </div>
+    <div class="website_text">
+      <h5>www.FreezeNova.com</h5>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="snake.js"></script>
+  <script src="swipe.js"></script>
+</body>
+
+</html>

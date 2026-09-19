@@ -1,2642 +1,2147 @@
 [
   {
-    "name": "1",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/1/",
-    "img": "https://mathlesson20.help/img/21245.webp",
-    "category": "Strategy"
-  },
-  {
     "name": "10 Minutes Till Dawn",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/10-minutes-till-dawn/",
-    "img": "https://mathlesson20.help/img/21246.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/10-minutes-till-dawn.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/10-minutes-till-dawn/index.html"
   },
   {
-    "name": "1010 Deluxe",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/1010-deluxe/",
-    "img": "https://mathlesson20.help/img/21247.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "1v1 Soccer",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/1v1-soccer/",
-    "img": "https://mathlesson20.help/img/21248.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "1v1lol",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/1v1lol/",
-    "img": "https://mathlesson20.help/img/21249.webp",
-    "category": "Action"
-  },
-  {
-    "name": "2048",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/2048/",
-    "img": "https://mathlesson20.help/img/21250.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "2048 Multitask",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/2048-multitask/",
-    "img": "https://mathlesson20.help/img/21251.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "3d Bowling",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/3d-bowling/",
-    "img": "https://mathlesson20.help/img/21252.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "8 Ball",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/8-ball/",
-    "img": "https://mathlesson20.help/img/21253.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "9007199254740992",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/9007199254740992/",
-    "img": "https://mathlesson20.help/img/21254.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Achievementunlocked",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/achievementunlocked/",
-    "img": "https://mathlesson20.help/img/21255.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Adam Eve",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/adam-eve/",
-    "img": "https://mathlesson20.help/img/21256.webp",
-    "category": "Action"
+    "name": "1V1Lol",
+    "img": "/assets/gameassets/ml20/imgs/1v1lol.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/1v1lol/index.html"
   },
   {
     "name": "Adam Eve 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/adam-eve-2/",
-    "img": "https://mathlesson20.help/img/21257.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/adam-eve-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/adam-eve-2/index.html"
+  },
+  {
+    "name": "Adam Eve",
+    "img": "/assets/gameassets/ml20/imgs/adam-eve.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/adam-eve/index.html"
   },
   {
     "name": "Adarkroom",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/adarkroom/",
-    "img": "https://mathlesson20.help/img/21258.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Adrenalinechallenge",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/adrenalinechallenge/",
-    "img": "https://mathlesson20.help/img/21259.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Adventure Anxiety",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/adventure-anxiety/",
-    "img": "https://mathlesson20.help/img/21260.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Adventure Drivers",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/adventure-drivers/",
-    "img": "https://mathlesson20.help/img/21261.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Ages Of Conflict",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/ages-of-conflict/",
-    "img": "https://mathlesson20.help/img/21262.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/adarkroom.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/adarkroom/index.html"
   },
   {
     "name": "Alienhominid",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/alienhominid/",
-    "img": "https://mathlesson20.help/img/21263.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Amidst The Clouds",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/amidst-the-clouds/",
-    "img": "https://mathlesson20.help/img/21264.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Among Us",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/among-us/",
-    "img": "https://mathlesson20.help/img/21265.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/alienhominid.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/alienhominid/index.html"
   },
   {
     "name": "Angry Sharks",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/angry-sharks/",
-    "img": "https://mathlesson20.help/img/21266.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/angry-sharks.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/angry-sharks/index.html"
   },
   {
     "name": "Apple Shooter",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/apple-shooter/",
-    "img": "https://mathlesson20.help/img/21267.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Aquapark Slides",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/aquapark-slides/",
-    "img": "https://mathlesson20.help/img/21268.webp",
-    "category": "Racing"
+    "img": "/assets/gameassets/ml20/imgs/apple-shooter.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/apple-shooter/index.html"
   },
   {
     "name": "Arcane Archer",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/arcane-archer/",
-    "img": "https://mathlesson20.help/img/21269.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/arcane-archer.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/arcane-archer/index.html"
   },
   {
     "name": "Avalanche",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/avalanche/",
-    "img": "https://mathlesson20.help/img/21270.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/avalanche.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/avalanche/index.html"
   },
   {
     "name": "Awesome Tanks 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/awesome-tanks-2/",
-    "img": "https://mathlesson20.help/img/21271.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/awesome-tanks-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/awesome-tanks-2/index.html"
   },
   {
-    "name": "Axis Football League",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/axis-football-league/",
-    "img": "https://mathlesson20.help/img/21272.webp",
-    "category": "Racing"
+    "name": "Backrooms 2D",
+    "img": "/assets/gameassets/ml20/imgs/backrooms-2d.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/backrooms-2d/index.html"
   },
   {
     "name": "Backrooms",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/backrooms/",
-    "img": "https://mathlesson20.help/img/21273.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Backrooms 2d",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/backrooms-2d/",
-    "img": "https://mathlesson20.help/img/21274.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/backrooms.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/backrooms/index.html"
   },
   {
     "name": "Bacon May Die",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/bacon-may-die/",
-    "img": "https://mathlesson20.help/img/21275.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Bad Ice Cream",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/bad-ice-cream/",
-    "img": "https://mathlesson20.help/img/21276.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Bad Ice Cream 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/bad-ice-cream-2/",
-    "img": "https://mathlesson20.help/img/21277.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Bad Ice Cream 3",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/bad-ice-cream-3/",
-    "img": "https://mathlesson20.help/img/21278.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Baldis Basics",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/baldis-basics/",
-    "img": "https://mathlesson20.help/img/21279.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Ball Sort Halloween",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/ball-sort-halloween/",
-    "img": "https://mathlesson20.help/img/21280.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Ball Sort Puzzle",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/ball-sort-puzzle/",
-    "img": "https://mathlesson20.help/img/21281.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Ball Sort Soccer",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/ball-sort-soccer/",
-    "img": "https://mathlesson20.help/img/21282.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Ballistic",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/ballistic/",
-    "img": "https://mathlesson20.help/img/21283.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Bally",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/bally/",
-    "img": "https://mathlesson20.help/img/21284.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Basket And Ball",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/basket-and-ball/",
-    "img": "https://mathlesson20.help/img/21285.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Basket Champs",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/basket-champs/",
-    "img": "https://mathlesson20.help/img/21286.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Basket Random",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/basket-random/",
-    "img": "https://mathlesson20.help/img/21287.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Basketball Stars",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/basketball-stars/",
-    "img": "https://mathlesson20.help/img/21288.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Battleforgondor",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/battleforgondor/",
-    "img": "https://mathlesson20.help/img/21289.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Bicycle Stunt 3d",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/bicycle-stunt-3d/",
-    "img": "https://mathlesson20.help/img/21290.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Big Shot Boxing",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/big-shot-boxing/",
-    "img": "https://mathlesson20.help/img/21291.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Bigredbutton",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/bigredbutton/",
-    "img": "https://mathlesson20.help/img/21292.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Biker Street",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/biker-street/",
-    "img": "https://mathlesson20.help/img/21293.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Bitcoin Clicker",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/bitcoin-clicker/",
-    "img": "https://mathlesson20.help/img/21294.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Bitlife",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/bitlife/",
-    "img": "https://mathlesson20.help/img/21295.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Blacholesquare",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/blacholesquare/",
-    "img": "https://mathlesson20.help/img/21296.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/bacon-may-die.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/bacon-may-die/index.html"
   },
   {
     "name": "Blackknight",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/blackknight/",
-    "img": "https://mathlesson20.help/img/21297.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Block Pig",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/block-pig/",
-    "img": "https://mathlesson20.help/img/21298.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Bloonstd",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/bloonstd/",
-    "img": "https://mathlesson20.help/img/21299.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Bloonstd2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/bloonstd2/",
-    "img": "https://mathlesson20.help/img/21300.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Bloonstd4",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/bloonstd4/",
-    "img": "https://mathlesson20.help/img/21301.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Bloxors",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/bloxors/",
-    "img": "https://mathlesson20.help/img/21302.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Blumgi Rocket",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/blumgi-rocket/",
-    "img": "https://mathlesson20.help/img/21303.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/blackknight.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/blackknight/index.html"
   },
   {
     "name": "Blumgi Slime",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/blumgi-slime/",
-    "img": "https://mathlesson20.help/img/21304.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/blumgi-slime.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/blumgi-slime/index.html"
   },
   {
     "name": "Bob The Robber 4",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/bob-the-robber-4/",
-    "img": "https://mathlesson20.help/img/21305.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/bob-the-robber-4.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/bob-the-robber-4/index.html"
   },
   {
     "name": "Bobtherobber2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/bobtherobber2/",
-    "img": "https://mathlesson20.help/img/21306.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/bobtherobber2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/bobtherobber2/index.html"
   },
   {
     "name": "Bomb It 7",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/bomb-it-7/",
-    "img": "https://mathlesson20.help/img/21307.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Bottle Flip",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/bottle-flip/",
-    "img": "https://mathlesson20.help/img/21308.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Bottle Flip 3d",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/bottle-flip-3d/",
-    "img": "https://mathlesson20.help/img/21309.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Bouncy Woods",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/bouncy-woods/",
-    "img": "https://mathlesson20.help/img/21310.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/bomb-it-7.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/bomb-it-7/index.html"
   },
   {
     "name": "Boxel Rebound",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/boxel-rebound/",
-    "img": "https://mathlesson20.help/img/21311.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/boxel-rebound.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/boxel-rebound/index.html"
   },
   {
-    "name": "Boxhead2play",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/boxhead2play/",
-    "img": "https://mathlesson20.help/img/21312.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Boxing Random",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/boxing-random/",
-    "img": "https://mathlesson20.help/img/21313.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Breakingthebank",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/breakingthebank/",
-    "img": "https://mathlesson20.help/img/21314.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Btts",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/btts/",
-    "img": "https://mathlesson20.help/img/21315.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Bubble Pop",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/bubble-pop/",
-    "img": "https://mathlesson20.help/img/21316.webp",
-    "category": "Strategy"
+    "name": "Boxhead2Play",
+    "img": "/assets/gameassets/ml20/imgs/boxhead2play.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/boxhead2play/index.html"
   },
   {
     "name": "Bullet Force",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/bullet-force/",
-    "img": "https://mathlesson20.help/img/21317.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Burnin Rubber 5xs",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/burnin-rubber-5xs/",
-    "img": "https://mathlesson20.help/img/21318.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Burrito Bison",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/burrito-bison/",
-    "img": "https://mathlesson20.help/img/21319.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Burrito Bison Revenge",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/burrito-bison-revenge/",
-    "img": "https://mathlesson20.help/img/21320.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Cannon Basketball 4",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/cannon-basketball-4/",
-    "img": "https://mathlesson20.help/img/21321.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Canyondefense",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/canyondefense/",
-    "img": "https://mathlesson20.help/img/21322.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Car Rush",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/car-rush/",
-    "img": "https://mathlesson20.help/img/21323.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Cars Simulator",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/cars-simulator/",
-    "img": "https://mathlesson20.help/img/21324.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Cartoon Mini Racing",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/cartoon-mini-racing/",
-    "img": "https://mathlesson20.help/img/21325.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Cell Machine",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/cell-machine/",
-    "img": "https://mathlesson20.help/img/21326.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/bullet-force.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/bullet-force/index.html"
   },
   {
     "name": "Champion Island",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/champion-island/",
-    "img": "https://mathlesson20.help/img/21327.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/champion-island.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/champion-island/index.html"
   },
   {
     "name": "Championarcher",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/championarcher/",
-    "img": "https://mathlesson20.help/img/21328.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Checkers Legend",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/checkers-legend/",
-    "img": "https://mathlesson20.help/img/21329.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Circlo",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/circlo/",
-    "img": "https://mathlesson20.help/img/21330.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Circlo2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/circlo2/",
-    "img": "https://mathlesson20.help/img/21331.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Clicker Heroes",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/clicker-heroes/",
-    "img": "https://mathlesson20.help/img/21332.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Climb Over It",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/climb-over-it/",
-    "img": "https://mathlesson20.help/img/21333.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Cluster Rush",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/cluster-rush/",
-    "img": "https://mathlesson20.help/img/21334.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Color Match",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/color-match/",
-    "img": "https://mathlesson20.help/img/21335.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Connect3",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/connect3/",
-    "img": "https://mathlesson20.help/img/21336.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Cookie Clicker",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/cookie-clicker/",
-    "img": "https://mathlesson20.help/img/21337.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Core Ball",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/core-ball/",
-    "img": "https://mathlesson20.help/img/21338.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/championarcher.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/championarcher/index.html"
   },
   {
     "name": "Craftmine",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/craftmine/",
-    "img": "https://mathlesson20.help/img/21339.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/craftmine.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/craftmine/index.html"
   },
   {
-    "name": "Crazy Cars",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/crazy-cars/",
-    "img": "https://mathlesson20.help/img/21340.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Crazy Tunnel 3d",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/crazy-tunnel-3d/",
-    "img": "https://mathlesson20.help/img/21341.webp",
-    "category": "Action"
+    "name": "Crazy Tunnel 3D",
+    "img": "/assets/gameassets/ml20/imgs/crazy-tunnel-3d.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/crazy-tunnel-3d/index.html"
   },
   {
     "name": "Creativekillchamber",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/creativekillchamber/",
-    "img": "https://mathlesson20.help/img/21342.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Crossyroad",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/crossyroad/",
-    "img": "https://mathlesson20.help/img/21343.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Csgo Clicker",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/csgo-clicker/",
-    "img": "https://mathlesson20.help/img/21344.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Ctr",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/ctr/",
-    "img": "https://mathlesson20.help/img/21345.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Ctr Holiday",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/ctr-holiday/",
-    "img": "https://mathlesson20.help/img/21346.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Ctr Tr",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/ctr-tr/",
-    "img": "https://mathlesson20.help/img/21347.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/creativekillchamber.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/creativekillchamber/index.html"
   },
   {
     "name": "Cubefield",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/cubefield/",
-    "img": "https://mathlesson20.help/img/21348.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/cubefield.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/cubefield/index.html"
   },
   {
     "name": "Dante",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/dante/",
-    "img": "https://mathlesson20.help/img/21349.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/dante.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/dante/index.html"
   },
   {
     "name": "Dead Again",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/dead-again/",
-    "img": "https://mathlesson20.help/img/21350.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/dead-again.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/dead-again/index.html"
   },
   {
-    "name": "Deal Or No Deal",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/deal-or-no-deal/",
-    "img": "https://mathlesson20.help/img/21351.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Death Run 3d",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/death-run-3d/",
-    "img": "https://mathlesson20.help/img/21352.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Deepest Sword",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/deepest-sword/",
-    "img": "https://mathlesson20.help/img/21353.webp",
-    "category": "Strategy"
+    "name": "Death Run 3D",
+    "img": "/assets/gameassets/ml20/imgs/death-run-3d.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/death-run-3d/index.html"
   },
   {
     "name": "Defend The Tank",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/defend-the-tank/",
-    "img": "https://mathlesson20.help/img/21354.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Dino Bros",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/dino-bros/",
-    "img": "https://mathlesson20.help/img/21355.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Dino Merge",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/dino-merge/",
-    "img": "https://mathlesson20.help/img/21356.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Doctor Acorn2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/doctor-acorn2/",
-    "img": "https://mathlesson20.help/img/21357.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/defend-the-tank.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/defend-the-tank/index.html"
   },
   {
     "name": "Dodge",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/dodge/",
-    "img": "https://mathlesson20.help/img/21358.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Doge2048",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/doge2048/",
-    "img": "https://mathlesson20.help/img/21359.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Dogeminer",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/dogeminer/",
-    "img": "https://mathlesson20.help/img/21360.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Doodle Jump",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/doodle-jump/",
-    "img": "https://mathlesson20.help/img/21361.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/dodge.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/dodge/index.html"
   },
   {
     "name": "Down The Hill",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/down-the-hill/",
-    "img": "https://mathlesson20.help/img/21362.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/down-the-hill.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/down-the-hill/index.html"
   },
   {
     "name": "Dragon Vs Bricks",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/dragon-vs-bricks/",
-    "img": "https://mathlesson20.help/img/21363.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Draw The Hill",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/draw-the-hill/",
-    "img": "https://mathlesson20.help/img/21364.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Drift Boss",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/drift-boss/",
-    "img": "https://mathlesson20.help/img/21365.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Drive Mad",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/drive-mad/",
-    "img": "https://mathlesson20.help/img/21366.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Ducklife",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/ducklife/",
-    "img": "https://mathlesson20.help/img/21367.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Ducklife 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/ducklife-2/",
-    "img": "https://mathlesson20.help/img/21368.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Ducklife 3",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/ducklife-3/",
-    "img": "https://mathlesson20.help/img/21369.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Ducklife4",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/ducklife4/",
-    "img": "https://mathlesson20.help/img/21370.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Dummy Never Fails",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/dummy-never-fails/",
-    "img": "https://mathlesson20.help/img/21371.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Dummy Never Fails 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/dummy-never-fails-2/",
-    "img": "https://mathlesson20.help/img/21372.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/dragon-vs-bricks.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/dragon-vs-bricks/index.html"
   },
   {
     "name": "Eagle Ride",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/eagle-ride/",
-    "img": "https://mathlesson20.help/img/21373.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Earn To Die",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/earn-to-die/",
-    "img": "https://mathlesson20.help/img/21374.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Edge Surf",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/edge-surf/",
-    "img": "https://mathlesson20.help/img/21375.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Edgenotfound",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/edgenotfound/",
-    "img": "https://mathlesson20.help/img/21376.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Eel Slap",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/eel-slap/",
-    "img": "https://mathlesson20.help/img/21377.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Eggy Car",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/eggy-car/",
-    "img": "https://mathlesson20.help/img/21378.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Elastic Face",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/elastic-face/",
-    "img": "https://mathlesson20.help/img/21379.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/eagle-ride.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/eagle-ride/index.html"
   },
   {
     "name": "Electron Dash",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/electron-dash/",
-    "img": "https://mathlesson20.help/img/21380.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Endless Truck",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/endless-truck/",
-    "img": "https://mathlesson20.help/img/21381.webp",
-    "category": "Racing"
+    "img": "/assets/gameassets/ml20/imgs/electron-dash.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/electron-dash/index.html"
   },
   {
     "name": "Endless Tunnel",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/endless-tunnel/",
-    "img": "https://mathlesson20.help/img/21382.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/endless-tunnel.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/endless-tunnel/index.html"
   },
   {
     "name": "Endlesswar3",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/endlesswar3/",
-    "img": "https://mathlesson20.help/img/21383.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Escaping Prison",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/escaping-prison/",
-    "img": "https://mathlesson20.help/img/21384.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/endlesswar3.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/endlesswar3/index.html"
   },
   {
     "name": "Evil Glitch",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/evil-glitch/",
-    "img": "https://mathlesson20.help/img/21385.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Evolution",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/evolution/",
-    "img": "https://mathlesson20.help/img/21386.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Exo",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/exo/",
-    "img": "https://mathlesson20.help/img/21387.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Factoryballs",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/factoryballs/",
-    "img": "https://mathlesson20.help/img/21388.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Fake Virus",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/fake-virus/",
-    "img": "https://mathlesson20.help/img/21389.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/evil-glitch.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/evil-glitch/index.html"
   },
   {
     "name": "Fancy Pants 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/fancy-pants-2/",
-    "img": "https://mathlesson20.help/img/21390.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/fancy-pants-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/fancy-pants-2/index.html"
   },
   {
     "name": "Fancy Pants 3",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/fancy-pants-3/",
-    "img": "https://mathlesson20.help/img/21391.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/fancy-pants-3.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/fancy-pants-3/index.html"
   },
   {
     "name": "Fancypantsadventures",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/fancypantsadventures/",
-    "img": "https://mathlesson20.help/img/21392.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Farm Match",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/farm-match/",
-    "img": "https://mathlesson20.help/img/21393.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/fancypantsadventures.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/fancypantsadventures/index.html"
   },
   {
     "name": "Fireboywatergirlforesttemple",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/fireboywatergirlforesttemple/",
-    "img": "https://mathlesson20.help/img/21394.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Fisherman Life",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/fisherman-life/",
-    "img": "https://mathlesson20.help/img/21395.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Flappy Bird",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/flappy-bird/",
-    "img": "https://mathlesson20.help/img/21396.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Flashtetris",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/flashtetris/",
-    "img": "https://mathlesson20.help/img/21397.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Fleeing Complex",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/fleeing-complex/",
-    "img": "https://mathlesson20.help/img/21398.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/fireboywatergirlforesttemple.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/fireboywatergirlforesttemple/index.html"
   },
   {
     "name": "Fnaf",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/fnaf/",
-    "img": "https://mathlesson20.help/img/21399.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/fnaf.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/fnaf/index.html"
   },
   {
     "name": "Fnaw",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/fnaw/",
-    "img": "https://mathlesson20.help/img/21400.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Football Brawl",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/football-brawl/",
-    "img": "https://mathlesson20.help/img/21401.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Football Legends",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/football-legends/",
-    "img": "https://mathlesson20.help/img/21402.webp",
-    "category": "Racing"
+    "img": "/assets/gameassets/ml20/imgs/fnaw.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/fnaw/index.html"
   },
   {
     "name": "Football Run",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/football-run/",
-    "img": "https://mathlesson20.help/img/21403.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Football Strike",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/football-strike/",
-    "img": "https://mathlesson20.help/img/21404.webp",
-    "category": "Racing"
+    "img": "/assets/gameassets/ml20/imgs/football-run.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/football-run/index.html"
   },
   {
     "name": "Froggys Battle",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/froggys-battle/",
-    "img": "https://mathlesson20.help/img/21405.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Fruit Ninja",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/fruit-ninja/",
-    "img": "https://mathlesson20.help/img/21406.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/froggys-battle.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/froggys-battle/index.html"
   },
   {
     "name": "Frying Nemo",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/frying-nemo/",
-    "img": "https://mathlesson20.help/img/21407.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/frying-nemo.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/frying-nemo/index.html"
   },
   {
     "name": "Funnyshooter2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/funnyshooter2/",
-    "img": "https://mathlesson20.help/img/21408.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/funnyshooter2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/funnyshooter2/index.html"
   },
   {
     "name": "Galaga",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/galaga/",
-    "img": "https://mathlesson20.help/img/21409.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Game Inside",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/game-inside/",
-    "img": "https://mathlesson20.help/img/21410.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/galaga.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/galaga/index.html"
   },
   {
     "name": "Generic Fishing Game",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/generic-fishing-game/",
-    "img": "https://mathlesson20.help/img/21411.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/generic-fishing-game.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/generic-fishing-game/index.html"
   },
   {
     "name": "Geodash",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/geodash/",
-    "img": "https://mathlesson20.help/img/21412.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/geodash.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/geodash/index.html"
   },
   {
     "name": "Geometry Dash",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/geometry-dash/",
-    "img": "https://mathlesson20.help/img/21413.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Georgeandtheprinter",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/georgeandtheprinter/",
-    "img": "https://mathlesson20.help/img/21414.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Get On Top",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/get-on-top/",
-    "img": "https://mathlesson20.help/img/21415.webp",
-    "category": "Racing"
+    "img": "/assets/gameassets/ml20/imgs/geometry-dash.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/geometry-dash/index.html"
   },
   {
     "name": "Getaway Shootout",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/getaway-shootout/",
-    "img": "https://mathlesson20.help/img/21416.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Getting Over It",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/getting-over-it/",
-    "img": "https://mathlesson20.help/img/21417.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/getaway-shootout.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/getaway-shootout/index.html"
   },
   {
     "name": "Gimme The Airpod",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/gimme-the-airpod/",
-    "img": "https://mathlesson20.help/img/21418.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/gimme-the-airpod.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gimme-the-airpod/index.html"
   },
   {
     "name": "Gladihoppers",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/gladihoppers/",
-    "img": "https://mathlesson20.help/img/21419.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/gladihoppers.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gladihoppers/index.html"
   },
   {
     "name": "Glitch Dash",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/glitch-dash/",
-    "img": "https://mathlesson20.help/img/21420.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Go Ball",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/go-ball/",
-    "img": "https://mathlesson20.help/img/21421.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/glitch-dash.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/glitch-dash/index.html"
   },
   {
     "name": "Gobdun",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/gobdun/",
-    "img": "https://mathlesson20.help/img/21422.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/gobdun.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gobdun/index.html"
   },
   {
     "name": "Goodnight",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/goodnight/",
-    "img": "https://mathlesson20.help/img/21423.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Google Feud",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/google-feud/",
-    "img": "https://mathlesson20.help/img/21424.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Gravity Soccer",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/gravity-soccer/",
-    "img": "https://mathlesson20.help/img/21425.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Greybox",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/greybox/",
-    "img": "https://mathlesson20.help/img/21426.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/goodnight.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/goodnight/index.html"
   },
   {
     "name": "Groovy Ski",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/groovy-ski/",
-    "img": "https://mathlesson20.help/img/21427.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Gswitch",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/gswitch/",
-    "img": "https://mathlesson20.help/img/21428.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/groovy-ski.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/groovy-ski/index.html"
   },
   {
     "name": "Gswitch 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/gswitch-2/",
-    "img": "https://mathlesson20.help/img/21429.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/gswitch-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gswitch-2/index.html"
   },
   {
     "name": "Gswitch 3",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/gswitch-3/",
-    "img": "https://mathlesson20.help/img/21430.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/gswitch-3.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gswitch-3/index.html"
   },
   {
-    "name": "Guess Kitty",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/guess-kitty/",
-    "img": "https://mathlesson20.help/img/21431.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Gun Mayhem",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/gun-mayhem/",
-    "img": "https://mathlesson20.help/img/21432.webp",
-    "category": "Action"
+    "name": "Gswitch",
+    "img": "/assets/gameassets/ml20/imgs/gswitch.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gswitch/index.html"
   },
   {
     "name": "Gun Mayhem 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/gun-mayhem-2/",
-    "img": "https://mathlesson20.help/img/21433.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/gun-mayhem-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gun-mayhem-2/index.html"
   },
   {
     "name": "Gun Mayhem Redux",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/gun-mayhem-redux/",
-    "img": "https://mathlesson20.help/img/21434.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/gun-mayhem-redux.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gun-mayhem-redux/index.html"
+  },
+  {
+    "name": "Gun Mayhem",
+    "img": "/assets/gameassets/ml20/imgs/gun-mayhem.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gun-mayhem/index.html"
   },
   {
     "name": "Gunblood",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/gunblood/",
-    "img": "https://mathlesson20.help/img/21435.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Gura Temberine",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/gura-temberine/",
-    "img": "https://mathlesson20.help/img/21436.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Hackertype",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/hackertype/",
-    "img": "https://mathlesson20.help/img/21437.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Handshakes",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/handshakes/",
-    "img": "https://mathlesson20.help/img/21438.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Hanger",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/hanger/",
-    "img": "https://mathlesson20.help/img/21439.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/gunblood.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gunblood/index.html"
   },
   {
     "name": "Happy Hop",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/happy-hop/",
-    "img": "https://mathlesson20.help/img/21440.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/happy-hop.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/happy-hop/index.html"
   },
   {
     "name": "Hba",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/hba/",
-    "img": "https://mathlesson20.help/img/21441.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Head Soccer",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/head-soccer/",
-    "img": "https://mathlesson20.help/img/21442.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Heads Arena",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/heads-arena/",
-    "img": "https://mathlesson20.help/img/21443.webp",
-    "category": "Racing"
+    "img": "/assets/gameassets/ml20/imgs/hba.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/hba/index.html"
   },
   {
     "name": "Helicopter",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/helicopter/",
-    "img": "https://mathlesson20.help/img/21444.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Hexempire",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/hexempire/",
-    "img": "https://mathlesson20.help/img/21445.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Hextris",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/hextris/",
-    "img": "https://mathlesson20.help/img/21446.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/helicopter.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/helicopter/index.html"
   },
   {
     "name": "Hide And Smash",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/hide-and-smash/",
-    "img": "https://mathlesson20.help/img/21447.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Hop Pop It",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/hop-pop-it/",
-    "img": "https://mathlesson20.help/img/21448.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/hide-and-smash.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/hide-and-smash/index.html"
   },
   {
     "name": "Hungry Lamu",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/hungry-lamu/",
-    "img": "https://mathlesson20.help/img/21449.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Icy Head 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/icy-head-2/",
-    "img": "https://mathlesson20.help/img/21450.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Icy Head 3",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/icy-head-3/",
-    "img": "https://mathlesson20.help/img/21451.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Icycle",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/icycle/",
-    "img": "https://mathlesson20.help/img/21452.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Idle Breakout",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/idle-breakout/",
-    "img": "https://mathlesson20.help/img/21453.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Idle Mining",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/idle-mining/",
-    "img": "https://mathlesson20.help/img/21454.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Idle Restaurants",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/idle-restaurants/",
-    "img": "https://mathlesson20.help/img/21455.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Impossiblequiz",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/impossiblequiz/",
-    "img": "https://mathlesson20.help/img/21456.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Infiltrating Airship",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/infiltrating-airship/",
-    "img": "https://mathlesson20.help/img/21457.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/hungry-lamu.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/hungry-lamu/index.html"
   },
   {
     "name": "Infinite Soccer",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/infinite-soccer/",
-    "img": "https://mathlesson20.help/img/21458.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/infinite-soccer.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/infinite-soccer/index.html"
   },
   {
     "name": "Iron Snout",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/iron-snout/",
-    "img": "https://mathlesson20.help/img/21459.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/iron-snout.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/iron-snout/index.html"
   },
   {
     "name": "Jetpack Joyride",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/jetpack-joyride/",
-    "img": "https://mathlesson20.help/img/21460.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Jewels Blitz 5",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/jewels-blitz-5/",
-    "img": "https://mathlesson20.help/img/21461.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/jetpack-joyride.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/jetpack-joyride/index.html"
   },
   {
     "name": "Just Fall",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/just-fall/",
-    "img": "https://mathlesson20.help/img/21462.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/just-fall.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/just-fall/index.html"
   },
   {
     "name": "Just One Boss",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/just-one-boss/",
-    "img": "https://mathlesson20.help/img/21463.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/just-one-boss.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/just-one-boss/index.html"
   },
   {
     "name": "Kitchen Gun Game",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/kitchen-gun-game/",
-    "img": "https://mathlesson20.help/img/21464.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Kittencannon",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/kittencannon/",
-    "img": "https://mathlesson20.help/img/21465.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/kitchen-gun-game.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/kitchen-gun-game/index.html"
   },
   {
     "name": "Knife Master",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/knife-master/",
-    "img": "https://mathlesson20.help/img/21466.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Learn To Fly 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/learn-to-fly-2/",
-    "img": "https://mathlesson20.help/img/21467.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Learntofly",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/learntofly/",
-    "img": "https://mathlesson20.help/img/21468.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Little Alchemy 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/little-alchemy-2/",
-    "img": "https://mathlesson20.help/img/21469.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Madalin Stunt Cars 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/madalin-stunt-cars-2/",
-    "img": "https://mathlesson20.help/img/21470.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Marbles Sorting",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/marbles-sorting/",
-    "img": "https://mathlesson20.help/img/21471.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Mario",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/mario/",
-    "img": "https://mathlesson20.help/img/21472.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/knife-master.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/knife-master/index.html"
   },
   {
     "name": "Mario Bros",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/mario-bros/",
-    "img": "https://mathlesson20.help/img/21473.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/mario-bros.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/mario-bros/index.html"
+  },
+  {
+    "name": "Mario",
+    "img": "/assets/gameassets/ml20/imgs/mario.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/mario/index.html"
   },
   {
     "name": "Matrixrampage",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/matrixrampage/",
-    "img": "https://mathlesson20.help/img/21474.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Meme2048",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/meme2048/",
-    "img": "https://mathlesson20.help/img/21475.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Merge Round Racers",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/merge-round-racers/",
-    "img": "https://mathlesson20.help/img/21476.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/matrixrampage.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/matrixrampage/index.html"
   },
   {
     "name": "Mineblocks",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/mineblocks/",
-    "img": "https://mathlesson20.help/img/21477.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/mineblocks.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/mineblocks/index.html"
   },
   {
     "name": "Minecraft 15",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/minecraft-15/",
-    "img": "https://mathlesson20.help/img/21478.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/minecraft-15.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/minecraft-15/index.html"
   },
   {
     "name": "Minecraft 18",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/minecraft-18/",
-    "img": "https://mathlesson20.help/img/21479.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Minecraft Case",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/minecraft-case/",
-    "img": "https://mathlesson20.help/img/21480.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/minecraft-18.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/minecraft-18/index.html"
   },
   {
     "name": "Minecraft Classic",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/minecraft-classic/",
-    "img": "https://mathlesson20.help/img/21481.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/minecraft-classic.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/minecraft-classic/index.html"
   },
   {
     "name": "Minecraftbeta",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/minecraftbeta/",
-    "img": "https://mathlesson20.help/img/21482.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Minesweeper",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/minesweeper/",
-    "img": "https://mathlesson20.help/img/21483.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Miniputt",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/miniputt/",
-    "img": "https://mathlesson20.help/img/21484.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/minecraftbeta.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/minecraftbeta/index.html"
   },
   {
     "name": "Missiles",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/missiles/",
-    "img": "https://mathlesson20.help/img/21485.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/missiles.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/missiles/index.html"
   },
   {
-    "name": "Money Movers",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/money-movers/",
-    "img": "https://mathlesson20.help/img/21486.webp",
-    "category": "Strategy"
+    "name": "Motox3M Pool",
+    "img": "/assets/gameassets/ml20/imgs/motox3m-pool.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/motox3m-pool/index.html"
   },
   {
-    "name": "Money Movers 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/money-movers-2/",
-    "img": "https://mathlesson20.help/img/21487.webp",
-    "category": "Strategy"
+    "name": "Motox3M Spooky",
+    "img": "/assets/gameassets/ml20/imgs/motox3m-spooky.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/motox3m-spooky/index.html"
   },
   {
-    "name": "Money Movers 3",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/money-movers-3/",
-    "img": "https://mathlesson20.help/img/21488.webp",
-    "category": "Strategy"
+    "name": "Motox3M Winter",
+    "img": "/assets/gameassets/ml20/imgs/motox3m-winter.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/motox3m-winter/index.html"
   },
   {
-    "name": "Monster Truck Destroyer",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/monster-truck-destroyer/",
-    "img": "https://mathlesson20.help/img/21489.webp",
-    "category": "Racing"
+    "name": "Motox3M",
+    "img": "/assets/gameassets/ml20/imgs/motox3m.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/motox3m/index.html"
   },
   {
-    "name": "Motox3m",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/motox3m/",
-    "img": "https://mathlesson20.help/img/21490.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Motox3m Pool",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/motox3m-pool/",
-    "img": "https://mathlesson20.help/img/21491.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Motox3m Spooky",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/motox3m-spooky/",
-    "img": "https://mathlesson20.help/img/21492.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Motox3m Winter",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/motox3m-winter/",
-    "img": "https://mathlesson20.help/img/21493.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Motox3m2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/motox3m2/",
-    "img": "https://mathlesson20.help/img/21494.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Moving Truck",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/moving-truck/",
-    "img": "https://mathlesson20.help/img/21495.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Mr Bullet",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/mr-bullet/",
-    "img": "https://mathlesson20.help/img/21496.webp",
-    "category": "Strategy"
+    "name": "Motox3M2",
+    "img": "/assets/gameassets/ml20/imgs/motox3m2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/motox3m2/index.html"
   },
   {
     "name": "Mutazone",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/mutazone/",
-    "img": "https://mathlesson20.help/img/21497.webp",
-    "category": "Action"
-  },
-  {
-    "name": "My Rusty Submarine",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/my-rusty-submarine/",
-    "img": "https://mathlesson20.help/img/21498.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/mutazone.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/mutazone/index.html"
   },
   {
     "name": "N Gon",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/n-gon/",
-    "img": "https://mathlesson20.help/img/21499.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Ninja Cat",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/ninja-cat/",
-    "img": "https://mathlesson20.help/img/21500.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/n-gon.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/n-gon/index.html"
   },
   {
     "name": "Ninjavsevilcorp",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/ninjavsevilcorp/",
-    "img": "https://mathlesson20.help/img/21501.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/ninjavsevilcorp.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/ninjavsevilcorp/index.html"
   },
   {
     "name": "Ns Shaft",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/ns-shaft/",
-    "img": "https://mathlesson20.help/img/21502.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Nut Simulator",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/nut-simulator/",
-    "img": "https://mathlesson20.help/img/21503.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Offlineparadise",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/offlineparadise/",
-    "img": "https://mathlesson20.help/img/21504.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/ns-shaft.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/ns-shaft/index.html"
   },
   {
     "name": "Ohio Fortnite",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/ohio-fortnite/",
-    "img": "https://mathlesson20.help/img/21505.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/ohio-fortnite.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/ohio-fortnite/index.html"
   },
   {
     "name": "Om Bounce",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/om-bounce/",
-    "img": "https://mathlesson20.help/img/21506.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Ovo",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/ovo/",
-    "img": "https://mathlesson20.help/img/21507.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/om-bounce.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/om-bounce/index.html"
   },
   {
     "name": "Ovo 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/ovo-2/",
-    "img": "https://mathlesson20.help/img/21508.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/ovo-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/ovo-2/index.html"
   },
   {
-    "name": "Ovo Dimensions",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/ovo-dimensions/",
-    "img": "https://mathlesson20.help/img/21509.webp",
-    "category": "Action"
+    "name": "Ovo",
+    "img": "/assets/gameassets/ml20/imgs/ovo.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/ovo/index.html"
   },
   {
     "name": "Pacman",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/pacman/",
-    "img": "https://mathlesson20.help/img/21510.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Pandas Japan",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/pandas-japan/",
-    "img": "https://mathlesson20.help/img/21511.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Pandemic2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/pandemic2/",
-    "img": "https://mathlesson20.help/img/21512.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Papa Cherry Saga",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/papa-cherry-saga/",
-    "img": "https://mathlesson20.help/img/21513.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Papas Bake",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/papas-bake/",
-    "img": "https://mathlesson20.help/img/21514.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Papas Cheese",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/papas-cheese/",
-    "img": "https://mathlesson20.help/img/21515.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Papas Cupcake",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/papas-cupcake/",
-    "img": "https://mathlesson20.help/img/21516.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Papas Donut",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/papas-donut/",
-    "img": "https://mathlesson20.help/img/21517.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Papas Freeze",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/papas-freeze/",
-    "img": "https://mathlesson20.help/img/21518.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Papas Hotdog",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/papas-hotdog/",
-    "img": "https://mathlesson20.help/img/21519.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Papas Pancake",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/papas-pancake/",
-    "img": "https://mathlesson20.help/img/21520.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Papas Pasta",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/papas-pasta/",
-    "img": "https://mathlesson20.help/img/21521.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Papas Scoop",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/papas-scoop/",
-    "img": "https://mathlesson20.help/img/21522.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Papas Sushi",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/papas-sushi/",
-    "img": "https://mathlesson20.help/img/21523.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Papas Taco",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/papas-taco/",
-    "img": "https://mathlesson20.help/img/21524.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Papas Wing",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/papas-wing/",
-    "img": "https://mathlesson20.help/img/21525.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Papasburgeria",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/papasburgeria/",
-    "img": "https://mathlesson20.help/img/21526.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Papaspizzaria",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/papaspizzaria/",
-    "img": "https://mathlesson20.help/img/21527.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/pacman.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/pacman/index.html"
   },
   {
     "name": "Paper 3",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/paper-3/",
-    "img": "https://mathlesson20.help/img/21528.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/paper-3.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/paper-3/index.html"
   },
   {
     "name": "Paper Minecraft",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/paper-minecraft/",
-    "img": "https://mathlesson20.help/img/21529.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/paper-minecraft.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/paper-minecraft/index.html"
   },
   {
     "name": "Paperio2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/paperio2/",
-    "img": "https://mathlesson20.help/img/21530.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/paperio2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/paperio2/index.html"
   },
   {
     "name": "Papery Planes",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/papery-planes/",
-    "img": "https://mathlesson20.help/img/21531.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Park Out",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/park-out/",
-    "img": "https://mathlesson20.help/img/21532.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Parking Fury",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/parking-fury/",
-    "img": "https://mathlesson20.help/img/21533.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Parking Fury 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/parking-fury-2/",
-    "img": "https://mathlesson20.help/img/21534.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Parking Fury 3",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/parking-fury-3/",
-    "img": "https://mathlesson20.help/img/21535.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Particle Clicker",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/particle-clicker/",
-    "img": "https://mathlesson20.help/img/21536.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/papery-planes.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/papery-planes/index.html"
   },
   {
     "name": "Pcraft",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/pcraft/",
-    "img": "https://mathlesson20.help/img/21537.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Penalty Kick",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/penalty-kick/",
-    "img": "https://mathlesson20.help/img/21538.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Penalty Shooter 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/penalty-shooter-2/",
-    "img": "https://mathlesson20.help/img/21539.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Penalty Shooters 3",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/penalty-shooters-3/",
-    "img": "https://mathlesson20.help/img/21540.webp",
-    "category": "Racing"
+    "img": "/assets/gameassets/ml20/imgs/pcraft.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/pcraft/index.html"
   },
   {
     "name": "Pixel Gun Survival",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/pixel-gun-survival/",
-    "img": "https://mathlesson20.help/img/21541.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Pixel Smash Duels",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/pixel-smash-duels/",
-    "img": "https://mathlesson20.help/img/21542.webp",
-    "category": "Racing"
+    "img": "/assets/gameassets/ml20/imgs/pixel-gun-survival.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/pixel-gun-survival/index.html"
   },
   {
     "name": "Pizza Tower",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/pizza-tower/",
-    "img": "https://mathlesson20.help/img/21543.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Plants Vs Zombies",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/plants-vs-zombies/",
-    "img": "https://mathlesson20.help/img/21544.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Pokemon Emerald",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/pokemon-emerald/",
-    "img": "https://mathlesson20.help/img/21545.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/pizza-tower.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/pizza-tower/index.html"
   },
   {
     "name": "Pokemon Emerald 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/pokemon-emerald-2/",
-    "img": "https://mathlesson20.help/img/21546.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/pokemon-emerald-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/pokemon-emerald-2/index.html"
+  },
+  {
+    "name": "Pokemon Emerald",
+    "img": "/assets/gameassets/ml20/imgs/pokemon-emerald.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/pokemon-emerald/index.html"
   },
   {
     "name": "Pokemon Firered",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/pokemon-firered/",
-    "img": "https://mathlesson20.help/img/21547.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/pokemon-firered.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/pokemon-firered/index.html"
   },
   {
     "name": "Polybranch",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/polybranch/",
-    "img": "https://mathlesson20.help/img/21548.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Portalflash",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/portalflash/",
-    "img": "https://mathlesson20.help/img/21549.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Pou",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/pou/",
-    "img": "https://mathlesson20.help/img/21550.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/polybranch.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/polybranch/index.html"
   },
   {
     "name": "Protektor",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/protektor/",
-    "img": "https://mathlesson20.help/img/21551.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Pudding Monster",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/pudding-monster/",
-    "img": "https://mathlesson20.help/img/21552.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Push The Square",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/push-the-square/",
-    "img": "https://mathlesson20.help/img/21553.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Push Your Luck",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/push-your-luck/",
-    "img": "https://mathlesson20.help/img/21554.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Rabbit Samurai",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/rabbit-samurai/",
-    "img": "https://mathlesson20.help/img/21555.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Rabbit Samurai2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/rabbit-samurai2/",
-    "img": "https://mathlesson20.help/img/21556.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Racing Monster Truck",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/racing-monster-truck/",
-    "img": "https://mathlesson20.help/img/21557.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Retro Bowl",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/retro-bowl/",
-    "img": "https://mathlesson20.help/img/21558.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Retro Bowl College",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/retro-bowl-college/",
-    "img": "https://mathlesson20.help/img/21559.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Riddleschool",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/riddleschool/",
-    "img": "https://mathlesson20.help/img/21560.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Riddleschool2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/riddleschool2/",
-    "img": "https://mathlesson20.help/img/21561.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Riddleschool3",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/riddleschool3/",
-    "img": "https://mathlesson20.help/img/21562.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Riddleschool4",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/riddleschool4/",
-    "img": "https://mathlesson20.help/img/21563.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Riddleschool5",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/riddleschool5/",
-    "img": "https://mathlesson20.help/img/21564.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Riddletransfer",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/riddletransfer/",
-    "img": "https://mathlesson20.help/img/21565.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Riddletransfer2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/riddletransfer2/",
-    "img": "https://mathlesson20.help/img/21566.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Rise Higher",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/rise-higher/",
-    "img": "https://mathlesson20.help/img/21567.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/protektor.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/protektor/index.html"
   },
   {
     "name": "Rolling Forests",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/rolling-forests/",
-    "img": "https://mathlesson20.help/img/21568.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/rolling-forests.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/rolling-forests/index.html"
   },
   {
     "name": "Rolly Vortex",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/rolly-vortex/",
-    "img": "https://mathlesson20.help/img/21569.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/rolly-vortex.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/rolly-vortex/index.html"
   },
   {
     "name": "Rooftop Snipers",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/rooftop-snipers/",
-    "img": "https://mathlesson20.help/img/21570.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Roper",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/roper/",
-    "img": "https://mathlesson20.help/img/21571.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/rooftop-snipers.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/rooftop-snipers/index.html"
   },
   {
     "name": "Run 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/run-2/",
-    "img": "https://mathlesson20.help/img/21572.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/run-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/run-2/index.html"
   },
   {
     "name": "Run 3 Space",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/run-3-space/",
-    "img": "https://mathlesson20.help/img/21573.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/run-3-space.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/run-3-space/index.html"
   },
   {
     "name": "Rusher Crusher",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/rusher-crusher/",
-    "img": "https://mathlesson20.help/img/21574.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Sandboxels",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/sandboxels/",
-    "img": "https://mathlesson20.help/img/21575.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/rusher-crusher.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/rusher-crusher/index.html"
   },
   {
     "name": "Santy Is Home",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/santy-is-home/",
-    "img": "https://mathlesson20.help/img/21576.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Save The Dodge",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/save-the-dodge/",
-    "img": "https://mathlesson20.help/img/21577.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Scrapmetal",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/scrapmetal/",
-    "img": "https://mathlesson20.help/img/21578.webp",
-    "category": "Racing"
+    "img": "/assets/gameassets/ml20/imgs/santy-is-home.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/santy-is-home/index.html"
   },
   {
     "name": "Shuttledeck",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/shuttledeck/",
-    "img": "https://mathlesson20.help/img/21579.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/shuttledeck.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/shuttledeck/index.html"
   },
   {
     "name": "Skibidi Strike",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/skibidi-strike/",
-    "img": "https://mathlesson20.help/img/21580.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Sky Car Stunt",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/sky-car-stunt/",
-    "img": "https://mathlesson20.help/img/21581.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Skywire",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/skywire/",
-    "img": "https://mathlesson20.help/img/21582.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Slime Rush Td",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/slime-rush-td/",
-    "img": "https://mathlesson20.help/img/21583.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/skibidi-strike.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/skibidi-strike/index.html"
   },
   {
     "name": "Sling Tomb",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/sling-tomb/",
-    "img": "https://mathlesson20.help/img/21584.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Slope",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/slope/",
-    "img": "https://mathlesson20.help/img/21585.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/sling-tomb.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/sling-tomb/index.html"
   },
   {
     "name": "Slope 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/slope-2/",
-    "img": "https://mathlesson20.help/img/21586.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/slope-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/slope-2/index.html"
   },
   {
     "name": "Slope Ball",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/slope-ball/",
-    "img": "https://mathlesson20.help/img/21587.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/slope-ball.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/slope-ball/index.html"
+  },
+  {
+    "name": "Slope",
+    "img": "/assets/gameassets/ml20/imgs/slope.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/slope/index.html"
   },
   {
     "name": "Sm64",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/sm64/",
-    "img": "https://mathlesson20.help/img/21588.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/sm64.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/sm64/index.html"
   },
   {
     "name": "Smokingbarrels",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/smokingbarrels/",
-    "img": "https://mathlesson20.help/img/21589.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Snail Bob 7",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/snail-bob-7/",
-    "img": "https://mathlesson20.help/img/21590.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Snail Bob 8",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/snail-bob-8/",
-    "img": "https://mathlesson20.help/img/21591.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/smokingbarrels.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/smokingbarrels/index.html"
   },
   {
     "name": "Snow Ride",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/snow-ride/",
-    "img": "https://mathlesson20.help/img/21592.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/snow-ride.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/snow-ride/index.html"
   },
   {
     "name": "Snowbattle",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/snowbattle/",
-    "img": "https://mathlesson20.help/img/21593.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Soccer Heads",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/soccer-heads/",
-    "img": "https://mathlesson20.help/img/21594.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Soccer Random",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/soccer-random/",
-    "img": "https://mathlesson20.help/img/21595.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Soccer Skills",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/soccer-skills/",
-    "img": "https://mathlesson20.help/img/21596.webp",
-    "category": "Racing"
+    "img": "/assets/gameassets/ml20/imgs/snowbattle.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/snowbattle/index.html"
   },
   {
     "name": "Soldier Legend",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/soldier-legend/",
-    "img": "https://mathlesson20.help/img/21597.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Solitaire",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/solitaire/",
-    "img": "https://mathlesson20.help/img/21598.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Sort The Court",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/sort-the-court/",
-    "img": "https://mathlesson20.help/img/21599.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Space Bar Clicker",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/space-bar-clicker/",
-    "img": "https://mathlesson20.help/img/21600.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Space Company",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/space-company/",
-    "img": "https://mathlesson20.help/img/21601.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/soldier-legend.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/soldier-legend/index.html"
   },
   {
     "name": "Spacegarden",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/spacegarden/",
-    "img": "https://mathlesson20.help/img/21602.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/spacegarden.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/spacegarden/index.html"
   },
   {
-    "name": "Spider Solitaire",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/spider-solitaire/",
-    "img": "https://mathlesson20.help/img/21603.webp",
-    "category": "Strategy"
+    "name": "Stack Bump 3D",
+    "img": "/assets/gameassets/ml20/imgs/stack-bump-3d.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/stack-bump-3d/index.html"
   },
   {
     "name": "Stack",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/stack/",
-    "img": "https://mathlesson20.help/img/21604.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Stack Bump 3d",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/stack-bump-3d/",
-    "img": "https://mathlesson20.help/img/21605.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/stack.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/stack/index.html"
   },
   {
     "name": "Station 141",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/station-141/",
-    "img": "https://mathlesson20.help/img/21606.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Stealingthediamond",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/stealingthediamond/",
-    "img": "https://mathlesson20.help/img/21607.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/station-141.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/station-141/index.html"
   },
   {
     "name": "Stick Archers",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/stick-archers/",
-    "img": "https://mathlesson20.help/img/21608.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/stick-archers.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/stick-archers/index.html"
   },
   {
     "name": "Stick Duel Battle",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/stick-duel-battle/",
-    "img": "https://mathlesson20.help/img/21609.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/stick-duel-battle.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/stick-duel-battle/index.html"
   },
   {
     "name": "Stick Merge",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/stick-merge/",
-    "img": "https://mathlesson20.help/img/21610.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/stick-merge.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/stick-merge/index.html"
   },
   {
     "name": "Stickman Boost",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/stickman-boost/",
-    "img": "https://mathlesson20.help/img/21611.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Stickman Golf",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/stickman-golf/",
-    "img": "https://mathlesson20.help/img/21612.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Stickman Hook",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/stickman-hook/",
-    "img": "https://mathlesson20.help/img/21613.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Stormthehouse2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/stormthehouse2/",
-    "img": "https://mathlesson20.help/img/21614.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Subway Surfers",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/subway-surfers/",
-    "img": "https://mathlesson20.help/img/21615.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/stickman-boost.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/stickman-boost/index.html"
   },
   {
     "name": "Subway Surfers Ny",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/subway-surfers-ny/",
-    "img": "https://mathlesson20.help/img/21616.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/subway-surfers-ny.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/subway-surfers-ny/index.html"
   },
   {
-    "name": "Super Liquid Soccer",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/super-liquid-soccer/",
-    "img": "https://mathlesson20.help/img/21617.webp",
-    "category": "Racing"
+    "name": "Subway Surfers",
+    "img": "/assets/gameassets/ml20/imgs/subway-surfers.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/subway-surfers/index.html"
   },
   {
     "name": "Super Mario Wonder",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/super-mario-wonder/",
-    "img": "https://mathlesson20.help/img/21618.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/super-mario-wonder.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/super-mario-wonder/index.html"
   },
   {
     "name": "Superhot",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/superhot/",
-    "img": "https://mathlesson20.help/img/21619.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/superhot.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/superhot/index.html"
   },
   {
     "name": "Supermarioconstruct",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/supermarioconstruct/",
-    "img": "https://mathlesson20.help/img/21620.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Swingo",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/swingo/",
-    "img": "https://mathlesson20.help/img/21621.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/supermarioconstruct.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/supermarioconstruct/index.html"
   },
   {
     "name": "Synesthesia",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/synesthesia/",
-    "img": "https://mathlesson20.help/img/21622.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/synesthesia.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/synesthesia/index.html"
   },
   {
     "name": "Tactical Weapon Pack 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/tactical-weapon-pack-2/",
-    "img": "https://mathlesson20.help/img/21623.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/tactical-weapon-pack-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tactical-weapon-pack-2/index.html"
   },
   {
     "name": "Tacticalassasin2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/tacticalassasin2/",
-    "img": "https://mathlesson20.help/img/21624.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/tacticalassasin2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tacticalassasin2/index.html"
   },
   {
     "name": "Tag",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/tag/",
-    "img": "https://mathlesson20.help/img/21625.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/tag.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tag/index.html"
   },
   {
     "name": "Tank Trouble 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/tank-trouble-2/",
-    "img": "https://mathlesson20.help/img/21626.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/tank-trouble-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tank-trouble-2/index.html"
   },
   {
     "name": "Tanuki Sunset",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/tanuki-sunset/",
-    "img": "https://mathlesson20.help/img/21627.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/tanuki-sunset.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tanuki-sunset/index.html"
   },
   {
     "name": "Tap Tap Shots",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/tap-tap-shots/",
-    "img": "https://mathlesson20.help/img/21628.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/tap-tap-shots.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tap-tap-shots/index.html"
   },
   {
     "name": "Temple Run 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/temple-run-2/",
-    "img": "https://mathlesson20.help/img/21629.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/temple-run-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/temple-run-2/index.html"
   },
   {
     "name": "Terraira",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/terraira/",
-    "img": "https://mathlesson20.help/img/21630.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Territorial",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/territorial/",
-    "img": "https://mathlesson20.help/img/21631.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "The Final Earth",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/the-final-earth/",
-    "img": "https://mathlesson20.help/img/21632.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "The Hotel",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/the-hotel/",
-    "img": "https://mathlesson20.help/img/21633.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Thebattle",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/thebattle/",
-    "img": "https://mathlesson20.help/img/21634.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Theheist",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/theheist/",
-    "img": "https://mathlesson20.help/img/21635.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "There Is No Game",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/there-is-no-game/",
-    "img": "https://mathlesson20.help/img/21636.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/terraira.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/terraira/index.html"
   },
   {
     "name": "Thisistheonlylevel",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/thisistheonlylevel/",
-    "img": "https://mathlesson20.help/img/21637.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/thisistheonlylevel.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/thisistheonlylevel/index.html"
   },
   {
     "name": "Tiny Fishing",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/tiny-fishing/",
-    "img": "https://mathlesson20.help/img/21638.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Tiny Islands",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/tiny-islands/",
-    "img": "https://mathlesson20.help/img/21639.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/tiny-fishing.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tiny-fishing/index.html"
   },
   {
     "name": "Tosstheturtle",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/tosstheturtle/",
-    "img": "https://mathlesson20.help/img/21640.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Tower Crash 3d",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/tower-crash-3d/",
-    "img": "https://mathlesson20.help/img/21641.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Townscaper",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/townscaper/",
-    "img": "https://mathlesson20.help/img/21642.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/tosstheturtle.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tosstheturtle/index.html"
   },
   {
     "name": "Traffic Control",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/traffic-control/",
-    "img": "https://mathlesson20.help/img/21643.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/traffic-control.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/traffic-control/index.html"
   },
   {
     "name": "Trimps",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/trimps/",
-    "img": "https://mathlesson20.help/img/21644.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/trimps.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/trimps/index.html"
   },
   {
     "name": "Tube Jumpers",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/tube-jumpers/",
-    "img": "https://mathlesson20.help/img/21645.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Tunnel Rush",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/tunnel-rush/",
-    "img": "https://mathlesson20.help/img/21646.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/tube-jumpers.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tube-jumpers/index.html"
   },
   {
     "name": "Tunnel Rush 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/tunnel-rush-2/",
-    "img": "https://mathlesson20.help/img/21647.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/tunnel-rush-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tunnel-rush-2/index.html"
+  },
+  {
+    "name": "Tunnel Rush",
+    "img": "/assets/gameassets/ml20/imgs/tunnel-rush.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tunnel-rush/index.html"
   },
   {
     "name": "Turn Turn",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/turn-turn/",
-    "img": "https://mathlesson20.help/img/21648.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Twitch Tetris",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/twitch-tetris/",
-    "img": "https://mathlesson20.help/img/21649.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Veloce",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/veloce/",
-    "img": "https://mathlesson20.help/img/21650.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/turn-turn.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/turn-turn/index.html"
   },
   {
     "name": "Vex3",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/vex3/",
-    "img": "https://mathlesson20.help/img/21651.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/vex3.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/vex3/index.html"
   },
   {
     "name": "Vex4",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/vex4/",
-    "img": "https://mathlesson20.help/img/21652.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/vex4.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/vex4/index.html"
   },
   {
     "name": "Vex5",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/vex5/",
-    "img": "https://mathlesson20.help/img/21653.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/vex5.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/vex5/index.html"
   },
   {
     "name": "Vex6",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/vex6/",
-    "img": "https://mathlesson20.help/img/21654.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/vex6.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/vex6/index.html"
   },
   {
     "name": "Vex7",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/vex7/",
-    "img": "https://mathlesson20.help/img/21655.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/vex7.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/vex7/index.html"
   },
   {
     "name": "Vex8",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/vex8/",
-    "img": "https://mathlesson20.help/img/21656.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/vex8.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/vex8/index.html"
   },
   {
-    "name": "Volley Random",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/volley-random/",
-    "img": "https://mathlesson20.help/img/21657.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Wallsmash",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/wallsmash/",
-    "img": "https://mathlesson20.help/img/21658.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Waterworks",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/waterworks/",
-    "img": "https://mathlesson20.help/img/21659.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Wbwwb",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/wbwwb/",
-    "img": "https://mathlesson20.help/img/21660.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Weavesilk",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/weavesilk/",
-    "img": "https://mathlesson20.help/img/21661.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Webgl Fluid Simulation",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/webgl-fluid-simulation/",
-    "img": "https://mathlesson20.help/img/21662.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Whack Your Boss",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/whack-your-boss/",
-    "img": "https://mathlesson20.help/img/21663.webp",
-    "category": "Casual"
-  },
-  {
-    "name": "Wheelie Bike",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/wheelie-bike/",
-    "img": "https://mathlesson20.help/img/21664.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Wheelie Bike 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/wheelie-bike-2/",
-    "img": "https://mathlesson20.help/img/21665.webp",
-    "category": "Racing"
-  },
-  {
-    "name": "Wheely 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/wheely-2/",
-    "img": "https://mathlesson20.help/img/21666.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Wheely 3",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/wheely-3/",
-    "img": "https://mathlesson20.help/img/21667.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Wheely 4",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/wheely-4/",
-    "img": "https://mathlesson20.help/img/21668.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Wheely 5",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/wheely-5/",
-    "img": "https://mathlesson20.help/img/21669.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Wheely 6",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/wheely-6/",
-    "img": "https://mathlesson20.help/img/21670.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Wheely 7",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/wheely-7/",
-    "img": "https://mathlesson20.help/img/21671.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Wheely 8",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/wheely-8/",
-    "img": "https://mathlesson20.help/img/21672.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Wolf3d",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/wolf3d/",
-    "img": "https://mathlesson20.help/img/21673.webp",
-    "category": "Action"
-  },
-  {
-    "name": "Wood Block Puzzle",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/wood-block-puzzle/",
-    "img": "https://mathlesson20.help/img/21674.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Woodventure",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/woodventure/",
-    "img": "https://mathlesson20.help/img/21675.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Word Slide",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/word-slide/",
-    "img": "https://mathlesson20.help/img/21676.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Wordle",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/wordle/",
-    "img": "https://mathlesson20.help/img/21677.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Wordle Unlimited",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/wordle-unlimited/",
-    "img": "https://mathlesson20.help/img/21678.webp",
-    "category": "Strategy"
-  },
-  {
-    "name": "Worlds Hardest Game",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/worlds-hardest-game/",
-    "img": "https://mathlesson20.help/img/21679.webp",
-    "category": "Action"
+    "name": "Wolf3D",
+    "img": "/assets/gameassets/ml20/imgs/wolf3d.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/wolf3d/index.html"
   },
   {
     "name": "Worlds Hardest Game 2",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/action-games/worlds-hardest-game-2/",
-    "img": "https://mathlesson20.help/img/21680.webp",
-    "category": "Action"
+    "img": "/assets/gameassets/ml20/imgs/worlds-hardest-game-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/worlds-hardest-game-2/index.html"
   },
   {
-    "name": "X Trial Racing",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/driving-games/x-trial-racing/",
-    "img": "https://mathlesson20.help/img/21681.webp",
-    "category": "Racing"
+    "name": "Worlds Hardest Game",
+    "img": "/assets/gameassets/ml20/imgs/worlds-hardest-game.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/worlds-hardest-game/index.html"
   },
   {
-    "name": "Xx142 B2exe",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/xx142-b2exe/",
-    "img": "https://mathlesson20.help/img/21682.webp",
-    "category": "Strategy"
+    "name": "Ages Of Conflict",
+    "img": "/assets/gameassets/ml20/imgs/ages-of-conflict.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/ages-of-conflict/index.html"
+  },
+  {
+    "name": "Baldis Basics",
+    "img": "/assets/gameassets/ml20/imgs/baldis-basics.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/baldis-basics/index.html"
+  },
+  {
+    "name": "Bigredbutton",
+    "img": "/assets/gameassets/ml20/imgs/bigredbutton.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/bigredbutton/index.html"
+  },
+  {
+    "name": "Bitcoin Clicker",
+    "img": "/assets/gameassets/ml20/imgs/bitcoin-clicker.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/bitcoin-clicker/index.html"
+  },
+  {
+    "name": "Bottle Flip 3D",
+    "img": "/assets/gameassets/ml20/imgs/bottle-flip-3d.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/bottle-flip-3d/index.html"
+  },
+  {
+    "name": "Bottle Flip",
+    "img": "/assets/gameassets/ml20/imgs/bottle-flip.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/bottle-flip/index.html"
+  },
+  {
+    "name": "Clicker Heroes",
+    "img": "/assets/gameassets/ml20/imgs/clicker-heroes.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/clicker-heroes/index.html"
+  },
+  {
+    "name": "Cookie Clicker",
+    "img": "/assets/gameassets/ml20/imgs/cookie-clicker.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/cookie-clicker/index.html"
+  },
+  {
+    "name": "Core Ball",
+    "img": "/assets/gameassets/ml20/imgs/core-ball.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/core-ball/index.html"
+  },
+  {
+    "name": "Csgo Clicker",
+    "img": "/assets/gameassets/ml20/imgs/csgo-clicker.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/csgo-clicker/index.html"
+  },
+  {
+    "name": "Dino Merge",
+    "img": "/assets/gameassets/ml20/imgs/dino-merge.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/dino-merge/index.html"
+  },
+  {
+    "name": "Doodle Jump",
+    "img": "/assets/gameassets/ml20/imgs/doodle-jump.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/doodle-jump/index.html"
+  },
+  {
+    "name": "Ducklife 2",
+    "img": "/assets/gameassets/ml20/imgs/ducklife-2.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/ducklife-2/index.html"
+  },
+  {
+    "name": "Ducklife 3",
+    "img": "/assets/gameassets/ml20/imgs/ducklife-3.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/ducklife-3/index.html"
+  },
+  {
+    "name": "Ducklife",
+    "img": "/assets/gameassets/ml20/imgs/ducklife.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/ducklife/index.html"
+  },
+  {
+    "name": "Ducklife4",
+    "img": "/assets/gameassets/ml20/imgs/ducklife4.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/ducklife4/index.html"
+  },
+  {
+    "name": "Eel Slap",
+    "img": "/assets/gameassets/ml20/imgs/eel-slap.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/eel-slap/index.html"
+  },
+  {
+    "name": "Elastic Face",
+    "img": "/assets/gameassets/ml20/imgs/elastic-face.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/elastic-face/index.html"
+  },
+  {
+    "name": "Fake Virus",
+    "img": "/assets/gameassets/ml20/imgs/fake-virus.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/fake-virus/index.html"
+  },
+  {
+    "name": "Fisherman Life",
+    "img": "/assets/gameassets/ml20/imgs/fisherman-life.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/fisherman-life/index.html"
+  },
+  {
+    "name": "Flappy Bird",
+    "img": "/assets/gameassets/ml20/imgs/flappy-bird.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/flappy-bird/index.html"
+  },
+  {
+    "name": "Fruit Ninja",
+    "img": "/assets/gameassets/ml20/imgs/fruit-ninja.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/fruit-ninja/index.html"
+  },
+  {
+    "name": "Guess Kitty",
+    "img": "/assets/gameassets/ml20/imgs/guess-kitty.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/guess-kitty/index.html"
+  },
+  {
+    "name": "Gura Temberine",
+    "img": "/assets/gameassets/ml20/imgs/gura-temberine.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/gura-temberine/index.html"
+  },
+  {
+    "name": "Hackertype",
+    "img": "/assets/gameassets/ml20/imgs/hackertype.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/hackertype/index.html"
+  },
+  {
+    "name": "Hop Pop It",
+    "img": "/assets/gameassets/ml20/imgs/hop-pop-it.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/hop-pop-it/index.html"
+  },
+  {
+    "name": "Idle Breakout",
+    "img": "/assets/gameassets/ml20/imgs/idle-breakout.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/idle-breakout/index.html"
+  },
+  {
+    "name": "Idle Mining",
+    "img": "/assets/gameassets/ml20/imgs/idle-mining.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/idle-mining/index.html"
+  },
+  {
+    "name": "Idle Restaurants",
+    "img": "/assets/gameassets/ml20/imgs/idle-restaurants.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/idle-restaurants/index.html"
+  },
+  {
+    "name": "Kittencannon",
+    "img": "/assets/gameassets/ml20/imgs/kittencannon.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/kittencannon/index.html"
+  },
+  {
+    "name": "Learn To Fly 2",
+    "img": "/assets/gameassets/ml20/imgs/learn-to-fly-2.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/learn-to-fly-2/index.html"
+  },
+  {
+    "name": "Learntofly",
+    "img": "/assets/gameassets/ml20/imgs/learntofly.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/learntofly/index.html"
+  },
+  {
+    "name": "Little Alchemy 2",
+    "img": "/assets/gameassets/ml20/imgs/little-alchemy-2.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/little-alchemy-2/index.html"
+  },
+  {
+    "name": "Merge Round Racers",
+    "img": "/assets/gameassets/ml20/imgs/merge-round-racers.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/merge-round-racers/index.html"
+  },
+  {
+    "name": "Minecraft Case",
+    "img": "/assets/gameassets/ml20/imgs/minecraft-case.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/minecraft-case/index.html"
+  },
+  {
+    "name": "Nut Simulator",
+    "img": "/assets/gameassets/ml20/imgs/nut-simulator.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/nut-simulator/index.html"
+  },
+  {
+    "name": "Papas Bake",
+    "img": "/assets/gameassets/ml20/imgs/papas-bake.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-bake/index.html"
+  },
+  {
+    "name": "Papas Cheese",
+    "img": "/assets/gameassets/ml20/imgs/papas-cheese.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-cheese/index.html"
+  },
+  {
+    "name": "Papas Cupcake",
+    "img": "/assets/gameassets/ml20/imgs/papas-cupcake.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-cupcake/index.html"
+  },
+  {
+    "name": "Papas Donut",
+    "img": "/assets/gameassets/ml20/imgs/papas-donut.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-donut/index.html"
+  },
+  {
+    "name": "Papas Freeze",
+    "img": "/assets/gameassets/ml20/imgs/papas-freeze.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-freeze/index.html"
+  },
+  {
+    "name": "Papas Hotdog",
+    "img": "/assets/gameassets/ml20/imgs/papas-hotdog.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-hotdog/index.html"
+  },
+  {
+    "name": "Papas Pancake",
+    "img": "/assets/gameassets/ml20/imgs/papas-pancake.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-pancake/index.html"
+  },
+  {
+    "name": "Papas Pasta",
+    "img": "/assets/gameassets/ml20/imgs/papas-pasta.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-pasta/index.html"
+  },
+  {
+    "name": "Papas Scoop",
+    "img": "/assets/gameassets/ml20/imgs/papas-scoop.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-scoop/index.html"
+  },
+  {
+    "name": "Papas Sushi",
+    "img": "/assets/gameassets/ml20/imgs/papas-sushi.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-sushi/index.html"
+  },
+  {
+    "name": "Papas Taco",
+    "img": "/assets/gameassets/ml20/imgs/papas-taco.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-taco/index.html"
+  },
+  {
+    "name": "Papas Wing",
+    "img": "/assets/gameassets/ml20/imgs/papas-wing.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-wing/index.html"
+  },
+  {
+    "name": "Papaspizzaria",
+    "img": "/assets/gameassets/ml20/imgs/papaspizzaria.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papaspizzaria/index.html"
+  },
+  {
+    "name": "Particle Clicker",
+    "img": "/assets/gameassets/ml20/imgs/particle-clicker.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/particle-clicker/index.html"
+  },
+  {
+    "name": "Pou",
+    "img": "/assets/gameassets/ml20/imgs/pou.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/pou/index.html"
+  },
+  {
+    "name": "Push The Square",
+    "img": "/assets/gameassets/ml20/imgs/push-the-square.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/push-the-square/index.html"
+  },
+  {
+    "name": "Rise Higher",
+    "img": "/assets/gameassets/ml20/imgs/rise-higher.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/rise-higher/index.html"
+  },
+  {
+    "name": "Sandboxels",
+    "img": "/assets/gameassets/ml20/imgs/sandboxels.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/sandboxels/index.html"
+  },
+  {
+    "name": "Sort The Court",
+    "img": "/assets/gameassets/ml20/imgs/sort-the-court.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/sort-the-court/index.html"
+  },
+  {
+    "name": "Space Bar Clicker",
+    "img": "/assets/gameassets/ml20/imgs/space-bar-clicker.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/space-bar-clicker/index.html"
+  },
+  {
+    "name": "Space Company",
+    "img": "/assets/gameassets/ml20/imgs/space-company.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/space-company/index.html"
+  },
+  {
+    "name": "Townscaper",
+    "img": "/assets/gameassets/ml20/imgs/townscaper.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/townscaper/index.html"
+  },
+  {
+    "name": "Veloce",
+    "img": "/assets/gameassets/ml20/imgs/veloce.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/veloce/index.html"
+  },
+  {
+    "name": "Wbwwb",
+    "img": "/assets/gameassets/ml20/imgs/wbwwb.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/wbwwb/index.html"
+  },
+  {
+    "name": "Weavesilk",
+    "img": "/assets/gameassets/ml20/imgs/weavesilk.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/weavesilk/index.html"
+  },
+  {
+    "name": "Webgl Fluid Simulation",
+    "img": "/assets/gameassets/ml20/imgs/webgl-fluid-simulation.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/webgl-fluid-simulation/index.html"
+  },
+  {
+    "name": "Whack Your Boss",
+    "img": "/assets/gameassets/ml20/imgs/whack-your-boss.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/whack-your-boss/index.html"
   },
   {
     "name": "Yoshifabrication",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/casual-games/yoshifabrication/",
-    "img": "https://mathlesson20.help/img/21683.webp",
-    "category": "Casual"
+    "img": "/assets/gameassets/ml20/imgs/yoshifabrication.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/yoshifabrication/index.html"
+  },
+  {
+    "name": "1V1 Soccer",
+    "img": "/assets/gameassets/ml20/imgs/1v1-soccer.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/1v1-soccer/index.html"
+  },
+  {
+    "name": "3D Bowling",
+    "img": "/assets/gameassets/ml20/imgs/3d-bowling.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/3d-bowling/index.html"
+  },
+  {
+    "name": "8 Ball",
+    "img": "/assets/gameassets/ml20/imgs/8-ball.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/8-ball/index.html"
+  },
+  {
+    "name": "Adrenalinechallenge",
+    "img": "/assets/gameassets/ml20/imgs/adrenalinechallenge.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/adrenalinechallenge/index.html"
+  },
+  {
+    "name": "Adventure Drivers",
+    "img": "/assets/gameassets/ml20/imgs/adventure-drivers.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/adventure-drivers/index.html"
+  },
+  {
+    "name": "Aquapark Slides",
+    "img": "/assets/gameassets/ml20/imgs/aquapark-slides.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/aquapark-slides/index.html"
+  },
+  {
+    "name": "Axis Football League",
+    "img": "/assets/gameassets/ml20/imgs/axis-football-league.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/axis-football-league/index.html"
+  },
+  {
+    "name": "Basket And Ball",
+    "img": "/assets/gameassets/ml20/imgs/basket-and-ball.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/basket-and-ball/index.html"
+  },
+  {
+    "name": "Basket Champs",
+    "img": "/assets/gameassets/ml20/imgs/basket-champs.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/basket-champs/index.html"
+  },
+  {
+    "name": "Basket Random",
+    "img": "/assets/gameassets/ml20/imgs/basket-random.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/basket-random/index.html"
+  },
+  {
+    "name": "Basketball Stars",
+    "img": "/assets/gameassets/ml20/imgs/basketball-stars.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/basketball-stars/index.html"
+  },
+  {
+    "name": "Bicycle Stunt 3D",
+    "img": "/assets/gameassets/ml20/imgs/bicycle-stunt-3d.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/bicycle-stunt-3d/index.html"
+  },
+  {
+    "name": "Big Shot Boxing",
+    "img": "/assets/gameassets/ml20/imgs/big-shot-boxing.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/big-shot-boxing/index.html"
+  },
+  {
+    "name": "Biker Street",
+    "img": "/assets/gameassets/ml20/imgs/biker-street.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/biker-street/index.html"
+  },
+  {
+    "name": "Boxing Random",
+    "img": "/assets/gameassets/ml20/imgs/boxing-random.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/boxing-random/index.html"
+  },
+  {
+    "name": "Burnin Rubber 5Xs",
+    "img": "/assets/gameassets/ml20/imgs/burnin-rubber-5xs.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/burnin-rubber-5xs/index.html"
+  },
+  {
+    "name": "Car Rush",
+    "img": "/assets/gameassets/ml20/imgs/car-rush.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/car-rush/index.html"
+  },
+  {
+    "name": "Cars Simulator",
+    "img": "/assets/gameassets/ml20/imgs/cars-simulator.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/cars-simulator/index.html"
+  },
+  {
+    "name": "Cartoon Mini Racing",
+    "img": "/assets/gameassets/ml20/imgs/cartoon-mini-racing.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/cartoon-mini-racing/index.html"
+  },
+  {
+    "name": "Cluster Rush",
+    "img": "/assets/gameassets/ml20/imgs/cluster-rush.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/cluster-rush/index.html"
+  },
+  {
+    "name": "Crazy Cars",
+    "img": "/assets/gameassets/ml20/imgs/crazy-cars.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/crazy-cars/index.html"
+  },
+  {
+    "name": "Draw The Hill",
+    "img": "/assets/gameassets/ml20/imgs/draw-the-hill.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/draw-the-hill/index.html"
+  },
+  {
+    "name": "Drift Boss",
+    "img": "/assets/gameassets/ml20/imgs/drift-boss.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/drift-boss/index.html"
+  },
+  {
+    "name": "Drive Mad",
+    "img": "/assets/gameassets/ml20/imgs/drive-mad.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/drive-mad/index.html"
+  },
+  {
+    "name": "Earn To Die",
+    "img": "/assets/gameassets/ml20/imgs/earn-to-die.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/earn-to-die/index.html"
+  },
+  {
+    "name": "Edge Surf",
+    "img": "/assets/gameassets/ml20/imgs/edge-surf.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/edge-surf/index.html"
+  },
+  {
+    "name": "Eggy Car",
+    "img": "/assets/gameassets/ml20/imgs/eggy-car.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/eggy-car/index.html"
+  },
+  {
+    "name": "Endless Truck",
+    "img": "/assets/gameassets/ml20/imgs/endless-truck.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/endless-truck/index.html"
+  },
+  {
+    "name": "Football Brawl",
+    "img": "/assets/gameassets/ml20/imgs/football-brawl.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/football-brawl/index.html"
+  },
+  {
+    "name": "Football Legends",
+    "img": "/assets/gameassets/ml20/imgs/football-legends.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/football-legends/index.html"
+  },
+  {
+    "name": "Football Strike",
+    "img": "/assets/gameassets/ml20/imgs/football-strike.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/football-strike/index.html"
+  },
+  {
+    "name": "Get On Top",
+    "img": "/assets/gameassets/ml20/imgs/get-on-top.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/get-on-top/index.html"
+  },
+  {
+    "name": "Head Soccer",
+    "img": "/assets/gameassets/ml20/imgs/head-soccer.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/head-soccer/index.html"
+  },
+  {
+    "name": "Heads Arena",
+    "img": "/assets/gameassets/ml20/imgs/heads-arena.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/heads-arena/index.html"
+  },
+  {
+    "name": "Madalin Stunt Cars 2",
+    "img": "/assets/gameassets/ml20/imgs/madalin-stunt-cars-2.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/madalin-stunt-cars-2/index.html"
+  },
+  {
+    "name": "Monster Truck Destroyer",
+    "img": "/assets/gameassets/ml20/imgs/monster-truck-destroyer.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/monster-truck-destroyer/index.html"
+  },
+  {
+    "name": "Moving Truck",
+    "img": "/assets/gameassets/ml20/imgs/moving-truck.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/moving-truck/index.html"
+  },
+  {
+    "name": "Parking Fury 2",
+    "img": "/assets/gameassets/ml20/imgs/parking-fury-2.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/parking-fury-2/index.html"
+  },
+  {
+    "name": "Parking Fury 3",
+    "img": "/assets/gameassets/ml20/imgs/parking-fury-3.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/parking-fury-3/index.html"
+  },
+  {
+    "name": "Parking Fury",
+    "img": "/assets/gameassets/ml20/imgs/parking-fury.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/parking-fury/index.html"
+  },
+  {
+    "name": "Penalty Kick",
+    "img": "/assets/gameassets/ml20/imgs/penalty-kick.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/penalty-kick/index.html"
+  },
+  {
+    "name": "Penalty Shooter 2",
+    "img": "/assets/gameassets/ml20/imgs/penalty-shooter-2.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/penalty-shooter-2/index.html"
+  },
+  {
+    "name": "Penalty Shooters 3",
+    "img": "/assets/gameassets/ml20/imgs/penalty-shooters-3.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/penalty-shooters-3/index.html"
+  },
+  {
+    "name": "Pixel Smash Duels",
+    "img": "/assets/gameassets/ml20/imgs/pixel-smash-duels.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/pixel-smash-duels/index.html"
+  },
+  {
+    "name": "Racing Monster Truck",
+    "img": "/assets/gameassets/ml20/imgs/racing-monster-truck.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/racing-monster-truck/index.html"
+  },
+  {
+    "name": "Retro Bowl College",
+    "img": "/assets/gameassets/ml20/imgs/retro-bowl-college.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/retro-bowl-college/index.html"
+  },
+  {
+    "name": "Retro Bowl",
+    "img": "/assets/gameassets/ml20/imgs/retro-bowl.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/retro-bowl/index.html"
+  },
+  {
+    "name": "Scrapmetal",
+    "img": "/assets/gameassets/ml20/imgs/scrapmetal.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/scrapmetal/index.html"
+  },
+  {
+    "name": "Sky Car Stunt",
+    "img": "/assets/gameassets/ml20/imgs/sky-car-stunt.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/sky-car-stunt/index.html"
+  },
+  {
+    "name": "Soccer Heads",
+    "img": "/assets/gameassets/ml20/imgs/soccer-heads.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/soccer-heads/index.html"
+  },
+  {
+    "name": "Soccer Random",
+    "img": "/assets/gameassets/ml20/imgs/soccer-random.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/soccer-random/index.html"
+  },
+  {
+    "name": "Soccer Skills",
+    "img": "/assets/gameassets/ml20/imgs/soccer-skills.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/soccer-skills/index.html"
+  },
+  {
+    "name": "Super Liquid Soccer",
+    "img": "/assets/gameassets/ml20/imgs/super-liquid-soccer.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/super-liquid-soccer/index.html"
+  },
+  {
+    "name": "Theheist",
+    "img": "/assets/gameassets/ml20/imgs/theheist.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/theheist/index.html"
+  },
+  {
+    "name": "Volley Random",
+    "img": "/assets/gameassets/ml20/imgs/volley-random.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/volley-random/index.html"
+  },
+  {
+    "name": "Wheelie Bike 2",
+    "img": "/assets/gameassets/ml20/imgs/wheelie-bike-2.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/wheelie-bike-2/index.html"
+  },
+  {
+    "name": "Wheelie Bike",
+    "img": "/assets/gameassets/ml20/imgs/wheelie-bike.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/wheelie-bike/index.html"
+  },
+  {
+    "name": "X Trial Racing",
+    "img": "/assets/gameassets/ml20/imgs/x-trial-racing.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/x-trial-racing/index.html"
+  },
+  {
+    "name": "1",
+    "img": "/assets/gameassets/ml20/imgs/1.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/1/index.html"
+  },
+  {
+    "name": "1010 Deluxe",
+    "img": "/assets/gameassets/ml20/imgs/1010-deluxe.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/1010-deluxe/index.html"
+  },
+  {
+    "name": "2048 Multitask",
+    "img": "/assets/gameassets/ml20/imgs/2048-multitask.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/2048-multitask/index.html"
+  },
+  {
+    "name": "2048",
+    "img": "/assets/gameassets/ml20/imgs/2048.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/2048/index.html"
+  },
+  {
+    "name": "9007199254740992",
+    "img": "/assets/gameassets/ml20/imgs/9007199254740992.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/9007199254740992/index.html"
+  },
+  {
+    "name": "Achievementunlocked",
+    "img": "/assets/gameassets/ml20/imgs/achievementunlocked.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/achievementunlocked/index.html"
+  },
+  {
+    "name": "Adventure Anxiety",
+    "img": "/assets/gameassets/ml20/imgs/adventure-anxiety.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/adventure-anxiety/index.html"
+  },
+  {
+    "name": "Among Us",
+    "img": "/assets/gameassets/ml20/imgs/among-us.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/among-us/index.html"
+  },
+  {
+    "name": "Ball Sort Halloween",
+    "img": "/assets/gameassets/ml20/imgs/ball-sort-halloween.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ball-sort-halloween/index.html"
+  },
+  {
+    "name": "Ball Sort Puzzle",
+    "img": "/assets/gameassets/ml20/imgs/ball-sort-puzzle.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ball-sort-puzzle/index.html"
+  },
+  {
+    "name": "Ball Sort Soccer",
+    "img": "/assets/gameassets/ml20/imgs/ball-sort-soccer.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ball-sort-soccer/index.html"
+  },
+  {
+    "name": "Ballistic",
+    "img": "/assets/gameassets/ml20/imgs/ballistic.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ballistic/index.html"
+  },
+  {
+    "name": "Bally",
+    "img": "/assets/gameassets/ml20/imgs/bally.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bally/index.html"
+  },
+  {
+    "name": "Battleforgondor",
+    "img": "/assets/gameassets/ml20/imgs/battleforgondor.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/battleforgondor/index.html"
+  },
+  {
+    "name": "Bitlife",
+    "img": "/assets/gameassets/ml20/imgs/bitlife.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bitlife/index.html"
+  },
+  {
+    "name": "Blacholesquare",
+    "img": "/assets/gameassets/ml20/imgs/blacholesquare.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/blacholesquare/index.html"
+  },
+  {
+    "name": "Block Pig",
+    "img": "/assets/gameassets/ml20/imgs/block-pig.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/block-pig/index.html"
+  },
+  {
+    "name": "Bloonstd",
+    "img": "/assets/gameassets/ml20/imgs/bloonstd.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bloonstd/index.html"
+  },
+  {
+    "name": "Bloonstd2",
+    "img": "/assets/gameassets/ml20/imgs/bloonstd2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bloonstd2/index.html"
+  },
+  {
+    "name": "Bloonstd4",
+    "img": "/assets/gameassets/ml20/imgs/bloonstd4.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bloonstd4/index.html"
+  },
+  {
+    "name": "Bloxors",
+    "img": "/assets/gameassets/ml20/imgs/bloxors.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bloxors/index.html"
+  },
+  {
+    "name": "Blumgi Rocket",
+    "img": "/assets/gameassets/ml20/imgs/blumgi-rocket.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/blumgi-rocket/index.html"
+  },
+  {
+    "name": "Bouncy Woods",
+    "img": "/assets/gameassets/ml20/imgs/bouncy-woods.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bouncy-woods/index.html"
+  },
+  {
+    "name": "Breakingthebank",
+    "img": "/assets/gameassets/ml20/imgs/breakingthebank.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/breakingthebank/index.html"
+  },
+  {
+    "name": "Btts",
+    "img": "/assets/gameassets/ml20/imgs/btts.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/btts/index.html"
+  },
+  {
+    "name": "Bubble Pop",
+    "img": "/assets/gameassets/ml20/imgs/bubble-pop.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bubble-pop/index.html"
+  },
+  {
+    "name": "Burrito Bison",
+    "img": "/assets/gameassets/ml20/imgs/burrito-bison.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/burrito-bison/index.html"
+  },
+  {
+    "name": "Cannon Basketball 4",
+    "img": "/assets/gameassets/ml20/imgs/cannon-basketball-4.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/cannon-basketball-4/index.html"
+  },
+  {
+    "name": "Canyondefense",
+    "img": "/assets/gameassets/ml20/imgs/canyondefense.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/canyondefense/index.html"
+  },
+  {
+    "name": "Cell Machine",
+    "img": "/assets/gameassets/ml20/imgs/cell-machine.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/cell-machine/index.html"
+  },
+  {
+    "name": "Checkers Legend",
+    "img": "/assets/gameassets/ml20/imgs/checkers-legend.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/checkers-legend/index.html"
+  },
+  {
+    "name": "Circlo",
+    "img": "/assets/gameassets/ml20/imgs/circlo.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/circlo/index.html"
+  },
+  {
+    "name": "Circlo2",
+    "img": "/assets/gameassets/ml20/imgs/circlo2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/circlo2/index.html"
+  },
+  {
+    "name": "Climb Over It",
+    "img": "/assets/gameassets/ml20/imgs/climb-over-it.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/climb-over-it/index.html"
+  },
+  {
+    "name": "Color Match",
+    "img": "/assets/gameassets/ml20/imgs/color-match.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/color-match/index.html"
+  },
+  {
+    "name": "Connect3",
+    "img": "/assets/gameassets/ml20/imgs/connect3.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/connect3/index.html"
+  },
+  {
+    "name": "Crossyroad",
+    "img": "/assets/gameassets/ml20/imgs/crossyroad.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/crossyroad/index.html"
+  },
+  {
+    "name": "Ctr Holiday",
+    "img": "/assets/gameassets/ml20/imgs/ctr-holiday.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ctr-holiday/index.html"
+  },
+  {
+    "name": "Ctr Tr",
+    "img": "/assets/gameassets/ml20/imgs/ctr-tr.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ctr-tr/index.html"
+  },
+  {
+    "name": "Ctr",
+    "img": "/assets/gameassets/ml20/imgs/ctr.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ctr/index.html"
+  },
+  {
+    "name": "Deal Or No Deal",
+    "img": "/assets/gameassets/ml20/imgs/deal-or-no-deal.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/deal-or-no-deal/index.html"
+  },
+  {
+    "name": "Deepest Sword",
+    "img": "/assets/gameassets/ml20/imgs/deepest-sword.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/deepest-sword/index.html"
+  },
+  {
+    "name": "Dino Bros",
+    "img": "/assets/gameassets/ml20/imgs/dino-bros.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/dino-bros/index.html"
+  },
+  {
+    "name": "Doctor Acorn2",
+    "img": "/assets/gameassets/ml20/imgs/doctor-acorn2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/doctor-acorn2/index.html"
+  },
+  {
+    "name": "Doge2048",
+    "img": "/assets/gameassets/ml20/imgs/doge2048.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/doge2048/index.html"
+  },
+  {
+    "name": "Dummy Never Fails 2",
+    "img": "/assets/gameassets/ml20/imgs/dummy-never-fails-2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/dummy-never-fails-2/index.html"
+  },
+  {
+    "name": "Dummy Never Fails",
+    "img": "/assets/gameassets/ml20/imgs/dummy-never-fails.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/dummy-never-fails/index.html"
+  },
+  {
+    "name": "Edgenotfound",
+    "img": "/assets/gameassets/ml20/imgs/edgenotfound.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/edgenotfound/index.html"
+  },
+  {
+    "name": "Escaping Prison",
+    "img": "/assets/gameassets/ml20/imgs/escaping-prison.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/escaping-prison/index.html"
+  },
+  {
+    "name": "Evolution",
+    "img": "/assets/gameassets/ml20/imgs/evolution.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/evolution/index.html"
+  },
+  {
+    "name": "Exo",
+    "img": "/assets/gameassets/ml20/imgs/exo.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/exo/index.html"
+  },
+  {
+    "name": "Factoryballs",
+    "img": "/assets/gameassets/ml20/imgs/factoryballs.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/factoryballs/index.html"
+  },
+  {
+    "name": "Farm Match",
+    "img": "/assets/gameassets/ml20/imgs/farm-match.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/farm-match/index.html"
+  },
+  {
+    "name": "Flashtetris",
+    "img": "/assets/gameassets/ml20/imgs/flashtetris.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/flashtetris/index.html"
+  },
+  {
+    "name": "Fleeing Complex",
+    "img": "/assets/gameassets/ml20/imgs/fleeing-complex.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/fleeing-complex/index.html"
+  },
+  {
+    "name": "Game Inside",
+    "img": "/assets/gameassets/ml20/imgs/game-inside.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/game-inside/index.html"
+  },
+  {
+    "name": "Georgeandtheprinter",
+    "img": "/assets/gameassets/ml20/imgs/georgeandtheprinter.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/georgeandtheprinter/index.html"
+  },
+  {
+    "name": "Getting Over It",
+    "img": "/assets/gameassets/ml20/imgs/getting-over-it.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/getting-over-it/index.html"
+  },
+  {
+    "name": "Go Ball",
+    "img": "/assets/gameassets/ml20/imgs/go-ball.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/go-ball/index.html"
+  },
+  {
+    "name": "Google Feud",
+    "img": "/assets/gameassets/ml20/imgs/google-feud.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/google-feud/index.html"
+  },
+  {
+    "name": "Gravity Soccer",
+    "img": "/assets/gameassets/ml20/imgs/gravity-soccer.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/gravity-soccer/index.html"
+  },
+  {
+    "name": "Greybox",
+    "img": "/assets/gameassets/ml20/imgs/greybox.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/greybox/index.html"
+  },
+  {
+    "name": "Handshakes",
+    "img": "/assets/gameassets/ml20/imgs/handshakes.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/handshakes/index.html"
+  },
+  {
+    "name": "Hanger",
+    "img": "/assets/gameassets/ml20/imgs/hanger.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/hanger/index.html"
+  },
+  {
+    "name": "Hexempire",
+    "img": "/assets/gameassets/ml20/imgs/hexempire.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/hexempire/index.html"
+  },
+  {
+    "name": "Hextris",
+    "img": "/assets/gameassets/ml20/imgs/hextris.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/hextris/index.html"
+  },
+  {
+    "name": "Icy Head 2",
+    "img": "/assets/gameassets/ml20/imgs/icy-head-2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/icy-head-2/index.html"
+  },
+  {
+    "name": "Icy Head 3",
+    "img": "/assets/gameassets/ml20/imgs/icy-head-3.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/icy-head-3/index.html"
+  },
+  {
+    "name": "Impossiblequiz",
+    "img": "/assets/gameassets/ml20/imgs/impossiblequiz.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/impossiblequiz/index.html"
+  },
+  {
+    "name": "Infiltrating Airship",
+    "img": "/assets/gameassets/ml20/imgs/infiltrating-airship.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/infiltrating-airship/index.html"
+  },
+  {
+    "name": "Jewels Blitz 5",
+    "img": "/assets/gameassets/ml20/imgs/jewels-blitz-5.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/jewels-blitz-5/index.html"
+  },
+  {
+    "name": "Marbles Sorting",
+    "img": "/assets/gameassets/ml20/imgs/marbles-sorting.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/marbles-sorting/index.html"
+  },
+  {
+    "name": "Meme2048",
+    "img": "/assets/gameassets/ml20/imgs/meme2048.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/meme2048/index.html"
+  },
+  {
+    "name": "Minesweeper",
+    "img": "/assets/gameassets/ml20/imgs/minesweeper.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/minesweeper/index.html"
+  },
+  {
+    "name": "Miniputt",
+    "img": "/assets/gameassets/ml20/imgs/miniputt.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/miniputt/index.html"
+  },
+  {
+    "name": "Money Movers 2",
+    "img": "/assets/gameassets/ml20/imgs/money-movers-2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/money-movers-2/index.html"
+  },
+  {
+    "name": "Money Movers 3",
+    "img": "/assets/gameassets/ml20/imgs/money-movers-3.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/money-movers-3/index.html"
+  },
+  {
+    "name": "Money Movers",
+    "img": "/assets/gameassets/ml20/imgs/money-movers.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/money-movers/index.html"
+  },
+  {
+    "name": "Mr Bullet",
+    "img": "/assets/gameassets/ml20/imgs/mr-bullet.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/mr-bullet/index.html"
+  },
+  {
+    "name": "My Rusty Submarine",
+    "img": "/assets/gameassets/ml20/imgs/my-rusty-submarine.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/my-rusty-submarine/index.html"
+  },
+  {
+    "name": "Ninja Cat",
+    "img": "/assets/gameassets/ml20/imgs/ninja-cat.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ninja-cat/index.html"
+  },
+  {
+    "name": "Pandas Japan",
+    "img": "/assets/gameassets/ml20/imgs/pandas-japan.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/pandas-japan/index.html"
+  },
+  {
+    "name": "Pandemic2",
+    "img": "/assets/gameassets/ml20/imgs/pandemic2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/pandemic2/index.html"
+  },
+  {
+    "name": "Papa Cherry Saga",
+    "img": "/assets/gameassets/ml20/imgs/papa-cherry-saga.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/papa-cherry-saga/index.html"
+  },
+  {
+    "name": "Park Out",
+    "img": "/assets/gameassets/ml20/imgs/park-out.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/park-out/index.html"
+  },
+  {
+    "name": "Plants Vs Zombies",
+    "img": "/assets/gameassets/ml20/imgs/plants-vs-zombies.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/plants-vs-zombies/index.html"
+  },
+  {
+    "name": "Portalflash",
+    "img": "/assets/gameassets/ml20/imgs/portalflash.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/portalflash/index.html"
+  },
+  {
+    "name": "Pudding Monster",
+    "img": "/assets/gameassets/ml20/imgs/pudding-monster.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/pudding-monster/index.html"
+  },
+  {
+    "name": "Push Your Luck",
+    "img": "/assets/gameassets/ml20/imgs/push-your-luck.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/push-your-luck/index.html"
+  },
+  {
+    "name": "Rabbit Samurai",
+    "img": "/assets/gameassets/ml20/imgs/rabbit-samurai.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/rabbit-samurai/index.html"
+  },
+  {
+    "name": "Rabbit Samurai2",
+    "img": "/assets/gameassets/ml20/imgs/rabbit-samurai2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/rabbit-samurai2/index.html"
+  },
+  {
+    "name": "Riddleschool",
+    "img": "/assets/gameassets/ml20/imgs/riddleschool.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/riddleschool/index.html"
+  },
+  {
+    "name": "Riddleschool2",
+    "img": "/assets/gameassets/ml20/imgs/riddleschool2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/riddleschool2/index.html"
+  },
+  {
+    "name": "Riddleschool3",
+    "img": "/assets/gameassets/ml20/imgs/riddleschool3.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/riddleschool3/index.html"
+  },
+  {
+    "name": "Riddleschool4",
+    "img": "/assets/gameassets/ml20/imgs/riddleschool4.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/riddleschool4/index.html"
+  },
+  {
+    "name": "Riddleschool5",
+    "img": "/assets/gameassets/ml20/imgs/riddleschool5.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/riddleschool5/index.html"
+  },
+  {
+    "name": "Riddletransfer",
+    "img": "/assets/gameassets/ml20/imgs/riddletransfer.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/riddletransfer/index.html"
+  },
+  {
+    "name": "Riddletransfer2",
+    "img": "/assets/gameassets/ml20/imgs/riddletransfer2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/riddletransfer2/index.html"
+  },
+  {
+    "name": "Roper",
+    "img": "/assets/gameassets/ml20/imgs/roper.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/roper/index.html"
+  },
+  {
+    "name": "Save The Dodge",
+    "img": "/assets/gameassets/ml20/imgs/save-the-dodge.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/save-the-dodge/index.html"
+  },
+  {
+    "name": "Slime Rush Td",
+    "img": "/assets/gameassets/ml20/imgs/slime-rush-td.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/slime-rush-td/index.html"
+  },
+  {
+    "name": "Snail Bob 7",
+    "img": "/assets/gameassets/ml20/imgs/snail-bob-7.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/snail-bob-7/index.html"
+  },
+  {
+    "name": "Snail Bob 8",
+    "img": "/assets/gameassets/ml20/imgs/snail-bob-8.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/snail-bob-8/index.html"
+  },
+  {
+    "name": "Solitaire",
+    "img": "/assets/gameassets/ml20/imgs/solitaire.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/solitaire/index.html"
+  },
+  {
+    "name": "Spider Solitaire",
+    "img": "/assets/gameassets/ml20/imgs/spider-solitaire.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/spider-solitaire/index.html"
+  },
+  {
+    "name": "Stealingthediamond",
+    "img": "/assets/gameassets/ml20/imgs/stealingthediamond.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/stealingthediamond/index.html"
+  },
+  {
+    "name": "Stickman Golf",
+    "img": "/assets/gameassets/ml20/imgs/stickman-golf.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/stickman-golf/index.html"
+  },
+  {
+    "name": "Stickman Hook",
+    "img": "/assets/gameassets/ml20/imgs/stickman-hook.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/stickman-hook/index.html"
+  },
+  {
+    "name": "Stormthehouse2",
+    "img": "/assets/gameassets/ml20/imgs/stormthehouse2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/stormthehouse2/index.html"
+  },
+  {
+    "name": "Swingo",
+    "img": "/assets/gameassets/ml20/imgs/swingo.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/swingo/index.html"
+  },
+  {
+    "name": "Territorial",
+    "img": "/assets/gameassets/ml20/imgs/territorial.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/territorial/index.html"
+  },
+  {
+    "name": "The Final Earth",
+    "img": "/assets/gameassets/ml20/imgs/the-final-earth.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/the-final-earth/index.html"
+  },
+  {
+    "name": "The Hotel",
+    "img": "/assets/gameassets/ml20/imgs/the-hotel.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/the-hotel/index.html"
+  },
+  {
+    "name": "Thebattle",
+    "img": "/assets/gameassets/ml20/imgs/thebattle.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/thebattle/index.html"
+  },
+  {
+    "name": "There Is No Game",
+    "img": "/assets/gameassets/ml20/imgs/there-is-no-game.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/there-is-no-game/index.html"
+  },
+  {
+    "name": "Tiny Islands",
+    "img": "/assets/gameassets/ml20/imgs/tiny-islands.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/tiny-islands/index.html"
+  },
+  {
+    "name": "Tower Crash 3D",
+    "img": "/assets/gameassets/ml20/imgs/tower-crash-3d.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/tower-crash-3d/index.html"
+  },
+  {
+    "name": "Twitch Tetris",
+    "img": "/assets/gameassets/ml20/imgs/twitch-tetris.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/twitch-tetris/index.html"
+  },
+  {
+    "name": "Wallsmash",
+    "img": "/assets/gameassets/ml20/imgs/wallsmash.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wallsmash/index.html"
+  },
+  {
+    "name": "Waterworks",
+    "img": "/assets/gameassets/ml20/imgs/waterworks.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/waterworks/index.html"
+  },
+  {
+    "name": "Wheely 2",
+    "img": "/assets/gameassets/ml20/imgs/wheely-2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wheely-2/index.html"
+  },
+  {
+    "name": "Wheely 3",
+    "img": "/assets/gameassets/ml20/imgs/wheely-3.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wheely-3/index.html"
+  },
+  {
+    "name": "Wheely 4",
+    "img": "/assets/gameassets/ml20/imgs/wheely-4.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wheely-4/index.html"
+  },
+  {
+    "name": "Wheely 5",
+    "img": "/assets/gameassets/ml20/imgs/wheely-5.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wheely-5/index.html"
+  },
+  {
+    "name": "Wheely 6",
+    "img": "/assets/gameassets/ml20/imgs/wheely-6.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wheely-6/index.html"
+  },
+  {
+    "name": "Wheely 7",
+    "img": "/assets/gameassets/ml20/imgs/wheely-7.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wheely-7/index.html"
+  },
+  {
+    "name": "Wheely 8",
+    "img": "/assets/gameassets/ml20/imgs/wheely-8.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wheely-8/index.html"
+  },
+  {
+    "name": "Wood Block Puzzle",
+    "img": "/assets/gameassets/ml20/imgs/wood-block-puzzle.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wood-block-puzzle/index.html"
+  },
+  {
+    "name": "Woodventure",
+    "img": "/assets/gameassets/ml20/imgs/woodventure.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/woodventure/index.html"
+  },
+  {
+    "name": "Word Slide",
+    "img": "/assets/gameassets/ml20/imgs/word-slide.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/word-slide/index.html"
+  },
+  {
+    "name": "Wordle Unlimited",
+    "img": "/assets/gameassets/ml20/imgs/wordle-unlimited.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wordle-unlimited/index.html"
+  },
+  {
+    "name": "Wordle",
+    "img": "/assets/gameassets/ml20/imgs/wordle.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wordle/index.html"
+  },
+  {
+    "name": "Xx142 B2Exe",
+    "img": "/assets/gameassets/ml20/imgs/xx142-b2exe.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/xx142-b2exe/index.html"
   },
   {
     "name": "You Are Bezos",
-    "url": "https://4yqt7wrhtx-ship-it.github.io/strategy-games/you-are-bezos/",
-    "img": "https://mathlesson20.help/img/21684.webp",
-    "category": "Strategy"
+    "img": "/assets/gameassets/ml20/imgs/you-are-bezos.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/you-are-bezos/index.html"
   }
 ]

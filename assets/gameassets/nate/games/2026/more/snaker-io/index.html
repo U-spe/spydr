@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snaker io</title>
+  
+  
+<style type="text/css">
+	body {
+	  overflow: hidden;
+	}
+</style>
+
+	<link rel="canonical" href="https://unblocked-games.s3.amazonaws.com/snaker-io.html" />
+	
+	<script src="/assets/scripts/game.js"></script>
+
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXS04HS5MX"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-GXS04HS5MX');
+	</script>
+	
+
+	<script src="/assets/promo/promo.js" async></script>
+	<script type="text/javascript" async>
+		!function(e, t) {
+			var a = e.createElement("script"),
+				m = e.getElementsByTagName("script")[0];
+
+			a.async = 1;
+			a.src = t;
+
+			a.onload = function() {
+				console.log("Dynamic script loaded wg");
+				if (typeof window.syncPromoManager === "function") window.syncPromoManager(false);
+				window.wgLoaded = 1;
+			};
+
+			a.onerror = function() {
+				console.error("Failed to load wg");
+				if (typeof window.syncPromoManager === "function") window.syncPromoManager(true);
+				window.wgLoaded = 2;
+			};
+
+			m.parentNode.insertBefore(a, m);
+		}(document, "https://universal.wgplayer.com/tag/?lh=" + window.location.hostname + "&wp=" + window.location.pathname + "&ws=" + window.location.search);
+	</script>
+	
+
+	<script>
+	
+	function SubmitLeaderboardScore(newScore)
+	{
+		
+	}
+	
+	function GetLeaderboardEntries()
+	{
+		
+	}
+	
+	function InitApi(_appId) 
+    {
+		var dateNow = new Date();
+		var secondsSinceEpoch = Math.round(dateNow.getTime() / 1000);
+		
+		console.log('InitApi');
+		
+		window.callTime = secondsSinceEpoch - 181;
+    }
+	
+	function InitExternEval(_appId) 
+    {
+		console.log("InitExternEval");
+		
+		ExternEval();
+    }
+    
+    function ExternEval() 
+    {
+		console.log("ExternEval");
+		
+		var dateNow = new Date();
+		var secondsSinceEpoch = Math.round(dateNow.getTime() / 1000);
+		
+		if (window.callTime != undefined && 
+			secondsSinceEpoch - window.callTime > 180)
+		{
+			console.log('ExternEval 2');
+			
+			window.callTime = secondsSinceEpoch;
+			
+			if (typeof preroll !== 'undefined')
+			{
+				if (window[preroll.config.loaderObjectName] != undefined)
+				{
+					gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onOpen');
+				
+					try {
+						window[preroll.config.loaderObjectName].refetchAd(ExternEvalResumeGame);
+					}
+					catch(err) {
+						console.log(err.message);
+						gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onClose');
+					}
+				}
+			}
+		}
+		
+    }
+	
+	function ExternEvalResumeGame()
+	{
+		console.log("ExternEvalResumeGame");
+	
+		gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onClose');
+	}
+	
+	function PreloadRewarded() 
+	{
+		console.log("PreloadRewarded");
+	
+		if (window.rewardedCallbacks == undefined)
+		{
+			window.rewardedCallbacks = true;
+			
+			try {
+				window[window.preroll.config.loaderObjectName].registerRewardCallbacks({
+					onReady:RewardedReady, 
+					onSuccess:RewardedSuccess, 
+					onFail:RewardedFail,
+					onClose:RewardedClose
+				});
+			}
+			catch(err) {
+				console.log(err.message);
+			}
+		}
+	}
+		
+	function ShowRewarded() 
+	{
+		console.log("ShowRewarded");
+	
+		if (typeof preroll !== 'undefined')
+		{
+			if (window.rewardedCallbacks == undefined)
+			{
+				PreloadRewarded();
+			}
+		
+			if (window[preroll.config.loaderObjectName] != undefined)
+			{
+				gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onOpen');
+			
+				try {
+					window[preroll.config.loaderObjectName].showRewardAd();
+				}
+				catch(err) {
+					console.log(err.message);
+					gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onClose');
+				}
+			}
+		}
+	
+	}
+	
+	function RewardedReady()
+	{
+		console.log("RewardedReady");
+		
+		if (window.rewardedCount == undefined)
+		{
+			window.rewardedCount = 1;
+			window.gameInstance.SendMessage('FreezeNovaAPI', 'RewardedReady');
+		}
+		else{
+			window.rewardedCount = window.rewardedCount + 1;
+			//setTimeout(function(){ window.gameInstance.SendMessage('FreezeNovaAPI', 'RewardedReady'); }, 30000);
+			window.gameInstance.SendMessage('FreezeNovaAPI', 'RewardedReady');
+		}
+		
+	}
+	
+	function RewardedSuccess()
+	{
+		console.log("RewardedSuccess");
+		gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'RewardedOnRewarded');
+		//gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onClose');
+	}
+	
+	function RewardedFail()
+	{
+		console.log("RewardedFail");
+		gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'RewardedOnFail');
+		//gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onClose');
+	}
+	
+	function RewardedClose()
+	{
+		console.log("RewardedClose");
+		gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onClose');
+	}
+	
+	InitApi(0);
+	
+	
+	</script>
+
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; overflow: hidden; }
+    body { background: #0a0a16; color: #eee; font-family: 'Segoe UI', Arial, sans-serif; }
+    canvas { display: block; }
+
+    .hud { position: fixed; pointer-events: none; z-index: 10; }
+    .hud-tl { top: 14px; left: 14px; }
+    .hud-tr { top: 14px; right: 14px; }
+    .hud-bc { bottom: 14px; left: 50%; transform: translateX(-50%); }
+    .hud-bl { bottom: 14px; left: 14px; }
+
+    .panel {
+      background: rgba(10, 10, 22, 0.88);
+      border: 1px solid rgba(251,191,36,0.25);
+      border-radius: 10px;
+      padding: 12px 16px;
+      backdrop-filter: blur(6px);
+    }
+
+    .p-hud { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .p-hud img { width: 34px; height: 34px; border-radius: 50%; border: 2px solid #fbbf24; }
+    .p-hud .n { font-weight: 700; font-size: 14px; color: #fbbf24; }
+    .p-hud .s { font-size: 13px; color: #888; }
+    .big { font-size: 22px; font-weight: 700; color: #22c55e; }
+    .sm { font-size: 12px; color: #aaa; margin-top: 2px; }
+    .dab { font-size: 12px; color: #fbbf24; margin-top: 4px; }
+    .diff-hud { font-size: 11px; color: #ef4444; margin-top: 4px; }
+
+    .lb { min-width: 170px; }
+    .lb h3 { color: #fbbf24; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .lr { display: flex; justify-content: space-between; padding: 2px 0; font-size: 12px; }
+    .lr .ln { max-width: 110px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .lr .ls { color: #fbbf24; font-weight: 700; margin-left: 10px; }
+    .lr.me .ln { color: #22c55e; font-weight: 700; }
+
+    .kills-panel .kill-line { font-size: 11px; color: #aaa; padding: 1px 0; }
+    .kills-panel .kill-line .killer { color: #ef4444; font-weight: 600; }
+    .kills-panel .kill-line .victim { color: #888; }
+
+    .hint { font-size: 11px; color: #444; }
+
+    .boost-bar { width: 140px; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; margin-top: 8px; overflow: hidden; }
+    .boost-fill { height: 100%; background: #3b82f6; border-radius: 3px; transition: width 0.1s linear; }
+
+    /* Overlays */
+    .ov {
+      position: fixed; inset: 0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: rgba(0,0,0,0.82); z-index: 20;
+    }
+    .ov.hidden { display: none; }
+    .ov h2 { color: #fbbf24; font-size: 38px; margin-bottom: 6px; }
+    .ov p { color: #bbb; font-size: 15px; margin-bottom: 6px; }
+    .ov .fin { color: #22c55e; font-size: 22px; font-weight: 700; margin: 8px 0; }
+    .ov .kb { color: #ef4444; font-size: 15px; margin-bottom: 8px; }
+    .ov button {
+      background: #fbbf24; color: #1a1a2e; border: none;
+      padding: 14px 40px; border-radius: 10px; font-size: 18px;
+      font-weight: 700; cursor: pointer; pointer-events: auto; margin-top: 8px;
+    }
+    .ov button:hover { background: #f59e0b; }
+
+    /* Reward breakdown */
+    .reward-box {
+      background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.3);
+      border-radius: 10px; padding: 14px 24px; margin: 10px 0; min-width: 240px;
+    }
+    .reward-row { display: flex; justify-content: space-between; font-size: 14px; padding: 3px 0; }
+    .reward-row .rlbl { color: #aaa; }
+    .reward-row .rval { color: #fbbf24; font-weight: 700; }
+    .reward-total { border-top: 1px solid rgba(251,191,36,0.3); margin-top: 6px; padding-top: 6px; font-size: 16px; font-weight: 700; color: #22c55e; display: flex; justify-content: space-between; }
+
+    /* Menu layout */
+    .menu-wrap {
+      display: flex; width: 720px; max-width: 95vw; height: 520px; max-height: 85vh;
+      background: rgba(10,10,22,0.95); border: 1px solid rgba(251,191,36,0.2);
+      border-radius: 16px; overflow: hidden; pointer-events: auto;
+    }
+    .menu-nav {
+      width: 180px; min-width: 180px; background: rgba(5,5,15,0.6);
+      border-right: 1px solid rgba(251,191,36,0.15); display: flex; flex-direction: column;
+      padding: 20px 0;
+    }
+    .menu-logo { color: #fbbf24; font-size: 22px; font-weight: 800; padding: 0 20px 16px; }
+    .menu-logo span { color: #888; font-size: 11px; font-weight: 400; display: block; }
+    .menu-coins { color: #fbbf24; font-size: 13px; font-weight: 700; padding: 0 20px 16px; }
+    .nav-item {
+      padding: 12px 20px; font-size: 15px; font-weight: 600; color: #888;
+      cursor: pointer; border-left: 3px solid transparent; transition: all 0.15s;
+    }
+    .nav-item:hover { color: #ccc; background: rgba(255,255,255,0.03); }
+    .nav-item.active { color: #fbbf24; border-left-color: #fbbf24; background: rgba(251,191,36,0.08); }
+    .menu-footer { margin-top: auto; padding: 12px 20px; font-size: 10px; color: #444; }
+    .menu-footer a { color: #fbbf24; text-decoration: none; }
+
+    .menu-content {
+      flex: 1; padding: 24px; overflow-y: auto;
+    }
+    .menu-content::-webkit-scrollbar { width: 5px; }
+    .menu-content::-webkit-scrollbar-thumb { background: rgba(251,191,36,0.2); border-radius: 3px; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .tab-panel h3 { color: #fbbf24; font-size: 16px; margin-bottom: 12px; }
+
+    /* Play tab */
+    .play-btn {
+      background: #fbbf24; color: #1a1a2e; border: none; padding: 14px 50px;
+      border-radius: 10px; font-size: 20px; font-weight: 800; cursor: pointer;
+      display: block; margin: 0 auto 20px;
+    }
+    .play-btn:hover { background: #f59e0b; }
+
+    /* Upgrade cards */
+    .shop { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; pointer-events: auto; }
+    .upgrade-card {
+      background: rgba(15,52,96,0.6); border: 1px solid rgba(59,130,246,0.3);
+      border-radius: 10px; padding: 12px 10px; text-align: center;
+    }
+    .upgrade-card h4 { color: #fbbf24; font-size: 13px; margin-bottom: 3px; }
+    .upgrade-card .udesc { color: #888; font-size: 10px; margin-bottom: 5px; }
+    .upgrade-card .ulvl { color: #3b82f6; font-size: 11px; font-weight: 700; margin-bottom: 5px; }
+    .upgrade-card button {
+      background: #3b82f6; color: #fff; border: none; padding: 5px 14px;
+      border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer;
+    }
+    .upgrade-card button:hover { background: #2563eb; }
+    .upgrade-card button:disabled { background: #333; color: #666; cursor: not-allowed; }
+    .upgrade-card .maxed { color: #22c55e; font-size: 11px; font-weight: 700; }
+
+    /* Theme cards */
+    .theme-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; pointer-events: auto; }
+    .theme-card {
+      background: rgba(15,52,96,0.6); border: 2px solid rgba(59,130,246,0.3);
+      border-radius: 10px; padding: 10px; text-align: center; cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .theme-card:hover { border-color: rgba(251,191,36,0.5); }
+    .theme-card.active { border-color: #22c55e; }
+    .theme-card .tname { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+    .theme-card .tpreview { width: 100%; height: 36px; border-radius: 6px; margin: 6px 0; border: 1px solid rgba(255,255,255,0.1); }
+    .theme-card button {
+      background: #3b82f6; color: #fff; border: none; padding: 4px 12px;
+      border-radius: 5px; font-size: 10px; font-weight: 700; cursor: pointer; margin-top: 3px;
+    }
+    .theme-card button:disabled { background: #333; color: #666; cursor: not-allowed; }
+    .theme-card .owned { color: #22c55e; font-size: 10px; font-weight: 700; }
+
+    /* Settings */
+    .setting-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .setting-row label { color: #ccc; font-size: 13px; }
+    .setting-row .sdesc { color: #666; font-size: 11px; }
+    .setting-row input[type=range] { width: 120px; accent-color: #fbbf24; }
+    .setting-row select, .setting-row input[type=number] {
+      background: rgba(15,52,96,0.6); border: 1px solid rgba(59,130,246,0.3);
+      color: #eee; padding: 4px 8px; border-radius: 6px; font-size: 12px;
+    }
+    .reset-btn {
+      background: #ef4444; color: #fff; border: none; padding: 8px 20px;
+      border-radius: 6px; font-size: 12px; font-weight: 700; cursor: pointer; margin-top: 16px;
+    }
+    .reset-btn:hover { background: #dc2626; }
+
+    /* Missions */
+    .mission-card {
+      background: rgba(15,52,96,0.6); border: 1px solid rgba(59,130,246,0.3);
+      border-radius: 10px; padding: 14px 16px; margin-bottom: 10px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .mission-card.completed { border-color: #22c55e; background: rgba(34,197,94,0.08); }
+    .mission-icon { font-size: 24px; flex-shrink: 0; width: 36px; text-align: center; }
+    .mission-info { flex: 1; }
+    .mission-info .mname { color: #eee; font-size: 13px; font-weight: 700; margin-bottom: 3px; }
+    .mission-info .mdesc { color: #888; font-size: 11px; margin-bottom: 6px; }
+    .mission-bar { width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+    .mission-bar-fill { height: 100%; background: #3b82f6; border-radius: 3px; transition: width 0.3s; }
+    .mission-bar-fill.done { background: #22c55e; }
+    .mission-prog { color: #aaa; font-size: 10px; margin-top: 3px; }
+    .mission-right { text-align: center; flex-shrink: 0; }
+    .mission-reward { color: #fbbf24; font-size: 14px; font-weight: 800; }
+    .mission-reward-lbl { color: #888; font-size: 9px; }
+    .forfeit-btn {
+      background: none; border: 1px solid rgba(239,68,68,0.4); color: #ef4444;
+      padding: 3px 10px; border-radius: 5px; font-size: 10px; cursor: pointer; margin-top: 5px;
+    }
+    .forfeit-btn:hover { background: rgba(239,68,68,0.1); }
+    .claim-btn {
+      background: #22c55e; color: #fff; border: none; padding: 5px 14px;
+      border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; margin-top: 5px;
+    }
+    .claim-btn:hover { background: #16a34a; }
+
+    /* Grayed nav item */
+    .nav-item.disabled { color: #444; cursor: not-allowed; pointer-events: none; }
+
+    /* Shop coin packs */
+    .shop-packs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; pointer-events: auto; }
+    .coin-pack {
+      background: rgba(15,52,96,0.6); border: 1px solid rgba(251,191,36,0.3);
+      border-radius: 10px; padding: 14px 10px; text-align: center;
+    }
+    .coin-pack .pack-coins { color: #fbbf24; font-size: 20px; font-weight: 800; }
+    .coin-pack .pack-label { color: #888; font-size: 11px; margin: 4px 0 8px; }
+    .coin-pack button {
+      background: #fbbf24; color: #1a1a2e; border: none; padding: 6px 16px;
+      border-radius: 6px; font-size: 12px; font-weight: 700; cursor: pointer;
+    }
+    .coin-pack button:hover { background: #f59e0b; }
+    .coin-pack button:disabled { background: #333; color: #666; cursor: not-allowed; }
+    .shop-balance { color: #aaa; font-size: 13px; margin-bottom: 14px; }
+    .shop-balance span { color: #fbbf24; font-weight: 700; }
+    .shop-dabloons { color: #aaa; font-size: 13px; margin-bottom: 14px; }
+    .shop-dabloons span { color: #3b82f6; font-weight: 700; }
+    .shop-disconnected { color: #666; font-size: 14px; font-style: italic; padding: 20px 0; }
+
+    /* About */
+    .about-section { color: #aaa; font-size: 13px; line-height: 1.8; }
+    .about-section h4 { color: #fbbf24; font-size: 14px; margin: 14px 0 6px; }
+    .about-section a { color: #fbbf24; }
+
+    /* Speed-up flash */
+    .speed-flash {
+      position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      color: #ef4444; font-size: 28px; font-weight: 800; z-index: 15;
+      pointer-events: none; opacity: 0; transition: opacity 0.3s;
+      text-shadow: 0 0 20px rgba(239,68,68,0.6);
+    }
+    .speed-flash.show { opacity: 1; }
+    .dev-credit { font-size: 11px; color: #555; margin-top: 10px; }
+    .dev-credit a { color: #fbbf24; text-decoration: none; }
+    .dev-credit a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<canvas id="c"></canvas>
+
+<!-- HUD -->
+<div class="hud hud-tl">
+  <div class="panel">
+    <div class="p-hud" id="phud"><div><div class="n" id="hn">You</div><div class="s">Snaker io</div></div></div>
+    <div class="big">Score: <span id="hs">0</span></div>
+    <div class="sm">Length: <span id="hl">5</span> &bull; Kills: <span id="hk">0</span></div>
+    <div class="sm" id="hcoins" style="color:#fbbf24"></div>
+    <div class="dab" id="hd"></div>
+    <div class="diff-hud" id="hdiff"></div>
+    <div class="boost-bar"><div class="boost-fill" id="bb" style="width:100%"></div></div>
+    <div class="sm" style="margin-top:4px;color:#3b82f6">SPACE/SHIFT/Click = boost</div>
+  </div>
+</div>
+
+<div class="hud hud-tr">
+  <div class="panel lb">
+    <h3>Leaderboard</h3>
+    <div id="lb"></div>
+  </div>
+</div>
+
+<div class="hud hud-bl">
+  <div class="panel kills-panel" id="kf" style="max-height:120px;overflow:hidden"></div>
+</div>
+
+<div class="hud hud-bc"><div class="hint">Mouse to steer &bull; SPACE / SHIFT / Click to boost &bull; WASD also works &bull; Developed by <span style="color:#fbbf24" class="_fn"></span></div></div>
+
+<div class="speed-flash" id="sflash">SPEED UP!</div>
+
+<!-- Start overlay with tabbed menu -->
+<div class="ov" id="sov">
+  <div class="menu-wrap">
+    <div class="menu-nav">
+      <div class="menu-logo">Snaker io<span class="_fnby"></span></div>
+      <div class="menu-coins" id="nav-coins">Coins: 0</div>
+      <div class="nav-item active" onclick="switchTab('play')">Play</div>
+      <div class="nav-item" onclick="switchTab('themes')">Themes</div>
+      <div class="nav-item" onclick="switchTab('missions')">Missions</div>
+      <div class="nav-item" id="nav-shop" onclick="switchTab('shop')">Shop</div>
+      <div class="nav-item" onclick="switchTab('settings')">Settings</div>
+      <div class="nav-item" onclick="switchTab('about')">About</div>
+      <div class="menu-footer">Developed by <a class="_fnlink" target="_blank"></a></div>
+    </div>
+    <div class="menu-content">
+
+      <!-- Play tab -->
+      <div class="tab-panel active" id="tab-play">
+        <h3 id="welcome-msg">Welcome</h3>
+        <button class="play-btn" id="sb">Play</button>
+        <h3>Upgrades</h3>
+        <div class="shop" id="shop"></div>
+      </div>
+
+      <!-- Themes tab -->
+      <div class="tab-panel" id="tab-themes">
+        <h3>Themes</h3>
+        <div class="theme-grid" id="theme-shop"></div>
+      </div>
+
+      <!-- Missions tab -->
+      <div class="tab-panel" id="tab-missions">
+        <h3>Active Missions</h3>
+        <div id="missions-list"></div>
+      </div>
+
+      <!-- Shop tab (buy coins with dabloons via Ducky API) -->
+      <div class="tab-panel" id="tab-shop">
+        <h3>Shop</h3>
+        <div id="shop-content"></div>
+      </div>
+
+      <!-- Settings tab -->
+      <div class="tab-panel" id="tab-settings">
+        <h3>Settings</h3>
+        <div class="setting-row">
+          <div><label>Default Zoom</label><div class="sdesc">Starting zoom level each round</div></div>
+          <input type="range" min="0.3" max="2" step="0.1" id="set-zoom" value="1" oninput="updateSetting('defaultZoom',this.value)">
+        </div>
+        <div class="setting-row">
+          <div><label>Show Minimap</label><div class="sdesc">Toggle minimap visibility</div></div>
+          <select id="set-minimap" onchange="updateSetting('minimap',this.value)">
+            <option value="1">On</option><option value="0">Off</option>
+          </select>
+        </div>
+        <div class="setting-row">
+          <div><label>Show Kill Feed</label><div class="sdesc">Toggle kill notifications</div></div>
+          <select id="set-killfeed" onchange="updateSetting('killfeed',this.value)">
+            <option value="1">On</option><option value="0">Off</option>
+          </select>
+        </div>
+        <div class="setting-row">
+          <div><label>Grid Lines</label><div class="sdesc">Toggle background grid</div></div>
+          <select id="set-grid" onchange="updateSetting('grid',this.value)">
+            <option value="1">On</option><option value="0">Off</option>
+          </select>
+        </div>
+        <button class="reset-btn" onclick="resetProgress()">Reset All Progress</button>
+      </div>
+
+      <!-- About tab -->
+      <div class="tab-panel" id="tab-about">
+        <h3>About</h3>
+        <div class="about-section">
+          <h4>Snaker io</h4>
+          <p>A fast-paced multiplayer snake game where you eat, grow, boost, and compete against AI bots. Survive as long as you can while the game speeds up!</p>
+
+          <h4>Developed by</h4>
+          <p><a class="_fnlink" target="_blank"></a> &mdash; Free online games, no downloads needed.</p>
+
+          <h4>How to Play</h4>
+          <p>Move your mouse to steer. Hold SPACE, SHIFT, or click to boost (costs length). Eat food to grow. Avoid running into other snakes or yourself. Kill bots by making them crash into your body.</p>
+
+          <h4>Upgrades</h4>
+          <p><b>Size</b> &mdash; Start each round with more segments.<br>
+          <b>Boost</b> &mdash; More boost capacity and faster regeneration.<br>
+          <b>Magnet</b> &mdash; Pull nearby food toward you automatically.</p>
+
+          <h4>Tips</h4>
+          <p>&bull; Coil around smaller bots to trap them.<br>
+          &bull; Use boost to escape dangerous situations.<br>
+          &bull; Eating dead snake food gives you a big size boost.<br>
+          &bull; The game speeds up every 20 seconds &mdash; stay alert!</p>
+
+          <h4>Version</h4>
+          <p>v1.01</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Game over -->
+<div class="ov hidden" id="gov">
+  <h2>Game Over</h2>
+  <div class="kb" id="gkb"></div>
+  <div class="reward-box" id="greward"></div>
+  <div class="fin" id="gfs"></div>
+  <button id="rb">Continue</button>
+  <div class="dev-credit">Developed by <a class="_fnlink" target="_blank"></a></div>
+</div>
+
+
+<script src="game.js"></script>
+</body>
+</html>

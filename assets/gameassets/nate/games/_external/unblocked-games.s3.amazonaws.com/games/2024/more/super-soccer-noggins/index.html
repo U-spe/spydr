@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Super Soccer Noggins</title>
+    <meta charset="utf-8">
+    <link rel="canonical" href="https://unblocked-games.s3.amazonaws.com/super-soccer-noggins.html" />
+
+    <meta name="viewport" content="initial-scale=1 maximum-scale=1 user-scalable=no minimal-ui" />
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,800' rel='stylesheet' type='text/css'>
+    
+    <style>
+        body {
+            margin: 0px 0px 1px 0px;
+            background: #000000;
+        }
+
+        #content {
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script>
+        window.addEventListener("keydown", function(e) {
+            // space and arrow keys
+            if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+    </script>
+
+    <script src="js/phaser.min.js"></script>
+    <script src="js/box2d-plugin-full.min.js"></script>
+    <script src="js/supper-soccer-noggins.min.js?v=2.1"></script>
+</head>
+<body>
+<div id="content"></div>
+</body>
+</html>

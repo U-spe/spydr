@@ -59,14 +59,13 @@ h1, h2, h3, h4, .sidebar-header h2 {
 
 /* --- DYNAMIC BACKGROUND SYSTEM --- */
 #bg-effects-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
-    background-color: transparent;
+    overflow: hidden;
+    background-color: var(--theme-background, var(--bg-primary));
 }
 
 #stars-canvas {
@@ -91,13 +90,22 @@ body[data-bg-style="fog"] #fog-overlay {
 }
 
 body[data-bg-style="gradient"] {
-    background: linear-gradient(135deg, var(--bg-primary) 0%, #1c103a 100%);
+    background: var(--theme-background, var(--bg-primary));
+}
+
+#theme-gradient-background,
+#theme-fx-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
 }
 
 /* --- MAIN DASHBOARD LAYOUT --- */
 .dashboard-wrapper {
     position: relative;
-    z-index: 2;
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -510,4 +518,147 @@ input:checked + .slider:before {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: var(--text-gray);
+}
+
+/* =========================================================
+   CUSTOM COLOR WHEEL THEME
+========================================================= */
+
+#custom-theme-panel {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--theme-border, var(--border-color));
+}
+
+#custom-theme-panel[hidden] {
+    display: none;
+}
+
+.custom-theme-help {
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+#custom-color-wheel {
+    margin: 10px 0 24px;
+}
+
+.custom-color-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.custom-color-slot {
+    flex: 1;
+    min-width: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 14px;
+
+    background: var(--bg-secondary);
+    color: var(--text-white);
+
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    transition: 0.2s ease;
+}
+
+.custom-color-slot:hover,
+.custom-color-slot.active {
+    border-color: var(--theme-primary, var(--accent-color));
+
+    box-shadow:
+        0 0 12px
+        var(--theme-glow, var(--accent-glow));
+}
+
+.custom-color-preview {
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+
+    border:
+        2px solid
+        rgba(255,255,255,0.35);
+}
+
+#custom-preview-1 {
+    background: #7c3aed;
+}
+
+#custom-preview-2 {
+    background: #3f5efb;
+}
+
+#custom-preview-3 {
+    background: #ff4fd8;
+}
+
+.custom-color-third-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 16px;
+
+    color: var(--text-gray);
+
+    font-size: 0.85rem;
+}
+
+/* =========================================================
+   CUSTOM THEME FX
+========================================================= */
+
+#custom-gradient-theme-fx {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background: linear-gradient(
+        120deg,
+        var(--custom-color-1),
+        var(--custom-color-2),
+        var(--custom-color-3),
+        var(--custom-color-1)
+    );
+
+    background-size:
+        400% 400%;
+
+    opacity: 0.28;
+
+    animation:
+        spydrCustomGradient 9s ease infinite;
+}
+
+@keyframes spydrCustomGradient {
+
+    0% {
+        background-position:
+            0% 50%;
+    }
+
+    50% {
+        background-position:
+            100% 50%;
+    }
+
+    100% {
+        background-position:
+            0% 50%;
+    }
+
 }

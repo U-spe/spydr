@@ -1,0 +1,84 @@
+{
+  "themeFX": {
+    "christmas": {
+      "name": "Christmas",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "christmas-tree",
+        "present"
+      ]
+    },
+    "halloween": {
+      "name": "Halloween",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "candy",
+        "jack-o-lantern"
+      ]
+    },
+    "fourth-of-july": {
+      "name": "4th Of July",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "firework",
+        "american-flag"
+      ]
+    },
+    "valentines": {
+      "name": "Valentines",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "heart",
+        "rose"
+      ]
+    },
+    "easter": {
+      "name": "Easter",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "chocolate-bunny",
+        "easter-egg"
+      ]
+    },
+    "sunny-day": {
+      "name": "Sunny Day",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "sunshine",
+        "rainbow"
+      ]
+    },
+    "neegy": {
+      "name": "Neegy",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "money",
+        "gold"
+      ]
+    },
+    "flowstate": {
+      "name": "Flowstate",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "retro-glasses",
+        "glow-stick"
+      ]
+    },
+    "ducky": {
+      "name": "Ducky",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "rubber-duck",
+        "baby-chick"
+      ]
+    },
+    "coffee-shop": {
+      "name": "Coffee Shop",
+      "script": "/js/global.themes.js",
+      "assets": [
+        "coffee",
+        "pastry"
+      ]
+    }
+  }
+}

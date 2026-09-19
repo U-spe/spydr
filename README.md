@@ -20,17 +20,15 @@
 
 # README HAS MOVED
 
-Your probably looking for the README, hence you scrolled so far. Well it got moved with the most recent update.
+Your probably looking for the README, hence you scrolled so far. Well it got moved in update 2.7 or 2.6?.
 
 To find the README, and other MD files, view the [MD docs](/md-docs/README.md) page. (It also included our license!)
 
 
 
 
-take that,
-
-some random dude from Solar, made by web creation studios
 
 
+# OMFG!
 
-# AYYYY WERE BACK! (tbh i diddint do shi for the prxy) but now, we are gonna get some games from Totally Science + The Pizza Edition!
+r u seein what im seein? 6 hundo commits! lets go! (mostly from me deleting 1 line stuff) but lets go!!

@@ -12,13 +12,14 @@
   <link rel="stylesheet" href="/css/chat.css">
   <link rel="stylesheet" href="/css/menu.css">
 </head>
-<body>
+<body data-bg-style="stars">
 
   <div id="loader"></div>
 
   <div id="bg-effects-container">
       <canvas id="stars-canvas"></canvas>
       <div id="fog-overlay"></div>
+      <div id="theme-fx-container"></div>
   </div>
 
   <div id="global-menu"></div>
@@ -33,9 +34,9 @@
       
       <div class="channel-list">
         <div class="channel-category">TEXT CHANNELS</div>
-        <div class="channel active" data-channel="global"><i class="ri-hashtag"></i> global</div>
-        <div class="channel" data-channel="dev-logs"><i class="ri-hashtag"></i> dev-logs</div>
-        <div class="channel" data-channel="off-topic"><i class="ri-hashtag"></i> off-topic</div>
+        <div class="channel active" data-channel="global"><i class="ri-hashtag"></i><span class="channel-label">global</span></div>
+        <div class="channel" data-channel="dev-logs"><i class="ri-hashtag"></i><span class="channel-label">dev-logs</span></div>
+        <div class="channel" data-channel="off-topic"><i class="ri-hashtag"></i><span class="channel-label">off-topic</span></div>
         
         <div class="channel-category category-header" style="margin-top: 20px;">
           <span>PRIVATE CHATS</span>

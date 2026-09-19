@@ -1,6 +1,7 @@
 const container = document.getElementById("global-menu");
+const isEmbedded = new URLSearchParams(window.location.search).get("embed") === "1";
 
-if (container) {
+if (container && !isEmbedded) {
 
     const current = window.location.pathname.split("/").pop() || "index.html";
 

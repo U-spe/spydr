@@ -20,7 +20,9 @@ export default class UIManager {
         this.dom.toggleStars = document.getElementById('toggle-stars');
         this.dom.themeRadios = document.querySelectorAll('input[name="ui-theme"]');
         this.dom.accentRadios = document.querySelectorAll('input[name="accent-color"]');
-        this.dom.bgStyleSelect = document.getElementById('bg-style-select');
+        this.dom.bgStyleSelect =
+            document.getElementById('bg-fx-variant') ||
+            document.getElementById('bg-style-select');
         this.dom.toggleCloak = document.getElementById('toggle-cloak');
         this.dom.cloakTargetSelect = document.getElementById('cloak-target-select');
 
@@ -51,6 +53,12 @@ export default class UIManager {
 
         this.dom.themeRadios?.forEach(radio => {
             radio.addEventListener('change', (e) => {
+                this.settings.set('bgStyle', 'theme');
+
+                if (this.dom.bgStyleSelect) {
+                    this.dom.bgStyleSelect.value = 'theme';
+                }
+
                 this.settings.set('theme', e.target.value);
             });
         });
@@ -138,13 +146,25 @@ export default class UIManager {
 
         switch(key) {
             case 'theme':
-                if (themeMgr) themeMgr.applyTheme(val);
+                if (themeMgr) {
+                    themeMgr.applyTheme(val).catch(error => {
+                        console.error('spydr ui // theme update failed:', error);
+                    });
+                }
                 break;
             case 'accent':
                 if (themeMgr) themeMgr.applyAccent(val);
                 break;
             case 'bgStyle':
-                if (themeMgr) themeMgr.applyBgStyle(val);
+                if (this.dom.bgStyleSelect) {
+                    this.dom.bgStyleSelect.value = val;
+                }
+
+                if (themeMgr) {
+                    themeMgr.applyBgStyle(val).catch(error => {
+                        console.error('spydr ui // background update failed:', error);
+                    });
+                }
                 break;
             case 'starsEnabled':
                 if (themeMgr) themeMgr.toggleStars(val);

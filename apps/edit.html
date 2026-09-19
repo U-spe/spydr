@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     
     <link rel="stylesheet" href="/css/allcode-edit.css">
+    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/menu.css">
 </head>
 
@@ -20,6 +21,8 @@
 
     <div id="bg-effects-container">
         <canvas id="stars-canvas"></canvas>
+        <div id="fog-overlay"></div>
+        <div id="theme-fx-container"></div>
     </div>
 
     <div id="global-menu"></div>
@@ -28,10 +31,11 @@
         
         <section class="editor-panel glass-card">
             <header class="panel-header">
-                <div class="tab-group">
-                    <button class="file-tab active" data-lang="html"><i class="ri-html5-fill"></i> index.html</button>
-                    <button class="file-tab" data-lang="css"><i class="ri-css3-fill"></i> style.css</button>
-                    <button class="file-tab" data-lang="js"><i class="ri-javascript-fill"></i> script.js</button>
+                <div class="tab-container">
+                    <div id="tab-group" class="tab-group"></div>
+                    <button id="add-tab-btn" class="add-tab-btn" title="Add Custom Language File">
+                        <i class="ri-add-line"></i>
+                    </button>
                 </div>
                 <div class="action-group">
                     <label class="toggle-switch">

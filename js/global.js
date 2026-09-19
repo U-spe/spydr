@@ -1,10 +1,9 @@
-// js/global.js
 import SettingsManager from './settings.js';
 import ThemeManager from './theme.js';
 import CloakManager from './cloak.js';
 import HotkeyManager from './hotkeys.js';
 import UIManager from './ui.js';
-import AuthManager from './auth-user.js'; // New Auth Import
+import AuthManager from './auth-user.js';
 
 class SpydrCoreRegistry {
     constructor() {
@@ -20,7 +19,6 @@ class SpydrCoreRegistry {
     }
 
     async boot() {
-        // Instantiate decoupled operational layers
         const settings = new SettingsManager();
         this.register('settings', settings);
 
@@ -36,43 +34,39 @@ class SpydrCoreRegistry {
         const ui = new UIManager(this);
         this.register('ui', ui);
 
-        // Register Auth Layer
         const auth = new AuthManager(this);
         this.register('auth', auth);
 
-        // Core initialization execution cascade
         settings.init();
 
-        // --- AUTOMATIC THEME INJECTION ---
-        const currentTheme = settings.get('theme') || 'default';
-        const currentBg = settings.get('bgStyle') || 'stars';
-        
-        document.body.setAttribute('data-theme', currentTheme);
-        document.body.setAttribute('data-bg-style', currentBg);
-
-        // Initialize remaining managers
-        theme.init();
+        // Boot theme manager first so themeFX configurations load prior to invoking FX styles
+        await theme.init();
         cloak.init();
         hotkeys.init();
         ui.init();
-        auth.init(); // Boot Auth UI checks
+        auth.init();
         
         console.log("spydr engine // Core Stack Booted & Themes Injected.");
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Hide the local server warning on the control panel if it exists
+document.addEventListener('DOMContentLoaded', async () => {
     const warning = document.getElementById('js-warning');
-    if (warning) {
-        warning.remove();
+
+    window.SpydrKernel = new SpydrCoreRegistry();
+
+    try {
+        await window.SpydrKernel.boot();
+        warning?.remove();
+    } catch (error) {
+        console.error('spydr engine // failed to boot:', error);
+
+        if (warning) {
+            warning.innerHTML =
+                '<strong>SYS_ERROR:</strong> Spydr failed to start. Check the browser console.';
+        }
     }
 
-    // Boot the core spydr kernel
-    window.SpydrKernel = new SpydrCoreRegistry();
-    window.SpydrKernel.boot();
-
-    // --- LOADER FAILSAFE FIX ---
     const loader = document.getElementById('loader') || document.getElementById('loading-screen');
     if (loader) {
         setTimeout(() => {

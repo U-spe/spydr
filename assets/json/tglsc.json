@@ -1,1773 +1,2147 @@
-
- [
-    {
-      "id": "519788",
-      "title": "The Final Earth 2",
-      "category": "Sandbox",
-      "status": null,
-      "slug": "the-final-earth-2",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/the-final-earth-2.png",
-      "game_url": "https://glseries.net/assets/applications/content/the-final-earth-2/",
-      "embed_url": "https://glseries.net/assets/applications/content/the-final-earth-2/"
-    },
-    {
-      "id": "519787",
-      "title": "Tuner Racer",
-      "category": "Racing",
-      "status": null,
-      "slug": "tuner-racer",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/tuner-racer.png",
-      "game_url": "https://glseries.net/assets/applications/content/tuner-racer/",
-      "embed_url": "https://glseries.net/assets/applications/content/tuner-racer/"
-    },
-    {
-      "id": "519786",
-      "title": "Top Driver",
-      "category": "Racing",
-      "status": null,
-      "slug": "top-driver",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/top-driver.png",
-      "game_url": "https://glseries.net/assets/applications/content/top-driver/",
-      "embed_url": "https://glseries.net/assets/applications/content/top-driver/"
-    },
-    {
-      "id": "51978676",
-      "title": "Top Driver 2",
-      "category": "Racing",
-      "status": null,
-      "slug": "top-driver-2",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/top-driver-2.png",
-      "game_url": "https://glseries.net/assets/applications/content/top-driver-2/",
-      "embed_url": "https://glseries.net/assets/applications/content/top-driver-2/"
-    },
-    {
-      "id": "519785",
-      "title": "Block Tech: Epic Sandbox",
-      "category": "Sandbox",
-      "status": null,
-      "slug": "block-tech",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/block-tech.png",
-      "game_url": "https://glseries.net/assets/applications/content/block-tech/",
-      "embed_url": "https://glseries.net/assets/applications/content/block-tech/"
-    },
-    {
-      "id": "519784",
-      "title": "PolyTrack V0.6.0",
-      "category": "Racing",
-      "status": null,
-      "slug": "0.6.0",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/polytrack.png",
-      "game_url": "https://glseries.net/assets/applications/content/0.6.0/",
-      "embed_url": "https://glseries.net/assets/applications/content/0.6.0/"
-    },
-    {
-      "id": "519783",
-      "title": "Indian Truck Driving",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "indian-truck-driving",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/indian-truck-driving.png",
-      "game_url": "https://glseries.net/assets/applications/content/indian-truck-driving/",
-      "embed_url": "https://glseries.net/assets/applications/content/indian-truck-driving/"
-    },
-    {
-      "id": "519782",
-      "title": "Slope",
-      "category": "Casual",
-      "status": null,
-      "slug": "slopenew",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/slope.png",
-      "game_url": "https://glseries.net/assets/applications/content/slopenew/",
-      "embed_url": "https://glseries.net/assets/applications/content/slopenew/"
-    },
-    {
-      "id": "519781",
-      "title": "Ultimate Car Driving Simulator",
-      "category": "Racing",
-      "status": null,
-      "slug": "ultimate-car-driving-simulator",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/ultimate-car-driving-simulator.png",
-      "game_url": "https://glseries.net/assets/applications/content/ultimate-car-driving-simulator/",
-      "embed_url": "https://glseries.net/assets/applications/content/ultimate-car-driving-simulator/"
-    },
-    {
-      "id": "519780",
-      "title": "Sky Riders",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "sky-riders",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/sky-riders.png",
-      "game_url": "https://glseries.net/assets/applications/content/sky-riders/",
-      "embed_url": "https://glseries.net/assets/applications/content/sky-riders/"
-    },
-    {
-      "id": "519779",
-      "title": "Optric",
-      "category": "Puzzle",
-      "status": null,
-      "slug": "optric",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/optric.png",
-      "game_url": "https://glseries.net/assets/applications/content/optric/",
-      "embed_url": "https://glseries.net/assets/applications/content/optric/"
-    },
-    {
-      "id": "519778",
-      "title": "Granny Prison Escape",
-      "category": "Horror",
-      "status": null,
-      "slug": "granny-prison-escape",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/granny-prison-escape.png",
-      "game_url": "https://glseries.net/assets/applications/content/granny-prison-escape/",
-      "embed_url": "https://glseries.net/assets/applications/content/granny-prison-escape/"
-    },
-    {
-      "id": "5197783",
-      "title": "Granny Forest Escape",
-      "category": "Horror",
-      "status": null,
-      "slug": "granny-forest-escape",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/granny-forest-escape.png",
-      "game_url": "https://glseries.net/assets/applications/content/granny-forest-escape/",
-      "embed_url": "https://glseries.net/assets/applications/content/granny-forest-escape/"
-    },
-    {
-      "id": "5197781",
-      "title": "Granny's Classroom Nightmare",
-      "category": "Horror",
-      "status": null,
-      "slug": "granny-classroom-nightmare",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/granny-classroom-nightmare.png",
-      "game_url": "https://glseries.net/assets/applications/content/granny-classroom-nightmare/",
-      "embed_url": "https://glseries.net/assets/applications/content/granny-classroom-nightmare/"
-    },
-    {
-      "id": "5197780",
-      "title": "Shoot Granny",
-      "category": "Horror",
-      "status": null,
-      "slug": "shoot-granny",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/shoot-granny.png",
-      "game_url": "https://glseries.net/assets/applications/content/shoot-granny/",
-      "embed_url": "https://glseries.net/assets/applications/content/shoot-granny/"
-    },
-    {
-      "id": "51977791",
-      "title": "Granny",
-      "category": "Horror",
-      "status": "popular",
-      "slug": "granny",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/granny.png",
-      "game_url": "https://glseries.net/assets/applications/content/granny/",
-      "embed_url": "https://glseries.net/assets/applications/content/granny/"
-    },
-    {
-      "id": "51977790",
-      "title": "Granny 2",
-      "category": "Horror",
-      "status": "popular",
-      "slug": "granny-2",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/granny-2.png",
-      "game_url": "https://glseries.net/assets/applications/content/granny-2/",
-      "embed_url": "https://glseries.net/assets/applications/content/granny-2/"
-    },
-    {
-      "id": "5197779",
-      "title": "Granny 4",
-      "category": "Horror",
-      "status": "popular",
-      "slug": "granny-4",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/granny-4.png",
-      "game_url": "https://glseries.net/assets/applications/content/granny-4/",
-      "embed_url": "https://glseries.net/assets/applications/content/granny-4/"
-    },
-    {
-      "id": "5197771",
-      "title": "Crazy Bikes!",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "crazy-bikes",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/crazy-bikes.png",
-      "game_url": "https://glseries.net/assets/applications/content/crazy-bikes/",
-      "embed_url": "https://glseries.net/assets/applications/content/crazy-bikes/"
-    },
-    {
-      "id": "519777",
-      "title": "Crazy Cars!",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "crazy-cars",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/crazy-cars.png",
-      "game_url": "https://glseries.net/assets/applications/content/crazy-cars/",
-      "embed_url": "https://glseries.net/assets/applications/content/crazy-cars/"
-    },
-    {
-      "id": "519776",
-      "title": "Zombie Derby: Pixel Survival",
-      "category": "Casual",
-      "status": null,
-      "slug": "zombie-derby-pixel-survival",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/zombie-derby-pixel-survival.png",
-      "game_url": "https://glseries.net/assets/applications/content/zombie-derby-pixel-survival/",
-      "embed_url": "https://glseries.net/assets/applications/content/zombie-derby-pixel-survival/"
-    },
-    {
-      "id": "519775",
-      "title": "SpookyTrack",
-      "category": "Racing",
-      "status": null,
-      "slug": "spookytrack",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/spookytrack.png",
-      "game_url": "https://glseries.net/assets/applications/content/spookytrack/",
-      "embed_url": "https://glseries.net/assets/applications/content/spookytrack/"
-    },
-    {
-      "id": "519774",
-      "title": "Block Blast",
-      "category": "Puzzle",
-      "status": null,
-      "slug": "block-blast",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/block-blast.png",
-      "game_url": "https://glseries.net/assets/applications/content/block-blast/",
-      "embed_url": "https://glseries.net/assets/applications/content/block-blast/"
-    },
-    {
-      "id": "519773",
-      "title": "YoHoHo.io",
-      "category": ".io",
-      "status": null,
-      "slug": "yohoho-io",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/yohoho-io.png",
-      "game_url": "https://glseries.net/assets/applications/content/yohoho-io/",
-      "embed_url": "https://glseries.net/assets/applications/content/yohoho-io/"
-    },
-    {
-      "id": "519772",
-      "title": "Funny Shooter 2",
-      "category": "FPS",
-      "status": null,
-      "slug": "funny-shooter-2",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/funny-shooter-2.png",
-      "game_url": "https://glseries.net/assets/applications/content/funny-shooter-2/",
-      "embed_url": "https://glseries.net/assets/applications/content/funny-shooter-2/"
-    },
-    {
-      "id": "519771",
-      "title": "Ducklings.io",
-      "category": ".io",
-      "status": null,
-      "slug": "ducklings-io",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/ducklings-io.png",
-      "game_url": "https://glseries.net/assets/applications/content/ducklings-io/",
-      "embed_url": "https://glseries.net/assets/applications/content/ducklings-io/"
-    },
-    {
-      "id": "519770",
-      "title": "Idle Ants",
-      "category": "Idle",
-      "status": null,
-      "slug": "idle-ants",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/idle-ants.png",
-      "game_url": "https://glseries.net/assets/applications/content/idle-ants/",
-      "embed_url": "https://glseries.net/assets/applications/content/idle-ants/"
-    },
-    {
-      "id": "519769",
-      "title": "Raft Survival",
-      "category": "Survival",
-      "status": null,
-      "slug": "raft-survival",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/raft-survival.png",
-      "game_url": "https://glseries.net/assets/applications/content/raft-survival/",
-      "embed_url": "https://glseries.net/assets/applications/content/raft-survival/"
-    },
-    {
-      "id": "519768",
-      "title": "Grand Vegas Simulator",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "grand-vegas-simulator",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/grand-vegas-simulator.png",
-      "game_url": "https://glseries.net/assets/applications/content/grand-vegas-simulator/",
-      "embed_url": "https://glseries.net/assets/applications/content/grand-vegas-simulator/"
-    },
-    {
-      "id": "519767",
-      "title": "Sniper Shot: Bullet Time",
-      "category": "FPS",
-      "status": null,
-      "slug": "sniper-shot-bullet-time",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/sniper-shot-bullet-time.png",
-      "game_url": "https://glseries.net/assets/applications/content/sniper-shot-bullet-time/",
-      "embed_url": "https://glseries.net/assets/applications/content/sniper-shot-bullet-time/"
-    },
-    {
-      "id": "519766",
-      "title": "House Of Hazards",
-      "category": "Two Player",
-      "status": null,
-      "slug": "house-of-hazards",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/house-of-hazards.png",
-      "game_url": "https://glseries.net/assets/applications/content/house-of-hazards/",
-      "embed_url": "https://glseries.net/assets/applications/content/house-of-hazards/"
-    },
-    {
-      "id": "519765",
-      "title": "House Painter",
-      "category": "Casual",
-      "status": null,
-      "slug": "house-painter",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/house-painter.png",
-      "game_url": "https://glseries.net/assets/applications/content/house-painter/",
-      "embed_url": "https://glseries.net/assets/applications/content/house-painter/"
-    },
-    {
-      "id": "519764",
-      "title": "Sling Drift",
-      "category": "Casual",
-      "status": null,
-      "slug": "sling-drift",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/sling-drift.png",
-      "game_url": "https://glseries.net/assets/applications/content/sling-drift/",
-      "embed_url": "https://glseries.net/assets/applications/content/sling-drift/"
-    },
-    {
-      "id": "519763",
-      "title": "Blacktop: Police Chase",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "blacktop-police-chase",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/blacktop-police-chase.png",
-      "game_url": "https://glseries.net/assets/applications/content/blacktop-police-chase/",
-      "embed_url": "https://glseries.net/assets/applications/content/blacktop-police-chase/"
-    },
-    {
-      "id": "519762",
-      "title": "Subway Surfers",
-      "category": "Casual",
-      "status": null,
-      "slug": "subway-surfers",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/subway-surfers.png",
-      "game_url": "https://glseries.net/assets/applications/content/subway-surfers/",
-      "embed_url": "https://glseries.net/assets/applications/content/subway-surfers/"
-    },
-    {
-      "id": "519761",
-      "title": "Drive Mad",
-      "category": "Casual",
-      "status": "popular",
-      "slug": "drive-mad",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/drive-mad.png",
-      "game_url": "https://glseries.net/assets/applications/content/drive-mad/",
-      "embed_url": "https://glseries.net/assets/applications/content/drive-mad/"
-    },
-    {
-      "id": "519760",
-      "title": "Skyblock 3D: Survival",
-      "category": "Survival",
-      "status": null,
-      "slug": "skyblock-3d",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/skyblock-3d.png",
-      "game_url": "https://glseries.net/assets/applications/content/skyblock-3d/",
-      "embed_url": "https://glseries.net/assets/applications/content/skyblock-3d/"
-    },
-    {
-      "id": "519759",
-      "title": "Drag Racer V3",
-      "category": "Racing",
-      "status": null,
-      "slug": "drag-racer-v3",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/drag-racer-v3.png",
-      "game_url": "https://glseries.net/assets/applications/content/drag-racer-v3/",
-      "embed_url": "https://glseries.net/assets/applications/content/drag-racer-v3/"
-    },
-    {
-      "id": "519758",
-      "title": "Rogue Within",
-      "category": "Survival",
-      "status": null,
-      "slug": "rogue-within",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/rogue-within.png",
-      "game_url": "https://glseries.net/assets/applications/content/rogue-within/",
-      "embed_url": "https://glseries.net/assets/applications/content/rogue-within/"
-    },
-    {
-      "id": "519757",
-      "title": "Crossing The Pit",
-      "category": "Puzzle",
-      "status": null,
-      "slug": "crossing-the-pit",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/crossing-the-pit.png",
-      "game_url": "https://glseries.net/assets/applications/content/crossing-the-pit/",
-      "embed_url": "https://glseries.net/assets/applications/content/crossing-the-pit/"
-    },
-    {
-      "id": "519756",
-      "title": "Breaking The Bank",
-      "category": "Puzzle",
-      "status": null,
-      "slug": "breaking-the-bank",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/breaking-the-bank.png",
-      "game_url": "https://glseries.net/assets/applications/content/breaking-the-bank/",
-      "embed_url": "https://glseries.net/assets/applications/content/breaking-the-bank/"
-    },
-    {
-      "id": "519755",
-      "title": "Crazy Cattle 3D",
-      "category": "Survival",
-      "status": null,
-      "slug": "crazy-cattle",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/crazy-cattle.png",
-      "game_url": "https://glseries.net/assets/applications/content/crazy-cattle/",
-      "embed_url": "https://glseries.net/assets/applications/content/crazy-cattle/"
-    },
-    {
-      "id": "519754",
-      "title": "Monster Tracks",
-      "category": "Casual",
-      "status": null,
-      "slug": "monster-tracks",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/monster-tracks.png",
-      "game_url": "https://glseries.net/assets/applications/content/monster-tracks/",
-      "embed_url": "https://glseries.net/assets/applications/content/monster-tracks/"
-    },
-    {
-      "id": "519753",
-      "title": "Hide And Seek Pro",
-      "category": "Horror",
-      "status": null,
-      "slug": "hide-and-seek-pro",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/hide-and-seek-pro.png",
-      "game_url": "https://glseries.net/assets/applications/content/hide-and-seek-pro/",
-      "embed_url": "https://glseries.net/assets/applications/content/hide-and-seek-pro/"
-    },
-    {
-      "id": "519752",
-      "title": "Revolution Idle X",
-      "category": "Idle",
-      "status": null,
-      "slug": "revolution-idle-x",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/revolution-idle-x.png",
-      "game_url": "https://glseries.net/assets/applications/content/revolution-idle-x/",
-      "embed_url": "https://glseries.net/assets/applications/content/revolution-idle-x/"
-    },
-    {
-      "id": "519751",
-      "title": "Traffic Tour",
-      "category": "Racing",
-      "status": null,
-      "slug": "traffic-tour",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/traffic-tour.png",
-      "game_url": "https://glseries.net/assets/applications/content/traffic-tour/",
-      "embed_url": "https://glseries.net/assets/applications/content/traffic-tour/"
-    },
-    {
-      "id": "519750",
-      "title": "Stunt Car Challenge 3",
-      "category": "Casual",
-      "status": null,
-      "slug": "stunt-car-challenge-3",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/stunt-car-challenge-3.png",
-      "game_url": "https://glseries.net/assets/applications/content/stunt-car-challenge-3/",
-      "embed_url": "https://glseries.net/assets/applications/content/stunt-car-challenge-3/"
-    },
-    {
-      "id": "519749",
-      "title": "Drag Racing Rivals",
-      "category": "Racing",
-      "status": null,
-      "slug": "drag-racing-rivals",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/drag-racing-rivals.png",
-      "game_url": "https://glseries.net/assets/applications/content/drag-racing-rivals/",
-      "embed_url": "https://glseries.net/assets/applications/content/drag-racing-rivals/"
-    },
-    {
-      "id": "519748",
-      "title": "Gladihoppers",
-      "category": "Survival",
-      "status": null,
-      "slug": "gladihoppers",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/gladihoppers.png",
-      "game_url": "https://glseries.net/assets/applications/content/gladihoppers/",
-      "embed_url": "https://glseries.net/assets/applications/content/gladihoppers/"
-    },
-    {
-      "id": "519747",
-      "title": "Rise Higher",
-      "category": "Casual",
-      "status": null,
-      "slug": "rise-higher",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/rise-higher.png",
-      "game_url": "https://glseries.net/assets/applications/content/rise-higher/",
-      "embed_url": "https://glseries.net/assets/applications/content/rise-higher/"
-    },
-    {
-      "id": "519745",
-      "title": "Bad Piggies",
-      "category": "Puzzle",
-      "status": null,
-      "slug": "bad-piggies",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/bad-piggies.png",
-      "game_url": "https://glseries.net/assets/applications/content/bad-piggies/",
-      "embed_url": "https://glseries.net/assets/applications/content/bad-piggies/"
-    },
-    {
-      "id": "519744",
-      "title": "Burnout Drift Hilltop",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "burnout-drift-hilltop",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/burnout-drift-hilltop.png",
-      "game_url": "https://glseries.net/assets/applications/content/burnout-drift-hilltop/",
-      "embed_url": "https://glseries.net/assets/applications/content/burnout-drift-hilltop/"
-    },
-    {
-      "id": "519743",
-      "title": "Drift Boss",
-      "category": "Casual",
-      "status": null,
-      "slug": "drift-boss",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/drift-boss.png",
-      "game_url": "https://glseries.net/assets/applications/content/drift-boss/",
-      "embed_url": "https://glseries.net/assets/applications/content/drift-boss/"
-    },
-    {
-      "id": "519742",
-      "title": "Drift Hunters",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "drift-hunters",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/drift-hunters.png",
-      "game_url": "https://glseries.net/assets/applications/content/drift-hunters/",
-      "embed_url": "https://glseries.net/assets/applications/content/drift-hunters/"
-    },
-    {
-      "id": "572742",
-      "title": "Drift Hunters Pro",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "drift-hunters-pro",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/drift-hunters-pro.png",
-      "game_url": "https://glseries.net/assets/applications/content/drift-hunters-pro/",
-      "embed_url": "https://glseries.net/assets/applications/content/drift-hunters-pro/"
-    },
-    {
-      "id": "519741",
-      "title": "Cubefield",
-      "category": "Casual",
-      "status": null,
-      "slug": "cubefield",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/cubefield.png",
-      "game_url": "https://glseries.net/assets/applications/content/cubefield/",
-      "embed_url": "https://glseries.net/assets/applications/content/cubefield/"
-    },
-    {
-      "id": "519740",
-      "title": "Cluster Rush",
-      "category": "Casual",
-      "status": null,
-      "slug": "cluster-rush",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/cluster-rush.png",
-      "game_url": "https://glseries.net/assets/applications/content/cluster-rush/",
-      "embed_url": "https://glseries.net/assets/applications/content/cluster-rush/"
-    },
-    {
-      "id": "519739",
-      "title": "Happy Wheels",
-      "category": "Casual",
-      "status": null,
-      "slug": "happy-wheels",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/happy-wheels.png",
-      "game_url": "https://glseries.net/assets/applications/content/happy-wheels/",
-      "embed_url": "https://glseries.net/assets/applications/content/happy-wheels/"
-    },
-    {
-      "id": "519738",
-      "title": "Getaway Shootout",
-      "category": "Two Player",
-      "status": null,
-      "slug": "getaway-shootout",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/getaway-shootout.png",
-      "game_url": "https://glseries.net/assets/applications/content/getaway-shootout/",
-      "embed_url": "https://glseries.net/assets/applications/content/getaway-shootout/"
-    },
-    {
-      "id": "519737",
-      "title": "Pako Highway",
-      "category": "Racing",
-      "status": null,
-      "slug": "pako-highway",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/pako-highway.png",
-      "game_url": "https://glseries.net/assets/applications/content/pako-highway/",
-      "embed_url": "https://glseries.net/assets/applications/content/pako-highway/"
-    },
-    {
-      "id": "519736",
-      "title": "Cat Brick Breaker",
-      "category": "Casual",
-      "status": null,
-      "slug": "cat-brick",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/cat-brick.png",
-      "game_url": "https://glseries.net/assets/applications/content/cat-brick/",
-      "embed_url": "https://glseries.net/assets/applications/content/cat-brick/"
-    },
-    {
-      "id": "519735",
-      "title": "GunNight.io",
-      "category": ".io",
-      "status": null,
-      "slug": "gunnight-io",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/gunnight-io.png",
-      "game_url": "https://glseries.net/assets/applications/content/gunnight-io/",
-      "embed_url": "https://glseries.net/assets/applications/content/gunnight-io/"
-    },
-    {
-      "id": "519734",
-      "title": "Heist.io",
-      "category": ".io",
-      "status": null,
-      "slug": "heist-io",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/heist-io.png",
-      "game_url": "https://glseries.net/assets/applications/content/heist-io/",
-      "embed_url": "https://glseries.net/assets/applications/content/heist-io/"
-    },
-    {
-      "id": "519733",
-      "title": "BitLife",
-      "category": "Sandbox",
-      "status": null,
-      "slug": "bitlife",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/bitlife.png",
-      "game_url": "https://glseries.net/assets/applications/content/bitlife/",
-      "embed_url": "https://glseries.net/assets/applications/content/bitlife/"
-    },
-    {
-      "id": "519732",
-      "title": "Skibidi 1v100",
-      "category": "FPS",
-      "status": null,
-      "slug": "skibidi-1v100",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/skibidi-1v100.png",
-      "game_url": "https://glseries.net/assets/applications/content/skibidi-1v100/",
-      "embed_url": "https://glseries.net/assets/applications/content/skibidi-1v100/"
-    },
-    {
-      "id": "519731",
-      "title": "Death Run 3D",
-      "category": "Casual",
-      "status": null,
-      "slug": "death-run-3d",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/death-run-3d.png",
-      "game_url": "https://glseries.net/assets/applications/content/death-run-3d/",
-      "embed_url": "https://glseries.net/assets/applications/content/death-run-3d/"
-    },
-    {
-      "id": "519730",
-      "title": "Rocket Soccer Derby",
-      "category": "Racing",
-      "status": null,
-      "slug": "rocket-soccer-derby",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/rocket-soccer-derby.png",
-      "game_url": "https://glseries.net/assets/applications/content/rocket-soccer-derby/",
-      "embed_url": "https://glseries.net/assets/applications/content/rocket-soccer-derby/"
-    },
-    {
-      "id": "519729",
-      "title": "Tunnel Rush",
-      "category": "Casual",
-      "status": null,
-      "slug": "tunnel-rush",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/tunnel-rush.png",
-      "game_url": "https://glseries.net/assets/applications/content/tunnel-rush/",
-      "embed_url": "https://glseries.net/assets/applications/content/tunnel-rush/"
-    },
-    {
-      "id": "519728",
-      "title": "Choppy Orc",
-      "category": "Casual",
-      "status": null,
-      "slug": "choppy-orc",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/choppy-orc.png",
-      "game_url": "https://glseries.net/assets/applications/content/choppy-orc/",
-      "embed_url": "https://glseries.net/assets/applications/content/choppy-orc/"
-    },
-    {
-      "id": "519727",
-      "title": "Astro Survivors",
-      "category": "Survival",
-      "status": null,
-      "slug": "astro-survivors",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/astro-survivors.png",
-      "game_url": "https://glseries.net/assets/applications/content/astro-survivors/",
-      "embed_url": "https://glseries.net/assets/applications/content/astro-survivors/"
-    },
-    {
-      "id": "519726",
-      "title": "Roper",
-      "category": "Casual",
-      "status": null,
-      "slug": "roper",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/roper.png",
-      "game_url": "https://glseries.net/assets/applications/content/roper/",
-      "embed_url": "https://glseries.net/assets/applications/content/roper/"
-    },
-    {
-      "id": "519725",
-      "title": "Tomb Of The Mask",
-      "category": "Casual",
-      "status": null,
-      "slug": "tomb-of-the-mask",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/tomb-of-the-mask.png",
-      "game_url": "https://glseries.net/assets/applications/content/tomb-of-the-mask/",
-      "embed_url": "https://glseries.net/assets/applications/content/tomb-of-the-mask/"
-    },
-    {
-      "id": "519724",
-      "title": "Big Tower Tiny Square",
-      "category": "Casual",
-      "status": null,
-      "slug": "big-tower-tiny-square",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/big-tower-tiny-square.png",
-      "game_url": "https://glseries.net/assets/applications/content/big-tower-tiny-square/",
-      "embed_url": "https://glseries.net/assets/applications/content/big-tower-tiny-square/"
-    },
-    {
-      "id": "519723",
-      "title": "FNAF 3",
-      "category": "Horror",
-      "status": null,
-      "slug": "fnaf3",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/fnaf3.png",
-      "game_url": "https://glseries.net/assets/applications/content/fnaf3/",
-      "embed_url": "https://glseries.net/assets/applications/content/fnaf3/"
-    },
-    {
-      "id": "519722",
-      "title": "Swingo",
-      "category": "Casual",
-      "status": null,
-      "slug": "swingo",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/swingo.png",
-      "game_url": "https://glseries.net/assets/applications/content/swingo/",
-      "embed_url": "https://glseries.net/assets/applications/content/swingo/"
-    },
-    {
-      "id": "519721",
-      "title": "Run 3",
-      "category": "Casual",
-      "status": null,
-      "slug": "run-3",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/run-3.png",
-      "game_url": "https://glseries.net/assets/applications/content/run-3/",
-      "embed_url": "https://glseries.net/assets/applications/content/run-3/"
-    },
-    {
-      "id": "519720",
-      "title": "Frying Nemo",
-      "category": "Casual",
-      "status": null,
-      "slug": "frying-nemo",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/frying-nemo.png",
-      "game_url": "https://glseries.net/assets/applications/content/frying-nemo/",
-      "embed_url": "https://glseries.net/assets/applications/content/frying-nemo/"
-    },
-    {
-      "id": "519719",
-      "title": "Neon Swing",
-      "category": "Casual",
-      "status": null,
-      "slug": "neon-swing",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/neon-swing.png",
-      "game_url": "https://glseries.net/assets/applications/content/neon-swing/",
-      "embed_url": "https://glseries.net/assets/applications/content/neon-swing/"
-    },
-    {
-      "id": "519718",
-      "title": "Dune!",
-      "category": "Casual",
-      "status": null,
-      "slug": "dune",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/dune.png",
-      "game_url": "https://glseries.net/assets/applications/content/dune/",
-      "embed_url": "https://glseries.net/assets/applications/content/dune/"
-    },
-    {
-      "id": "519717",
-      "title": "Sketchbook",
-      "category": "Casual",
-      "status": null,
-      "slug": "sketchbook",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/sketchbook.png",
-      "game_url": "https://glseries.net/assets/applications/content/sketchbook/",
-      "embed_url": "https://glseries.net/assets/applications/content/sketchbook/"
-    },
-    {
-      "id": "519716",
-      "title": "Free Rider Jumps",
-      "category": "Casual",
-      "status": null,
-      "slug": "free-rider-jumps",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/free-rider-jumps.png",
-      "game_url": "https://glseries.net/assets/applications/content/free-rider-jumps/",
-      "embed_url": "https://glseries.net/assets/applications/content/free-rider-jumps/"
-    },
-    {
-      "id": "519715",
-      "title": "Fear Response",
-      "category": "Horror",
-      "status": null,
-      "slug": "fear-response",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/fear-response.png",
-      "game_url": "https://glseries.net/assets/applications/content/fear-response/",
-      "embed_url": "https://glseries.net/assets/applications/content/fear-response/"
-    },
-    {
-      "id": "519714",
-      "title": "4x4 Offroad",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "4x4",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/4x4.png",
-      "game_url": "https://glseries.net/assets/applications/content/4x4/",
-      "embed_url": "https://glseries.net/assets/applications/content/4x4/"
-    },
-    {
-      "id": "519713",
-      "title": "Merge Round Racers",
-      "category": "Casual",
-      "status": null,
-      "slug": "merge-round-racers",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/merge-round-racers.png",
-      "game_url": "https://glseries.net/assets/applications/content/merge-round-racers/",
-      "embed_url": "https://glseries.net/assets/applications/content/merge-round-racers/"
-    },
-    {
-      "id": "519712",
-      "title": "Ragdoll Archers",
-      "category": "Casual",
-      "status": null,
-      "slug": "ragdoll-archers",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/ragdoll-archers.png",
-      "game_url": "https://glseries.net/assets/applications/content/ragdoll-archers/",
-      "embed_url": "https://glseries.net/assets/applications/content/ragdoll-archers/"
-    },
-    {
-      "id": "519710",
-      "title": "Grow A Garden Single Player",
-      "category": "Casual",
-      "status": null,
-      "slug": "gag2",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/growagarden-single.png",
-      "game_url": "https://glseries.net/assets/applications/content/gag2/",
-      "embed_url": "https://glseries.net/assets/applications/content/gag2/"
-    },
-    {
-      "id": "519709",
-      "title": "Rallypoint",
-      "category": "Racing",
-      "status": null,
-      "slug": "rallypoint",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/rallypoint.png",
-      "game_url": "https://glseries.net/assets/applications/content/rallypoint/",
-      "embed_url": "https://glseries.net/assets/applications/content/rallypoint/"
-    },
-    {
-      "id": "519708",
-      "title": "Nova Craft",
-      "category": "Sandbox",
-      "status": null,
-      "slug": "novacraft",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/novacraft.png",
-      "game_url": "https://glseries.net/assets/applications/content/novacraft/",
-      "embed_url": "https://glseries.net/assets/applications/content/novacraft/"
-    },
-    {
-      "id": "519707",
-      "title": "Burrito Bison",
-      "category": "Causal",
-      "status": null,
-      "slug": "burrito-bison",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/burrito-bison.png",
-      "game_url": "https://glseries.net/assets/applications/content/burrito-bison/",
-      "embed_url": "https://glseries.net/assets/applications/content/burrito-bison/"
-    },
-    {
-      "id": "519706",
-      "title": "Wobbly Boxing",
-      "category": "Two Player",
-      "status": null,
-      "slug": "wobbly-boxing",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/wobbly-boxing.png",
-      "game_url": "https://glseries.net/assets/applications/content/wobbly-boxing/",
-      "embed_url": "https://glseries.net/assets/applications/content/wobbly-boxing/"
-    },
-    {
-      "id": "519703",
-      "title": "Bee Swarm Simulator",
-      "category": "Casual",
-      "status": null,
-      "slug": "bee-swarm-simulator",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/bee-swarm-simulator.png",
-      "game_url": "https://glseries.net/assets/applications/content/bee-swarm-simulator/",
-      "embed_url": "https://glseries.net/assets/applications/content/bee-swarm-simulator/"
-    },
-    {
-      "id": "519701",
-      "title": "Retro Garage",
-      "category": "Casual",
-      "status": null,
-      "slug": "retro-garage",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/retro-garage.png",
-      "game_url": "https://glseries.net/assets/applications/content/retro-garage/",
-      "embed_url": "https://glseries.net/assets/applications/content/retro-garage/"
-    },
-    {
-      "id": "519700",
-      "title": "CarX Drift",
-      "category": "Racing",
-      "status": null,
-      "slug": "carx-drift",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/carx-drift.png",
-      "game_url": "https://glseries.net/assets/applications/content/carx-drift/",
-      "embed_url": "https://glseries.net/assets/applications/content/carx-drift/"
-    },
-    {
-      "id": "519699",
-      "title": "Drive Zone",
-      "category": "Racing",
-      "status": null,
-      "slug": "drive-zone",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/drive-zone.png",
-      "game_url": "https://glseries.net/assets/applications/content/drive-zone/",
-      "embed_url": "https://glseries.net/assets/applications/content/drive-zone/"
-    },
-    {
-      "id": "519698",
-      "title": "RaceMax",
-      "category": "Racing",
-      "status": null,
-      "slug": "racemax",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/racemax.png",
-      "game_url": "https://glseries.net/assets/applications/content/racemax/",
-      "embed_url": "https://glseries.net/assets/applications/content/racemax/"
-    },
-    {
-      "id": "519697",
-      "title": "Cool Cars Highway",
-      "category": "Racing",
-      "status": null,
-      "slug": "cool-cars-highway",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/cool-cars-highway.png",
-      "game_url": "https://glseries.net/assets/applications/content/cool-cars-highway/",
-      "embed_url": "https://glseries.net/assets/applications/content/cool-cars-highway/"
-    },
-    {
-      "id": "519696",
-      "title": "Crazy City Racing",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "crazy-city-racing",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/crazy-city-racing.png",
-      "game_url": "https://glseries.net/assets/applications/content/crazy-city-racing/",
-      "embed_url": "https://glseries.net/assets/applications/content/crazy-city-racing/"
-    },
-    {
-      "id": "519695",
-      "title": "Dream Car",
-      "category": "Idle",
-      "status": null,
-      "slug": "dream-car",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/dream-car.png",
-      "game_url": "https://glseries.net/assets/applications/content/dream-car/",
-      "embed_url": "https://glseries.net/assets/applications/content/dream-car/"
-    },
-    {
-      "id": "519694",
-      "title": "Among Rescue",
-      "category": "Casual",
-      "status": null,
-      "slug": "among-rescue",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/among-rescue.png",
-      "game_url": "https://glseries.net/assets/applications/content/among-rescue/",
-      "embed_url": "https://glseries.net/assets/applications/content/among-rescue/"
-    },
-    {
-      "id": "519693",
-      "title": "Pixel Speedrun",
-      "category": "Casual",
-      "status": null,
-      "slug": "pixel-speedrun",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/pixel-speedrun.png",
-      "game_url": "https://glseries.net/assets/applications/content/pixel-speedrun/",
-      "embed_url": "https://glseries.net/assets/applications/content/pixel-speedrun/"
-    },
-    {
-      "id": "519692",
-      "title": "Traffic Racer",
-      "category": "Racing",
-      "status": null,
-      "slug": "traffic-racer-release2",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/traffic-racer.png",
-      "game_url": "https://glseries.net/assets/applications/content/traffic-racer-release2/",
-      "embed_url": "https://glseries.net/assets/applications/content/traffic-racer-release2/"
-    },
-    {
-      "id": "519691",
-      "title": "Super Crew",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "super-crew",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/super-crew.png",
-      "game_url": "https://glseries.net/assets/applications/content/super-crew/",
-      "embed_url": "https://glseries.net/assets/applications/content/super-crew/"
-    },
-    {
-      "id": "519690",
-      "title": "BLOODMONEY!",
-      "category": "Casual",
-      "status": null,
-      "slug": "bloodmoney",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/bloodmoney.png",
-      "game_url": "https://glseries.net/assets/applications/content/bloodmoney/",
-      "embed_url": "https://glseries.net/assets/applications/content/bloodmoney/"
-    },
-    {
-      "id": "519689",
-      "title": "Mello",
-      "category": "Casual",
-      "status": null,
-      "slug": "mello",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/mello.png",
-      "game_url": "https://glseries.net/assets/applications/content/mello/",
-      "embed_url": "https://glseries.net/assets/applications/content/mello/"
-    },
-    {
-      "id": "519688",
-      "title": "Scary Teacher 3D",
-      "category": "Casual",
-      "status": null,
-      "slug": "scary-teacher-3d",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/scary-teacher-3d.png",
-      "game_url": "https://glseries.net/assets/applications/content/scary-teacher-3d/",
-      "embed_url": "https://glseries.net/assets/applications/content/scary-teacher-3d/"
-    },
-    {
-      "id": "519687",
-      "title": "Midnight Drive",
-      "category": "Racing",
-      "status": null,
-      "slug": "midnight-drive",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/midnight-drive.png",
-      "game_url": "https://glseries.net/assets/applications/content/midnight-drive/",
-      "embed_url": "https://glseries.net/assets/applications/content/midnight-drive/"
-    },
-    {
-      "id": "519686",
-      "title": "Snow Plow",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "snow-plow",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/snow-plow.png",
-      "game_url": "https://glseries.net/assets/applications/content/snow-plow/",
-      "embed_url": "https://glseries.net/assets/applications/content/snow-plow/"
-    },
-    {
-      "id": "519685",
-      "title": "Harvest Simulator",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "harvest-simulator",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/harvest-simulator.png",
-      "game_url": "https://glseries.net/assets/applications/content/harvest-simulator/",
-      "embed_url": "https://glseries.net/assets/applications/content/harvest-simulator/"
-    },
-    {
-      "id": "519684",
-      "title": "xx142-b2.exe",
-      "category": "Casual",
-      "status": null,
-      "slug": "xx142-b2.exe",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/xx142-b2.exe.png",
-      "game_url": "https://glseries.net/assets/applications/content/xx142-b2.exe/",
-      "embed_url": "https://glseries.net/assets/applications/content/xx142-b2.exe/"
-    },
-    {
-      "id": "519683",
-      "title": "Tanuki Sunset",
-      "category": "Casual",
-      "status": null,
-      "slug": "tanuki-sunset",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/tanuki-sunset.png",
-      "game_url": "https://glseries.net/assets/applications/content/tanuki-sunset/",
-      "embed_url": "https://glseries.net/assets/applications/content/tanuki-sunset/"
-    },
-    {
-      "id": "519682",
-      "title": "Yandere Simulator",
-      "category": "Casual",
-      "status": null,
-      "slug": "yandere-simulator",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/yandere-simulator.png",
-      "game_url": "https://glseries.net/assets/applications/content/yandere-simulator/",
-      "embed_url": "https://glseries.net/assets/applications/content/yandere-simulator/"
-    },
-    {
-      "id": "519681",
-      "title": "Baldi's Basics",
-      "category": "Horror",
-      "status": null,
-      "slug": "baldis-basics",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/baldis-basics.png",
-      "game_url": "https://glseries.net/assets/applications/content/baldis-basics/",
-      "embed_url": "https://glseries.net/assets/applications/content/baldis-basics/"
-    },
-    {
-      "id": "519679",
-      "title": "Bodycam",
-      "category": "FPS",
-      "status": null,
-      "slug": "bodycam",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/bodycam.png",
-      "game_url": "https://glseries.net/assets/applications/content/bodycam/",
-      "embed_url": "https://glseries.net/assets/applications/content/bodycam/"
-    },
-    {
-      "id": "519678",
-      "title": "Drift Zero",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "drift-zero",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/drift-zero.png",
-      "game_url": "https://glseries.net/assets/applications/content/drift-zero/",
-      "embed_url": "https://glseries.net/assets/applications/content/drift-zero/"
-    },
-    {
-      "id": "519677",
-      "title": "DriveOff",
-      "category": "Casual Driving",
-      "status": null,
-      "slug": "driveoff",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/driveoff.png",
-      "game_url": "https://glseries.net/assets/applications/content/driveoff/",
-      "embed_url": "https://glseries.net/assets/applications/content/driveoff/"
-    },
-    {
-      "id": "519676",
-      "title": "Escape Road",
-      "category": "Casual",
-      "status": null,
-      "slug": "escape-road",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/escape-road.png",
-      "game_url": "https://glseries.net/assets/applications/content/escape-road/",
-      "embed_url": "https://glseries.net/assets/applications/content/escape-road/"
-    },
-    {
-      "id": "519675",
-      "title": "Escape Road 2",
-      "category": "Casual",
-      "status": null,
-      "slug": "escape-road-2",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/escape-road-2.png",
-      "game_url": "https://glseries.net/assets/applications/content/escape-road-2/",
-      "embed_url": "https://glseries.net/assets/applications/content/escape-road-2/"
-    },
-    {
-      "id": "519674",
-      "title": "Horror Tale",
-      "category": "Horror",
-      "status": null,
-      "slug": "horror-tale",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/horror-tale.png",
-      "game_url": "https://glseries.net/assets/applications/content/horror-tale/",
-      "embed_url": "https://glseries.net/assets/applications/content/horror-tale/"
-    },
-    {
-      "id": "519673",
-      "title": "Horror Tale 2: Samantha",
-      "category": "Horror",
-      "status": null,
-      "slug": "horror-tale-2",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/horror-tale-2.png",
-      "game_url": "https://glseries.net/assets/applications/content/horror-tale-2/",
-      "embed_url": "https://glseries.net/assets/applications/content/horror-tale-2/"
-    },
-    {
-      "id": "519672",
-      "title": "Horror Tale 3: The Witch",
-      "category": "Horror",
-      "status": null,
-      "slug": "horror-tale-3",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/horror-tale-3.png",
-      "game_url": "https://glseries.net/assets/applications/content/horror-tale-3/",
-      "embed_url": "https://glseries.net/assets/applications/content/horror-tale-3/"
-    },
-    {
-      "id": "519671",
-      "title": "Merge & Construct",
-      "category": "Casual",
-      "status": null,
-      "slug": "merge-construct",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/merge-construct.png",
-      "game_url": "https://glseries.net/assets/applications/content/merge-construct/",
-      "embed_url": "https://glseries.net/assets/applications/content/merge-construct/"
-    },
-    {
-      "id": "519670",
-      "title": "Snow Rider 3D",
-      "category": "Casual",
-      "status": null,
-      "slug": "snow-rider-3d",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/snow-rider-3d.png",
-      "game_url": "https://glseries.net/assets/applications/content/snow-rider-3d/",
-      "embed_url": "https://glseries.net/assets/applications/content/snow-rider-3d/"
-    },
-    {
-      "id": "519669",
-      "title": "Feral Frontier",
-      "category": "FPS",
-      "status": null,
-      "slug": "feral-frontier",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/feral-frontier.png",
-      "game_url": "https://glseries.net/assets/applications/content/feral-frontier/",
-      "embed_url": "https://glseries.net/assets/applications/content/feral-frontier/"
-    },
-    {
-      "id": "519668",
-      "title": "Bridge Constructor",
-      "category": "Sandbox",
-      "status": null,
-      "slug": "bridge-constructor",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/bridge-constructor.png",
-      "game_url": "https://glseries.net/assets/applications/content/bridge-constructor/",
-      "embed_url": "https://glseries.net/assets/applications/content/bridge-constructor/"
-    },
-    {
-      "id": "519667",
-      "title": "Criminalz",
-      "category": "Casual",
-      "status": null,
-      "slug": "criminalz",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/criminalz.png",
-      "game_url": "https://glseries.net/assets/applications/content/criminalz/",
-      "embed_url": "https://glseries.net/assets/applications/content/criminalz/"
-    },
-    {
-      "id": "519666",
-      "title": "Decks of Dexterity",
-      "category": "Survival",
-      "status": "popular",
-      "slug": "decks-of-dexterity",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/decks-of-dexterity.png",
-      "game_url": "https://glseries.net/assets/applications/content/decks-of-dexterity/",
-      "embed_url": "https://glseries.net/assets/applications/content/decks-of-dexterity/"
-    },
-    {
-      "id": "519665",
-      "title": "Alternate World",
-      "category": "Survival",
-      "status": null,
-      "slug": "alternate-world",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/alternate-world.png",
-      "game_url": "https://glseries.net/assets/applications/content/alternate-world/",
-      "embed_url": "https://glseries.net/assets/applications/content/alternate-world/"
-    },
-    {
-      "id": "519664",
-      "title": "Havendock",
-      "category": "Survival",
-      "status": null,
-      "slug": "havendock",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/havendock.png",
-      "game_url": "https://glseries.net/assets/applications/content/havendock/",
-      "embed_url": "https://glseries.net/assets/applications/content/havendock/"
-    },
-    {
-      "id": "519663",
-      "title": "4WD Only Up!",
-      "category": "Casual",
-      "status": null,
-      "slug": "4wd-only-up",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/4wd-only-up.png",
-      "game_url": "https://glseries.net/assets/applications/content/4wd-only-up/",
-      "embed_url": "https://glseries.net/assets/applications/content/4wd-only-up/"
-    },
-    {
-      "id": "519662",
-      "title": "Will it Crush?",
-      "category": "Idle",
-      "status": null,
-      "slug": "will-it-crush",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/will-it-crush.png",
-      "game_url": "https://glseries.net/assets/applications/content/will-it-crush/",
-      "embed_url": "https://glseries.net/assets/applications/content/will-it-crush/"
-    },
-    {
-      "id": "519661",
-      "title": "Grid Architect: GPU Tycoon",
-      "category": "Idle",
-      "status": null,
-      "slug": "grid-architect",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/grid-architect.png",
-      "game_url": "https://glseries.net/assets/applications/content/grid-architect/",
-      "embed_url": "https://glseries.net/assets/applications/content/grid-architect/"
-    },
-    {
-      "id": "519660",
-      "title": "The Long Drive",
-      "category": "Survival",
-      "status": null,
-      "slug": "the-long-drive",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/the-long-drive.png",
-      "game_url": "https://glseries.net/assets/applications/content/the-long-drive/",
-      "embed_url": "https://glseries.net/assets/applications/content/the-long-drive/"
-    },
-    {
-      "id": "519659",
-      "title": "Boxes & Mechanisms",
-      "category": "Idle",
-      "status": null,
-      "slug": "boxes-and-mechanisms",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/boxes-and-mechanisms.png",
-      "game_url": "https://glseries.net/assets/applications/content/boxes-and-mechanisms/",
-      "embed_url": "https://glseries.net/assets/applications/content/boxes-and-mechanisms/"
-    },
-    {
-      "id": "519658",
-      "title": "Kiosk",
-      "category": "Horror",
-      "status": null,
-      "slug": "kiosk",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/kiosk.png",
-      "game_url": "https://glseries.net/assets/applications/content/kiosk/",
-      "embed_url": "https://glseries.net/assets/applications/content/kiosk/"
-    },
-    {
-      "id": "519657",
-      "title": "Raftopia",
-      "category": "Idle",
-      "status": null,
-      "slug": "raftopia",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/raftopia.png",
-      "game_url": "https://glseries.net/assets/applications/content/raftopia/",
-      "embed_url": "https://glseries.net/assets/applications/content/raftopia/"
-    },
-    {
-      "id": "519656",
-      "title": "Sky Balance",
-      "category": "Casual",
-      "status": null,
-      "slug": "sky-balance",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/sky-balance.png",
-      "game_url": "https://glseries.net/assets/applications/content/sky-balance/",
-      "embed_url": "https://glseries.net/assets/applications/content/sky-balance/"
-    },
-    {
-      "id": "519655",
-      "title": "Find The Pets",
-      "category": "Casual",
-      "status": null,
-      "slug": "find-the-pets",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/find-the-pets.png",
-      "game_url": "https://glseries.net/assets/applications/content/find-the-pets/",
-      "embed_url": "https://glseries.net/assets/applications/content/find-the-pets/"
-    },
-    {
-      "id": "519654",
-      "title": "Racing Limits",
-      "category": "Racing",
-      "status": null,
-      "slug": "racing-limits",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/racing-limits.png",
-      "game_url": "https://glseries.net/assets/applications/content/racing-limits/",
-      "embed_url": "https://glseries.net/assets/applications/content/racing-limits/"
-    },
-    {
-      "id": "519653",
-      "title": "Tiny Towers",
-      "category": "Idle",
-      "status": null,
-      "slug": "tiny-towers",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/tiny-towers.png",
-      "game_url": "https://glseries.net/assets/applications/content/tiny-towers/",
-      "embed_url": "https://glseries.net/assets/applications/content/tiny-towers/"
-    },
-    {
-      "id": "519652",
-      "title": "Fullspeed Racing",
-      "category": "Racing",
-      "status": null,
-      "slug": "fullspeed-racing",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/fullspeed-racing.png",
-      "game_url": "https://glseries.net/assets/applications/content/fullspeed-racing/",
-      "embed_url": "https://glseries.net/assets/applications/content/fullspeed-racing/"
-    },
-    {
-      "id": "519651",
-      "title": "Townscaper",
-      "category": "Sandbox",
-      "status": null,
-      "slug": "townscaper",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/townscaper.png",
-      "game_url": "https://glseries.net/assets/applications/content/townscaper/",
-      "embed_url": "https://glseries.net/assets/applications/content/townscaper/"
-    },
-    {
-      "id": "519650",
-      "title": "WebGL Fluid",
-      "category": "Sandbox",
-      "status": null,
-      "slug": "webgl-fluid",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/webgl-fluid.png",
-      "game_url": "https://glseries.net/assets/applications/content/webgl-fluid/",
-      "embed_url": "https://glseries.net/assets/applications/content/webgl-fluid/"
-    },
-    {
-      "id": "519649",
-      "title": "WebGL Water",
-      "category": "Sandbox",
-      "status": null,
-      "slug": "webgl-water",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/webgl-water.png",
-      "game_url": "https://glseries.net/assets/applications/content/webgl-water/",
-      "embed_url": "https://glseries.net/assets/applications/content/webgl-water/"
-    },
-    {
-      "id": "519648.5",
-      "title": "Little Alchemy",
-      "category": "Sandbox",
-      "status": null,
-      "slug": "little-alchemy",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/little-alchemy.png",
-      "game_url": "https://glseries.net/assets/applications/content/little-alchemy/",
-      "embed_url": "https://glseries.net/assets/applications/content/little-alchemy/"
-    },
-    {
-      "id": "519648",
-      "title": "Little Alchemy 2",
-      "category": "Sandbox",
-      "status": null,
-      "slug": "little-alchemy-2",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/little-alchemy-2.png",
-      "game_url": "https://glseries.net/assets/applications/content/little-alchemy-2/",
-      "embed_url": "https://glseries.net/assets/applications/content/little-alchemy-2/"
-    },
-    {
-      "id": "519647",
-      "title": "Aviasali",
-      "category": "Sandbox",
-      "status": null,
-      "slug": "aviasali",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/aviasali.png",
-      "game_url": "https://glseries.net/assets/applications/content/aviasali/",
-      "embed_url": "https://glseries.net/assets/applications/content/aviasali/"
-    },
-    {
-      "id": "519646",
-      "title": "Space Waves",
-      "category": "Casual",
-      "status": null,
-      "slug": "space-waves",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/space-waves.png",
-      "game_url": "https://glseries.net/assets/applications/content/space-waves/",
-      "embed_url": "https://glseries.net/assets/applications/content/space-waves/"
-    },
-    {
-      "id": "519645",
-      "title": "Spy Highway",
-      "category": "FPS",
-      "status": null,
-      "slug": "spy-highway",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/spy-highway.png",
-      "game_url": "https://glseries.net/assets/applications/content/spy-highway/",
-      "embed_url": "https://glseries.net/assets/applications/content/spy-highway/"
-    },
-    {
-      "id": "519644",
-      "title": "Fly for Fly",
-      "category": "Casual",
-      "status": null,
-      "slug": "fly-for-fly",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/fly-for-fly.png",
-      "game_url": "https://glseries.net/assets/applications/content/fly-for-fly/",
-      "embed_url": "https://glseries.net/assets/applications/content/fly-for-fly/"
-    },
-    {
-      "id": "519643",
-      "title": "Kick The Buddy",
-      "category": "Casual",
-      "status": null,
-      "slug": "kick-the-buddy",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/kick-the-buddy.png",
-      "game_url": "https://glseries.net/assets/applications/content/kick-the-buddy/",
-      "embed_url": "https://glseries.net/assets/applications/content/kick-the-buddy/"
-    },
-    {
-      "id": "519642",
-      "title": "Punch The Trump",
-      "category": "Casual",
-      "status": null,
-      "slug": "punch-the-trump",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/punch-the-trump.png",
-      "game_url": "https://glseries.net/assets/applications/content/punch-the-trump/",
-      "embed_url": "https://glseries.net/assets/applications/content/punch-the-trump/"
-    },
-    {
-      "id": "519641",
-      "title": "Plants vs. Zombies",
-      "category": "Survival",
-      "status": null,
-      "slug": "plants-vs-zombies",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/plants-vs-zombies.png",
-      "game_url": "https://glseries.net/assets/applications/content/plants-vs-zombies/",
-      "embed_url": "https://glseries.net/assets/applications/content/plants-vs-zombies/"
-    },
-    {
-      "id": "519640",
-      "title": "Deal Or No Deal",
-      "category": "Casual",
-      "status": null,
-      "slug": "deal-or-no-deal",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/deal-or-no-deal.png",
-      "game_url": "https://glseries.net/assets/applications/content/deal-or-no-deal/",
-      "embed_url": "https://glseries.net/assets/applications/content/deal-or-no-deal/"
-    },
-    {
-      "id": "519639",
-      "title": "Five Nights at Epstein's",
-      "category": "Horror",
-      "status": null,
-      "slug": "fnae",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/fnae.png",
-      "game_url": "https://glseries.net/assets/applications/content/fnae/",
-      "embed_url": "https://glseries.net/assets/applications/content/fnae/"
-    },
-    {
-      "id": "519638",
-      "title": "The Visitor",
-      "category": "Horror",
-      "status": null,
-      "slug": "the-visitor",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/the-visitor.png",
-      "game_url": "https://glseries.net/assets/applications/content/the-visitor/",
-      "embed_url": "https://glseries.net/assets/applications/content/the-visitor/"
-    },
-    {
-      "id": "519637",
-      "title": "The Visitor: Massacre",
-      "category": "Horror",
-      "status": null,
-      "slug": "the-visitor-massacre",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/the-visitor-massacre.png",
-      "game_url": "https://glseries.net/assets/applications/content/the-visitor-massacre/",
-      "embed_url": "https://glseries.net/assets/applications/content/the-visitor-massacre/"
-    },
-    {
-      "id": "519636",
-      "title": "Engine Roar",
-      "category": "Racing",
-      "status": null,
-      "slug": "engine-roar",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/engine-roar.png",
-      "game_url": "https://glseries.net/assets/applications/content/engine-roar/",
-      "embed_url": "https://glseries.net/assets/applications/content/engine-roar/"
-    },
-    {
-      "id": "519635",
-      "title": "Go To Bed",
-      "category": "Horror",
-      "status": null,
-      "slug": "go-to-bed",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/go-to-bed.png",
-      "game_url": "https://glseries.net/assets/applications/content/go-to-bed/",
-      "embed_url": "https://glseries.net/assets/applications/content/go-to-bed/"
-    },
-    {
-      "id": "519634",
-      "title": "Farm Simulator: Evo",
-      "category": "Casual",
-      "status": null,
-      "slug": "farm-simulator-evo",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/farm-simulator-evo.png",
-      "game_url": "https://glseries.net/assets/applications/content/farm-simulator-evo/",
-      "embed_url": "https://glseries.net/assets/applications/content/farm-simulator-evo/"
-    },
-    {
-      "id": "519633",
-      "title": "Coach Bus Simulator",
-      "category": "Casual",
-      "status": null,
-      "slug": "coach-bus-simulator",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/coach-bus-simulator.png",
-      "game_url": "https://glseries.net/assets/applications/content/coach-bus-simulator/",
-      "embed_url": "https://glseries.net/assets/applications/content/coach-bus-simulator/"
-    },
-    {
-      "id": "519632",
-      "title": "Plague Inc",
-      "category": "Puzzle",
-      "status": "new",
-      "slug": "plague-inc",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/plague-inc.png",
-      "game_url": "https://glseries.net/assets/applications/content/plague-inc/",
-      "embed_url": "https://glseries.net/assets/applications/content/plague-inc/"
-    },
-    {
-      "id": "519631",
-      "title": "My Water Park",
-      "category": "Idle",
-      "status": "new",
-      "slug": "my-water-park",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/my-water-park.png",
-      "game_url": "https://glseries.net/assets/applications/content/my-water-park/",
-      "embed_url": "https://glseries.net/assets/applications/content/my-water-park/"
-    },
-    {
-      "id": "519629",
-      "title": "Drag Sim 2018",
-      "category": "Racing",
-      "status": "new",
-      "slug": "drag-sim-2018",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/drag-sim-2018.png",
-      "game_url": "https://glseries.net/assets/applications/content/drag-sim-2018/",
-      "embed_url": "https://glseries.net/assets/applications/content/drag-sim-2018/"
-    },
-    {
-      "id": "519628",
-      "title": "Driving School 2016",
-      "category": "Casual Driving",
-      "status": "new",
-      "slug": "driving-school-2016",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/driving-school-2016.png",
-      "game_url": "https://glseries.net/assets/applications/content/driving-school-2016/",
-      "embed_url": "https://glseries.net/assets/applications/content/driving-school-2016/"
-    },
-    {
-      "id": "519627",
-      "title": "Speed Legends",
-      "category": "Racing",
-      "status": "new",
-      "slug": "speed-legends",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/speed-legends.png",
-      "game_url": "https://glseries.net/assets/applications/content/speed-legends/",
-      "embed_url": "https://glseries.net/assets/applications/content/speed-legends/"
-    },
-    {
-      "id": "519626",
-      "title": "Bills Must Be Paid",
-      "category": "Casual",
-      "status": "new",
-      "slug": "bills-must-be-paid",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/bills-must-be-paid.png",
-      "game_url": "https://glseries.net/assets/applications/content/bills-must-be-paid/",
-      "embed_url": "https://glseries.net/assets/applications/content/bills-must-be-paid/"
-    },
-    {
-      "id": "519625",
-      "title": "Glowets",
-      "category": "Two Player",
-      "status": "new",
-      "slug": "glowets",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/glowets.png",
-      "game_url": "https://glseries.net/assets/applications/content/glowets/",
-      "embed_url": "https://glseries.net/assets/applications/content/glowets/"
-    },
-    {
-      "id": "519624",
-      "title": "Deadly Descent",
-      "category": "Casual",
-      "status": "new",
-      "slug": "deadly-descent",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/deadly-descent.png",
-      "game_url": "https://glseries.net/assets/applications/content/deadly-descent/",
-      "embed_url": "https://glseries.net/assets/applications/content/deadly-descent/"
-    },
-    {
-      "id": "519623",
-      "title": "Basketball Stars",
-      "category": "Two Player",
-      "status": "new",
-      "slug": "basketball-stars",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/basketball-stars.png",
-      "game_url": "https://glseries.net/assets/applications/content/basketball-stars/",
-      "embed_url": "https://glseries.net/assets/applications/content/basketball-stars/"
-    },
-    {
-      "id": "519622",
-      "title": "Drag Racer",
-      "category": "Racing",
-      "status": "new",
-      "slug": "drag-racer",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/drag-racer.png",
-      "game_url": "https://glseries.net/assets/applications/content/drag-racer/",
-      "embed_url": "https://glseries.net/assets/applications/content/drag-racer/"
-    },
-    {
-      "id": "519621",
-      "title": "Speed Racing Pro 3",
-      "category": "Racing",
-      "status": "new",
-      "slug": "speed-racing-pro-3",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/speed-racing-pro-3.png",
-      "game_url": "https://glseries.net/assets/applications/content/speed-racing-pro-3/",
-      "embed_url": "https://glseries.net/assets/applications/content/speed-racing-pro-3/"
-    },
-    {
-      "id": "519620",
-      "title": "Madalin Stunt Cars 2",
-      "category": "Casual Driving",
-      "status": "new",
-      "slug": "madalin-stunt-cars-2",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/madalin-stunt-cars-2.png",
-      "game_url": "https://glseries.net/assets/applications/content/madalin-stunt-cars-2/",
-      "embed_url": "https://glseries.net/assets/applications/content/madalin-stunt-cars-2/"
-    },
-    {
-      "id": "519619",
-      "title": "Madalin Stunt Cars 3",
-      "category": "Casual Driving",
-      "status": "new",
-      "slug": "madalin-stunt-cars-3",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/madalin-stunt-cars-3.png",
-      "game_url": "https://glseries.net/assets/applications/content/madalin-stunt-cars-3/",
-      "embed_url": "https://glseries.net/assets/applications/content/madalin-stunt-cars-3/"
-    },
-    {
-      "id": "519618",
-      "title": "Banana Poker",
-      "category": "Casual",
-      "status": "new",
-      "slug": "banana-poker",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/banana-poker.png",
-      "game_url": "https://glseries.net/assets/applications/content/banana-poker/",
-      "embed_url": "https://glseries.net/assets/applications/content/banana-poker/"
-    },
-    {
-      "id": "519617",
-      "title": "Brotato",
-      "category": "Survival",
-      "status": "new",
-      "slug": "brotato",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/brotato.png",
-      "game_url": "https://glseries.net/assets/applications/content/brotato/",
-      "embed_url": "https://glseries.net/assets/applications/content/brotato/"
-    },
-    {
-      "id": "519616",
-      "title": "Stickman Rebirth",
-      "category": "Survival",
-      "status": "new",
-      "slug": "stickman-rebirth",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/stickman-rebirth.png",
-      "game_url": "https://glseries.net/assets/applications/content/stickman-rebirth/",
-      "embed_url": "https://glseries.net/assets/applications/content/stickman-rebirth/"
-    },
-    {
-      "id": "519615",
-      "title": "Labubu Cart Ride",
-      "category": "Casual",
-      "status": "new",
-      "slug": "labubu-cart-ride",
-      "thumbnail": "https://glseries.net/assets/data/bundles/li.ico/labubu-cart-ride.png",
-      "game_url": "https://glseries.net/assets/applications/content/labubu-cart-ride/",
-      "embed_url": "https://glseries.net/assets/applications/content/labubu-cart-ride/"
-    }
-  ]
+[
+  {
+    "name": "10 Minutes Till Dawn",
+    "img": "/assets/gameassets/ml20/imgs/10-minutes-till-dawn.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/10-minutes-till-dawn/index.html"
+  },
+  {
+    "name": "1V1Lol",
+    "img": "/assets/gameassets/ml20/imgs/1v1lol.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/1v1lol/index.html"
+  },
+  {
+    "name": "Adam Eve 2",
+    "img": "/assets/gameassets/ml20/imgs/adam-eve-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/adam-eve-2/index.html"
+  },
+  {
+    "name": "Adam Eve",
+    "img": "/assets/gameassets/ml20/imgs/adam-eve.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/adam-eve/index.html"
+  },
+  {
+    "name": "Adarkroom",
+    "img": "/assets/gameassets/ml20/imgs/adarkroom.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/adarkroom/index.html"
+  },
+  {
+    "name": "Alienhominid",
+    "img": "/assets/gameassets/ml20/imgs/alienhominid.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/alienhominid/index.html"
+  },
+  {
+    "name": "Angry Sharks",
+    "img": "/assets/gameassets/ml20/imgs/angry-sharks.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/angry-sharks/index.html"
+  },
+  {
+    "name": "Apple Shooter",
+    "img": "/assets/gameassets/ml20/imgs/apple-shooter.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/apple-shooter/index.html"
+  },
+  {
+    "name": "Arcane Archer",
+    "img": "/assets/gameassets/ml20/imgs/arcane-archer.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/arcane-archer/index.html"
+  },
+  {
+    "name": "Avalanche",
+    "img": "/assets/gameassets/ml20/imgs/avalanche.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/avalanche/index.html"
+  },
+  {
+    "name": "Awesome Tanks 2",
+    "img": "/assets/gameassets/ml20/imgs/awesome-tanks-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/awesome-tanks-2/index.html"
+  },
+  {
+    "name": "Backrooms 2D",
+    "img": "/assets/gameassets/ml20/imgs/backrooms-2d.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/backrooms-2d/index.html"
+  },
+  {
+    "name": "Backrooms",
+    "img": "/assets/gameassets/ml20/imgs/backrooms.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/backrooms/index.html"
+  },
+  {
+    "name": "Bacon May Die",
+    "img": "/assets/gameassets/ml20/imgs/bacon-may-die.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/bacon-may-die/index.html"
+  },
+  {
+    "name": "Blackknight",
+    "img": "/assets/gameassets/ml20/imgs/blackknight.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/blackknight/index.html"
+  },
+  {
+    "name": "Blumgi Slime",
+    "img": "/assets/gameassets/ml20/imgs/blumgi-slime.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/blumgi-slime/index.html"
+  },
+  {
+    "name": "Bob The Robber 4",
+    "img": "/assets/gameassets/ml20/imgs/bob-the-robber-4.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/bob-the-robber-4/index.html"
+  },
+  {
+    "name": "Bobtherobber2",
+    "img": "/assets/gameassets/ml20/imgs/bobtherobber2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/bobtherobber2/index.html"
+  },
+  {
+    "name": "Bomb It 7",
+    "img": "/assets/gameassets/ml20/imgs/bomb-it-7.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/bomb-it-7/index.html"
+  },
+  {
+    "name": "Boxel Rebound",
+    "img": "/assets/gameassets/ml20/imgs/boxel-rebound.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/boxel-rebound/index.html"
+  },
+  {
+    "name": "Boxhead2Play",
+    "img": "/assets/gameassets/ml20/imgs/boxhead2play.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/boxhead2play/index.html"
+  },
+  {
+    "name": "Bullet Force",
+    "img": "/assets/gameassets/ml20/imgs/bullet-force.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/bullet-force/index.html"
+  },
+  {
+    "name": "Champion Island",
+    "img": "/assets/gameassets/ml20/imgs/champion-island.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/champion-island/index.html"
+  },
+  {
+    "name": "Championarcher",
+    "img": "/assets/gameassets/ml20/imgs/championarcher.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/championarcher/index.html"
+  },
+  {
+    "name": "Craftmine",
+    "img": "/assets/gameassets/ml20/imgs/craftmine.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/craftmine/index.html"
+  },
+  {
+    "name": "Crazy Tunnel 3D",
+    "img": "/assets/gameassets/ml20/imgs/crazy-tunnel-3d.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/crazy-tunnel-3d/index.html"
+  },
+  {
+    "name": "Creativekillchamber",
+    "img": "/assets/gameassets/ml20/imgs/creativekillchamber.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/creativekillchamber/index.html"
+  },
+  {
+    "name": "Cubefield",
+    "img": "/assets/gameassets/ml20/imgs/cubefield.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/cubefield/index.html"
+  },
+  {
+    "name": "Dante",
+    "img": "/assets/gameassets/ml20/imgs/dante.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/dante/index.html"
+  },
+  {
+    "name": "Dead Again",
+    "img": "/assets/gameassets/ml20/imgs/dead-again.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/dead-again/index.html"
+  },
+  {
+    "name": "Death Run 3D",
+    "img": "/assets/gameassets/ml20/imgs/death-run-3d.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/death-run-3d/index.html"
+  },
+  {
+    "name": "Defend The Tank",
+    "img": "/assets/gameassets/ml20/imgs/defend-the-tank.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/defend-the-tank/index.html"
+  },
+  {
+    "name": "Dodge",
+    "img": "/assets/gameassets/ml20/imgs/dodge.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/dodge/index.html"
+  },
+  {
+    "name": "Down The Hill",
+    "img": "/assets/gameassets/ml20/imgs/down-the-hill.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/down-the-hill/index.html"
+  },
+  {
+    "name": "Dragon Vs Bricks",
+    "img": "/assets/gameassets/ml20/imgs/dragon-vs-bricks.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/dragon-vs-bricks/index.html"
+  },
+  {
+    "name": "Eagle Ride",
+    "img": "/assets/gameassets/ml20/imgs/eagle-ride.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/eagle-ride/index.html"
+  },
+  {
+    "name": "Electron Dash",
+    "img": "/assets/gameassets/ml20/imgs/electron-dash.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/electron-dash/index.html"
+  },
+  {
+    "name": "Endless Tunnel",
+    "img": "/assets/gameassets/ml20/imgs/endless-tunnel.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/endless-tunnel/index.html"
+  },
+  {
+    "name": "Endlesswar3",
+    "img": "/assets/gameassets/ml20/imgs/endlesswar3.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/endlesswar3/index.html"
+  },
+  {
+    "name": "Evil Glitch",
+    "img": "/assets/gameassets/ml20/imgs/evil-glitch.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/evil-glitch/index.html"
+  },
+  {
+    "name": "Fancy Pants 2",
+    "img": "/assets/gameassets/ml20/imgs/fancy-pants-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/fancy-pants-2/index.html"
+  },
+  {
+    "name": "Fancy Pants 3",
+    "img": "/assets/gameassets/ml20/imgs/fancy-pants-3.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/fancy-pants-3/index.html"
+  },
+  {
+    "name": "Fancypantsadventures",
+    "img": "/assets/gameassets/ml20/imgs/fancypantsadventures.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/fancypantsadventures/index.html"
+  },
+  {
+    "name": "Fireboywatergirlforesttemple",
+    "img": "/assets/gameassets/ml20/imgs/fireboywatergirlforesttemple.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/fireboywatergirlforesttemple/index.html"
+  },
+  {
+    "name": "Fnaf",
+    "img": "/assets/gameassets/ml20/imgs/fnaf.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/fnaf/index.html"
+  },
+  {
+    "name": "Fnaw",
+    "img": "/assets/gameassets/ml20/imgs/fnaw.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/fnaw/index.html"
+  },
+  {
+    "name": "Football Run",
+    "img": "/assets/gameassets/ml20/imgs/football-run.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/football-run/index.html"
+  },
+  {
+    "name": "Froggys Battle",
+    "img": "/assets/gameassets/ml20/imgs/froggys-battle.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/froggys-battle/index.html"
+  },
+  {
+    "name": "Frying Nemo",
+    "img": "/assets/gameassets/ml20/imgs/frying-nemo.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/frying-nemo/index.html"
+  },
+  {
+    "name": "Funnyshooter2",
+    "img": "/assets/gameassets/ml20/imgs/funnyshooter2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/funnyshooter2/index.html"
+  },
+  {
+    "name": "Galaga",
+    "img": "/assets/gameassets/ml20/imgs/galaga.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/galaga/index.html"
+  },
+  {
+    "name": "Generic Fishing Game",
+    "img": "/assets/gameassets/ml20/imgs/generic-fishing-game.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/generic-fishing-game/index.html"
+  },
+  {
+    "name": "Geodash",
+    "img": "/assets/gameassets/ml20/imgs/geodash.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/geodash/index.html"
+  },
+  {
+    "name": "Geometry Dash",
+    "img": "/assets/gameassets/ml20/imgs/geometry-dash.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/geometry-dash/index.html"
+  },
+  {
+    "name": "Getaway Shootout",
+    "img": "/assets/gameassets/ml20/imgs/getaway-shootout.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/getaway-shootout/index.html"
+  },
+  {
+    "name": "Gimme The Airpod",
+    "img": "/assets/gameassets/ml20/imgs/gimme-the-airpod.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gimme-the-airpod/index.html"
+  },
+  {
+    "name": "Gladihoppers",
+    "img": "/assets/gameassets/ml20/imgs/gladihoppers.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gladihoppers/index.html"
+  },
+  {
+    "name": "Glitch Dash",
+    "img": "/assets/gameassets/ml20/imgs/glitch-dash.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/glitch-dash/index.html"
+  },
+  {
+    "name": "Gobdun",
+    "img": "/assets/gameassets/ml20/imgs/gobdun.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gobdun/index.html"
+  },
+  {
+    "name": "Goodnight",
+    "img": "/assets/gameassets/ml20/imgs/goodnight.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/goodnight/index.html"
+  },
+  {
+    "name": "Groovy Ski",
+    "img": "/assets/gameassets/ml20/imgs/groovy-ski.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/groovy-ski/index.html"
+  },
+  {
+    "name": "Gswitch 2",
+    "img": "/assets/gameassets/ml20/imgs/gswitch-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gswitch-2/index.html"
+  },
+  {
+    "name": "Gswitch 3",
+    "img": "/assets/gameassets/ml20/imgs/gswitch-3.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gswitch-3/index.html"
+  },
+  {
+    "name": "Gswitch",
+    "img": "/assets/gameassets/ml20/imgs/gswitch.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gswitch/index.html"
+  },
+  {
+    "name": "Gun Mayhem 2",
+    "img": "/assets/gameassets/ml20/imgs/gun-mayhem-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gun-mayhem-2/index.html"
+  },
+  {
+    "name": "Gun Mayhem Redux",
+    "img": "/assets/gameassets/ml20/imgs/gun-mayhem-redux.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gun-mayhem-redux/index.html"
+  },
+  {
+    "name": "Gun Mayhem",
+    "img": "/assets/gameassets/ml20/imgs/gun-mayhem.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gun-mayhem/index.html"
+  },
+  {
+    "name": "Gunblood",
+    "img": "/assets/gameassets/ml20/imgs/gunblood.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/gunblood/index.html"
+  },
+  {
+    "name": "Happy Hop",
+    "img": "/assets/gameassets/ml20/imgs/happy-hop.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/happy-hop/index.html"
+  },
+  {
+    "name": "Hba",
+    "img": "/assets/gameassets/ml20/imgs/hba.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/hba/index.html"
+  },
+  {
+    "name": "Helicopter",
+    "img": "/assets/gameassets/ml20/imgs/helicopter.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/helicopter/index.html"
+  },
+  {
+    "name": "Hide And Smash",
+    "img": "/assets/gameassets/ml20/imgs/hide-and-smash.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/hide-and-smash/index.html"
+  },
+  {
+    "name": "Hungry Lamu",
+    "img": "/assets/gameassets/ml20/imgs/hungry-lamu.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/hungry-lamu/index.html"
+  },
+  {
+    "name": "Infinite Soccer",
+    "img": "/assets/gameassets/ml20/imgs/infinite-soccer.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/infinite-soccer/index.html"
+  },
+  {
+    "name": "Iron Snout",
+    "img": "/assets/gameassets/ml20/imgs/iron-snout.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/iron-snout/index.html"
+  },
+  {
+    "name": "Jetpack Joyride",
+    "img": "/assets/gameassets/ml20/imgs/jetpack-joyride.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/jetpack-joyride/index.html"
+  },
+  {
+    "name": "Just Fall",
+    "img": "/assets/gameassets/ml20/imgs/just-fall.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/just-fall/index.html"
+  },
+  {
+    "name": "Just One Boss",
+    "img": "/assets/gameassets/ml20/imgs/just-one-boss.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/just-one-boss/index.html"
+  },
+  {
+    "name": "Kitchen Gun Game",
+    "img": "/assets/gameassets/ml20/imgs/kitchen-gun-game.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/kitchen-gun-game/index.html"
+  },
+  {
+    "name": "Knife Master",
+    "img": "/assets/gameassets/ml20/imgs/knife-master.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/knife-master/index.html"
+  },
+  {
+    "name": "Mario Bros",
+    "img": "/assets/gameassets/ml20/imgs/mario-bros.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/mario-bros/index.html"
+  },
+  {
+    "name": "Mario",
+    "img": "/assets/gameassets/ml20/imgs/mario.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/mario/index.html"
+  },
+  {
+    "name": "Matrixrampage",
+    "img": "/assets/gameassets/ml20/imgs/matrixrampage.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/matrixrampage/index.html"
+  },
+  {
+    "name": "Mineblocks",
+    "img": "/assets/gameassets/ml20/imgs/mineblocks.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/mineblocks/index.html"
+  },
+  {
+    "name": "Minecraft 15",
+    "img": "/assets/gameassets/ml20/imgs/minecraft-15.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/minecraft-15/index.html"
+  },
+  {
+    "name": "Minecraft 18",
+    "img": "/assets/gameassets/ml20/imgs/minecraft-18.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/minecraft-18/index.html"
+  },
+  {
+    "name": "Minecraft Classic",
+    "img": "/assets/gameassets/ml20/imgs/minecraft-classic.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/minecraft-classic/index.html"
+  },
+  {
+    "name": "Minecraftbeta",
+    "img": "/assets/gameassets/ml20/imgs/minecraftbeta.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/minecraftbeta/index.html"
+  },
+  {
+    "name": "Missiles",
+    "img": "/assets/gameassets/ml20/imgs/missiles.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/missiles/index.html"
+  },
+  {
+    "name": "Motox3M Pool",
+    "img": "/assets/gameassets/ml20/imgs/motox3m-pool.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/motox3m-pool/index.html"
+  },
+  {
+    "name": "Motox3M Spooky",
+    "img": "/assets/gameassets/ml20/imgs/motox3m-spooky.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/motox3m-spooky/index.html"
+  },
+  {
+    "name": "Motox3M Winter",
+    "img": "/assets/gameassets/ml20/imgs/motox3m-winter.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/motox3m-winter/index.html"
+  },
+  {
+    "name": "Motox3M",
+    "img": "/assets/gameassets/ml20/imgs/motox3m.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/motox3m/index.html"
+  },
+  {
+    "name": "Motox3M2",
+    "img": "/assets/gameassets/ml20/imgs/motox3m2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/motox3m2/index.html"
+  },
+  {
+    "name": "Mutazone",
+    "img": "/assets/gameassets/ml20/imgs/mutazone.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/mutazone/index.html"
+  },
+  {
+    "name": "N Gon",
+    "img": "/assets/gameassets/ml20/imgs/n-gon.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/n-gon/index.html"
+  },
+  {
+    "name": "Ninjavsevilcorp",
+    "img": "/assets/gameassets/ml20/imgs/ninjavsevilcorp.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/ninjavsevilcorp/index.html"
+  },
+  {
+    "name": "Ns Shaft",
+    "img": "/assets/gameassets/ml20/imgs/ns-shaft.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/ns-shaft/index.html"
+  },
+  {
+    "name": "Ohio Fortnite",
+    "img": "/assets/gameassets/ml20/imgs/ohio-fortnite.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/ohio-fortnite/index.html"
+  },
+  {
+    "name": "Om Bounce",
+    "img": "/assets/gameassets/ml20/imgs/om-bounce.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/om-bounce/index.html"
+  },
+  {
+    "name": "Ovo 2",
+    "img": "/assets/gameassets/ml20/imgs/ovo-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/ovo-2/index.html"
+  },
+  {
+    "name": "Ovo",
+    "img": "/assets/gameassets/ml20/imgs/ovo.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/ovo/index.html"
+  },
+  {
+    "name": "Pacman",
+    "img": "/assets/gameassets/ml20/imgs/pacman.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/pacman/index.html"
+  },
+  {
+    "name": "Paper 3",
+    "img": "/assets/gameassets/ml20/imgs/paper-3.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/paper-3/index.html"
+  },
+  {
+    "name": "Paper Minecraft",
+    "img": "/assets/gameassets/ml20/imgs/paper-minecraft.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/paper-minecraft/index.html"
+  },
+  {
+    "name": "Paperio2",
+    "img": "/assets/gameassets/ml20/imgs/paperio2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/paperio2/index.html"
+  },
+  {
+    "name": "Papery Planes",
+    "img": "/assets/gameassets/ml20/imgs/papery-planes.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/papery-planes/index.html"
+  },
+  {
+    "name": "Pcraft",
+    "img": "/assets/gameassets/ml20/imgs/pcraft.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/pcraft/index.html"
+  },
+  {
+    "name": "Pixel Gun Survival",
+    "img": "/assets/gameassets/ml20/imgs/pixel-gun-survival.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/pixel-gun-survival/index.html"
+  },
+  {
+    "name": "Pizza Tower",
+    "img": "/assets/gameassets/ml20/imgs/pizza-tower.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/pizza-tower/index.html"
+  },
+  {
+    "name": "Pokemon Emerald 2",
+    "img": "/assets/gameassets/ml20/imgs/pokemon-emerald-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/pokemon-emerald-2/index.html"
+  },
+  {
+    "name": "Pokemon Emerald",
+    "img": "/assets/gameassets/ml20/imgs/pokemon-emerald.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/pokemon-emerald/index.html"
+  },
+  {
+    "name": "Pokemon Firered",
+    "img": "/assets/gameassets/ml20/imgs/pokemon-firered.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/pokemon-firered/index.html"
+  },
+  {
+    "name": "Polybranch",
+    "img": "/assets/gameassets/ml20/imgs/polybranch.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/polybranch/index.html"
+  },
+  {
+    "name": "Protektor",
+    "img": "/assets/gameassets/ml20/imgs/protektor.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/protektor/index.html"
+  },
+  {
+    "name": "Rolling Forests",
+    "img": "/assets/gameassets/ml20/imgs/rolling-forests.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/rolling-forests/index.html"
+  },
+  {
+    "name": "Rolly Vortex",
+    "img": "/assets/gameassets/ml20/imgs/rolly-vortex.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/rolly-vortex/index.html"
+  },
+  {
+    "name": "Rooftop Snipers",
+    "img": "/assets/gameassets/ml20/imgs/rooftop-snipers.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/rooftop-snipers/index.html"
+  },
+  {
+    "name": "Run 2",
+    "img": "/assets/gameassets/ml20/imgs/run-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/run-2/index.html"
+  },
+  {
+    "name": "Run 3 Space",
+    "img": "/assets/gameassets/ml20/imgs/run-3-space.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/run-3-space/index.html"
+  },
+  {
+    "name": "Rusher Crusher",
+    "img": "/assets/gameassets/ml20/imgs/rusher-crusher.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/rusher-crusher/index.html"
+  },
+  {
+    "name": "Santy Is Home",
+    "img": "/assets/gameassets/ml20/imgs/santy-is-home.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/santy-is-home/index.html"
+  },
+  {
+    "name": "Shuttledeck",
+    "img": "/assets/gameassets/ml20/imgs/shuttledeck.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/shuttledeck/index.html"
+  },
+  {
+    "name": "Skibidi Strike",
+    "img": "/assets/gameassets/ml20/imgs/skibidi-strike.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/skibidi-strike/index.html"
+  },
+  {
+    "name": "Sling Tomb",
+    "img": "/assets/gameassets/ml20/imgs/sling-tomb.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/sling-tomb/index.html"
+  },
+  {
+    "name": "Slope 2",
+    "img": "/assets/gameassets/ml20/imgs/slope-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/slope-2/index.html"
+  },
+  {
+    "name": "Slope Ball",
+    "img": "/assets/gameassets/ml20/imgs/slope-ball.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/slope-ball/index.html"
+  },
+  {
+    "name": "Slope",
+    "img": "/assets/gameassets/ml20/imgs/slope.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/slope/index.html"
+  },
+  {
+    "name": "Sm64",
+    "img": "/assets/gameassets/ml20/imgs/sm64.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/sm64/index.html"
+  },
+  {
+    "name": "Smokingbarrels",
+    "img": "/assets/gameassets/ml20/imgs/smokingbarrels.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/smokingbarrels/index.html"
+  },
+  {
+    "name": "Snow Ride",
+    "img": "/assets/gameassets/ml20/imgs/snow-ride.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/snow-ride/index.html"
+  },
+  {
+    "name": "Snowbattle",
+    "img": "/assets/gameassets/ml20/imgs/snowbattle.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/snowbattle/index.html"
+  },
+  {
+    "name": "Soldier Legend",
+    "img": "/assets/gameassets/ml20/imgs/soldier-legend.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/soldier-legend/index.html"
+  },
+  {
+    "name": "Spacegarden",
+    "img": "/assets/gameassets/ml20/imgs/spacegarden.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/spacegarden/index.html"
+  },
+  {
+    "name": "Stack Bump 3D",
+    "img": "/assets/gameassets/ml20/imgs/stack-bump-3d.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/stack-bump-3d/index.html"
+  },
+  {
+    "name": "Stack",
+    "img": "/assets/gameassets/ml20/imgs/stack.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/stack/index.html"
+  },
+  {
+    "name": "Station 141",
+    "img": "/assets/gameassets/ml20/imgs/station-141.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/station-141/index.html"
+  },
+  {
+    "name": "Stick Archers",
+    "img": "/assets/gameassets/ml20/imgs/stick-archers.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/stick-archers/index.html"
+  },
+  {
+    "name": "Stick Duel Battle",
+    "img": "/assets/gameassets/ml20/imgs/stick-duel-battle.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/stick-duel-battle/index.html"
+  },
+  {
+    "name": "Stick Merge",
+    "img": "/assets/gameassets/ml20/imgs/stick-merge.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/stick-merge/index.html"
+  },
+  {
+    "name": "Stickman Boost",
+    "img": "/assets/gameassets/ml20/imgs/stickman-boost.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/stickman-boost/index.html"
+  },
+  {
+    "name": "Subway Surfers Ny",
+    "img": "/assets/gameassets/ml20/imgs/subway-surfers-ny.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/subway-surfers-ny/index.html"
+  },
+  {
+    "name": "Subway Surfers",
+    "img": "/assets/gameassets/ml20/imgs/subway-surfers.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/subway-surfers/index.html"
+  },
+  {
+    "name": "Super Mario Wonder",
+    "img": "/assets/gameassets/ml20/imgs/super-mario-wonder.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/super-mario-wonder/index.html"
+  },
+  {
+    "name": "Superhot",
+    "img": "/assets/gameassets/ml20/imgs/superhot.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/superhot/index.html"
+  },
+  {
+    "name": "Supermarioconstruct",
+    "img": "/assets/gameassets/ml20/imgs/supermarioconstruct.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/supermarioconstruct/index.html"
+  },
+  {
+    "name": "Synesthesia",
+    "img": "/assets/gameassets/ml20/imgs/synesthesia.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/synesthesia/index.html"
+  },
+  {
+    "name": "Tactical Weapon Pack 2",
+    "img": "/assets/gameassets/ml20/imgs/tactical-weapon-pack-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tactical-weapon-pack-2/index.html"
+  },
+  {
+    "name": "Tacticalassasin2",
+    "img": "/assets/gameassets/ml20/imgs/tacticalassasin2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tacticalassasin2/index.html"
+  },
+  {
+    "name": "Tag",
+    "img": "/assets/gameassets/ml20/imgs/tag.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tag/index.html"
+  },
+  {
+    "name": "Tank Trouble 2",
+    "img": "/assets/gameassets/ml20/imgs/tank-trouble-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tank-trouble-2/index.html"
+  },
+  {
+    "name": "Tanuki Sunset",
+    "img": "/assets/gameassets/ml20/imgs/tanuki-sunset.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tanuki-sunset/index.html"
+  },
+  {
+    "name": "Tap Tap Shots",
+    "img": "/assets/gameassets/ml20/imgs/tap-tap-shots.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tap-tap-shots/index.html"
+  },
+  {
+    "name": "Temple Run 2",
+    "img": "/assets/gameassets/ml20/imgs/temple-run-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/temple-run-2/index.html"
+  },
+  {
+    "name": "Terraira",
+    "img": "/assets/gameassets/ml20/imgs/terraira.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/terraira/index.html"
+  },
+  {
+    "name": "Thisistheonlylevel",
+    "img": "/assets/gameassets/ml20/imgs/thisistheonlylevel.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/thisistheonlylevel/index.html"
+  },
+  {
+    "name": "Tiny Fishing",
+    "img": "/assets/gameassets/ml20/imgs/tiny-fishing.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tiny-fishing/index.html"
+  },
+  {
+    "name": "Tosstheturtle",
+    "img": "/assets/gameassets/ml20/imgs/tosstheturtle.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tosstheturtle/index.html"
+  },
+  {
+    "name": "Traffic Control",
+    "img": "/assets/gameassets/ml20/imgs/traffic-control.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/traffic-control/index.html"
+  },
+  {
+    "name": "Trimps",
+    "img": "/assets/gameassets/ml20/imgs/trimps.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/trimps/index.html"
+  },
+  {
+    "name": "Tube Jumpers",
+    "img": "/assets/gameassets/ml20/imgs/tube-jumpers.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tube-jumpers/index.html"
+  },
+  {
+    "name": "Tunnel Rush 2",
+    "img": "/assets/gameassets/ml20/imgs/tunnel-rush-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tunnel-rush-2/index.html"
+  },
+  {
+    "name": "Tunnel Rush",
+    "img": "/assets/gameassets/ml20/imgs/tunnel-rush.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/tunnel-rush/index.html"
+  },
+  {
+    "name": "Turn Turn",
+    "img": "/assets/gameassets/ml20/imgs/turn-turn.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/turn-turn/index.html"
+  },
+  {
+    "name": "Vex3",
+    "img": "/assets/gameassets/ml20/imgs/vex3.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/vex3/index.html"
+  },
+  {
+    "name": "Vex4",
+    "img": "/assets/gameassets/ml20/imgs/vex4.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/vex4/index.html"
+  },
+  {
+    "name": "Vex5",
+    "img": "/assets/gameassets/ml20/imgs/vex5.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/vex5/index.html"
+  },
+  {
+    "name": "Vex6",
+    "img": "/assets/gameassets/ml20/imgs/vex6.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/vex6/index.html"
+  },
+  {
+    "name": "Vex7",
+    "img": "/assets/gameassets/ml20/imgs/vex7.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/vex7/index.html"
+  },
+  {
+    "name": "Vex8",
+    "img": "/assets/gameassets/ml20/imgs/vex8.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/vex8/index.html"
+  },
+  {
+    "name": "Wolf3D",
+    "img": "/assets/gameassets/ml20/imgs/wolf3d.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/wolf3d/index.html"
+  },
+  {
+    "name": "Worlds Hardest Game 2",
+    "img": "/assets/gameassets/ml20/imgs/worlds-hardest-game-2.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/worlds-hardest-game-2/index.html"
+  },
+  {
+    "name": "Worlds Hardest Game",
+    "img": "/assets/gameassets/ml20/imgs/worlds-hardest-game.webp",
+    "game": "/assets/gameassets/ml20/games/action-games/worlds-hardest-game/index.html"
+  },
+  {
+    "name": "Ages Of Conflict",
+    "img": "/assets/gameassets/ml20/imgs/ages-of-conflict.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/ages-of-conflict/index.html"
+  },
+  {
+    "name": "Baldis Basics",
+    "img": "/assets/gameassets/ml20/imgs/baldis-basics.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/baldis-basics/index.html"
+  },
+  {
+    "name": "Bigredbutton",
+    "img": "/assets/gameassets/ml20/imgs/bigredbutton.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/bigredbutton/index.html"
+  },
+  {
+    "name": "Bitcoin Clicker",
+    "img": "/assets/gameassets/ml20/imgs/bitcoin-clicker.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/bitcoin-clicker/index.html"
+  },
+  {
+    "name": "Bottle Flip 3D",
+    "img": "/assets/gameassets/ml20/imgs/bottle-flip-3d.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/bottle-flip-3d/index.html"
+  },
+  {
+    "name": "Bottle Flip",
+    "img": "/assets/gameassets/ml20/imgs/bottle-flip.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/bottle-flip/index.html"
+  },
+  {
+    "name": "Clicker Heroes",
+    "img": "/assets/gameassets/ml20/imgs/clicker-heroes.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/clicker-heroes/index.html"
+  },
+  {
+    "name": "Cookie Clicker",
+    "img": "/assets/gameassets/ml20/imgs/cookie-clicker.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/cookie-clicker/index.html"
+  },
+  {
+    "name": "Core Ball",
+    "img": "/assets/gameassets/ml20/imgs/core-ball.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/core-ball/index.html"
+  },
+  {
+    "name": "Csgo Clicker",
+    "img": "/assets/gameassets/ml20/imgs/csgo-clicker.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/csgo-clicker/index.html"
+  },
+  {
+    "name": "Dino Merge",
+    "img": "/assets/gameassets/ml20/imgs/dino-merge.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/dino-merge/index.html"
+  },
+  {
+    "name": "Doodle Jump",
+    "img": "/assets/gameassets/ml20/imgs/doodle-jump.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/doodle-jump/index.html"
+  },
+  {
+    "name": "Ducklife 2",
+    "img": "/assets/gameassets/ml20/imgs/ducklife-2.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/ducklife-2/index.html"
+  },
+  {
+    "name": "Ducklife 3",
+    "img": "/assets/gameassets/ml20/imgs/ducklife-3.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/ducklife-3/index.html"
+  },
+  {
+    "name": "Ducklife",
+    "img": "/assets/gameassets/ml20/imgs/ducklife.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/ducklife/index.html"
+  },
+  {
+    "name": "Ducklife4",
+    "img": "/assets/gameassets/ml20/imgs/ducklife4.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/ducklife4/index.html"
+  },
+  {
+    "name": "Eel Slap",
+    "img": "/assets/gameassets/ml20/imgs/eel-slap.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/eel-slap/index.html"
+  },
+  {
+    "name": "Elastic Face",
+    "img": "/assets/gameassets/ml20/imgs/elastic-face.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/elastic-face/index.html"
+  },
+  {
+    "name": "Fake Virus",
+    "img": "/assets/gameassets/ml20/imgs/fake-virus.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/fake-virus/index.html"
+  },
+  {
+    "name": "Fisherman Life",
+    "img": "/assets/gameassets/ml20/imgs/fisherman-life.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/fisherman-life/index.html"
+  },
+  {
+    "name": "Flappy Bird",
+    "img": "/assets/gameassets/ml20/imgs/flappy-bird.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/flappy-bird/index.html"
+  },
+  {
+    "name": "Fruit Ninja",
+    "img": "/assets/gameassets/ml20/imgs/fruit-ninja.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/fruit-ninja/index.html"
+  },
+  {
+    "name": "Guess Kitty",
+    "img": "/assets/gameassets/ml20/imgs/guess-kitty.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/guess-kitty/index.html"
+  },
+  {
+    "name": "Gura Temberine",
+    "img": "/assets/gameassets/ml20/imgs/gura-temberine.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/gura-temberine/index.html"
+  },
+  {
+    "name": "Hackertype",
+    "img": "/assets/gameassets/ml20/imgs/hackertype.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/hackertype/index.html"
+  },
+  {
+    "name": "Hop Pop It",
+    "img": "/assets/gameassets/ml20/imgs/hop-pop-it.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/hop-pop-it/index.html"
+  },
+  {
+    "name": "Idle Breakout",
+    "img": "/assets/gameassets/ml20/imgs/idle-breakout.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/idle-breakout/index.html"
+  },
+  {
+    "name": "Idle Mining",
+    "img": "/assets/gameassets/ml20/imgs/idle-mining.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/idle-mining/index.html"
+  },
+  {
+    "name": "Idle Restaurants",
+    "img": "/assets/gameassets/ml20/imgs/idle-restaurants.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/idle-restaurants/index.html"
+  },
+  {
+    "name": "Kittencannon",
+    "img": "/assets/gameassets/ml20/imgs/kittencannon.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/kittencannon/index.html"
+  },
+  {
+    "name": "Learn To Fly 2",
+    "img": "/assets/gameassets/ml20/imgs/learn-to-fly-2.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/learn-to-fly-2/index.html"
+  },
+  {
+    "name": "Learntofly",
+    "img": "/assets/gameassets/ml20/imgs/learntofly.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/learntofly/index.html"
+  },
+  {
+    "name": "Little Alchemy 2",
+    "img": "/assets/gameassets/ml20/imgs/little-alchemy-2.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/little-alchemy-2/index.html"
+  },
+  {
+    "name": "Merge Round Racers",
+    "img": "/assets/gameassets/ml20/imgs/merge-round-racers.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/merge-round-racers/index.html"
+  },
+  {
+    "name": "Minecraft Case",
+    "img": "/assets/gameassets/ml20/imgs/minecraft-case.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/minecraft-case/index.html"
+  },
+  {
+    "name": "Nut Simulator",
+    "img": "/assets/gameassets/ml20/imgs/nut-simulator.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/nut-simulator/index.html"
+  },
+  {
+    "name": "Papas Bake",
+    "img": "/assets/gameassets/ml20/imgs/papas-bake.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-bake/index.html"
+  },
+  {
+    "name": "Papas Cheese",
+    "img": "/assets/gameassets/ml20/imgs/papas-cheese.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-cheese/index.html"
+  },
+  {
+    "name": "Papas Cupcake",
+    "img": "/assets/gameassets/ml20/imgs/papas-cupcake.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-cupcake/index.html"
+  },
+  {
+    "name": "Papas Donut",
+    "img": "/assets/gameassets/ml20/imgs/papas-donut.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-donut/index.html"
+  },
+  {
+    "name": "Papas Freeze",
+    "img": "/assets/gameassets/ml20/imgs/papas-freeze.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-freeze/index.html"
+  },
+  {
+    "name": "Papas Hotdog",
+    "img": "/assets/gameassets/ml20/imgs/papas-hotdog.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-hotdog/index.html"
+  },
+  {
+    "name": "Papas Pancake",
+    "img": "/assets/gameassets/ml20/imgs/papas-pancake.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-pancake/index.html"
+  },
+  {
+    "name": "Papas Pasta",
+    "img": "/assets/gameassets/ml20/imgs/papas-pasta.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-pasta/index.html"
+  },
+  {
+    "name": "Papas Scoop",
+    "img": "/assets/gameassets/ml20/imgs/papas-scoop.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-scoop/index.html"
+  },
+  {
+    "name": "Papas Sushi",
+    "img": "/assets/gameassets/ml20/imgs/papas-sushi.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-sushi/index.html"
+  },
+  {
+    "name": "Papas Taco",
+    "img": "/assets/gameassets/ml20/imgs/papas-taco.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-taco/index.html"
+  },
+  {
+    "name": "Papas Wing",
+    "img": "/assets/gameassets/ml20/imgs/papas-wing.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papas-wing/index.html"
+  },
+  {
+    "name": "Papaspizzaria",
+    "img": "/assets/gameassets/ml20/imgs/papaspizzaria.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/papaspizzaria/index.html"
+  },
+  {
+    "name": "Particle Clicker",
+    "img": "/assets/gameassets/ml20/imgs/particle-clicker.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/particle-clicker/index.html"
+  },
+  {
+    "name": "Pou",
+    "img": "/assets/gameassets/ml20/imgs/pou.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/pou/index.html"
+  },
+  {
+    "name": "Push The Square",
+    "img": "/assets/gameassets/ml20/imgs/push-the-square.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/push-the-square/index.html"
+  },
+  {
+    "name": "Rise Higher",
+    "img": "/assets/gameassets/ml20/imgs/rise-higher.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/rise-higher/index.html"
+  },
+  {
+    "name": "Sandboxels",
+    "img": "/assets/gameassets/ml20/imgs/sandboxels.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/sandboxels/index.html"
+  },
+  {
+    "name": "Sort The Court",
+    "img": "/assets/gameassets/ml20/imgs/sort-the-court.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/sort-the-court/index.html"
+  },
+  {
+    "name": "Space Bar Clicker",
+    "img": "/assets/gameassets/ml20/imgs/space-bar-clicker.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/space-bar-clicker/index.html"
+  },
+  {
+    "name": "Space Company",
+    "img": "/assets/gameassets/ml20/imgs/space-company.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/space-company/index.html"
+  },
+  {
+    "name": "Townscaper",
+    "img": "/assets/gameassets/ml20/imgs/townscaper.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/townscaper/index.html"
+  },
+  {
+    "name": "Veloce",
+    "img": "/assets/gameassets/ml20/imgs/veloce.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/veloce/index.html"
+  },
+  {
+    "name": "Wbwwb",
+    "img": "/assets/gameassets/ml20/imgs/wbwwb.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/wbwwb/index.html"
+  },
+  {
+    "name": "Weavesilk",
+    "img": "/assets/gameassets/ml20/imgs/weavesilk.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/weavesilk/index.html"
+  },
+  {
+    "name": "Webgl Fluid Simulation",
+    "img": "/assets/gameassets/ml20/imgs/webgl-fluid-simulation.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/webgl-fluid-simulation/index.html"
+  },
+  {
+    "name": "Whack Your Boss",
+    "img": "/assets/gameassets/ml20/imgs/whack-your-boss.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/whack-your-boss/index.html"
+  },
+  {
+    "name": "Yoshifabrication",
+    "img": "/assets/gameassets/ml20/imgs/yoshifabrication.webp",
+    "game": "/assets/gameassets/ml20/games/casual-games/yoshifabrication/index.html"
+  },
+  {
+    "name": "1V1 Soccer",
+    "img": "/assets/gameassets/ml20/imgs/1v1-soccer.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/1v1-soccer/index.html"
+  },
+  {
+    "name": "3D Bowling",
+    "img": "/assets/gameassets/ml20/imgs/3d-bowling.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/3d-bowling/index.html"
+  },
+  {
+    "name": "8 Ball",
+    "img": "/assets/gameassets/ml20/imgs/8-ball.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/8-ball/index.html"
+  },
+  {
+    "name": "Adrenalinechallenge",
+    "img": "/assets/gameassets/ml20/imgs/adrenalinechallenge.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/adrenalinechallenge/index.html"
+  },
+  {
+    "name": "Adventure Drivers",
+    "img": "/assets/gameassets/ml20/imgs/adventure-drivers.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/adventure-drivers/index.html"
+  },
+  {
+    "name": "Aquapark Slides",
+    "img": "/assets/gameassets/ml20/imgs/aquapark-slides.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/aquapark-slides/index.html"
+  },
+  {
+    "name": "Axis Football League",
+    "img": "/assets/gameassets/ml20/imgs/axis-football-league.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/axis-football-league/index.html"
+  },
+  {
+    "name": "Basket And Ball",
+    "img": "/assets/gameassets/ml20/imgs/basket-and-ball.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/basket-and-ball/index.html"
+  },
+  {
+    "name": "Basket Champs",
+    "img": "/assets/gameassets/ml20/imgs/basket-champs.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/basket-champs/index.html"
+  },
+  {
+    "name": "Basket Random",
+    "img": "/assets/gameassets/ml20/imgs/basket-random.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/basket-random/index.html"
+  },
+  {
+    "name": "Basketball Stars",
+    "img": "/assets/gameassets/ml20/imgs/basketball-stars.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/basketball-stars/index.html"
+  },
+  {
+    "name": "Bicycle Stunt 3D",
+    "img": "/assets/gameassets/ml20/imgs/bicycle-stunt-3d.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/bicycle-stunt-3d/index.html"
+  },
+  {
+    "name": "Big Shot Boxing",
+    "img": "/assets/gameassets/ml20/imgs/big-shot-boxing.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/big-shot-boxing/index.html"
+  },
+  {
+    "name": "Biker Street",
+    "img": "/assets/gameassets/ml20/imgs/biker-street.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/biker-street/index.html"
+  },
+  {
+    "name": "Boxing Random",
+    "img": "/assets/gameassets/ml20/imgs/boxing-random.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/boxing-random/index.html"
+  },
+  {
+    "name": "Burnin Rubber 5Xs",
+    "img": "/assets/gameassets/ml20/imgs/burnin-rubber-5xs.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/burnin-rubber-5xs/index.html"
+  },
+  {
+    "name": "Car Rush",
+    "img": "/assets/gameassets/ml20/imgs/car-rush.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/car-rush/index.html"
+  },
+  {
+    "name": "Cars Simulator",
+    "img": "/assets/gameassets/ml20/imgs/cars-simulator.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/cars-simulator/index.html"
+  },
+  {
+    "name": "Cartoon Mini Racing",
+    "img": "/assets/gameassets/ml20/imgs/cartoon-mini-racing.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/cartoon-mini-racing/index.html"
+  },
+  {
+    "name": "Cluster Rush",
+    "img": "/assets/gameassets/ml20/imgs/cluster-rush.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/cluster-rush/index.html"
+  },
+  {
+    "name": "Crazy Cars",
+    "img": "/assets/gameassets/ml20/imgs/crazy-cars.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/crazy-cars/index.html"
+  },
+  {
+    "name": "Draw The Hill",
+    "img": "/assets/gameassets/ml20/imgs/draw-the-hill.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/draw-the-hill/index.html"
+  },
+  {
+    "name": "Drift Boss",
+    "img": "/assets/gameassets/ml20/imgs/drift-boss.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/drift-boss/index.html"
+  },
+  {
+    "name": "Drive Mad",
+    "img": "/assets/gameassets/ml20/imgs/drive-mad.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/drive-mad/index.html"
+  },
+  {
+    "name": "Earn To Die",
+    "img": "/assets/gameassets/ml20/imgs/earn-to-die.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/earn-to-die/index.html"
+  },
+  {
+    "name": "Edge Surf",
+    "img": "/assets/gameassets/ml20/imgs/edge-surf.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/edge-surf/index.html"
+  },
+  {
+    "name": "Eggy Car",
+    "img": "/assets/gameassets/ml20/imgs/eggy-car.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/eggy-car/index.html"
+  },
+  {
+    "name": "Endless Truck",
+    "img": "/assets/gameassets/ml20/imgs/endless-truck.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/endless-truck/index.html"
+  },
+  {
+    "name": "Football Brawl",
+    "img": "/assets/gameassets/ml20/imgs/football-brawl.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/football-brawl/index.html"
+  },
+  {
+    "name": "Football Legends",
+    "img": "/assets/gameassets/ml20/imgs/football-legends.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/football-legends/index.html"
+  },
+  {
+    "name": "Football Strike",
+    "img": "/assets/gameassets/ml20/imgs/football-strike.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/football-strike/index.html"
+  },
+  {
+    "name": "Get On Top",
+    "img": "/assets/gameassets/ml20/imgs/get-on-top.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/get-on-top/index.html"
+  },
+  {
+    "name": "Head Soccer",
+    "img": "/assets/gameassets/ml20/imgs/head-soccer.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/head-soccer/index.html"
+  },
+  {
+    "name": "Heads Arena",
+    "img": "/assets/gameassets/ml20/imgs/heads-arena.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/heads-arena/index.html"
+  },
+  {
+    "name": "Madalin Stunt Cars 2",
+    "img": "/assets/gameassets/ml20/imgs/madalin-stunt-cars-2.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/madalin-stunt-cars-2/index.html"
+  },
+  {
+    "name": "Monster Truck Destroyer",
+    "img": "/assets/gameassets/ml20/imgs/monster-truck-destroyer.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/monster-truck-destroyer/index.html"
+  },
+  {
+    "name": "Moving Truck",
+    "img": "/assets/gameassets/ml20/imgs/moving-truck.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/moving-truck/index.html"
+  },
+  {
+    "name": "Parking Fury 2",
+    "img": "/assets/gameassets/ml20/imgs/parking-fury-2.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/parking-fury-2/index.html"
+  },
+  {
+    "name": "Parking Fury 3",
+    "img": "/assets/gameassets/ml20/imgs/parking-fury-3.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/parking-fury-3/index.html"
+  },
+  {
+    "name": "Parking Fury",
+    "img": "/assets/gameassets/ml20/imgs/parking-fury.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/parking-fury/index.html"
+  },
+  {
+    "name": "Penalty Kick",
+    "img": "/assets/gameassets/ml20/imgs/penalty-kick.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/penalty-kick/index.html"
+  },
+  {
+    "name": "Penalty Shooter 2",
+    "img": "/assets/gameassets/ml20/imgs/penalty-shooter-2.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/penalty-shooter-2/index.html"
+  },
+  {
+    "name": "Penalty Shooters 3",
+    "img": "/assets/gameassets/ml20/imgs/penalty-shooters-3.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/penalty-shooters-3/index.html"
+  },
+  {
+    "name": "Pixel Smash Duels",
+    "img": "/assets/gameassets/ml20/imgs/pixel-smash-duels.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/pixel-smash-duels/index.html"
+  },
+  {
+    "name": "Racing Monster Truck",
+    "img": "/assets/gameassets/ml20/imgs/racing-monster-truck.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/racing-monster-truck/index.html"
+  },
+  {
+    "name": "Retro Bowl College",
+    "img": "/assets/gameassets/ml20/imgs/retro-bowl-college.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/retro-bowl-college/index.html"
+  },
+  {
+    "name": "Retro Bowl",
+    "img": "/assets/gameassets/ml20/imgs/retro-bowl.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/retro-bowl/index.html"
+  },
+  {
+    "name": "Scrapmetal",
+    "img": "/assets/gameassets/ml20/imgs/scrapmetal.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/scrapmetal/index.html"
+  },
+  {
+    "name": "Sky Car Stunt",
+    "img": "/assets/gameassets/ml20/imgs/sky-car-stunt.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/sky-car-stunt/index.html"
+  },
+  {
+    "name": "Soccer Heads",
+    "img": "/assets/gameassets/ml20/imgs/soccer-heads.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/soccer-heads/index.html"
+  },
+  {
+    "name": "Soccer Random",
+    "img": "/assets/gameassets/ml20/imgs/soccer-random.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/soccer-random/index.html"
+  },
+  {
+    "name": "Soccer Skills",
+    "img": "/assets/gameassets/ml20/imgs/soccer-skills.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/soccer-skills/index.html"
+  },
+  {
+    "name": "Super Liquid Soccer",
+    "img": "/assets/gameassets/ml20/imgs/super-liquid-soccer.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/super-liquid-soccer/index.html"
+  },
+  {
+    "name": "Theheist",
+    "img": "/assets/gameassets/ml20/imgs/theheist.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/theheist/index.html"
+  },
+  {
+    "name": "Volley Random",
+    "img": "/assets/gameassets/ml20/imgs/volley-random.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/volley-random/index.html"
+  },
+  {
+    "name": "Wheelie Bike 2",
+    "img": "/assets/gameassets/ml20/imgs/wheelie-bike-2.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/wheelie-bike-2/index.html"
+  },
+  {
+    "name": "Wheelie Bike",
+    "img": "/assets/gameassets/ml20/imgs/wheelie-bike.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/wheelie-bike/index.html"
+  },
+  {
+    "name": "X Trial Racing",
+    "img": "/assets/gameassets/ml20/imgs/x-trial-racing.webp",
+    "game": "/assets/gameassets/ml20/games/driving-games/x-trial-racing/index.html"
+  },
+  {
+    "name": "1",
+    "img": "/assets/gameassets/ml20/imgs/1.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/1/index.html"
+  },
+  {
+    "name": "1010 Deluxe",
+    "img": "/assets/gameassets/ml20/imgs/1010-deluxe.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/1010-deluxe/index.html"
+  },
+  {
+    "name": "2048 Multitask",
+    "img": "/assets/gameassets/ml20/imgs/2048-multitask.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/2048-multitask/index.html"
+  },
+  {
+    "name": "2048",
+    "img": "/assets/gameassets/ml20/imgs/2048.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/2048/index.html"
+  },
+  {
+    "name": "9007199254740992",
+    "img": "/assets/gameassets/ml20/imgs/9007199254740992.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/9007199254740992/index.html"
+  },
+  {
+    "name": "Achievementunlocked",
+    "img": "/assets/gameassets/ml20/imgs/achievementunlocked.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/achievementunlocked/index.html"
+  },
+  {
+    "name": "Adventure Anxiety",
+    "img": "/assets/gameassets/ml20/imgs/adventure-anxiety.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/adventure-anxiety/index.html"
+  },
+  {
+    "name": "Among Us",
+    "img": "/assets/gameassets/ml20/imgs/among-us.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/among-us/index.html"
+  },
+  {
+    "name": "Ball Sort Halloween",
+    "img": "/assets/gameassets/ml20/imgs/ball-sort-halloween.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ball-sort-halloween/index.html"
+  },
+  {
+    "name": "Ball Sort Puzzle",
+    "img": "/assets/gameassets/ml20/imgs/ball-sort-puzzle.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ball-sort-puzzle/index.html"
+  },
+  {
+    "name": "Ball Sort Soccer",
+    "img": "/assets/gameassets/ml20/imgs/ball-sort-soccer.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ball-sort-soccer/index.html"
+  },
+  {
+    "name": "Ballistic",
+    "img": "/assets/gameassets/ml20/imgs/ballistic.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ballistic/index.html"
+  },
+  {
+    "name": "Bally",
+    "img": "/assets/gameassets/ml20/imgs/bally.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bally/index.html"
+  },
+  {
+    "name": "Battleforgondor",
+    "img": "/assets/gameassets/ml20/imgs/battleforgondor.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/battleforgondor/index.html"
+  },
+  {
+    "name": "Bitlife",
+    "img": "/assets/gameassets/ml20/imgs/bitlife.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bitlife/index.html"
+  },
+  {
+    "name": "Blacholesquare",
+    "img": "/assets/gameassets/ml20/imgs/blacholesquare.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/blacholesquare/index.html"
+  },
+  {
+    "name": "Block Pig",
+    "img": "/assets/gameassets/ml20/imgs/block-pig.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/block-pig/index.html"
+  },
+  {
+    "name": "Bloonstd",
+    "img": "/assets/gameassets/ml20/imgs/bloonstd.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bloonstd/index.html"
+  },
+  {
+    "name": "Bloonstd2",
+    "img": "/assets/gameassets/ml20/imgs/bloonstd2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bloonstd2/index.html"
+  },
+  {
+    "name": "Bloonstd4",
+    "img": "/assets/gameassets/ml20/imgs/bloonstd4.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bloonstd4/index.html"
+  },
+  {
+    "name": "Bloxors",
+    "img": "/assets/gameassets/ml20/imgs/bloxors.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bloxors/index.html"
+  },
+  {
+    "name": "Blumgi Rocket",
+    "img": "/assets/gameassets/ml20/imgs/blumgi-rocket.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/blumgi-rocket/index.html"
+  },
+  {
+    "name": "Bouncy Woods",
+    "img": "/assets/gameassets/ml20/imgs/bouncy-woods.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bouncy-woods/index.html"
+  },
+  {
+    "name": "Breakingthebank",
+    "img": "/assets/gameassets/ml20/imgs/breakingthebank.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/breakingthebank/index.html"
+  },
+  {
+    "name": "Btts",
+    "img": "/assets/gameassets/ml20/imgs/btts.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/btts/index.html"
+  },
+  {
+    "name": "Bubble Pop",
+    "img": "/assets/gameassets/ml20/imgs/bubble-pop.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/bubble-pop/index.html"
+  },
+  {
+    "name": "Burrito Bison",
+    "img": "/assets/gameassets/ml20/imgs/burrito-bison.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/burrito-bison/index.html"
+  },
+  {
+    "name": "Cannon Basketball 4",
+    "img": "/assets/gameassets/ml20/imgs/cannon-basketball-4.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/cannon-basketball-4/index.html"
+  },
+  {
+    "name": "Canyondefense",
+    "img": "/assets/gameassets/ml20/imgs/canyondefense.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/canyondefense/index.html"
+  },
+  {
+    "name": "Cell Machine",
+    "img": "/assets/gameassets/ml20/imgs/cell-machine.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/cell-machine/index.html"
+  },
+  {
+    "name": "Checkers Legend",
+    "img": "/assets/gameassets/ml20/imgs/checkers-legend.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/checkers-legend/index.html"
+  },
+  {
+    "name": "Circlo",
+    "img": "/assets/gameassets/ml20/imgs/circlo.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/circlo/index.html"
+  },
+  {
+    "name": "Circlo2",
+    "img": "/assets/gameassets/ml20/imgs/circlo2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/circlo2/index.html"
+  },
+  {
+    "name": "Climb Over It",
+    "img": "/assets/gameassets/ml20/imgs/climb-over-it.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/climb-over-it/index.html"
+  },
+  {
+    "name": "Color Match",
+    "img": "/assets/gameassets/ml20/imgs/color-match.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/color-match/index.html"
+  },
+  {
+    "name": "Connect3",
+    "img": "/assets/gameassets/ml20/imgs/connect3.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/connect3/index.html"
+  },
+  {
+    "name": "Crossyroad",
+    "img": "/assets/gameassets/ml20/imgs/crossyroad.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/crossyroad/index.html"
+  },
+  {
+    "name": "Ctr Holiday",
+    "img": "/assets/gameassets/ml20/imgs/ctr-holiday.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ctr-holiday/index.html"
+  },
+  {
+    "name": "Ctr Tr",
+    "img": "/assets/gameassets/ml20/imgs/ctr-tr.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ctr-tr/index.html"
+  },
+  {
+    "name": "Ctr",
+    "img": "/assets/gameassets/ml20/imgs/ctr.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ctr/index.html"
+  },
+  {
+    "name": "Deal Or No Deal",
+    "img": "/assets/gameassets/ml20/imgs/deal-or-no-deal.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/deal-or-no-deal/index.html"
+  },
+  {
+    "name": "Deepest Sword",
+    "img": "/assets/gameassets/ml20/imgs/deepest-sword.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/deepest-sword/index.html"
+  },
+  {
+    "name": "Dino Bros",
+    "img": "/assets/gameassets/ml20/imgs/dino-bros.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/dino-bros/index.html"
+  },
+  {
+    "name": "Doctor Acorn2",
+    "img": "/assets/gameassets/ml20/imgs/doctor-acorn2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/doctor-acorn2/index.html"
+  },
+  {
+    "name": "Doge2048",
+    "img": "/assets/gameassets/ml20/imgs/doge2048.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/doge2048/index.html"
+  },
+  {
+    "name": "Dummy Never Fails 2",
+    "img": "/assets/gameassets/ml20/imgs/dummy-never-fails-2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/dummy-never-fails-2/index.html"
+  },
+  {
+    "name": "Dummy Never Fails",
+    "img": "/assets/gameassets/ml20/imgs/dummy-never-fails.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/dummy-never-fails/index.html"
+  },
+  {
+    "name": "Edgenotfound",
+    "img": "/assets/gameassets/ml20/imgs/edgenotfound.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/edgenotfound/index.html"
+  },
+  {
+    "name": "Escaping Prison",
+    "img": "/assets/gameassets/ml20/imgs/escaping-prison.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/escaping-prison/index.html"
+  },
+  {
+    "name": "Evolution",
+    "img": "/assets/gameassets/ml20/imgs/evolution.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/evolution/index.html"
+  },
+  {
+    "name": "Exo",
+    "img": "/assets/gameassets/ml20/imgs/exo.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/exo/index.html"
+  },
+  {
+    "name": "Factoryballs",
+    "img": "/assets/gameassets/ml20/imgs/factoryballs.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/factoryballs/index.html"
+  },
+  {
+    "name": "Farm Match",
+    "img": "/assets/gameassets/ml20/imgs/farm-match.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/farm-match/index.html"
+  },
+  {
+    "name": "Flashtetris",
+    "img": "/assets/gameassets/ml20/imgs/flashtetris.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/flashtetris/index.html"
+  },
+  {
+    "name": "Fleeing Complex",
+    "img": "/assets/gameassets/ml20/imgs/fleeing-complex.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/fleeing-complex/index.html"
+  },
+  {
+    "name": "Game Inside",
+    "img": "/assets/gameassets/ml20/imgs/game-inside.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/game-inside/index.html"
+  },
+  {
+    "name": "Georgeandtheprinter",
+    "img": "/assets/gameassets/ml20/imgs/georgeandtheprinter.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/georgeandtheprinter/index.html"
+  },
+  {
+    "name": "Getting Over It",
+    "img": "/assets/gameassets/ml20/imgs/getting-over-it.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/getting-over-it/index.html"
+  },
+  {
+    "name": "Go Ball",
+    "img": "/assets/gameassets/ml20/imgs/go-ball.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/go-ball/index.html"
+  },
+  {
+    "name": "Google Feud",
+    "img": "/assets/gameassets/ml20/imgs/google-feud.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/google-feud/index.html"
+  },
+  {
+    "name": "Gravity Soccer",
+    "img": "/assets/gameassets/ml20/imgs/gravity-soccer.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/gravity-soccer/index.html"
+  },
+  {
+    "name": "Greybox",
+    "img": "/assets/gameassets/ml20/imgs/greybox.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/greybox/index.html"
+  },
+  {
+    "name": "Handshakes",
+    "img": "/assets/gameassets/ml20/imgs/handshakes.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/handshakes/index.html"
+  },
+  {
+    "name": "Hanger",
+    "img": "/assets/gameassets/ml20/imgs/hanger.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/hanger/index.html"
+  },
+  {
+    "name": "Hexempire",
+    "img": "/assets/gameassets/ml20/imgs/hexempire.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/hexempire/index.html"
+  },
+  {
+    "name": "Hextris",
+    "img": "/assets/gameassets/ml20/imgs/hextris.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/hextris/index.html"
+  },
+  {
+    "name": "Icy Head 2",
+    "img": "/assets/gameassets/ml20/imgs/icy-head-2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/icy-head-2/index.html"
+  },
+  {
+    "name": "Icy Head 3",
+    "img": "/assets/gameassets/ml20/imgs/icy-head-3.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/icy-head-3/index.html"
+  },
+  {
+    "name": "Impossiblequiz",
+    "img": "/assets/gameassets/ml20/imgs/impossiblequiz.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/impossiblequiz/index.html"
+  },
+  {
+    "name": "Infiltrating Airship",
+    "img": "/assets/gameassets/ml20/imgs/infiltrating-airship.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/infiltrating-airship/index.html"
+  },
+  {
+    "name": "Jewels Blitz 5",
+    "img": "/assets/gameassets/ml20/imgs/jewels-blitz-5.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/jewels-blitz-5/index.html"
+  },
+  {
+    "name": "Marbles Sorting",
+    "img": "/assets/gameassets/ml20/imgs/marbles-sorting.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/marbles-sorting/index.html"
+  },
+  {
+    "name": "Meme2048",
+    "img": "/assets/gameassets/ml20/imgs/meme2048.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/meme2048/index.html"
+  },
+  {
+    "name": "Minesweeper",
+    "img": "/assets/gameassets/ml20/imgs/minesweeper.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/minesweeper/index.html"
+  },
+  {
+    "name": "Miniputt",
+    "img": "/assets/gameassets/ml20/imgs/miniputt.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/miniputt/index.html"
+  },
+  {
+    "name": "Money Movers 2",
+    "img": "/assets/gameassets/ml20/imgs/money-movers-2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/money-movers-2/index.html"
+  },
+  {
+    "name": "Money Movers 3",
+    "img": "/assets/gameassets/ml20/imgs/money-movers-3.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/money-movers-3/index.html"
+  },
+  {
+    "name": "Money Movers",
+    "img": "/assets/gameassets/ml20/imgs/money-movers.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/money-movers/index.html"
+  },
+  {
+    "name": "Mr Bullet",
+    "img": "/assets/gameassets/ml20/imgs/mr-bullet.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/mr-bullet/index.html"
+  },
+  {
+    "name": "My Rusty Submarine",
+    "img": "/assets/gameassets/ml20/imgs/my-rusty-submarine.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/my-rusty-submarine/index.html"
+  },
+  {
+    "name": "Ninja Cat",
+    "img": "/assets/gameassets/ml20/imgs/ninja-cat.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/ninja-cat/index.html"
+  },
+  {
+    "name": "Pandas Japan",
+    "img": "/assets/gameassets/ml20/imgs/pandas-japan.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/pandas-japan/index.html"
+  },
+  {
+    "name": "Pandemic2",
+    "img": "/assets/gameassets/ml20/imgs/pandemic2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/pandemic2/index.html"
+  },
+  {
+    "name": "Papa Cherry Saga",
+    "img": "/assets/gameassets/ml20/imgs/papa-cherry-saga.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/papa-cherry-saga/index.html"
+  },
+  {
+    "name": "Park Out",
+    "img": "/assets/gameassets/ml20/imgs/park-out.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/park-out/index.html"
+  },
+  {
+    "name": "Plants Vs Zombies",
+    "img": "/assets/gameassets/ml20/imgs/plants-vs-zombies.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/plants-vs-zombies/index.html"
+  },
+  {
+    "name": "Portalflash",
+    "img": "/assets/gameassets/ml20/imgs/portalflash.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/portalflash/index.html"
+  },
+  {
+    "name": "Pudding Monster",
+    "img": "/assets/gameassets/ml20/imgs/pudding-monster.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/pudding-monster/index.html"
+  },
+  {
+    "name": "Push Your Luck",
+    "img": "/assets/gameassets/ml20/imgs/push-your-luck.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/push-your-luck/index.html"
+  },
+  {
+    "name": "Rabbit Samurai",
+    "img": "/assets/gameassets/ml20/imgs/rabbit-samurai.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/rabbit-samurai/index.html"
+  },
+  {
+    "name": "Rabbit Samurai2",
+    "img": "/assets/gameassets/ml20/imgs/rabbit-samurai2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/rabbit-samurai2/index.html"
+  },
+  {
+    "name": "Riddleschool",
+    "img": "/assets/gameassets/ml20/imgs/riddleschool.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/riddleschool/index.html"
+  },
+  {
+    "name": "Riddleschool2",
+    "img": "/assets/gameassets/ml20/imgs/riddleschool2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/riddleschool2/index.html"
+  },
+  {
+    "name": "Riddleschool3",
+    "img": "/assets/gameassets/ml20/imgs/riddleschool3.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/riddleschool3/index.html"
+  },
+  {
+    "name": "Riddleschool4",
+    "img": "/assets/gameassets/ml20/imgs/riddleschool4.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/riddleschool4/index.html"
+  },
+  {
+    "name": "Riddleschool5",
+    "img": "/assets/gameassets/ml20/imgs/riddleschool5.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/riddleschool5/index.html"
+  },
+  {
+    "name": "Riddletransfer",
+    "img": "/assets/gameassets/ml20/imgs/riddletransfer.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/riddletransfer/index.html"
+  },
+  {
+    "name": "Riddletransfer2",
+    "img": "/assets/gameassets/ml20/imgs/riddletransfer2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/riddletransfer2/index.html"
+  },
+  {
+    "name": "Roper",
+    "img": "/assets/gameassets/ml20/imgs/roper.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/roper/index.html"
+  },
+  {
+    "name": "Save The Dodge",
+    "img": "/assets/gameassets/ml20/imgs/save-the-dodge.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/save-the-dodge/index.html"
+  },
+  {
+    "name": "Slime Rush Td",
+    "img": "/assets/gameassets/ml20/imgs/slime-rush-td.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/slime-rush-td/index.html"
+  },
+  {
+    "name": "Snail Bob 7",
+    "img": "/assets/gameassets/ml20/imgs/snail-bob-7.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/snail-bob-7/index.html"
+  },
+  {
+    "name": "Snail Bob 8",
+    "img": "/assets/gameassets/ml20/imgs/snail-bob-8.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/snail-bob-8/index.html"
+  },
+  {
+    "name": "Solitaire",
+    "img": "/assets/gameassets/ml20/imgs/solitaire.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/solitaire/index.html"
+  },
+  {
+    "name": "Spider Solitaire",
+    "img": "/assets/gameassets/ml20/imgs/spider-solitaire.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/spider-solitaire/index.html"
+  },
+  {
+    "name": "Stealingthediamond",
+    "img": "/assets/gameassets/ml20/imgs/stealingthediamond.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/stealingthediamond/index.html"
+  },
+  {
+    "name": "Stickman Golf",
+    "img": "/assets/gameassets/ml20/imgs/stickman-golf.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/stickman-golf/index.html"
+  },
+  {
+    "name": "Stickman Hook",
+    "img": "/assets/gameassets/ml20/imgs/stickman-hook.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/stickman-hook/index.html"
+  },
+  {
+    "name": "Stormthehouse2",
+    "img": "/assets/gameassets/ml20/imgs/stormthehouse2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/stormthehouse2/index.html"
+  },
+  {
+    "name": "Swingo",
+    "img": "/assets/gameassets/ml20/imgs/swingo.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/swingo/index.html"
+  },
+  {
+    "name": "Territorial",
+    "img": "/assets/gameassets/ml20/imgs/territorial.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/territorial/index.html"
+  },
+  {
+    "name": "The Final Earth",
+    "img": "/assets/gameassets/ml20/imgs/the-final-earth.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/the-final-earth/index.html"
+  },
+  {
+    "name": "The Hotel",
+    "img": "/assets/gameassets/ml20/imgs/the-hotel.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/the-hotel/index.html"
+  },
+  {
+    "name": "Thebattle",
+    "img": "/assets/gameassets/ml20/imgs/thebattle.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/thebattle/index.html"
+  },
+  {
+    "name": "There Is No Game",
+    "img": "/assets/gameassets/ml20/imgs/there-is-no-game.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/there-is-no-game/index.html"
+  },
+  {
+    "name": "Tiny Islands",
+    "img": "/assets/gameassets/ml20/imgs/tiny-islands.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/tiny-islands/index.html"
+  },
+  {
+    "name": "Tower Crash 3D",
+    "img": "/assets/gameassets/ml20/imgs/tower-crash-3d.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/tower-crash-3d/index.html"
+  },
+  {
+    "name": "Twitch Tetris",
+    "img": "/assets/gameassets/ml20/imgs/twitch-tetris.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/twitch-tetris/index.html"
+  },
+  {
+    "name": "Wallsmash",
+    "img": "/assets/gameassets/ml20/imgs/wallsmash.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wallsmash/index.html"
+  },
+  {
+    "name": "Waterworks",
+    "img": "/assets/gameassets/ml20/imgs/waterworks.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/waterworks/index.html"
+  },
+  {
+    "name": "Wheely 2",
+    "img": "/assets/gameassets/ml20/imgs/wheely-2.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wheely-2/index.html"
+  },
+  {
+    "name": "Wheely 3",
+    "img": "/assets/gameassets/ml20/imgs/wheely-3.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wheely-3/index.html"
+  },
+  {
+    "name": "Wheely 4",
+    "img": "/assets/gameassets/ml20/imgs/wheely-4.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wheely-4/index.html"
+  },
+  {
+    "name": "Wheely 5",
+    "img": "/assets/gameassets/ml20/imgs/wheely-5.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wheely-5/index.html"
+  },
+  {
+    "name": "Wheely 6",
+    "img": "/assets/gameassets/ml20/imgs/wheely-6.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wheely-6/index.html"
+  },
+  {
+    "name": "Wheely 7",
+    "img": "/assets/gameassets/ml20/imgs/wheely-7.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wheely-7/index.html"
+  },
+  {
+    "name": "Wheely 8",
+    "img": "/assets/gameassets/ml20/imgs/wheely-8.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wheely-8/index.html"
+  },
+  {
+    "name": "Wood Block Puzzle",
+    "img": "/assets/gameassets/ml20/imgs/wood-block-puzzle.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wood-block-puzzle/index.html"
+  },
+  {
+    "name": "Woodventure",
+    "img": "/assets/gameassets/ml20/imgs/woodventure.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/woodventure/index.html"
+  },
+  {
+    "name": "Word Slide",
+    "img": "/assets/gameassets/ml20/imgs/word-slide.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/word-slide/index.html"
+  },
+  {
+    "name": "Wordle Unlimited",
+    "img": "/assets/gameassets/ml20/imgs/wordle-unlimited.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wordle-unlimited/index.html"
+  },
+  {
+    "name": "Wordle",
+    "img": "/assets/gameassets/ml20/imgs/wordle.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/wordle/index.html"
+  },
+  {
+    "name": "Xx142 B2Exe",
+    "img": "/assets/gameassets/ml20/imgs/xx142-b2exe.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/xx142-b2exe/index.html"
+  },
+  {
+    "name": "You Are Bezos",
+    "img": "/assets/gameassets/ml20/imgs/you-are-bezos.webp",
+    "game": "/assets/gameassets/ml20/games/strategy-games/you-are-bezos/index.html"
+  }
+]

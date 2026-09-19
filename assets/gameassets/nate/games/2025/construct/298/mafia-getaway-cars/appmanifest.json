@@ -1,0 +1,32 @@
+{
+	"name": "Mafia Getaway Cars 298",
+	"short_name": "Mafia Getaway Cars 298",
+	"description": " Freezenova Games",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-17.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-33.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-129.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-257.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	],
+	"screenshots": []
+}

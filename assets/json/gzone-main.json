@@ -1,4 +1,3 @@
-
 [
    {
     "Name": "Pizza Edition",
@@ -24,7 +23,7 @@
     "Name": "Truffled",
     "File": "assets/json/truffled.json",
     "Icon": "ri-ghost-line"
-  }
+  },
   {
     "Name": "SunTree",
     "File": "assets/json/suntree.json",

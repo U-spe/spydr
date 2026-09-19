@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFTSGL3ERY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFTSGL3ERY');
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link defer href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>roams.io</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Survive and climb the food chain in roamsio, the hit browser game!">
+  <meta name="keywords"
+    content="roams, roams.io, roamsio,io games, .io, spaceships, browser game, html game, html5 game, agario, diepio, flash game, space, multiplayer">
+
+  <meta name="google-site-verification" content="HjdDaF_uw12IxXRm3hOS03tqv9QW8Lj5b74mlJGsRz0">
+  <meta property="og:image" content="./img/share_banner.jpg">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:width" content="1263">
+  <meta property="og:image:height" content="707">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+  <meta name="revisit-after" content="3 days">
+  <meta name="googlebot" content="all">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- AdinPlay Ads -->
+  <script>
+    window.aiptag = window.aiptag || { cmd: [] };
+    aiptag.cmd.display = aiptag.cmd.display || [];
+    aiptag.cmd.player = aiptag.cmd.player || [];
+    //CMP tool settings
+    aiptag.cmp = {
+      show: true,
+      position: "centered", //centered, bottom
+      button: false,
+      buttonText: "Privacy settings",
+      buttonPosition: "bottom-left", //bottom-left, bottom-right, top-left, top-right
+    };
+  </script>
+  <script async src="https://api.adinplay.com/libs/aiptag/pub/SNP/roams.io/tag.min.js"></script>
+  <script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>
+  <script data-cfasync="false" type="text/javascript">
+
+    function getQueryParams(qs) {
+      qs = qs.split("+").join(" ");
+      var params = {},
+        tokens,
+        re = /[?&]?([^=]+)=([^&]*)/g;
+      while ((tokens = re.exec(qs))) {
+        params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+      }
+      return params;
+    }
+    var $_GET = getQueryParams(document.location.search);
+
+    //read link/ app flags
+    var isMobileAppIOS = $_GET["mobileios"] > 0;
+    var isMobileAppAndroid = $_GET["mobileAndroid"] > 0;
+    var isMobileApp = isMobileAppIOS || isMobileAppAndroid;
+    if (isMobileApp) {
+      console.log("Mobile App detected! (" + (isMobileAppIOS ? "IOS" : "Android") + ")");
+    }
+
+
+  </script>
+
+</head>
+
+<body>
+  <div id="preroll"></div>
+  <div class="gameArea">
+    <input type="text" class="chatInput" placeholder="Chat..." maxlength="35" autocomplete="off">
+    <canvas tabindex="1" id="gCanvas" width="1680" height="900" style="width: 1680px; height: 900px;"></canvas>
+  </div>
+  <div class="container">
+  <div id="oldgameadsbanner"></div>
+    <div class="side-container update-container">
+      <div class="update-element" id="masterInfo" style="display: none;">
+        <h3 class="update-header" id="masterInfoTitle"></h3>
+        <div id="masterInfoText"></div>
+      </div>
+      <ul class="update-block">
+        <div>Please wait... loading the changelog.</div>
+        <hr/>
+      </ul>
+      
+      <div class="legal-footer">
+        <a class="hoverable">Privacy Policy</a>
+        <a class="hoverable">Terms of Service</a>
+      </div>
+    </div>
+    <div class="side-container twitch-container">
+      <h4 class="twitch-top">Loading Twitch data...</h4>
+      <div class="twitch-inner-container">
+
+      </div>
+    </div>
+    <div class="connecting-outer" style="visibility: hidden;">
+      <div class="connecting-inner">
+        <img src="img/ui/connecting.gif">
+        <div class="connecting-txt">
+          Connecting...
+        </div>
+      </div>
+      
+    </div>
+    <div class="side-container session-container" id="sessionMenu">
+      <h2>Session Menu</h2>
+      <h3 id="nameMenu"></h3>
+      <div id="unloggedMenu">
+        <input id="sessionLogin" type="password">
+      </div>
+      <div id="loggedMenu" style="display: none;">
+        <h3 id="xpTokens">...</h3>
+        <div id="colorNames">
+          <h2 id="nameMenu">Color Name:</h2>
+          <select id="colorChoice"></select>
+        </div>
+        <button id="logoutButton">Logout</button>
+      </div>
+      <button id="btnSession">Login</button>
+      <li>sharing / using a session token will get you banned permanently.</li>
+    </div>
+    <div class="main-container">
+      <div class="logo-container">
+        <img src="img/logo.png" alt="logo" />
+      </div>
+      <div class="menu-container">
+        <ul class="side-links">
+          <li class="side-link"><a href="https://discord.gg/roams-io-1064222211537379388" target="_blank"><img src="img/ui/discord.svg" alt="discord"></a></li>
+          <li class="side-link"><a href="https://www.reddit.com/r/roamsio" target="_blank"><img src="img/ui/reddit.svg" alt="reddit"></a></li>
+          <li class="side-link"><a href="https://www.youtube.com/channel/UCT5sgmFlSkqI0JxA6bnpZhQ" target="_blank"><img src="img/ui/youtube.svg" alt="youtube"></a></li>
+        </ul>
+        <hr/>
+        <div class="menu-gamemodes">
+          <h2 class="menu-header">
+            Game Modes
+          </h2>
+          <div class="gamemode-container">
+            <button class="gamemode-button selected" data-mode="ffa">Free For All</button>
+          </div>
+        </div>
+        <div class="selector-container">
+          <div class="username-container">
+            <div class="username-label">Nickname</div>
+            <input class="username-input" placeholder="Nickname" type="text" autocomplete="off">
+          </div>
+          <div class="server-selector-container">
+            <div class="server-label">Servers</div>
+            <div class="server-selector-parent">
+              <select class="server-selector">
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="menu-options-container">
+          <button class="play-button">Play</button>
+          <img class="options-button" src="img/ui/setting.svg" alt="options">
+        </div>
+      </div>
+      <div class="serverResponse">
+
+      </div>
+    </div>
+    <div class="background-darken options-container hidden">
+      <div class="options-inner-container">
+        <h1 class="options-header">SETTINGS</h1>
+        <div class="options-close">
+          <img src="img/ui/x.png" alt="close">
+        </div>
+        <hr/>
+        <div class="options-body">
+        </div>
+      </div>
+    </div>
+    <div id="gameadsbanner">
+      <div id="roams-io_970x250" style="min-width:970px;min-height:250px"></div>
+    </div>
+    <div class="background-darken" style="display: none" id="captcha-container">
+      <div class="captcha-inner-container">
+        <div id="flavor-text-captcha"></div>
+        <div id="captcha-1" style="display: none;"></div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div id="deathModal" style="visibility: hidden;">
+    <div class="banner" id="youtube-embed">
+
+    </div>
+    <button id="deathModalContinue">Continue</button>
+    <div class="advertisement-informer-endgame">
+      Advertisement
+    </div>
+    <div id="roams-io_300x250" style="min-width: 300px;min-height:250px"></div>
+  </div>
+  <script type="text/javascript">
+    (function (g, a, m, e, A, d, s) {
+      g[A] = g[A] || function () { (g[A].s = g[A].s || []).push(arguments) };
+      g[A].l = 1 * new Date(); d = a.createElement("script"), s = a.getElementsByTagName("script")[0], d.async = 1, d.src = e + "?objid=" + m + "&jsdate=" + (+new Date()) + "&lang=" + g.navigator.language + "&rfunc=" + A + "&fromhost=" + g.location.hostname + "&refr=" + a.referrer + "", s.parentNode.insertBefore(d, s)
+    })
+      (window, document, "oldgameadsbanner", "https://n.gameads.io/getcode", "GameAdsRenew");
+  </script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
+  <script>
+
+    document.write("<script src='config.js?x=" + (+new Date()) + "'></" + "script>");
+    document.write("<script  src='client.js?x=" + (+new Date()) + "'></" + "script>");
+  </script>
+
+
+
+
+
+</body>
+
+</html>

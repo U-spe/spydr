@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Wordle - FreezeNova</title>
+  
+  
+<style type="text/css">
+	html, body, canvas {
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+	}
+</style>
+
+	<script>
+		window.addEventListener("keydown", function(e) {
+			if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+				e.preventDefault();
+			}
+		}, false);
+	</script>
+	
+
+	<link rel="canonical" href="https://unblocked-games.s3.amazonaws.com/wordle.html" />
+	
+	<script src="/assets/scripts/game.js"></script>
+
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXS04HS5MX"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-GXS04HS5MX');
+	</script>
+	
+
+	<script src="/assets/promo/promo.js" async></script>
+	<script type="text/javascript" async>
+		!function(e, t) {
+			var a = e.createElement("script"),
+				m = e.getElementsByTagName("script")[0];
+
+			a.async = 1;
+			a.src = t;
+
+			a.onload = function() {
+				console.log("Dynamic script loaded wg");
+				if (typeof window.syncPromoManager === "function") window.syncPromoManager(false);
+				window.wgLoaded = 1;
+			};
+
+			a.onerror = function() {
+				console.error("Failed to load wg");
+				if (typeof window.syncPromoManager === "function") window.syncPromoManager(true);
+				window.wgLoaded = 2;
+			};
+
+			m.parentNode.insertBefore(a, m);
+		}(document, "https://universal.wgplayer.com/tag/?lh=" + window.location.hostname + "&wp=" + window.location.pathname + "&ws=" + window.location.search);
+	</script>
+	
+  
+  <link rel="icon" type="image/svg+xml" href="vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wordle Game - Guess the 5 letter word and have fun!" />
+
+  <script type="module" crossorigin src="./assets/index-C7ysUF6V.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-dWjU2gl2.css">
+</head>
+
+<body class="bg-white font-sans overflow-x-hidden flex flex-col justify-center items-center p-1 xs:p-2 pt-4">
+  <div class="flex items-center justify-between w-[280px] xs:w-[300px] md:w-[340px] mb-1">
+    <h1 class="text-3xl md:text-4xl text-gray-500 uppercase font-extrabold text-center"><span
+        class="text-green-500">W</span>o<span class="text-yellow-500">r</span>d<span
+        class="text-yellow-500">l</span><span class="text-green-500">e</span></h1>
+    <div class="flex items-center gap-1 md:gap-1.5">
+      <button id="endGameBtn" style="display: none;"
+        class="bg-gray-200 hover:bg-gray-300 cursor-pointer text-gray-950 text-xs sm:text-sm font-semibold py-1.5 md:py-2 px-3 md:px-4">Give
+        up</button>
+      <button id="newGameBtn" style="display: none;"
+        class="bg-green-400 hidden hover:bg-green-500 cursor-pointer text-white text-xs sm:text-sm font-semibold py-1.5 md:py-2 px-3 md:px-4">New
+        Game</button>
+      <button onclick="document.getElementById('howtoplay').style.display = 'flex';"
+        class="bg-gray-200 hover:bg-gray-300 cursor-pointer text-gray-950 font-semibold w-7 sm:w-8 h-7 sm:h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full">
+        ?
+      </button>
+    </div>
+  </div>
+  <div id="grid" class="grid grid-cols-5 gap-1 mb-3 sm:mb-4"></div>
+  <div id="keyboard" class="flex flex-col gap-1 max-w-[600px]"></div>
+  <div id="message"
+    class="fixed top-16 sm:top-20 hidden bg-gray-800 transition-all duration-300 text-white px-2 py-1 sm:px-4 sm:py-2 rounded font-semibold">
+  </div>
+
+  <div id="gameOver" style="display: none;" class="fixed inset-0 flex items-start justify-center bg-black/20 z-50">
+    <div class="bg-gray-100 text-gray-800 p-6 w-[95%] mt-16 sm:mt-20 xs:max-w-md md:min-w-md mx-auto relative">
+      <button onclick="document.getElementById('gameOver').style.display = 'none';"
+        class="absolute w-6 h-6 right-1.5 top-1.5 text-xs cursor-pointer bg-gray-200 hover:bg-gray-300 rounded-full text-gray-800 font-semibold">
+        X
+      </button>
+
+      <h2 id="gameOverTitle" class="text-2xl sm:text-3xl text-gray-950 uppercase font-bold text-center"></h2>
+      <p id="gameOverMessage" class="text-sm sm:text-base mt-4 text-center"></p>
+
+      <div class="mt-4 text-center">
+        <p class="text-gray-600">The correct word was: </p>
+        <p id="correctWord"
+          class="mt-2 w-fit mx-auto text-gray-900 text-2xl md:text-3xl font-bold uppercase py-1.5 px-4 bg-gray-200 border border-gray-300">
+        </p>
+      </div>
+
+
+      <p class="text-gray-600 mt-6 text-center">Want to try again?</p>
+
+      <button id="closeBtn"
+        class="mt-4 block mx-auto cursor-pointer bg-green-400 hover:bg-green-500 text-white font-bold py-2 px-4">
+        New Game
+      </button>
+    </div>
+  </div>
+
+  <div id="howtoplay" class="fixed inset-0 flex items-start justify-center bg-black/20 z-50">
+    <div class="bg-gray-100 text-gray-800 p-4 md:p-6 w-[95%] xs:max-w-md mt-8 sm:mt-10 mx-auto relative shadow-lg">
+      <button onclick="document.getElementById('howtoplay').style.display = 'none';"
+        class="absolute w-6 h-6 right-1.5 top-1.5 text-xs cursor-pointer bg-gray-200 hover:bg-gray-300 rounded-full text-gray-800 font-semibold">
+        X
+      </button>
+
+      <h2 class="text-2xl sm:text-3xl text-gray-950 uppercase font-bold text-center">How to Play</h2>
+      <p class="text-sm sm:text-base mt-4">
+        Guess the hidden 5-letter word in 6 tries.
+      </p>
+      <p class="text-sm sm:text-base mt-1">
+        Each guess must be a valid 5-letter word. Hit the enter button to submit.
+      </p>
+      <p class="text-sm sm:text-base mt-1">
+        After each guess, the color of the tiles will change to show how close your guess was to the word.
+      </p>
+
+      <div class="mt-3 sm:mt-6">
+        <div class="flex justify-start gap-1">
+          <div class="cell mini-cell correct">W</div>
+          <div class="cell mini-cell filled">E</div>
+          <div class="cell mini-cell filled">A</div>
+          <div class="cell mini-cell filled">R</div>
+          <div class="cell mini-cell filled">Y</div>
+        </div>
+        <p class="text-xs mt-1">
+          The letter <span class="font-bold">W</span> is in the word and in the correct spot.
+        </p>
+      </div>
+
+      <div class="mt-3 sm:mt-6">
+        <div class="flex justify-start gap-1">
+          <div class="cell mini-cell filled">P</div>
+          <div class="cell mini-cell present">I</div>
+          <div class="cell mini-cell filled">L</div>
+          <div class="cell mini-cell filled">O</div>
+          <div class="cell mini-cell filled">T</div>
+        </div>
+        <p class="text-xs mt-1">
+          The letter <span class="font-bold">I</span> is in the word but in the wrong spot.
+        </p>
+      </div>
+
+      <div class="mt-3 sm:mt-6">
+        <div class="flex justify-start gap-1">
+          <div class="cell mini-cell filled">V</div>
+          <div class="cell mini-cell filled">A</div>
+          <div class="cell mini-cell filled">G</div>
+          <div class="cell absent mini-cell">U</div>
+          <div class="cell mini-cell filled">E</div>
+        </div>
+        <p class="text-xs mt-1">
+          The letter <span class="font-bold">U</span> is not in the word in any spot.
+        </p>
+      </div>
+
+      <button onclick="document.getElementById('howtoplay').style.display = 'none';"
+        class="mt-6 block mx-auto cursor-pointer bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-6">
+        Got it
+      </button>
+    </div>
+  </div>
+
+  <a href="http://www.freezenova.com/" target="_blank"
+    class="mt-1 md:mt-0.5 text-center text-lg text-green-600 font-bold hover:text-green-700">www.FreezeNova.com</a>
+
+
+</body>
+
+</html>

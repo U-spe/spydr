@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cube Worlds - FreezeNova</title>
+  
+  
+<style type="text/css">
+	body {
+	  overflow: hidden;
+	}
+</style>
+
+	<link rel="canonical" href="https://unblocked-games.s3.amazonaws.com/cube-worlds.html" />
+	
+	<script src="/assets/scripts/game.js"></script>
+
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXS04HS5MX"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-GXS04HS5MX');
+	</script>
+	
+
+	<script src="/assets/promo/promo.js" async></script>
+	<script type="text/javascript" async>
+		!function(e, t) {
+			var a = e.createElement("script"),
+				m = e.getElementsByTagName("script")[0];
+
+			a.async = 1;
+			a.src = t;
+
+			a.onload = function() {
+				console.log("Dynamic script loaded wg");
+				if (typeof window.syncPromoManager === "function") window.syncPromoManager(false);
+				window.wgLoaded = 1;
+			};
+
+			a.onerror = function() {
+				console.error("Failed to load wg");
+				if (typeof window.syncPromoManager === "function") window.syncPromoManager(true);
+				window.wgLoaded = 2;
+			};
+
+			m.parentNode.insertBefore(a, m);
+		}(document, "https://universal.wgplayer.com/tag/?lh=" + window.location.hostname + "&wp=" + window.location.pathname + "&ws=" + window.location.search);
+	</script>
+	
+
+	<script>
+	
+	function SubmitLeaderboardScore(newScore)
+	{
+		
+	}
+	
+	function GetLeaderboardEntries()
+	{
+		
+	}
+	
+	function InitApi(_appId) 
+    {
+		var dateNow = new Date();
+		var secondsSinceEpoch = Math.round(dateNow.getTime() / 1000);
+		
+		console.log('InitApi');
+		
+		window.callTime = secondsSinceEpoch - 181;
+    }
+	
+	function InitExternEval(_appId) 
+    {
+		console.log("InitExternEval");
+		
+		ExternEval();
+    }
+    
+    function ExternEval() 
+    {
+		console.log("ExternEval");
+		
+		var dateNow = new Date();
+		var secondsSinceEpoch = Math.round(dateNow.getTime() / 1000);
+		
+		if (window.callTime != undefined && 
+			secondsSinceEpoch - window.callTime > 180)
+		{
+			console.log('ExternEval 2');
+			
+			window.callTime = secondsSinceEpoch;
+			
+			if (typeof preroll !== 'undefined')
+			{
+				if (window[preroll.config.loaderObjectName] != undefined)
+				{
+					gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onOpen');
+				
+					try {
+						window[preroll.config.loaderObjectName].refetchAd(ExternEvalResumeGame);
+					}
+					catch(err) {
+						console.log(err.message);
+						gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onClose');
+					}
+				}
+			}
+		}
+		
+    }
+	
+	function ExternEvalResumeGame()
+	{
+		console.log("ExternEvalResumeGame");
+	
+		gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onClose');
+	}
+	
+	function PreloadRewarded() 
+	{
+		console.log("PreloadRewarded");
+	
+		if (window.rewardedCallbacks == undefined)
+		{
+			window.rewardedCallbacks = true;
+			
+			try {
+				window[window.preroll.config.loaderObjectName].registerRewardCallbacks({
+					onReady:RewardedReady, 
+					onSuccess:RewardedSuccess, 
+					onFail:RewardedFail,
+					onClose:RewardedClose
+				});
+			}
+			catch(err) {
+				console.log(err.message);
+			}
+		}
+	}
+		
+	function ShowRewarded() 
+	{
+		console.log("ShowRewarded");
+	
+		if (typeof preroll !== 'undefined')
+		{
+			if (window.rewardedCallbacks == undefined)
+			{
+				PreloadRewarded();
+			}
+		
+			if (window[preroll.config.loaderObjectName] != undefined)
+			{
+				gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onOpen');
+			
+				try {
+					window[preroll.config.loaderObjectName].showRewardAd();
+				}
+				catch(err) {
+					console.log(err.message);
+					gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onClose');
+				}
+			}
+		}
+	
+	}
+	
+	function RewardedReady()
+	{
+		console.log("RewardedReady");
+		
+		if (window.rewardedCount == undefined)
+		{
+			window.rewardedCount = 1;
+			window.gameInstance.SendMessage('FreezeNovaAPI', 'RewardedReady');
+		}
+		else{
+			window.rewardedCount = window.rewardedCount + 1;
+			//setTimeout(function(){ window.gameInstance.SendMessage('FreezeNovaAPI', 'RewardedReady'); }, 30000);
+			window.gameInstance.SendMessage('FreezeNovaAPI', 'RewardedReady');
+		}
+		
+	}
+	
+	function RewardedSuccess()
+	{
+		console.log("RewardedSuccess");
+		gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'RewardedOnRewarded');
+		//gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onClose');
+	}
+	
+	function RewardedFail()
+	{
+		console.log("RewardedFail");
+		gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'RewardedOnFail');
+		//gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onClose');
+	}
+	
+	function RewardedClose()
+	{
+		console.log("RewardedClose");
+		gameInstance.SendMessage('FreezeNovaAPI', 'AdMessage', 'onClose');
+	}
+	
+	InitApi(0);
+	
+	
+	</script>
+
+  
+  <meta name="viewport" content="width=device-width">
+  <link href="static/style.css" rel="stylesheet">
+  <script src="static/jquery.js"></script>
+
+  <style>
+    /* Centered Loading Overlay */
+    #loadingOverlay {
+      position: fixed;
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 100%;
+      display: flex;               /* allows centering child elements */
+      align-items: center;         /* vertically center child */
+      justify-content: center;     /* horizontally center child */
+      background-color: black;     /* overlay background */
+      color: white;
+      font-size: 3em;
+      z-index: 9999;              /* ensure overlay is on top */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Overlay with "Loading" text -->
+<div id="loadingOverlay">Loading</div>
+
+<div id="body">
+  <div class="sec">
+    <div class="row">
+      <!-- Update tabindex to '0' so the canvas can be focused -->
+      <canvas id="canvas"
+              style="display:block; box-sizing:border-box; border-width:0px; padding:0; margin:0 auto; background-color: black; width:100%; height:auto;"
+              oncontextmenu="event.preventDefault()" tabindex="0"
+              width="1000" height="562"></canvas>
+
+      <span id="logmsg" style="font-size:18px;color:#F67;"></span>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+  function resizeGameCanvas() {
+    var cc_canv = $('canvas#canvas')[0];
+    cc_canv.width  = window.innerWidth;
+    cc_canv.height = window.innerHeight;
+    cc_canv.focus();
+  }
+
+  function setFocusOnClick() {
+    // Focus on the canvas when it's clicked
+    var cc_canv = $('canvas#canvas')[0];
+    cc_canv.focus();
+  }
+  
+  // Prevent arrow keys from scrolling the page
+  document.addEventListener('keydown', function(e) {
+    // Arrow keys: 37 (Left), 38 (Up), 39 (Right), 40 (Down)
+    if ([37, 38, 39, 40].includes(e.keyCode)) {
+      e.preventDefault();
+    }
+  }, false);
+
+  // Bind click to the canvas for focus
+  document.getElementById('canvas').addEventListener('click', setFocusOnClick);
+
+  // Attempt to focus on load
+  window.addEventListener('load', function() {
+    document.getElementById('canvas').focus();
+  });
+
+  // Emscripten config
+  var Module = {
+    preRun: [ resizeGameCanvas ],
+    postRun: [],
+    arguments: ['Singleplayer'],
+    print: function(text) {
+      if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+      console.log(text);
+    },
+    printErr: function(text) {
+      if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+      console.error(text);
+    },
+    canvas: (function() { return document.getElementById('canvas'); })(),
+    setStatus: function(text) {
+      console.log(text);
+      document.getElementById('logmsg').innerHTML = text;
+    },
+    totalDependencies: 0,
+    monitorRunDependencies: function(left) {
+      this.totalDependencies = Math.max(this.totalDependencies, left);
+      Module.setStatus(left
+        ? 'Preparing... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')'
+        : 'All downloads complete.');
+
+      // Hide loading overlay when everything is loaded
+      if (!left) {
+        document.getElementById('loadingOverlay').style.display = 'none';
+      }
+    }
+  };
+
+  Module.setStatus('Downloading...');
+  window.onerror = function(msg) {
+    Module.setStatus('Exception thrown, see JavaScript console (' + msg + ')');
+    Module.setStatus = function(text) {
+      if (text) Module.printErr('[post-exception status] ' + text);
+    };
+  };
+</script>
+
+<!-- Your compiled Emscripten output -->
+<script async type="text/javascript" src="static/ClassiCube.js"></script>
+
+</body>
+</html>

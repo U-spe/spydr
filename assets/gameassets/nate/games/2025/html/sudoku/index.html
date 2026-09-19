@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Sudoku - FreezeNova</title>
+  
+  
+<style type="text/css">
+	html, body, canvas {
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+	}
+</style>
+
+	<script>
+		window.addEventListener("keydown", function(e) {
+			if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+				e.preventDefault();
+			}
+		}, false);
+	</script>
+	
+
+	<link rel="canonical" href="https://unblocked-games.s3.amazonaws.com/sudoku.html" />
+	
+	<script src="/assets/scripts/game.js"></script>
+
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXS04HS5MX"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-GXS04HS5MX');
+	</script>
+	
+
+	<script src="/assets/promo/promo.js" async></script>
+	<script type="text/javascript" async>
+		!function(e, t) {
+			var a = e.createElement("script"),
+				m = e.getElementsByTagName("script")[0];
+
+			a.async = 1;
+			a.src = t;
+
+			a.onload = function() {
+				console.log("Dynamic script loaded wg");
+				if (typeof window.syncPromoManager === "function") window.syncPromoManager(false);
+				window.wgLoaded = 1;
+			};
+
+			a.onerror = function() {
+				console.error("Failed to load wg");
+				if (typeof window.syncPromoManager === "function") window.syncPromoManager(true);
+				window.wgLoaded = 2;
+			};
+
+			m.parentNode.insertBefore(a, m);
+		}(document, "https://universal.wgplayer.com/tag/?lh=" + window.location.hostname + "&wp=" + window.location.pathname + "&ws=" + window.location.search);
+	</script>
+	
+  
+  <link rel="icon" type="image/svg+xml" href="vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sudoku game is a logic-based, combinatorial number-placement puzzle.">
+
+  <script type="module" crossorigin src="./assets/index-50w1IdM8.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DqOCGdya.css">
+</head>
+
+<body class="bg-white flex flex-col justify-center items-center p-2 pt-6 md:pt-10">
+  <div class="relative flex items-center flex-col md:flex-row md:justify-between md:gap-4">
+    <div>
+      <div class="flex justify-between md:gap-0 items-center">
+        <div class="flex gap-1 sm:gap-2 items-center">
+          <label for="difficulty"
+            class="hidden md:block text-sm font-semibold text-gray-700 md:text-gray-400">Difficulty:</label>
+          <div class="relative md:hidden">
+            <select id="difficulty"
+              class="appearance-none border-2 border-transparent pr-4 text-xs xs:text-sm outline-none font-semibold text-blue-950 bg-white">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+              <option value="expert">Expert</option>
+              <option value="master">Master</option>
+            </select>
+            <span class="absolute top-2 right-0 w-3 h-3 p-[1px] flex items-center pointer-events-none">
+              <svg fill="currentColor" height="800px" width="800px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve">
+                <path d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+	c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+	s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
+              </svg>
+            </span>
+          </div>
+          <div class="hidden md:block">
+            <button data-difficulty="easy" class="difficultyBtn">Easy</button>
+            <button data-difficulty="medium" class="difficultyBtn">Medium</button>
+            <button data-difficulty="hard" class="difficultyBtn">Hard</button>
+            <button data-difficulty="expert" class="difficultyBtn">Expert</button>
+            <button data-difficulty="master" class="difficultyBtn">Master</button>
+          </div>
+        </div>
+        <div class="flex gap-2 w-48 xs:w-56 sm:w-72 xs:gap-3 sm:gap-8 items-center justify-end md:hidden">
+          <div class="flex items-center justify-start gap-1 md:gap-2">
+            <label for="mistakes2" class="text-xs xs:text-sm lg:text-base font-bold text-gray-400">Mistakes:</label>
+            <span id="mistakes2" class="mistakes text-xs xs:text-sm lg:text-base font-semibold text-gray-700">0/3</span>
+          </div>
+          <div class="flex items-center justify-center gap-1 md:gap-2">
+            <label for="score2" class="text-xs xs:text-sm lg:text-base font-bold text-gray-400">Score:</label>
+            <span id="score2" class="score text-sm xs:text-base lg:text-lg font-semibold text-gray-800">0</span>
+          </div>
+          <div class="flex gap-1 lg:gap-2 items-center justify-end">
+            <span id="timer1" class="timer text-sm xs:text-base lg:text-lg font-semibold text-gray-400">00:00</span>
+            <button class="pauseBtn">
+              <svg height="800px" width="800px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 496 496" xml:space="preserve">
+                <g>
+                  <path d="M188,168.8c-12,0-20,9.6-20,21.6v116c0,12,8,21.6,20,21.6s20-9.6,20-21.6V189.6
+            C208,178.4,200,168.8,188,168.8z" />
+                  <path d="M308,168.8c-12,0-20,9.6-20,21.6v116c0,12,8,21.6,20,21.6s20-9.6,20-21.6V189.6
+            C328,178.4,320,168.8,308,168.8z" />
+                </g>
+              </svg>
+              <svg height="800px" width="800px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 496 496" xml:space="preserve">
+                <path
+                  d="M212.8,334.4c-1.6,0-4-0.8-5.6-1.6c-4-1.6-7.2-6.4-7.2-10.4V172.8c0-4,3.2-8.8,7.2-10.4
+            c4-1.6,8.8-1.6,12.8,0.8l101.6,75.2c3.2,2.4,4.8,5.6,4.8,9.6c0,4-1.6,7.2-4.8,9.6L220,332.8C217.6,333.6,215.2,334.4,212.8,334.4z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="relative mt-2 md:mt-3">
+        <div id="grid"
+          class="grid grid-cols-9 min-w-[260px] w-[95vw] h-[95vw] sm:w-[90dvw] sm:h-[90dvw] max-w-md max-h-[448px] lg:max-w-lg lg:max-h-[512px] bg-white">
+        </div>
+        <div id="pauseModal" style="display: none;"
+          class="absolute left-0 top-0 w-full h-full bg-white flex items-center justify-center">
+          <button id="resumeBtn"
+            class="w-14 h-14 bg-blue-500 hover:brightness-110 cursor-pointer flex items-center justify-center text-white text-2xl font-semibold rounded-full">
+            <svg class="w-14 h-14 scale-125" fill="currentColor" height="800px" width="800px" version="1.1"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 496 496"
+              xml:space="preserve">
+              <path
+                d="M212.8,334.4c-1.6,0-4-0.8-5.6-1.6c-4-1.6-7.2-6.4-7.2-10.4V172.8c0-4,3.2-8.8,7.2-10.4
+        c4-1.6,8.8-1.6,12.8,0.8l101.6,75.2c3.2,2.4,4.8,5.6,4.8,9.6c0,4-1.6,7.2-4.8,9.6L220,332.8C217.6,333.6,215.2,334.4,212.8,334.4z" />
+            </svg>
+          </button>
+        </div>
+        <div class="absolute pointer-events-none left-0 top-0 w-full h-full border-collapse border-2 border-black/70">
+        </div>
+        <div class="absolute pointer-events-none left-1/3 top-0 w-0.5 h-full bg-black/70"></div>
+        <div class="absolute pointer-events-none left-2/3 top-0 w-0.5 h-full bg-black/70"></div>
+        <div class="absolute pointer-events-none left-0 top-1/3 w-full h-0.5 bg-black/70"></div>
+        <div class="absolute pointer-events-none left-0 top-2/3 w-full h-0.5 bg-black/70"></div>
+      </div>
+    </div>
+    <div class="w-full flex flex-col-reverse md:flex-col">
+      <div class="hidden w-80 md:grid md:grid-cols-3 md:gap-2 md:place-content-center text-center">
+        <div class="flex items-center justify-start gap-2">
+          <label for="mistakes2" class="text-sm lg:text-base font-bold text-gray-400">Mistakes:</label>
+          <span id="mistakes2" class="mistakes text-sm lg:text-base font-semibold text-gray-700">0/3</span>
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <label for="score2" class="hidden lg:block text-sm lg:text-base font-bold text-gray-400">Score:</label>
+          <span id="score2" class="score text-base lg:text-lg font-semibold text-gray-800">0</span>
+        </div>
+        <div class="flex gap-1 lg:gap-2 items-center justify-end">
+          <span id="timer2" class="timer text-sm sm:text-base lg:text-lg font-semibold text-gray-400">00:00</span>
+          <button class="pauseBtn">
+            <svg height="800px" width="800px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 496 496" xml:space="preserve">
+              <g>
+                <path d="M188,168.8c-12,0-20,9.6-20,21.6v116c0,12,8,21.6,20,21.6s20-9.6,20-21.6V189.6
+              C208,178.4,200,168.8,188,168.8z" />
+                <path d="M308,168.8c-12,0-20,9.6-20,21.6v116c0,12,8,21.6,20,21.6s20-9.6,20-21.6V189.6
+              C328,178.4,320,168.8,308,168.8z" />
+              </g>
+            </svg>
+            <svg height="800px" width="800px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 496 496" xml:space="preserve">
+              <path
+                d="M212.8,334.4c-1.6,0-4-0.8-5.6-1.6c-4-1.6-7.2-6.4-7.2-10.4V172.8c0-4,3.2-8.8,7.2-10.4
+          c4-1.6,8.8-1.6,12.8,0.8l101.6,75.2c3.2,2.4,4.8,5.6,4.8,9.6c0,4-1.6,7.2-4.8,9.6L220,332.8C217.6,333.6,215.2,334.4,212.8,334.4z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="flex items-center justify-around gap-4 sm:gap-6 md:gap-0 md:grid md:grid-cols-4 mt-4 md:mt-3 lg:mt-4">
+        <button class="action-btn" id="undoBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 31">
+            <path fill="currentColor"
+              d="M13.71 2.46a1 1 0 01.14 1.32l-.08.1-2.15 2.32 3.41.02a10 10 0 11-10 10 1 1 0 112 0 8 8 0 108.25-8h-.25l-3.48-.02 2.28 2.53a1 1 0 01.01 1.32l-.09.1a1 1 0 01-1.32 0l-.09-.08-3.76-4.18a1 1 0 01-.07-1.25l.08-.1 3.7-4.02a1 1 0 011.42-.06z">
+            </path>
+          </svg>
+        </button>
+        <button class="action-btn" id="eraseBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 31">
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M27.13 25.11a1 1 0 01.12 2h-6.9a1 1 0 01-.11-2H27.13zM21.48 4.08l.17.14.16.15 3.76 3.76a4 4 0 01.15 5.5l-.15.16-11.32 11.32h2.04a1 1 0 011 .89v.11a1 1 0 01-.88 1H6.52a3 3 0 01-1.98-.74l-.14-.14-2.23-2.22a4 4 0 01-.15-5.5l.15-.16L16.15 4.37a4 4 0 015.33-.29zm-11.52 9.3l-6.38 6.38a2 2 0 00-.11 2.7l.11.13 2.23 2.23a1 1 0 00.58.28l.13.01h4.9l5.13-5.13-6.59-6.6zm7.87-7.82l-.14.1-.13.13-6.18 6.18 6.59 6.6 6.19-6.2a2 2 0 00.11-2.7l-.11-.12-3.77-3.76a2 2 0 00-2.56-.22z">
+            </path>
+          </svg>
+        </button>
+        <button class="action-btn" id="editBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 31">
+            <path fill="currentColor"
+              d="M25.43 4.76a5.42 5.42 0 01.19 7.52l-.18.2-13.5 13.48a.91.91 0 01-1.21.08l-.1-.08-5.07-5.08-.59 4.34 3.25-.44c.44-.05.84.2 1 .58l.03.11.02.11c.06.47-.24.91-.7 1.03l-.1.02-4.45.6a.94.94 0 01-.79-.27.92.92 0 01-.26-.65v-.13l1-7.4a.92.92 0 01.19-.44l.08-.09L17.71 4.76a5.45 5.45 0 017.72 0zm.35 20.08a1 1 0 110 2h-8.7a1 1 0 010-2h8.7zM21.4 10.18L9.43 22.13 11.3 24l11.95-11.95-1.86-1.86zm-3.23-3.23L6.2 18.91l1.92 1.91L20.07 8.86l-1.9-1.9zm3.42-1.93c-.69 0-1.35.2-1.92.56l-.15.1 5.01 5 .1-.14c.33-.5.51-1.09.55-1.7l.01-.22a3.58 3.58 0 00-3.6-3.6z">
+            </path>
+          </svg>
+        </button>
+        <button class="action-btn" id="hintBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 31">
+            <path fill="currentColor"
+              d="M17.3 25.91c.5 0 .91.48.91 1.08 0 .59-.4 1.07-.91 1.07h-4.6c-.5 0-.91-.48-.91-1.07 0-.6.4-1.08.91-1.08zM15 2.34a9.68 9.68 0 019.64 9.71c0 3.5-1.86 6.7-4.83 8.41-.23.14-.4.39-.5.82a3.21 3.21 0 01-3.13 2.5H13.5a3.21 3.21 0 01-3.17-2.68c-.08-.45-.17-.65-.12-.62a9.72 9.72 0 01-4.85-8.43c0-5.36 4.31-9.7 9.64-9.7zm0 2.15a7.53 7.53 0 00-7.5 7.56 7.57 7.57 0 003.78 6.57c.65.38.99 1.1 1.16 2.12.1.51.54.89 1.06.89h2.68c.5 0 .94-.35 1.05-.83.23-.98.73-1.73 1.5-2.19a7.57 7.57 0 003.77-6.56A7.53 7.53 0 0015 4.5z">
+            </path>
+          </svg>
+          <span id="hintsCount">
+            3
+          </span>
+        </button>
+      </div>
+      <div class="text-sm font-medium text-blue-950 hidden lg:grid lg:grid-cols-4 mt-1">
+        <div class="text-center">Undo</div>
+        <div class="text-center">Erase</div>
+        <div class="text-center">Notes</div>
+        <div class="text-center">Hint</div>
+      </div>
+      <div
+        class="w-full flex justify-evenly md:grid md:grid-cols-3 md:h-80 lg:h-[332px] gap-3 xs:gap-4 md:gap-2 mt-3 lg:mt-4">
+        <button class="add-btn">1</button>
+        <button class="add-btn">2</button>
+        <button class="add-btn">3</button>
+        <button class="add-btn">4</button>
+        <button class="add-btn">5</button>
+        <button class="add-btn">6</button>
+        <button class="add-btn">7</button>
+        <button class="add-btn">8</button>
+        <button class="add-btn">9</button>
+      </div>
+      <div class="relative">
+        <button id="newGameBtn"
+          class="hidden md:block w-full mt-3 p-3 text-lg rounded-md bg-blue-400 text-white font-semibold cursor-pointer">New
+          Game
+        </button>
+        <div id="newGameModal" style="display: none;" class="absolute z-0 bottom-14 left-0.5 w-72 lg:w-80">
+          <div class="-z-10 fixed inset-0 w-screen h-screen bg-black/10"
+            onclick="document.getElementById('newGameModal').style.display='none';"></div>
+          <div
+            class="bg-white flex flex-col items-center justify-center p-4 border border-gray-200 shadow-xl rounded-md">
+            <h3 class="z-10 text-xl font-semibold text-gray-800">Select game mode</h3>
+            <p class="text-xs lg:text-sm text-center font-normal text-gray-600 mt-1">Choose a difficulty level to start
+              a new
+              game</p>
+
+            <div class="w-full flex flex-col gap-1 mt-3">
+              <button data-difficulty="easy" class="difficultyBtn2">
+                <svg fill="currentColor" class="w-4 h-4" height="800px" width="800px" version="1.1" id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 445.049 445.049" xml:space="preserve">
+                  <path id="XMLID_176_"
+                    d="M56.507,73.548c-3.393-3.632-3.2-9.327,0.433-12.72l26.938-25.166c2.619-2.447,6.44-3.106,9.729-1.679 c3.288,1.428,5.415,4.67,5.415,8.255v70.863c0,4.971-4.029,9-9,9s-9-4.029-9-9V62.963L69.228,73.98 C65.595,77.374,59.9,77.181,56.507,73.548z M437.533,9v170.012c0,4.971-4.029,9-9,9s-9-4.029-9-9v-23.673H300.193v119.338h25.329 c4.971,0,9,4.029,9,9s-4.029,9-9,9h-25.329v119.338h25.329c4.971,0,9,4.029,9,9s-4.029,9-9,9h-34.138 c-0.063,0.001-0.127,0.002-0.191,0.002c-0.063,0-0.127-0.001-0.191-0.002H154.048c-0.125,0.003-0.254,0.003-0.382,0H16.546 c-4.97,0-9-4.029-9-8.999L7.536,284.28c-0.013-0.2-0.02-0.4-0.02-0.604c0-0.202,0.007-0.402,0.02-0.602l-0.01-136.31 c-0.006-0.142-0.01-0.283-0.01-0.427c0-0.143,0.003-0.284,0.01-0.426L7.516,9.001c0-2.388,0.948-4.677,2.636-6.364 C11.84,0.948,14.129,0,16.516,0h412.017C433.503,0,437.533,4.029,437.533,9z M144.857,292.677H25.537l0.009,119.338h119.312V292.677 z M144.857,155.339H25.527l0.008,119.338h119.322V155.339z M144.857,18H25.517l0.009,119.339h119.332V18z M282.193,292.677H162.857 v119.338h119.336V292.677z M282.193,155.339H162.857v119.338h119.336V155.339z M282.193,18H162.857v119.339h119.336V18z M419.533,18 H300.193v119.339h119.339V18z M435.378,231.685c1.39,1.629,2.154,3.701,2.154,5.843v198.521c0,4.971-4.029,9-9,9H371.8 c-4.971,0-9-4.029-9-9V237.527c0-2.142,0.764-4.214,2.154-5.843l28.366-33.234c1.71-2.004,4.212-3.157,6.846-3.157 s5.136,1.153,6.846,3.157L435.378,231.685z M419.533,408.026H380.8v19.022h38.733V408.026z M419.533,261.238H380.8v128.788h38.733 V261.238z M419.533,240.846l-19.367-22.689L380.8,240.846v2.393h38.733V240.846z M238.798,238.695H189.91c-4.971,0-9,4.029-9,9 s4.029,9,9,9h48.888c13.974,0,25.342-11.369,25.342-25.344c0-6.223-2.254-11.928-5.988-16.344 c3.734-4.416,5.988-10.121,5.988-16.344c0-13.975-11.369-25.344-25.342-25.344H189.91c-4.971,0-9,4.029-9,9s4.029,9,9,9h48.888 c4.048,0,7.342,3.295,7.342,7.345c0,4.049-3.294,7.343-7.342,7.343h-28.77c-4.971,0-9,4.029-9,9s4.029,9,9,9h28.77 c4.048,0,7.342,3.295,7.342,7.345C246.14,235.401,242.846,238.695,238.798,238.695z" />
+                </svg>
+                Easy
+              </button>
+              <button data-difficulty="medium" class="difficultyBtn2">
+                <svg fill="currentColor" class="w-4 h-4" height="800px" width="800px" version="1.1" id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 445.049 445.049" xml:space="preserve">
+                  <path id="XMLID_176_"
+                    d="M56.507,73.548c-3.393-3.632-3.2-9.327,0.433-12.72l26.938-25.166c2.619-2.447,6.44-3.106,9.729-1.679 c3.288,1.428,5.415,4.67,5.415,8.255v70.863c0,4.971-4.029,9-9,9s-9-4.029-9-9V62.963L69.228,73.98 C65.595,77.374,59.9,77.181,56.507,73.548z M437.533,9v170.012c0,4.971-4.029,9-9,9s-9-4.029-9-9v-23.673H300.193v119.338h25.329 c4.971,0,9,4.029,9,9s-4.029,9-9,9h-25.329v119.338h25.329c4.971,0,9,4.029,9,9s-4.029,9-9,9h-34.138 c-0.063,0.001-0.127,0.002-0.191,0.002c-0.063,0-0.127-0.001-0.191-0.002H154.048c-0.125,0.003-0.254,0.003-0.382,0H16.546 c-4.97,0-9-4.029-9-8.999L7.536,284.28c-0.013-0.2-0.02-0.4-0.02-0.604c0-0.202,0.007-0.402,0.02-0.602l-0.01-136.31 c-0.006-0.142-0.01-0.283-0.01-0.427c0-0.143,0.003-0.284,0.01-0.426L7.516,9.001c0-2.388,0.948-4.677,2.636-6.364 C11.84,0.948,14.129,0,16.516,0h412.017C433.503,0,437.533,4.029,437.533,9z M144.857,292.677H25.537l0.009,119.338h119.312V292.677 z M144.857,155.339H25.527l0.008,119.338h119.322V155.339z M144.857,18H25.517l0.009,119.339h119.332V18z M282.193,292.677H162.857 v119.338h119.336V292.677z M282.193,155.339H162.857v119.338h119.336V155.339z M282.193,18H162.857v119.339h119.336V18z M419.533,18 H300.193v119.339h119.339V18z M435.378,231.685c1.39,1.629,2.154,3.701,2.154,5.843v198.521c0,4.971-4.029,9-9,9H371.8 c-4.971,0-9-4.029-9-9V237.527c0-2.142,0.764-4.214,2.154-5.843l28.366-33.234c1.71-2.004,4.212-3.157,6.846-3.157 s5.136,1.153,6.846,3.157L435.378,231.685z M419.533,408.026H380.8v19.022h38.733V408.026z M419.533,261.238H380.8v128.788h38.733 V261.238z M419.533,240.846l-19.367-22.689L380.8,240.846v2.393h38.733V240.846z M238.798,238.695H189.91c-4.971,0-9,4.029-9,9 s4.029,9,9,9h48.888c13.974,0,25.342-11.369,25.342-25.344c0-6.223-2.254-11.928-5.988-16.344 c3.734-4.416,5.988-10.121,5.988-16.344c0-13.975-11.369-25.344-25.342-25.344H189.91c-4.971,0-9,4.029-9,9s4.029,9,9,9h48.888 c4.048,0,7.342,3.295,7.342,7.345c0,4.049-3.294,7.343-7.342,7.343h-28.77c-4.971,0-9,4.029-9,9s4.029,9,9,9h28.77 c4.048,0,7.342,3.295,7.342,7.345C246.14,235.401,242.846,238.695,238.798,238.695z" />
+                </svg>
+                Medium
+              </button>
+              <button data-difficulty="hard" class="difficultyBtn2">
+                <svg fill="currentColor" class="w-4 h-4" height="800px" width="800px" version="1.1" id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 445.049 445.049" xml:space="preserve">
+                  <path id="XMLID_176_"
+                    d="M56.507,73.548c-3.393-3.632-3.2-9.327,0.433-12.72l26.938-25.166c2.619-2.447,6.44-3.106,9.729-1.679 c3.288,1.428,5.415,4.67,5.415,8.255v70.863c0,4.971-4.029,9-9,9s-9-4.029-9-9V62.963L69.228,73.98 C65.595,77.374,59.9,77.181,56.507,73.548z M437.533,9v170.012c0,4.971-4.029,9-9,9s-9-4.029-9-9v-23.673H300.193v119.338h25.329 c4.971,0,9,4.029,9,9s-4.029,9-9,9h-25.329v119.338h25.329c4.971,0,9,4.029,9,9s-4.029,9-9,9h-34.138 c-0.063,0.001-0.127,0.002-0.191,0.002c-0.063,0-0.127-0.001-0.191-0.002H154.048c-0.125,0.003-0.254,0.003-0.382,0H16.546 c-4.97,0-9-4.029-9-8.999L7.536,284.28c-0.013-0.2-0.02-0.4-0.02-0.604c0-0.202,0.007-0.402,0.02-0.602l-0.01-136.31 c-0.006-0.142-0.01-0.283-0.01-0.427c0-0.143,0.003-0.284,0.01-0.426L7.516,9.001c0-2.388,0.948-4.677,2.636-6.364 C11.84,0.948,14.129,0,16.516,0h412.017C433.503,0,437.533,4.029,437.533,9z M144.857,292.677H25.537l0.009,119.338h119.312V292.677 z M144.857,155.339H25.527l0.008,119.338h119.322V155.339z M144.857,18H25.517l0.009,119.339h119.332V18z M282.193,292.677H162.857 v119.338h119.336V292.677z M282.193,155.339H162.857v119.338h119.336V155.339z M282.193,18H162.857v119.339h119.336V18z M419.533,18 H300.193v119.339h119.339V18z M435.378,231.685c1.39,1.629,2.154,3.701,2.154,5.843v198.521c0,4.971-4.029,9-9,9H371.8 c-4.971,0-9-4.029-9-9V237.527c0-2.142,0.764-4.214,2.154-5.843l28.366-33.234c1.71-2.004,4.212-3.157,6.846-3.157 s5.136,1.153,6.846,3.157L435.378,231.685z M419.533,408.026H380.8v19.022h38.733V408.026z M419.533,261.238H380.8v128.788h38.733 V261.238z M419.533,240.846l-19.367-22.689L380.8,240.846v2.393h38.733V240.846z M238.798,238.695H189.91c-4.971,0-9,4.029-9,9 s4.029,9,9,9h48.888c13.974,0,25.342-11.369,25.342-25.344c0-6.223-2.254-11.928-5.988-16.344 c3.734-4.416,5.988-10.121,5.988-16.344c0-13.975-11.369-25.344-25.342-25.344H189.91c-4.971,0-9,4.029-9,9s4.029,9,9,9h48.888 c4.048,0,7.342,3.295,7.342,7.345c0,4.049-3.294,7.343-7.342,7.343h-28.77c-4.971,0-9,4.029-9,9s4.029,9,9,9h28.77 c4.048,0,7.342,3.295,7.342,7.345C246.14,235.401,242.846,238.695,238.798,238.695z" />
+                </svg>
+                Hard
+              </button>
+              <button data-difficulty="expert" class="difficultyBtn2">
+                <svg fill="currentColor" class="w-4 h-4" height="800px" width="800px" version="1.1" id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 445.049 445.049" xml:space="preserve">
+                  <path id="XMLID_176_"
+                    d="M56.507,73.548c-3.393-3.632-3.2-9.327,0.433-12.72l26.938-25.166c2.619-2.447,6.44-3.106,9.729-1.679 c3.288,1.428,5.415,4.67,5.415,8.255v70.863c0,4.971-4.029,9-9,9s-9-4.029-9-9V62.963L69.228,73.98 C65.595,77.374,59.9,77.181,56.507,73.548z M437.533,9v170.012c0,4.971-4.029,9-9,9s-9-4.029-9-9v-23.673H300.193v119.338h25.329 c4.971,0,9,4.029,9,9s-4.029,9-9,9h-25.329v119.338h25.329c4.971,0,9,4.029,9,9s-4.029,9-9,9h-34.138 c-0.063,0.001-0.127,0.002-0.191,0.002c-0.063,0-0.127-0.001-0.191-0.002H154.048c-0.125,0.003-0.254,0.003-0.382,0H16.546 c-4.97,0-9-4.029-9-8.999L7.536,284.28c-0.013-0.2-0.02-0.4-0.02-0.604c0-0.202,0.007-0.402,0.02-0.602l-0.01-136.31 c-0.006-0.142-0.01-0.283-0.01-0.427c0-0.143,0.003-0.284,0.01-0.426L7.516,9.001c0-2.388,0.948-4.677,2.636-6.364 C11.84,0.948,14.129,0,16.516,0h412.017C433.503,0,437.533,4.029,437.533,9z M144.857,292.677H25.537l0.009,119.338h119.312V292.677 z M144.857,155.339H25.527l0.008,119.338h119.322V155.339z M144.857,18H25.517l0.009,119.339h119.332V18z M282.193,292.677H162.857 v119.338h119.336V292.677z M282.193,155.339H162.857v119.338h119.336V155.339z M282.193,18H162.857v119.339h119.336V18z M419.533,18 H300.193v119.339h119.339V18z M435.378,231.685c1.39,1.629,2.154,3.701,2.154,5.843v198.521c0,4.971-4.029,9-9,9H371.8 c-4.971,0-9-4.029-9-9V237.527c0-2.142,0.764-4.214,2.154-5.843l28.366-33.234c1.71-2.004,4.212-3.157,6.846-3.157 s5.136,1.153,6.846,3.157L435.378,231.685z M419.533,408.026H380.8v19.022h38.733V408.026z M419.533,261.238H380.8v128.788h38.733 V261.238z M419.533,240.846l-19.367-22.689L380.8,240.846v2.393h38.733V240.846z M238.798,238.695H189.91c-4.971,0-9,4.029-9,9 s4.029,9,9,9h48.888c13.974,0,25.342-11.369,25.342-25.344c0-6.223-2.254-11.928-5.988-16.344 c3.734-4.416,5.988-10.121,5.988-16.344c0-13.975-11.369-25.344-25.342-25.344H189.91c-4.971,0-9,4.029-9,9s4.029,9,9,9h48.888 c4.048,0,7.342,3.295,7.342,7.345c0,4.049-3.294,7.343-7.342,7.343h-28.77c-4.971,0-9,4.029-9,9s4.029,9,9,9h28.77 c4.048,0,7.342,3.295,7.342,7.345C246.14,235.401,242.846,238.695,238.798,238.695z" />
+                </svg>
+                Expert
+              </button>
+              <button data-difficulty="master" class="difficultyBtn2">
+                <svg fill="currentColor" class="w-4 h-4" height="800px" width="800px" version="1.1" id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 445.049 445.049" xml:space="preserve">
+                  <path id="XMLID_176_"
+                    d="M56.507,73.548c-3.393-3.632-3.2-9.327,0.433-12.72l26.938-25.166c2.619-2.447,6.44-3.106,9.729-1.679 c3.288,1.428,5.415,4.67,5.415,8.255v70.863c0,4.971-4.029,9-9,9s-9-4.029-9-9V62.963L69.228,73.98 C65.595,77.374,59.9,77.181,56.507,73.548z M437.533,9v170.012c0,4.971-4.029,9-9,9s-9-4.029-9-9v-23.673H300.193v119.338h25.329 c4.971,0,9,4.029,9,9s-4.029,9-9,9h-25.329v119.338h25.329c4.971,0,9,4.029,9,9s-4.029,9-9,9h-34.138 c-0.063,0.001-0.127,0.002-0.191,0.002c-0.063,0-0.127-0.001-0.191-0.002H154.048c-0.125,0.003-0.254,0.003-0.382,0H16.546 c-4.97,0-9-4.029-9-8.999L7.536,284.28c-0.013-0.2-0.02-0.4-0.02-0.604c0-0.202,0.007-0.402,0.02-0.602l-0.01-136.31 c-0.006-0.142-0.01-0.283-0.01-0.427c0-0.143,0.003-0.284,0.01-0.426L7.516,9.001c0-2.388,0.948-4.677,2.636-6.364 C11.84,0.948,14.129,0,16.516,0h412.017C433.503,0,437.533,4.029,437.533,9z M144.857,292.677H25.537l0.009,119.338h119.312V292.677 z M144.857,155.339H25.527l0.008,119.338h119.322V155.339z M144.857,18H25.517l0.009,119.339h119.332V18z M282.193,292.677H162.857 v119.338h119.336V292.677z M282.193,155.339H162.857v119.338h119.336V155.339z M282.193,18H162.857v119.339h119.336V18z M419.533,18 H300.193v119.339h119.339V18z M435.378,231.685c1.39,1.629,2.154,3.701,2.154,5.843v198.521c0,4.971-4.029,9-9,9H371.8 c-4.971,0-9-4.029-9-9V237.527c0-2.142,0.764-4.214,2.154-5.843l28.366-33.234c1.71-2.004,4.212-3.157,6.846-3.157 s5.136,1.153,6.846,3.157L435.378,231.685z M419.533,408.026H380.8v19.022h38.733V408.026z M419.533,261.238H380.8v128.788h38.733 V261.238z M419.533,240.846l-19.367-22.689L380.8,240.846v2.393h38.733V240.846z M238.798,238.695H189.91c-4.971,0-9,4.029-9,9 s4.029,9,9,9h48.888c13.974,0,25.342-11.369,25.342-25.344c0-6.223-2.254-11.928-5.988-16.344 c3.734-4.416,5.988-10.121,5.988-16.344c0-13.975-11.369-25.344-25.342-25.344H189.91c-4.971,0-9,4.029-9,9s4.029,9,9,9h48.888 c4.048,0,7.342,3.295,7.342,7.345c0,4.049-3.294,7.343-7.342,7.343h-28.77c-4.971,0-9,4.029-9,9s4.029,9,9,9h28.77 c4.048,0,7.342,3.295,7.342,7.345C246.14,235.401,242.846,238.695,238.798,238.695z" />
+                </svg>
+                Master
+              </button>
+              <button data-difficulty="restart" id="restartBtn">
+                <svg fill="currentColor" class="w-6 h-6" width="800px" height="800px" viewBox="-7.5 0 32 32"
+                  version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.88 13.84c-1.68-3.48-5.44-5.24-9.040-4.6l0.96-1.8c0.24-0.4 0.080-0.92-0.32-1.12-0.4-0.24-0.92-0.080-1.12 0.32l-1.96 3.64c0 0-0.44 0.72 0.24 1.040l3.64 1.96c0.12 0.080 0.28 0.12 0.4 0.12 0.28 0 0.6-0.16 0.72-0.44 0.24-0.4 0.080-0.92-0.32-1.12l-1.88-1.040c2.84-0.48 5.8 0.96 7.12 3.68 1.6 3.32 0.2 7.32-3.12 8.88-1.6 0.76-3.4 0.88-5.080 0.28s-3.040-1.8-3.8-3.4c-0.76-1.6-0.88-3.4-0.28-5.080 0.16-0.44-0.080-0.92-0.52-1.080-0.4-0.080-0.88 0.16-1.040 0.6-0.72 2.12-0.6 4.36 0.36 6.36s2.64 3.52 4.76 4.28c0.92 0.32 1.84 0.48 2.76 0.48 1.24 0 2.48-0.28 3.6-0.84 4.16-2 5.92-7 3.92-11.12z">
+                  </path>
+                </svg>
+                Restart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="gameOverModal" style="display: none;"
+      class="absolute z-0 left-1/2 top-1/2 flex items-center justify-center">
+      <div class="fixed inset-0 -z-10 bg-black/50"></div>
+      <div class="bg-white rounded-lg p-4 xs:p-6 -ml-32 xs:-ml-40 w-64 xs:w-80 -mt-40 relative z-10">
+        <button id="gameOverCloseBtn" style="display: none;" onclick="document.getElementById('gameOverModal').style.display='none';"
+          class="absolute top-2 right-2 text-gray-950 text-xs flex items-center justify-center w-6 h-6 rounded-full cursor-pointer font-semibold bg-gray-200 hover:bg-gray-300/70">
+          X
+        </button>
+        <h3 class="text-xl text-center font-semibold text-gray-800" id="gameOverTitle">Game Over!</h3>
+        <p class="text-xs xs:text-sm text-gray-600 text-center mb-3" id="gameOverMessage">You've reached the maximum
+          number of mistakes.</p>
+        <div class="flex flex-col gap-2 xs:gap-3">
+          <button id="secondChanceBtn"
+            class="text-white text-lg rounded-sm w-full py-2 cursor-pointer font-semibold bg-blue-400 hover:bg-blue-500/60">
+            Second Chance
+          </button>
+          <button id="newGameFromGameOverBtn"
+            class="text-gray-950 text-lg rounded-sm w-full py-2 cursor-pointer font-semibold bg-gray-200 hover:bg-gray-300/70">
+            New Game
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="hintModal" style="display: none;" class="absolute z-0 left-1/2 top-1/2 flex items-center justify-center">
+      <div class="fixed inset-0 -z-10 bg-black/50" onclick="document.getElementById('hintModal').style.display='none';">
+      </div>
+      <div class="bg-white rounded-lg p-4 xs:p-6 -ml-32 xs:-ml-36 md:-ml-40 w-64 xs:w-72 md:w-80 -mt-40 relative z-10">
+        <button onclick="document.getElementById('hintModal').style.display='none';"
+          class="absolute top-2 right-2 text-gray-950 text-xs flex items-center justify-center w-6 h-6 rounded-full cursor-pointer font-semibold bg-gray-200 hover:bg-gray-300/70">
+          X
+        </button>
+        <h3 class="text-xl text-center font-semibold text-gray-800">Hint Explanation</h3>
+        <p class="text-xs xs:text-sm text-gray-600 text-center mb-3">Why did the hint suggest this number?</p>
+        <div class="flex flex-col gap-0.5 xs:gap-1">
+          <p><strong>Number:</strong> <span id="hintNumber"></span></p>
+          <p><strong>Reason:</strong> <span id="hintReason"></span></p>
+        </div>
+        <button onclick="document.getElementById('hintModal').style.display='none';"
+          class="mt-3 text-gray-950 text-lg rounded-sm w-full py-2 cursor-pointer font-semibold bg-gray-200 hover:bg-gray-300/70">
+          Done
+        </button>
+      </div>
+    </div>
+
+  </div>
+  <a href="http://www.freezenova.com/" target="_blank"
+    class="mt-2 text-center text-lg text-blue-900 font-bold hover:text-gray-800">www.FreezeNova.com</a>
+
+
+</body>
+
+</html>

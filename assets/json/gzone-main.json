@@ -1,6 +1,21 @@
 
 [
    {
+    "Name": "Pizza Edition",
+    "File": "assets/json/pizza.json",
+    "Icon": "ri-restaurant-2-line"
+  }, 
+   {
+    "Name": "Nates Hub",
+    "File": "assets/json/nate.json",
+    "Icon": "ri-flask-line"
+  },
+  {
+    "Name": "ML20 - UBG",
+    "File": "assets/json/ml20.json",
+    "Icon": "ri-fire-line"
+  },
+   {
     "Name": "Hydra",
     "File": "assets/json/hydra.json",
     "Icon": "ri-aliens-line"
@@ -9,25 +24,10 @@
     "Name": "Truffled",
     "File": "assets/json/truffled.json",
     "Icon": "ri-ghost-line"
-  },
+  }
   {
     "Name": "SunTree",
     "File": "assets/json/suntree.json",
     "Icon": "ri-tree-line"
   },
-   {
-    "Name": "Pizza Edition",
-    "File": "assets/json/pizza.json",
-    "Icon": "ri-restaurant-2-line"
-  }, 
-   {
-    "Name": "Nates Games",
-    "File": "assets/json/nate.json",
-    "Icon": "ri-flask-line"
-  },
-  {
-    "Name": "TGLSC",
-    "File": "assets/json/tglsc.json",
-    "Icon": "ri-fire-line"
-  }
 ]

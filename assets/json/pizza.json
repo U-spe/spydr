@@ -1,1192 +1,202 @@
 [
   {
-    "name": "1v1.LOL",
-    "image": "/1v1lol.png",
-    "url": "assets/gameassets/pizza/games/1v1lol"
-  },
-  {
-    "name": "10 Minutes Til Dawn",
-    "image": "/10minstildawn.png",
-    "url": "assets/gameassets/pizza/games/10minutestildawn"
-  },
-  {
     "name": "2048",
-    "image": "/2048.png",
-    "url": "assets/gameassets/pizza/games/2048"
+    "image": "https://g.sp.webcreationstudios.org/img/class-452.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-452/"
   },
   {
-    "name": "2D Rocket League",
-    "image": "/2drocketleague.png",
-    "url": "assets/gameassets/pizza/games/2drocketleague"
-  },
-  {
-    "name": "A Dance Of Fire And Ice",
-    "image": "/a-dance-of-fire-and-ice.png",
-    "url": "assets/gameassets/pizza/games/adanceoffireandice"
-  },
-  {
-    "name": "Achievement Unlocked",
-    "image": "/acievementunlocked.png",
-    "url": "assets/gameassets/pizza/games/achievementunlocked"
-  },
-  {
-    "name": "Achievement Unlocked 2",
-    "image": "/achievementunlocked2.png",
-    "url": "assets/gameassets/pizza/games/achievementunlocked2"
-  },
-  {
-    "name": "Adventure Capitalist",
-    "image": "/adventurecapitalist.png",
-    "url": "assets/gameassets/pizza/games/adventurecapitalist"
+    "name": "2048 Multitasking |",
+    "image": "https://g.sp.webcreationstudios.org/img/class-790.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-790/"
   },
   {
     "name": "Adventure Drivers",
-    "image": "/adventuredrivers.png",
-    "url": "assets/gameassets/pizza/games/adventuredrivers"
+    "image": "https://g.sp.webcreationstudios.org/img/class-546.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-546/"
   },
   {
-    "name": "Age Of War",
-    "image": "/ageofwar.png",
-    "url": "assets/gameassets/pizza/games/ageofwar"
+    "name": "Among Us SP",
+    "image": "https://g.sp.webcreationstudios.org/img/class-468.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-468/"
   },
   {
-    "name": "Age Of War 2",
-    "image": "/ageofwar2.png",
-    "url": "assets/gameassets/pizza/games/ageofwar2"
+    "name": "BadIceCream 2",
+    "image": "https://g.sp.webcreationstudios.org/img/class-273.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-273/"
   },
   {
-    "name": "Apple Worm",
-    "image": "/apnggames/appleworm.png",
-    "url": "assets/gameassets/pizza/games/appleworm"
+    "name": "Basket Bros",
+    "image": "https://g.sp.webcreationstudios.org/img/class-482.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-482/"
   },
   {
-    "name": "Arcade Car Drift",
-    "image": "/arcadecardrift.png",
-    "url": "assets/gameassets/pizza/games/arcadecardrift"
+    "name": "bloonstd1 |",
+    "image": "https://g.sp.webcreationstudios.org/img/class-784.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-784/"
   },
   {
-    "name": "Archery World Tour",
-    "image": "/archeryworldtour.png",
-    "url": "assets/gameassets/pizza/games/archeryworldtour"
+    "name": "Breaking the Bank",
+    "image": "https://g.sp.webcreationstudios.org/img/class-782.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-782/"
   },
   {
-    "name": "Astro Survivors",
-    "image": "/astrosurvivor.png",
-    "url": "assets/gameassets/pizza/games/astrosurvivors"
+    "name": "class-467",
+    "image": "https://g.sp.webcreationstudios.org/img/class-467.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-467/"
   },
   {
-    "name": "A Small World Cup",
-    "image": "/asmallworldcup.png",
-    "url": "assets/gameassets/pizza/games/asmallworldcup"
-  },
-  {
-    "name": "Awesome Tanks 2",
-    "image": "/awsometanks.png",
-    "url": "assets/gameassets/pizza/games/awesometanks2"
-  },
-  {
-    "name": "Backrooms",
-    "image": "/backrooms.png",
-    "url": "assets/gameassets/pizza/games/backrooms"
-  },
-  {
-    "name": "Bacon May Die",
-    "image": "/baconmaydie.png",
-    "url": "assets/gameassets/pizza/games/baconmaydie"
-  },
-  {
-    "name": "Bad Time Simulator",
-    "image": "/badtimesimulator.png",
-    "url": "assets/gameassets/pizza/games/badtimesimulator"
-  },
-  {
-    "name": "Baldis Basics",
-    "image": "/baldisbasics.png",
-    "url": "assets/gameassets/pizza/games/baldisbasics"
-  },
-  {
-    "name": "Basketball Stars",
-    "image": "/basketballstars.png",
-    "url": "assets/gameassets/pizza/games/basketballstars"
-  },
-  {
-    "name": "Basket Random",
-    "image": "/basketrandom.png",
-    "url": "assets/gameassets/pizza/games/basketrandom"
-  },
-  {
-    "name": "Bee Swarm Simulator",
-    "image": "/beeswarmsimulator.png",
-    "url": "assets/gameassets/pizza/games/beeswarmsimulator"
-  },
-  {
-    "name": "Big Tower Tiny Square",
-    "image": "/bigtowertinysquare.png",
-    "url": "assets/gameassets/pizza/games/bigtowertinysquare2"
-  },
-  {
-    "name": "Bike Obby",
-    "image": "/bikeobby.png",
-    "url": "assets/gameassets/pizza/games/bikeobby"
-  },
-  {
-    "name": "BitLife",
-    "image": "/bitlife.png",
-    "url": "assets/gameassets/pizza/games/bitlife"
-  },
-  {
-    "name": "Bob The Robber 2",
-    "image": "/bobtherobber2.png",
-    "url": "assets/gameassets/pizza/games/bobtherobber2"
-  },
-  {
-    "name": "Bounce Masters",
-    "image": "/bouncemastrs.png",
-    "url": "assets/gameassets/pizza/games/bouncemasters"
-  },
-  {
-    "name": "Bow Masters",
-    "image": "/bowmasters.png",
-    "url": "assets/gameassets/pizza/games/bowmasters"
-  },
-  {
-    "name": "Boxing Random",
-    "image": "/boxingrandom.png",
-    "url": "assets/gameassets/pizza/games/boxingrandom"
-  },
-  {
-    "name": "Block Blast",
-    "image": "/blockblast.png",
-    "url": "assets/gameassets/pizza/games/blockblast"
-  },
-  {
-    "name": "Blumgi Bounce",
-    "image": "/blumgi-bounce.png",
-    "url": "assets/gameassets/pizza/games/blumgibounce"
-  },
-  {
-    "name": "Blumgi Paintball",
-    "image": "/blumgipaintball.png",
-    "url": "assets/gameassets/pizza/games/blumgipaintball"
-  },
-  {
-    "name": "Blumgi Racers",
-    "image": "/blumgiracers.png",
-    "url": "assets/gameassets/pizza/games/blumgiracers"
-  },
-  {
-    "name": "Blumgi Slime",
-    "image": "/bumbslime.png",
-    "url": "assets/gameassets/pizza/games/BlumgiSlime"
-  },
-  {
-    "name": "Blumgi Splash",
-    "image": "/apnggames/blumgisplash.png",
-    "url": "assets/gameassets/pizza/games/blumgisplash"
-  },
-  {
-    "name": "Brain Test",
-    "image": "/braintest.png",
-    "url": "assets/gameassets/pizza/games/braintest"
-  },
-  {
-    "name": "Buck Bounce",
-    "image": "/apnggames/buckbounce.png",
-    "url": "assets/gameassets/pizza/games/buckbounce"
-  },
-  {
-    "name": "Cappybara clicker",
-    "image": "/capybaraclicker.png",
-    "url": "assets/gameassets/pizza/games/cappybaraclicker"
-  },
-  {
-    "name": "Cell Machine",
-    "image": "/cell-machine.png",
-    "url": "assets/gameassets/pizza/games/cellmachine"
-  },
-  {
-    "name": "Chess",
-    "image": "/chess.png",
-    "url": "assets/gameassets/pizza/games/chess"
-  },
-  {
-    "name": "Choppy Orc",
-    "image": "/choppyorc.png",
-    "url": "assets/gameassets/pizza/games/choppyorc"
-  },
-  {
-    "name": "CircloO",
-    "image": "/circloo.png",
-    "url": "assets/gameassets/pizza/games/circloo"
-  },
-  {
-    "name": "Ckicker Heroes",
-    "image": "/clicker-heroes.png",
-    "url": "assets/gameassets/pizza/games/clickerheroes"
-  },
-  {
-    "name": "Cluster Rush",
-    "image": "/cluster.png",
-    "url": "assets/gameassets/pizza/games/clusterrush"
+    "name": "class-597",
+    "image": "https://g.sp.webcreationstudios.org/img/class-597.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-597/"
   },
   {
     "name": "Cookie Clicker",
-    "image": "/cookieclicker.png",
-    "url": "assets/gameassets/pizza/games/cookieclicker"
+    "image": "https://g.sp.webcreationstudios.org/img/class-448.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-448/"
   },
   {
-    "name": "Core Ball",
-    "image": "/coreball.png",
-    "url": "assets/gameassets/pizza/games/coreball"
-  },
-  {
-    "name": "Crazy Bikes",
-    "image": "/crazybikes.png",
-    "url": "assets/gameassets/pizza/games/crazybikes"
-  },
-  {
-    "name": "Crazy Cars",
-    "image": "/crazycars.png",
-    "url": "assets/gameassets/pizza/games/crazycars"
-  },
-  {
-    "name": "Crossyroad",
-    "image": "/crossyroad.png",
-    "url": "assets/gameassets/pizza/games/crossyroad"
-  },
-  {
-    "name": "CSGO CLicker",
-    "image": "/csgoclicker.png",
-    "url": "assets/gameassets/pizza/games/csgoclicker"
-  },
-  {
-    "name": "Cubefeild",
-    "image": "/cubefeild.png",
-    "url": "assets/gameassets/pizza/games/cubefield"
-  },
-  {
-    "name": "Cut The Rope",
-    "image": "/cuttherope.png",
-    "url": "assets/gameassets/pizza/games/cuttherope"
-  },
-  {
-    "name": "Dante",
-    "image": "/dante.png",
-    "url": "assets/gameassets/pizza/games/dante"
-  },
-  {
-    "name": "Day Of Meat: Radiation",
-    "image": "/dayofmeatradiation.png",
-    "url": "assets/gameassets/pizza/games/dayofmeatradiation"
-  },
-  {
-    "name": "Deadly Decent",
-    "image": "/deadlydecent.png",
-    "url": "assets/gameassets/pizza/games/deadlydecent"
-  },
-  {
-    "name": "Deal Or No Deal",
-    "image": "/dealornodeal.png",
-    "url": "assets/gameassets/pizza/games/dealornodeal"
-  },
-  {
-    "name": "Digging Master",
-    "image": "/apnggames/diggingmaster.png",
-    "url": "assets/gameassets/pizza/games/diggingmaster"
-  },
-  {
-    "name": "Dogeminer",
-    "image": "/dogeminer.png",
-    "url": "assets/gameassets/pizza/games/dogeminer"
-  },
-  {
-    "name": "Dogeminer 2",
-    "image": "/dogeminer2.png",
-    "url": "assets/gameassets/pizza/games/dogeminer2"
+    "name": "Crossy Road",
+    "image": "https://g.sp.webcreationstudios.org/img/class-402.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-402/"
   },
   {
     "name": "Doodle Jump",
-    "image": "/doodlejump.png",
-    "url": "assets/gameassets/pizza/games/doodlejump"
+    "image": "https://g.sp.webcreationstudios.org/img/class-407.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-407/"
   },
   {
-    "name": "Dreadhead Parkour",
-    "image": "/dreadhead.png",
-    "url": "assets/gameassets/pizza/games/dreadheadparkour"
+    "name": "Draw the Hill",
+    "image": "https://g.sp.webcreationstudios.org/img/class-532.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-532/"
   },
   {
-    "name": "Drift Boss",
-    "image": "/driftboss.png",
-    "url": "assets/gameassets/pizza/games/driftboss"
+    "name": "Duck Life 4",
+    "image": "https://g.sp.webcreationstudios.org/img/class-478.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-478/"
   },
   {
-    "name": "Drive Mad",
-    "image": "/drivemad.png",
-    "url": "assets/gameassets/pizza/games/drivemad"
+    "name": "Flappy Bird | 3kh0",
+    "image": "https://g.sp.webcreationstudios.org/img/class-435.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-435/"
   },
   {
-    "name": "Ducklings io",
-    "image": "/ducklingsio.png",
-    "url": "assets/gameassets/pizza/games/ducklingsio"
-  },
-  {
-    "name": "DUNE!",
-    "image": "/dune.png",
-    "url": "assets/gameassets/pizza/games/dune"
-  },
-  {
-    "name": "Eggy Car",
-    "image": "/eggycar.png",
-    "url": "assets/gameassets/pizza/games/eggycar"
-  },
-  {
-    "name": "Escape Road",
-    "image": "/escaperoad.png",
-    "url": "assets/gameassets/pizza/games/escaperoad"
-  },
-  {
-    "name": "Escape Road 3",
-    "image": "/escaperoad3.png",
-    "url": "assets/gameassets/pizza/games/escaperoad3"
-  },
-  {
-    "name": "Fear Response",
-    "image": "/fearresponse.png",
-    "url": "assets/gameassets/pizza/games/fearresponse"
-  },
-  {
-    "name": "Fireboy And Water Girl Forest Temple",
-    "image": "/fireboyandwatergirl1.png",
-    "url": "assets/gameassets/pizza/games/fireboyandwatergirl1"
-  },
-  {
-    "name": "FNAF",
-    "image": "/fnaf.png",
-    "url": "assets/gameassets/pizza/games/FNAF1"
-  },
-  {
-    "name": "FNAF2",
-    "image": "/fnaf2.png",
-    "url": "assets/gameassets/pizza/games/FNAF2"
-  },
-  {
-    "name": "FNAF3",
-    "image": "/fnaf3.png",
-    "url": "assets/gameassets/pizza/games/FNAF3"
-  },
-  {
-    "name": "FNAF4",
-    "image": "/fnaf4.png",
-    "url": "assets/gameassets/pizza/games/FNAF4"
-  },
-  {
-    "name": "FNAF5 Sister Location",
-    "image": "/fnafsl.png",
-    "url": "assets/gameassets/pizza/games/FNAF5"
-  },
-  {
-    "name": "Free Rider Jumps",
-    "image": "/freeriderjumps.png",
-    "url": "assets/gameassets/pizza/games/freeriderjumps"
-  },
-  {
-    "name": "Frying Nemo",
-    "image": "/fryingnemo.png",
-    "url": "assets/gameassets/pizza/games/fryingnemo"
-  },
-  {
-    "name": "Fruit Merge",
-    "image": "/fruitmerge.png",
-    "url": "assets/gameassets/pizza/games/fruitmerge"
-  },
-  {
-    "name": "Fruit Ninja",
-    "image": "/fruitninja.png",
-    "url": "assets/gameassets/pizza/games/fruitninja"
-  },
-  {
-    "name": "Full Speed Racing",
-    "image": "/fullspeedracing.png",
-    "url": "assets/gameassets/pizza/games/fullspeedracing"
-  },
-  {
-    "name": "Funnyshooter 2",
-    "image": "/funnyshooter2.png",
-    "url": "assets/gameassets/pizza/games/funnyshooter2"
+    "name": "Flash Tetris",
+    "image": "https://g.sp.webcreationstudios.org/img/class-455.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-455/"
   },
   {
     "name": "Geometry Dash",
-    "image": "/geometrydash.png",
-    "url": "assets/gameassets/pizza/games/geometrydash"
+    "image": "https://g.sp.webcreationstudios.org/img/class-453.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-453/"
   },
   {
-    "name": "Geometry Dash Subzero",
-    "image": "/geometrydashsubzero.png",
-    "url": "assets/gameassets/pizza/games/geometrydashsubzero"
+    "name": "Gun Mayhem",
+    "image": "https://g.sp.webcreationstudios.org/img/class-570.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-570/"
   },
   {
-    "name": "Getaway Shootout",
-    "image": "/getawayshootout.png",
-    "url": "assets/gameassets/pizza/games/getawayshootout"
-  },
-  {
-    "name": "Gladihoppers",
-    "image": "/gladihoppers.png",
-    "url": "assets/gameassets/pizza/games/gladihoppers"
-  },
-  {
-    "name": "Going Balls",
-    "image": "/goingballs.png",
-    "url": "assets/gameassets/pizza/games/goingballs"
-  },
-  {
-    "name": "Golf Orbit",
-    "image": "/golforbit.png",
-    "url": "assets/gameassets/pizza/games/golforbit"
-  },
-  {
-    "name": "Google Feud",
-    "image": "/googlefeud.png",
-    "url": "assets/gameassets/pizza/games/googlefeud"
-  },
-  {
-    "name": "Granny",
-    "image": "/granny.png",
-    "url": "assets/gameassets/pizza/games/granny"
-  },
-  {
-    "name": "Grindcraft",
-    "image": "/grindcraft.png",
-    "url": "assets/gameassets/pizza/games/grindcraft"
-  },
-  {
-    "name": "Gunblood",
-    "image": "/gunblood.png",
-    "url": "assets/gameassets/pizza/games/gunblood"
-  },
-  {
-    "name": "Gunspin",
-    "image": "/gunspin.png",
-    "url": "assets/gameassets/pizza/games/gunspin"
-  },
-  {
-    "name": "Gym Stack",
-    "image": "/apnggames/gymstack.png",
-    "url": "assets/gameassets/pizza/games/gymstack"
-  },
-  {
-    "name": "Happy Glass",
-    "image": "/happyglass.png",
-    "url": "assets/gameassets/pizza/games/happyglass"
-  },
-  {
-    "name": "Happy Wheels",
-    "image": "/happywheels.png",
-    "url": "assets/gameassets/pizza/games/happywheels"
-  },
-  {
-    "name": "Harvest Simulator",
-    "image": "/harvestsimulator.png",
-    "url": "assets/gameassets/pizza/games/harvestsimulator"
-  },
-  {
-    "name": "Henry Stickmin - Infiltrating The Airship",
-    "image": "/henrystickminairship.png",
-    "url": "assets/gameassets/pizza/games/henryinfiltratingtheairship"
-  },
-  {
-    "name": "Henry Stickmin - Breaking The Bank",
-    "image": "/henrystickminbank.png",
-    "url": "assets/gameassets/pizza/games/henrybreakingthebank"
-  },
-  {
-    "name": "Henry Stickmin - Stealing The Diamond",
-    "image": "/henrystickmindiamond.png",
-    "url": "assets/gameassets/pizza/games/henrystealingthediamond"
-  },
-  {
-    "name": "Henry Stickmin - Escaping The Prison",
-    "image": "/henrystickminescaping.png",
-    "url": "assets/gameassets/pizza/games/henryescapingtheprison"
-  },
-  {
-    "name": "Henry Stickmin - Fleeing The Complex",
-    "image": "/henrystickminfleeing.png",
-    "url": "assets/gameassets/pizza/games/henryfleeingthecomplex"
-  },
-  {
-    "name": "Hexgl",
-    "image": "/hexgl.png",
-    "url": "assets/gameassets/pizza/games/hexgl"
-  },
-  {
-    "name": "Hill Climb Racing",
-    "image": "/hillcimbracing.png",
-    "url": "assets/gameassets/pizza/games/hillclimbracing"
-  },
-  {
-    "name": "Horde Killer You VS 100",
-    "image": "/youvs100.png",
-    "url": "assets/gameassets/pizza/games/hordekilleryouvs100"
-  },
-  {
-    "name": "Idle Ants",
-    "image": "/idleants.png",
-    "url": "assets/gameassets/pizza/games/idleants"
-  },
-  {
-    "name": "Idle Breakout",
-    "image": "/idlebreakout.png",
-    "url": "assets/gameassets/pizza/games/idlebreakout"
-  },
-  {
-    "name": "Idle Dices",
-    "image": "/idledice.png",
-    "url": "assets/gameassets/pizza/games/idledices"
-  },
-  {
-    "name": "Idle Digging Tycoon",
-    "image": "/apnggames/idle-digging-tycoon.png",
-    "url": "assets/gameassets/pizza/games/idlediggingtycoon"
-  },
-  {
-    "name": "Idle Lumber Inc",
-    "image": "/apnggames/idlelumberinclogo.png",
-    "url": "assets/gameassets/pizza/games/idlelumberinc"
-  },
-  {
-    "name": "Idle Revolution",
-    "image": "/revolutionidle.png",
-    "url": "assets/gameassets/pizza/games/idlerevolution"
-  },
-  {
-    "name": "Impossible Quiz",
-    "image": "/impquiz.png",
-    "url": "assets/gameassets/pizza/games/impossiblequiz"
-  },
-  {
-    "name": "Iron Snout",
-    "image": "/ironsnout.png",
-    "url": "assets/gameassets/pizza/games/ironsnout"
-  },
-  {
-    "name": "Jetpack Joyride",
-    "image": "/jetpackjoyride.png",
-    "url": "assets/gameassets/pizza/games/jetpackjoyride"
-  },
-  {
-    "name": "Jumping Shell",
-    "image": "/jumpingshell.png",
-    "url": "assets/gameassets/pizza/games/jumpingshell"
-  },
-  {
-    "name": "Jump Only",
-    "image": "/jumponly.png",
-    "url": "assets/gameassets/pizza/games/jumponly"
-  },
-  {
-    "name": "Justfall.LOL",
-    "image": "/justfalllol.png",
-    "url": "assets/gameassets/pizza/games/justfalllol"
-  },
-  {
-    "name": "Kiwi Clicker",
-    "image": "/kiwiclicker.png",
-    "url": "assets/gameassets/pizza/games/kiwiclicker"
-  },
-  {
-    "name": "Knife Hit",
-    "image": "/knifehit.png",
-    "url": "assets/gameassets/pizza/games/knifehit"
-  },
-  {
-    "name": "Learn To Fly",
-    "image": "/learntofly1.png",
-    "url": "assets/gameassets/pizza/games/learntofly"
-  },
-  {
-    "name": "Learn To Fly 2",
-    "image": "/learntofly2.png",
-    "url": "assets/gameassets/pizza/games/learntofly2"
-  },
-  {
-    "name": "Learn To Fly 3",
-    "image": "/learntofly3.png",
-    "url": "assets/gameassets/pizza/games/learntofly3"
-  },
-  {
-    "name": "Learn To Fly Idle",
-    "image": "/learntoflyidle.png",
-    "url": "assets/gameassets/pizza/games/learntoflyidle"
+    "name": "JellyTruck",
+    "image": "https://g.sp.webcreationstudios.org/img/class-512.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-512/"
   },
   {
     "name": "Level Devil",
-    "image": "/leveldevil.png",
-    "url": "assets/gameassets/pizza/games/leveldevil"
+    "image": "https://g.sp.webcreationstudios.org/img/class-356.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-356/"
   },
   {
-    "name": "Little Alchemy",
-    "image": "/littlealc1.png",
-    "url": "assets/gameassets/pizza/games/littlealc"
+    "name": "Minesweeper",
+    "image": "https://g.sp.webcreationstudios.org/img/class-465.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-465/"
   },
   {
-    "name": "Longcat",
-    "image": "/apnggames/longcat.png",
-    "url": "assets/gameassets/pizza/games/longcat"
+    "name": "Paper Minecraft",
+    "image": "https://g.sp.webcreationstudios.org/img/class-827.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-827/"
   },
   {
-    "name": "Madalin Cars 3",
-    "image": "/madalin3.png",
-    "url": "assets/gameassets/pizza/games/madalincars3"
+    "name": "Rocket Soccer",
+    "image": "https://g.sp.webcreationstudios.org/img/class-527.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-527/"
   },
   {
-    "name": "Mad Skills MotoCross 2",
-    "image": "/madskillsmotocross2.png",
-    "url": "assets/gameassets/pizza/games/madskillsmotocross2"
+    "name": "Scrap Metal 3 Infernal Trap |",
+    "image": "https://g.sp.webcreationstudios.org/img/class-504.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-504/"
   },
   {
-    "name": "Mine Line",
-    "image": "/mineline.png",
-    "url": "assets/gameassets/pizza/games/mineline"
+    "name": "Slope 2",
+    "image": "https://g.sp.webcreationstudios.org/img/class-437.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-437/"
   },
   {
-    "name": "Monkey Mart",
-    "image": "/monkeymart.png",
-    "url": "assets/gameassets/pizza/games/monkeymart"
+    "name": "Slope Game",
+    "image": "https://g.sp.webcreationstudios.org/img/class-450.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-450/"
   },
   {
-    "name": "Monster Match",
-    "image": "/apnggames/monstermatch.png",
-    "url": "assets/gameassets/pizza/games/monstermatch"
+    "name": "Stack - topVAZ",
+    "image": "https://g.sp.webcreationstudios.org/img/class-499.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-499/"
   },
   {
-    "name": "Monster Tracks",
-    "image": "/monstertracks.png",
-    "url": "assets/gameassets/pizza/games/monstertracks"
-  },
-  {
-    "name": "Moto X3M",
-    "image": "/motox3m.png",
-    "url": "assets/gameassets/pizza/games/motox3m"
-  },
-  {
-    "name": "Moto X3M 3",
-    "image": "/motox3m3.png",
-    "url": "assets/gameassets/pizza/games/motox3m3"
-  },
-  {
-    "name": "Moto X3M Pool Party",
-    "image": "/motox3mpoolparty.png",
-    "url": "assets/gameassets/pizza/games/motox3mpool"
-  },
-  {
-    "name": "Moto X3M Spooky",
-    "image": "/motox3mspooky.png",
-    "url": "assets/gameassets/pizza/games/motox3mspooky"
-  },
-  {
-    "name": "Moto X3M Winter",
-    "image": "/motox3mwinter.png",
-    "url": "assets/gameassets/pizza/games/motox3mwinter"
-  },
-  {
-    "name": "Mr Racer",
-    "image": "/mrracer.png",
-    "url": "assets/gameassets/pizza/games/mrracer"
-  },
-  {
-    "name": "Murder",
-    "image": "/murder.png",
-    "url": "assets/gameassets/pizza/games/murder"
-  },
-  {
-    "name": "My Perfect Hotel",
-    "image": "/apnggames/myperfecthotel.png",
-    "url": "assets/gameassets/pizza/games/myperfecthotel"
-  },
-  {
-    "name": "Neon Swing",
-    "image": "/neonswing.png",
-    "url": "assets/gameassets/pizza/games/neonswing"
-  },
-  {
-    "name": "OvO",
-    "image": "/ovo.png",
-    "url": "assets/gameassets/pizza/games/OvO"
-  },
-  {
-    "name": "OvO Dimensions",
-    "image": "/ovodimensions.png",
-    "url": "assets/gameassets/pizza/games/ovodimensions"
-  },
-  {
-    "name": "Paint And Hide",
-    "image": "/apnggames/paintandhide.png",
-    "url": "assets/gameassets/pizza/games/paintandhide"
-  },
-  {
-    "name": "Path To Glory",
-    "image": "/pathtoglory.png",
-    "url": "assets/gameassets/pizza/games/pathtoglory"
-  },
-  {
-    "name": "Papas Freezeria",
-    "image": "/papas-freezeria.png",
-    "url": "assets/gameassets/pizza/games/papasfreezeria"
-  },
-  {
-    "name": "Ping Pong Go",
-    "image": "/pingponggo.png",
-    "url": "assets/gameassets/pizza/games/pingponggo"
-  },
-  {
-    "name": "Police Chase",
-    "image": "/policechase.png",
-    "url": "assets/gameassets/pizza/games/policechase"
-  },
-  {
-    "name": "Paper.IO 2",
-    "image": "/paperio2.png",
-    "url": "assets/gameassets/pizza/games/paperio2"
-  },
-  {
-    "name": "Paper Plane",
-    "image": "/paperplane.png",
-    "url": "assets/gameassets/pizza/games/paperplane"
-  },
-  {
-    "name": "Penalty Shooters 2",
-    "image": "/penaltyshooters2.png",
-    "url": "assets/gameassets/pizza/games/penaltyshooters2"
-  },
-  {
-    "name": "Plonky",
-    "image": "/apnggames/plonky.png",
-    "url": "assets/gameassets/pizza/games/plonky"
-  },
-  {
-    "name": "Polytrack",
-    "image": "/polytrack.png",
-    "url": "assets/gameassets/pizza/games/polytrack"
-  },
-  {
-    "name": "Poor Eddie",
-    "image": "/pooreddie.png",
-    "url": "assets/gameassets/pizza/games/pooreddie"
-  },
-  {
-    "name": "Raft Wars",
-    "image": "/raftwars2.png",
-    "url": "assets/gameassets/pizza/games/raftwars"
-  },
-  {
-    "name": "Ragdoll Archers",
-    "image": "/ragdollarchers.png",
-    "url": "assets/gameassets/pizza/games/ragdollarchers"
-  },
-  {
-    "name": "Ragdoll Fall",
-    "image": "/ragdolldrop.png",
-    "url": "assets/gameassets/pizza/games/ragdollfall"
-  },
-  {
-    "name": "Race Survival",
-    "image": "/racesurvival.png",
-    "url": "assets/gameassets/pizza/games/racesurvival"
-  },
-  {
-    "name": "Retro Bowl",
-    "image": "/retrobowl.png",
-    "url": "assets/gameassets/pizza/games/retrobowl"
-  },
-  {
-    "name": "Retro Bowl College",
-    "image": "/rbcollege.png",
-    "url": "assets/gameassets/pizza/games/retrobowlcollege"
-  },
-  {
-    "name": "Redball 4",
-    "image": "/redball4.png",
-    "url": "assets/gameassets/pizza/games/redball4"
-  },
-  {
-    "name": "Red VS Bluez",
-    "image": "/redvsblue.png",
-    "url": "assets/gameassets/pizza/games/redvsbluez"
-  },
-  {
-    "name": "Rise Higher",
-    "image": "/risehigher.png",
-    "url": "assets/gameassets/pizza/games/risehigher"
-  },
-  {
-    "name": "Rocket Soccer Derby",
-    "image": "/rocketsocderby.png",
-    "url": "assets/gameassets/pizza/games/rocketsoccerderby"
-  },
-  {
-    "name": "Rooftop Snipers",
-    "image": "/rooftopsnipers.png",
-    "url": "assets/gameassets/pizza/games/rooftopsnipers"
-  },
-  {
-    "name": "Roper",
-    "image": "/roper.png",
-    "url": "assets/gameassets/pizza/games/roper"
-  },
-  {
-    "name": "Run 3",
-    "image": "/run3.png",
-    "url": "assets/gameassets/pizza/games/run3"
-  },
-  {
-    "name": "Sandtris",
-    "image": "/apnggames/sandtris.png",
-    "url": "assets/gameassets/pizza/games/sandtris"
-  },
-  {
-    "name": "Sausage Flip",
-    "image": "/sausageflip.png",
-    "url": "assets/gameassets/pizza/games/sausageflip"
-  },
-  {
-    "name": "Sketchbook",
-    "image": "/sketchbook.png",
-    "url": "assets/gameassets/pizza/games/sketchbook"
-  },
-  {
-    "name": "Sky Riders",
-    "image": "/skyriders.png",
-    "url": "assets/gameassets/pizza/games/skyriders"
-  },
-  {
-    "name": "Slime Dunk!",
-    "image": "/apnggames/slimedunk.png",
-    "url": "assets/gameassets/pizza/games/slimedunk"
-  },
-  {
-    "name": "Slime Journey",
-    "image": "/apnggames/slimejourney.png",
-    "url": "assets/gameassets/pizza/games/slimejourney"
-  },
-  {
-    "name": "Slope",
-    "image": "/slope.png",
-    "url": "assets/gameassets/pizza/games/slope"
-  },
-  {
-    "name": "Slowroads",
-    "image": "/slowroads.png",
-    "url": "assets/gameassets/pizza/games/slowroads"
-  },
-  {
-    "name": "Smash It",
-    "image": "/apnggames/smash-it.png",
-    "url": "assets/gameassets/pizza/games/smashit"
-  },
-  {
-    "name": "Snake Pivot",
-    "image": "/snakepivot.png",
-    "url": "assets/gameassets/pizza/games/snakepivot"
-  },
-  {
-    "name": "Snow Rider 3D",
-    "image": "/snowrider3d.png",
-    "url": "assets/gameassets/pizza/games/snowrider3d"
-  },
-  {
-    "name": "Soccer Random",
-    "image": "/soccerrandom.png",
-    "url": "assets/gameassets/pizza/games/soccerrandom"
-  },
-  {
-    "name": "Soccer REAL",
-    "image": "/apnggames/soccerreal.png",
-    "url": "assets/gameassets/pizza/games/soccerreal"
-  },
-  {
-    "name": "Spacebar Clicker",
-    "image": "/spacebarclicker.png",
-    "url": "assets/gameassets/pizza/games/spacebarclicker"
-  },
-  {
-    "name": "Space Waves",
-    "image": "/apnggames/spacewave.png",
-    "url": "assets/gameassets/pizza/games/spacewaves"
-  },
-  {
-    "name": "Speed Stars",
-    "image": "/apnggames/speedstars.png",
-    "url": "assets/gameassets/pizza/games/speedstars"
-  },
-  {
-    "name": "Spiral Roll",
-    "image": "/spiralroll.png",
-    "url": "assets/gameassets/pizza/games/spiralroll"
-  },
-  {
-    "name": "Stack",
-    "image": "/stack.png",
-    "url": "assets/gameassets/pizza/games/stack"
-  },
-  {
-    "name": "Stack Bounce",
-    "image": "/stackbounce.png",
-    "url": "assets/gameassets/pizza/games/stackbounce"
-  },
-  {
-    "name": "Stacktris",
-    "image": "/stacktris.png",
-    "url": "assets/gameassets/pizza/games/stacktris"
-  },
-  {
-    "name": "Steal A Brainrot",
-    "image": "/stealabrainrot.png",
-    "url": "assets/gameassets/pizza/games/stealabrainrot"
-  },
-  {
-    "name": "Steel Hills",
-    "image": "/hillsofsteel.png",
-    "url": "assets/gameassets/pizza/games/steelhills"
-  },
-  {
-    "name": "Stickman Bike",
-    "image": "/stickmanbike.png",
-    "url": "assets/gameassets/pizza/games/stickmanbike"
-  },
-  {
-    "name": "Stickman Climb 2",
-    "image": "/stickclimb2.png",
-    "url": "assets/gameassets/pizza/games/stickmanclimb2"
-  },
-  {
-    "name": "Stickman Climb 3D",
-    "image": "/stickmanclimb3d.png",
-    "url": "assets/gameassets/pizza/games/stickmanclimb3d"
-  },
-  {
-    "name": "Stickman Hook",
-    "image": "/stickmanhook.png",
-    "url": "assets/gameassets/pizza/games/stickmanhook"
-  },
-  {
-    "name": "Stickman Run",
-    "image": "/apnggames/stickmanrun.png",
-    "url": "assets/gameassets/pizza/games/stickmanrun"
-  },
-  {
-    "name": "StickMerge",
-    "image": "/stickmerge.png",
-    "url": "assets/gameassets/pizza/games/stickmerge"
-  },
-  {
-    "name": "Stunt Bike Extreme",
-    "image": "/stuntbikeextreme.png",
-    "url": "assets/gameassets/pizza/games/stuntbikeextreme"
-  },
-  {
-    "name": "Stunt Car Extreme",
-    "image": "/stuntcarextreme.png",
-    "url": "assets/gameassets/pizza/games/stuntcarextreme"
-  },
-  {
-    "name": "Subway Surfers",
-    "image": "/subwaysurfers.png",
-    "url": "assets/gameassets/pizza/games/subwaysurfers"
-  },
-  {
-    "name": "Super Fowlst",
-    "image": "/superfowlst.png",
-    "url": "assets/gameassets/pizza/games/superfowlst"
-  },
-  {
-    "name": "Super Hot",
-    "image": "/superhot.png",
-    "url": "assets/gameassets/pizza/games/superhot"
-  },
-  {
-    "name": "Super Liquid Soccer",
-    "image": "/superliquidsoccer.png",
-    "url": "assets/gameassets/pizza/games/superliquidsoccer"
-  },
-  {
-    "name": "Swingo",
-    "image": "/swingo.png",
-    "url": "assets/gameassets/pizza/games/swingo"
-  },
-  {
-    "name": "Tabletennis",
-    "image": "/tabletennis.png",
-    "url": "assets/gameassets/pizza/games/tabletennisworldtour"
-  },
-  {
-    "name": "TABS",
-    "image": "/tabs.png",
-    "url": "assets/gameassets/pizza/games/tabs"
+    "name": "Stack Ball",
+    "image": "https://g.sp.webcreationstudios.org/img/class-536.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-536/"
   },
   {
     "name": "Tag",
-    "image": "/tag.png",
-    "url": "assets/gameassets/pizza/games/tag"
+    "image": "https://g.sp.webcreationstudios.org/img/class-633.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-633/"
   },
   {
-    "name": "Tanuki Sunset",
-    "image": "/tanukisunset.png",
-    "url": "assets/gameassets/pizza/games/TanukiSunset"
+    "name": "Tanuki Sunset - topVAZ",
+    "image": "https://g.sp.webcreationstudios.org/img/class-488.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-488/"
   },
   {
-    "name": "Temple Of Boom",
-    "image": "/templeofboom.png",
-    "url": "assets/gameassets/pizza/games/templeofboom"
-  },
-  {
-    "name": "Temple Run 2",
-    "image": "/templerun2.png",
-    "url": "assets/gameassets/pizza/games/templerun2"
-  },
-  {
-    "name": "The Baby In Yellow",
-    "image": "/thebabyinyellow.png",
-    "url": "assets/gameassets/pizza/games/thebabyinyellow"
-  },
-  {
-    "name": "The Final Earth",
-    "image": "/thefinalearth.png",
-    "url": "assets/gameassets/pizza/games/thefinalearth"
-  },
-  {
-    "name": "The Final Earth 2",
-    "image": "/thefinalearth2.png",
-    "url": "assets/gameassets/pizza/games/thefinalearth2"
-  },
-  {
-    "name": "There Is No Game",
-    "image": "/thereisnogame.png",
-    "url": "assets/gameassets/pizza/games/thereisnog"
-  },
-  {
-    "name": "Time Shooter 3",
-    "image": "/timeshooter3.png",
-    "url": "assets/gameassets/pizza/games/timeshooter3"
+    "name": "Temple Run 2 - topVAZ",
+    "image": "https://g.sp.webcreationstudios.org/img/class-405.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-405/"
   },
   {
     "name": "Tiny Fishing",
-    "image": "/tinyfish.png",
-    "url": "assets/gameassets/pizza/games/tinyfishing"
+    "image": "https://g.sp.webcreationstudios.org/img/class-451.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-451/"
   },
   {
-    "name": "Tiny Towers",
-    "image": "/tinytowers.png",
-    "url": "assets/gameassets/pizza/games/tinytowers"
+    "name": "Traffic Escape!",
+    "image": "https://g.sp.webcreationstudios.org/img/class-357.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-357/"
   },
   {
-    "name": "Tomb Of The Mask",
-    "image": "/tomb.png",
-    "url": "assets/gameassets/pizza/games/tombofthemask"
+    "name": "Tunnel Rush",
+    "image": "https://g.sp.webcreationstudios.org/img/class-404.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-404/"
   },
   {
-    "name": "Townscaper",
-    "image": "/townscaper.png",
-    "url": "assets/gameassets/pizza/games/townscaper"
+    "name": "Vex 6 Unblocked - xxx",
+    "image": "https://g.sp.webcreationstudios.org/img/class-809.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-809/"
   },
   {
-    "name": "Tube Jumpers",
-    "image": "/tubejumpers.png",
-    "url": "assets/gameassets/pizza/games/tubejumpers"
+    "name": "Wix Games | Duck Life",
+    "image": "https://g.sp.webcreationstudios.org/img/class-477.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-477/"
   },
   {
-    "name": "Tunnel Rush 2",
-    "image": "/tunnelrush2.png",
-    "url": "assets/gameassets/pizza/games/tunnelrush2"
+    "name": "Wix Games | Duck Life 2",
+    "image": "https://g.sp.webcreationstudios.org/img/class-561.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-561/"
   },
   {
-    "name": "Turbo Moto Racer",
-    "image": "/turbomotoracer.png",
-    "url": "assets/gameassets/pizza/games/turbomotoracer"
+    "name": "Wix Games | Retro Free",
+    "image": "https://g.sp.webcreationstudios.org/img/class-560.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-560/"
   },
   {
-    "name": "Unicycle Heros",
-    "image": "/unicycleheroes.png",
-    "url": "assets/gameassets/pizza/games/unicyclehero"
-  },
-  {
-    "name": "Vex 3M",
-    "image": "/vex3m.png",
-    "url": "assets/gameassets/pizza/games/vex3m"
-  },
-  {
-    "name": "Vex 3",
-    "image": "/vex3.png",
-    "url": "assets/gameassets/pizza/games/vex3"
-  },
-  {
-    "name": "Vex 4",
-    "image": "/vex4.png",
-    "url": "assets/gameassets/pizza/games/vex4"
-  },
-  {
-    "name": "Vex 5",
-    "image": "/vex5.png",
-    "url": "assets/gameassets/pizza/games/vex5"
-  },
-  {
-    "name": "Vex 6",
-    "image": "/vex6.png",
-    "url": "assets/gameassets/pizza/games/vex6"
-  },
-  {
-    "name": "Vex 7",
-    "image": "/vex7.png",
-    "url": "assets/gameassets/pizza/games/vex7"
-  },
-  {
-    "name": "Vex 8",
-    "image": "/vex8.png",
-    "url": "assets/gameassets/pizza/games/vex8"
-  },
-  {
-    "name": "Vex Challenges",
-    "image": "/vexchallenges.png",
-    "url": "assets/gameassets/pizza/games/vexchallenges"
-  },
-  {
-    "name": "Volley Random",
-    "image": "/volleyrandom.png",
-    "url": "assets/gameassets/pizza/games/volleyrandom"
-  },
-  {
-    "name": "Webgl Fluid",
-    "image": "/webglfluid.png",
-    "url": "assets/gameassets/pizza/games/webglfluid"
-  },
-  {
-    "name": "Whack Your Boss",
-    "image": "/whackyourboss.png",
-    "url": "assets/gameassets/pizza/games/whackyourboss"
-  },
-  {
-    "name": "Wordle",
-    "image": "/wordle.png",
-    "url": "assets/gameassets/pizza/games/wordle"
-  },
-  {
-    "name": "Worlds Hardest Game",
-    "image": "/worldshardestgame.png",
-    "url": "assets/gameassets/pizza/games/worldshardestgame"
-  },
-  {
-    "name": "Worlds Hardest Game 2",
-    "image": "/worldshardestgame2.png",
-    "url": "assets/gameassets/pizza/games/worldshardestgame2"
-  },
-  {
-    "name": "xx142-b2.exe",
-    "image": "/xx142-b2exe.png",
-    "url": "assets/gameassets/pizza/games/xx142"
-  },
-  {
-    "name": "Zombie Derby",
-    "image": "/zombiederbypixelsurvival.png",
-    "url": "assets/gameassets/pizza/games/zombiederbypixelsurvival"
+    "name": "Wordle Unlimited",
+    "image": "https://g.sp.webcreationstudios.org/img/class-469.png",
+    "url": "https://g.sp.webcreationstudios.org/source/class-469/"
   }
 ]

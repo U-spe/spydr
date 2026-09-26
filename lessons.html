@@ -7,8 +7,17 @@
   <title>spydr // lessons</title>
 
   <link rel="icon" href="/assets/images/favicon.png">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="/css/games.css">
   <link rel="stylesheet" href="/css/menu.css">
 </head>
@@ -18,57 +27,161 @@
   <div id="loader"></div>
 
   <div id="bg-effects-container">
-      <canvas id="stars-canvas"></canvas>
-      <div id="fog-overlay"></div>
+    <canvas id="stars-canvas"></canvas>
+    <div id="fog-overlay"></div>
   </div>
 
+
+  <!-- =========================
+       TOP RIGHT
+  ========================== -->
+
   <div class="top-right">
+
     <button onclick="go('/settings.html')">
-      <i class="ri-settings-3-line"></i> settings
+      <i class="ri-settings-3-line"></i>
+      settings
     </button>
 
     <button onclick="go('/login.html')">
-      <i class="ri-login-box-line"></i> login
+      <i class="ri-login-box-line"></i>
+      login
     </button>
+
   </div>
+
+
+  <!-- =========================
+       GLOBAL MENU
+  ========================== -->
 
   <div id="global-menu"></div>
 
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+
   <div class="center">
+
     <div class="top-bar">
+
       <div class="dropdown">
+
         <button id="dropdownButton">
+
           <i class="ri-gamepad-line"></i>
-          <span id="sourceText">loading...</span>
+
+          <span id="sourceText">
+            loading...
+          </span>
+
           <i class="ri-arrow-down-s-line"></i>
+
         </button>
+
         <div id="dropdownMenu"></div>
+
       </div>
+
 
       <div class="search">
+
         <i class="ri-search-line"></i>
-        <input id="search" placeholder="search lessons...">
+
+        <input
+          id="search"
+          placeholder="search lessons..."
+        >
+
       </div>
+
     </div>
 
-    <!-- Main Grid -->
-    <div id="game-grid">loading...</div>
+
+    <!-- =========================
+         GAME GRID
+    ========================== -->
+
+    <div id="game-grid">
+      loading...
+    </div>
+
   </div>
+
+
+  <!-- =========================
+       GAME VIEW
+  ========================== -->
 
   <div id="game-view">
-    <button id="closeGameBtn">← exit</button>
-    <iframe id="game-frame"></iframe>
+
+    <button id="closeGameBtn">
+      <i class="ri-arrow-left-line"></i>
+      exit
+    </button>
+
+
+    <!-- GAME LOADING VIDEO -->
+
+    <div id="game-loader">
+
+      <video
+        id="game-loading-video"
+        muted
+        autoplay
+        loop
+        playsinline
+        preload="auto"
+      >
+
+        <source
+          src="/assets/images/loading.mp4"
+          type="video/mp4"
+        >
+
+      </video>
+
+    </div>
+
+
+    <!-- GAME -->
+
+    <iframe
+      id="game-frame"
+      allowfullscreen
+      allow="fullscreen; autoplay; gamepad"
+    ></iframe>
+
   </div>
 
+
+  <!-- =========================
+       SCRIPTS
+  ========================== -->
+
   <script src="/js/lessons.js"></script>
+
   <script src="/js/globalmenu.js"></script>
-  <script type="module" src="/js/global.js"></script>
+
+  <script
+    type="module"
+    src="/js/global.js"
+  ></script>
+
 
   <script>
-  function go(page){
-    document.body.style.opacity = "0";
-    setTimeout(() => location.href = page, 300);
-  }
+
+    function go(page) {
+
+      document.body.style.opacity = "0";
+
+      setTimeout(() => {
+        location.href = page;
+      }, 300);
+
+    }
+
   </script>
 
 </body>

@@ -11,23 +11,32 @@ let games = [];
 let filteredGames = [];
 
 
-/*
-  Used for cancelling old JSON fetches
-  when switching between game sources.
-*/
+/* =========================
+   SOURCE FETCH CONTROL
+========================= */
 
 let gameLoadController = null;
 
 let gameLoadId = 0;
 
 
-/*
-  Used for preventing an old iframe load
-  event from hiding the loader for a
-  newer game.
-*/
+/* =========================
+   IFRAME LOAD CONTROL
+========================= */
 
 let iframeLoadId = 0;
+
+let gameLoaderTimer = null;
+
+
+/*
+  Minimum amount of time that the
+  loading video should remain visible.
+
+  3500 = 3.5 seconds
+*/
+
+const MIN_GAME_LOADER_TIME = 3500;
 
 
 /* =========================
@@ -38,9 +47,9 @@ const getEl = (id) =>
   document.getElementById(id);
 
 
-/* -------------------------
-   GAME URL
-------------------------- */
+/* =========================
+   GET GAME URL
+========================= */
 
 function getGameURL(game) {
 
@@ -52,9 +61,9 @@ function getGameURL(game) {
 }
 
 
-/* -------------------------
-   GAME COVER
-------------------------- */
+/* =========================
+   GET GAME COVER
+========================= */
 
 function getCover(game) {
 
@@ -67,7 +76,7 @@ function getCover(game) {
 
 
 /* =========================
-   GAME LOADER HELPERS
+   GAME LOADING VIDEO
 ========================= */
 
 function showGameLoader() {
@@ -83,25 +92,50 @@ function showGameLoader() {
 
 
   /*
-    Hide the iframe while the new
-    game is loading underneath.
+    Cancel an old hide timer if
+    another game gets opened quickly.
   */
 
-  frame?.classList.remove("loaded");
+  if (gameLoaderTimer) {
+
+    clearTimeout(
+      gameLoaderTimer
+    );
+
+    gameLoaderTimer = null;
+
+  }
 
 
   /*
-    Show loader overlay.
+    Hide game iframe.
   */
 
-  loader?.classList.add("active");
+  frame?.classList.remove(
+    "loaded"
+  );
 
 
   /*
-    Restart loading video from beginning.
+    Show loader.
+  */
+
+  loader?.classList.add(
+    "active"
+  );
+
+
+  /*
+    Restart the loading animation
+    from the beginning.
   */
 
   if (video) {
+
+    video.muted = true;
+
+    video.loop = true;
+
 
     try {
 
@@ -109,9 +143,12 @@ function showGameLoader() {
 
     }
 
-    catch (err) {
+    catch (error) {
 
-      // harmless
+      console.warn(
+        "[spydr games] could not reset loader video:",
+        error
+      );
 
     }
 
@@ -125,16 +162,19 @@ function showGameLoader() {
       typeof playPromise.catch === "function"
     ) {
 
-      playPromise.catch(() => {
+      playPromise.catch(
+        (error) => {
 
-        /*
-          Muted autoplay should normally work.
+          console.warn(
 
-          If browser blocks it, game loading
-          still continues normally.
-        */
+            "[spydr games] loader video play blocked:",
 
-      });
+            error
+
+          );
+
+        }
+      );
 
     }
 
@@ -143,9 +183,9 @@ function showGameLoader() {
 }
 
 
-/* -------------------------
+/* =========================
    HIDE GAME LOADER
-------------------------- */
+========================= */
 
 function hideGameLoader() {
 
@@ -160,35 +200,51 @@ function hideGameLoader() {
 
 
   /*
-    Reveal game first.
+    Reveal the iframe first.
   */
 
-  frame?.classList.add("loaded");
+  frame?.classList.add(
+    "loaded"
+  );
 
 
   /*
     Fade loader away.
   */
 
-  loader?.classList.remove("active");
+  loader?.classList.remove(
+    "active"
+  );
 
 
   /*
-    Stop video after it disappears.
+    Pause the video after the fade
+    animation has mostly completed.
   */
 
-  if (video) {
+  setTimeout(
+    () => {
 
-    video.pause();
+      if (
+        loader &&
+        !loader.classList.contains("active") &&
+        video
+      ) {
 
-  }
+        video.pause();
+
+      }
+
+    },
+    300
+  );
 
 }
 
 
-/* -------------------------
+/* =========================
    RESET GAME LOADER
-------------------------- */
+========================= */
 
 function resetGameLoader() {
 
@@ -202,14 +258,31 @@ function resetGameLoader() {
     getEl("game-frame");
 
 
-  loader?.classList.remove("active");
+  if (gameLoaderTimer) {
 
-  frame?.classList.remove("loaded");
+    clearTimeout(
+      gameLoaderTimer
+    );
+
+    gameLoaderTimer = null;
+
+  }
+
+
+  loader?.classList.remove(
+    "active"
+  );
+
+
+  frame?.classList.remove(
+    "loaded"
+  );
 
 
   if (video) {
 
     video.pause();
+
 
     try {
 
@@ -217,13 +290,76 @@ function resetGameLoader() {
 
     }
 
-    catch (err) {
+    catch (error) {
 
       // harmless
 
     }
 
   }
+
+}
+
+
+/* =========================
+   PRELOAD LOADING VIDEO
+========================= */
+
+function preloadGameLoaderVideo() {
+
+  const video =
+    getEl("game-loading-video");
+
+
+  if (!video) {
+
+    console.warn(
+      "[spydr games] loading video element not found"
+    );
+
+    return;
+
+  }
+
+
+  /*
+    Force the browser to begin loading
+    the MP4 early rather than waiting
+    for the first game click.
+  */
+
+  video.load();
+
+
+  video.addEventListener(
+    "loadeddata",
+    () => {
+
+      console.log(
+        "[spydr games] loading.mp4 ready"
+      );
+
+    },
+    {
+      once: true
+    }
+  );
+
+
+  video.addEventListener(
+    "error",
+    () => {
+
+      console.error(
+
+        "[spydr games] loading.mp4 failed:",
+
+        video.error
+
+      );
+
+    }
+  );
 
 }
 
@@ -288,67 +424,80 @@ document.addEventListener(
 
     if (closeBtn) {
 
-      const gameView =
-        getEl("game-view");
-
-      const gameFrame =
-        getEl("game-frame");
-
-
-      /*
-        Invalidate any pending iframe load
-        event from the current game.
-      */
-
-      iframeLoadId++;
-
-
-      /*
-        Remove load callback BEFORE
-        assigning about:blank.
-
-        Otherwise about:blank itself can
-        trigger the loader callback.
-      */
-
-      if (gameFrame) {
-
-        gameFrame.onload = null;
-
-        gameFrame.src =
-          "about:blank";
-
-      }
-
-
-      resetGameLoader();
-
-
-      if (gameView) {
-
-        gameView.style.display =
-          "none";
-
-        gameView.classList.remove(
-          "open"
-        );
-
-      }
-
-
-      document
-        .querySelector(".dock")
-        ?.classList
-        .remove("hidden");
-
-
-      document.body.style.overflow =
-        "";
+      closeGame();
 
     }
 
   }
 );
+
+
+/* =========================
+   CLOSE GAME
+========================= */
+
+function closeGame() {
+
+  const gameView =
+    getEl("game-view");
+
+  const gameFrame =
+    getEl("game-frame");
+
+
+  /*
+    Invalidates any pending iframe
+    load callback.
+  */
+
+  iframeLoadId++;
+
+
+  /*
+    Prevent about:blank from firing
+    our game loading callback.
+  */
+
+  if (gameFrame) {
+
+    gameFrame.onload = null;
+
+    gameFrame.src =
+      "about:blank";
+
+  }
+
+
+  resetGameLoader();
+
+
+  if (gameView) {
+
+    gameView.style.display =
+      "none";
+
+    gameView.classList.remove(
+      "open"
+    );
+
+  }
+
+
+  document
+    .querySelector(".dock")
+    ?.classList
+    .remove("hidden");
+
+
+  document.body.style.overflow =
+    "";
+
+
+  console.log(
+    "[spydr games] closed game"
+  );
+
+}
 
 
 /* =========================
@@ -379,9 +528,13 @@ document.addEventListener(
         (game) => {
 
           return (
-            game.name
+
+            String(
+              game.name
+            )
               .toLowerCase()
               .includes(q)
+
           );
 
         }
@@ -479,17 +632,9 @@ async function setSource(index) {
   }
 
 
-  /* -------------------------
-     UPDATE ACTIVE SOURCE
-  ------------------------- */
-
   currentSourceData =
     source;
 
-
-  /* -------------------------
-     SOURCE LABEL
-  ------------------------- */
 
   const sourceText =
     getEl("sourceText");
@@ -503,18 +648,10 @@ async function setSource(index) {
   }
 
 
-  /* -------------------------
-     CLOSE DROPDOWN
-  ------------------------- */
-
   getEl("dropdownMenu")
     ?.classList
     .remove("active");
 
-
-  /* -------------------------
-     CLEAR SEARCH
-  ------------------------- */
 
   const searchInput =
     getEl("search");
@@ -527,10 +664,6 @@ async function setSource(index) {
 
   }
 
-
-  /* -------------------------
-     SHOW GRID
-  ------------------------- */
 
   const gameGrid =
     getEl("game-grid");
@@ -574,10 +707,8 @@ async function loadGames() {
 
 
   /*
-    Snapshot current source.
-
-    This prevents a slow response from
-    one source replacing a newer source.
+    Snapshot the currently selected
+    source before beginning the request.
   */
 
   const source =
@@ -604,19 +735,14 @@ async function loadGames() {
 
 
   /* =========================
-     LOADING UI
+     LOADING MESSAGE
   ========================== */
 
   if (gameGrid) {
 
     gameGrid.innerHTML = `
 
-      <div
-        style="
-          padding:20px;
-          color:var(--gray);
-        "
-      >
+      <div class="grid-status">
 
         loading ${source.Name}...
 
@@ -641,13 +767,6 @@ async function loadGames() {
       );
 
 
-    /*
-      Cache bust source JSON.
-
-      Useful while rapidly updating
-      game catalogs.
-    */
-
     fileURL.searchParams.set(
       "t",
       Date.now()
@@ -664,7 +783,7 @@ async function loadGames() {
 
 
     /* =========================
-       FETCH SOURCE
+       FETCH
     ========================== */
 
     const response =
@@ -698,7 +817,7 @@ async function loadGames() {
 
 
     /* =========================
-       STALE REQUEST CHECK #1
+       STALE REQUEST CHECK
     ========================== */
 
     if (
@@ -723,21 +842,11 @@ async function loadGames() {
 
 
     /* =========================
-       PARSE SOURCE
+       FIND GAME ARRAY
     ========================== */
 
-    let rawGames =
-      [];
+    let rawGames = [];
 
-
-    /*
-      Format:
-
-      [
-        {...},
-        {...}
-      ]
-    */
 
     if (
       Array.isArray(data)
@@ -748,50 +857,32 @@ async function loadGames() {
 
     }
 
-
-    /*
-      Formats:
-
-      {
-        games: []
-      }
-
-      {
-        items: []
-      }
-
-      {
-        apps: []
-      }
-    */
-
     else if (
-
-      data.games ||
-
-      data.items ||
-
-      data.apps
-
+      Array.isArray(data.games)
     ) {
 
       rawGames =
-
-        data.games ||
-
-        data.items ||
-
-        data.apps;
+        data.games;
 
     }
 
+    else if (
+      Array.isArray(data.items)
+    ) {
 
-    /*
-      Last-resort detection.
+      rawGames =
+        data.items;
 
-      Search the object for the
-      first array.
-    */
+    }
+
+    else if (
+      Array.isArray(data.apps)
+    ) {
+
+      rawGames =
+        data.apps;
+
+    }
 
     else {
 
@@ -826,10 +917,6 @@ async function loadGames() {
         (game, i) => {
 
 
-          /* -------------------------
-             COVER
-          ------------------------- */
-
           const coverStr =
 
             game.cover ||
@@ -847,18 +934,9 @@ async function loadGames() {
             "/assets/images/no-image.png";
 
 
-          /* -------------------------
-             GAME URL
-          ------------------------- */
-
           const urlStr =
 
             game.url ||
-
-            /*
-              Nate / MacVG / other
-              sources may use "game".
-            */
 
             game.game ||
 
@@ -877,10 +955,6 @@ async function loadGames() {
             "";
 
 
-          /* -------------------------
-             NAME
-          ------------------------- */
-
           const nameStr =
 
             game.name ||
@@ -896,19 +970,17 @@ async function loadGames() {
             `Game ${i + 1}`;
 
 
-          /* -------------------------
-             ID
-          ------------------------- */
-
           let generatedId;
 
 
           if (
+
             typeof crypto !==
               "undefined" &&
 
             typeof crypto.randomUUID ===
               "function"
+
           ) {
 
             generatedId =
@@ -942,9 +1014,10 @@ async function loadGames() {
               String(coverStr),
 
             prx:
-              game.prx ||
-              game.proxy ||
-              false
+              Boolean(
+                game.prx ||
+                game.proxy
+              )
 
           };
 
@@ -953,7 +1026,7 @@ async function loadGames() {
 
 
     /* =========================
-       STALE REQUEST CHECK #2
+       SECOND STALE CHECK
     ========================== */
 
     if (
@@ -965,12 +1038,6 @@ async function loadGames() {
         source
 
     ) {
-
-      console.log(
-
-        `[spydr games] source changed before render: ${source.Name}`
-
-      );
 
       return;
 
@@ -1002,10 +1069,6 @@ async function loadGames() {
   catch (err) {
 
 
-    /* =========================
-       ABORT IS NORMAL
-    ========================== */
-
     if (
       err.name ===
       "AbortError"
@@ -1031,11 +1094,6 @@ async function loadGames() {
     );
 
 
-    /*
-      Never let an old request
-      overwrite the current UI.
-    */
-
     if (
 
       thisLoadId !==
@@ -1055,12 +1113,7 @@ async function loadGames() {
 
       gameGrid.innerHTML = `
 
-        <div
-          style="
-            padding:20px;
-            color:var(--gray);
-          "
-        >
+        <div class="grid-status">
 
           failed to load ${source.Name}
 
@@ -1097,7 +1150,7 @@ function renderGames() {
 
 
   /* =========================
-     NO RESULTS
+     EMPTY RESULTS
   ========================== */
 
   if (
@@ -1106,12 +1159,7 @@ function renderGames() {
 
     gameGrid.innerHTML = `
 
-      <div
-        style="
-          padding:20px;
-          color:var(--gray);
-        "
-      >
+      <div class="grid-status">
 
         no games found
 
@@ -1119,14 +1167,13 @@ function renderGames() {
 
     `;
 
-
     return;
 
   }
 
 
   /* =========================
-     CARDS
+     GAME CARDS
   ========================== */
 
   filteredGames.forEach(
@@ -1158,10 +1205,6 @@ function renderGames() {
         "/assets/images/no-image.png";
 
 
-      /* -------------------------
-         IMAGE
-      ------------------------- */
-
       img.src =
         getCover(game);
 
@@ -1174,10 +1217,6 @@ function renderGames() {
         "lazy";
 
 
-      /* -------------------------
-         TITLE
-      ------------------------- */
-
       titleSpan.textContent =
         game.name;
 
@@ -1189,11 +1228,9 @@ function renderGames() {
       img.onerror = () => {
 
         if (
-
           !img.src.endsWith(
             fallbackSrc
           )
-
         ) {
 
           img.src =
@@ -1248,10 +1285,6 @@ function openGame(game) {
     getGameURL(game);
 
 
-  /* =========================
-     VALIDATE URL
-  ========================== */
-
   if (
     !url ||
     url === "#"
@@ -1271,7 +1304,7 @@ function openGame(game) {
 
 
   /* =========================
-     PROXY GAME
+     OPTIONAL PROXY
   ========================== */
 
   if (game.prx) {
@@ -1294,17 +1327,12 @@ function openGame(game) {
 
 
   if (
-
     !gameFrame ||
-
     !gameView
-
   ) {
 
     console.error(
-
       "[spydr games] game viewer missing"
-
     );
 
     return;
@@ -1313,19 +1341,24 @@ function openGame(game) {
 
 
   /*
-    Unique number for THIS iframe load.
-
-    If user quickly opens another game,
-    the old game's load event can't
-    remove the new game's loader.
+    Unique ID for this specific
+    iframe load.
   */
 
   const thisIframeLoadId =
     ++iframeLoadId;
 
 
+  /*
+    Measure loader duration.
+  */
+
+  const loaderStartedAt =
+    performance.now();
+
+
   /* =========================
-     OPEN VIEW
+     OPEN VIEWER
   ========================== */
 
   gameView.style.display =
@@ -1338,23 +1371,19 @@ function openGame(game) {
 
 
   /* =========================
-     SHOW LOADER
+     SHOW LOADING VIDEO
   ========================== */
 
   showGameLoader();
 
 
   /* =========================
-     IFRAME LOAD EVENT
+     IFRAME LOAD
   ========================== */
 
   gameFrame.onload =
     () => {
 
-
-      /*
-        Ignore old iframe events.
-      */
 
       if (
 
@@ -1368,20 +1397,80 @@ function openGame(game) {
       }
 
 
-      hideGameLoader();
+      /*
+        The iframe document may technically
+        load before the game engine is ready.
+
+        Keep the loading video visible for
+        at least 3.5 seconds.
+      */
+
+      const elapsed =
+        performance.now() -
+        loaderStartedAt;
+
+
+      const remaining =
+        Math.max(
+
+          0,
+
+          MIN_GAME_LOADER_TIME -
+          elapsed
+
+        );
 
 
       console.log(
 
-        `[spydr games] loaded: ${game.name}`
+        `[spydr games] iframe loaded: ${game.name}`,
+
+        `loader remaining: ${Math.round(remaining)}ms`
 
       );
+
+
+      gameLoaderTimer =
+        setTimeout(
+          () => {
+
+
+            if (
+
+              thisIframeLoadId !==
+              iframeLoadId
+
+            ) {
+
+              return;
+
+            }
+
+
+            hideGameLoader();
+
+
+            console.log(
+
+              `[spydr games] game revealed: ${game.name}`
+
+            );
+
+
+            gameLoaderTimer =
+              null;
+
+          },
+
+          remaining
+
+        );
 
     };
 
 
   /* =========================
-     BEGIN GAME LOAD
+     LOAD GAME
   ========================== */
 
   gameFrame.src =
@@ -1399,7 +1488,7 @@ function openGame(game) {
 
 
   /* =========================
-     LOCK PAGE SCROLL
+     LOCK SCROLLING
   ========================== */
 
   document.body.style.overflow =
@@ -1427,11 +1516,19 @@ async function init() {
     getEl("game-grid");
 
 
+  /*
+    Start downloading the loading
+    animation immediately.
+  */
+
+  preloadGameLoaderVideo();
+
+
   try {
 
 
     /* =========================
-       LOAD SOURCE REGISTRY
+       SOURCE REGISTRY
     ========================== */
 
     const loaderURL =
@@ -1475,10 +1572,6 @@ async function init() {
       await response.json();
 
 
-    /* =========================
-       VALIDATE REGISTRY
-    ========================== */
-
     if (
       !Array.isArray(
         gameLists
@@ -1493,10 +1586,6 @@ async function init() {
 
     }
 
-
-    /* =========================
-       BUILD MENU
-    ========================== */
 
     buildSourceMenu();
 
@@ -1538,12 +1627,7 @@ async function init() {
 
       gameGrid.innerHTML = `
 
-        <div
-          style="
-            padding:20px;
-            color:white;
-          "
-        >
+        <div class="grid-status">
 
           failed to initialize games
 

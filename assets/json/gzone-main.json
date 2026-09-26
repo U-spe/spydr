@@ -1,4 +1,9 @@
 [
+  {
+    "Name": "MacVG",
+    "File": "assets/json/macvg.json",
+    "Icon": "ri-fire-line"
+  },
    {
     "Name": "Pizza Edition",
     "File": "assets/json/pizza.json",
@@ -8,11 +13,6 @@
     "Name": "Nates Hub",
     "File": "assets/json/nate.json",
     "Icon": "ri-flask-line"
-  },
-  {
-    "Name": "ML20 - UBG",
-    "File": "assets/json/ml20.json",
-    "Icon": "ri-fire-line"
   },
    {
     "Name": "Hydra",

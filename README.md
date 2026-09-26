@@ -31,4 +31,4 @@ To find the README, and other MD files, view the [MD docs](/md-docs/README.md) p
 
 # wot?
 
-850 commits? i must be half cra-z. (w spydr 🥲)
+800 commits? i must be half cra-z. (w spydr 🥲)

@@ -7,6 +7,8 @@ All notable changes to spydr are documented here.
 ## 🛠️ Beginning
 - [ ] Starting Scramjet build 
 - [x] Make Homepage Text Buttons
+- [ ] Use MacVG Games to make the games better (replacement of ml20)
+- [ ] YT Vid Player???????
 - [ ] Redownload Locally and Deploy On surge.sh
 
 ---

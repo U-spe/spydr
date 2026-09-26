@@ -1,6 +1,8 @@
-/* --- CORE VARIABLES & THEMES --- */
+/* =========================
+   CORE VARIABLES
+========================= */
+
 :root {
-  /* Default Theme */
   --bg: #090909;
   --bg2: #111111;
   --card: #171717;
@@ -10,7 +12,11 @@
   --accent: #3f5efb;
 }
 
-/* Light Theme Override */
+
+/* =========================
+   LIGHT THEME
+========================= */
+
 [data-theme="light"] {
   --bg: #f5f5f5;
   --bg2: #e0e0e0;
@@ -21,7 +27,11 @@
   --accent: #3f5efb;
 }
 
-/* Neon Theme Override */
+
+/* =========================
+   SPYDR NEON
+========================= */
+
 [data-theme="spydr-neon"] {
   --bg: #05050a;
   --bg2: #0a0a14;
@@ -32,279 +42,989 @@
   --accent: #7c3aed;
 }
 
-/* BASE */
+
+/* =========================
+   RESET
+========================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: "JetBrains Mono";
-  transition: background 0.3s ease, color 0.3s ease;
+
+  font-family:
+    "JetBrains Mono",
+    monospace;
+
   min-height: 100vh;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
-/* --- DYNAMIC BACKGROUND SYSTEM --- */
+
+/* =========================
+   BACKGROUND EFFECTS
+========================= */
+
 #bg-effects-container {
-  position: fixed; /* Locks to the viewport */
-  top: 0;
-  left: 0;
+  position: fixed;
+
+  inset: 0;
+
   width: 100vw;
   height: 100vh;
-  z-index: -999; /* Forces it behind absolutely everything */
-  pointer-events: none; /* Prevents it from intercepting mouse clicks */
+
+  z-index: -999;
+
+  pointer-events: none;
 }
 
+
 #stars-canvas {
+  display: block;
+
   width: 100%;
   height: 100%;
-  display: block;
 }
+
 
 #fog-overlay {
   position: absolute;
+
   inset: 0;
+
   opacity: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(124, 58, 237, 0.15), transparent 70%);
-  transition: opacity 0.5s ease;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(124, 58, 237, 0.15),
+      transparent 70%
+    );
+
+  transition:
+    opacity 0.5s ease;
 }
 
-body[data-bg-style="fog"] #fog-overlay { opacity: 1; }
 
-/* LOADING */
+body[data-bg-style="fog"]
+#fog-overlay {
+  opacity: 1;
+}
+
+
+/* =========================
+   PAGE LOADER
+========================= */
+
 #loader {
   position: fixed;
+
   inset: 0;
-  background: var(--bg);
+
+  background:
+    var(--bg);
+
   z-index: 9999;
-  transition: opacity 0.3s ease;
+
+  transition:
+    opacity 0.3s ease;
 }
 
-/* TOP RIGHT */
+
+/* =========================
+   TOP RIGHT
+========================= */
+
 .top-right {
   position: fixed;
+
   top: 18px;
   right: 18px;
+
   display: flex;
+
   gap: 10px;
+
   z-index: 50;
 }
 
+
 .top-right button {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  color: var(--text);
-  padding: 10px 14px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.25s ease;
+  background:
+    var(--bg2);
+
+  border:
+    1px solid
+    var(--border);
+
+  color:
+    var(--text);
+
+  padding:
+    10px 14px;
+
+  border-radius:
+    10px;
+
+  cursor:
+    pointer;
+
+  transition:
+    0.25s ease;
 }
+
 
 .top-right button:hover {
-  border-color: var(--text);
+  border-color:
+    var(--text);
 }
 
-/* MENU (FIXED HOVER BEHAVIOR) */
+
+/* =========================
+   MENU
+========================= */
+
 .menu-wrapper {
   position: fixed;
+
   bottom: 20px;
   left: 20px;
+
   z-index: 60;
 }
 
+
 #menu-btn {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  color: white;
-  padding: 12px;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: 0.25s ease;
+  background:
+    var(--bg2);
+
+  border:
+    1px solid
+    var(--border);
+
+  color:
+    white;
+
+  padding:
+    12px;
+
+  border-radius:
+    12px;
+
+  cursor:
+    pointer;
+
+  transition:
+    0.25s ease;
 }
+
 
 #menu {
   position: absolute;
+
   bottom: 55px;
   left: 0;
+
   width: 200px;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 12px;
+
+  background:
+    var(--bg2);
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    12px;
 
   opacity: 0;
-  pointer-events: none;
-  transform: translateY(10px);
-  transition: 0.25s ease;
+
+  pointer-events:
+    none;
+
+  transform:
+    translateY(10px);
+
+  transition:
+    0.25s ease;
 }
+
 
 .menu-wrapper:hover #menu,
 #menu:hover {
   opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
+
+  pointer-events:
+    auto;
+
+  transform:
+    translateY(0);
 }
+
 
 #menu button {
   width: 100%;
-  background: transparent;
-  border: none;
-  color: var(--gray);
-  padding: 12px;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.25s ease;
+
+  background:
+    transparent;
+
+  border:
+    none;
+
+  color:
+    var(--gray);
+
+  padding:
+    12px;
+
+  text-align:
+    left;
+
+  cursor:
+    pointer;
+
+  transition:
+    0.25s ease;
 }
+
 
 #menu button:hover {
-  background: rgba(255,255,255,0.05);
-  color: white;
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.05
+    );
+
+  color:
+    white;
 }
 
-/* CENTER */
+
+/* =========================
+   MAIN
+========================= */
+
 .center {
-  padding: 80px 20px;
   position: relative;
-  z-index: 1; /* Ensures your main content stays above the background */
+
+  padding:
+    80px 20px;
+
+  z-index: 1;
 }
 
-/* TOP BAR */
+
+/* =========================
+   TOP BAR
+========================= */
+
 .top-bar {
   display: flex;
+
   gap: 15px;
-  margin-bottom: 20px;
+
+  margin-bottom:
+    20px;
 }
 
-/* DROPDOWN */
+
+/* =========================
+   DROPDOWN
+========================= */
+
 .dropdown {
-  position: relative;
+  position:
+    relative;
 }
+
 
 #dropdownButton {
-  background: var(--card);
-  border: 1px solid var(--border);
-  color: white;
-  padding: 10px 14px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.25s ease;
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  background:
+    var(--card);
+
+  border:
+    1px solid
+    var(--border);
+
+  color:
+    var(--text);
+
+  padding:
+    10px 14px;
+
+  border-radius:
+    10px;
+
+  cursor:
+    pointer;
+
+  transition:
+    0.25s ease;
 }
+
 
 #dropdownButton:hover {
-  border-color: var(--text);
+  border-color:
+    var(--text);
 }
+
 
 #dropdownMenu {
-  position: absolute;
-  top: 45px;
-  left: 0;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  display: none;
-  flex-direction: column;
-  min-width: 200px;
-  z-index: 99;
+  position:
+    absolute;
+
+  top:
+    45px;
+
+  left:
+    0;
+
+  display:
+    none;
+
+  flex-direction:
+    column;
+
+  min-width:
+    200px;
+
+  max-height:
+    420px;
+
+  overflow-y:
+    auto;
+
+  background:
+    var(--bg2);
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    10px;
+
+  z-index:
+    99;
 }
+
 
 #dropdownMenu.active {
-  display: flex;
+  display:
+    flex;
 }
+
 
 .dropdown-item {
-  padding: 10px;
-  cursor: pointer;
-  color: var(--text);
-  transition: 0.25s ease;
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    8px;
+
+  padding:
+    10px;
+
+  cursor:
+    pointer;
+
+  color:
+    var(--text);
+
+  transition:
+    0.25s ease;
 }
+
 
 .dropdown-item:hover {
-  background: rgba(255,255,255,0.05);
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.05
+    );
 }
 
-/* SEARCH */
+
+/* =========================
+   SEARCH
+========================= */
+
 .search {
-  flex: 1;
-  display: flex;
-  gap: 10px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 10px;
-  border-radius: 10px;
-  transition: 0.25s ease;
+  flex:
+    1;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  background:
+    var(--card);
+
+  border:
+    1px solid
+    var(--border);
+
+  padding:
+    10px;
+
+  border-radius:
+    10px;
+
+  transition:
+    0.25s ease;
 }
+
 
 .search:focus-within {
-  border-color: var(--text);
+  border-color:
+    var(--text);
 }
+
 
 .search input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  color: var(--text);
-  outline: none;
+  flex:
+    1;
+
+  min-width:
+    0;
+
+  background:
+    transparent;
+
+  border:
+    none;
+
+  color:
+    var(--text);
+
+  outline:
+    none;
+
+  font-family:
+    inherit;
 }
 
-/* GRID */
+
+/* =========================
+   GAME GRID
+========================= */
+
 #game-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 15px;
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fill,
+      minmax(180px, 1fr)
+    );
+
+  gap:
+    15px;
 }
+
+
+.grid-status {
+  padding:
+    20px;
+
+  color:
+    var(--gray);
+
+  grid-column:
+    1 / -1;
+}
+
+
+/* =========================
+   GAME CARD
+========================= */
 
 .game-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  cursor: pointer;
-  overflow: hidden;
-  transition: 0.25s ease;
+  background:
+    var(--card);
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    12px;
+
+  cursor:
+    pointer;
+
+  overflow:
+    hidden;
+
+  transition:
+    0.25s ease;
 }
+
 
 .game-card:hover {
-  border-color: var(--text);
-  transform: translateY(-3px);
+  border-color:
+    var(--text);
+
+  transform:
+    translateY(-3px);
 }
+
 
 .game-card img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    120px;
+
+  object-fit:
+    cover;
+
+  background:
+    var(--bg2);
 }
+
 
 .game-card span {
-  display: block;
-  padding: 10px;
-  color: var(--gray);
+  display:
+    block;
+
+  padding:
+    10px;
+
+  color:
+    var(--gray);
 }
 
-/* GAME VIEW */
+
+/* =========================
+   GAME VIEW
+========================= */
+
 #game-view {
-  position: fixed;
-  inset: 0;
-  background: black;
-  display: none;
-  flex-direction: column;
-  z-index: 999;
+  position:
+    fixed;
+
+  inset:
+    0;
+
+  display:
+    none;
+
+  flex-direction:
+    column;
+
+  width:
+    100vw;
+
+  height:
+    100vh;
+
+  height:
+    100dvh;
+
+  background:
+    #000;
+
+  overflow:
+    hidden;
+
+  z-index:
+    999;
 }
 
-#game-frame {
-  flex: 1;
-  border: none;
-}
+
+/* =========================
+   EXIT BUTTON
+========================= */
 
 #closeGameBtn {
-  background: var(--bg2);
-  border: none;
-  color: white;
-  padding: 12px;
-  cursor: pointer;
-  transition: background 0.25s ease;
+  flex:
+    0 0 auto;
+
+  width:
+    100%;
+
+  min-height:
+    46px;
+
+  background:
+    var(--bg2);
+
+  border:
+    none;
+
+  border-bottom:
+    1px solid
+    var(--border);
+
+  color:
+    white;
+
+  padding:
+    12px 16px;
+
+  text-align:
+    left;
+
+  font-family:
+    "JetBrains Mono",
+    monospace;
+
+  font-size:
+    14px;
+
+  cursor:
+    pointer;
+
+  z-index:
+    30;
+
+  transition:
+    background 0.25s ease;
 }
 
+
 #closeGameBtn:hover {
-  background: var(--card);
+  background:
+    var(--card);
+}
+
+
+/* =========================
+   GAME STAGE
+
+   This contains BOTH the iframe
+   and the loading video.
+
+   They therefore always share
+   the exact same usable area.
+========================= */
+
+#game-stage {
+  position:
+    relative;
+
+  flex:
+    1 1 auto;
+
+  width:
+    100%;
+
+  min-width:
+    0;
+
+  min-height:
+    0;
+
+  overflow:
+    hidden;
+
+  background:
+    #000;
+}
+
+
+/* =========================
+   GAME IFRAME
+========================= */
+
+#game-frame {
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  border:
+    none;
+
+  background:
+    #000;
+
+  opacity:
+    0;
+
+  visibility:
+    hidden;
+
+  transition:
+    opacity 0.25s ease;
+
+  z-index:
+    1;
+}
+
+
+#game-frame.loaded {
+  opacity:
+    1;
+
+  visibility:
+    visible;
+}
+
+
+/* =========================
+   GAME LOADER
+========================= */
+
+#game-loader {
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  background:
+    #000;
+
+  opacity:
+    0;
+
+  visibility:
+    hidden;
+
+  pointer-events:
+    none;
+
+  overflow:
+    hidden;
+
+  z-index:
+    20;
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+
+#game-loader.active {
+  opacity:
+    1;
+
+  visibility:
+    visible;
+
+  pointer-events:
+    auto;
+}
+
+
+/* =========================
+   LOADING VIDEO
+
+   IMPORTANT:
+
+   object-fit: contain
+
+   means:
+
+   - no stretching
+   - no cropping
+   - whole video remains visible
+   - correct aspect ratio
+   - automatically resizes
+========================= */
+
+#game-loading-video {
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  max-width:
+    100%;
+
+  max-height:
+    100%;
+
+  object-fit:
+    contain;
+
+  object-position:
+    center center;
+
+  background:
+    #000;
+
+  pointer-events:
+    none;
+
+  user-select:
+    none;
+
+  -webkit-user-drag:
+    none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (
+  max-width: 700px
+) {
+
+  .center {
+    padding:
+      78px 12px 90px;
+  }
+
+
+  .top-right {
+    top:
+      12px;
+
+    right:
+      12px;
+  }
+
+
+  .top-right button {
+    padding:
+      9px 10px;
+  }
+
+
+  .top-bar {
+    flex-direction:
+      column;
+  }
+
+
+  .dropdown {
+    width:
+      100%;
+  }
+
+
+  #dropdownButton {
+    width:
+      100%;
+
+    justify-content:
+      space-between;
+  }
+
+
+  #dropdownMenu {
+    width:
+      100%;
+  }
+
+
+  #game-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap:
+      10px;
+  }
+
+
+  .game-card img {
+    height:
+      105px;
+  }
+
+
+  #closeGameBtn {
+    min-height:
+      48px;
+  }
+
+}
+
+
+/* =========================
+   VERY SMALL DEVICES
+========================= */
+
+@media (
+  max-width: 380px
+) {
+
+  #game-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .game-card img {
+    height:
+      145px;
+  }
+
 }

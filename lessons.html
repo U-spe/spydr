@@ -2,50 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
   <title>spydr // lessons</title>
 
-  <link rel="icon" href="/assets/images/favicon.png">
+  <link
+    rel="icon"
+    href="/assets/images/favicon.png"
+  />
 
   <link
     href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
     rel="stylesheet"
-  >
+  />
 
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap"
     rel="stylesheet"
-  >
+  />
 
-  <link rel="stylesheet" href="/css/games.css">
-  <link rel="stylesheet" href="/css/menu.css">
+  <link
+    rel="stylesheet"
+    href="/css/games.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="/css/menu.css"
+  />
 </head>
 
 <body>
 
+  <!-- =========================
+       PAGE LOADER
+  ========================== -->
+
   <div id="loader"></div>
 
+
+  <!-- =========================
+       BACKGROUND EFFECTS
+  ========================== -->
+
   <div id="bg-effects-container">
+
     <canvas id="stars-canvas"></canvas>
+
     <div id="fog-overlay"></div>
+
   </div>
 
 
   <!-- =========================
-       TOP RIGHT
+       TOP RIGHT BUTTONS
   ========================== -->
 
   <div class="top-right">
 
     <button onclick="go('/settings.html')">
+
       <i class="ri-settings-3-line"></i>
+
       settings
+
     </button>
 
+
     <button onclick="go('/login.html')">
+
       <i class="ri-login-box-line"></i>
+
       login
+
     </button>
 
   </div>
@@ -62,9 +95,17 @@
        MAIN CONTENT
   ========================== -->
 
-  <div class="center">
+  <main class="center">
+
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
 
     <div class="top-bar">
+
+
+      <!-- SOURCE DROPDOWN -->
 
       <div class="dropdown">
 
@@ -80,10 +121,13 @@
 
         </button>
 
+
         <div id="dropdownMenu"></div>
 
       </div>
 
+
+      <!-- SEARCH -->
 
       <div class="search">
 
@@ -91,8 +135,10 @@
 
         <input
           id="search"
+          type="text"
+          autocomplete="off"
           placeholder="search lessons..."
-        >
+        />
 
       </div>
 
@@ -107,7 +153,7 @@
       loading...
     </div>
 
-  </div>
+  </main>
 
 
   <!-- =========================
@@ -116,42 +162,61 @@
 
   <div id="game-view">
 
+
+    <!-- EXIT BAR -->
+
     <button id="closeGameBtn">
+
       <i class="ri-arrow-left-line"></i>
+
       exit
+
     </button>
 
 
-    <!-- GAME LOADING VIDEO -->
+    <!-- =========================
+         GAME STAGE
+    ========================== -->
 
-    <div id="game-loader">
+    <div id="game-stage">
 
-      <video
-        id="game-loading-video"
-        muted
-        autoplay
-        loop
-        playsinline
-        preload="auto"
-      >
 
-        <source
-          src="/assets/images/loading.mp4"
-          type="video/mp4"
+      <!-- =========================
+           LOADING VIDEO
+      ========================== -->
+
+      <div id="game-loader">
+
+        <video
+          id="game-loading-video"
+          muted
+          loop
+          playsinline
+          preload="auto"
         >
 
-      </video>
+          <source
+            src="/assets/images/loading.mp4"
+            type="video/mp4"
+          />
+
+        </video>
+
+      </div>
+
+
+      <!-- =========================
+           GAME IFRAME
+      ========================== -->
+
+      <iframe
+        id="game-frame"
+        title="spydr game"
+        allowfullscreen
+        allow="fullscreen; gamepad"
+      ></iframe>
 
     </div>
-
-
-    <!-- GAME -->
-
-    <iframe
-      id="game-frame"
-      allowfullscreen
-      allow="fullscreen; autoplay; gamepad"
-    ></iframe>
 
   </div>
 
@@ -170,6 +235,10 @@
   ></script>
 
 
+  <!-- =========================
+       PAGE NAVIGATION
+  ========================== -->
+
   <script>
 
     function go(page) {
@@ -177,7 +246,9 @@
       document.body.style.opacity = "0";
 
       setTimeout(() => {
+
         location.href = page;
+
       }, 300);
 
     }

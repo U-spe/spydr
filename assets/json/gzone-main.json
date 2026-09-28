@@ -5,8 +5,8 @@
     "Icon": "ri-fire-line"
   },
    {
-    "Name": "Pizza Edition",
-    "File": "assets/json/pizza.json",
+    "Name": "DuckMath",
+    "File": "assets/json/duckm.json",
     "Icon": "ri-restaurant-2-line"
   }, 
    {
@@ -15,7 +15,7 @@
     "Icon": "ri-flask-line"
   },
    {
-    "Name": "Hydra",
+    "Name": "Fire Hydrant",
     "File": "assets/json/hydra.json",
     "Icon": "ri-aliens-line"
   },

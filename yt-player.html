@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>YT Player | Spydr</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="/css/yt-player.css" />
+</head>
+
+<body>
+
+  <div class="app-shell">
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="topbar">
+
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="ri-play-large-fill"></i>
+        </div>
+
+        <div>
+          <h1>YT Player</h1>
+          <span>Spydr Media</span>
+        </div>
+      </div>
+
+      <button class="icon-button" id="historyButton" title="History">
+        <i class="ri-history-line"></i>
+      </button>
+
+    </header>
+
+
+    <!-- =========================
+         SEARCH
+    ========================== -->
+    <section class="search-section">
+
+      <div class="search-box">
+
+        <i class="ri-search-line search-icon"></i>
+
+        <input
+          id="searchInput"
+          type="text"
+          autocomplete="off"
+          placeholder="Search YouTube..."
+        />
+
+        <button id="clearSearchButton" class="clear-search hidden">
+          <i class="ri-close-line"></i>
+        </button>
+
+        <button id="searchButton">
+          Search
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="main-layout">
+
+      <!-- =========================
+           PLAYER
+      ========================== -->
+      <section class="player-column">
+
+        <div class="player-card">
+
+          <div id="playerEmptyState" class="player-empty">
+
+            <div class="empty-icon">
+              <i class="ri-youtube-line"></i>
+            </div>
+
+            <h2>YT Player</h2>
+
+            <p>
+              Search for a video and select it to start playing.
+            </p>
+
+          </div>
+
+
+          <div id="playerWrapper" class="player-wrapper hidden">
+
+            <div class="video-frame">
+
+              <iframe
+                id="youtubeFrame"
+                src=""
+                title="YouTube Player"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share
+                "
+                allowfullscreen
+              ></iframe>
+
+            </div>
+
+
+            <div class="video-information">
+
+              <h2 id="videoTitle">
+                Video title
+              </h2>
+
+              <div class="video-meta">
+
+                <span id="videoChannel">
+                  Channel
+                </span>
+
+                <span class="meta-dot"></span>
+
+                <span id="videoDate">
+                  Date
+                </span>
+
+              </div>
+
+
+              <div class="player-actions">
+
+                <button id="copyLinkButton" class="secondary-button">
+                  <i class="ri-link"></i>
+                  Copy Link
+                </button>
+
+                <button id="youtubeButton" class="secondary-button">
+                  <i class="ri-youtube-line"></i>
+                  YouTube
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           RESULTS
+      ========================== -->
+      <section class="results-column">
+
+        <div class="section-header">
+
+          <div>
+            <h2 id="resultsTitle">
+              Search Results
+            </h2>
+
+            <p id="resultsSubtitle">
+              Search YouTube to get started.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div id="loadingState" class="loading-state hidden">
+
+          <div class="spinner"></div>
+
+          <span>
+            Searching YouTube...
+          </span>
+
+        </div>
+
+
+        <div id="errorState" class="error-state hidden">
+
+          <i class="ri-error-warning-line"></i>
+
+          <h3>Something went wrong</h3>
+
+          <p id="errorMessage">
+            Could not load results.
+          </p>
+
+        </div>
+
+
+        <div id="resultsGrid" class="results-grid"></div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- =========================
+       HISTORY PANEL
+  ========================== -->
+  <div id="historyOverlay" class="overlay hidden"></div>
+
+  <aside id="historyPanel" class="history-panel">
+
+    <div class="history-header">
+
+      <div>
+        <h2>Recently Played</h2>
+        <p>Your recent YT Player history.</p>
+      </div>
+
+      <button id="closeHistoryButton" class="icon-button">
+        <i class="ri-close-line"></i>
+      </button>
+
+    </div>
+
+    <div id="historyList" class="history-list"></div>
+
+    <button id="clearHistoryButton" class="clear-history-button">
+      <i class="ri-delete-bin-line"></i>
+      Clear History
+    </button>
+
+  </aside>
+
+
+  <script src="/js/yt-player.js"></script>
+
+</body>
+</html>

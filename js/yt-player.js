@@ -2,61 +2,70 @@
    SPYDR YT PLAYER
 ========================================== */
 
-const searchInput = document.getElementById("searchInput");
-const searchButton = document.getElementById("searchButton");
+const $ = (id) => document.getElementById(id);
 
-const clearSearchButton = document.getElementById(
-  "clearSearchButton"
-);
 
-const resultsGrid = document.getElementById("resultsGrid");
+/* ==========================================
+   ELEMENTS
+========================================== */
 
-const loadingState = document.getElementById("loadingState");
-const errorState = document.getElementById("errorState");
-const errorMessage = document.getElementById("errorMessage");
+const searchInput = $("searchInput");
+const searchButton = $("searchButton");
+const clearSearchButton = $("clearSearchButton");
 
-const resultsTitle = document.getElementById("resultsTitle");
-const resultsSubtitle = document.getElementById(
-  "resultsSubtitle"
-);
+const resultsGrid = $("resultsGrid");
+const resultsTitle = $("resultsTitle");
+const resultsSubtitle = $("resultsSubtitle");
 
-const playerEmptyState = document.getElementById(
-  "playerEmptyState"
-);
+const loadingState = $("loadingState");
+const errorState = $("errorState");
+const errorMessage = $("errorMessage");
 
-const playerWrapper = document.getElementById("playerWrapper");
+const emptyPlayer = $("emptyPlayer");
 
-const youtubeFrame = document.getElementById("youtubeFrame");
-const videoTitle = document.getElementById("videoTitle");
-const videoChannel = document.getElementById("videoChannel");
-const videoDate = document.getElementById("videoDate");
+const youtubePlayer = $("youtubePlayer");
+const youtubeFrame = $("youtubeFrame");
 
-const copyLinkButton = document.getElementById(
-  "copyLinkButton"
-);
+const currentTitle = $("currentTitle");
+const currentChannel = $("currentChannel");
+const currentDate = $("currentDate");
+const currentVideoId = $("currentVideoId");
 
-const youtubeButton = document.getElementById(
-  "youtubeButton"
-);
+const copyButton = $("copyButton");
+const openYoutubeButton = $("openYoutubeButton");
+const downloadCurrentButton = $("downloadCurrentButton");
 
-const historyButton = document.getElementById("historyButton");
-const historyPanel = document.getElementById("historyPanel");
-const historyOverlay = document.getElementById(
-  "historyOverlay"
-);
+const mp4Player = $("mp4Player");
+const videoElement = $("videoElement");
+const mp4Title = $("mp4Title");
+const closeMp4Button = $("closeMp4Button");
 
-const closeHistoryButton = document.getElementById(
-  "closeHistoryButton"
-);
+const directUrlInput = $("directUrlInput");
+const playDirectButton = $("playDirectButton");
+const saveDirectButton = $("saveDirectButton");
+const localFileInput = $("localFileInput");
 
-const historyList = document.getElementById("historyList");
+const downloadsButton = $("downloadsButton");
+const downloadsPanel = $("downloadsPanel");
+const downloadsList = $("downloadsList");
+const closeDownloadsButton = $("closeDownloadsButton");
 
-const clearHistoryButton = document.getElementById(
-  "clearHistoryButton"
-);
+const historyButton = $("historyButton");
+const historyPanel = $("historyPanel");
+const historyList = $("historyList");
+const closeHistoryButton = $("closeHistoryButton");
+const clearHistoryButton = $("clearHistoryButton");
 
+const overlay = $("overlay");
+
+
+/* ==========================================
+   STATE
+========================================== */
 
 let currentVideo = null;
+
+let activeBlobURL = null;
 
 
 /* ==========================================
@@ -71,14 +80,17 @@ async function searchYouTube() {
     return;
   }
 
-  setLoading(true);
+  errorState.classList.add("hidden");
+
+  loadingState.classList.remove("hidden");
 
   resultsGrid.innerHTML = "";
 
-  errorState.classList.add("hidden");
+  resultsTitle.textContent =
+    `Results for "${query}"`;
 
-  resultsTitle.textContent = `Results for "${query}"`;
-  resultsSubtitle.textContent = "Searching YouTube...";
+  resultsSubtitle.textContent =
+    "Searching YouTube...";
 
   try {
 
@@ -86,28 +98,44 @@ async function searchYouTube() {
       `/api/youtube-search?q=${encodeURIComponent(query)}`
     );
 
-    const data = await response.json();
+    const payload = await response.json();
 
     if (!response.ok) {
+
       throw new Error(
-        data.error || "YouTube search failed."
+        payload.error ||
+        "Could not search YouTube."
       );
+
     }
 
-    renderResults(data.results || []);
+    const results =
+      payload.results || [];
+
+    renderResults(results);
 
     resultsSubtitle.textContent =
-      `${data.results?.length || 0} videos found`;
+      `${results.length} videos`;
 
   } catch (error) {
 
     console.error(error);
 
-    showError(error.message);
+    errorMessage.textContent =
+      error.message;
+
+    errorState.classList.remove(
+      "hidden"
+    );
+
+    resultsSubtitle.textContent =
+      "Search unavailable.";
 
   } finally {
 
-    setLoading(false);
+    loadingState.classList.add(
+      "hidden"
+    );
 
   }
 
@@ -115,20 +143,20 @@ async function searchYouTube() {
 
 
 /* ==========================================
-   RENDER RESULTS
+   RESULTS
 ========================================== */
 
-function renderResults(results) {
+function renderResults(videos) {
 
   resultsGrid.innerHTML = "";
 
-  if (!results.length) {
+  if (!videos.length) {
 
     resultsGrid.innerHTML = `
       <div class="error-state">
         <i class="ri-search-eye-line"></i>
-        <h3>No videos found</h3>
-        <p>Try searching for something else.</p>
+        <strong>No results</strong>
+        <span>Try another search.</span>
       </div>
     `;
 
@@ -136,40 +164,43 @@ function renderResults(results) {
 
   }
 
-  results.forEach((video) => {
+  videos.forEach((video) => {
 
-    const card = document.createElement("div");
+    const card =
+      document.createElement("article");
 
-    card.className = "video-card";
+    card.className =
+      "result-card";
 
     card.innerHTML = `
+
       <img
-        class="video-thumbnail"
         src="${escapeHTML(video.thumbnail)}"
         alt=""
         loading="lazy"
       >
 
-      <div class="video-card-content">
+      <div class="result-content">
 
-        <div class="video-card-title">
+        <div class="result-title">
           ${escapeHTML(video.title)}
         </div>
 
-        <div class="video-card-channel">
+        <div class="result-channel">
           ${escapeHTML(video.channel)}
         </div>
 
-        <div class="video-card-date">
+        <div class="result-date">
           ${formatDate(video.publishedAt)}
         </div>
 
       </div>
     `;
 
-    card.addEventListener("click", () => {
-      playVideo(video);
-    });
+    card.addEventListener(
+      "click",
+      () => playYouTube(video)
+    );
 
     resultsGrid.appendChild(card);
 
@@ -179,84 +210,740 @@ function renderResults(results) {
 
 
 /* ==========================================
-   PLAYER
+   YOUTUBE PLAYER
 ========================================== */
 
-function playVideo(video) {
+function playYouTube(video) {
 
   currentVideo = video;
 
-  playerEmptyState.classList.add("hidden");
-  playerWrapper.classList.remove("hidden");
+  stopMP4();
+
+  emptyPlayer.classList.add(
+    "hidden"
+  );
+
+  mp4Player.classList.add(
+    "hidden"
+  );
+
+  youtubePlayer.classList.remove(
+    "hidden"
+  );
 
   youtubeFrame.src =
-    `https://www.youtube.com/embed/${encodeURIComponent(
-      video.id
-    )}?autoplay=1&rel=0`;
+    "https://www.youtube-nocookie.com/embed/" +
+    encodeURIComponent(video.id) +
+    "?autoplay=1&rel=0";
 
-  videoTitle.textContent = video.title;
-  videoChannel.textContent = video.channel;
-  videoDate.textContent = formatDate(video.publishedAt);
+  currentTitle.textContent =
+    video.title;
 
-  addHistory(video);
+  currentChannel.textContent =
+    video.channel;
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  currentDate.textContent =
+    formatDate(video.publishedAt);
+
+  currentVideoId.textContent =
+    video.id;
+
+  saveHistory(video);
 
 }
 
 
 /* ==========================================
-   COPY / OPEN
+   PLAYER BUTTONS
 ========================================== */
 
-copyLinkButton.addEventListener("click", async () => {
+copyButton.addEventListener(
+  "click",
+  async () => {
 
-  if (!currentVideo) {
-    return;
+    if (!currentVideo) return;
+
+    const url =
+      `https://www.youtube.com/watch?v=${currentVideo.id}`;
+
+    try {
+
+      await navigator.clipboard.writeText(
+        url
+      );
+
+      const old =
+        copyButton.innerHTML;
+
+      copyButton.innerHTML =
+        `<i class="ri-check-line"></i> Copied`;
+
+      setTimeout(
+        () => {
+          copyButton.innerHTML = old;
+        },
+        1200
+      );
+
+    } catch {
+
+      window.prompt(
+        "Copy URL:",
+        url
+      );
+
+    }
+
   }
+);
 
-  const url =
-    `https://www.youtube.com/watch?v=${currentVideo.id}`;
 
-  try {
+openYoutubeButton.addEventListener(
+  "click",
+  () => {
 
-    await navigator.clipboard.writeText(url);
+    if (!currentVideo) return;
 
-    const original = copyLinkButton.innerHTML;
-
-    copyLinkButton.innerHTML = `
-      <i class="ri-check-line"></i>
-      Copied
-    `;
-
-    setTimeout(() => {
-      copyLinkButton.innerHTML = original;
-    }, 1500);
-
-  } catch {
-
-    alert(url);
+    window.open(
+      `https://www.youtube.com/watch?v=${currentVideo.id}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
 
   }
+);
 
-});
 
+/*
+  Old JPlayer sent the YouTube ID to a
+  conversion server.
 
-youtubeButton.addEventListener("click", () => {
+  Spydr intentionally does NOT extract
+  arbitrary YouTube streams.
 
-  if (!currentVideo) {
-    return;
+  This button opens the Direct MP4 box
+  instead.
+*/
+
+downloadCurrentButton.addEventListener(
+  "click",
+  () => {
+
+    directUrlInput.focus();
+
+    directUrlInput.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+
   }
+);
 
-  window.open(
-    `https://www.youtube.com/watch?v=${currentVideo.id}`,
-    "_blank"
+
+/* ==========================================
+   DIRECT MP4 PLAYER
+========================================== */
+
+function playMP4(src, title = "MP4 Video") {
+
+  youtubeFrame.src = "";
+
+  youtubePlayer.classList.add(
+    "hidden"
   );
 
-});
+  emptyPlayer.classList.add(
+    "hidden"
+  );
+
+  mp4Player.classList.remove(
+    "hidden"
+  );
+
+  videoElement.src = src;
+
+  mp4Title.textContent =
+    title;
+
+  videoElement.play().catch(
+    () => {}
+  );
+
+}
+
+
+function stopMP4() {
+
+  videoElement.pause();
+
+  videoElement.removeAttribute(
+    "src"
+  );
+
+  videoElement.load();
+
+  if (activeBlobURL) {
+
+    URL.revokeObjectURL(
+      activeBlobURL
+    );
+
+    activeBlobURL = null;
+
+  }
+
+}
+
+
+closeMp4Button.addEventListener(
+  "click",
+  () => {
+
+    stopMP4();
+
+    mp4Player.classList.add(
+      "hidden"
+    );
+
+    if (currentVideo) {
+
+      youtubePlayer.classList.remove(
+        "hidden"
+      );
+
+    } else {
+
+      emptyPlayer.classList.remove(
+        "hidden"
+      );
+
+    }
+
+  }
+);
+
+
+/* ==========================================
+   DIRECT URL
+========================================== */
+
+playDirectButton.addEventListener(
+  "click",
+  () => {
+
+    const url =
+      directUrlInput.value.trim();
+
+    if (!isSafeMediaURL(url)) {
+
+      alert(
+        "Enter a valid http/https MP4 or WebM URL."
+      );
+
+      return;
+
+    }
+
+    playMP4(
+      url,
+      getFilename(url)
+    );
+
+  }
+);
+
+
+saveDirectButton.addEventListener(
+  "click",
+  async () => {
+
+    const url =
+      directUrlInput.value.trim();
+
+    if (!isSafeMediaURL(url)) {
+
+      alert(
+        "Enter a valid direct MP4 or WebM URL."
+      );
+
+      return;
+
+    }
+
+    saveDirectButton.disabled =
+      true;
+
+    const oldHTML =
+      saveDirectButton.innerHTML;
+
+    saveDirectButton.innerHTML =
+      `<i class="ri-loader-4-line"></i>`;
+
+    try {
+
+      const response =
+        await fetch(url);
+
+      if (!response.ok) {
+
+        throw new Error(
+          `HTTP ${response.status}`
+        );
+
+      }
+
+      const blob =
+        await response.blob();
+
+      if (
+        !blob.type.startsWith("video/")
+      ) {
+
+        throw new Error(
+          "URL did not return a video file."
+        );
+
+      }
+
+      await saveDownloadedVideo({
+        name: getFilename(url),
+        blob,
+        source: url,
+        thumbnail: ""
+      });
+
+      await renderDownloads();
+
+      openPanel(
+        downloadsPanel
+      );
+
+    } catch (error) {
+
+      console.error(error);
+
+      alert(
+        "Could not save this MP4. The host may block cross-origin downloads."
+      );
+
+    } finally {
+
+      saveDirectButton.disabled =
+        false;
+
+      saveDirectButton.innerHTML =
+        oldHTML;
+
+    }
+
+  }
+);
+
+
+/* ==========================================
+   LOCAL FILE
+========================================== */
+
+localFileInput.addEventListener(
+  "change",
+  () => {
+
+    const file =
+      localFileInput.files?.[0];
+
+    if (!file) return;
+
+    if (
+      !file.type.startsWith("video/")
+    ) {
+
+      alert(
+        "Choose an MP4 or WebM file."
+      );
+
+      return;
+
+    }
+
+    if (activeBlobURL) {
+
+      URL.revokeObjectURL(
+        activeBlobURL
+      );
+
+    }
+
+    activeBlobURL =
+      URL.createObjectURL(file);
+
+    playMP4(
+      activeBlobURL,
+      file.name
+    );
+
+    localFileInput.value = "";
+
+  }
+);
+
+
+/* ==========================================
+   INDEXEDDB
+========================================== */
+
+const DB_NAME =
+  "spydr-yt-player";
+
+const DB_VERSION =
+  1;
+
+const STORE_NAME =
+  "videos";
+
+
+function openDB() {
+
+  return new Promise(
+    (resolve, reject) => {
+
+      const request =
+        indexedDB.open(
+          DB_NAME,
+          DB_VERSION
+        );
+
+      request.onupgradeneeded =
+        () => {
+
+          const db =
+            request.result;
+
+          if (
+            !db.objectStoreNames.contains(
+              STORE_NAME
+            )
+          ) {
+
+            db.createObjectStore(
+              STORE_NAME,
+              {
+                keyPath: "id"
+              }
+            );
+
+          }
+
+        };
+
+      request.onsuccess =
+        () => resolve(
+          request.result
+        );
+
+      request.onerror =
+        () => reject(
+          request.error
+        );
+
+    }
+  );
+
+}
+
+
+async function saveDownloadedVideo({
+  name,
+  blob,
+  source,
+  thumbnail
+}) {
+
+  const db =
+    await openDB();
+
+  const transaction =
+    db.transaction(
+      STORE_NAME,
+      "readwrite"
+    );
+
+  const store =
+    transaction.objectStore(
+      STORE_NAME
+    );
+
+  const entry = {
+
+    id:
+      crypto.randomUUID?.() ||
+      `${Date.now()}-${Math.random()}`,
+
+    name,
+
+    blob,
+
+    source,
+
+    thumbnail,
+
+    size:
+      blob.size,
+
+    added:
+      Date.now()
+
+  };
+
+  store.put(entry);
+
+  return new Promise(
+    (resolve, reject) => {
+
+      transaction.oncomplete =
+        () => {
+
+          db.close();
+
+          resolve(entry);
+
+        };
+
+      transaction.onerror =
+        () => reject(
+          transaction.error
+        );
+
+    }
+  );
+
+}
+
+
+async function getDownloads() {
+
+  const db =
+    await openDB();
+
+  const transaction =
+    db.transaction(
+      STORE_NAME,
+      "readonly"
+    );
+
+  const request =
+    transaction
+      .objectStore(STORE_NAME)
+      .getAll();
+
+  return new Promise(
+    (resolve, reject) => {
+
+      request.onsuccess =
+        () => {
+
+          const videos =
+            request.result || [];
+
+          videos.sort(
+            (a, b) =>
+              b.added - a.added
+          );
+
+          db.close();
+
+          resolve(videos);
+
+        };
+
+      request.onerror =
+        () => reject(
+          request.error
+        );
+
+    }
+  );
+
+}
+
+
+async function deleteDownload(id) {
+
+  const db =
+    await openDB();
+
+  const transaction =
+    db.transaction(
+      STORE_NAME,
+      "readwrite"
+    );
+
+  transaction
+    .objectStore(STORE_NAME)
+    .delete(id);
+
+  return new Promise(
+    (resolve, reject) => {
+
+      transaction.oncomplete =
+        () => {
+
+          db.close();
+
+          resolve();
+
+        };
+
+      transaction.onerror =
+        () => reject(
+          transaction.error
+        );
+
+    }
+  );
+
+}
+
+
+/* ==========================================
+   DOWNLOAD LIBRARY
+========================================== */
+
+async function renderDownloads() {
+
+  const videos =
+    await getDownloads();
+
+  downloadsList.innerHTML =
+    "";
+
+  if (!videos.length) {
+
+    downloadsList.innerHTML = `
+      <div class="error-state">
+        <i class="ri-download-cloud-line"></i>
+        <strong>No downloads</strong>
+        <span>Saved MP4s will appear here.</span>
+      </div>
+    `;
+
+    return;
+
+  }
+
+  videos.forEach((video) => {
+
+    const item =
+      document.createElement("div");
+
+    item.className =
+      "library-item";
+
+    item.innerHTML = `
+
+      ${
+        video.thumbnail
+          ? `
+            <img
+              src="${escapeHTML(video.thumbnail)}"
+              alt=""
+            >
+          `
+          : `
+            <div
+              style="
+                width:92px;
+                aspect-ratio:16/9;
+                display:grid;
+                place-items:center;
+                border-radius:7px;
+                background:#222;
+              "
+            >
+              <i class="ri-film-line"></i>
+            </div>
+          `
+      }
+
+      <div class="library-item-info">
+
+        <div class="library-item-title">
+          ${escapeHTML(video.name)}
+        </div>
+
+        <div class="library-item-sub">
+          ${formatBytes(video.size)}
+        </div>
+
+      </div>
+
+      <button data-delete="${video.id}">
+        <i class="ri-delete-bin-line"></i>
+      </button>
+    `;
+
+    item.addEventListener(
+      "click",
+      (event) => {
+
+        if (
+          event.target.closest(
+            "[data-delete]"
+          )
+        ) {
+
+          return;
+
+        }
+
+        if (activeBlobURL) {
+
+          URL.revokeObjectURL(
+            activeBlobURL
+          );
+
+        }
+
+        activeBlobURL =
+          URL.createObjectURL(
+            video.blob
+          );
+
+        playMP4(
+          activeBlobURL,
+          video.name
+        );
+
+        closePanels();
+
+      }
+    );
+
+    item
+      .querySelector(
+        "[data-delete]"
+      )
+      .addEventListener(
+        "click",
+        async (event) => {
+
+          event.stopPropagation();
+
+          await deleteDownload(
+            video.id
+          );
+
+          renderDownloads();
+
+        }
+      );
+
+    downloadsList.appendChild(
+      item
+    );
+
+  });
+
+}
 
 
 /* ==========================================
@@ -268,7 +955,9 @@ function getHistory() {
   try {
 
     return JSON.parse(
-      localStorage.getItem("spydr_yt_history")
+      localStorage.getItem(
+        "spydr_yt_history"
+      )
     ) || [];
 
   } catch {
@@ -280,41 +969,44 @@ function getHistory() {
 }
 
 
-function addHistory(video) {
+function saveHistory(video) {
 
-  let history = getHistory();
+  let history =
+    getHistory();
 
-  history = history.filter(
-    item => item.id !== video.id
-  );
+  history =
+    history.filter(
+      (item) =>
+        item.id !== video.id
+    );
 
   history.unshift(video);
 
-  history = history.slice(0, 20);
+  history =
+    history.slice(0, 25);
 
   localStorage.setItem(
     "spydr_yt_history",
     JSON.stringify(history)
   );
 
-  renderHistory();
-
 }
 
 
 function renderHistory() {
 
-  const history = getHistory();
+  const history =
+    getHistory();
 
-  historyList.innerHTML = "";
+  historyList.innerHTML =
+    "";
 
   if (!history.length) {
 
     historyList.innerHTML = `
       <div class="error-state">
         <i class="ri-history-line"></i>
-        <h3>No history yet</h3>
-        <p>Videos you play will show here.</p>
+        <strong>No history</strong>
       </div>
     `;
 
@@ -324,157 +1016,329 @@ function renderHistory() {
 
   history.forEach((video) => {
 
-    const item = document.createElement("div");
+    const item =
+      document.createElement(
+        "div"
+      );
 
-    item.className = "history-item";
+    item.className =
+      "library-item";
 
     item.innerHTML = `
+
       <img
         src="${escapeHTML(video.thumbnail)}"
         alt=""
       >
 
-      <div>
-        <div class="history-item-title">
+      <div class="library-item-info">
+
+        <div class="library-item-title">
           ${escapeHTML(video.title)}
         </div>
 
-        <div class="video-card-channel">
+        <div class="library-item-sub">
           ${escapeHTML(video.channel)}
         </div>
+
       </div>
+
+      <i class="ri-play-fill"></i>
     `;
 
-    item.addEventListener("click", () => {
+    item.addEventListener(
+      "click",
+      () => {
 
-      playVideo(video);
+        playYouTube(video);
 
-      closeHistory();
+        closePanels();
 
-    });
+      }
+    );
 
-    historyList.appendChild(item);
+    historyList.appendChild(
+      item
+    );
 
   });
 
 }
 
 
-clearHistoryButton.addEventListener("click", () => {
+clearHistoryButton.addEventListener(
+  "click",
+  () => {
 
-  localStorage.removeItem("spydr_yt_history");
+    localStorage.removeItem(
+      "spydr_yt_history"
+    );
 
-  renderHistory();
+    renderHistory();
 
-});
+  }
+);
 
 
-function openHistory() {
+/* ==========================================
+   PANELS
+========================================== */
 
-  renderHistory();
+function openPanel(panel) {
 
-  historyPanel.classList.add("active");
-  historyOverlay.classList.remove("hidden");
+  closePanels(false);
+
+  panel.classList.add(
+    "open"
+  );
+
+  overlay.classList.remove(
+    "hidden"
+  );
 
 }
 
 
-function closeHistory() {
+function closePanels(
+  hideOverlay = true
+) {
 
-  historyPanel.classList.remove("active");
-  historyOverlay.classList.add("hidden");
+  downloadsPanel.classList.remove(
+    "open"
+  );
+
+  historyPanel.classList.remove(
+    "open"
+  );
+
+  if (hideOverlay) {
+
+    overlay.classList.add(
+      "hidden"
+    );
+
+  }
 
 }
 
 
-historyButton.addEventListener("click", openHistory);
-closeHistoryButton.addEventListener("click", closeHistory);
-historyOverlay.addEventListener("click", closeHistory);
+downloadsButton.addEventListener(
+  "click",
+  async () => {
+
+    await renderDownloads();
+
+    openPanel(
+      downloadsPanel
+    );
+
+  }
+);
+
+
+historyButton.addEventListener(
+  "click",
+  () => {
+
+    renderHistory();
+
+    openPanel(
+      historyPanel
+    );
+
+  }
+);
+
+
+closeDownloadsButton.addEventListener(
+  "click",
+  closePanels
+);
+
+
+closeHistoryButton.addEventListener(
+  "click",
+  closePanels
+);
+
+
+overlay.addEventListener(
+  "click",
+  closePanels
+);
 
 
 /* ==========================================
    SEARCH EVENTS
 ========================================== */
 
-searchButton.addEventListener("click", searchYouTube);
+searchButton.addEventListener(
+  "click",
+  searchYouTube
+);
 
 
-searchInput.addEventListener("keydown", (event) => {
+searchInput.addEventListener(
+  "keydown",
+  (event) => {
 
-  if (event.key === "Enter") {
-    searchYouTube();
+    if (
+      event.key === "Enter"
+    ) {
+
+      searchYouTube();
+
+    }
+
   }
-
-});
-
-
-searchInput.addEventListener("input", () => {
-
-  clearSearchButton.classList.toggle(
-    "hidden",
-    !searchInput.value
-  );
-
-});
+);
 
 
-clearSearchButton.addEventListener("click", () => {
+searchInput.addEventListener(
+  "input",
+  () => {
 
-  searchInput.value = "";
+    clearSearchButton.classList.toggle(
+      "hidden",
+      !searchInput.value
+    );
 
-  clearSearchButton.classList.add("hidden");
+  }
+);
 
-  searchInput.focus();
 
-});
+clearSearchButton.addEventListener(
+  "click",
+  () => {
+
+    searchInput.value = "";
+
+    clearSearchButton.classList.add(
+      "hidden"
+    );
+
+    searchInput.focus();
+
+  }
+);
 
 
 /* ==========================================
-   UI HELPERS
+   HELPERS
 ========================================== */
 
-function setLoading(state) {
+function isSafeMediaURL(url) {
 
-  loadingState.classList.toggle(
-    "hidden",
-    !state
+  try {
+
+    const parsed =
+      new URL(url);
+
+    if (
+      !["http:", "https:"]
+        .includes(parsed.protocol)
+    ) {
+
+      return false;
+
+    }
+
+    return /\.(mp4|webm)(\?|#|$)/i
+      .test(parsed.pathname + parsed.search);
+
+  } catch {
+
+    return false;
+
+  }
+
+}
+
+
+function getFilename(url) {
+
+  try {
+
+    const parsed =
+      new URL(url);
+
+    const name =
+      decodeURIComponent(
+        parsed.pathname
+          .split("/")
+          .pop()
+      );
+
+    return (
+      name ||
+      "video.mp4"
+    );
+
+  } catch {
+
+    return "video.mp4";
+
+  }
+
+}
+
+
+function formatBytes(bytes) {
+
+  if (!bytes) {
+    return "0 B";
+  }
+
+  const units = [
+    "B",
+    "KB",
+    "MB",
+    "GB"
+  ];
+
+  const i =
+    Math.min(
+      units.length - 1,
+      Math.floor(
+        Math.log(bytes) /
+        Math.log(1024)
+      )
+    );
+
+  return (
+    (
+      bytes /
+      Math.pow(1024, i)
+    ).toFixed(
+      i > 1 ? 1 : 0
+    ) +
+    " " +
+    units[i]
   );
 
 }
 
 
-function showError(message) {
+function formatDate(value) {
 
-  errorMessage.textContent = message;
-
-  errorState.classList.remove("hidden");
-
-  resultsSubtitle.textContent =
-    "Search failed.";
-
-}
-
-
-function formatDate(date) {
-
-  if (!date) {
-    return "";
-  }
+  if (!value) return "";
 
   try {
 
-    return new Date(date).toLocaleDateString(
+    return new Date(
+      value
+    ).toLocaleDateString(
       undefined,
       {
-        year: "numeric",
         month: "short",
-        day: "numeric"
+        day: "numeric",
+        year: "numeric"
       }
     );
 
   } catch {
 
-    return date;
+    return value;
 
   }
 
@@ -491,3 +1355,10 @@ function escapeHTML(value = "") {
     .replaceAll("'", "&#039;");
 
 }
+
+
+/* ==========================================
+   INIT
+========================================== */
+
+renderDownloads();

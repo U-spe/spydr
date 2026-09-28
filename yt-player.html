@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>YT Player | Spydr</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
@@ -15,20 +20,16 @@
   >
 
   <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
     rel="stylesheet"
+    href="/css/yt-player.css"
   >
-
-  <link rel="stylesheet" href="/css/yt-player.css" />
 </head>
 
 <body>
 
-  <div class="app-shell">
+  <div class="app">
 
-    <!-- =========================
-         HEADER
-    ========================== -->
+    <!-- HEADER -->
     <header class="topbar">
 
       <div class="brand">
@@ -38,34 +39,51 @@
 
         <div>
           <h1>YT Player</h1>
-          <span>Spydr Media</span>
+          <span>spydr media</span>
         </div>
       </div>
 
-      <button class="icon-button" id="historyButton" title="History">
-        <i class="ri-history-line"></i>
-      </button>
+      <div class="header-actions">
+
+        <button
+          id="downloadsButton"
+          class="icon-btn"
+          title="Downloaded videos"
+        >
+          <i class="ri-download-cloud-2-line"></i>
+        </button>
+
+        <button
+          id="historyButton"
+          class="icon-btn"
+          title="History"
+        >
+          <i class="ri-history-line"></i>
+        </button>
+
+      </div>
 
     </header>
 
 
-    <!-- =========================
-         SEARCH
-    ========================== -->
-    <section class="search-section">
+    <!-- SEARCH -->
+    <section class="search-area">
 
-      <div class="search-box">
+      <div class="search-bar">
 
-        <i class="ri-search-line search-icon"></i>
+        <i class="ri-search-line"></i>
 
         <input
           id="searchInput"
           type="text"
-          autocomplete="off"
           placeholder="Search YouTube..."
-        />
+          autocomplete="off"
+        >
 
-        <button id="clearSearchButton" class="clear-search hidden">
+        <button
+          id="clearSearchButton"
+          class="clear-btn hidden"
+        >
           <i class="ri-close-line"></i>
         </button>
 
@@ -78,50 +96,46 @@
     </section>
 
 
-    <!-- =========================
-         MAIN CONTENT
-    ========================== -->
-    <main class="main-layout">
+    <!-- MAIN -->
+    <main class="main-grid">
 
-      <!-- =========================
-           PLAYER
-      ========================== -->
-      <section class="player-column">
+      <!-- PLAYER -->
+      <section class="player-section">
 
         <div class="player-card">
 
-          <div id="playerEmptyState" class="player-empty">
+          <div
+            id="emptyPlayer"
+            class="empty-player"
+          >
 
-            <div class="empty-icon">
+            <div class="empty-logo">
               <i class="ri-youtube-line"></i>
             </div>
 
             <h2>YT Player</h2>
 
             <p>
-              Search for a video and select it to start playing.
+              Search for a video to start watching.
             </p>
 
           </div>
 
 
-          <div id="playerWrapper" class="player-wrapper hidden">
+          <div
+            id="youtubePlayer"
+            class="youtube-player hidden"
+          >
 
-            <div class="video-frame">
+            <div class="player-stage">
 
               <iframe
                 id="youtubeFrame"
-                src=""
-                title="YouTube Player"
-                frameborder="0"
                 allow="
-                  accelerometer;
                   autoplay;
-                  clipboard-write;
                   encrypted-media;
-                  gyroscope;
                   picture-in-picture;
-                  web-share
+                  fullscreen
                 "
                 allowfullscreen
               ></iframe>
@@ -129,35 +143,48 @@
             </div>
 
 
-            <div class="video-information">
+            <div class="player-info">
 
-              <h2 id="videoTitle">
-                Video title
-              </h2>
+              <div class="player-title-row">
 
-              <div class="video-meta">
+                <div>
+                  <h2 id="currentTitle">
+                    Video
+                  </h2>
 
-                <span id="videoChannel">
-                  Channel
-                </span>
+                  <p id="currentChannel">
+                    Channel
+                  </p>
+                </div>
 
-                <span class="meta-dot"></span>
+                <button
+                  id="downloadCurrentButton"
+                  class="circle-button"
+                  title="MP4 options"
+                >
+                  <i class="ri-download-2-line"></i>
+                </button>
 
-                <span id="videoDate">
-                  Date
-                </span>
+              </div>
+
+
+              <div class="timeline-info">
+
+                <span id="currentDate"></span>
+
+                <span id="currentVideoId"></span>
 
               </div>
 
 
               <div class="player-actions">
 
-                <button id="copyLinkButton" class="secondary-button">
+                <button id="copyButton">
                   <i class="ri-link"></i>
                   Copy Link
                 </button>
 
-                <button id="youtubeButton" class="secondary-button">
+                <button id="openYoutubeButton">
                   <i class="ri-youtube-line"></i>
                   YouTube
                 </button>
@@ -168,17 +195,113 @@
 
           </div>
 
+
+          <!-- DIRECT MP4 PLAYER -->
+          <div
+            id="mp4Player"
+            class="mp4-player hidden"
+          >
+
+            <video
+              id="videoElement"
+              controls
+              playsinline
+            ></video>
+
+            <div class="player-info">
+
+              <div class="player-title-row">
+
+                <div>
+                  <h2 id="mp4Title">
+                    MP4 Video
+                  </h2>
+
+                  <p>
+                    local / direct media
+                  </p>
+                </div>
+
+                <button
+                  id="closeMp4Button"
+                  class="circle-button"
+                >
+                  <i class="ri-close-line"></i>
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- DIRECT MP4 BOX -->
+        <div class="direct-box">
+
+          <div class="direct-heading">
+
+            <div>
+              <h3>Direct MP4</h3>
+
+              <p>
+                Play or save an MP4 you own or have permission to use.
+              </p>
+            </div>
+
+            <i class="ri-file-video-line"></i>
+
+          </div>
+
+
+          <div class="direct-controls">
+
+            <input
+              id="directUrlInput"
+              type="url"
+              placeholder="https://example.com/video.mp4"
+            >
+
+            <button id="playDirectButton">
+              Play
+            </button>
+
+            <button id="saveDirectButton">
+              <i class="ri-download-line"></i>
+            </button>
+
+          </div>
+
+
+          <div class="file-import">
+
+            <span>or</span>
+
+            <label for="localFileInput">
+              <i class="ri-folder-video-line"></i>
+              Open Local MP4
+            </label>
+
+            <input
+              id="localFileInput"
+              type="file"
+              accept="video/mp4,video/webm"
+              hidden
+            >
+
+          </div>
+
         </div>
 
       </section>
 
 
-      <!-- =========================
-           RESULTS
-      ========================== -->
-      <section class="results-column">
+      <!-- SEARCH RESULTS -->
+      <section class="results-section">
 
-        <div class="section-header">
+        <div class="results-header">
 
           <div>
             <h2 id="resultsTitle">
@@ -193,31 +316,30 @@
         </div>
 
 
-        <div id="loadingState" class="loading-state hidden">
-
+        <div
+          id="loadingState"
+          class="loading hidden"
+        >
           <div class="spinner"></div>
-
-          <span>
-            Searching YouTube...
-          </span>
-
+          searching...
         </div>
 
 
-        <div id="errorState" class="error-state hidden">
-
+        <div
+          id="errorState"
+          class="error-state hidden"
+        >
           <i class="ri-error-warning-line"></i>
 
-          <h3>Something went wrong</h3>
+          <strong>
+            Search failed
+          </strong>
 
-          <p id="errorMessage">
-            Could not load results.
-          </p>
-
+          <span id="errorMessage"></span>
         </div>
 
 
-        <div id="resultsGrid" class="results-grid"></div>
+        <div id="resultsGrid"></div>
 
       </section>
 
@@ -226,34 +348,71 @@
   </div>
 
 
-  <!-- =========================
-       HISTORY PANEL
-  ========================== -->
-  <div id="historyOverlay" class="overlay hidden"></div>
+  <!-- DOWNLOADS -->
+  <aside
+    id="downloadsPanel"
+    class="side-panel"
+  >
 
-  <aside id="historyPanel" class="history-panel">
-
-    <div class="history-header">
+    <div class="panel-header">
 
       <div>
-        <h2>Recently Played</h2>
-        <p>Your recent YT Player history.</p>
+        <h2>Downloads</h2>
+        <p>Saved MP4 library</p>
       </div>
 
-      <button id="closeHistoryButton" class="icon-button">
+      <button
+        id="closeDownloadsButton"
+        class="icon-btn"
+      >
         <i class="ri-close-line"></i>
       </button>
 
     </div>
 
-    <div id="historyList" class="history-list"></div>
+    <div id="downloadsList"></div>
 
-    <button id="clearHistoryButton" class="clear-history-button">
-      <i class="ri-delete-bin-line"></i>
+  </aside>
+
+
+  <!-- HISTORY -->
+  <aside
+    id="historyPanel"
+    class="side-panel"
+  >
+
+    <div class="panel-header">
+
+      <div>
+        <h2>History</h2>
+        <p>Recently played</p>
+      </div>
+
+      <button
+        id="closeHistoryButton"
+        class="icon-btn"
+      >
+        <i class="ri-close-line"></i>
+      </button>
+
+    </div>
+
+    <div id="historyList"></div>
+
+    <button
+      id="clearHistoryButton"
+      class="danger-button"
+    >
       Clear History
     </button>
 
   </aside>
+
+
+  <div
+    id="overlay"
+    class="overlay hidden"
+  ></div>
 
 
   <script src="/js/yt-player.js"></script>

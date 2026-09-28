@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
             url: '/app/no-app.html'
         },
         {
-            id: 'yt',
-            name: 'YouTube',
-            description: 'Global video sharing and streaming platform.',
-            icon: 'ri-youtube-fill',
-            category: 'proxy',
-            featured: true,
-            url: '/app/no-app.html'
+    id: 'yt-player',
+    name: 'YT Player',
+    description: 'Search, watch, and manage videos with Spydr.',
+    icon: 'ri-youtube-fill',
+    category: 'local',
+    featured: true,
+    url: '/yt-player.html'
         },
         {
             id: 'tw',

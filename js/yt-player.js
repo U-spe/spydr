@@ -1,5 +1,10 @@
 /* ==========================================
    SPYDR YT PLAYER
+   YouTube search + iframe playback
+   Authorized MP4 converter support
+   Direct/local MP4 playback
+   IndexedDB downloads
+   History panels
 ========================================== */
 
 const $ = (id) => document.getElementById(id);
@@ -64,8 +69,8 @@ const overlay = $("overlay");
 ========================================== */
 
 let currentVideo = null;
-
 let activeBlobURL = null;
+let conversionController = null;
 
 
 /* ==========================================
@@ -74,68 +79,106 @@ let activeBlobURL = null;
 
 async function searchYouTube() {
 
-  const query = searchInput.value.trim();
+  const query =
+    searchInput?.value.trim();
 
   if (!query) {
     return;
   }
 
-  errorState.classList.add("hidden");
 
-  loadingState.classList.remove("hidden");
+  setSearchLoading(true);
 
-  resultsGrid.innerHTML = "";
+  hideError();
 
-  resultsTitle.textContent =
-    `Results for "${query}"`;
 
-  resultsSubtitle.textContent =
-    "Searching YouTube...";
+  if (resultsGrid) {
+    resultsGrid.innerHTML = "";
+  }
+
+
+  if (resultsTitle) {
+    resultsTitle.textContent =
+      `Results for "${query}"`;
+  }
+
+
+  if (resultsSubtitle) {
+    resultsSubtitle.textContent =
+      "Searching YouTube...";
+  }
+
 
   try {
 
-    const response = await fetch(
-      `/api/youtube-search?q=${encodeURIComponent(query)}`
-    );
+    const response =
+      await fetch(
+        `/api/youtube-search?q=${encodeURIComponent(query)}`,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json"
+          }
+        }
+      );
 
-    const payload = await response.json();
+
+    const payload =
+      await readJSON(response);
+
 
     if (!response.ok) {
 
       throw new Error(
-        payload.error ||
-        "Could not search YouTube."
+        payload?.error ||
+        `YouTube search failed (${response.status}).`
       );
 
     }
 
+
     const results =
-      payload.results || [];
+      Array.isArray(payload?.results)
+        ? payload.results
+        : [];
+
 
     renderResults(results);
 
-    resultsSubtitle.textContent =
-      `${results.length} videos`;
+
+    if (resultsSubtitle) {
+
+      resultsSubtitle.textContent =
+        `${results.length} ${
+          results.length === 1
+            ? "video"
+            : "videos"
+        }`;
+
+    }
 
   } catch (error) {
 
-    console.error(error);
-
-    errorMessage.textContent =
-      error.message;
-
-    errorState.classList.remove(
-      "hidden"
+    console.error(
+      "YT Player search error:",
+      error
     );
 
-    resultsSubtitle.textContent =
-      "Search unavailable.";
+
+    showError(
+      error?.message ||
+      "Could not search YouTube."
+    );
+
+
+    if (resultsSubtitle) {
+      resultsSubtitle.textContent =
+        "Search unavailable.";
+    }
 
   } finally {
 
-    loadingState.classList.add(
-      "hidden"
-    );
+    setSearchLoading(false);
 
   }
 
@@ -148,15 +191,29 @@ async function searchYouTube() {
 
 function renderResults(videos) {
 
+  if (!resultsGrid) {
+    return;
+  }
+
+
   resultsGrid.innerHTML = "";
+
 
   if (!videos.length) {
 
     resultsGrid.innerHTML = `
       <div class="error-state">
+
         <i class="ri-search-eye-line"></i>
-        <strong>No results</strong>
-        <span>Try another search.</span>
+
+        <strong>
+          No results
+        </strong>
+
+        <span>
+          Try another search.
+        </span>
+
       </div>
     `;
 
@@ -164,45 +221,108 @@ function renderResults(videos) {
 
   }
 
+
   videos.forEach((video) => {
 
+    if (!video?.id) {
+      return;
+    }
+
+
     const card =
-      document.createElement("article");
+      document.createElement(
+        "article"
+      );
+
 
     card.className =
       "result-card";
 
+
+    card.tabIndex =
+      0;
+
+
+    card.setAttribute(
+      "role",
+      "button"
+    );
+
+
     card.innerHTML = `
 
       <img
-        src="${escapeHTML(video.thumbnail)}"
+        src="${escapeHTML(video.thumbnail || "")}"
         alt=""
         loading="lazy"
       >
 
+
       <div class="result-content">
 
         <div class="result-title">
-          ${escapeHTML(video.title)}
+          ${escapeHTML(
+            video.title ||
+            "Untitled video"
+          )}
         </div>
+
 
         <div class="result-channel">
-          ${escapeHTML(video.channel)}
+          ${escapeHTML(
+            video.channel ||
+            "Unknown channel"
+          )}
         </div>
 
+
         <div class="result-date">
-          ${formatDate(video.publishedAt)}
+          ${formatDate(
+            video.publishedAt
+          )}
         </div>
 
       </div>
     `;
 
+
+    const openVideo = () => {
+
+      playYouTube(
+        video
+      );
+
+    };
+
+
     card.addEventListener(
       "click",
-      () => playYouTube(video)
+      openVideo
     );
 
-    resultsGrid.appendChild(card);
+
+    card.addEventListener(
+      "keydown",
+      (event) => {
+
+        if (
+          event.key === "Enter" ||
+          event.key === " "
+        ) {
+
+          event.preventDefault();
+
+          openVideo();
+
+        }
+
+      }
+    );
+
+
+    resultsGrid.appendChild(
+      card
+    );
 
   });
 
@@ -215,56 +335,108 @@ function renderResults(videos) {
 
 function playYouTube(video) {
 
-  currentVideo = video;
+  if (!video?.id) {
+    return;
+  }
+
+
+  currentVideo =
+    video;
+
 
   stopMP4();
 
-  emptyPlayer.classList.add(
+
+  emptyPlayer?.classList.add(
     "hidden"
   );
 
-  mp4Player.classList.add(
+
+  mp4Player?.classList.add(
     "hidden"
   );
 
-  youtubePlayer.classList.remove(
+
+  youtubePlayer?.classList.remove(
     "hidden"
   );
 
-  youtubeFrame.src =
-    "https://www.youtube-nocookie.com/embed/" +
-    encodeURIComponent(video.id) +
-    "?autoplay=1&rel=0";
 
-  currentTitle.textContent =
-    video.title;
+  if (youtubeFrame) {
 
-  currentChannel.textContent =
-    video.channel;
+    youtubeFrame.src =
+      "https://www.youtube-nocookie.com/embed/" +
+      encodeURIComponent(video.id) +
+      "?autoplay=1&rel=0";
 
-  currentDate.textContent =
-    formatDate(video.publishedAt);
+  }
 
-  currentVideoId.textContent =
-    video.id;
 
-  saveHistory(video);
+  if (currentTitle) {
+
+    currentTitle.textContent =
+      video.title ||
+      "Untitled video";
+
+  }
+
+
+  if (currentChannel) {
+
+    currentChannel.textContent =
+      video.channel ||
+      "Unknown channel";
+
+  }
+
+
+  if (currentDate) {
+
+    currentDate.textContent =
+      formatDate(
+        video.publishedAt
+      );
+
+  }
+
+
+  if (currentVideoId) {
+
+    currentVideoId.textContent =
+      video.id;
+
+  }
+
+
+  saveHistory(
+    video
+  );
+
+
+  setConvertButtonState(
+    "idle",
+    "MP4"
+  );
 
 }
 
 
 /* ==========================================
-   PLAYER BUTTONS
+   COPY LINK
 ========================================== */
 
-copyButton.addEventListener(
+copyButton?.addEventListener(
   "click",
   async () => {
 
-    if (!currentVideo) return;
+    if (!currentVideo) {
+      return;
+    }
+
 
     const url =
       `https://www.youtube.com/watch?v=${currentVideo.id}`;
+
 
     try {
 
@@ -272,15 +444,23 @@ copyButton.addEventListener(
         url
       );
 
-      const old =
+
+      const original =
         copyButton.innerHTML;
 
-      copyButton.innerHTML =
-        `<i class="ri-check-line"></i> Copied`;
+
+      copyButton.innerHTML = `
+        <i class="ri-check-line"></i>
+        Copied
+      `;
+
 
       setTimeout(
         () => {
-          copyButton.innerHTML = old;
+
+          copyButton.innerHTML =
+            original;
+
         },
         1200
       );
@@ -298,11 +478,18 @@ copyButton.addEventListener(
 );
 
 
-openYoutubeButton.addEventListener(
+/* ==========================================
+   OPEN YOUTUBE
+========================================== */
+
+openYoutubeButton?.addEventListener(
   "click",
   () => {
 
-    if (!currentVideo) return;
+    if (!currentVideo) {
+      return;
+    }
+
 
     window.open(
       `https://www.youtube.com/watch?v=${currentVideo.id}`,
@@ -314,73 +501,380 @@ openYoutubeButton.addEventListener(
 );
 
 
-/*
-  Old JPlayer sent the YouTube ID to a
-  conversion server.
+/* ==========================================
+   AUTHORIZED MP4 CONVERTER
+========================================== */
 
-  Spydr intentionally does NOT extract
-  arbitrary YouTube streams.
-
-  This button opens the Direct MP4 box
-  instead.
-*/
-
-downloadCurrentButton.addEventListener(
+downloadCurrentButton?.addEventListener(
   "click",
-  () => {
+  async () => {
 
-    directUrlInput.focus();
+    if (!currentVideo?.id) {
+      return;
+    }
 
-    directUrlInput.scrollIntoView({
-      behavior: "smooth",
-      block: "center"
-    });
+
+    /*
+      Stop an older conversion request
+      if the user clicks another video.
+    */
+
+    if (conversionController) {
+
+      conversionController.abort();
+
+    }
+
+
+    conversionController =
+      new AbortController();
+
+
+    setConvertButtonState(
+      "working",
+      "Preparing MP4..."
+    );
+
+
+    try {
+
+      const response =
+        await fetch(
+          `/api/youtube-video?vid=${encodeURIComponent(
+            currentVideo.id
+          )}`,
+          {
+            method: "GET",
+
+            headers: {
+              Accept:
+                "application/json"
+            },
+
+            signal:
+              conversionController.signal
+          }
+        );
+
+
+      const payload =
+        await readJSON(
+          response
+        );
+
+
+      if (
+        !response.ok ||
+        !payload?.status
+      ) {
+
+        throw new Error(
+          payload?.error ||
+          `MP4 preparation failed (${response.status}).`
+        );
+
+      }
+
+
+      if (!payload.url) {
+
+        throw new Error(
+          "Converter did not return an MP4 URL."
+        );
+
+      }
+
+
+      playConvertedVideo(
+        payload.url,
+
+        payload.title ||
+        currentVideo.title ||
+        "MP4 Video"
+      );
+
+
+      setConvertButtonState(
+        "ready",
+        payload.cached
+          ? "Cached MP4"
+          : "MP4 Ready"
+      );
+
+    } catch (error) {
+
+      if (
+        error?.name ===
+        "AbortError"
+      ) {
+
+        return;
+
+      }
+
+
+      console.error(
+        "YT converter error:",
+        error
+      );
+
+
+      setConvertButtonState(
+        "error",
+        "MP4 unavailable"
+      );
+
+
+      alert(
+        error?.message ||
+        "Could not prepare this test video."
+      );
+
+    } finally {
+
+      conversionController =
+        null;
+
+
+      setTimeout(
+        () => {
+
+          setConvertButtonState(
+            "idle",
+            "MP4"
+          );
+
+        },
+        1800
+      );
+
+    }
 
   }
 );
 
 
 /* ==========================================
-   DIRECT MP4 PLAYER
+   CONVERT BUTTON STATES
 ========================================== */
 
-function playMP4(src, title = "MP4 Video") {
+function setConvertButtonState(
+  state = "idle",
+  label = "MP4"
+) {
 
-  youtubeFrame.src = "";
+  if (!downloadCurrentButton) {
+    return;
+  }
 
-  youtubePlayer.classList.add(
-    "hidden"
-  );
 
-  emptyPlayer.classList.add(
-    "hidden"
-  );
+  downloadCurrentButton.disabled =
+    state === "working";
 
-  mp4Player.classList.remove(
-    "hidden"
-  );
 
-  videoElement.src = src;
+  if (state === "working") {
 
-  mp4Title.textContent =
-    title;
+    downloadCurrentButton.innerHTML = `
+      <i class="ri-loader-4-line ri-spin"></i>
+    `;
 
-  videoElement.play().catch(
-    () => {}
-  );
+    downloadCurrentButton.title =
+      label;
+
+    return;
+
+  }
+
+
+  if (state === "ready") {
+
+    downloadCurrentButton.innerHTML = `
+      <i class="ri-check-line"></i>
+    `;
+
+    downloadCurrentButton.title =
+      label;
+
+    return;
+
+  }
+
+
+  if (state === "error") {
+
+    downloadCurrentButton.innerHTML = `
+      <i class="ri-error-warning-line"></i>
+    `;
+
+    downloadCurrentButton.title =
+      label;
+
+    return;
+
+  }
+
+
+  downloadCurrentButton.innerHTML = `
+    <i class="ri-download-2-line"></i>
+  `;
+
+
+  downloadCurrentButton.title =
+    "Prepare MP4";
 
 }
 
 
-function stopMP4() {
+/* ==========================================
+   PLAY CONVERTED VIDEO
+========================================== */
 
-  videoElement.pause();
+function playConvertedVideo(
+  url,
+  title = "MP4 Video"
+) {
 
-  videoElement.removeAttribute(
-    "src"
+  if (!isHTTPURL(url)) {
+
+    throw new Error(
+      "Converter returned an invalid media URL."
+    );
+
+  }
+
+
+  if (youtubeFrame) {
+
+    youtubeFrame.src =
+      "";
+
+  }
+
+
+  youtubePlayer?.classList.add(
+    "hidden"
   );
 
-  videoElement.load();
+
+  emptyPlayer?.classList.add(
+    "hidden"
+  );
+
+
+  mp4Player?.classList.remove(
+    "hidden"
+  );
+
+
+  if (videoElement) {
+
+    videoElement.src =
+      url;
+
+
+    videoElement.load();
+
+
+    videoElement.play().catch(
+      () => {}
+    );
+
+  }
+
+
+  if (mp4Title) {
+
+    mp4Title.textContent =
+      title;
+
+  }
+
+}
+
+
+/* ==========================================
+   DIRECT MP4 PLAYER
+========================================== */
+
+function playMP4(
+  src,
+  title = "MP4 Video"
+) {
+
+  if (!src) {
+    return;
+  }
+
+
+  if (youtubeFrame) {
+
+    youtubeFrame.src =
+      "";
+
+  }
+
+
+  youtubePlayer?.classList.add(
+    "hidden"
+  );
+
+
+  emptyPlayer?.classList.add(
+    "hidden"
+  );
+
+
+  mp4Player?.classList.remove(
+    "hidden"
+  );
+
+
+  if (videoElement) {
+
+    videoElement.src =
+      src;
+
+
+    videoElement.load();
+
+
+    videoElement.play().catch(
+      () => {}
+    );
+
+  }
+
+
+  if (mp4Title) {
+
+    mp4Title.textContent =
+      title;
+
+  }
+
+}
+
+
+/* ==========================================
+   STOP MP4
+========================================== */
+
+function stopMP4() {
+
+  if (videoElement) {
+
+    videoElement.pause();
+
+
+    videoElement.removeAttribute(
+      "src"
+    );
+
+
+    videoElement.load();
+
+  }
+
 
   if (activeBlobURL) {
 
@@ -388,32 +882,52 @@ function stopMP4() {
       activeBlobURL
     );
 
-    activeBlobURL = null;
+
+    activeBlobURL =
+      null;
 
   }
 
 }
 
 
-closeMp4Button.addEventListener(
+/* ==========================================
+   CLOSE MP4 PLAYER
+========================================== */
+
+closeMp4Button?.addEventListener(
   "click",
   () => {
 
     stopMP4();
 
-    mp4Player.classList.add(
+
+    mp4Player?.classList.add(
       "hidden"
     );
 
+
     if (currentVideo) {
 
-      youtubePlayer.classList.remove(
+      youtubePlayer?.classList.remove(
         "hidden"
       );
 
+
+      if (youtubeFrame) {
+
+        youtubeFrame.src =
+          "https://www.youtube-nocookie.com/embed/" +
+          encodeURIComponent(
+            currentVideo.id
+          ) +
+          "?rel=0";
+
+      }
+
     } else {
 
-      emptyPlayer.classList.remove(
+      emptyPlayer?.classList.remove(
         "hidden"
       );
 
@@ -424,15 +938,16 @@ closeMp4Button.addEventListener(
 
 
 /* ==========================================
-   DIRECT URL
+   DIRECT MP4 URL PLAYBACK
 ========================================== */
 
-playDirectButton.addEventListener(
+playDirectButton?.addEventListener(
   "click",
   () => {
 
     const url =
-      directUrlInput.value.trim();
+      directUrlInput?.value.trim();
+
 
     if (!isSafeMediaURL(url)) {
 
@@ -444,6 +959,7 @@ playDirectButton.addEventListener(
 
     }
 
+
     playMP4(
       url,
       getFilename(url)
@@ -453,12 +969,17 @@ playDirectButton.addEventListener(
 );
 
 
-saveDirectButton.addEventListener(
+/* ==========================================
+   SAVE DIRECT MP4
+========================================== */
+
+saveDirectButton?.addEventListener(
   "click",
   async () => {
 
     const url =
-      directUrlInput.value.trim();
+      directUrlInput?.value.trim();
+
 
     if (!isSafeMediaURL(url)) {
 
@@ -470,19 +991,30 @@ saveDirectButton.addEventListener(
 
     }
 
+
+    const originalHTML =
+      saveDirectButton.innerHTML;
+
+
     saveDirectButton.disabled =
       true;
 
-    const oldHTML =
-      saveDirectButton.innerHTML;
 
-    saveDirectButton.innerHTML =
-      `<i class="ri-loader-4-line"></i>`;
+    saveDirectButton.innerHTML = `
+      <i class="ri-loader-4-line ri-spin"></i>
+    `;
+
 
     try {
 
       const response =
-        await fetch(url);
+        await fetch(
+          url,
+          {
+            method: "GET"
+          }
+        );
+
 
       if (!response.ok) {
 
@@ -492,11 +1024,15 @@ saveDirectButton.addEventListener(
 
       }
 
+
       const blob =
         await response.blob();
 
+
       if (
-        !blob.type.startsWith("video/")
+        !blob.type.startsWith(
+          "video/"
+        )
       ) {
 
         throw new Error(
@@ -505,14 +1041,23 @@ saveDirectButton.addEventListener(
 
       }
 
+
       await saveDownloadedVideo({
-        name: getFilename(url),
+        name:
+          getFilename(url),
+
         blob,
-        source: url,
-        thumbnail: ""
+
+        source:
+          url,
+
+        thumbnail:
+          ""
       });
 
+
       await renderDownloads();
+
 
       openPanel(
         downloadsPanel
@@ -520,7 +1065,11 @@ saveDirectButton.addEventListener(
 
     } catch (error) {
 
-      console.error(error);
+      console.error(
+        "Direct MP4 save failed:",
+        error
+      );
+
 
       alert(
         "Could not save this MP4. The host may block cross-origin downloads."
@@ -531,8 +1080,9 @@ saveDirectButton.addEventListener(
       saveDirectButton.disabled =
         false;
 
+
       saveDirectButton.innerHTML =
-        oldHTML;
+        originalHTML;
 
     }
 
@@ -544,17 +1094,23 @@ saveDirectButton.addEventListener(
    LOCAL FILE
 ========================================== */
 
-localFileInput.addEventListener(
+localFileInput?.addEventListener(
   "change",
   () => {
 
     const file =
       localFileInput.files?.[0];
 
-    if (!file) return;
+
+    if (!file) {
+      return;
+    }
+
 
     if (
-      !file.type.startsWith("video/")
+      !file.type.startsWith(
+        "video/"
+      )
     ) {
 
       alert(
@@ -565,37 +1121,40 @@ localFileInput.addEventListener(
 
     }
 
-    if (activeBlobURL) {
 
-      URL.revokeObjectURL(
-        activeBlobURL
-      );
+    stopMP4();
 
-    }
 
     activeBlobURL =
-      URL.createObjectURL(file);
+      URL.createObjectURL(
+        file
+      );
+
 
     playMP4(
       activeBlobURL,
       file.name
     );
 
-    localFileInput.value = "";
+
+    localFileInput.value =
+      "";
 
   }
 );
 
 
 /* ==========================================
-   INDEXEDDB
+   INDEXED DB
 ========================================== */
 
 const DB_NAME =
   "spydr-yt-player";
 
+
 const DB_VERSION =
   1;
+
 
 const STORE_NAME =
   "videos";
@@ -612,11 +1171,13 @@ function openDB() {
           DB_VERSION
         );
 
+
       request.onupgradeneeded =
         () => {
 
           const db =
             request.result;
+
 
           if (
             !db.objectStoreNames.contains(
@@ -635,21 +1196,35 @@ function openDB() {
 
         };
 
+
       request.onsuccess =
-        () => resolve(
-          request.result
-        );
+        () => {
+
+          resolve(
+            request.result
+          );
+
+        };
+
 
       request.onerror =
-        () => reject(
-          request.error
-        );
+        () => {
+
+          reject(
+            request.error
+          );
+
+        };
 
     }
   );
 
 }
 
+
+/* ==========================================
+   SAVE VIDEO TO INDEXEDDB
+========================================== */
 
 async function saveDownloadedVideo({
   name,
@@ -661,16 +1236,19 @@ async function saveDownloadedVideo({
   const db =
     await openDB();
 
+
   const transaction =
     db.transaction(
       STORE_NAME,
       "readwrite"
     );
 
+
   const store =
     transaction.objectStore(
       STORE_NAME
     );
+
 
   const entry = {
 
@@ -678,13 +1256,19 @@ async function saveDownloadedVideo({
       crypto.randomUUID?.() ||
       `${Date.now()}-${Math.random()}`,
 
-    name,
+    name:
+      name ||
+      "video.mp4",
 
     blob,
 
-    source,
+    source:
+      source ||
+      "",
 
-    thumbnail,
+    thumbnail:
+      thumbnail ||
+      "",
 
     size:
       blob.size,
@@ -694,7 +1278,11 @@ async function saveDownloadedVideo({
 
   };
 
-  store.put(entry);
+
+  store.put(
+    entry
+  );
+
 
   return new Promise(
     (resolve, reject) => {
@@ -704,14 +1292,26 @@ async function saveDownloadedVideo({
 
           db.close();
 
-          resolve(entry);
+          resolve(
+            entry
+          );
 
         };
 
+
       transaction.onerror =
-        () => reject(
-          transaction.error
-        );
+        () => {
+
+          const error =
+            transaction.error;
+
+          db.close();
+
+          reject(
+            error
+          );
+
+        };
 
     }
   );
@@ -719,10 +1319,15 @@ async function saveDownloadedVideo({
 }
 
 
+/* ==========================================
+   GET DOWNLOADS
+========================================== */
+
 async function getDownloads() {
 
   const db =
     await openDB();
+
 
   const transaction =
     db.transaction(
@@ -730,10 +1335,14 @@ async function getDownloads() {
       "readonly"
     );
 
+
   const request =
     transaction
-      .objectStore(STORE_NAME)
+      .objectStore(
+        STORE_NAME
+      )
       .getAll();
+
 
   return new Promise(
     (resolve, reject) => {
@@ -742,23 +1351,42 @@ async function getDownloads() {
         () => {
 
           const videos =
-            request.result || [];
+            request.result ||
+            [];
+
 
           videos.sort(
             (a, b) =>
-              b.added - a.added
+              b.added -
+              a.added
           );
+
 
           db.close();
 
-          resolve(videos);
+
+          resolve(
+            videos
+          );
 
         };
 
+
       request.onerror =
-        () => reject(
-          request.error
-        );
+        () => {
+
+          const error =
+            request.error;
+
+
+          db.close();
+
+
+          reject(
+            error
+          );
+
+        };
 
     }
   );
@@ -766,10 +1394,15 @@ async function getDownloads() {
 }
 
 
+/* ==========================================
+   DELETE DOWNLOAD
+========================================== */
+
 async function deleteDownload(id) {
 
   const db =
     await openDB();
+
 
   const transaction =
     db.transaction(
@@ -777,9 +1410,15 @@ async function deleteDownload(id) {
       "readwrite"
     );
 
+
   transaction
-    .objectStore(STORE_NAME)
-    .delete(id);
+    .objectStore(
+      STORE_NAME
+    )
+    .delete(
+      id
+    );
+
 
   return new Promise(
     (resolve, reject) => {
@@ -793,10 +1432,22 @@ async function deleteDownload(id) {
 
         };
 
+
       transaction.onerror =
-        () => reject(
-          transaction.error
-        );
+        () => {
+
+          const error =
+            transaction.error;
+
+
+          db.close();
+
+
+          reject(
+            error
+          );
+
+        };
 
     }
   );
@@ -810,138 +1461,193 @@ async function deleteDownload(id) {
 
 async function renderDownloads() {
 
-  const videos =
-    await getDownloads();
+  if (!downloadsList) {
+    return;
+  }
 
-  downloadsList.innerHTML =
-    "";
 
-  if (!videos.length) {
+  try {
+
+    const videos =
+      await getDownloads();
+
+
+    downloadsList.innerHTML =
+      "";
+
+
+    if (!videos.length) {
+
+      downloadsList.innerHTML = `
+        <div class="error-state">
+
+          <i class="ri-download-cloud-line"></i>
+
+          <strong>
+            No downloads
+          </strong>
+
+          <span>
+            Saved MP4s will appear here.
+          </span>
+
+        </div>
+      `;
+
+      return;
+
+    }
+
+
+    videos.forEach(
+      (video) => {
+
+        const item =
+          document.createElement(
+            "div"
+          );
+
+
+        item.className =
+          "library-item";
+
+
+        item.innerHTML = `
+
+          ${
+            video.thumbnail
+              ? `
+                <img
+                  src="${escapeHTML(video.thumbnail)}"
+                  alt=""
+                >
+              `
+              : `
+                <div
+                  style="
+                    width:92px;
+                    aspect-ratio:16/9;
+                    display:grid;
+                    place-items:center;
+                    border-radius:7px;
+                    background:#222;
+                  "
+                >
+                  <i class="ri-film-line"></i>
+                </div>
+              `
+          }
+
+
+          <div class="library-item-info">
+
+            <div class="library-item-title">
+              ${escapeHTML(video.name)}
+            </div>
+
+
+            <div class="library-item-sub">
+              ${formatBytes(video.size)}
+            </div>
+
+          </div>
+
+
+          <button
+            data-delete="${escapeHTML(video.id)}"
+            title="Delete"
+          >
+            <i class="ri-delete-bin-line"></i>
+          </button>
+        `;
+
+
+        item.addEventListener(
+          "click",
+          (event) => {
+
+            if (
+              event.target.closest(
+                "[data-delete]"
+              )
+            ) {
+
+              return;
+
+            }
+
+
+            stopMP4();
+
+
+            activeBlobURL =
+              URL.createObjectURL(
+                video.blob
+              );
+
+
+            playMP4(
+              activeBlobURL,
+              video.name
+            );
+
+
+            closePanels();
+
+          }
+        );
+
+
+        item
+          .querySelector(
+            "[data-delete]"
+          )
+          ?.addEventListener(
+            "click",
+            async (event) => {
+
+              event.stopPropagation();
+
+
+              await deleteDownload(
+                video.id
+              );
+
+
+              await renderDownloads();
+
+            }
+          );
+
+
+        downloadsList.appendChild(
+          item
+        );
+
+      }
+    );
+
+  } catch (error) {
+
+    console.error(
+      "Could not load downloads:",
+      error
+    );
+
 
     downloadsList.innerHTML = `
       <div class="error-state">
-        <i class="ri-download-cloud-line"></i>
-        <strong>No downloads</strong>
-        <span>Saved MP4s will appear here.</span>
+
+        <i class="ri-error-warning-line"></i>
+
+        <strong>
+          Library unavailable
+        </strong>
+
       </div>
     `;
-
-    return;
 
   }
-
-  videos.forEach((video) => {
-
-    const item =
-      document.createElement("div");
-
-    item.className =
-      "library-item";
-
-    item.innerHTML = `
-
-      ${
-        video.thumbnail
-          ? `
-            <img
-              src="${escapeHTML(video.thumbnail)}"
-              alt=""
-            >
-          `
-          : `
-            <div
-              style="
-                width:92px;
-                aspect-ratio:16/9;
-                display:grid;
-                place-items:center;
-                border-radius:7px;
-                background:#222;
-              "
-            >
-              <i class="ri-film-line"></i>
-            </div>
-          `
-      }
-
-      <div class="library-item-info">
-
-        <div class="library-item-title">
-          ${escapeHTML(video.name)}
-        </div>
-
-        <div class="library-item-sub">
-          ${formatBytes(video.size)}
-        </div>
-
-      </div>
-
-      <button data-delete="${video.id}">
-        <i class="ri-delete-bin-line"></i>
-      </button>
-    `;
-
-    item.addEventListener(
-      "click",
-      (event) => {
-
-        if (
-          event.target.closest(
-            "[data-delete]"
-          )
-        ) {
-
-          return;
-
-        }
-
-        if (activeBlobURL) {
-
-          URL.revokeObjectURL(
-            activeBlobURL
-          );
-
-        }
-
-        activeBlobURL =
-          URL.createObjectURL(
-            video.blob
-          );
-
-        playMP4(
-          activeBlobURL,
-          video.name
-        );
-
-        closePanels();
-
-      }
-    );
-
-    item
-      .querySelector(
-        "[data-delete]"
-      )
-      .addEventListener(
-        "click",
-        async (event) => {
-
-          event.stopPropagation();
-
-          await deleteDownload(
-            video.id
-          );
-
-          renderDownloads();
-
-        }
-      );
-
-    downloadsList.appendChild(
-      item
-    );
-
-  });
 
 }
 
@@ -974,20 +1680,32 @@ function saveHistory(video) {
   let history =
     getHistory();
 
+
   history =
     history.filter(
       (item) =>
-        item.id !== video.id
+        item.id !==
+        video.id
     );
 
-  history.unshift(video);
+
+  history.unshift(
+    video
+  );
+
 
   history =
-    history.slice(0, 25);
+    history.slice(
+      0,
+      25
+    );
+
 
   localStorage.setItem(
     "spydr_yt_history",
-    JSON.stringify(history)
+    JSON.stringify(
+      history
+    )
   );
 
 }
@@ -995,18 +1713,30 @@ function saveHistory(video) {
 
 function renderHistory() {
 
+  if (!historyList) {
+    return;
+  }
+
+
   const history =
     getHistory();
 
+
   historyList.innerHTML =
     "";
+
 
   if (!history.length) {
 
     historyList.innerHTML = `
       <div class="error-state">
+
         <i class="ri-history-line"></i>
-        <strong>No history</strong>
+
+        <strong>
+          No history
+        </strong>
+
       </div>
     `;
 
@@ -1014,65 +1744,89 @@ function renderHistory() {
 
   }
 
-  history.forEach((video) => {
 
-    const item =
-      document.createElement(
-        "div"
+  history.forEach(
+    (video) => {
+
+      const item =
+        document.createElement(
+          "div"
+        );
+
+
+      item.className =
+        "library-item";
+
+
+      item.innerHTML = `
+
+        <img
+          src="${escapeHTML(video.thumbnail || "")}"
+          alt=""
+        >
+
+
+        <div class="library-item-info">
+
+          <div class="library-item-title">
+            ${escapeHTML(
+              video.title ||
+              "Untitled video"
+            )}
+          </div>
+
+
+          <div class="library-item-sub">
+            ${escapeHTML(
+              video.channel ||
+              "Unknown channel"
+            )}
+          </div>
+
+        </div>
+
+
+        <i class="ri-play-fill"></i>
+      `;
+
+
+      item.addEventListener(
+        "click",
+        () => {
+
+          playYouTube(
+            video
+          );
+
+
+          closePanels();
+
+        }
       );
 
-    item.className =
-      "library-item";
 
-    item.innerHTML = `
+      historyList.appendChild(
+        item
+      );
 
-      <img
-        src="${escapeHTML(video.thumbnail)}"
-        alt=""
-      >
-
-      <div class="library-item-info">
-
-        <div class="library-item-title">
-          ${escapeHTML(video.title)}
-        </div>
-
-        <div class="library-item-sub">
-          ${escapeHTML(video.channel)}
-        </div>
-
-      </div>
-
-      <i class="ri-play-fill"></i>
-    `;
-
-    item.addEventListener(
-      "click",
-      () => {
-
-        playYouTube(video);
-
-        closePanels();
-
-      }
-    );
-
-    historyList.appendChild(
-      item
-    );
-
-  });
+    }
+  );
 
 }
 
 
-clearHistoryButton.addEventListener(
+/* ==========================================
+   CLEAR HISTORY
+========================================== */
+
+clearHistoryButton?.addEventListener(
   "click",
   () => {
 
     localStorage.removeItem(
       "spydr_yt_history"
     );
+
 
     renderHistory();
 
@@ -1086,13 +1840,22 @@ clearHistoryButton.addEventListener(
 
 function openPanel(panel) {
 
-  closePanels(false);
+  if (!panel) {
+    return;
+  }
+
+
+  closePanels(
+    false
+  );
+
 
   panel.classList.add(
     "open"
   );
 
-  overlay.classList.remove(
+
+  overlay?.classList.remove(
     "hidden"
   );
 
@@ -1103,17 +1866,19 @@ function closePanels(
   hideOverlay = true
 ) {
 
-  downloadsPanel.classList.remove(
+  downloadsPanel?.classList.remove(
     "open"
   );
 
-  historyPanel.classList.remove(
+
+  historyPanel?.classList.remove(
     "open"
   );
+
 
   if (hideOverlay) {
 
-    overlay.classList.add(
+    overlay?.classList.add(
       "hidden"
     );
 
@@ -1122,11 +1887,16 @@ function closePanels(
 }
 
 
-downloadsButton.addEventListener(
+/* ==========================================
+   DOWNLOAD PANEL
+========================================== */
+
+downloadsButton?.addEventListener(
   "click",
   async () => {
 
     await renderDownloads();
+
 
     openPanel(
       downloadsPanel
@@ -1136,11 +1906,16 @@ downloadsButton.addEventListener(
 );
 
 
-historyButton.addEventListener(
+/* ==========================================
+   HISTORY PANEL
+========================================== */
+
+historyButton?.addEventListener(
   "click",
   () => {
 
     renderHistory();
+
 
     openPanel(
       historyPanel
@@ -1150,21 +1925,58 @@ historyButton.addEventListener(
 );
 
 
-closeDownloadsButton.addEventListener(
+/* ==========================================
+   CLOSE PANELS
+========================================== */
+
+closeDownloadsButton?.addEventListener(
   "click",
-  closePanels
+  () => {
+
+    closePanels();
+
+  }
 );
 
 
-closeHistoryButton.addEventListener(
+closeHistoryButton?.addEventListener(
   "click",
-  closePanels
+  () => {
+
+    closePanels();
+
+  }
 );
 
 
-overlay.addEventListener(
+overlay?.addEventListener(
   "click",
-  closePanels
+  () => {
+
+    closePanels();
+
+  }
+);
+
+
+/* ==========================================
+   ESCAPE KEY
+========================================== */
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+
+    if (
+      event.key ===
+      "Escape"
+    ) {
+
+      closePanels();
+
+    }
+
+  }
 );
 
 
@@ -1172,18 +1984,19 @@ overlay.addEventListener(
    SEARCH EVENTS
 ========================================== */
 
-searchButton.addEventListener(
+searchButton?.addEventListener(
   "click",
   searchYouTube
 );
 
 
-searchInput.addEventListener(
+searchInput?.addEventListener(
   "keydown",
   (event) => {
 
     if (
-      event.key === "Enter"
+      event.key ===
+      "Enter"
     ) {
 
       searchYouTube();
@@ -1194,11 +2007,11 @@ searchInput.addEventListener(
 );
 
 
-searchInput.addEventListener(
+searchInput?.addEventListener(
   "input",
   () => {
 
-    clearSearchButton.classList.toggle(
+    clearSearchButton?.classList.toggle(
       "hidden",
       !searchInput.value
     );
@@ -1207,15 +2020,18 @@ searchInput.addEventListener(
 );
 
 
-clearSearchButton.addEventListener(
+clearSearchButton?.addEventListener(
   "click",
   () => {
 
-    searchInput.value = "";
+    searchInput.value =
+      "";
+
 
     clearSearchButton.classList.add(
       "hidden"
     );
+
 
     searchInput.focus();
 
@@ -1224,27 +2040,129 @@ clearSearchButton.addEventListener(
 
 
 /* ==========================================
-   HELPERS
+   JSON HELPER
 ========================================== */
 
-function isSafeMediaURL(url) {
+async function readJSON(response) {
+
+  const text =
+    await response.text();
+
+
+  if (!text) {
+    return {};
+  }
+
+
+  try {
+
+    return JSON.parse(
+      text
+    );
+
+  } catch {
+
+    throw new Error(
+      `Server returned a non-JSON response (${response.status}).`
+    );
+
+  }
+
+}
+
+
+/* ==========================================
+   SEARCH UI
+========================================== */
+
+function setSearchLoading(state) {
+
+  loadingState?.classList.toggle(
+    "hidden",
+    !state
+  );
+
+
+  if (searchButton) {
+
+    searchButton.disabled =
+      state;
+
+  }
+
+}
+
+
+function hideError() {
+
+  errorState?.classList.add(
+    "hidden"
+  );
+
+}
+
+
+function showError(message) {
+
+  if (errorMessage) {
+
+    errorMessage.textContent =
+      message;
+
+  }
+
+
+  errorState?.classList.remove(
+    "hidden"
+  );
+
+}
+
+
+/* ==========================================
+   URL HELPERS
+========================================== */
+
+function isHTTPURL(url) {
 
   try {
 
     const parsed =
       new URL(url);
 
-    if (
-      !["http:", "https:"]
-        .includes(parsed.protocol)
-    ) {
 
-      return false;
+    return [
+      "http:",
+      "https:"
+    ].includes(
+      parsed.protocol
+    );
 
-    }
+  } catch {
 
-    return /\.(mp4|webm)(\?|#|$)/i
-      .test(parsed.pathname + parsed.search);
+    return false;
+
+  }
+
+}
+
+
+function isSafeMediaURL(url) {
+
+  if (!isHTTPURL(url)) {
+    return false;
+  }
+
+
+  try {
+
+    const parsed =
+      new URL(url);
+
+
+    return /\.(mp4|webm)$/i.test(
+      parsed.pathname
+    );
 
   } catch {
 
@@ -1262,15 +2180,17 @@ function getFilename(url) {
     const parsed =
       new URL(url);
 
-    const name =
+
+    const filename =
       decodeURIComponent(
         parsed.pathname
           .split("/")
           .pop()
       );
 
+
     return (
-      name ||
+      filename ||
       "video.mp4"
     );
 
@@ -1283,45 +2203,66 @@ function getFilename(url) {
 }
 
 
+/* ==========================================
+   FORMAT BYTES
+========================================== */
+
 function formatBytes(bytes) {
 
   if (!bytes) {
     return "0 B";
   }
 
+
   const units = [
     "B",
     "KB",
     "MB",
-    "GB"
+    "GB",
+    "TB"
   ];
 
-  const i =
+
+  const index =
     Math.min(
       units.length - 1,
+
       Math.floor(
         Math.log(bytes) /
         Math.log(1024)
       )
     );
 
+
   return (
     (
       bytes /
-      Math.pow(1024, i)
+      Math.pow(
+        1024,
+        index
+      )
     ).toFixed(
-      i > 1 ? 1 : 0
+      index > 1
+        ? 1
+        : 0
     ) +
     " " +
-    units[i]
+    units[index]
   );
 
 }
 
 
+/* ==========================================
+   FORMAT DATE
+========================================== */
+
 function formatDate(value) {
 
-  if (!value) return "";
+  if (!value) {
+    return "";
+  }
+
 
   try {
 
@@ -1330,9 +2271,14 @@ function formatDate(value) {
     ).toLocaleDateString(
       undefined,
       {
-        month: "short",
-        day: "numeric",
-        year: "numeric"
+        month:
+          "short",
+
+        day:
+          "numeric",
+
+        year:
+          "numeric"
       }
     );
 
@@ -1345,14 +2291,35 @@ function formatDate(value) {
 }
 
 
+/* ==========================================
+   ESCAPE HTML
+========================================== */
+
 function escapeHTML(value = "") {
 
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+  return String(
+    value
+  )
+    .replaceAll(
+      "&",
+      "&amp;"
+    )
+    .replaceAll(
+      "<",
+      "&lt;"
+    )
+    .replaceAll(
+      ">",
+      "&gt;"
+    )
+    .replaceAll(
+      '"',
+      "&quot;"
+    )
+    .replaceAll(
+      "'",
+      "&#039;"
+    );
 
 }
 
@@ -1360,5 +2327,11 @@ function escapeHTML(value = "") {
 /* ==========================================
    INIT
 ========================================== */
+
+setConvertButtonState(
+  "idle",
+  "MP4"
+);
+
 
 renderDownloads();

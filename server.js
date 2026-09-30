@@ -1,78 +1,92 @@
-const express = require("express");
-const cors = require("cors");
-const http = require("http");
+const express =
+  require("express");
 
-const { createBareServer } = require("@nebula-services/bare-server-node");
-const { scramjetPath } = require("@mercuryworkshop/scramjet/path");
+const path =
+  require("path");
 
-const app = express();
+
+const app =
+  express();
+
+
+const PORT =
+  process.env.PORT ||
+  3000;
+
+
+const ROOT =
+  __dirname;
+
 
 app.use(
-  cors({
-    origin: "https://spydr-delta.vercel.app",
-  })
+  express.static(
+    ROOT,
+    {
+      extensions: [
+        "html"
+      ]
+    }
+  )
 );
 
-// Serve Scramjet browser assets
-app.use("/scramjet", express.static(scramjetPath));
 
-// Create the Bare server used by Scramjet
-const bare = createBareServer("/bare/");
+app.get(
+  "/",
+  (req, res) => {
 
-// Health check
-app.get("/", (req, res) => {
-  res.send("Spydr Scramjet backend online");
-});
+    res.sendFile(
+      path.join(
+        ROOT,
+        "index.html"
+      )
+    );
 
-app.get("/health", (req, res) => {
-  res.json({
-    status: "ok",
-    scramjet: true,
-    bare: true,
-  });
-});
-
-// Create HTTP server
-const server = http.createServer(async (req, res) => {
-  try {
-    // Let Bare handle Scramjet proxy requests
-    if (bare.shouldRoute(req)) {
-      await bare.routeRequest(req, res);
-      return;
-    }
-
-    // Everything else goes through Express
-    app(req, res);
-  } catch (error) {
-    console.error("Request error:", error);
-
-    if (!res.headersSent) {
-      res.statusCode = 500;
-      res.end("Internal server error");
-    }
   }
-});
+);
 
-// Handle WebSocket upgrades required by Bare
-server.on("upgrade", async (req, socket, head) => {
-  try {
-    if (bare.shouldRoute(req)) {
-      await bare.routeUpgrade(req, socket, head);
-      return;
-    }
 
-    socket.destroy();
-  } catch (error) {
-    console.error("Upgrade error:", error);
-    socket.destroy();
+app.use(
+  (req, res) => {
+
+    res
+      .status(404)
+      .send(
+        "404 - Page not found"
+      );
+
   }
-});
-
-const PORT = process.env.PORT || 3000;
-
-server.listen(PORT, "0.0.0.0", () => {
-  console.log(`Spydr Scramjet backend running on port ${PORT}`);
-  console.log(`Scramjet assets: ${scramjetPath}`);
-});
+);
 
 
+app.listen(
+  PORT,
+  "127.0.0.1",
+  () => {
+
+    console.log("");
+    console.log(
+      "============================"
+    );
+
+    console.log(
+      "       SPYDR IS ONLINE"
+    );
+
+    console.log(
+      "============================"
+    );
+
+    console.log("");
+
+    console.log(
+      `Home: http://localhost:${PORT}`
+    );
+
+    console.log(
+      `YT Player: http://localhost:${PORT}/yt-player.html`
+    );
+
+    console.log("");
+
+  }
+);

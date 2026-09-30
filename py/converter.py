@@ -8,20 +8,11 @@ import yt_dlp
 
 
 BASE_DIR = Path(__file__).resolve().parent
-
 DIST_DIR = BASE_DIR / "dist"
 LOG_DIR = BASE_DIR / "logs"
 
-DIST_DIR.mkdir(
-    parents=True,
-    exist_ok=True
-)
-
-LOG_DIR.mkdir(
-    parents=True,
-    exist_ok=True
-)
-
+DIST_DIR.mkdir(parents=True, exist_ok=True)
+LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 VIDEO_ID_RE = re.compile(
     r"^[A-Za-z0-9_-]{11}$"
@@ -36,7 +27,6 @@ def get_server_url():
 
 
 def get_allowed_ids():
-
     raw = os.environ.get(
         "YT_TEST_VIDEO_IDS",
         ""
@@ -44,16 +34,12 @@ def get_allowed_ids():
 
     return {
         value.strip()
-        for value
-        in raw.split(",")
+        for value in raw.split(",")
         if value.strip()
     }
 
 
-def valid_video_id(
-    video_id
-):
-
+def valid_video_id(video_id):
     return bool(
         VIDEO_ID_RE.fullmatch(
             str(video_id or "")
@@ -61,30 +47,21 @@ def valid_video_id(
     )
 
 
-def video_allowed(
-    video_id
-):
-
+def video_allowed(video_id):
     return (
         video_id
         in get_allowed_ids()
     )
 
 
-def get_video_path(
-    video_id
-):
-
+def get_video_path(video_id):
     return (
         DIST_DIR /
         f"{video_id}.mp4"
     )
 
 
-def public_video_url(
-    video_id
-):
-
+def public_video_url(video_id):
     return (
         f"{get_server_url()}"
         f"/media/"
@@ -92,13 +69,9 @@ def public_video_url(
     )
 
 
-def log_event(
-    data
-):
-
+def log_event(data):
     data = {
-        "timestamp":
-            int(time.time()),
+        "timestamp": int(time.time()),
         **data
     }
 
@@ -111,27 +84,20 @@ def log_event(
         "a",
         encoding="utf-8"
     ) as handle:
-
         handle.write(
             json.dumps(
                 data,
                 ensure_ascii=False
             )
         )
-
-        handle.write(
-            "\n"
-        )
+        handle.write("\n")
 
 
-def download_video(
-    video_id
-):
+def download_video(video_id):
 
     if not valid_video_id(
         video_id
     ):
-
         return {
             "status": False,
             "error":
@@ -142,14 +108,11 @@ def download_video(
     if not video_allowed(
         video_id
     ):
-
         log_event({
             "video_id":
                 video_id,
-
             "event":
                 "blocked",
-
             "reason":
                 "not_allowlisted"
         })
@@ -161,14 +124,14 @@ def download_video(
         }
 
 
-    destination =
+    destination = (
         get_video_path(
             video_id
         )
+    )
 
 
     if destination.exists():
-
         return {
             "status": True,
             "cached": True,
@@ -192,16 +155,14 @@ def download_video(
 
 
     options = {
-
-        "format":
-            (
-                "bestvideo[ext=mp4]"
-                "+bestaudio[ext=m4a]"
-                "/"
-                "best[ext=mp4]"
-                "[vcodec!=none]"
-                "[acodec!=none]"
-            ),
+        "format": (
+            "bestvideo[ext=mp4]"
+            "+bestaudio[ext=m4a]"
+            "/"
+            "best[ext=mp4]"
+            "[vcodec!=none]"
+            "[acodec!=none]"
+        ),
 
         "merge_output_format":
             "mp4",
@@ -229,11 +190,10 @@ def download_video(
             options
         ) as ydl:
 
-            info =
-                ydl.extract_info(
-                    source_url,
-                    download=True
-                )
+            info = ydl.extract_info(
+                source_url,
+                download=True
+            )
 
 
         if not destination.exists():
@@ -244,33 +204,30 @@ def download_video(
                 )
             )
 
-
             mp4_candidate = next(
                 (
                     item
-                    for item
-                    in candidates
-                    if item.suffix.lower()
-                    == ".mp4"
+                    for item in candidates
+                    if (
+                        item.suffix.lower()
+                        == ".mp4"
+                    )
                 ),
                 None
             )
 
-
-            if mp4_candidate:
-
-                if (
-                    mp4_candidate
-                    != destination
-                ):
-
-                    mp4_candidate.replace(
-                        destination
-                    )
+            if (
+                mp4_candidate
+                and
+                mp4_candidate
+                != destination
+            ):
+                mp4_candidate.replace(
+                    destination
+                )
 
 
         if not destination.exists():
-
             return {
                 "status": False,
                 "error":
@@ -278,12 +235,14 @@ def download_video(
             }
 
 
-        size =
-            destination.stat().st_size
+        size = (
+            destination
+            .stat()
+            .st_size
+        )
 
 
         result = {
-
             "status":
                 True,
 

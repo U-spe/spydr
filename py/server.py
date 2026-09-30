@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
 from flask import (
     Flask,
     jsonify,
@@ -11,29 +13,36 @@ from flask import (
 from flask_cors import CORS
 
 from converter import (
-    delete_video,
-    download_video,
-    extract_info,
-    get_allowed_ids
+    download_video
 )
 
 
-BASE_DIR = Path(
-    __file__
-).resolve().parent
+BASE_DIR = (
+    Path(__file__)
+    .resolve()
+    .parent
+)
+
+ROOT_DIR = (
+    BASE_DIR.parent
+)
 
 DIST_DIR = (
     BASE_DIR /
     "dist"
 )
 
-DIST_DIR.mkdir(
-    parents=True,
-    exist_ok=True
+
+load_dotenv(
+    ROOT_DIR /
+    ".env.local"
 )
 
 
-app = Flask(__name__)
+app = Flask(
+    __name__
+)
+
 
 CORS(
     app,
@@ -46,32 +55,32 @@ CORS(
 
 
 @app.get("/")
-def home():
-
-    return jsonify({
-        "service":
-            "Spydr YT Player Research Server",
-
-        "status":
-            "online",
-
-        "version":
-            "1.0.0",
-
-        "allowed_video_count":
-            len(get_allowed_ids())
-    })
-
-
-@app.get("/health")
-def health():
-
+def root():
     return jsonify({
         "status":
             True,
 
         "service":
-            "spydr-yt-player"
+            "spydr-media",
+
+        "port":
+            int(
+                os.environ.get(
+                    "MEDIA_PORT",
+                    "5050"
+                )
+            )
+    })
+
+
+@app.get("/health")
+def health():
+    return jsonify({
+        "status":
+            True,
+
+        "service":
+            "spydr-media"
     })
 
 
@@ -87,67 +96,35 @@ def api_video():
         .strip()
     )
 
-    result = download_video(
-        video_id
-    )
 
-    status_code = (
-        200
-        if result.get("status")
-        else 400
-    )
-
-    return jsonify(
-        result
-    ), status_code
-
-
-@app.get("/api/info")
-def api_info():
-
-    video_id = (
-        request.args
-        .get(
-            "vid",
-            ""
+    result = (
+        download_video(
+            video_id
         )
-        .strip()
     )
 
-    result = extract_info(
-        video_id
-    )
 
-    status_code = (
-        200
-        if result.get("status")
-        else 400
-    )
+    if result.get(
+        "status"
+    ):
+        return jsonify(
+            result
+        ), 200
+
 
     return jsonify(
         result
-    ), status_code
-
-
-@app.delete("/api/video/<video_id>")
-def api_delete(video_id):
-
-    result = delete_video(
-        video_id
-    )
-
-    return jsonify(
-        result
-    )
+    ), 400
 
 
 @app.get("/media/<path:filename>")
-def media(filename):
+def media(
+    filename
+):
 
     return send_from_directory(
         DIST_DIR,
         filename,
-
         conditional=True
     )
 
@@ -156,13 +133,14 @@ if __name__ == "__main__":
 
     port = int(
         os.environ.get(
-            "PORT",
+            "MEDIA_PORT",
             "5050"
         )
     )
 
+
     app.run(
-        host="0.0.0.0",
+        host="127.0.0.1",
         port=port,
         debug=False
     )

@@ -8,290 +8,199 @@ import yt_dlp
 
 
 BASE_DIR = Path(__file__).resolve().parent
+
 DIST_DIR = BASE_DIR / "dist"
 LOG_DIR = BASE_DIR / "logs"
 
-DIST_DIR.mkdir(parents=True, exist_ok=True)
-LOG_DIR.mkdir(parents=True, exist_ok=True)
+DIST_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
-SERVER_URL = os.environ.get(
-    "YT_MEDIA_SERVER_URL",
-    "http://127.0.0.1:5050"
-).rstrip("/")
+LOG_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
-VIDEO_ID_RE = re.compile(r"^[A-Za-z0-9_-]{11}$")
+
+VIDEO_ID_RE = re.compile(
+    r"^[A-Za-z0-9_-]{11}$"
+)
+
+
+def get_server_url():
+    return os.environ.get(
+        "YT_MEDIA_SERVER_URL",
+        "http://127.0.0.1:5050"
+    ).rstrip("/")
 
 
 def get_allowed_ids():
+
     raw = os.environ.get(
         "YT_TEST_VIDEO_IDS",
         ""
     )
 
     return {
-        item.strip()
-        for item in raw.split(",")
-        if item.strip()
+        value.strip()
+        for value
+        in raw.split(",")
+        if value.strip()
     }
 
 
-def is_allowed_video(video_id):
-    return video_id in get_allowed_ids()
-
-
-def validate_video_id(video_id):
-    if not video_id:
-        return False
+def valid_video_id(
+    video_id
+):
 
     return bool(
         VIDEO_ID_RE.fullmatch(
-            str(video_id)
+            str(video_id or "")
         )
     )
 
 
-def get_video_path(video_id):
-    return DIST_DIR / f"{video_id}.mp4"
-
-
-def get_video(video_id):
-    path = get_video_path(video_id)
-
-    if not path.exists():
-        return None
+def video_allowed(
+    video_id
+):
 
     return (
-        f"{SERVER_URL}/media/"
+        video_id
+        in get_allowed_ids()
+    )
+
+
+def get_video_path(
+    video_id
+):
+
+    return (
+        DIST_DIR /
         f"{video_id}.mp4"
     )
 
 
-def write_log(record):
-    log_file = (
-        LOG_DIR /
-        "converter-events.jsonl"
+def public_video_url(
+    video_id
+):
+
+    return (
+        f"{get_server_url()}"
+        f"/media/"
+        f"{video_id}.mp4"
     )
 
-    with log_file.open(
+
+def log_event(
+    data
+):
+
+    data = {
+        "timestamp":
+            int(time.time()),
+        **data
+    }
+
+    path = (
+        LOG_DIR /
+        "events.jsonl"
+    )
+
+    with path.open(
         "a",
         encoding="utf-8"
     ) as handle:
 
         handle.write(
             json.dumps(
-                record,
+                data,
                 ensure_ascii=False
             )
         )
 
-        handle.write("\n")
+        handle.write(
+            "\n"
+        )
 
 
-def make_result(
-    *,
-    video_id,
-    success,
-    error=None,
-    **extra
+def download_video(
+    video_id
 ):
-    result = {
-        "timestamp": int(time.time()),
-        "video_id": video_id,
-        "status": success
-    }
 
-    if error:
-        result["error"] = error
+    if not valid_video_id(
+        video_id
+    ):
 
-    result.update(extra)
-
-    write_log(result)
-
-    return result
+        return {
+            "status": False,
+            "error":
+                "Invalid video id."
+        }
 
 
-def extract_info(video_id):
-    """
-    Read metadata/formats without downloading.
-    """
+    if not video_allowed(
+        video_id
+    ):
 
-    if not validate_video_id(video_id):
+        log_event({
+            "video_id":
+                video_id,
 
-        return make_result(
-            video_id=video_id,
-            success=False,
-            error="Invalid video id"
-        )
+            "event":
+                "blocked",
 
-    if not is_allowed_video(video_id):
+            "reason":
+                "not_allowlisted"
+        })
 
-        return make_result(
-            video_id=video_id,
-            success=False,
-            error="Video is not in the authorized test allowlist"
-        )
+        return {
+            "status": False,
+            "error":
+                "Video is not in the authorized test allowlist."
+        }
 
-    url = (
-        "https://www.youtube.com/watch?v="
-        + video_id
-    )
 
-    options = {
-        "quiet": True,
-        "no_warnings": True,
-        "skip_download": True
-    }
-
-    try:
-
-        with yt_dlp.YoutubeDL(
-            options
-        ) as ydl:
-
-            info = ydl.extract_info(
-                url,
-                download=False
-            )
-
-        formats = []
-
-        for fmt in info.get(
-            "formats",
-            []
-        ):
-
-            formats.append({
-                "format_id":
-                    fmt.get("format_id"),
-
-                "extension":
-                    fmt.get("ext"),
-
-                "resolution":
-                    fmt.get("resolution"),
-
-                "width":
-                    fmt.get("width"),
-
-                "height":
-                    fmt.get("height"),
-
-                "fps":
-                    fmt.get("fps"),
-
-                "video_codec":
-                    fmt.get("vcodec"),
-
-                "audio_codec":
-                    fmt.get("acodec"),
-
-                "protocol":
-                    fmt.get("protocol"),
-
-                "filesize":
-                    fmt.get("filesize")
-                    or
-                    fmt.get(
-                        "filesize_approx"
-                    )
-            })
-
-        return make_result(
-            video_id=video_id,
-            success=True,
-
-            title=
-                info.get("title"),
-
-            uploader=
-                info.get("uploader"),
-
-            duration=
-                info.get("duration"),
-
-            thumbnail=
-                info.get("thumbnail"),
-
-            formats=formats
-        )
-
-    except Exception as error:
-
-        return make_result(
-            video_id=video_id,
-            success=False,
-            error=str(error)
+    destination =
+        get_video_path(
+            video_id
         )
 
 
-def download_video(video_id):
-    """
-    Download an authorized test video.
+    if destination.exists():
 
-    First preference:
-      progressive MP4 with audio+video
+        return {
+            "status": True,
+            "cached": True,
+            "url":
+                public_video_url(
+                    video_id
+                )
+        }
 
-    Fallback:
-      MP4 video + M4A audio merged by ffmpeg
-      into an MP4 container.
-    """
-
-    if not validate_video_id(video_id):
-
-        return make_result(
-            video_id=video_id,
-            success=False,
-            error="Invalid video id"
-        )
-
-    if not is_allowed_video(video_id):
-
-        return make_result(
-            video_id=video_id,
-            success=False,
-            error="Video is not in the authorized test allowlist"
-        )
-
-    existing = get_video(video_id)
-
-    if existing:
-
-        return make_result(
-            video_id=video_id,
-            success=True,
-            cached=True,
-            url=existing
-        )
 
     source_url = (
         "https://www.youtube.com/watch?v="
         + video_id
     )
 
+
     output_template = str(
         DIST_DIR /
         "%(id)s.%(ext)s"
     )
 
+
     options = {
-
-        /*
-        Progressive MP4 is preferred because
-        it already contains audio + video.
-
-        If unavailable, yt-dlp may choose
-        separate video/audio tracks which
-        ffmpeg merges afterward.
-        */
 
         "format":
             (
+                "bestvideo[ext=mp4]"
+                "+bestaudio[ext=m4a]"
+                "/"
                 "best[ext=mp4]"
                 "[vcodec!=none]"
                 "[acodec!=none]"
-                "/"
-                "bestvideo[ext=mp4]"
-                "+bestaudio[ext=m4a]"
             ),
 
         "merge_output_format":
@@ -300,18 +209,19 @@ def download_video(video_id):
         "outtmpl":
             output_template,
 
+        "noplaylist":
+            True,
+
         "quiet":
             True,
 
         "no_warnings":
             True,
 
-        "noplaylist":
-            True,
-
         "overwrites":
-            True
+            False
     }
+
 
     try:
 
@@ -319,120 +229,145 @@ def download_video(video_id):
             options
         ) as ydl:
 
-            info = ydl.extract_info(
-                source_url,
-                download=True
-            )
+            info =
+                ydl.extract_info(
+                    source_url,
+                    download=True
+                )
 
-        path = get_video_path(
-            video_id
-        )
 
-        if not path.exists():
+        if not destination.exists():
 
-            possible_files = list(
+            candidates = list(
                 DIST_DIR.glob(
                     f"{video_id}.*"
                 )
             )
 
-            if possible_files:
 
-                produced = possible_files[0]
-
-                if (
-                    produced.suffix.lower()
+            mp4_candidate = next(
+                (
+                    item
+                    for item
+                    in candidates
+                    if item.suffix.lower()
                     == ".mp4"
-                ):
-
-                    produced.rename(path)
-
-        if not path.exists():
-
-            return make_result(
-                video_id=video_id,
-                success=False,
-                error=(
-                    "Download completed but "
-                    "MP4 output was not found"
-                )
+                ),
+                None
             )
 
-        size = path.stat().st_size
 
-        public_url = (
-            f"{SERVER_URL}/media/"
-            f"{video_id}.mp4"
-        )
+            if mp4_candidate:
 
-        return make_result(
-            video_id=video_id,
-            success=True,
-            cached=False,
+                if (
+                    mp4_candidate
+                    != destination
+                ):
 
-            url=public_url,
+                    mp4_candidate.replace(
+                        destination
+                    )
 
-            title=
-                info.get("title"),
 
-            uploader=
-                info.get("uploader"),
+        if not destination.exists():
 
-            thumbnail=
-                info.get("thumbnail"),
+            return {
+                "status": False,
+                "error":
+                    "MP4 output was not created."
+            }
 
-            duration=
-                info.get("duration"),
 
-            size=size,
+        size =
+            destination.stat().st_size
 
-            extension="mp4"
-        )
+
+        result = {
+
+            "status":
+                True,
+
+            "cached":
+                False,
+
+            "url":
+                public_video_url(
+                    video_id
+                ),
+
+            "video_id":
+                video_id,
+
+            "title":
+                info.get(
+                    "title"
+                ),
+
+            "uploader":
+                info.get(
+                    "uploader"
+                ),
+
+            "duration":
+                info.get(
+                    "duration"
+                ),
+
+            "thumbnail":
+                info.get(
+                    "thumbnail"
+                ),
+
+            "size":
+                size,
+
+            "format":
+                "mp4"
+        }
+
+
+        log_event({
+            "video_id":
+                video_id,
+
+            "event":
+                "prepared",
+
+            "size":
+                size,
+
+            "title":
+                info.get(
+                    "title"
+                )
+        })
+
+
+        return result
+
 
     except Exception as error:
 
-        return make_result(
-            video_id=video_id,
-            success=False,
-            error=str(error)
+        print(
+            "converter error:",
+            error
         )
 
 
-def delete_video(video_id):
+        log_event({
+            "video_id":
+                video_id,
 
-    if not validate_video_id(
-        video_id
-    ):
+            "event":
+                "error",
 
-        return {
-            "status": False,
-            "error": "Invalid video id"
-        }
+            "error":
+                str(error)
+        })
 
-    path = get_video_path(
-        video_id
-    )
-
-    if not path.exists():
 
         return {
             "status": False,
-            "error": "Video not found"
+            "error":
+                str(error)
         }
-
-    path.unlink()
-
-    write_log({
-        "timestamp":
-            int(time.time()),
-
-        "video_id":
-            video_id,
-
-        "event":
-            "delete"
-    })
-
-    return {
-        "status": True
-    }

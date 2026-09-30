@@ -1,11 +1,19 @@
-export default async function handler(req, res) {
+export default async function handler(
+  req,
+  res
+) {
 
-  if (req.method !== "GET") {
+  if (
+    req.method !== "GET"
+  ) {
 
-    return res.status(405).json({
-      status: false,
-      error: "Method not allowed."
-    });
+    return res
+      .status(405)
+      .json({
+        status: false,
+        error:
+          "Method not allowed."
+      });
 
   }
 
@@ -18,10 +26,13 @@ export default async function handler(req, res) {
 
   if (!videoId) {
 
-    return res.status(400).json({
-      status: false,
-      error: "Missing video id."
-    });
+    return res
+      .status(400)
+      .json({
+        status: false,
+        error:
+          "Missing video id."
+      });
 
   }
 
@@ -32,10 +43,13 @@ export default async function handler(req, res) {
     )
   ) {
 
-    return res.status(400).json({
-      status: false,
-      error: "Invalid video id."
-    });
+    return res
+      .status(400)
+      .json({
+        status: false,
+        error:
+          "Invalid video id."
+      });
 
   }
 
@@ -47,37 +61,72 @@ export default async function handler(req, res) {
 
   if (!SERVER) {
 
-    return res.status(500).json({
-      status: false,
-      error:
-        "YT_CONVERTER_SERVER is not configured."
-    });
+    return res
+      .status(500)
+      .json({
+        status: false,
+        error:
+          "YT_CONVERTER_SERVER is not configured."
+      });
 
   }
 
 
   try {
 
-    const url =
+    const converterURL =
       `${SERVER.replace(/\/$/, "")}` +
-      `/api?vid=` +
-      encodeURIComponent(
+      `/api?vid=${encodeURIComponent(
         videoId
-      );
+      )}`;
 
 
     const response =
-      await fetch(url);
+      await fetch(
+        converterURL,
+        {
+          headers: {
+            Accept:
+              "application/json"
+          }
+        }
+      );
 
 
-    const payload =
-      await response.json();
+    const text =
+      await response.text();
+
+
+    let payload;
+
+
+    try {
+
+      payload =
+        JSON.parse(
+          text
+        );
+
+    } catch {
+
+      return res
+        .status(502)
+        .json({
+          status: false,
+          error:
+            "Converter returned invalid JSON."
+        });
+
+    }
 
 
     return res
-      .status(response.status)
-      .json(payload);
-
+      .status(
+        response.status
+      )
+      .json(
+        payload
+      );
 
   } catch (error) {
 
@@ -87,11 +136,13 @@ export default async function handler(req, res) {
     );
 
 
-    return res.status(502).json({
-      status: false,
-      error:
-        "Converter server is unavailable."
-    });
+    return res
+      .status(502)
+      .json({
+        status: false,
+        error:
+          "Converter server is unavailable."
+      });
 
   }
 

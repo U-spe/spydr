@@ -5,10 +5,11 @@ All notable changes to spydr are documented here.
 # v3.0 - CURRENT
 
 ## 🛠️ Beginning
-- [ ] Starting Scramjet build 
+- [x] Starting CORROSION build 
 - [x] Make Homepage Text Buttons
-- [ ] Use MacVG Games to make the games better (replacement of ml20)
+- [x] Use MacVG Games to make the games better (replacement of ml20)
 - [ ] YT Vid Player???????
+- [ ] Get Kiwi, Nate Games, and even COOL MATH GAMES assets???
 - [ ] Redownload Locally and Deploy On surge.sh
 
 ---

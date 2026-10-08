@@ -51,7 +51,142 @@ const getEl = (id) =>
    GET GAME URL
 ========================= */
 
-function getGameURL(game) {
+async function getGameURL(game) {
+
+  /*
+    LUMIN GAME
+  */
+
+  if (
+    game.lumin &&
+    game.luminId
+  ) {
+
+    if (!window.Lumin) {
+
+      console.error(
+        "[spydr games] LuminSDK is not loaded"
+      );
+
+      return "#";
+
+    }
+
+
+    /*
+      Preferred Lumin method.
+    */
+
+    try {
+
+      if (
+        typeof window.Lumin.getGameUrl ===
+        "function"
+      ) {
+
+        const result =
+          await window.Lumin.getGameUrl(
+            game.luminId
+          );
+
+
+        if (
+          typeof result ===
+          "string"
+        ) {
+
+          return result;
+
+        }
+
+
+        if (
+          result &&
+          result.url
+        ) {
+
+          return result.url;
+
+        }
+
+      }
+
+    }
+
+    catch (error) {
+
+      console.warn(
+
+        "[spydr games] Lumin getGameUrl failed:",
+
+        error
+
+      );
+
+    }
+
+
+    /*
+      Fallback Lumin method.
+    */
+
+    try {
+
+      if (
+        typeof window.Lumin.loadGame ===
+        "function"
+      ) {
+
+        const result =
+          await window.Lumin.loadGame(
+            game.luminId
+          );
+
+
+        if (
+          typeof result ===
+          "string"
+        ) {
+
+          return result;
+
+        }
+
+
+        if (
+          result &&
+          result.url
+        ) {
+
+          return result.url;
+
+        }
+
+      }
+
+    }
+
+    catch (error) {
+
+      console.warn(
+
+        "[spydr games] Lumin loadGame failed:",
+
+        error
+
+      );
+
+    }
+
+
+    return "#";
+
+  }
+
+
+  /*
+    NORMAL JSON GAME
+  */
 
   return (
     game.url ||
@@ -146,8 +281,11 @@ function showGameLoader() {
     catch (error) {
 
       console.warn(
+
         "[spydr games] could not reset loader video:",
+
         error
+
       );
 
     }
@@ -159,7 +297,8 @@ function showGameLoader() {
 
     if (
       playPromise &&
-      typeof playPromise.catch === "function"
+      typeof playPromise.catch ===
+      "function"
     ) {
 
       playPromise.catch(
@@ -755,65 +894,463 @@ async function loadGames() {
 
   try {
 
+    let rawGames = [];
 
-    /* =========================
-       BUILD JSON URL
-    ========================== */
 
-    const fileURL =
-      new URL(
-        source.File,
-        window.location.href
+    /* ==================================================
+       LUMIN SOURCE
+    ================================================== */
+
+    if (
+      source.File === "lumin"
+    ) {
+
+      console.log(
+        "[spydr games] loading LuminSDK..."
       );
 
 
-    fileURL.searchParams.set(
-      "t",
-      Date.now()
-    );
+      /* =========================
+         VERIFY SDK
+      ========================== */
+
+      if (!window.Lumin) {
+
+        throw new Error(
+          "LuminSDK was not loaded"
+        );
+
+      }
 
 
-    console.log(
+      /* =========================
+         INITIALIZE LUMIN
+      ========================== */
 
-      `[spydr games] fetching ${source.Name}:`,
+      await window.Lumin.init({
 
-      fileURL.href
+        headless: true,
 
-    );
+        onReady() {
 
+          console.log(
+            "[spydr games] LuminSDK ready"
+          );
 
-    /* =========================
-       FETCH
-    ========================== */
+        },
 
-    const response =
-      await fetch(
-        fileURL.href,
-        {
+        onError(error) {
 
-          signal:
-            gameLoadController.signal,
+          console.error(
 
-          cache:
-            "no-store"
+            "[spydr games] LuminSDK error:",
+
+            error
+
+          );
 
         }
+
+      });
+
+
+      /*
+        Check if the source changed while
+        Lumin was initializing.
+      */
+
+      if (
+
+        thisLoadId !==
+          gameLoadId ||
+
+        currentSourceData !==
+          source
+
+      ) {
+
+        return;
+
+      }
+
+
+      /* =========================
+         FETCH LUMIN GAMES
+      ========================== */
+
+      const allGames = [];
+
+      const PAGE_LIMIT = 100;
+
+      const MAX_PAGES = 10;
+
+
+      for (
+        let page = 1;
+        page <= MAX_PAGES;
+        page++
+      ) {
+
+        /*
+          Abort/stale check before every
+          Lumin request.
+        */
+
+        if (
+
+          thisLoadId !==
+            gameLoadId ||
+
+          currentSourceData !==
+            source
+
+        ) {
+
+          return;
+
+        }
+
+
+        const result =
+          await Promise.race([
+
+            window.Lumin.getGames({
+
+              page:
+                page,
+
+              limit:
+                PAGE_LIMIT
+
+            }),
+
+            new Promise(
+              (_, reject) => {
+
+                setTimeout(
+                  () => {
+
+                    reject(
+                      new Error(
+                        "Lumin request timed out"
+                      )
+                    );
+
+                  },
+                  25000
+                );
+
+              }
+            )
+
+          ]);
+
+
+        const pageGames =
+
+          (
+            result &&
+            result.games
+          ) ||
+
+          (
+            Array.isArray(result)
+              ? result
+              : []
+          );
+
+
+        console.log(
+
+          `[spydr games] Lumin page ${page}: ${pageGames.length} games`
+
+        );
+
+
+        if (
+          !pageGames.length
+        ) {
+
+          break;
+
+        }
+
+
+        allGames.push(
+          ...pageGames
+        );
+
+
+        const totalPages =
+
+          Number(
+            result?.pages
+          ) ||
+
+          page;
+
+
+        if (
+          page >= totalPages
+        ) {
+
+          break;
+
+        }
+
+      }
+
+
+      console.log(
+
+        `[spydr games] Lumin returned ${allGames.length} games`
+
       );
 
 
-    if (!response.ok) {
+      /* =========================
+         RESOLVE LUMIN COVERS
+      ========================== */
 
-      throw new Error(
+      rawGames =
+        await Promise.all(
 
-        `${source.Name} returned HTTP ${response.status}`
+          allGames.map(
+            async (game) => {
 
-      );
+              let cover =
+
+                game.cover ||
+
+                "/assets/images/no-image.png";
+
+
+              /*
+                Lumin uses image_token for
+                some game covers.
+              */
+
+              if (
+
+                game.image_token &&
+
+                typeof window.Lumin
+                  .getImageUrl ===
+                  "function"
+
+              ) {
+
+                try {
+
+                  const imageURL =
+
+                    await window.Lumin
+                      .getImageUrl(
+                        game.image_token
+                      );
+
+
+                  if (
+                    imageURL
+                  ) {
+
+                    cover =
+                      imageURL;
+
+                  }
+
+                }
+
+                catch (error) {
+
+                  console.warn(
+
+                    "[spydr games] Lumin image failed:",
+
+                    game.name
+
+                  );
+
+                }
+
+              }
+
+
+              /*
+                Convert Lumin into the same
+                object structure used by
+                every other source.
+              */
+
+              return {
+
+                id:
+                  game.id,
+
+                name:
+                  String(
+                    game.name ||
+                    game.title ||
+                    "Unknown Game"
+                  ),
+
+                url:
+                  "",
+
+                cover:
+                  String(
+                    cover
+                  ),
+
+                prx:
+                  false,
+
+                lumin:
+                  true,
+
+                luminId:
+                  game.id
+
+              };
+
+            }
+          )
+
+        );
 
     }
 
 
-    const data =
-      await response.json();
+    /* ==================================================
+       NORMAL JSON SOURCE
+    ================================================== */
+
+    else {
+
+      /* =========================
+         BUILD JSON URL
+      ========================== */
+
+      const fileURL =
+        new URL(
+          source.File,
+          window.location.href
+        );
+
+
+      fileURL.searchParams.set(
+        "t",
+        Date.now()
+      );
+
+
+      console.log(
+
+        `[spydr games] fetching ${source.Name}:`,
+
+        fileURL.href
+
+      );
+
+
+      /* =========================
+         FETCH
+      ========================== */
+
+      const response =
+        await fetch(
+          fileURL.href,
+          {
+
+            signal:
+              gameLoadController.signal,
+
+            cache:
+              "no-store"
+
+          }
+        );
+
+
+      if (!response.ok) {
+
+        throw new Error(
+
+          `${source.Name} returned HTTP ${response.status}`
+
+        );
+
+      }
+
+
+      const data =
+        await response.json();
+
+
+      /* =========================
+         FIND GAME ARRAY
+      ========================== */
+
+      if (
+        Array.isArray(data)
+      ) {
+
+        rawGames =
+          data;
+
+      }
+
+      else if (
+        Array.isArray(data.games)
+      ) {
+
+        rawGames =
+          data.games;
+
+      }
+
+      else if (
+        Array.isArray(data.items)
+      ) {
+
+        rawGames =
+          data.items;
+
+      }
+
+      else if (
+        Array.isArray(data.apps)
+      ) {
+
+        rawGames =
+          data.apps;
+
+      }
+
+      else {
+
+        for (
+          const key in data
+        ) {
+
+          if (
+            Array.isArray(
+              data[key]
+            )
+          ) {
+
+            rawGames =
+              data[key];
+
+            break;
+
+          }
+
+        }
+
+      }
+
+    }
 
 
     /* =========================
@@ -842,79 +1379,29 @@ async function loadGames() {
 
 
     /* =========================
-       FIND GAME ARRAY
-    ========================== */
-
-    let rawGames = [];
-
-
-    if (
-      Array.isArray(data)
-    ) {
-
-      rawGames =
-        data;
-
-    }
-
-    else if (
-      Array.isArray(data.games)
-    ) {
-
-      rawGames =
-        data.games;
-
-    }
-
-    else if (
-      Array.isArray(data.items)
-    ) {
-
-      rawGames =
-        data.items;
-
-    }
-
-    else if (
-      Array.isArray(data.apps)
-    ) {
-
-      rawGames =
-        data.apps;
-
-    }
-
-    else {
-
-      for (
-        const key in data
-      ) {
-
-        if (
-          Array.isArray(
-            data[key]
-          )
-        ) {
-
-          rawGames =
-            data[key];
-
-          break;
-
-        }
-
-      }
-
-    }
-
-
-    /* =========================
        NORMALIZE GAME FORMAT
     ========================== */
 
     const normalizedGames =
       rawGames.map(
         (game, i) => {
+
+
+          /*
+            Lumin games have already
+            been normalized above.
+
+            Do not destroy their
+            Lumin information.
+          */
+
+          if (
+            game.lumin
+          ) {
+
+            return game;
+
+          }
 
 
           const coverStr =
@@ -1005,13 +1492,19 @@ async function loadGames() {
               generatedId,
 
             name:
-              String(nameStr),
+              String(
+                nameStr
+              ),
 
             url:
-              String(urlStr),
+              String(
+                urlStr
+              ),
 
             cover:
-              String(coverStr),
+              String(
+                coverStr
+              ),
 
             prx:
               Boolean(
@@ -1044,6 +1537,10 @@ async function loadGames() {
     }
 
 
+    /* =========================
+       STORE GAMES
+    ========================== */
+
     games =
       normalizedGames;
 
@@ -1051,6 +1548,10 @@ async function loadGames() {
     filteredGames =
       games.slice();
 
+
+    /* =========================
+       RENDER
+    ========================== */
 
     renderGames();
 
@@ -1068,6 +1569,9 @@ async function loadGames() {
 
   catch (err) {
 
+    /* =========================
+       ABORTED REQUEST
+    ========================== */
 
     if (
       err.name ===
@@ -1084,6 +1588,10 @@ async function loadGames() {
 
     }
 
+
+    /* =========================
+       ERROR
+    ========================== */
 
     console.error(
 
@@ -1279,10 +1787,15 @@ function renderGames() {
    OPEN GAME
 ========================= */
 
-function openGame(game) {
+async function openGame(game) {
+
+  /*
+    Lumin URLs have to be resolved
+    asynchronously through the SDK.
+  */
 
   let url =
-    getGameURL(game);
+    await getGameURL(game);
 
 
   if (

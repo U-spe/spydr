@@ -2,12 +2,12 @@
   {
     "Name": "MacVG",
     "File": "assets/json/macvg.json",
-    "Icon": "ri-fire-line"
+    "Icon": "ri-alien-line"
   },
    {
-    "Name": "DuckMath",
-    "File": "assets/json/duckm.json",
-    "Icon": "ri-restaurant-2-line"
+    "Name": "Lumin",
+    "File": "lumin",
+    "Icon": "ri-lightbulb-line"
   }, 
    {
     "Name": "Nates Hub",
@@ -17,7 +17,7 @@
    {
     "Name": "Fire Hydrant",
     "File": "assets/json/hydra.json",
-    "Icon": "ri-aliens-line"
+    "Icon": "ri-fire-line"
   },
    {
     "Name": "Truffled",

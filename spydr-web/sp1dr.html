@@ -4,81 +4,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Original "spydr" concept, branding, and core architecture by Web Creation Studios -->
-
     <title>spydr web</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="/css/sp1dr.4prxy.css">
 </head>
+
 <body>
 
-    <div class="top-chrome">
-        <div class="window-controls">
-            <span class="dot close"></span>
-            <span class="dot minimize"></span>
-            <span class="dot maximize"></span>
-        </div>
+    <div class="background-grid"></div>
+    <div class="background-glow"></div>
 
-        <div class="brand">
-            <i class="ri-radar-line spydr-icon"></i>
-            <span>spydr</span>
-        </div>
+    <!-- LANDING PAGE -->
+    <section id="landing" class="landing">
 
-        <div class="placeholder"></div>
-    </div>
+        <div class="landing-inner">
 
-    <main id="browser">
-        <iframe
-            id="proxy-frame"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
-    </main>
+            <div class="brand-large">
+                <i class="ri-radar-line"></i>
+                <span>spydr</span>
+            </div>
 
-    <header class="bottom-interface">
+            <p class="tagline">
+                browse freely.
+            </p>
 
-        <div class="search-bar-container">
-            <div class="address-bar">
-                <i class="ri-lock-2-line lock-icon"></i>
+            <div class="landing-search">
+
+                <i class="ri-search-line"></i>
 
                 <input
                     id="url"
                     type="text"
-                    placeholder="Search Google or enter a URL..."
-                    autocomplete="off">
+                    placeholder="search or enter a url..."
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+
+                <button id="go" title="Go">
+                    <i class="ri-arrow-right-line"></i>
+                </button>
+
             </div>
+
+            <div class="quick-links">
+
+                <button
+                    class="quick-link"
+                    data-url="https://www.google.com"
+                >
+                    <i class="ri-google-line"></i>
+                    <span>google</span>
+                </button>
+
+                <button
+                    class="quick-link"
+                    data-url="https://www.youtube.com"
+                >
+                    <i class="ri-youtube-line"></i>
+                    <span>youtube</span>
+                </button>
+
+                <button
+                    class="quick-link"
+                    data-url="https://discord.com"
+                >
+                    <i class="ri-discord-line"></i>
+                    <span>discord</span>
+                </button>
+
+                <button
+                    class="quick-link"
+                    data-url="https://www.reddit.com"
+                >
+                    <i class="ri-reddit-line"></i>
+                    <span>reddit</span>
+                </button>
+
+                <button
+                    class="quick-link"
+                    data-url="https://github.com"
+                >
+                    <i class="ri-github-line"></i>
+                    <span>github</span>
+                </button>
+
+                <button
+                    class="quick-link"
+                    data-url="https://www.wikipedia.org"
+                >
+                    <i class="ri-book-open-line"></i>
+                    <span>wikipedia</span>
+                </button>
+
+            </div>
+
         </div>
 
-        <div class="bottom-menu">
+    </section>
 
-            <div class="menu-group">
-                <button class="menu-btn white-btn" id="backBtn" title="Back">
+
+    <!-- BROWSER VIEW -->
+    <section id="browser" class="browser hidden">
+
+        <div class="browser-top">
+
+            <div class="browser-controls">
+
+                <button
+                    class="browser-btn"
+                    id="backBtn"
+                    title="Back"
+                >
                     <i class="ri-arrow-left-line"></i>
                 </button>
 
-                <button class="menu-btn white-btn" id="forwardBtn" title="Forward">
+                <button
+                    class="browser-btn"
+                    id="forwardBtn"
+                    title="Forward"
+                >
                     <i class="ri-arrow-right-line"></i>
                 </button>
-            </div>
-            
-            <div class="menu-group">
 
-                <button class="menu-btn white-btn" id="homeBtn" title="Home">
+                <button
+                    class="browser-btn"
+                    id="homeBtn"
+                    title="Home"
+                >
                     <i class="ri-home-5-line"></i>
                 </button>
 
-                <button id="go" class="menu-btn white-btn" title="Settings">
-                    <i class="ri-login-circle-line"></i>
+                <button
+                    class="browser-btn"
+                    id="reloadBtn"
+                    title="Reload"
+                >
+                    <i class="ri-refresh-line"></i>
+                </button>
+
+            </div>
+
+
+            <div class="browser-address">
+
+                <i class="ri-lock-2-line"></i>
+
+                <input
+                    id="browser-url"
+                    type="text"
+                    placeholder="search or enter a url..."
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+
+                <button id="browser-go" title="Go">
+                    <i class="ri-arrow-right-line"></i>
+                </button>
+
+            </div>
+
+
+            <div class="browser-actions">
+
+                <button
+                    class="browser-btn"
+                    id="fullscreenBtn"
+                    title="Fullscreen"
+                >
+                    <i class="ri-fullscreen-line"></i>
+                </button>
+
+                <button
+                    class="browser-btn"
+                    id="browserHomeBtn"
+                    title="spydr home"
+                >
+                    <i class="ri-radar-line"></i>
                 </button>
 
             </div>
 
         </div>
 
-    </header>
+
+        <main class="browser-content">
+
+            <iframe
+                id="proxy-frame"
+                frameborder="0"
+                allowfullscreen
+                referrerpolicy="no-referrer"
+            ></iframe>
+
+        </main>
+
+    </section>
 
 
     <script src="/js/sp1dr.4prxy.js"></script>

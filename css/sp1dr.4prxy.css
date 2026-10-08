@@ -1,160 +1,227 @@
-/* spydr styling architecture by Web Creation Studios */
-
-/* --- THEME BRIDGE --- */
 :root {
-    --browser-bg: var(--theme-background);
-    --browser-surface: var(--theme-surface);
-    --browser-primary: var(--theme-primary);
-    --browser-secondary: var(--theme-secondary);
-    --browser-text: var(--theme-text);
-    --browser-muted: var(--theme-muted);
-    --browser-border: var(--theme-border);
-    --browser-glow: var(--theme-glow);
+    --bg: #070707;
+    --surface: rgba(255, 255, 255, 0.045);
+    --surface-hover: rgba(255, 255, 255, 0.075);
 
-    --browser-grid: color-mix(in srgb, var(--theme-primary) 8%, transparent);
-    --browser-input: color-mix(in srgb, var(--theme-background) 75%, var(--theme-surface));
+    --border: rgba(255, 255, 255, 0.09);
+    --border-strong: rgba(255, 255, 255, 0.14);
+
+    --text: #f2f2f2;
+    --muted: #8b8b8b;
+
+    --accent: #5f6fff;
+    --accent-secondary: #7c3aed;
+
+    --shadow:
+        0 20px 80px rgba(0, 0, 0, 0.55);
+
+    --radius: 12px;
 }
 
-/* --- RESET --- */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
 }
 
 body {
-    background: var(--browser-bg);
-    color: var(--browser-text);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
     overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(95, 111, 255, 0.09),
+            transparent 32%
+        ),
+        #070707;
+
+    color: var(--text);
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
 }
 
-/* --- TOP BROWSER CHROME --- */
-.top-chrome {
-    height: 40px;
-    background: var(--browser-surface);
-    border-bottom: 1px solid var(--browser-border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-    z-index: 10;
-}
 
-.window-controls {
-    display: flex;
-    gap: 8px;
-    width: 80px;
-}
+/* =========================
+   BACKGROUND
+========================= */
 
-.placeholder {
-    width: 80px;
-}
+.background-grid {
+    position: fixed;
+    inset: 0;
 
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
+    pointer-events: none;
 
-/* Keep browser window controls recognizable */
-.dot.close {
-    background: #ff5f56;
-}
-
-.dot.minimize {
-    background: #ffbd2e;
-}
-
-.dot.maximize {
-    background: #27c93f;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--browser-muted);
-    letter-spacing: 0.5px;
-}
-
-.spydr-icon {
-    font-size: 1.1rem;
-    color: var(--browser-primary);
-}
-
-/* --- MAIN VIEWPORT --- */
-#browser {
-    flex: 1;
-    width: 100%;
-    background: var(--browser-bg);
-    position: relative;
-    display: block;
-}
-
-/* Subtle theme-responsive tech grid */
-#browser::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    opacity: 0.18;
 
     background-image:
         linear-gradient(
-            var(--browser-grid) 1px,
+            rgba(255, 255, 255, 0.025) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            var(--browser-grid) 1px,
+            rgba(255, 255, 255, 0.025) 1px,
             transparent 1px
         );
 
-    background-size: 40px 40px;
+    background-size: 50px 50px;
+
+    mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 20%,
+            transparent 80%
+        );
+}
+
+.background-glow {
+    position: fixed;
+
+    width: 600px;
+    height: 600px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
     pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(95, 111, 255, 0.08),
+            transparent 65%
+        );
+
+    filter: blur(30px);
 }
 
-/* --- BOTTOM INTERFACE --- */
-.bottom-interface {
-    background: var(--browser-surface);
-    border-top: 1px solid var(--browser-border);
-    padding: 16px 20px 24px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    z-index: 10;
 
-    box-shadow:
-        0 -4px 20px rgba(0, 0, 0, 0.5);
-}
+/* =========================
+   LANDING
+========================= */
 
-/* --- SEARCH BOX --- */
-.search-bar-container {
-    display: flex;
-    justify-content: center;
+.landing {
+    position: relative;
+
     width: 100%;
-}
-
-.address-bar {
-    width: 100%;
-    max-width: 800px;
-    height: 44px;
-
-    background: var(--browser-input);
-    border: 1px solid var(--browser-border);
-    border-radius: 12px;
+    height: 100%;
 
     display: flex;
     align-items: center;
-    padding: 0 16px;
-    gap: 12px;
+    justify-content: center;
+
+    padding: 30px;
+
+    z-index: 2;
+}
+
+.landing-inner {
+    width: min(720px, 100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: landingIn 0.6s ease both;
+}
+
+@keyframes landingIn {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.brand-large {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    font-size: clamp(54px, 8vw, 86px);
+    font-weight: 500;
+
+    letter-spacing: -4px;
+
+    line-height: 1;
+}
+
+.brand-large i {
+    font-size: 0.48em;
+
+    color: var(--accent);
+
+    filter:
+        drop-shadow(
+            0 0 18px rgba(95, 111, 255, 0.45)
+        );
+}
+
+.tagline {
+    margin-top: 14px;
+
+    color: var(--muted);
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================
+   LANDING SEARCH
+========================= */
+
+.landing-search {
+    width: min(620px, 100%);
+
+    height: 58px;
+
+    margin-top: 38px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 8px 0 19px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow:
+        var(--shadow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    backdrop-filter: blur(18px);
 
     transition:
         border-color 0.2s ease,
@@ -162,167 +229,466 @@ body {
         box-shadow 0.2s ease;
 }
 
-.address-bar:focus-within {
-    border-color: var(--browser-primary);
+.landing-search:focus-within {
+    border-color:
+        rgba(95, 111, 255, 0.38);
 
-    background: color-mix(
-        in srgb,
-        var(--browser-surface) 85%,
-        var(--browser-primary)
-    );
+    background:
+        rgba(255, 255, 255, 0.06);
 
     box-shadow:
-        0 0 0 2px color-mix(
-            in srgb,
-            var(--browser-primary) 12%,
-            transparent
-        ),
-        0 0 20px color-mix(
-            in srgb,
-            var(--browser-primary) 10%,
-            transparent
-        );
+        0 20px 90px rgba(0, 0, 0, 0.6),
+        0 0 30px rgba(95, 111, 255, 0.08);
 }
 
-.lock-icon {
-    color: var(--browser-muted);
-    font-size: 1.1rem;
+.landing-search > i {
+    color: #777;
+
+    font-size: 19px;
+
+    flex-shrink: 0;
 }
 
-input {
-    flex: 1;
+.landing-search input {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+    outline: 0;
+
     background: transparent;
-    color: var(--browser-text);
-    border: none;
-    font-size: 1rem;
-    outline: none;
-    width: 100%;
+
+    color: var(--text);
+
+    padding: 0 14px;
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size: 15px;
 }
 
-input::placeholder {
-    color: var(--browser-muted);
-    opacity: 0.65;
+.landing-search input::placeholder {
+    color: #6e6e6e;
 }
 
-/* --- BOTTOM MENU --- */
-.bottom-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-}
+.landing-search button {
+    width: 42px;
+    height: 42px;
 
-.menu-group {
-    display: flex;
-    gap: 8px;
-}
+    border: 0;
 
-/* --- THEMED MENU BUTTONS --- */
-.white-btn {
-    background: var(--browser-primary);
-    color: var(--browser-secondary);
-    border: 1px solid var(--browser-primary);
-    border-radius: 8px;
+    border-radius: 10px;
 
-    font-weight: 600;
-    font-size: 0.95rem;
+    background:
+        rgba(255, 255, 255, 0.06);
 
-    height: 38px;
+    color: #aaa;
+
+    cursor: pointer;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    font-size: 18px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.landing-search button:hover {
+    background:
+        rgba(95, 111, 255, 0.16);
+
+    color: #fff;
+
+    transform: translateX(1px);
+}
+
+.landing-search button:active {
+    transform: scale(0.94);
+}
+
+
+/* =========================
+   QUICK LINKS
+========================= */
+
+.quick-links {
+    width: min(620px, 100%);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 9px;
+
+    margin-top: 18px;
+}
+
+.quick-link {
+    min-width: 0;
+
+    height: 72px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 11px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    color: #888;
+
     cursor: pointer;
 
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
     transition:
-        transform 0.1s ease,
-        background 0.15s ease,
-        box-shadow 0.15s ease,
-        color 0.15s ease;
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
-.menu-btn {
+.quick-link i {
+    font-size: 19px;
+}
+
+.quick-link span {
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+.quick-link:hover {
+    background:
+        var(--surface-hover);
+
+    border-color:
+        var(--border-strong);
+
+    color: #eee;
+
+    transform: translateY(-2px);
+}
+
+.quick-link:active {
+    transform: translateY(0) scale(0.97);
+}
+
+
+/* =========================
+   BROWSER
+========================= */
+
+.browser {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #080808;
+
+    animation: browserIn 0.3s ease both;
+}
+
+.browser.hidden {
+    display: none;
+}
+
+@keyframes browserIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   BROWSER TOP
+========================= */
+
+.browser-top {
+    height: 62px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 9px 13px;
+
+    background:
+        rgba(10, 10, 10, 0.92);
+
+    border-bottom:
+        1px solid var(--border);
+
+    backdrop-filter: blur(18px);
+}
+
+
+/* =========================
+   CONTROLS
+========================= */
+
+.browser-controls,
+.browser-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+}
+
+.browser-btn {
+    width: 36px;
+    height: 36px;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    background:
+        transparent;
+
+    color: #777;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease;
+}
+
+.browser-btn:hover {
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    color: #eee;
+}
+
+
+/* =========================
+   BROWSER ADDRESS
+========================= */
+
+.browser-address {
+    flex: 1;
+
+    max-width: 1000px;
+
+    height: 42px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 6px 0 14px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.browser-address:focus-within {
+    border-color:
+        rgba(95, 111, 255, 0.35);
+
+    background:
+        rgba(255, 255, 255, 0.06);
+}
+
+.browser-address > i {
+    color: #666;
+
+    font-size: 16px;
+}
+
+.browser-address input {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #ddd;
+
     padding: 0 12px;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size: 12px;
 }
 
-.menu-btn i {
-    font-size: 1.2rem;
+.browser-address input::placeholder {
+    color: #666;
 }
 
-.main-go {
-    padding: 0 24px;
-    min-width: 80px;
-    letter-spacing: 0.5px;
-}
+.browser-address button {
+    width: 32px;
+    height: 32px;
 
-.white-btn:hover {
-    background: color-mix(
-        in srgb,
-        var(--browser-primary) 80%,
-        var(--browser-text)
-    );
+    border: 0;
 
-    border-color: var(--browser-primary);
+    border-radius: 7px;
 
-    box-shadow:
-        0 0 16px color-mix(
-            in srgb,
-            var(--browser-primary) 25%,
-            transparent
-        );
+    background:
+        transparent;
 
-    transform: translateY(-1px);
-}
+    color: #777;
 
-.white-btn:active {
-    transform: scale(0.95);
-}
+    cursor: pointer;
 
-/* --- THEME GLOW HELPERS --- */
-.spydr-icon,
-.lock-icon {
+    font-size: 16px;
+
     transition:
-        color 0.3s ease,
-        filter 0.3s ease;
+        background 0.18s ease,
+        color 0.18s ease;
 }
 
-.spydr-icon {
-    filter: drop-shadow(
-        0 0 6px color-mix(
-            in srgb,
-            var(--browser-primary) 40%,
-            transparent
-        )
-    );
+.browser-address button:hover {
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    color: #fff;
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 600px) {
-    .bottom-interface {
-        padding: 12px 12px 18px 12px;
+
+/* =========================
+   FRAME
+========================= */
+
+.browser-content {
+    position: relative;
+
+    flex: 1;
+
+    min-height: 0;
+
+    background: #fff;
+}
+
+#proxy-frame {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border: 0;
+
+    background: #fff;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .landing {
+        padding: 20px;
     }
 
-    .address-bar {
-        height: 42px;
+    .brand-large {
+        font-size: 58px;
     }
 
-    .bottom-menu {
-        gap: 8px;
+    .landing-search {
+        margin-top: 30px;
     }
 
-    .menu-group {
-        gap: 5px;
+    .quick-links {
+        grid-template-columns:
+            repeat(3, 1fr);
     }
 
-    .main-go {
-        padding: 0 18px;
-        min-width: 70px;
+    .browser-top {
+        height: 58px;
+
+        padding:
+            8px;
     }
 
-    .menu-btn {
-        padding: 0 9px;
+    .browser-controls {
+        gap: 0;
     }
+
+    .browser-actions {
+        display: none;
+    }
+
+    .browser-btn {
+        width: 34px;
+        height: 34px;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    .brand-large {
+        font-size: 52px;
+        letter-spacing: -3px;
+    }
+
+    .tagline {
+        font-size: 11px;
+    }
+
+    .landing-search {
+        height: 54px;
+    }
+
+    .quick-link {
+        height: 65px;
+    }
+
 }

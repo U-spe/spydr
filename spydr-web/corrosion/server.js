@@ -1,139 +1,250 @@
+"use strict";
+
 const http = require("http");
-const Corrosion = require("./");
 
-const PORT = process.env.PORT || 3000;
+const PORT = Number(process.env.PORT || 6761);
+const HOST = "0.0.0.0";
 
-console.log("Starting Corrosion...");
-console.log("Render PORT:", process.env.PORT);
-console.log("Using PORT:", PORT);
+let Corrosion;
+let proxy;
+let proxyReady = false;
 
-const proxy = new Corrosion({
-    codec: "xor",
-    prefix: "/service/",
-});
+/* =========================
+   RESPONSE HELPERS
+========================= */
+
+function sendJSON(response, status, data) {
+    response.writeHead(status, {
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "no-store"
+    });
+
+    response.end(JSON.stringify(data));
+}
+
+/* =========================
+   HTTP SERVER
+   STARTS BEFORE CORROSION
+========================= */
 
 const server = http.createServer((request, response) => {
+    const parsedURL = new URL(
+        request.url,
+        `http://${request.headers.host || "localhost"}`
+    );
 
-    /*
-     * HEALTH CHECK
-     */
-    if (request.url === "/health") {
-        response.writeHead(200, {
-            "Content-Type": "application/json"
-        });
+    const pathname = parsedURL.pathname;
 
-        return response.end(JSON.stringify({
+    /* Health check */
+    if (pathname === "/health") {
+        return sendJSON(response, 200, {
             status: "ok",
-            service: "corrosion"
-        }));
+            service: "corrosion",
+            ready: proxyReady,
+            port: PORT
+        });
     }
 
-    /*
-     * ENCODE API
-     *
-     * /service/encode?url=https%3A%2F%2Fexample.com
-     */
-    if (request.url.startsWith("/service/encode")) {
+    /* Root endpoint */
+    if (pathname === "/") {
+        return sendJSON(response, 200, {
+            service: "spydr-corrosion",
+            status: "online",
+            ready: proxyReady,
+            health: "/health",
+            prefix: "/service/"
+        });
+    }
+
+    /* Wait for Corrosion to initialize */
+    if (!proxyReady || !proxy) {
+        return sendJSON(response, 503, {
+            error: "Corrosion is initializing",
+            ready: false
+        });
+    }
+
+    /* Corrosion browser bundle */
+    if (
+        pathname === "/service/index.js" ||
+        pathname === "/service/bundle.js"
+    ) {
+        response.writeHead(200, {
+            "Content-Type": "application/javascript; charset=utf-8",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache"
+        });
+
+        return response.end(proxy.script);
+    }
+
+    /* URL encoding endpoint */
+    if (pathname === "/service/encode") {
+        const target = parsedURL.searchParams.get("url");
+
+        if (!target) {
+            return sendJSON(response, 400, {
+                error: "Missing url parameter"
+            });
+        }
+
+        let targetURL;
+
         try {
-            const parsed = new URL(
-                request.url,
-                "http://localhost"
-            );
-
-            const target = parsed.searchParams.get("url");
-
-            if (!target) {
-                response.writeHead(400, {
-                    "Content-Type": "application/json"
-                });
-
-                return response.end(JSON.stringify({
-                    error: "Missing url parameter"
-                }));
-            }
-
-            let targetURL;
-
-            try {
-                targetURL = new URL(target);
-            } catch {
-                response.writeHead(400, {
-                    "Content-Type": "application/json"
-                });
-
-                return response.end(JSON.stringify({
-                    error: "Invalid URL"
-                }));
-            }
-
-            if (
-                targetURL.protocol !== "http:" &&
-                targetURL.protocol !== "https:"
-            ) {
-                response.writeHead(400, {
-                    "Content-Type": "application/json"
-                });
-
-                return response.end(JSON.stringify({
-                    error: "Only HTTP and HTTPS URLs are supported"
-                }));
-            }
-
-            const encoded =
-                proxy.url.codec.encode(targetURL);
-
-            response.writeHead(200, {
-                "Content-Type": "application/json"
+            targetURL = new URL(target);
+        } catch {
+            return sendJSON(response, 400, {
+                error: "Invalid URL"
             });
+        }
 
-            return response.end(JSON.stringify({
+        if (
+            targetURL.protocol !== "http:" &&
+            targetURL.protocol !== "https:"
+        ) {
+            return sendJSON(response, 400, {
+                error: "Only HTTP and HTTPS URLs are supported"
+            });
+        }
+
+        try {
+            const encoded = proxy.url.codec.encode(targetURL);
+
+            return sendJSON(response, 200, {
                 encoded
-            }));
-
-        } catch (error) {
-            console.error("Encode error:", error);
-
-            response.writeHead(500, {
-                "Content-Type": "application/json"
             });
+        } catch (error) {
+            console.error("[Corrosion] Encode error:", error);
 
-            return response.end(JSON.stringify({
-                error: error.message
-            }));
+            return sendJSON(response, 500, {
+                error: "Failed to encode URL"
+            });
         }
     }
 
-    /*
-     * CORROSION PROXY
-     */
-    if (request.url.startsWith(proxy.prefix)) {
-        return proxy.request(request, response);
+    /* Proxy requests */
+    if (pathname.startsWith(proxy.prefix)) {
+        try {
+            return proxy.request(request, response);
+        } catch (error) {
+            console.error("[Corrosion] Request error:", error);
+
+            if (!response.headersSent) {
+                return sendJSON(response, 502, {
+                    error: "Proxy request failed"
+                });
+            }
+
+            response.destroy(error);
+        }
+
+        return;
     }
 
-    /*
-     * UNKNOWN ROUTE
-     */
-    response.writeHead(404, {
-        "Content-Type": "text/plain"
+    /* Unknown route */
+    sendJSON(response, 404, {
+        error: "Route not found",
+        path: pathname
+    });
+});
+
+/* =========================
+   WEBSOCKET SUPPORT
+========================= */
+
+server.on("upgrade", (request, socket, head) => {
+    if (!proxyReady || !proxy) {
+        socket.write(
+            "HTTP/1.1 503 Service Unavailable\r\n" +
+            "Connection: close\r\n\r\n"
+        );
+
+        return socket.destroy();
+    }
+
+    try {
+        proxy.upgrade(request, socket, head);
+    } catch (error) {
+        console.error("[Corrosion] WebSocket error:", error);
+        socket.destroy();
+    }
+});
+
+/* =========================
+   ERROR HANDLING
+========================= */
+
+server.on("error", (error) => {
+    console.error("[Server] Fatal server error:", error);
+
+    if (error.code === "EADDRINUSE") {
+        console.error(`[Server] Port ${PORT} is already in use.`);
+    }
+
+    process.exitCode = 1;
+});
+
+/* =========================
+   START LISTENING FIRST
+========================= */
+
+server.listen(PORT, HOST, () => {
+    console.log("================================");
+    console.log("       SPYDR CORROSION");
+    console.log("================================");
+    console.log(`[Server] Listening on ${HOST}:${PORT}`);
+    console.log(`[Server] Health: /health`);
+    console.log("[Server] Initializing Corrosion...");
+
+    /* Initialize AFTER the port is open */
+    setImmediate(() => {
+        try {
+            Corrosion = require("./");
+
+            proxy = new Corrosion({
+                codec: "xor",
+                prefix: "/service/",
+                ws: true
+            });
+
+            proxyReady = true;
+
+            console.log("[Corrosion] Initialized successfully.");
+            console.log("[Corrosion] Proxy prefix: /service/");
+        } catch (error) {
+            proxyReady = false;
+
+            console.error(
+                "[Corrosion] Initialization failed:",
+                error
+            );
+        }
+    });
+});
+
+/* =========================
+   GRACEFUL SHUTDOWN
+========================= */
+
+function shutdown(signal) {
+    console.log(`[Server] ${signal} received. Shutting down...`);
+
+    server.close((error) => {
+        if (error) {
+            console.error("[Server] Shutdown error:", error);
+            process.exit(1);
+        }
+
+        console.log("[Server] Closed successfully.");
+        process.exit(0);
     });
 
-    response.end("Corrosion backend");
-});
+    setTimeout(() => {
+        console.error("[Server] Forced shutdown.");
+        process.exit(1);
+    }, 10000).unref();
+}
 
-/*
- * WEBSOCKET SUPPORT
- */
-server.on("upgrade", (request, socket, head) => {
-    proxy.upgrade(request, socket, head);
-});
-
-/*
- * START SERVER
- */
-server.listen(PORT, "0.0.0.0", () => {
-    console.log("============================");
-    console.log("   CORROSION IS ONLINE");
-    console.log("============================");
-    console.log(`Port: ${PORT}`);
-    console.log("");
-});
+process.on("SIGTERM", () => shutdown("SIGTERM"));
+process.on("SIGINT", () => shutdown("SIGINT"));

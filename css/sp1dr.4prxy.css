@@ -12,8 +12,7 @@
     --accent: #5f6fff;
     --accent-secondary: #7c3aed;
 
-    --shadow:
-        0 20px 80px rgba(0, 0, 0, 0.55);
+    --shadow: 0 20px 80px rgba(0, 0, 0, 0.55);
 
     --radius: 12px;
 }
@@ -42,25 +41,25 @@ body {
         #070707;
 
     color: var(--text);
-
-    font-family:
-        "Space Grotesk",
-        sans-serif;
-
+    font-family: "Space Grotesk", sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
 
 /* =========================
    BACKGROUND
+   ALWAYS BEHIND THE UI
 ========================= */
 
-.background-grid {
+.background-grid,
+.background-glow {
     position: fixed;
-    inset: 0;
-
     pointer-events: none;
+    z-index: 0;
+}
 
+.background-grid {
+    inset: 0;
     opacity: 0.18;
 
     background-image:
@@ -85,8 +84,6 @@ body {
 }
 
 .background-glow {
-    position: fixed;
-
     width: 600px;
     height: 600px;
 
@@ -94,8 +91,6 @@ body {
     left: 50%;
 
     transform: translate(-50%, -50%);
-
-    pointer-events: none;
 
     background:
         radial-gradient(
@@ -110,10 +105,12 @@ body {
 
 /* =========================
    LANDING
+   ABOVE THE BACKGROUND
 ========================= */
 
 .landing {
     position: relative;
+    isolation: isolate;
 
     width: 100%;
     height: 100%;
@@ -124,10 +121,13 @@ body {
 
     padding: 30px;
 
-    z-index: 2;
+    z-index: 1;
 }
 
 .landing-inner {
+    position: relative;
+    z-index: 1;
+
     width: min(720px, 100%);
 
     display: flex;
@@ -163,13 +163,11 @@ body {
     font-weight: 500;
 
     letter-spacing: -4px;
-
     line-height: 1;
 }
 
 .brand-large i {
     font-size: 0.48em;
-
     color: var(--accent);
 
     filter:
@@ -183,12 +181,8 @@ body {
 
     color: var(--muted);
 
-    font-family:
-        "JetBrains Mono",
-        monospace;
-
+    font-family: "JetBrains Mono", monospace;
     font-size: 12px;
-
     letter-spacing: 0.04em;
 }
 
@@ -199,7 +193,6 @@ body {
 
 .landing-search {
     width: min(620px, 100%);
-
     height: 58px;
 
     margin-top: 38px;
@@ -209,12 +202,8 @@ body {
 
     padding: 0 8px 0 19px;
 
-    background:
-        rgba(255, 255, 255, 0.045);
-
-    border:
-        1px solid var(--border);
-
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid var(--border);
     border-radius: 14px;
 
     box-shadow:
@@ -230,11 +219,8 @@ body {
 }
 
 .landing-search:focus-within {
-    border-color:
-        rgba(95, 111, 255, 0.38);
-
-    background:
-        rgba(255, 255, 255, 0.06);
+    border-color: rgba(95, 111, 255, 0.38);
+    background: rgba(255, 255, 255, 0.06);
 
     box-shadow:
         0 20px 90px rgba(0, 0, 0, 0.6),
@@ -243,9 +229,7 @@ body {
 
 .landing-search > i {
     color: #777;
-
     font-size: 19px;
-
     flex-shrink: 0;
 }
 
@@ -257,15 +241,11 @@ body {
     outline: 0;
 
     background: transparent;
-
     color: var(--text);
 
     padding: 0 14px;
 
-    font-family:
-        "Space Grotesk",
-        sans-serif;
-
+    font-family: "Space Grotesk", sans-serif;
     font-size: 15px;
 }
 
@@ -278,12 +258,9 @@ body {
     height: 42px;
 
     border: 0;
-
     border-radius: 10px;
 
-    background:
-        rgba(255, 255, 255, 0.06);
-
+    background: rgba(255, 255, 255, 0.06);
     color: #aaa;
 
     cursor: pointer;
@@ -301,11 +278,8 @@ body {
 }
 
 .landing-search button:hover {
-    background:
-        rgba(95, 111, 255, 0.16);
-
+    background: rgba(95, 111, 255, 0.16);
     color: #fff;
-
     transform: translateX(1px);
 }
 
@@ -322,18 +296,14 @@ body {
     width: min(620px, 100%);
 
     display: grid;
-
-    grid-template-columns:
-        repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 
     gap: 9px;
-
     margin-top: 18px;
 }
 
 .quick-link {
     min-width: 0;
-
     height: 72px;
 
     display: flex;
@@ -343,21 +313,14 @@ body {
 
     gap: 7px;
 
-    border:
-        1px solid var(--border);
-
+    border: 1px solid var(--border);
     border-radius: 11px;
 
-    background:
-        rgba(255, 255, 255, 0.025);
-
+    background: rgba(255, 255, 255, 0.025);
     color: #888;
 
     cursor: pointer;
-
-    font-family:
-        "Space Grotesk",
-        sans-serif;
+    font-family: "Space Grotesk", sans-serif;
 
     transition:
         background 0.2s ease,
@@ -372,19 +335,13 @@ body {
 
 .quick-link span {
     font-size: 10px;
-
     white-space: nowrap;
 }
 
 .quick-link:hover {
-    background:
-        var(--surface-hover);
-
-    border-color:
-        var(--border-strong);
-
+    background: var(--surface-hover);
+    border-color: var(--border-strong);
     color: #eee;
-
     transform: translateY(-2px);
 }
 
@@ -395,11 +352,11 @@ body {
 
 /* =========================
    BROWSER
+   ABOVE THE LANDING UI
 ========================= */
 
 .browser {
     position: fixed;
-
     inset: 0;
 
     z-index: 10;
@@ -433,21 +390,16 @@ body {
 
 .browser-top {
     height: 62px;
-
     flex-shrink: 0;
 
     display: flex;
     align-items: center;
 
     gap: 12px;
-
     padding: 9px 13px;
 
-    background:
-        rgba(10, 10, 10, 0.92);
-
-    border-bottom:
-        1px solid var(--border);
+    background: rgba(10, 10, 10, 0.92);
+    border-bottom: 1px solid var(--border);
 
     backdrop-filter: blur(18px);
 }
@@ -461,7 +413,6 @@ body {
 .browser-actions {
     display: flex;
     align-items: center;
-
     gap: 4px;
 }
 
@@ -470,12 +421,9 @@ body {
     height: 36px;
 
     border: 0;
-
     border-radius: 9px;
 
-    background:
-        transparent;
-
+    background: transparent;
     color: #777;
 
     cursor: pointer;
@@ -492,9 +440,7 @@ body {
 }
 
 .browser-btn:hover {
-    background:
-        rgba(255, 255, 255, 0.07);
-
+    background: rgba(255, 255, 255, 0.07);
     color: #eee;
 }
 
@@ -505,9 +451,7 @@ body {
 
 .browser-address {
     flex: 1;
-
     max-width: 1000px;
-
     height: 42px;
 
     margin: 0 auto;
@@ -517,13 +461,10 @@ body {
 
     padding: 0 6px 0 14px;
 
-    border:
-        1px solid var(--border);
-
+    border: 1px solid var(--border);
     border-radius: 10px;
 
-    background:
-        rgba(255, 255, 255, 0.045);
+    background: rgba(255, 255, 255, 0.045);
 
     transition:
         border-color 0.2s ease,
@@ -531,39 +472,29 @@ body {
 }
 
 .browser-address:focus-within {
-    border-color:
-        rgba(95, 111, 255, 0.35);
-
-    background:
-        rgba(255, 255, 255, 0.06);
+    border-color: rgba(95, 111, 255, 0.35);
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .browser-address > i {
     color: #666;
-
     font-size: 16px;
 }
 
 .browser-address input {
     flex: 1;
-
     min-width: 0;
-
     height: 100%;
 
     border: 0;
     outline: 0;
 
     background: transparent;
-
     color: #ddd;
 
     padding: 0 12px;
 
-    font-family:
-        "JetBrains Mono",
-        monospace;
-
+    font-family: "JetBrains Mono", monospace;
     font-size: 12px;
 }
 
@@ -576,16 +507,12 @@ body {
     height: 32px;
 
     border: 0;
-
     border-radius: 7px;
 
-    background:
-        transparent;
-
+    background: transparent;
     color: #777;
 
     cursor: pointer;
-
     font-size: 16px;
 
     transition:
@@ -594,9 +521,7 @@ body {
 }
 
 .browser-address button:hover {
-    background:
-        rgba(255, 255, 255, 0.07);
-
+    background: rgba(255, 255, 255, 0.07);
     color: #fff;
 }
 
@@ -607,9 +532,7 @@ body {
 
 .browser-content {
     position: relative;
-
     flex: 1;
-
     min-height: 0;
 
     background: #fff;
@@ -622,7 +545,6 @@ body {
     display: block;
 
     border: 0;
-
     background: #fff;
 }
 
@@ -632,7 +554,6 @@ body {
 ========================= */
 
 @media (max-width: 700px) {
-
     .landing {
         padding: 20px;
     }
@@ -646,15 +567,12 @@ body {
     }
 
     .quick-links {
-        grid-template-columns:
-            repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .browser-top {
         height: 58px;
-
-        padding:
-            8px;
+        padding: 8px;
     }
 
     .browser-controls {
@@ -669,11 +587,9 @@ body {
         width: 34px;
         height: 34px;
     }
-
 }
 
 @media (max-width: 430px) {
-
     .brand-large {
         font-size: 52px;
         letter-spacing: -3px;
@@ -690,5 +606,4 @@ body {
     .quick-link {
         height: 65px;
     }
-
 }

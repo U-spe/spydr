@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
        BACKEND
     ========================= */
 
-    const BACKEND =
-        "https://corrosion-spydr.onrender.com";
+   const BACKEND = "https://sp1.blitz.cloud";
+const HEALTH_ENDPOINT = `${BACKEND}/health`;
 
 
     /* =========================

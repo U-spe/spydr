@@ -1,0 +1,23 @@
+[
+  {
+    "id": "submit-a-game",
+    "name": "Submit a Game",
+    "category": "forms",
+    "cover": "https://cdn-icons-png.flaticon.com/512/5968/5968528.png",
+    "url": "/assets/forms/custom.html"
+  },
+  {
+    "id": "speed-stars",
+    "name": "Speed Stars",
+    "category": "sports",
+    "cover": "https://sp.custom.mjevents.org/04f09e51e79fd1b6a5cc974b504d6379.png",
+    "url": "https://sp.custom.mjevents.org/speed-stars.html"
+  },
+  {
+    "id": "ragdoll-archers",
+    "name": "Ragdoll Archers",
+    "category": "action",
+    "cover": "https://sp.custom.mjevents.org/logo.jpeg",
+    "url": "https://sp.custom.mjevents.org/ragdoll-archers.html"
+  }
+]

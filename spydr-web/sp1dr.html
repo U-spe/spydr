@@ -4,25 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color" content="#090909">
+    <meta name="color-scheme" content="dark">
+
     <title>spydr web</title>
 
+    <!-- Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet"
     >
 
+    <!-- Icons -->
     <link
         href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
         rel="stylesheet"
     >
 
+    <!-- Page styles -->
     <link rel="stylesheet" href="/css/sp1dr.4prxy.css">
 </head>
 
-<body>
+<body data-bg-style="stars">
 
+    <!-- GLOBAL THEME BACKGROUND
+         Used by Spydr's theme manager -->
+    <div id="bg-effects-container" aria-hidden="true">
+        <canvas id="stars-canvas"></canvas>
+        <div id="fog-overlay"></div>
+    </div>
+
+    <!-- PAGE BACKGROUND -->
     <div class="background-grid"></div>
     <div class="background-glow"></div>
+
 
     <!-- LANDING PAGE -->
     <section id="landing" class="landing">
@@ -201,6 +216,7 @@
 
             <iframe
                 id="proxy-frame"
+                title="Browser content"
                 frameborder="0"
                 allowfullscreen
                 referrerpolicy="no-referrer"
@@ -211,7 +227,12 @@
     </section>
 
 
+    <!-- Existing page functionality -->
     <script src="/js/sp1dr.4prxy.js"></script>
+
+    <!-- Global theme engine
+         NOTE: global.js must support this page's available elements
+         before enabling its other managers here. -->
 
 </body>
 </html>

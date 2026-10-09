@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit a Game | Spydr</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090909;
+      --panel: #111111;
+      --border: #262626;
+      --text: #ffffff;
+      --muted: #a0a0a0;
+      --accent: #3f5efb;
+      --purple: #7c3aed;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 28px 16px;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .header {
+      margin-bottom: 24px;
+    }
+
+    .eyebrow {
+      color: #8da0ff;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: clamp(28px, 6vw, 40px);
+      letter-spacing: -1.5px;
+    }
+
+    .description {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .form-panel {
+      padding: 24px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .required {
+      color: #8da0ff;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #303030;
+      border-radius: 9px;
+      outline: none;
+      background: #090909;
+      color: white;
+      font: inherit;
+      font-size: 14px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px #3f5efb22;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #666666;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .hint {
+      margin-top: 7px;
+      color: #777777;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px 18px;
+      border: 0;
+      border-radius: 9px;
+      background: linear-gradient(110deg, var(--accent), var(--purple));
+      color: white;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    button:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    button:disabled {
+      cursor: wait;
+      opacity: 0.6;
+      transform: none;
+    }
+
+    .status {
+      display: none;
+      margin-top: 16px;
+      padding: 13px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .status.success {
+      display: block;
+      border-color: #276749;
+      background: #102219;
+      color: #9ae6b4;
+    }
+
+    .status.error {
+      display: block;
+      border-color: #7f3030;
+      background: #251010;
+      color: #feb2b2;
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: #666666;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 20px 12px;
+      }
+
+      .form-panel {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="eyebrow">SPYDR / COMMUNITY</div>
+      <h1>Submit a Game</h1>
+      <p class="description">
+        Know a web game that should be on Spydr? Send it in for review.
+      </p>
+    </header>
+
+    <section class="form-panel">
+      <form
+        id="game-form"
+        action="https://formspree.io/f/xbgdyljk"
+        method="POST"
+      >
+        <div class="field">
+          <label for="game-name">
+            Web game name <span class="required">*</span>
+          </label>
+          <input
+            type="text"
+            id="game-name"
+            name="Web Game Name"
+            placeholder="Enter the game's name"
+            maxlength="120"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="game-site">
+            Website where the game is found <span class="required">*</span>
+          </label>
+          <input
+            type="text"
+            id="game-site"
+            name="Game Website"
+            placeholder="Enter the website name or page"
+            maxlength="300"
+            required
+          >
+          <p class="hint">
+            Enter the website or page where you play the game.
+          </p>
+        </div>
+
+        <div class="field">
+          <label for="notes">Extra details (optional)</label>
+          <textarea
+            id="notes"
+            name="Extra Details"
+            placeholder="Anything else we should know?"
+            maxlength="1500"
+          ></textarea>
+        </div>
+
+        <button type="submit" id="submit-button">
+          Submit Game
+        </button>
+
+        <div
+          id="form-status"
+          class="status"
+          role="status"
+          aria-live="polite"
+        ></div>
+      </form>
+    </section>
+
+    <div class="footer">SPYDR // GAME SUBMISSIONS</div>
+  </main>
+
+  <script>
+    const form = document.getElementById("game-form");
+    const submitButton = document.getElementById("submit-button");
+    const statusBox = document.getElementById("form-status");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
+      statusBox.className = "status";
+      statusBox.textContent = "";
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        if (response.ok) {
+          statusBox.className = "status success";
+          statusBox.textContent =
+            "Game submitted successfully! Thanks for helping improve Spydr.";
+          form.reset();
+        } else {
+          throw new Error("Submission failed");
+        }
+      } catch (error) {
+        statusBox.className = "status error";
+        statusBox.textContent =
+          "Couldn't submit the game. Please try again in a moment.";
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Submit Game";
+      }
+    });
+  </script>
+</body>
+</html>

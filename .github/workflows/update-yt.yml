@@ -1,0 +1,48 @@
+
+name: Update YouTube Video Feed
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-youtube-feed
+  cancel-in-progress: false
+
+jobs:
+  update-yt:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Spydr
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Update yt.json
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python scripts/update_yt.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets/json/yt.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to yt.json."
+          else
+            git commit -m "chore: daily YouTube feed update"
+            git push origin HEAD:main
+          fi

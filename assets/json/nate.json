@@ -1,5 +1,12 @@
 [
   {
+    "id": "submit-a-game",
+    "name": "Submit a Game",
+    "category": "forms",
+    "cover": "https://cdn-icons-png.flaticon.com/512/5968/5968528.png",
+    "url": "/assets/forms/custom.html"
+  }, 
+  {
     "name": "1",
     "img": "https://gg.ez.mjevents.org/1/meta/og_image.png",
     "game": "https://gg.ez.mjevents.org/1/index.html"

@@ -1,8 +1,13 @@
-{
-  "source": "MacVG",
-  "count": 450,
-  "games": [
-    {
+[
+
+  {
+    "id": "submit-a-game",
+    "name": "Submit a Game",
+    "category": "forms",
+    "cover": "https://cdn-icons-png.flaticon.com/512/5968/5968528.png",
+    "url": "/assets/forms/custom.html"
+  },
+  {
       "id": 2,
       "name": "1v1.LOL",
       "category": "action",
@@ -3153,4 +3158,3 @@
       "game": "https://g4.s.mjevents.org/kingdom-defence/"
     }
   ]
-}

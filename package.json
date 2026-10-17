@@ -12,6 +12,7 @@
   "dependencies": {
     "@mercuryworkshop/scramjet": "^1.1.0",
     "@nebula-services/bare-server-node": "^2.0.4",
+    "@vercel/analytics": "^2.0.1",
     "cors": "^2.8.6",
     "dotenv": "^18.0.4",
     "express": "^5.2.1"

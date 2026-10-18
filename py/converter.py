@@ -7,6 +7,7 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 
 import yt_dlp
+print("SPYDR YT-DLP VERSION:", yt_dlp.version.__version__)
 
 
 BASE_DIR = Path(__file__).resolve().parent

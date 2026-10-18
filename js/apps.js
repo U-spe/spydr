@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     icon: 'ri-youtube-fill',
     category: 'local',
     featured: true,
-    url: '/yt-player.html'
+    url: '/app/yt-player.html'
         },
         {
             id: 'tw',

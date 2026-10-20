@@ -1,71 +1,75 @@
 
+/* =========================
+   SPYDR POPUP DISMISSAL
+========================= */
+
 (() => {
-  "use strict";
+    "use strict";
 
-  const POPUP_ID = "spydr-popup";
-  const BUTTON_ID = "spydr-popup-button";
+    function init() {
+        const popup = document.getElementById("spydr-popup");
+        const button = document.getElementById("spydr-popup-button");
 
-  function getPopup() {
-    return document.getElementById(POPUP_ID);
-  }
+        if (!popup || popup.dataset.discInitialized === "true") {
+            return;
+        }
 
-  function closePopup() {
-    const popup = getPopup();
+        popup.dataset.discInitialized = "true";
 
-    if (!popup) return;
+        function close() {
+            popup.hidden = true;
+            document.body.style.overflow = "";
+        }
 
-    popup.hidden = true;
-    document.body.style.overflow = "";
-  }
+        function show() {
+            popup.hidden = false;
+            document.body.style.overflow = "hidden";
+        }
 
-  function showPopup() {
-    const popup = getPopup();
+        if (button) {
+            button.addEventListener("click", close);
+        }
 
-    if (!popup) {
-      console.warn("Spydr popup has not been loaded yet.");
-      return;
+        popup.addEventListener("click", (event) => {
+            if (event.target === popup) {
+                close();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && !popup.hidden) {
+                close();
+            }
+        });
+
+        window.SpydrPopup = {
+            init,
+            show,
+            close
+        };
     }
 
-    popup.hidden = false;
-    document.body.style.overflow = "hidden";
+    window.SpydrPopup = {
+        init,
+        show() {
+            init();
 
-    const button = document.getElementById(BUTTON_ID);
+            const popup = document.getElementById("spydr-popup");
 
-    if (button) button.focus();
-  }
+            if (popup) {
+                popup.hidden = false;
+                document.body.style.overflow = "hidden";
+            }
+        },
+        close() {
+            const popup = document.getElementById("spydr-popup");
 
-  function initPopup() {
-    const popup = getPopup();
-    const button = document.getElementById(BUTTON_ID);
+            if (popup) {
+                popup.hidden = true;
+                document.body.style.overflow = "";
+            }
+        }
+    };
 
-    if (!popup || popup.dataset.discInitialized === "true") return;
-
-    popup.dataset.discInitialized = "true";
-
-    if (button) {
-      button.addEventListener("click", closePopup);
-    }
-
-    popup.addEventListener("click", (event) => {
-      if (event.target === popup) closePopup();
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && !popup.hidden) {
-        closePopup();
-      }
-    });
-  }
-
-  window.SpydrPopup = {
-    show: showPopup,
-    close: closePopup,
-    init: initPopup
-  };
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initPopup);
-  } else {
-    initPopup();
-  }
+    init();
 })();

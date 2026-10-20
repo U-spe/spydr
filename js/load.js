@@ -88,24 +88,35 @@
        FINISH INTRO
     ========================= */
 
-    function finishIntro() {
-        if (introFinished) return;
+   
+function finishIntro() {
+    if (introFinished) return;
 
-        introFinished = true;
+    introFinished = true;
 
-        if (loadingScreen) {
-           loadingScreen.style.transition = "opacity 1s ease";
-        loadingScreen.style.opacity = "0";
-        loadingScreen.style.pointerEvents = "none";
-
-    setTimeout(() => {
-       loadingScreen.remove();
-       launchPopup();
-    }, 1000);
-        } else {
-            launchPopup();
-        }
+    // Start removing the intro immediately.
+    if (loadingScreen) {
+        loadingScreen.classList.add("hide");
     }
+
+    // Launch the popup immediately. No 1000ms timeout.
+    launchPopup();
+
+    // Remove the intro after its CSS fade finishes.
+    if (loadingScreen) {
+        loadingScreen.addEventListener("transitionend", (event) => {
+            if (event.target === loadingScreen &&
+                event.propertyName === "opacity") {
+                loadingScreen.remove();
+            }
+        });
+
+        // Safety fallback if the transition event never fires.
+        setTimeout(() => {
+            loadingScreen.remove();
+        }, 700);
+    }
+}
 
     /* =========================
        VIDEO EVENTS

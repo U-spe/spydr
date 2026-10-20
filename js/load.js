@@ -1,65 +1,138 @@
+
 /* =========================
    SPYDR GLOBAL LOADER
 ========================= */
 
-const loader = document.getElementById("loader");
+(() => {
+    "use strict";
 
-loader.innerHTML = `
-<div id="loading-screen">
-    <video
-        id="loadVideo"
-        autoplay
-        muted
-        playsinline
-    >
-        <source
-            src="/assets/images/load.mp4"
-            type="video/mp4"
-        >
-    </video>
-</div>
-`;
+    const loader = document.getElementById("loader");
 
-const loadingScreen =
-    document.getElementById("loading-screen");
+    if (!loader) {
+        console.error("Spydr: #loader element not found.");
+        return;
+    }
 
-const loadVideo =
-    document.getElementById("loadVideo");
+    loader.innerHTML = `
+        <div id="loading-screen">
+            <video
+                id="loadVideo"
+                autoplay
+                muted
+                playsinline
+                preload="auto"
+            >
+                <source
+                    src="/assets/images/load.mp4"
+                    type="video/mp4"
+                >
+            </video>
+        </div>
+    `;
 
-/* wait for video */
+    const loadingScreen = document.getElementById("loading-screen");
+    const loadVideo = document.getElementById("loadVideo");
 
-loadVideo.addEventListener("ended", () => {
+    let introFinished = false;
 
-    loadingScreen.classList.add("hide");
+    /* =========================
+       LOAD AND SHOW POPUP
+    ========================= */
 
-    setTimeout(() => {
+    async function launchPopup() {
+        try {
+            const response = await fetch("/assets/static/popup.html", {
+                cache: "no-cache"
+            });
 
-        loadingScreen.remove();
+            if (!response.ok) {
+                throw new Error(
+                    `Popup request failed: ${response.status}`
+                );
+            }
 
-    }, 1000);
+            const html = await response.text();
 
-});
+            // Insert the popup markup and its inline styles.
+            const container = document.createElement("div");
+            container.id = "spydr-popup-container";
+            container.innerHTML = html;
 
-/* fallback */
+            document.body.appendChild(container);
 
-window.addEventListener("load", () => {
+            // Load the popup dismissal controller.
+            if (!window.SpydrPopup) {
+                await new Promise((resolve, reject) => {
+                    const script = document.createElement("script");
 
-    setTimeout(() => {
+                    script.src = "/js/disc.js";
+                    script.onload = resolve;
+                    script.onerror = () => reject(
+                        new Error("Failed to load /js/disc.js")
+                    );
 
-        if (
-            document.body.contains(loadingScreen)
-        ) {
+                    document.body.appendChild(script);
+                });
+            }
 
+            // Initialize after the popup markup exists.
+            window.SpydrPopup.init();
+            window.SpydrPopup.show();
+
+        } catch (error) {
+            console.error("Spydr: Could not launch popup.", error);
+        }
+    }
+
+    /* =========================
+       FINISH INTRO
+    ========================= */
+
+    function finishIntro() {
+        if (introFinished) return;
+
+        introFinished = true;
+
+        if (loadingScreen) {
             loadingScreen.classList.add("hide");
 
             setTimeout(() => {
-
                 loadingScreen.remove();
-
-            }, 600);
-
+                launchPopup();
+            }, 1000);
+        } else {
+            launchPopup();
         }
+    }
 
-    }, 5000);
+    /* =========================
+       VIDEO EVENTS
+    ========================= */
 
-});
+    loadVideo.addEventListener("ended", finishIntro);
+
+    loadVideo.addEventListener("error", () => {
+        console.warn("Spydr: Intro video failed. Continuing.");
+        finishIntro();
+    });
+
+    /* =========================
+       FALLBACK
+    ========================= */
+
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            if (!introFinished) {
+                console.warn("Spydr: Intro fallback activated.");
+                finishIntro();
+            }
+        }, 5000);
+    });
+
+    // Handle autoplay being blocked by the browser.
+    loadVideo.play().catch((error) => {
+        console.warn("Spydr: Video autoplay failed.", error);
+        finishIntro();
+    });
+
+})();

@@ -94,12 +94,14 @@
         introFinished = true;
 
         if (loadingScreen) {
-            loadingScreen.classList.add("hide");
+           loadingScreen.style.transition = "opacity 1s ease";
+        loadingScreen.style.opacity = "0";
+        loadingScreen.style.pointerEvents = "none";
 
-            setTimeout(() => {
-                loadingScreen.remove();
-                launchPopup();
-            }, 1000);
+    setTimeout(() => {
+       loadingScreen.remove();
+       launchPopup();
+    }, 1000);
         } else {
             launchPopup();
         }

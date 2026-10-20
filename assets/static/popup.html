@@ -1,0 +1,123 @@
+
+<div id="spydr-popup" class="spydr-popup-overlay" hidden>
+  <section class="spydr-popup" role="dialog" aria-modal="true" aria-labelledby="spydr-popup-title">
+    <div class="spydr-popup-accent"></div>
+
+    <div class="spydr-popup-content">
+      <span class="spydr-popup-label">disc msg</span>
+
+      <h2 id="spydr-popup-title">ill prob not work on this</h2>
+
+      <p id="spydr-popup-message">
+        soo, as I heard, someone is making another site thats better than spydr, n i dont want comp. just you know...something better is coming soon.
+      </p>
+
+      <button id="spydr-popup-button" type="button">
+        nooo not spydr 😢
+      </button>
+    </div>
+  </section>
+</div>
+
+<style>
+  .spydr-popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    font-family: inherit;
+  }
+
+  .spydr-popup-overlay[hidden] {
+    display: none;
+  }
+
+  .spydr-popup {
+    position: relative;
+    width: min(100%, 420px);
+    overflow: hidden;
+    color: #e8f2ee;
+    background: #070c0a;
+    border: 1px solid #263a30;
+    border-radius: 18px;
+    box-shadow: 0 24px 90px rgba(0, 0, 0, 0.55);
+    animation: spydr-popup-in 0.35s ease both;
+  }
+
+  .spydr-popup-accent {
+    height: 3px;
+    background: #5fae87;
+    box-shadow: 0 0 18px #5fae8780;
+  }
+
+  .spydr-popup-content {
+    padding: 30px;
+  }
+
+  .spydr-popup-label {
+    color: #5fae87;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+  }
+
+  .spydr-popup h2 {
+    margin: 14px 0 10px;
+    font-size: clamp(24px, 6vw, 30px);
+    font-weight: 750;
+    letter-spacing: -0.8px;
+  }
+
+  .spydr-popup p {
+    margin: 0 0 24px;
+    color: #a8b8af;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  #spydr-popup-button {
+    width: 100%;
+    padding: 13px 18px;
+    color: #07110b;
+    background: #5fae87;
+    border: 0;
+    border-radius: 10px;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 750;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  #spydr-popup-button:hover {
+    background: #79c79e;
+    transform: translateY(-1px);
+  }
+
+  #spydr-popup-button:focus-visible {
+    outline: 2px solid #e8f2ee;
+    outline-offset: 4px;
+  }
+
+  @keyframes spydr-popup-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .spydr-popup {
+      animation: none;
+    }
+  }
+</style>

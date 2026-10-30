@@ -1,10 +1,12 @@
 {
   "name": "spydr-web",
   "version": "1.0.0",
-  "description": "",
+  "description": "Spydr web proxy",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_OPTIONS=--openssl-legacy-provider node server.js"
+    "start": "NODE_OPTIONS=--openssl-legacy-provider node server.js",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +17,8 @@
     "cors": "^2.8.6",
     "dotenv": "^18.0.4",
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "wrangler": "4.156.0"
   }
 }

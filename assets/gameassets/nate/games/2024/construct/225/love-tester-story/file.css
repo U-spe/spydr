@@ -1,6 +1,0 @@
-.match{
-  width: 1%; /* Sets width to 100% of its container */
-  box-sizing: border-box; /* Ensures padding and border are included in width */
-  font-size: 1px;
-  color: rgb(255, 0, 0);
-}

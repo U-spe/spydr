@@ -20,15 +20,20 @@
 
 # README HAS MOVED
 
-Your probably looking for the README, hence you scrolled so far. Well it got moved in update 2.7 or 2.6?.
+You're probably looking for the README, hence you scrolled so far. Well, it got moved in update 2.7 or 2.6?.
 
-To find the README, and other MD files, view the [MD docs](/md-docs/README.md) page. (It also included our license!)
-
-
+To find the README and other MarkDown files, view the [MD docs](/md-docs/README.md) page. (It also includes our license!)
 
 
 
 
-# dun dun dunnnnnn
 
-900 commits (gg frikkin ez)
+
+# OHH MAAA GAHHHHH!
+
+1000 COMMITS! NOT 100, NOT 200, NOT 300, NOT 400, NOT 500, NOT 600, NOT 700, NOT 800, N0T 900, BUT 1000! 
+
+
+thanks for all the support and help from my friends and...more friends?
+
+BYEEE

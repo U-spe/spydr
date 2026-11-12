@@ -23,7 +23,7 @@ SPYDR uses one frontend with host-specific serverless routing.
 - Set the repository's Pages source to **GitHub Actions** once.
 - The workflow checks out all five Git submodules recursively and builds a static copy.
 - The build adjusts root-relative asset paths for the `u-spe.github.io/spydr/` project URL. It also supports a custom domain at the root.
-- GitHub Pages cannot execute the API handlers. The static build points API requests at the Vercel deployment at `https://spydr-delta.vercel.app`; deploy that Vercel project and configure its secrets for the API-backed features to work.
+- GitHub Pages cannot execute the API handlers. The static build points API requests at `https://spydr-delta.vercel.app` by default. You can override this by adding a GitHub Actions repository variable named `SPYDR_API_ORIGIN` with your Cloudflare Pages or other API deployment origin. The selected API host must allow cross-origin requests from GitHub Pages.
 
 ## Environment variables
 

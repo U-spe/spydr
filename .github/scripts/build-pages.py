@@ -33,6 +33,7 @@ for path in OUT.rglob("*"):
     if path.suffix.lower() == ".html" and "<head" in content.lower() and "data-spydr-pages-base" not in content:
         base_tag = '<base href="/spydr/" data-spydr-pages-base="true">'
         content = re.sub(r'(<head(?:\s[^>]*)?>)', r'\1\n' + base_tag, content, count=1, flags=re.I)
+    content = content.replace('"/api/', '"https://spydr-delta.vercel.app/api/').replace("'/api/", "'https://spydr-delta.vercel.app/api/").replace("`/api/", "`https://spydr-delta.vercel.app/api/")
     content = path_pattern.sub(lambda match: match.group("q") + "/spydr/" + match.group("path"), content)
     path.write_text(content, encoding="utf-8")
 

@@ -22,8 +22,6 @@ for item in ROOT.iterdir():
     elif item.is_file():
         shutil.copy2(item, target)
 
-# GitHub project pages serve this repository below /spydr/.
-# Prefix root-relative app URLs in the generated copy, not the source files.
 path_pattern = re.compile(r'(?P<q>["\'(=])/(?P<path>(?:assets|css|js|apps|(?:login|settings|study|lessons|search|review|flashcards)\.html)(?:/|["\'?#]))')
 for path in OUT.rglob("*"):
     if not path.is_file() or path.suffix.lower() not in {".html", ".js", ".css", ".json"}:
@@ -41,7 +39,8 @@ for path in OUT.rglob("*"):
             base_expression = 'location.hostname.endsWith(".github.io")?"/spydr/":"/"'
         base_tag = '<script>const spydrBase=document.createElement("base");spydrBase.href=' + base_expression + ';document.head.prepend(spydrBase);</script>'
         content = re.sub(r'(<head(?:\s[^>]*)?>)', r'\1\n' + base_tag, content, count=1, flags=re.I)
-    content = content.replace('"/api/', '"' + API_ORIGIN + '/api/').replace("'/api/", "'" + API_ORIGIN + "/api/").replace("\`/api/", "\`" + API_ORIGIN + "/api/")
+    tick = chr(96)
+    content = content.replace('"/api/', '"' + API_ORIGIN + '/api/').replace("'/api/", "'" + API_ORIGIN + "/api/").replace(tick + "/api/", tick + API_ORIGIN + "/api/")
     content = path_pattern.sub(lambda match: match.group("q") + match.group("path"), content)
     content = content.replace('window.location.replace("/")', 'window.location.replace(new URL("./", document.baseURI).href)')
     path.write_text(content, encoding="utf-8")

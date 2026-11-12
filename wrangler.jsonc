@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "spydr",
+  "pages_build_output_dir": ".",
+  "compatibility_date": "2026-11-11",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "nodejs_compat_populate_process_env"
+  ]
+}

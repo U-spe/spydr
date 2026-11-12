@@ -1,0 +1,19 @@
+[submodule "assets/storage/sp1-macvg"]
+	path = assets/storage/sp1-macvg
+	url = https://github.com/U-spe/sp1-macvg.git
+
+[submodule "assets/storage/sp2-macvg"]
+	path = assets/storage/sp2-macvg
+	url = https://github.com/U-spe/sp2-macvg.git
+
+[submodule "assets/storage/sp3-macvg"]
+	path = assets/storage/sp3-macvg
+	url = https://github.com/U-spe/sp3-macvg.git
+
+[submodule "assets/storage/sp4-macvg"]
+	path = assets/storage/sp4-macvg
+	url = https://github.com/U-spe/sp4-macvg.git
+
+[submodule "assets/storage/legacy-assets"]
+	path = assets/storage/legacy-assets
+	url = https://github.com/U-spe/legacy-assets.git

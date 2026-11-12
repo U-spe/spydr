@@ -1,11 +1,13 @@
 from pathlib import Path
 import re
 import shutil
+import os
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "_site"
 EXCLUDED = {".git", ".github", "functions", "api", "py", "scripts", "node_modules", "_site"}
 EXCLUDED_FILES = {"package.json", "package-lock.json", "server.js", "wrangler.jsonc", "vercel.json", ".gitmodules", ".gitignore"}
+API_ORIGIN = os.environ.get("SPYDR_API_ORIGIN", "https://spydr-delta.vercel.app").rstrip("/")
 
 if OUT.exists():
     shutil.rmtree(OUT)
@@ -33,7 +35,7 @@ for path in OUT.rglob("*"):
     if path.suffix.lower() == ".html" and "<head" in content.lower() and "data-spydr-pages-base" not in content:
         base_tag = '<script>const spydrBase=document.createElement("base");spydrBase.href=location.hostname.endsWith(".github.io")?"/spydr/":"/";document.head.prepend(spydrBase);</script>'
         content = re.sub(r'(<head(?:\s[^>]*)?>)', r'\1\n' + base_tag, content, count=1, flags=re.I)
-    content = content.replace('"/api/', '"https://spydr-delta.vercel.app/api/').replace("'/api/", "'https://spydr-delta.vercel.app/api/").replace("`/api/", "`https://spydr-delta.vercel.app/api/")
+    content = content.replace('"/api/', '"' + API_ORIGIN + '/api/').replace("'/api/", "'" + API_ORIGIN + "/api/").replace("`/api/", "`" + API_ORIGIN + "/api/")
     content = path_pattern.sub(lambda match: match.group("q") + match.group("path"), content)
     content = content.replace('window.location.replace("/")', 'window.location.replace(new URL("./", document.baseURI).href)')
     path.write_text(content, encoding="utf-8")

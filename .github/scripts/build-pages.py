@@ -30,6 +30,8 @@ for path in OUT.rglob("*"):
         content = path.read_text(encoding="utf-8")
     except UnicodeDecodeError:
         continue
+
+    base_tag = None
     if path.suffix.lower() == ".html" and "<head" in content.lower() and "data-spydr-pages-base" not in content:
         relative_parts = path.relative_to(OUT).parts
         if len(relative_parts) > 2 and relative_parts[:2] == ("assets", "storage"):
@@ -38,11 +40,15 @@ for path in OUT.rglob("*"):
         else:
             base_expression = 'location.hostname.endsWith(".github.io")?"/spydr/":"/"'
         base_tag = '<script>const spydrBase=document.createElement("base");spydrBase.href=' + base_expression + ';document.head.prepend(spydrBase);</script>'
-        content = re.sub(r'(<head(?:\s[^>]*)?>)', r'\1\n' + base_tag, content, count=1, flags=re.I)
+
     tick = chr(96)
     content = content.replace('"/api/', '"' + API_ORIGIN + '/api/').replace("'/api/", "'" + API_ORIGIN + "/api/").replace(tick + "/api/", tick + API_ORIGIN + "/api/")
     content = path_pattern.sub(lambda match: match.group("q") + match.group("path"), content)
     content = content.replace('window.location.replace("/")', 'window.location.replace(new URL("./", document.baseURI).href)')
+
+    if base_tag:
+        content = re.sub(r'(<head(?:\s[^>]*)?>)', r'\1\n' + base_tag, content, count=1, flags=re.I)
+
     path.write_text(content, encoding="utf-8")
 
 (OUT / ".nojekyll").touch()

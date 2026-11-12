@@ -11,3150 +11,3150 @@
       "id": 2,
       "name": "1v1.LOL",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/1v1lol/splash.png",
-      "game": "https://g1.s.mjevents.org/1v1lol/"
+      "img": "/assets/storage/sp1-macvg/1v1lol/splash.png",
+      "game": "/assets/storage/sp1-macvg/1v1lol/"
     },
     {
       "id": 4,
       "name": "10 Minutes Till Dawn",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/10-minutes-till-dawn/splash.png",
-      "game": "https://g1.s.mjevents.org/10-minutes-till-dawn/"
+      "img": "/assets/storage/sp1-macvg/10-minutes-till-dawn/splash.png",
+      "game": "/assets/storage/sp1-macvg/10-minutes-till-dawn/"
     },
     {
       "id": 332,
       "name": "Adam and Eve 5 Part 1",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/adam-eve/logo.jpg",
-      "game": "https://g1.s.mjevents.org/adam-eve/"
+      "img": "/assets/storage/sp1-macvg/adam-eve/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/adam-eve/"
     },
     {
       "id": 333,
       "name": "Adam and Eve 5 Part 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/adam-eve-2/logo.jpg",
-      "game": "https://g1.s.mjevents.org/adam-eve-2/"
+      "img": "/assets/storage/sp1-macvg/adam-eve-2/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/adam-eve-2/"
     },
     {
       "id": 10,
       "name": "A Dark Room",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/https://macvg-games.github.io/action-games/adarkroom/splash.png",
-      "game": "https://g4.s.mjevents.org/https://macvg-games.github.io/action-games/adarkroom/"
+      "img": "/assets/storage/sp4-macvg/https://macvg-games.github.io/action-games/adarkroom/splash.png",
+      "game": "/assets/storage/sp4-macvg/https://macvg-games.github.io/action-games/adarkroom/"
     },
     {
       "id": 14,
       "name": "Alien Hominid",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/alienhominid/alienhominid.jpg",
-      "game": "https://g1.s.mjevents.org/alienhominid/"
+      "img": "/assets/storage/sp1-macvg/alienhominid/alienhominid.jpg",
+      "game": "/assets/storage/sp1-macvg/alienhominid/"
     },
     {
       "id": 15,
       "name": "Amidst the Clouds",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/amidst-the-clouds/splash.png",
-      "game": "https://g1.s.mjevents.org/amidst-the-clouds/"
+      "img": "/assets/storage/sp1-macvg/amidst-the-clouds/splash.png",
+      "game": "/assets/storage/sp1-macvg/amidst-the-clouds/"
     },
     {
       "id": 17,
       "name": "Angry sharks",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/angry-sharks/assets/favicon/icon-512x512.png",
-      "game": "https://g1.s.mjevents.org/angry-sharks/"
+      "img": "/assets/storage/sp1-macvg/angry-sharks/assets/favicon/icon-512x512.png",
+      "game": "/assets/storage/sp1-macvg/angry-sharks/"
     },
     {
       "id": 334,
       "name": "Apple Shooter",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/apple-shooter/Untitled.jpg",
-      "game": "https://g1.s.mjevents.org/apple-shooter/"
+      "img": "/assets/storage/sp1-macvg/apple-shooter/Untitled.jpg",
+      "game": "/assets/storage/sp1-macvg/apple-shooter/"
     },
     {
       "id": 338,
       "name": "Arcane Archer",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/arcane-archer/logo.avif",
-      "game": "https://g1.s.mjevents.org/arcane-archer/"
+      "img": "/assets/storage/sp1-macvg/arcane-archer/logo.avif",
+      "game": "/assets/storage/sp1-macvg/arcane-archer/"
     },
     {
       "id": 19,
       "name": "Avalanche",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/avalanche/avalanche.png",
-      "game": "https://g1.s.mjevents.org/avalanche/"
+      "img": "/assets/storage/sp1-macvg/avalanche/avalanche.png",
+      "game": "/assets/storage/sp1-macvg/avalanche/"
     },
     {
       "id": 337,
       "name": "Awesome Tanks 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/awesome-tanks-2/logo.jpg",
-      "game": "https://g1.s.mjevents.org/awesome-tanks-2/"
+      "img": "/assets/storage/sp1-macvg/awesome-tanks-2/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/awesome-tanks-2/"
     },
     {
       "id": 20,
       "name": "Backrooms",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/backrooms/img/splash.jpg",
-      "game": "https://g1.s.mjevents.org/backrooms/"
+      "img": "/assets/storage/sp1-macvg/backrooms/img/splash.jpg",
+      "game": "/assets/storage/sp1-macvg/backrooms/"
     },
     {
       "id": 292,
       "name": "Backrooms 2D",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/backrooms-2d/Backrooms2D.png",
-      "game": "https://g1.s.mjevents.org/backrooms-2d/"
+      "img": "/assets/storage/sp1-macvg/backrooms-2d/Backrooms2D.png",
+      "game": "/assets/storage/sp1-macvg/backrooms-2d/"
     },
     {
       "id": 293,
       "name": "Bacon May Die",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/bacon-may-die/BaconMayDie.png",
-      "game": "https://g1.s.mjevents.org/bacon-may-die/"
+      "img": "/assets/storage/sp1-macvg/bacon-may-die/BaconMayDie.png",
+      "game": "/assets/storage/sp1-macvg/bacon-may-die/"
     },
     {
       "id": 32,
       "name": "Black Knight",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/blackknight/blackknight.png",
-      "game": "https://g1.s.mjevents.org/blackknight/"
+      "img": "/assets/storage/sp1-macvg/blackknight/blackknight.png",
+      "game": "/assets/storage/sp1-macvg/blackknight/"
     },
     {
       "id": 348,
       "name": "Blumgi Slime",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/blumgi-slime/logo.jpg",
-      "game": "https://g1.s.mjevents.org/blumgi-slime/"
+      "img": "/assets/storage/sp1-macvg/blumgi-slime/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/blumgi-slime/"
     },
     {
       "id": 36,
       "name": "Bob the Robber 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/bobtherobber2/splash.jpeg",
-      "game": "https://g1.s.mjevents.org/bobtherobber2/"
+      "img": "/assets/storage/sp1-macvg/bobtherobber2/splash.jpeg",
+      "game": "/assets/storage/sp1-macvg/bobtherobber2/"
     },
     {
       "id": 367,
       "name": "Bomb It 7",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/bomb-it-7/logo.jpg",
-      "game": "https://g1.s.mjevents.org/bomb-it-7/"
+      "img": "/assets/storage/sp1-macvg/bomb-it-7/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/bomb-it-7/"
     },
     {
       "id": 37,
       "name": "Box Head",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/boxhead2play/boxhead2play.jpg",
-      "game": "https://g1.s.mjevents.org/boxhead2play/"
+      "img": "/assets/storage/sp1-macvg/boxhead2play/boxhead2play.jpg",
+      "game": "/assets/storage/sp1-macvg/boxhead2play/"
     },
     {
       "id": 347,
       "name": "Boxel Rebound",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/boxel-rebound/logo.jpg",
-      "game": "https://g1.s.mjevents.org/boxel-rebound/"
+      "img": "/assets/storage/sp1-macvg/boxel-rebound/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/boxel-rebound/"
     },
     {
       "id": 46,
       "name": "Champion Island",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/champion-island/splash.png",
-      "game": "https://g1.s.mjevents.org/champion-island/"
+      "img": "/assets/storage/sp1-macvg/champion-island/splash.png",
+      "game": "/assets/storage/sp1-macvg/champion-island/"
     },
     {
       "id": 47,
       "name": "Champion Archer",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/championarcher/championarcher.png",
-      "game": "https://g1.s.mjevents.org/championarcher/"
+      "img": "/assets/storage/sp1-macvg/championarcher/championarcher.png",
+      "game": "/assets/storage/sp1-macvg/championarcher/"
     },
     {
       "id": 55,
       "name": "CraftMine",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/craftmine/images/craftmine.png",
-      "game": "https://g1.s.mjevents.org/craftmine/"
+      "img": "/assets/storage/sp1-macvg/craftmine/images/craftmine.png",
+      "game": "/assets/storage/sp1-macvg/craftmine/"
     },
     {
       "id": 56,
       "name": "Creative Kill Chamber",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/creativekillchamber/creativekillchamber.jpg",
-      "game": "https://g1.s.mjevents.org/creativekillchamber/"
+      "img": "/assets/storage/sp1-macvg/creativekillchamber/creativekillchamber.jpg",
+      "game": "/assets/storage/sp1-macvg/creativekillchamber/"
     },
     {
       "id": 62,
       "name": "Cubefield",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/cubefield/assets/unnamed.png",
-      "game": "https://g1.s.mjevents.org/cubefield/"
+      "img": "/assets/storage/sp1-macvg/cubefield/assets/unnamed.png",
+      "game": "/assets/storage/sp1-macvg/cubefield/"
     },
     {
       "id": 64,
       "name": "Dante",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/dante/splash.png",
-      "game": "https://g1.s.mjevents.org/dante/"
+      "img": "/assets/storage/sp1-macvg/dante/splash.png",
+      "game": "/assets/storage/sp1-macvg/dante/"
     },
     {
       "id": 355,
       "name": "Dead Again",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/dead-again/thumb.png",
-      "game": "https://g1.s.mjevents.org/dead-again/"
+      "img": "/assets/storage/sp1-macvg/dead-again/thumb.png",
+      "game": "/assets/storage/sp1-macvg/dead-again/"
     },
     {
       "id": 66,
       "name": "Death Run 3D",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/death-run-3d/img/death.png",
-      "game": "https://g1.s.mjevents.org/death-run-3d/"
+      "img": "/assets/storage/sp1-macvg/death-run-3d/img/death.png",
+      "game": "/assets/storage/sp1-macvg/death-run-3d/"
     },
     {
       "id": 67,
       "name": "Defend the Tank",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/defend-the-tank/images/splash.jpg",
-      "game": "https://g1.s.mjevents.org/defend-the-tank/"
+      "img": "/assets/storage/sp1-macvg/defend-the-tank/images/splash.jpg",
+      "game": "/assets/storage/sp1-macvg/defend-the-tank/"
     },
     {
       "id": 296,
       "name": "Dodge",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/dodge/Dodge.png",
-      "game": "https://g1.s.mjevents.org/dodge/"
+      "img": "/assets/storage/sp1-macvg/dodge/Dodge.png",
+      "game": "/assets/storage/sp1-macvg/dodge/"
     },
     {
       "id": 368,
       "name": "Down the Hill",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/down-the-hill/logo.jpg",
-      "game": "https://g1.s.mjevents.org/down-the-hill/"
+      "img": "/assets/storage/sp1-macvg/down-the-hill/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/down-the-hill/"
     },
     {
       "id": 73,
       "name": "Dragon vs Bricks",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/dragon-vs-bricks/icon.jpg",
-      "game": "https://g1.s.mjevents.org/dragon-vs-bricks/"
+      "img": "/assets/storage/sp1-macvg/dragon-vs-bricks/icon.jpg",
+      "game": "/assets/storage/sp1-macvg/dragon-vs-bricks/"
     },
     {
       "id": 84,
       "name": "Endless War 3",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/endlesswar3/endlesswar3.png",
-      "game": "https://g1.s.mjevents.org/endlesswar3/"
+      "img": "/assets/storage/sp1-macvg/endlesswar3/endlesswar3.png",
+      "game": "/assets/storage/sp1-macvg/endlesswar3/"
     },
     {
       "id": 86,
       "name": "Evil Glitch",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/evil-glitch/evil.png",
-      "game": "https://g1.s.mjevents.org/evil-glitch/"
+      "img": "/assets/storage/sp1-macvg/evil-glitch/evil.png",
+      "game": "/assets/storage/sp1-macvg/evil-glitch/"
     },
     {
       "id": 90,
       "name": "Fancy Pants Adventures",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/fancypantsadventures/fancypantsadventure.png",
-      "game": "https://g1.s.mjevents.org/fancypantsadventures/"
+      "img": "/assets/storage/sp1-macvg/fancypantsadventures/fancypantsadventure.png",
+      "game": "/assets/storage/sp1-macvg/fancypantsadventures/"
     },
     {
       "id": 92,
       "name": "Fireboy and Watergirl",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/fireboywatergirlforesttemple/logo.jpeg",
-      "game": "https://g1.s.mjevents.org/fireboywatergirlforesttemple/"
+      "img": "/assets/storage/sp1-macvg/fireboywatergirlforesttemple/logo.jpeg",
+      "game": "/assets/storage/sp1-macvg/fireboywatergirlforesttemple/"
     },
     {
       "id": 373,
       "name": "Five Nights at Freddy's",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/fnaf/logo.jpg",
-      "game": "https://g1.s.mjevents.org/fnaf/"
+      "img": "/assets/storage/sp1-macvg/fnaf/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/fnaf/"
     },
     {
       "id": 97,
       "name": "Five Nights at winston's",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/fnaw/splash.png",
-      "game": "https://g1.s.mjevents.org/fnaw/"
+      "img": "/assets/storage/sp1-macvg/fnaw/splash.png",
+      "game": "/assets/storage/sp1-macvg/fnaw/"
     },
     {
       "id": 99,
       "name": "Froggy's Battle",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/froggys-battle/splash.png",
-      "game": "https://g1.s.mjevents.org/froggys-battle/"
+      "img": "/assets/storage/sp1-macvg/froggys-battle/splash.png",
+      "game": "/assets/storage/sp1-macvg/froggys-battle/"
     },
     {
       "id": 101,
       "name": "Frying Nemo",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/frying-nemo/splash.png",
-      "game": "https://g1.s.mjevents.org/frying-nemo/"
+      "img": "/assets/storage/sp1-macvg/frying-nemo/splash.png",
+      "game": "/assets/storage/sp1-macvg/frying-nemo/"
     },
     {
       "id": 290,
       "name": "Funny Shooter 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/funnyshooter2/thumb.png",
-      "game": "https://g1.s.mjevents.org/funnyshooter2/"
+      "img": "/assets/storage/sp1-macvg/funnyshooter2/thumb.png",
+      "game": "/assets/storage/sp1-macvg/funnyshooter2/"
     },
     {
       "id": 103,
       "name": "Generic Fishing Game",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/generic-fishing-game/splash.png",
-      "game": "https://g1.s.mjevents.org/generic-fishing-game/"
+      "img": "/assets/storage/sp1-macvg/generic-fishing-game/splash.png",
+      "game": "/assets/storage/sp1-macvg/generic-fishing-game/"
     },
     {
       "id": 377,
       "name": "Geometry Dash Classic",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/geometry-dash/logo.jpg",
-      "game": "https://g1.s.mjevents.org/geometry-dash/"
+      "img": "/assets/storage/sp1-macvg/geometry-dash/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/geometry-dash/"
     },
     {
       "id": 104,
       "name": "Geometry Dash Scratch",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/geodash/geoscratchicon.png",
-      "game": "https://g1.s.mjevents.org/geodash/"
+      "img": "/assets/storage/sp1-macvg/geodash/geoscratchicon.png",
+      "game": "/assets/storage/sp1-macvg/geodash/"
     },
     {
       "id": 106,
       "name": "Getaway Shootout",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/getaway-shootout/img/images.jpg",
-      "game": "https://g1.s.mjevents.org/getaway-shootout/"
+      "img": "/assets/storage/sp1-macvg/getaway-shootout/img/images.jpg",
+      "game": "/assets/storage/sp1-macvg/getaway-shootout/"
     },
     {
       "id": 107,
       "name": "Gimme the Airpod",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/gimme-the-airpod/img/logo.png",
-      "game": "https://g1.s.mjevents.org/gimme-the-airpod/"
+      "img": "/assets/storage/sp1-macvg/gimme-the-airpod/img/logo.png",
+      "game": "/assets/storage/sp1-macvg/gimme-the-airpod/"
     },
     {
       "id": 379,
       "name": "Gobdun",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/gobdun/logo.jpg",
-      "game": "https://g1.s.mjevents.org/gobdun/"
+      "img": "/assets/storage/sp1-macvg/gobdun/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/gobdun/"
     },
     {
       "id": 110,
       "name": "GOODNIGHT",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/goodnight/goodnight.jpg",
-      "game": "https://g1.s.mjevents.org/goodnight/"
+      "img": "/assets/storage/sp1-macvg/goodnight/goodnight.jpg",
+      "game": "/assets/storage/sp1-macvg/goodnight/"
     },
     {
       "id": 381,
       "name": "Groovy Ski",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/groovy-ski/logo.jpg",
-      "game": "https://g1.s.mjevents.org/groovy-ski/"
+      "img": "/assets/storage/sp1-macvg/groovy-ski/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/groovy-ski/"
     },
     {
       "id": 382,
       "name": "G-Switch",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/gswitch/logo.jpg",
-      "game": "https://g1.s.mjevents.org/gswitch/"
+      "img": "/assets/storage/sp1-macvg/gswitch/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/gswitch/"
     },
     {
       "id": 383,
       "name": "G-Switch 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/gswitch-2/logo.jpg",
-      "game": "https://g1.s.mjevents.org/gswitch-2/"
+      "img": "/assets/storage/sp1-macvg/gswitch-2/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/gswitch-2/"
     },
     {
       "id": 384,
       "name": "G-Switch 3",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/gswitch-3/logo.jpg",
-      "game": "https://g1.s.mjevents.org/gswitch-3/"
+      "img": "/assets/storage/sp1-macvg/gswitch-3/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/gswitch-3/"
     },
     {
       "id": 120,
       "name": "Helicopter",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/helicopter/helicopter.png",
-      "game": "https://g1.s.mjevents.org/helicopter/"
+      "img": "/assets/storage/sp1-macvg/helicopter/helicopter.png",
+      "game": "/assets/storage/sp1-macvg/helicopter/"
     },
     {
       "id": 390,
       "name": "Hide and Smash",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/hide-and-smash/logo.jpg",
-      "game": "https://g1.s.mjevents.org/hide-and-smash/"
+      "img": "/assets/storage/sp1-macvg/hide-and-smash/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/hide-and-smash/"
     },
     {
       "id": 124,
       "name": "Hungry Lamu",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/hungry-lamu/splash.png",
-      "game": "https://g1.s.mjevents.org/hungry-lamu/"
+      "img": "/assets/storage/sp1-macvg/hungry-lamu/splash.png",
+      "game": "/assets/storage/sp1-macvg/hungry-lamu/"
     },
     {
       "id": 336,
       "name": "Inifnite Soccer",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/infinite-soccer/logo.avif",
-      "game": "https://g1.s.mjevents.org/infinite-soccer/"
+      "img": "/assets/storage/sp1-macvg/infinite-soccer/logo.avif",
+      "game": "/assets/storage/sp1-macvg/infinite-soccer/"
     },
     {
       "id": 304,
       "name": "Iron Snout",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/iron-snout/IronSnout.png",
-      "game": "https://g1.s.mjevents.org/iron-snout/"
+      "img": "/assets/storage/sp1-macvg/iron-snout/IronSnout.png",
+      "game": "/assets/storage/sp1-macvg/iron-snout/"
     },
     {
       "id": 129,
       "name": "Jetpack Joyride",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/jetpack-joyride/splash.jpg",
-      "game": "https://g1.s.mjevents.org/jetpack-joyride/"
+      "img": "/assets/storage/sp1-macvg/jetpack-joyride/splash.jpg",
+      "game": "/assets/storage/sp1-macvg/jetpack-joyride/"
     },
     {
       "id": 130,
       "name": "JustFall.lol",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/just-fall/unnamed.png",
-      "game": "https://g1.s.mjevents.org/just-fall/"
+      "img": "/assets/storage/sp1-macvg/just-fall/unnamed.png",
+      "game": "/assets/storage/sp1-macvg/just-fall/"
     },
     {
       "id": 132,
       "name": "Kitchen Gun Game",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/kitchen-gun-game/splash.png",
-      "game": "https://g1.s.mjevents.org/kitchen-gun-game/"
+      "img": "/assets/storage/sp1-macvg/kitchen-gun-game/splash.png",
+      "game": "/assets/storage/sp1-macvg/kitchen-gun-game/"
     },
     {
       "id": 134,
       "name": "Knife Master",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/knife-master/512x512.jpg",
-      "game": "https://g1.s.mjevents.org/knife-master/"
+      "img": "/assets/storage/sp1-macvg/knife-master/512x512.jpg",
+      "game": "/assets/storage/sp1-macvg/knife-master/"
     },
     {
       "id": 140,
       "name": "Mario",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/mario/Theme/Mario.gif",
-      "game": "https://g1.s.mjevents.org/mario/"
+      "img": "/assets/storage/sp1-macvg/mario/Theme/Mario.gif",
+      "game": "/assets/storage/sp1-macvg/mario/"
     },
     {
       "id": 305,
       "name": "Mario Bros",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/mario-bros/NewSuperMarioBros.png",
-      "game": "https://g1.s.mjevents.org/mario-bros/"
+      "img": "/assets/storage/sp1-macvg/mario-bros/NewSuperMarioBros.png",
+      "game": "/assets/storage/sp1-macvg/mario-bros/"
     },
     {
       "id": 142,
       "name": "Matrix Rampage",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/matrixrampage/matrixrampage.jpg",
-      "game": "https://g1.s.mjevents.org/matrixrampage/"
+      "img": "/assets/storage/sp1-macvg/matrixrampage/matrixrampage.jpg",
+      "game": "/assets/storage/sp1-macvg/matrixrampage/"
     },
     {
       "id": 145,
       "name": "Mine Blocks",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/mineblocks/splash.png",
-      "game": "https://g1.s.mjevents.org/mineblocks/"
+      "img": "/assets/storage/sp1-macvg/mineblocks/splash.png",
+      "game": "/assets/storage/sp1-macvg/mineblocks/"
     },
     {
       "id": 146,
       "name": "Minecraft 1.5",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/minecraft-15/splash.jpeg",
-      "game": "https://g1.s.mjevents.org/minecraft-15/"
+      "img": "/assets/storage/sp1-macvg/minecraft-15/splash.jpeg",
+      "game": "/assets/storage/sp1-macvg/minecraft-15/"
     },
     {
       "id": 147,
       "name": "Minecraft 1.8",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/minecraft-18/splash.png",
-      "game": "https://g1.s.mjevents.org/minecraft-18/"
+      "img": "/assets/storage/sp1-macvg/minecraft-18/splash.png",
+      "game": "/assets/storage/sp1-macvg/minecraft-18/"
     },
     {
       "id": 148,
       "name": "Minecraft Classic",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/minecraft-classic/pack.png",
-      "game": "https://g1.s.mjevents.org/minecraft-classic/"
+      "img": "/assets/storage/sp1-macvg/minecraft-classic/pack.png",
+      "game": "/assets/storage/sp1-macvg/minecraft-classic/"
     },
     {
       "id": 149,
       "name": "Minecraft Classic Hacks",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/minecraftbeta/bg_main.png",
-      "game": "https://g1.s.mjevents.org/minecraftbeta/"
+      "img": "/assets/storage/sp1-macvg/minecraftbeta/bg_main.png",
+      "game": "/assets/storage/sp1-macvg/minecraftbeta/"
     },
     {
       "id": 152,
       "name": "Missiles",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/missiles/miss.png",
-      "game": "https://g1.s.mjevents.org/missiles/"
+      "img": "/assets/storage/sp1-macvg/missiles/miss.png",
+      "game": "/assets/storage/sp1-macvg/missiles/"
     },
     {
       "id": 153,
       "name": "Moto X3M",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/motox3m/splash.jpg",
-      "game": "https://g1.s.mjevents.org/motox3m/"
+      "img": "/assets/storage/sp1-macvg/motox3m/splash.jpg",
+      "game": "/assets/storage/sp1-macvg/motox3m/"
     },
     {
       "id": 154,
       "name": "Moto X3M 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/motox3m2/splash.jpg",
-      "game": "https://g1.s.mjevents.org/motox3m2/"
+      "img": "/assets/storage/sp1-macvg/motox3m2/splash.jpg",
+      "game": "/assets/storage/sp1-macvg/motox3m2/"
     },
     {
       "id": 155,
       "name": "Moto X3M Pool",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/motox3m-pool/splash.jpg",
-      "game": "https://g1.s.mjevents.org/motox3m-pool/"
+      "img": "/assets/storage/sp1-macvg/motox3m-pool/splash.jpg",
+      "game": "/assets/storage/sp1-macvg/motox3m-pool/"
     },
     {
       "id": 156,
       "name": "Moto X3M Spooky",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/motox3m-spooky/splash.jpeg",
-      "game": "https://g1.s.mjevents.org/motox3m-spooky/"
+      "img": "/assets/storage/sp1-macvg/motox3m-spooky/splash.jpeg",
+      "game": "/assets/storage/sp1-macvg/motox3m-spooky/"
     },
     {
       "id": 157,
       "name": "Moto X3M Winter",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/motox3m-winter/download.jpeg",
-      "game": "https://g1.s.mjevents.org/motox3m-winter/"
+      "img": "/assets/storage/sp1-macvg/motox3m-winter/download.jpeg",
+      "game": "/assets/storage/sp1-macvg/motox3m-winter/"
     },
     {
       "id": 159,
       "name": "n-gon",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/n-gon/bot.png",
-      "game": "https://g1.s.mjevents.org/n-gon/"
+      "img": "/assets/storage/sp1-macvg/n-gon/bot.png",
+      "game": "/assets/storage/sp1-macvg/n-gon/"
     },
     {
       "id": 161,
       "name": "Ninja vs Evil Corp",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/ninjavsevilcorp/splash.png",
-      "game": "https://g1.s.mjevents.org/ninjavsevilcorp/"
+      "img": "/assets/storage/sp1-macvg/ninjavsevilcorp/splash.png",
+      "game": "/assets/storage/sp1-macvg/ninjavsevilcorp/"
     },
     {
       "id": 163,
       "name": "NS-Shaft",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/ns-shaft/favicon.png",
-      "game": "https://g1.s.mjevents.org/ns-shaft/"
+      "img": "/assets/storage/sp1-macvg/ns-shaft/favicon.png",
+      "game": "/assets/storage/sp1-macvg/ns-shaft/"
     },
     {
       "id": 164,
       "name": "Offline Paradise",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/OfflineParadise/assets/icon.jpeg",
-      "game": "https://g1.s.mjevents.org/OfflineParadise/"
+      "img": "/assets/storage/sp1-macvg/OfflineParadise/assets/icon.jpeg",
+      "game": "/assets/storage/sp1-macvg/OfflineParadise/"
     },
     {
       "id": 165,
       "name": "Om Nom Bounce",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/om-bounce/assets/icon.jpeg",
-      "game": "https://g1.s.mjevents.org/om-bounce/"
+      "img": "/assets/storage/sp1-macvg/om-bounce/assets/icon.jpeg",
+      "game": "/assets/storage/sp1-macvg/om-bounce/"
     },
     {
       "id": 308,
       "name": "Paper Minecraft",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/paper-minecraft/PaperMinecraft.png",
-      "game": "https://g1.s.mjevents.org/paper-minecraft/"
+      "img": "/assets/storage/sp1-macvg/paper-minecraft/PaperMinecraft.png",
+      "game": "/assets/storage/sp1-macvg/paper-minecraft/"
     },
     {
       "id": 309,
       "name": "P.Craft",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/pcraft/PCraft.png",
-      "game": "https://g1.s.mjevents.org/pcraft/"
+      "img": "/assets/storage/sp1-macvg/pcraft/PCraft.png",
+      "game": "/assets/storage/sp1-macvg/pcraft/"
     },
     {
       "id": 171,
       "name": "Papery Planes",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/papery-planes/splash.jpg",
-      "game": "https://g1.s.mjevents.org/papery-planes/"
+      "img": "/assets/storage/sp1-macvg/papery-planes/splash.jpg",
+      "game": "/assets/storage/sp1-macvg/papery-planes/"
     },
     {
       "id": 173,
       "name": "Pixel Gun Survival",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/pixel-gun-survival/512x512.png",
-      "game": "https://g1.s.mjevents.org/pixel-gun-survival/"
+      "img": "/assets/storage/sp1-macvg/pixel-gun-survival/512x512.png",
+      "game": "/assets/storage/sp1-macvg/pixel-gun-survival/"
     },
     {
       "id": 174,
       "name": "PolyBranch",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/polybranch/img/pic1.png",
-      "game": "https://g1.s.mjevents.org/polybranch/"
+      "img": "/assets/storage/sp1-macvg/polybranch/img/pic1.png",
+      "game": "/assets/storage/sp1-macvg/polybranch/"
     },
     {
       "id": 178,
       "name": "Protektor",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/protektor/splash.jpg",
-      "game": "https://g1.s.mjevents.org/protektor/"
+      "img": "/assets/storage/sp1-macvg/protektor/splash.jpg",
+      "game": "/assets/storage/sp1-macvg/protektor/"
     },
     {
       "id": 192,
       "name": "Rolling Forests",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/rolling-forests/icon.png",
-      "game": "https://g1.s.mjevents.org/rolling-forests/"
+      "img": "/assets/storage/sp1-macvg/rolling-forests/icon.png",
+      "game": "/assets/storage/sp1-macvg/rolling-forests/"
     },
     {
       "id": 193,
       "name": "Rolly Vortex",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/rolly-vortex/icon-256.png",
-      "game": "https://g1.s.mjevents.org/rolly-vortex/"
+      "img": "/assets/storage/sp1-macvg/rolly-vortex/icon-256.png",
+      "game": "/assets/storage/sp1-macvg/rolly-vortex/"
     },
     {
       "id": 194,
       "name": "Rooftop Snipers",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/rooftop-snipers/img/thumb.png",
-      "game": "https://g1.s.mjevents.org/rooftop-snipers/"
+      "img": "/assets/storage/sp1-macvg/rooftop-snipers/img/thumb.png",
+      "game": "/assets/storage/sp1-macvg/rooftop-snipers/"
     },
     {
       "id": 201,
       "name": "SHUTTLEDECK",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/shuttledeck/splash.png",
-      "game": "https://g1.s.mjevents.org/shuttledeck/"
+      "img": "/assets/storage/sp1-macvg/shuttledeck/splash.png",
+      "game": "/assets/storage/sp1-macvg/shuttledeck/"
     },
     {
       "id": 370,
       "name": "Skibidi Strike",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/skibidi-strike/logo.jpg",
-      "game": "https://g1.s.mjevents.org/skibidi-strike/"
+      "img": "/assets/storage/sp1-macvg/skibidi-strike/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/skibidi-strike/"
     },
     {
       "id": 205,
       "name": "Slope",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/slope/slope4.jpeg",
-      "game": "https://g1.s.mjevents.org/slope/"
+      "img": "/assets/storage/sp1-macvg/slope/slope4.jpeg",
+      "game": "/assets/storage/sp1-macvg/slope/"
     },
     {
       "id": 206,
       "name": "Slope 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/slope-2/slope-2-logo.png",
-      "game": "https://g1.s.mjevents.org/slope-2/"
+      "img": "/assets/storage/sp1-macvg/slope-2/slope-2-logo.png",
+      "game": "/assets/storage/sp1-macvg/slope-2/"
     },
     {
       "id": 207,
       "name": "Slope Ball",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/slope-ball/splash.png",
-      "game": "https://g1.s.mjevents.org/slope-ball/"
+      "img": "/assets/storage/sp1-macvg/slope-ball/splash.png",
+      "game": "/assets/storage/sp1-macvg/slope-ball/"
     },
     {
       "id": 208,
       "name": "Super Mario 64",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/sm64/logo.png",
-      "game": "https://g1.s.mjevents.org/sm64/"
+      "img": "/assets/storage/sp1-macvg/sm64/logo.png",
+      "game": "/assets/storage/sp1-macvg/sm64/"
     },
     {
       "id": 210,
       "name": "Smoking Barrels",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/smokingbarrels/smokingbarrels.jpg",
-      "game": "https://g1.s.mjevents.org/smokingbarrels/"
+      "img": "/assets/storage/sp1-macvg/smokingbarrels/smokingbarrels.jpg",
+      "game": "/assets/storage/sp1-macvg/smokingbarrels/"
     },
     {
       "id": 322,
       "name": "Snow Rider 3D",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/snow-ride/logo.jpg",
-      "game": "https://g1.s.mjevents.org/snow-ride/"
+      "img": "/assets/storage/sp1-macvg/snow-ride/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/snow-ride/"
     },
     {
       "id": 214,
       "name": "Soldier Legend",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/soldier-legend/images/splash.jpeg",
-      "game": "https://g1.s.mjevents.org/soldier-legend/"
+      "img": "/assets/storage/sp1-macvg/soldier-legend/images/splash.jpeg",
+      "game": "/assets/storage/sp1-macvg/soldier-legend/"
     },
     {
       "id": 219,
       "name": "Space Garden",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/spacegarden/spl.png",
-      "game": "https://g1.s.mjevents.org/spacegarden/"
+      "img": "/assets/storage/sp1-macvg/spacegarden/spl.png",
+      "game": "/assets/storage/sp1-macvg/spacegarden/"
     },
     {
       "id": 220,
       "name": "Stack",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/stack/stack.png",
-      "game": "https://g1.s.mjevents.org/stack/"
+      "img": "/assets/storage/sp1-macvg/stack/stack.png",
+      "game": "/assets/storage/sp1-macvg/stack/"
     },
     {
       "id": 221,
       "name": "Stack Bump 3D",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/stack-bump-3d/thumbnail.jpg",
-      "game": "https://g1.s.mjevents.org/stack-bump-3d/"
+      "img": "/assets/storage/sp1-macvg/stack-bump-3d/thumbnail.jpg",
+      "game": "/assets/storage/sp1-macvg/stack-bump-3d/"
     },
     {
       "id": 223,
       "name": "Station 141",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/station-141/75wxYs.png",
-      "game": "https://g1.s.mjevents.org/station-141/"
+      "img": "/assets/storage/sp1-macvg/station-141/75wxYs.png",
+      "game": "/assets/storage/sp1-macvg/station-141/"
     },
     {
       "id": 225,
       "name": "Stick Archers",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/stick-archers/splash.jpg",
-      "game": "https://g1.s.mjevents.org/stick-archers/"
+      "img": "/assets/storage/sp1-macvg/stick-archers/splash.jpg",
+      "game": "/assets/storage/sp1-macvg/stick-archers/"
     },
     {
       "id": 226,
       "name": "Stick Duel Battle",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/stick-duel-battle/512x512.jpg",
-      "game": "https://g1.s.mjevents.org/stick-duel-battle/"
+      "img": "/assets/storage/sp1-macvg/stick-duel-battle/512x512.jpg",
+      "game": "/assets/storage/sp1-macvg/stick-duel-battle/"
     },
     {
       "id": 227,
       "name": "Stick Merge",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/stick-merge/splash.png",
-      "game": "https://g1.s.mjevents.org/stick-merge/"
+      "img": "/assets/storage/sp1-macvg/stick-merge/splash.png",
+      "game": "/assets/storage/sp1-macvg/stick-merge/"
     },
     {
       "id": 228,
       "name": "Stickman Boost",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/stickman-boost/base/img1.jpg",
-      "game": "https://g1.s.mjevents.org/stickman-boost/"
+      "img": "/assets/storage/sp1-macvg/stickman-boost/base/img1.jpg",
+      "game": "/assets/storage/sp1-macvg/stickman-boost/"
     },
     {
       "id": 234,
       "name": "Subway Surfers",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/subway-surfers/img/splash.jpg",
-      "game": "https://g1.s.mjevents.org/subway-surfers/"
+      "img": "/assets/storage/sp1-macvg/subway-surfers/img/splash.jpg",
+      "game": "/assets/storage/sp1-macvg/subway-surfers/"
     },
     {
       "id": 235,
       "name": "Subway Surfers New York",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/subway-surfers-ny/NewYorkIcon.png",
-      "game": "https://g1.s.mjevents.org/subway-surfers-ny/"
+      "img": "/assets/storage/sp1-macvg/subway-surfers-ny/NewYorkIcon.png",
+      "game": "/assets/storage/sp1-macvg/subway-surfers-ny/"
     },
     {
       "id": 236,
       "name": "Superhot",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/superhot/hot.jpg",
-      "game": "https://g1.s.mjevents.org/superhot/"
+      "img": "/assets/storage/sp1-macvg/superhot/hot.jpg",
+      "game": "/assets/storage/sp1-macvg/superhot/"
     },
     {
       "id": 237,
       "name": "Super Mario Construct",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/supermarioconstruct/media/icons/icon-128.png",
-      "game": "https://g1.s.mjevents.org/supermarioconstruct/"
+      "img": "/assets/storage/sp1-macvg/supermarioconstruct/media/icons/icon-128.png",
+      "game": "/assets/storage/sp1-macvg/supermarioconstruct/"
     },
     {
       "id": 241,
       "name": "Synesthesia",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/synesthesia/index.splash.png",
-      "game": "https://g1.s.mjevents.org/synesthesia/"
+      "img": "/assets/storage/sp1-macvg/synesthesia/index.splash.png",
+      "game": "/assets/storage/sp1-macvg/synesthesia/"
     },
     {
       "id": 242,
       "name": "Tactical Weapon Pack 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/tactical-weapon-pack-2/splash.jpg",
-      "game": "https://g1.s.mjevents.org/tactical-weapon-pack-2/"
+      "img": "/assets/storage/sp1-macvg/tactical-weapon-pack-2/splash.jpg",
+      "game": "/assets/storage/sp1-macvg/tactical-weapon-pack-2/"
     },
     {
       "id": 243,
       "name": "Tactical Assassin 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/tacticalassasin2/tacticalassassin2.png",
-      "game": "https://g1.s.mjevents.org/tacticalassasin2/"
+      "img": "/assets/storage/sp1-macvg/tacticalassasin2/tacticalassassin2.png",
+      "game": "/assets/storage/sp1-macvg/tacticalassasin2/"
     },
     {
       "id": 316,
       "name": "Tag",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/tag/logo.jpg",
-      "game": "https://g1.s.mjevents.org/tag/"
+      "img": "/assets/storage/sp1-macvg/tag/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/tag/"
     },
     {
       "id": 244,
       "name": "Tank Trouble 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/tank-trouble-2/tank.jpeg",
-      "game": "https://g1.s.mjevents.org/tank-trouble-2/"
+      "img": "/assets/storage/sp1-macvg/tank-trouble-2/tank.jpeg",
+      "game": "/assets/storage/sp1-macvg/tank-trouble-2/"
     },
     {
       "id": 245,
       "name": "Tanuki Sunset",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/tanuki-sunset/img/cover.png",
-      "game": "https://g1.s.mjevents.org/tanuki-sunset/"
+      "img": "/assets/storage/sp1-macvg/tanuki-sunset/img/cover.png",
+      "game": "/assets/storage/sp1-macvg/tanuki-sunset/"
     },
     {
       "id": 246,
       "name": "Temple Run 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/temple-run-2/img/og-icon.png",
-      "game": "https://g1.s.mjevents.org/temple-run-2/"
+      "img": "/assets/storage/sp1-macvg/temple-run-2/img/og-icon.png",
+      "game": "/assets/storage/sp1-macvg/temple-run-2/"
     },
     {
       "id": 312,
       "name": "Terraira",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/terraira/Terraira.png",
-      "game": "https://g1.s.mjevents.org/terraira/"
+      "img": "/assets/storage/sp1-macvg/terraira/Terraira.png",
+      "game": "/assets/storage/sp1-macvg/terraira/"
     },
     {
       "id": 252,
       "name": "This Is The Only Level",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/thisistheonlylevel/thisistheonlylevel.png",
-      "game": "https://g1.s.mjevents.org/thisistheonlylevel/"
+      "img": "/assets/storage/sp1-macvg/thisistheonlylevel/thisistheonlylevel.png",
+      "game": "/assets/storage/sp1-macvg/thisistheonlylevel/"
     },
     {
       "id": 253,
       "name": "Tiny Fishing",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/tiny-fishing/thumb.png",
-      "game": "https://g1.s.mjevents.org/tiny-fishing/"
+      "img": "/assets/storage/sp1-macvg/tiny-fishing/thumb.png",
+      "game": "/assets/storage/sp1-macvg/tiny-fishing/"
     },
     {
       "id": 314,
       "name": "Trimps",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/https://macvg-games.github.io/action-games/trimps/Trimps.png",
-      "game": "https://g2.s.mjevents.org/https://macvg-games.github.io/action-games/trimps/"
+      "img": "/assets/storage/sp2-macvg/https://macvg-games.github.io/action-games/trimps/Trimps.png",
+      "game": "/assets/storage/sp2-macvg/https://macvg-games.github.io/action-games/trimps/"
     },
     {
       "id": 257,
       "name": "Tube Jumpers",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/tube-jumpers/img/shark.jpg",
-      "game": "https://g1.s.mjevents.org/tube-jumpers/"
+      "img": "/assets/storage/sp1-macvg/tube-jumpers/img/shark.jpg",
+      "game": "/assets/storage/sp1-macvg/tube-jumpers/"
     },
     {
       "id": 258,
       "name": "Tunnel Rush",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/tunnel-rush/img/tunnel.jpg",
-      "game": "https://g1.s.mjevents.org/tunnel-rush/"
+      "img": "/assets/storage/sp1-macvg/tunnel-rush/img/tunnel.jpg",
+      "game": "/assets/storage/sp1-macvg/tunnel-rush/"
     },
     {
       "id": 262,
       "name": "Vex 3",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/vex3/vex3.png",
-      "game": "https://g1.s.mjevents.org/vex3/"
+      "img": "/assets/storage/sp1-macvg/vex3/vex3.png",
+      "game": "/assets/storage/sp1-macvg/vex3/"
     },
     {
       "id": 263,
       "name": "Vex 4",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/vex4/vex4.png",
-      "game": "https://g1.s.mjevents.org/vex4/"
+      "img": "/assets/storage/sp1-macvg/vex4/vex4.png",
+      "game": "/assets/storage/sp1-macvg/vex4/"
     },
     {
       "id": 264,
       "name": "Vex 5",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/vex5/vex.jpeg",
-      "game": "https://g1.s.mjevents.org/vex5/"
+      "img": "/assets/storage/sp1-macvg/vex5/vex.jpeg",
+      "game": "/assets/storage/sp1-macvg/vex5/"
     },
     {
       "id": 265,
       "name": "Vex 6",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/vex6/assets/icon.jpeg",
-      "game": "https://g1.s.mjevents.org/vex6/"
+      "img": "/assets/storage/sp1-macvg/vex6/assets/icon.jpeg",
+      "game": "/assets/storage/sp1-macvg/vex6/"
     },
     {
       "id": 266,
       "name": "Vex 7",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/vex7/assets/icon.jpeg",
-      "game": "https://g1.s.mjevents.org/vex7/"
+      "img": "/assets/storage/sp1-macvg/vex7/assets/icon.jpeg",
+      "game": "/assets/storage/sp1-macvg/vex7/"
     },
     {
       "id": 326,
       "name": "Vex 8",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/vex8/assets/icon.png",
-      "game": "https://g1.s.mjevents.org/vex8/"
+      "img": "/assets/storage/sp1-macvg/vex8/assets/icon.png",
+      "game": "/assets/storage/sp1-macvg/vex8/"
     },
     {
       "id": 273,
       "name": "Wolfenstein 3D",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/wolf3d/art/wolf3d.png",
-      "game": "https://g1.s.mjevents.org/wolf3d/"
+      "img": "/assets/storage/sp1-macvg/wolf3d/art/wolf3d.png",
+      "game": "/assets/storage/sp1-macvg/wolf3d/"
     },
     {
       "id": 275,
       "name": "World's Hardest Game",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/worlds-hardest-game/images/splash.jpg",
-      "game": "https://g1.s.mjevents.org/worlds-hardest-game/"
+      "img": "/assets/storage/sp1-macvg/worlds-hardest-game/images/splash.jpg",
+      "game": "/assets/storage/sp1-macvg/worlds-hardest-game/"
     },
     {
       "id": 276,
       "name": "World's Hardest Game 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/worlds-hardest-game-2/the-worlds-hardest-game-2.jpg",
-      "game": "https://g1.s.mjevents.org/worlds-hardest-game-2/"
+      "img": "/assets/storage/sp1-macvg/worlds-hardest-game-2/the-worlds-hardest-game-2.jpg",
+      "game": "/assets/storage/sp1-macvg/worlds-hardest-game-2/"
     },
     {
       "id": 13,
       "name": "Ages of Conflict",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/ages-of-conflict/splash.jpg",
-      "game": "https://g2.s.mjevents.org/ages-of-conflict/"
+      "img": "/assets/storage/sp2-macvg/ages-of-conflict/splash.jpg",
+      "game": "/assets/storage/sp2-macvg/ages-of-conflict/"
     },
     {
       "id": 24,
       "name": "Baldi's Basics",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/baldis-basics/splash.png",
-      "game": "https://g2.s.mjevents.org/baldis-basics/"
+      "img": "/assets/storage/sp2-macvg/baldis-basics/splash.png",
+      "game": "/assets/storage/sp2-macvg/baldis-basics/"
     },
     {
       "id": 29,
       "name": "Big Red Button",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/bigredbutton/bigredbutton.png",
-      "game": "https://g2.s.mjevents.org/bigredbutton/"
+      "img": "/assets/storage/sp2-macvg/bigredbutton/bigredbutton.png",
+      "game": "/assets/storage/sp2-macvg/bigredbutton/"
     },
     {
       "id": 295,
       "name": "Bitcoin Clicker",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/bitcoin-clicker/BitcoinClicker.png",
-      "game": "https://g2.s.mjevents.org/bitcoin-clicker/"
+      "img": "/assets/storage/sp2-macvg/bitcoin-clicker/BitcoinClicker.png",
+      "game": "/assets/storage/sp2-macvg/bitcoin-clicker/"
     },
     {
       "id": 351,
       "name": "Bottle Flip",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/bottle-flip/icons/icon-256.png",
-      "game": "https://g2.s.mjevents.org/bottle-flip/"
+      "img": "/assets/storage/sp2-macvg/bottle-flip/icons/icon-256.png",
+      "game": "/assets/storage/sp2-macvg/bottle-flip/"
     },
     {
       "id": 358,
       "name": "Clicker Heroes",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/clicker-heroes/thumb.jpg",
-      "game": "https://g2.s.mjevents.org/clicker-heroes/"
+      "img": "/assets/storage/sp2-macvg/clicker-heroes/thumb.jpg",
+      "game": "/assets/storage/sp2-macvg/clicker-heroes/"
     },
     {
       "id": 53,
       "name": "Cookie Clicker",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/cookie-clicker/cookie1.jpeg",
-      "game": "https://g2.s.mjevents.org/cookie-clicker/"
+      "img": "/assets/storage/sp2-macvg/cookie-clicker/cookie1.jpeg",
+      "game": "/assets/storage/sp2-macvg/cookie-clicker/"
     },
     {
       "id": 54,
       "name": "Core Ball",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/core-ball/pr_source.png",
-      "game": "https://g2.s.mjevents.org/core-ball/"
+      "img": "/assets/storage/sp2-macvg/core-ball/pr_source.png",
+      "game": "/assets/storage/sp2-macvg/core-ball/"
     },
     {
       "id": 58,
       "name": "CS:GO Clicker",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/csgo-clicker/images/case1.png",
-      "game": "https://g2.s.mjevents.org/csgo-clicker/"
+      "img": "/assets/storage/sp2-macvg/csgo-clicker/images/case1.png",
+      "game": "/assets/storage/sp2-macvg/csgo-clicker/"
     },
     {
       "id": 360,
       "name": "Dinosaurs Merge Master",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/dino-merge/thumb.jpg",
-      "game": "https://g2.s.mjevents.org/dino-merge/"
+      "img": "/assets/storage/sp2-macvg/dino-merge/thumb.jpg",
+      "game": "/assets/storage/sp2-macvg/dino-merge/"
     },
     {
       "id": 70,
       "name": "Doge Miner",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/DogeMiner/img/dogeminer_300x300.png",
-      "game": "https://g2.s.mjevents.org/DogeMiner/"
+      "img": "/assets/storage/sp2-macvg/DogeMiner/img/dogeminer_300x300.png",
+      "game": "/assets/storage/sp2-macvg/DogeMiner/"
     },
     {
       "id": 71,
       "name": "Doodle Jump",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/doodle-jump/doodle.png",
-      "game": "https://g2.s.mjevents.org/doodle-jump/"
+      "img": "/assets/storage/sp2-macvg/doodle-jump/doodle.png",
+      "game": "/assets/storage/sp2-macvg/doodle-jump/"
     },
     {
       "id": 76,
       "name": "Duck Life",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/ducklife/DuckLife.png",
-      "game": "https://g2.s.mjevents.org/ducklife/"
+      "img": "/assets/storage/sp2-macvg/ducklife/DuckLife.png",
+      "game": "/assets/storage/sp2-macvg/ducklife/"
     },
     {
       "id": 77,
       "name": "Duck Life 2",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/ducklife-2/DuckLife2.png",
-      "game": "https://g2.s.mjevents.org/ducklife-2/"
+      "img": "/assets/storage/sp2-macvg/ducklife-2/DuckLife2.png",
+      "game": "/assets/storage/sp2-macvg/ducklife-2/"
     },
     {
       "id": 78,
       "name": "Duck Life 3",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/ducklife-3/DuckLife3.png",
-      "game": "https://g2.s.mjevents.org/ducklife-3/"
+      "img": "/assets/storage/sp2-macvg/ducklife-3/DuckLife3.png",
+      "game": "/assets/storage/sp2-macvg/ducklife-3/"
     },
     {
       "id": 79,
       "name": "Duck Life 4",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/ducklife4/splash.jpg",
-      "game": "https://g2.s.mjevents.org/ducklife4/"
+      "img": "/assets/storage/sp2-macvg/ducklife4/splash.jpg",
+      "game": "/assets/storage/sp2-macvg/ducklife4/"
     },
     {
       "id": 82,
       "name": "Eel Slap",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/eel-slap/eel-slap.png",
-      "game": "https://g2.s.mjevents.org/eel-slap/"
+      "img": "/assets/storage/sp2-macvg/eel-slap/eel-slap.png",
+      "game": "/assets/storage/sp2-macvg/eel-slap/"
     },
     {
       "id": 300,
       "name": "Elastic Face",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/elastic-face/ElasticFace.png",
-      "game": "https://g2.s.mjevents.org/elastic-face/"
+      "img": "/assets/storage/sp2-macvg/elastic-face/ElasticFace.png",
+      "game": "/assets/storage/sp2-macvg/elastic-face/"
     },
     {
       "id": 91,
       "name": "Fake Virus",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/fake-virus/icon.png",
-      "game": "https://g2.s.mjevents.org/fake-virus/"
+      "img": "/assets/storage/sp2-macvg/fake-virus/icon.png",
+      "game": "/assets/storage/sp2-macvg/fake-virus/"
     },
     {
       "id": 94,
       "name": "Flappy Bird",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/flappy-bird/assets/thumb.png",
-      "game": "https://g2.s.mjevents.org/flappy-bird/"
+      "img": "/assets/storage/sp2-macvg/flappy-bird/assets/thumb.png",
+      "game": "/assets/storage/sp2-macvg/flappy-bird/"
     },
     {
       "id": 380,
       "name": "Fruit Ninja",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/fruit-ninja/logo.jpg",
-      "game": "https://g2.s.mjevents.org/fruit-ninja/"
+      "img": "/assets/storage/sp2-macvg/fruit-ninja/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/fruit-ninja/"
     },
     {
       "id": 386,
       "name": "Guess the Kitty",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/guess-kitty/logo.jpg",
-      "game": "https://g2.s.mjevents.org/guess-kitty/"
+      "img": "/assets/storage/sp2-macvg/guess-kitty/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/guess-kitty/"
     },
     {
       "id": 302,
       "name": "Gura Temberine",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/gura-temberine/GuraTamberine.png",
-      "game": "https://g2.s.mjevents.org/gura-temberine/"
+      "img": "/assets/storage/sp2-macvg/gura-temberine/GuraTamberine.png",
+      "game": "/assets/storage/sp2-macvg/gura-temberine/"
     },
     {
       "id": 116,
       "name": "Hacker Typer",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/hackertype/logo192.png",
-      "game": "https://g2.s.mjevents.org/hackertype/"
+      "img": "/assets/storage/sp2-macvg/hackertype/logo192.png",
+      "game": "/assets/storage/sp2-macvg/hackertype/"
     },
     {
       "id": 391,
       "name": "Hop Pop It",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/hop-pop-it/logo.jpg",
-      "game": "https://g2.s.mjevents.org/hop-pop-it/"
+      "img": "/assets/storage/sp2-macvg/hop-pop-it/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/hop-pop-it/"
     },
     {
       "id": 125,
       "name": "Idle Breakout",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/idle-breakout/img/thumbnail.png",
-      "game": "https://g2.s.mjevents.org/idle-breakout/"
+      "img": "/assets/storage/sp2-macvg/idle-breakout/img/thumbnail.png",
+      "game": "/assets/storage/sp2-macvg/idle-breakout/"
     },
     {
       "id": 335,
       "name": "Idle Mining Empire",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/idle-mining/logo.jpg",
-      "game": "https://g2.s.mjevents.org/idle-mining/"
+      "img": "/assets/storage/sp2-macvg/idle-mining/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/idle-mining/"
     },
     {
       "id": 394,
       "name": "Idle Restaurants",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/idle-restaurants/logo.jpg",
-      "game": "https://g2.s.mjevents.org/idle-restaurants/"
+      "img": "/assets/storage/sp2-macvg/idle-restaurants/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/idle-restaurants/"
     },
     {
       "id": 133,
       "name": "Kitten Cannon",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/kittencannon/kittencannon.png",
-      "game": "https://g2.s.mjevents.org/kittencannon/"
+      "img": "/assets/storage/sp2-macvg/kittencannon/kittencannon.png",
+      "game": "/assets/storage/sp2-macvg/kittencannon/"
     },
     {
       "id": 136,
       "name": "Learn To Fly",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/learntofly/learntofly.png",
-      "game": "https://g2.s.mjevents.org/learntofly/"
+      "img": "/assets/storage/sp2-macvg/learntofly/learntofly.png",
+      "game": "/assets/storage/sp2-macvg/learntofly/"
     },
     {
       "id": 396,
       "name": "Little Alchemy 2",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/little-alchemy-2/logo.png",
-      "game": "https://g2.s.mjevents.org/little-alchemy-2/"
+      "img": "/assets/storage/sp2-macvg/little-alchemy-2/logo.png",
+      "game": "/assets/storage/sp2-macvg/little-alchemy-2/"
     },
     {
       "id": 144,
       "name": "Merge Round Racers",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/merge-round-racers/splash.png",
-      "game": "https://g2.s.mjevents.org/merge-round-racers/"
+      "img": "/assets/storage/sp2-macvg/merge-round-racers/splash.png",
+      "game": "/assets/storage/sp2-macvg/merge-round-racers/"
     },
     {
       "id": 398,
       "name": "Minecraft Case Simulator",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/minecraft-case/logo.jpg",
-      "game": "https://g2.s.mjevents.org/minecraft-case/"
+      "img": "/assets/storage/sp2-macvg/minecraft-case/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/minecraft-case/"
     },
     {
       "id": 306,
       "name": "Nut Simulator",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/nut-simulator/NutSimulator.png",
-      "game": "https://g2.s.mjevents.org/nut-simulator/"
+      "img": "/assets/storage/sp2-macvg/nut-simulator/NutSimulator.png",
+      "game": "/assets/storage/sp2-macvg/nut-simulator/"
     },
     {
       "id": 172,
       "name": "Particle Clicker",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/particle-clicker/assets/mobile/original.png",
-      "game": "https://g2.s.mjevents.org/particle-clicker/"
+      "img": "/assets/storage/sp2-macvg/particle-clicker/assets/mobile/original.png",
+      "game": "/assets/storage/sp2-macvg/particle-clicker/"
     },
     {
       "id": 179,
       "name": "Push The Square",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/push-the-square/img/splash.png",
-      "game": "https://g2.s.mjevents.org/push-the-square/"
+      "img": "/assets/storage/sp2-macvg/push-the-square/img/splash.png",
+      "game": "/assets/storage/sp2-macvg/push-the-square/"
     },
     {
       "id": 311,
       "name": "Rise Higher",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/rise-higher/RiseHigher.png",
-      "game": "https://g2.s.mjevents.org/rise-higher/"
+      "img": "/assets/storage/sp2-macvg/rise-higher/RiseHigher.png",
+      "game": "/assets/storage/sp2-macvg/rise-higher/"
     },
     {
       "id": 216,
       "name": "Sort The Court",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/sort-the-court/img/splash.png",
-      "game": "https://g2.s.mjevents.org/sort-the-court/"
+      "img": "/assets/storage/sp2-macvg/sort-the-court/img/splash.png",
+      "game": "/assets/storage/sp2-macvg/sort-the-court/"
     },
     {
       "id": 218,
       "name": "Space Company",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/space-company/Icons/SpaceCompanyFavicon.png",
-      "game": "https://g2.s.mjevents.org/space-company/"
+      "img": "/assets/storage/sp2-macvg/space-company/Icons/SpaceCompanyFavicon.png",
+      "game": "/assets/storage/sp2-macvg/space-company/"
     },
     {
       "id": 256,
       "name": "Townscaper",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/townscaper/img/cover.jpg",
-      "game": "https://g2.s.mjevents.org/townscaper/"
+      "img": "/assets/storage/sp2-macvg/townscaper/img/cover.jpg",
+      "game": "/assets/storage/sp2-macvg/townscaper/"
     },
     {
       "id": 261,
       "name": "VELOCE",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/veloce/qN6zkD.png",
-      "game": "https://g2.s.mjevents.org/veloce/"
+      "img": "/assets/storage/sp2-macvg/veloce/qN6zkD.png",
+      "game": "/assets/storage/sp2-macvg/veloce/"
     },
     {
       "id": 269,
       "name": "Weave Silk",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/weavesilk/thumb.png",
-      "game": "https://g2.s.mjevents.org/weavesilk/"
+      "img": "/assets/storage/sp2-macvg/weavesilk/thumb.png",
+      "game": "/assets/storage/sp2-macvg/weavesilk/"
     },
     {
       "id": 315,
       "name": "We Become What We Behold",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/wbwwb/WeBecomeWhatWeBehold.png",
-      "game": "https://g2.s.mjevents.org/wbwwb/"
+      "img": "/assets/storage/sp2-macvg/wbwwb/WeBecomeWhatWeBehold.png",
+      "game": "/assets/storage/sp2-macvg/wbwwb/"
     },
     {
       "id": 270,
       "name": "WebGL Fluid Sim",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/webgl-fluid-simulation/logo.png",
-      "game": "https://g2.s.mjevents.org/webgl-fluid-simulation/"
+      "img": "/assets/storage/sp2-macvg/webgl-fluid-simulation/logo.png",
+      "game": "/assets/storage/sp2-macvg/webgl-fluid-simulation/"
     },
     {
       "id": 339,
       "name": "1 on 1 Soccer",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/1v1-soccer/logo.jpg",
-      "game": "https://g3.s.mjevents.org/1v1-soccer/"
+      "img": "/assets/storage/sp3-macvg/1v1-soccer/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/1v1-soccer/"
     },
     {
       "id": 328,
       "name": "3D Bowling",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/3d-bowling/logo.jpg",
-      "game": "https://g3.s.mjevents.org/3d-bowling/"
+      "img": "/assets/storage/sp3-macvg/3d-bowling/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/3d-bowling/"
     },
     {
       "id": 331,
       "name": "8 Ball Pool",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/8-ball/tmp/8BallBilliardsClassicTeaser.jpg",
-      "game": "https://g3.s.mjevents.org/8-ball/"
+      "img": "/assets/storage/sp3-macvg/8-ball/tmp/8BallBilliardsClassicTeaser.jpg",
+      "game": "/assets/storage/sp3-macvg/8-ball/"
     },
     {
       "id": 11,
       "name": "Adrenaline Challenge",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/adrenalinechallenge/adrenalinechallenge.jpg",
-      "game": "https://g3.s.mjevents.org/adrenalinechallenge/"
+      "img": "/assets/storage/sp3-macvg/adrenalinechallenge/adrenalinechallenge.jpg",
+      "game": "/assets/storage/sp3-macvg/adrenalinechallenge/"
     },
     {
       "id": 12,
       "name": "Adventure Drivers",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/adventure-drivers/splash.png",
-      "game": "https://g3.s.mjevents.org/adventure-drivers/"
+      "img": "/assets/storage/sp3-macvg/adventure-drivers/splash.png",
+      "game": "/assets/storage/sp3-macvg/adventure-drivers/"
     },
     {
       "id": 18,
       "name": "Aquapark Slides",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/aquapark-slides/splash.png",
-      "game": "https://g3.s.mjevents.org/aquapark-slides/"
+      "img": "/assets/storage/sp3-macvg/aquapark-slides/splash.png",
+      "game": "/assets/storage/sp3-macvg/aquapark-slides/"
     },
     {
       "id": 345,
       "name": "Basket and Ball",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/basket-and-ball/logo.avif",
-      "game": "https://g3.s.mjevents.org/basket-and-ball/"
+      "img": "/assets/storage/sp3-macvg/basket-and-ball/logo.avif",
+      "game": "/assets/storage/sp3-macvg/basket-and-ball/"
     },
     {
       "id": 365,
       "name": "Basket Champs",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/basket-champs/logo.jpg",
-      "game": "https://g3.s.mjevents.org/basket-champs/"
+      "img": "/assets/storage/sp3-macvg/basket-champs/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/basket-champs/"
     },
     {
       "id": 26,
       "name": "Basketball Stars",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/basketball-stars/assets/images/basketball-stars.png",
-      "game": "https://g3.s.mjevents.org/basketball-stars/"
+      "img": "/assets/storage/sp3-macvg/basketball-stars/assets/images/basketball-stars.png",
+      "game": "/assets/storage/sp3-macvg/basketball-stars/"
     },
     {
       "id": 294,
       "name": "Basket Random",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/basket-random/BasketRandom.png",
-      "game": "https://g3.s.mjevents.org/basket-random/"
+      "img": "/assets/storage/sp3-macvg/basket-random/BasketRandom.png",
+      "game": "/assets/storage/sp3-macvg/basket-random/"
     },
     {
       "id": 412,
       "name": "Big Shot Boxing",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/big-shot-boxing/favicon.png",
-      "game": "https://g3.s.mjevents.org/big-shot-boxing/"
+      "img": "/assets/storage/sp3-macvg/big-shot-boxing/favicon.png",
+      "game": "/assets/storage/sp3-macvg/big-shot-boxing/"
     },
     {
       "id": 366,
       "name": "Biker Street",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/biker-street/logo.jpg",
-      "game": "https://g3.s.mjevents.org/biker-street/"
+      "img": "/assets/storage/sp3-macvg/biker-street/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/biker-street/"
     },
     {
       "id": 38,
       "name": "Boxing Random",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/boxing-random/512x512.jpg",
-      "game": "https://g3.s.mjevents.org/boxing-random/"
+      "img": "/assets/storage/sp3-macvg/boxing-random/512x512.jpg",
+      "game": "/assets/storage/sp3-macvg/boxing-random/"
     },
     {
       "id": 354,
       "name": "Car Rush",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/car-rush/thumb.png",
-      "game": "https://g3.s.mjevents.org/car-rush/"
+      "img": "/assets/storage/sp3-macvg/car-rush/thumb.png",
+      "game": "/assets/storage/sp3-macvg/car-rush/"
     },
     {
       "id": 44,
       "name": "Cars Simulator",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/cars-simulator/splash.png",
-      "game": "https://g3.s.mjevents.org/cars-simulator/"
+      "img": "/assets/storage/sp3-macvg/cars-simulator/splash.png",
+      "game": "/assets/storage/sp3-macvg/cars-simulator/"
     },
     {
       "id": 51,
       "name": "Cluster Rush",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/cluster-rush/splash.png",
-      "game": "https://g3.s.mjevents.org/cluster-rush/"
+      "img": "/assets/storage/sp3-macvg/cluster-rush/splash.png",
+      "game": "/assets/storage/sp3-macvg/cluster-rush/"
     },
     {
       "id": 320,
       "name": "Crazy Cars",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/crazy-cars/logo.jpg",
-      "game": "https://g3.s.mjevents.org/crazy-cars/"
+      "img": "/assets/storage/sp3-macvg/crazy-cars/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/crazy-cars/"
     },
     {
       "id": 74,
       "name": "Draw the Hill",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/draw-the-hill/icons/icon-512.png",
-      "game": "https://g3.s.mjevents.org/draw-the-hill/"
+      "img": "/assets/storage/sp3-macvg/draw-the-hill/icons/icon-512.png",
+      "game": "/assets/storage/sp3-macvg/draw-the-hill/"
     },
     {
       "id": 327,
       "name": "Drift Boss",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/drift-boss/drift-boss.png",
-      "game": "https://g3.s.mjevents.org/drift-boss/"
+      "img": "/assets/storage/sp3-macvg/drift-boss/drift-boss.png",
+      "game": "/assets/storage/sp3-macvg/drift-boss/"
     },
     {
       "id": 75,
       "name": "Drive Mad",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/drive-mad/logo.jpg",
-      "game": "https://g3.s.mjevents.org/drive-mad/"
+      "img": "/assets/storage/sp3-macvg/drive-mad/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/drive-mad/"
     },
     {
       "id": 80,
       "name": "Edge Let's Surf",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/edge-surf/splash.png",
-      "game": "https://g3.s.mjevents.org/edge-surf/"
+      "img": "/assets/storage/sp3-macvg/edge-surf/splash.png",
+      "game": "/assets/storage/sp3-macvg/edge-surf/"
     },
     {
       "id": 369,
       "name": "Eggy Car",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/eggy-car/logo.jpg",
-      "game": "https://g3.s.mjevents.org/eggy-car/"
+      "img": "/assets/storage/sp3-macvg/eggy-car/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/eggy-car/"
     },
     {
       "id": 371,
       "name": "Endless Truck",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/endless-truck/logo.jpg",
-      "game": "https://g3.s.mjevents.org/endless-truck/"
+      "img": "/assets/storage/sp3-macvg/endless-truck/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/endless-truck/"
     },
     {
       "id": 374,
       "name": "Football Brawl",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/football-brawl/logo.jpg",
-      "game": "https://g3.s.mjevents.org/football-brawl/"
+      "img": "/assets/storage/sp3-macvg/football-brawl/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/football-brawl/"
     },
     {
       "id": 375,
       "name": "Football Legends",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/football-legends/logo.jpg",
-      "game": "https://g3.s.mjevents.org/football-legends/"
+      "img": "/assets/storage/sp3-macvg/football-legends/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/football-legends/"
     },
     {
       "id": 376,
       "name": "Football Strike",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/football-strike/logo.jpg",
-      "game": "https://g3.s.mjevents.org/football-strike/"
+      "img": "/assets/storage/sp3-macvg/football-strike/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/football-strike/"
     },
     {
       "id": 378,
       "name": "Get On Top",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/get-on-top/logo.jpg",
-      "game": "https://g3.s.mjevents.org/get-on-top/"
+      "img": "/assets/storage/sp3-macvg/get-on-top/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/get-on-top/"
     },
     {
       "id": 389,
       "name": "Heads Arena",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/heads-arena/logo.jpg",
-      "game": "https://g3.s.mjevents.org/heads-arena/"
+      "img": "/assets/storage/sp3-macvg/heads-arena/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/heads-arena/"
     },
     {
       "id": 388,
       "name": "Head Soccer 2023",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/head-soccer/logo.jpg",
-      "game": "https://g3.s.mjevents.org/head-soccer/"
+      "img": "/assets/storage/sp3-macvg/head-soccer/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/head-soccer/"
     },
     {
       "id": 138,
       "name": "Madalin Stunt Cars 2",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/madalin-stunt-cars-2/img/logo.jpg",
-      "game": "https://g3.s.mjevents.org/madalin-stunt-cars-2/"
+      "img": "/assets/storage/sp3-macvg/madalin-stunt-cars-2/img/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/madalin-stunt-cars-2/"
     },
     {
       "id": 402,
       "name": "Moving Truck",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/moving-truck/logo.jpg",
-      "game": "https://g3.s.mjevents.org/moving-truck/"
+      "img": "/assets/storage/sp3-macvg/moving-truck/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/moving-truck/"
     },
     {
       "id": 361,
       "name": "Penalty Shooters 2",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/penalty-shooter-2/icon-256.png",
-      "game": "https://g3.s.mjevents.org/penalty-shooter-2/"
+      "img": "/assets/storage/sp3-macvg/penalty-shooter-2/icon-256.png",
+      "game": "/assets/storage/sp3-macvg/penalty-shooter-2/"
     },
     {
       "id": 184,
       "name": "Retro Bowl",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/retro-bowl/img/icon.jpg",
-      "game": "https://g3.s.mjevents.org/retro-bowl/"
+      "img": "/assets/storage/sp3-macvg/retro-bowl/img/icon.jpg",
+      "game": "/assets/storage/sp3-macvg/retro-bowl/"
     },
     {
       "id": 199,
       "name": "Scrap Metal 3",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/scrapmetal/img/splash.png",
-      "game": "https://g3.s.mjevents.org/scrapmetal/"
+      "img": "/assets/storage/sp3-macvg/scrapmetal/img/splash.png",
+      "game": "/assets/storage/sp3-macvg/scrapmetal/"
     },
     {
       "id": 212,
       "name": "Soccer Random",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/soccer-random/unnamed.png",
-      "game": "https://g3.s.mjevents.org/soccer-random/"
+      "img": "/assets/storage/sp3-macvg/soccer-random/unnamed.png",
+      "game": "/assets/storage/sp3-macvg/soccer-random/"
     },
     {
       "id": 213,
       "name": "Soccer Skills Euro Cup",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/soccer-skills/splash.png",
-      "game": "https://g3.s.mjevents.org/soccer-skills/"
+      "img": "/assets/storage/sp3-macvg/soccer-skills/splash.png",
+      "game": "/assets/storage/sp3-macvg/soccer-skills/"
     },
     {
       "id": 250,
       "name": "The Heist",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/theheist/theheist.jpg",
-      "game": "https://g3.s.mjevents.org/theheist/"
+      "img": "/assets/storage/sp3-macvg/theheist/theheist.jpg",
+      "game": "/assets/storage/sp3-macvg/theheist/"
     },
     {
       "id": 325,
       "name": "Volley Random",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/volley-random/splash.png",
-      "game": "https://g3.s.mjevents.org/volley-random/"
+      "img": "/assets/storage/sp3-macvg/volley-random/splash.png",
+      "game": "/assets/storage/sp3-macvg/volley-random/"
     },
     {
       "id": 277,
       "name": "X Trial Racing",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/x-trial-racing/splash.png",
-      "game": "https://g3.s.mjevents.org/x-trial-racing/"
+      "img": "/assets/storage/sp3-macvg/x-trial-racing/splash.png",
+      "game": "/assets/storage/sp3-macvg/x-trial-racing/"
     },
     {
       "id": 1,
       "name": "1",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/1/meta/apple-touch-icon.png",
-      "game": "https://g4.s.mjevents.org/1/"
+      "img": "/assets/storage/sp4-macvg/1/meta/apple-touch-icon.png",
+      "game": "/assets/storage/sp4-macvg/1/"
     },
     {
       "id": 329,
       "name": "1010 Color Match",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/color-match/splash.png",
-      "game": "https://g4.s.mjevents.org/color-match/"
+      "img": "/assets/storage/sp4-macvg/color-match/splash.png",
+      "game": "/assets/storage/sp4-macvg/color-match/"
     },
     {
       "id": 340,
       "name": "1010 Deluxe",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/1010-deluxe/logo.jpg",
-      "game": "https://g4.s.mjevents.org/1010-deluxe/"
+      "img": "/assets/storage/sp4-macvg/1010-deluxe/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/1010-deluxe/"
     },
     {
       "id": 6,
       "name": "2048",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/2048/thumb.png",
-      "game": "https://g4.s.mjevents.org/2048/"
+      "img": "/assets/storage/sp4-macvg/2048/thumb.png",
+      "game": "/assets/storage/sp4-macvg/2048/"
     },
     {
       "id": 7,
       "name": "2048 Multitask",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/2048-multitask/splash.png",
-      "game": "https://g4.s.mjevents.org/2048-multitask/"
+      "img": "/assets/storage/sp4-macvg/2048-multitask/splash.png",
+      "game": "/assets/storage/sp4-macvg/2048-multitask/"
     },
     {
       "id": 330,
       "name": "3 Pandas in Japan",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/pandas-japan/logo.jpg",
-      "game": "https://g4.s.mjevents.org/pandas-japan/"
+      "img": "/assets/storage/sp4-macvg/pandas-japan/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/pandas-japan/"
     },
     {
       "id": 8,
       "name": "900719925474",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/9007199254740992/logo-4.png",
-      "game": "https://g4.s.mjevents.org/9007199254740992/"
+      "img": "/assets/storage/sp4-macvg/9007199254740992/logo-4.png",
+      "game": "/assets/storage/sp4-macvg/9007199254740992/"
     },
     {
       "id": 9,
       "name": "Achievement Unlocked",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/achievementunlocked/achievementunlocked.png",
-      "game": "https://g4.s.mjevents.org/achievementunlocked/"
+      "img": "/assets/storage/sp4-macvg/achievementunlocked/achievementunlocked.png",
+      "game": "/assets/storage/sp4-macvg/achievementunlocked/"
     },
     {
       "id": 291,
       "name": "Adventure with Anxiety",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/adventure-anxiety/splash.png",
-      "game": "https://g4.s.mjevents.org/adventure-anxiety/"
+      "img": "/assets/storage/sp4-macvg/adventure-anxiety/splash.png",
+      "game": "/assets/storage/sp4-macvg/adventure-anxiety/"
     },
     {
       "id": 16,
       "name": "Among Us",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/among-us/red.png",
-      "game": "https://g4.s.mjevents.org/among-us/"
+      "img": "/assets/storage/sp4-macvg/among-us/red.png",
+      "game": "/assets/storage/sp4-macvg/among-us/"
     },
     {
       "id": 21,
       "name": "Bad Ice Cream",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/bad-ice-cream/bad-ice-cream.png",
-      "game": "https://g4.s.mjevents.org/bad-ice-cream/"
+      "img": "/assets/storage/sp4-macvg/bad-ice-cream/bad-ice-cream.png",
+      "game": "/assets/storage/sp4-macvg/bad-ice-cream/"
     },
     {
       "id": 22,
       "name": "Bad Ice Cream 2",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/bad-ice-cream-2/bad-ice-cream-2.png",
-      "game": "https://g4.s.mjevents.org/bad-ice-cream-2/"
+      "img": "/assets/storage/sp4-macvg/bad-ice-cream-2/bad-ice-cream-2.png",
+      "game": "/assets/storage/sp4-macvg/bad-ice-cream-2/"
     },
     {
       "id": 23,
       "name": "Bad Ice Cream 3",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/bad-ice-cream-3/bad-ice-cream-3.png",
-      "game": "https://g4.s.mjevents.org/bad-ice-cream-3/"
+      "img": "/assets/storage/sp4-macvg/bad-ice-cream-3/bad-ice-cream-3.png",
+      "game": "/assets/storage/sp4-macvg/bad-ice-cream-3/"
     },
     {
       "id": 341,
       "name": "Ball Sort Halloween",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/ball-sort-halloween/logo.jpg",
-      "game": "https://g4.s.mjevents.org/ball-sort-halloween/"
+      "img": "/assets/storage/sp4-macvg/ball-sort-halloween/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/ball-sort-halloween/"
     },
     {
       "id": 342,
       "name": "Ball Sort Puzzle",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/ball-sort-puzzle/logo.png",
-      "game": "https://g4.s.mjevents.org/ball-sort-puzzle/"
+      "img": "/assets/storage/sp4-macvg/ball-sort-puzzle/logo.png",
+      "game": "/assets/storage/sp4-macvg/ball-sort-puzzle/"
     },
     {
       "id": 343,
       "name": "Ball Sort Soccer",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/ball-sort-soccer/logo.png",
-      "game": "https://g4.s.mjevents.org/ball-sort-soccer/"
+      "img": "/assets/storage/sp4-macvg/ball-sort-soccer/logo.png",
+      "game": "/assets/storage/sp4-macvg/ball-sort-soccer/"
     },
     {
       "id": 344,
       "name": "Ballistic",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/ballistic/logo.jpg",
-      "game": "https://g4.s.mjevents.org/ballistic/"
+      "img": "/assets/storage/sp4-macvg/ballistic/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/ballistic/"
     },
     {
       "id": 28,
       "name": "Battle for Gondor",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/battleforgondor/battleforgondor.JPG",
-      "game": "https://g4.s.mjevents.org/battleforgondor/"
+      "img": "/assets/storage/sp4-macvg/battleforgondor/battleforgondor.JPG",
+      "game": "/assets/storage/sp4-macvg/battleforgondor/"
     },
     {
       "id": 31,
       "name": "Black Hole Square",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/blacholesquare/icon.png",
-      "game": "https://g4.s.mjevents.org/blacholesquare/"
+      "img": "/assets/storage/sp4-macvg/blacholesquare/icon.png",
+      "game": "/assets/storage/sp4-macvg/blacholesquare/"
     },
     {
       "id": 346,
       "name": "Block the Pig",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/block-pig/logo.avif",
-      "game": "https://g4.s.mjevents.org/block-pig/"
+      "img": "/assets/storage/sp4-macvg/block-pig/logo.avif",
+      "game": "/assets/storage/sp4-macvg/block-pig/"
     },
     {
       "id": 33,
       "name": "Bloons TD",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/bloonstd/bloonstd.jpg",
-      "game": "https://g4.s.mjevents.org/bloonstd/"
+      "img": "/assets/storage/sp4-macvg/bloonstd/bloonstd.jpg",
+      "game": "/assets/storage/sp4-macvg/bloonstd/"
     },
     {
       "id": 34,
       "name": "Bloons TD 2",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/bloonstd2/bloonstd2.png",
-      "game": "https://g4.s.mjevents.org/bloonstd2/"
+      "img": "/assets/storage/sp4-macvg/bloonstd2/bloonstd2.png",
+      "game": "/assets/storage/sp4-macvg/bloonstd2/"
     },
     {
       "id": 321,
       "name": "Bloons TD 4",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/bloonstd4/logo.jpg",
-      "game": "https://g4.s.mjevents.org/bloonstd4/"
+      "img": "/assets/storage/sp4-macvg/bloonstd4/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/bloonstd4/"
     },
     {
       "id": 35,
       "name": "Bloxors",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/bloxors/block.png",
-      "game": "https://g4.s.mjevents.org/bloxors/"
+      "img": "/assets/storage/sp4-macvg/bloxors/block.png",
+      "game": "/assets/storage/sp4-macvg/bloxors/"
     },
     {
       "id": 350,
       "name": "Blumgi Rocket",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/blumgi-rocket/thumb.png",
-      "game": "https://g4.s.mjevents.org/blumgi-rocket/"
+      "img": "/assets/storage/sp4-macvg/blumgi-rocket/thumb.png",
+      "game": "/assets/storage/sp4-macvg/blumgi-rocket/"
     },
     {
       "id": 39,
       "name": "Breaking the Bank",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/breakingthebank/breakingthebank.png",
-      "game": "https://g4.s.mjevents.org/breakingthebank/"
+      "img": "/assets/storage/sp4-macvg/breakingthebank/breakingthebank.png",
+      "game": "/assets/storage/sp4-macvg/breakingthebank/"
     },
     {
       "id": 40,
       "name": "Big Tower Tiny Square",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/btts/images.png",
-      "game": "https://g4.s.mjevents.org/btts/"
+      "img": "/assets/storage/sp4-macvg/btts/images.png",
+      "game": "/assets/storage/sp4-macvg/btts/"
     },
     {
       "id": 352,
       "name": "Bouncy Woods",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/bouncy-woods/thumb.png",
-      "game": "https://g4.s.mjevents.org/bouncy-woods/"
+      "img": "/assets/storage/sp4-macvg/bouncy-woods/thumb.png",
+      "game": "/assets/storage/sp4-macvg/bouncy-woods/"
     },
     {
       "id": 353,
       "name": "Bubble Pop Adventures",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/bubble-pop/thumb.jpg",
-      "game": "https://g4.s.mjevents.org/bubble-pop/"
+      "img": "/assets/storage/sp4-macvg/bubble-pop/thumb.jpg",
+      "game": "/assets/storage/sp4-macvg/bubble-pop/"
     },
     {
       "id": 318,
       "name": "Burrito Bison",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/burrito-bison/Build/logo.png",
-      "game": "https://g4.s.mjevents.org/burrito-bison/"
+      "img": "/assets/storage/sp4-macvg/burrito-bison/Build/logo.png",
+      "game": "/assets/storage/sp4-macvg/burrito-bison/"
     },
     {
       "id": 42,
       "name": "Cannon Basketball 4",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/cannon-basketball-4/img/splash.png",
-      "game": "https://g4.s.mjevents.org/cannon-basketball-4/"
+      "img": "/assets/storage/sp4-macvg/cannon-basketball-4/img/splash.png",
+      "game": "/assets/storage/sp4-macvg/cannon-basketball-4/"
     },
     {
       "id": 43,
       "name": "Canyon Defense",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/canyondefense/canyondefense.png",
-      "game": "https://g4.s.mjevents.org/canyondefense/"
+      "img": "/assets/storage/sp4-macvg/canyondefense/canyondefense.png",
+      "game": "/assets/storage/sp4-macvg/canyondefense/"
     },
     {
       "id": 45,
       "name": "Cell Machine",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/cell-machine/img/te9nDu.png",
-      "game": "https://g4.s.mjevents.org/cell-machine/"
+      "img": "/assets/storage/sp4-macvg/cell-machine/img/te9nDu.png",
+      "game": "/assets/storage/sp4-macvg/cell-machine/"
     },
     {
       "id": 357,
       "name": "Checkers Legend",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/checkers-legend/thumb.jpg",
-      "game": "https://g4.s.mjevents.org/checkers-legend/"
+      "img": "/assets/storage/sp4-macvg/checkers-legend/thumb.jpg",
+      "game": "/assets/storage/sp4-macvg/checkers-legend/"
     },
     {
       "id": 50,
       "name": "circlO",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/circlo/img/download.png",
-      "game": "https://g4.s.mjevents.org/circlo/"
+      "img": "/assets/storage/sp4-macvg/circlo/img/download.png",
+      "game": "/assets/storage/sp4-macvg/circlo/"
     },
     {
       "id": 356,
       "name": "circloO 2",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/circlo2/thumv.png",
-      "game": "https://g4.s.mjevents.org/circlo2/"
+      "img": "/assets/storage/sp4-macvg/circlo2/thumv.png",
+      "game": "/assets/storage/sp4-macvg/circlo2/"
     },
     {
       "id": 359,
       "name": "Climb Over It",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/climb-over-it/thumb.jpg",
-      "game": "https://g4.s.mjevents.org/climb-over-it/"
+      "img": "/assets/storage/sp4-macvg/climb-over-it/thumb.jpg",
+      "game": "/assets/storage/sp4-macvg/climb-over-it/"
     },
     {
       "id": 52,
       "name": "Connect 3",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/connect3/connect3.png",
-      "game": "https://g4.s.mjevents.org/connect3/"
+      "img": "/assets/storage/sp4-macvg/connect3/connect3.png",
+      "game": "/assets/storage/sp4-macvg/connect3/"
     },
     {
       "id": 57,
       "name": "Crossy Road",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/crossyroad/crossyroad.png",
-      "game": "https://g4.s.mjevents.org/crossyroad/"
+      "img": "/assets/storage/sp4-macvg/crossyroad/crossyroad.png",
+      "game": "/assets/storage/sp4-macvg/crossyroad/"
     },
     {
       "id": 59,
       "name": "Cut the Rope",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/ctr/logo.png",
-      "game": "https://g4.s.mjevents.org/ctr/"
+      "img": "/assets/storage/sp4-macvg/ctr/logo.png",
+      "game": "/assets/storage/sp4-macvg/ctr/"
     },
     {
       "id": 60,
       "name": "Cut the Rope Holiday",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/ctr-holiday/Holiday_Gift.webp",
-      "game": "https://g4.s.mjevents.org/ctr-holiday/"
+      "img": "/assets/storage/sp4-macvg/ctr-holiday/Holiday_Gift.webp",
+      "game": "/assets/storage/sp4-macvg/ctr-holiday/"
     },
     {
       "id": 61,
       "name": "Cut the Rope Time Travel",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/ctr-tr/logo.png",
-      "game": "https://g4.s.mjevents.org/ctr-tr/"
+      "img": "/assets/storage/sp4-macvg/ctr-tr/logo.png",
+      "game": "/assets/storage/sp4-macvg/ctr-tr/"
     },
     {
       "id": 65,
       "name": "Deal or No Deal",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/deal-or-no-deal/index.jpg",
-      "game": "https://g4.s.mjevents.org/deal-or-no-deal/"
+      "img": "/assets/storage/sp4-macvg/deal-or-no-deal/index.jpg",
+      "game": "/assets/storage/sp4-macvg/deal-or-no-deal/"
     },
     {
       "id": 317,
       "name": "Deepest Sword",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/deepest-sword/logo.jpg",
-      "game": "https://g4.s.mjevents.org/deepest-sword/"
+      "img": "/assets/storage/sp4-macvg/deepest-sword/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/deepest-sword/"
     },
     {
       "id": 349,
       "name": "Dino Bros",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/dino-bros/logo.jpg",
-      "game": "https://g4.s.mjevents.org/dino-bros/"
+      "img": "/assets/storage/sp4-macvg/dino-bros/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/dino-bros/"
     },
     {
       "id": 68,
       "name": "Doctor Acorn 2",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/doctor-acorn2/splash.jpg",
-      "game": "https://g4.s.mjevents.org/doctor-acorn2/"
+      "img": "/assets/storage/sp4-macvg/doctor-acorn2/splash.jpg",
+      "game": "/assets/storage/sp4-macvg/doctor-acorn2/"
     },
     {
       "id": 69,
       "name": "Doge 2048",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/doge2048/doge1.jpeg",
-      "game": "https://g4.s.mjevents.org/doge2048/"
+      "img": "/assets/storage/sp4-macvg/doge2048/doge1.jpeg",
+      "game": "/assets/storage/sp4-macvg/doge2048/"
     },
     {
       "id": 81,
       "name": "Edge Not Found",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/edgenotfound/edge.png",
-      "game": "https://g4.s.mjevents.org/edgenotfound/"
+      "img": "/assets/storage/sp4-macvg/edgenotfound/edge.png",
+      "game": "/assets/storage/sp4-macvg/edgenotfound/"
     },
     {
       "id": 362,
       "name": "Escaping the Prison",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/escaping-prison/logo.jpg",
-      "game": "https://g4.s.mjevents.org/escaping-prison/"
+      "img": "/assets/storage/sp4-macvg/escaping-prison/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/escaping-prison/"
     },
     {
       "id": 87,
       "name": "Evolution",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/evolution/splash.png",
-      "game": "https://g4.s.mjevents.org/evolution/"
+      "img": "/assets/storage/sp4-macvg/evolution/splash.png",
+      "game": "/assets/storage/sp4-macvg/evolution/"
     },
     {
       "id": 88,
       "name": "Exo",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/exo/img/small.jpg",
-      "game": "https://g4.s.mjevents.org/exo/"
+      "img": "/assets/storage/sp4-macvg/exo/img/small.jpg",
+      "game": "/assets/storage/sp4-macvg/exo/"
     },
     {
       "id": 89,
       "name": "Factory Balls Forever",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/factoryballs/images/splash.png",
-      "game": "https://g4.s.mjevents.org/factoryballs/"
+      "img": "/assets/storage/sp4-macvg/factoryballs/images/splash.png",
+      "game": "/assets/storage/sp4-macvg/factoryballs/"
     },
     {
       "id": 372,
       "name": "Farm Match Seasons",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/farm-match/Icon_512x512.png",
-      "game": "https://g4.s.mjevents.org/farm-match/"
+      "img": "/assets/storage/sp4-macvg/farm-match/Icon_512x512.png",
+      "game": "/assets/storage/sp4-macvg/farm-match/"
     },
     {
       "id": 95,
       "name": "Flash Tetris",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/flashtetris/flashtetris.png",
-      "game": "https://g4.s.mjevents.org/flashtetris/"
+      "img": "/assets/storage/sp4-macvg/flashtetris/flashtetris.png",
+      "game": "/assets/storage/sp4-macvg/flashtetris/"
     },
     {
       "id": 363,
       "name": "Fleeing the Complex",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/fleeing-complex/logo.jpg",
-      "game": "https://g4.s.mjevents.org/fleeing-complex/"
+      "img": "/assets/storage/sp4-macvg/fleeing-complex/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/fleeing-complex/"
     },
     {
       "id": 102,
       "name": "Game Inside a Game Inside a Game...",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/game-inside/img/display.png",
-      "game": "https://g4.s.mjevents.org/game-inside/"
+      "img": "/assets/storage/sp4-macvg/game-inside/img/display.png",
+      "game": "/assets/storage/sp4-macvg/game-inside/"
     },
     {
       "id": 105,
       "name": "George and the Printer",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/georgeandtheprinter/img/SnDTEn.png",
-      "game": "https://g4.s.mjevents.org/georgeandtheprinter/"
+      "img": "/assets/storage/sp4-macvg/georgeandtheprinter/img/SnDTEn.png",
+      "game": "/assets/storage/sp4-macvg/georgeandtheprinter/"
     },
     {
       "id": 301,
       "name": "Getting Over It",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/getting-over-it/GettingOverIt.png",
-      "game": "https://g4.s.mjevents.org/getting-over-it/"
+      "img": "/assets/storage/sp4-macvg/getting-over-it/GettingOverIt.png",
+      "game": "/assets/storage/sp4-macvg/getting-over-it/"
     },
     {
       "id": 109,
       "name": "Go Ball",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/go-ball/game.jpg",
-      "game": "https://g4.s.mjevents.org/go-ball/"
+      "img": "/assets/storage/sp4-macvg/go-ball/game.jpg",
+      "game": "/assets/storage/sp4-macvg/go-ball/"
     },
     {
       "id": 111,
       "name": "Google Feud",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/google-feud/splash.png",
-      "game": "https://g4.s.mjevents.org/google-feud/"
+      "img": "/assets/storage/sp4-macvg/google-feud/splash.png",
+      "game": "/assets/storage/sp4-macvg/google-feud/"
     },
     {
       "id": 113,
       "name": "Gravity Soccer",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/gravity-soccer/splash.png",
-      "game": "https://g4.s.mjevents.org/gravity-soccer/"
+      "img": "/assets/storage/sp4-macvg/gravity-soccer/splash.png",
+      "game": "/assets/storage/sp4-macvg/gravity-soccer/"
     },
     {
       "id": 114,
       "name": "Grey Box Testing",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/greybox/ico.png",
-      "game": "https://g4.s.mjevents.org/greybox/"
+      "img": "/assets/storage/sp4-macvg/greybox/ico.png",
+      "game": "/assets/storage/sp4-macvg/greybox/"
     },
     {
       "id": 117,
       "name": "Handshakes",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/handshakes/splaher.png",
-      "game": "https://g4.s.mjevents.org/handshakes/"
+      "img": "/assets/storage/sp4-macvg/handshakes/splaher.png",
+      "game": "/assets/storage/sp4-macvg/handshakes/"
     },
     {
       "id": 387,
       "name": "Hanger",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/hanger/logo.jpg",
-      "game": "https://g4.s.mjevents.org/hanger/"
+      "img": "/assets/storage/sp4-macvg/hanger/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/hanger/"
     },
     {
       "id": 121,
       "name": "Hex Empire",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/hexempire/hexempire.jpg",
-      "game": "https://g4.s.mjevents.org/hexempire/"
+      "img": "/assets/storage/sp4-macvg/hexempire/hexempire.jpg",
+      "game": "/assets/storage/sp4-macvg/hexempire/"
     },
     {
       "id": 123,
       "name": "Hextris",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/https://macvg-games.github.io/strategy-games/hextris/images/hextris-logo.png",
-      "game": "https://g1.s.mjevents.org/https://macvg-games.github.io/strategy-games/hextris/"
+      "img": "/assets/storage/sp1-macvg/https://macvg-games.github.io/strategy-games/hextris/images/hextris-logo.png",
+      "game": "/assets/storage/sp1-macvg/https://macvg-games.github.io/strategy-games/hextris/"
     },
     {
       "id": 392,
       "name": "Icy Purple Head 2",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/icy-head-2/logo.jpg",
-      "game": "https://g4.s.mjevents.org/icy-head-2/"
+      "img": "/assets/storage/sp4-macvg/icy-head-2/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/icy-head-2/"
     },
     {
       "id": 393,
       "name": "Icy Purple Head 3",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/icy-head-3/logo.jpg",
-      "game": "https://g4.s.mjevents.org/icy-head-3/"
+      "img": "/assets/storage/sp4-macvg/icy-head-3/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/icy-head-3/"
     },
     {
       "id": 127,
       "name": "Impossible Quiz",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/impossiblequiz/impossiblequiz.png",
-      "game": "https://g4.s.mjevents.org/impossiblequiz/"
+      "img": "/assets/storage/sp4-macvg/impossiblequiz/impossiblequiz.png",
+      "game": "/assets/storage/sp4-macvg/impossiblequiz/"
     },
     {
       "id": 364,
       "name": "Infiltrating the Airship",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/infiltrating-airship/logo.jpg",
-      "game": "https://g4.s.mjevents.org/infiltrating-airship/"
+      "img": "/assets/storage/sp4-macvg/infiltrating-airship/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/infiltrating-airship/"
     },
     {
       "id": 395,
       "name": "Jewels Blitz 5",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/jewels-blitz-5/Icon_512x512.png",
-      "game": "https://g4.s.mjevents.org/jewels-blitz-5/"
+      "img": "/assets/storage/sp4-macvg/jewels-blitz-5/Icon_512x512.png",
+      "game": "/assets/storage/sp4-macvg/jewels-blitz-5/"
     },
     {
       "id": 397,
       "name": "Marbles Sorting",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/marbles-sorting/logo.jpg",
-      "game": "https://g4.s.mjevents.org/marbles-sorting/"
+      "img": "/assets/storage/sp4-macvg/marbles-sorting/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/marbles-sorting/"
     },
     {
       "id": 143,
       "name": "Meme 2048",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/meme2048/img/rickroll.gif",
-      "game": "https://g4.s.mjevents.org/meme2048/"
+      "img": "/assets/storage/sp4-macvg/meme2048/img/rickroll.gif",
+      "game": "/assets/storage/sp4-macvg/meme2048/"
     },
     {
       "id": 150,
       "name": "Minesweeper",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/minesweeper/img/minesweeper.png",
-      "game": "https://g4.s.mjevents.org/minesweeper/"
+      "img": "/assets/storage/sp4-macvg/minesweeper/img/minesweeper.png",
+      "game": "/assets/storage/sp4-macvg/minesweeper/"
     },
     {
       "id": 151,
       "name": "Mini-putt",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/miniputt/miniputt.png",
-      "game": "https://g4.s.mjevents.org/miniputt/"
+      "img": "/assets/storage/sp4-macvg/miniputt/miniputt.png",
+      "game": "/assets/storage/sp4-macvg/miniputt/"
     },
     {
       "id": 399,
       "name": "Money Movers",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/money-movers/logo.jpg",
-      "game": "https://g4.s.mjevents.org/money-movers/"
+      "img": "/assets/storage/sp4-macvg/money-movers/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/money-movers/"
     },
     {
       "id": 400,
       "name": "Money Movers 2",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/money-movers-2/logo.jpg",
-      "game": "https://g4.s.mjevents.org/money-movers-2/"
+      "img": "/assets/storage/sp4-macvg/money-movers-2/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/money-movers-2/"
     },
     {
       "id": 401,
       "name": "Money Movers 3",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/money-movers-3/logo.jpg",
-      "game": "https://g4.s.mjevents.org/money-movers-3/"
+      "img": "/assets/storage/sp4-macvg/money-movers-3/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/money-movers-3/"
     },
     {
       "id": 413,
       "name": "Park Out",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/park-out/logo.jpg",
-      "game": "https://g4.s.mjevents.org/park-out/"
+      "img": "/assets/storage/sp4-macvg/park-out/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/park-out/"
     },
     {
       "id": 310,
       "name": "Plants vs Zombies",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/plants-vs-zombies/PlantsVsZombies.png",
-      "game": "https://g4.s.mjevents.org/plants-vs-zombies/"
+      "img": "/assets/storage/sp4-macvg/plants-vs-zombies/PlantsVsZombies.png",
+      "game": "/assets/storage/sp4-macvg/plants-vs-zombies/"
     },
     {
       "id": 176,
       "name": "Portal (Flash)",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/portalflash/portaltheflashversion.jpg",
-      "game": "https://g4.s.mjevents.org/portalflash/"
+      "img": "/assets/storage/sp4-macvg/portalflash/portaltheflashversion.jpg",
+      "game": "/assets/storage/sp4-macvg/portalflash/"
     },
     {
       "id": 180,
       "name": "Push Your Luck",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/push-your-luck/assets/img/push.png",
-      "game": "https://g4.s.mjevents.org/push-your-luck/"
+      "img": "/assets/storage/sp4-macvg/push-your-luck/assets/img/push.png",
+      "game": "/assets/storage/sp4-macvg/push-your-luck/"
     },
     {
       "id": 181,
       "name": "Rabbit Samurai",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/rabbit-samurai/splash.png",
-      "game": "https://g4.s.mjevents.org/rabbit-samurai/"
+      "img": "/assets/storage/sp4-macvg/rabbit-samurai/splash.png",
+      "game": "/assets/storage/sp4-macvg/rabbit-samurai/"
     },
     {
       "id": 182,
       "name": "Rabbit Samurai 2",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/rabbit-samurai2/splash.png",
-      "game": "https://g4.s.mjevents.org/rabbit-samurai2/"
+      "img": "/assets/storage/sp4-macvg/rabbit-samurai2/splash.png",
+      "game": "/assets/storage/sp4-macvg/rabbit-samurai2/"
     },
     {
       "id": 185,
       "name": "Riddle School 1",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/riddleschool/riddleschool.png",
-      "game": "https://g4.s.mjevents.org/riddleschool/"
+      "img": "/assets/storage/sp4-macvg/riddleschool/riddleschool.png",
+      "game": "/assets/storage/sp4-macvg/riddleschool/"
     },
     {
       "id": 186,
       "name": "Riddle School 2",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/riddleschool2/riddleschool2.png",
-      "game": "https://g4.s.mjevents.org/riddleschool2/"
+      "img": "/assets/storage/sp4-macvg/riddleschool2/riddleschool2.png",
+      "game": "/assets/storage/sp4-macvg/riddleschool2/"
     },
     {
       "id": 187,
       "name": "Riddle School 3",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/riddleschool3/riddleschool3.png",
-      "game": "https://g4.s.mjevents.org/riddleschool3/"
+      "img": "/assets/storage/sp4-macvg/riddleschool3/riddleschool3.png",
+      "game": "/assets/storage/sp4-macvg/riddleschool3/"
     },
     {
       "id": 188,
       "name": "Riddle School 4",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/riddleschool4/riddleschool4.png",
-      "game": "https://g4.s.mjevents.org/riddleschool4/"
+      "img": "/assets/storage/sp4-macvg/riddleschool4/riddleschool4.png",
+      "game": "/assets/storage/sp4-macvg/riddleschool4/"
     },
     {
       "id": 189,
       "name": "Riddle School 5",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/riddleschool5/riddleschool5.png",
-      "game": "https://g4.s.mjevents.org/riddleschool5/"
+      "img": "/assets/storage/sp4-macvg/riddleschool5/riddleschool5.png",
+      "game": "/assets/storage/sp4-macvg/riddleschool5/"
     },
     {
       "id": 190,
       "name": "Riddle School Transfer 1",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/riddletransfer/riddletransfer.png",
-      "game": "https://g4.s.mjevents.org/riddletransfer/"
+      "img": "/assets/storage/sp4-macvg/riddletransfer/riddletransfer.png",
+      "game": "/assets/storage/sp4-macvg/riddletransfer/"
     },
     {
       "id": 191,
       "name": "Riddle School Transfer 2",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/riddletransfer2/riddletransfer2.png",
-      "game": "https://g4.s.mjevents.org/riddletransfer2/"
+      "img": "/assets/storage/sp4-macvg/riddletransfer2/riddletransfer2.png",
+      "game": "/assets/storage/sp4-macvg/riddletransfer2/"
     },
     {
       "id": 319,
       "name": "Roper",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/roper/webapp/cover.jpg",
-      "game": "https://g4.s.mjevents.org/roper/"
+      "img": "/assets/storage/sp4-macvg/roper/webapp/cover.jpg",
+      "game": "/assets/storage/sp4-macvg/roper/"
     },
     {
       "id": 204,
       "name": "Slime Rush TD",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/slime-rush-td/splash.png",
-      "game": "https://g4.s.mjevents.org/slime-rush-td/"
+      "img": "/assets/storage/sp4-macvg/slime-rush-td/splash.png",
+      "game": "/assets/storage/sp4-macvg/slime-rush-td/"
     },
     {
       "id": 224,
       "name": "Stealing The Diamond",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/stealingthediamond/stealingthediamond.jpg",
-      "game": "https://g4.s.mjevents.org/stealingthediamond/"
+      "img": "/assets/storage/sp4-macvg/stealingthediamond/stealingthediamond.jpg",
+      "game": "/assets/storage/sp4-macvg/stealingthediamond/"
     },
     {
       "id": 229,
       "name": "Stickman Golf",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/stickman-golf/splash.png",
-      "game": "https://g4.s.mjevents.org/stickman-golf/"
+      "img": "/assets/storage/sp4-macvg/stickman-golf/splash.png",
+      "game": "/assets/storage/sp4-macvg/stickman-golf/"
     },
     {
       "id": 230,
       "name": "Stickman Hook",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/stickman-hook/unnamed.jpg",
-      "game": "https://g4.s.mjevents.org/stickman-hook/"
+      "img": "/assets/storage/sp4-macvg/stickman-hook/unnamed.jpg",
+      "game": "/assets/storage/sp4-macvg/stickman-hook/"
     },
     {
       "id": 233,
       "name": "Storm The House 2",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/stormthehouse2/stormthehouse2.jpg",
-      "game": "https://g4.s.mjevents.org/stormthehouse2/"
+      "img": "/assets/storage/sp4-macvg/stormthehouse2/stormthehouse2.jpg",
+      "game": "/assets/storage/sp4-macvg/stormthehouse2/"
     },
     {
       "id": 313,
       "name": "Territorial",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/territorial/Territorial.png",
-      "game": "https://g4.s.mjevents.org/territorial/"
+      "img": "/assets/storage/sp4-macvg/territorial/Territorial.png",
+      "game": "/assets/storage/sp4-macvg/territorial/"
     },
     {
       "id": 247,
       "name": "The Battle",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/thebattle/thebattle.png",
-      "game": "https://g4.s.mjevents.org/thebattle/"
+      "img": "/assets/storage/sp4-macvg/thebattle/thebattle.png",
+      "game": "/assets/storage/sp4-macvg/thebattle/"
     },
     {
       "id": 248,
       "name": "The Final Earth",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/the-final-earth/images.png",
-      "game": "https://g4.s.mjevents.org/the-final-earth/"
+      "img": "/assets/storage/sp4-macvg/the-final-earth/images.png",
+      "game": "/assets/storage/sp4-macvg/the-final-earth/"
     },
     {
       "id": 251,
       "name": "There Is No Game",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/there-is-no-game/logo.png",
-      "game": "https://g4.s.mjevents.org/there-is-no-game/"
+      "img": "/assets/storage/sp4-macvg/there-is-no-game/logo.png",
+      "game": "/assets/storage/sp4-macvg/there-is-no-game/"
     },
     {
       "id": 254,
       "name": "Tiny Islands",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/tiny-islands/splash.png",
-      "game": "https://g4.s.mjevents.org/tiny-islands/"
+      "img": "/assets/storage/sp4-macvg/tiny-islands/splash.png",
+      "game": "/assets/storage/sp4-macvg/tiny-islands/"
     },
     {
       "id": 260,
       "name": "Twitch Tetris",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/twitch-tetris/logo.png",
-      "game": "https://g4.s.mjevents.org/twitch-tetris/"
+      "img": "/assets/storage/sp4-macvg/twitch-tetris/logo.png",
+      "game": "/assets/storage/sp4-macvg/twitch-tetris/"
     },
     {
       "id": 267,
       "name": "Waterworks!",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/waterworks/square.png",
-      "game": "https://g4.s.mjevents.org/waterworks/"
+      "img": "/assets/storage/sp4-macvg/waterworks/square.png",
+      "game": "/assets/storage/sp4-macvg/waterworks/"
     },
     {
       "id": 268,
       "name": "Wall Smash",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/wallsmash/thumb.png",
-      "game": "https://g4.s.mjevents.org/wallsmash/"
+      "img": "/assets/storage/sp4-macvg/wallsmash/thumb.png",
+      "game": "/assets/storage/sp4-macvg/wallsmash/"
     },
     {
       "id": 274,
       "name": "Wordle",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/wordle/img/logo_192x192.png",
-      "game": "https://g4.s.mjevents.org/wordle/"
+      "img": "/assets/storage/sp4-macvg/wordle/img/logo_192x192.png",
+      "game": "/assets/storage/sp4-macvg/wordle/"
     },
     {
       "id": 278,
       "name": "xx142-b2exe",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/xx142-b2exe/splash.png",
-      "game": "https://g4.s.mjevents.org/xx142-b2exe/"
+      "img": "/assets/storage/sp4-macvg/xx142-b2exe/splash.png",
+      "game": "/assets/storage/sp4-macvg/xx142-b2exe/"
     },
     {
       "id": 280,
       "name": "You Are Jeff Bezos",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/you-are-bezos/img/banner.png",
-      "game": "https://g4.s.mjevents.org/you-are-bezos/"
+      "img": "/assets/storage/sp4-macvg/you-are-bezos/img/banner.png",
+      "game": "/assets/storage/sp4-macvg/you-are-bezos/"
     },
     {
       "id": 30,
       "name": "BitLife",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/bitlife/splash.png",
-      "game": "https://g4.s.mjevents.org/bitlife/"
+      "img": "/assets/storage/sp4-macvg/bitlife/splash.png",
+      "game": "/assets/storage/sp4-macvg/bitlife/"
     },
     {
       "id": 118,
       "name": "Happy Hop",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/happy-hop/splash.png",
-      "game": "https://g1.s.mjevents.org/happy-hop/"
+      "img": "/assets/storage/sp1-macvg/happy-hop/splash.png",
+      "game": "/assets/storage/sp1-macvg/happy-hop/"
     },
     {
       "id": 119,
       "name": "Hover Bot Arena",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/hba/hoverbotarena.JPG",
-      "game": "https://g1.s.mjevents.org/hba/"
+      "img": "/assets/storage/sp1-macvg/hba/hoverbotarena.JPG",
+      "game": "/assets/storage/sp1-macvg/hba/"
     },
     {
       "id": 131,
       "name": "Just One Boss",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/just-one-boss/pv1Gr5.png",
-      "game": "https://g1.s.mjevents.org/just-one-boss/"
+      "img": "/assets/storage/sp1-macvg/just-one-boss/pv1Gr5.png",
+      "game": "/assets/storage/sp1-macvg/just-one-boss/"
     },
     {
       "id": 158,
       "name": "My Rusty Submarine",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/my-rusty-submarine/splash.png",
-      "game": "https://g4.s.mjevents.org/my-rusty-submarine/"
+      "img": "/assets/storage/sp4-macvg/my-rusty-submarine/splash.png",
+      "game": "/assets/storage/sp4-macvg/my-rusty-submarine/"
     },
     {
       "id": 166,
       "name": "OvO",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/ovo/ovo.png",
-      "game": "https://g1.s.mjevents.org/ovo/"
+      "img": "/assets/storage/sp1-macvg/ovo/ovo.png",
+      "game": "/assets/storage/sp1-macvg/ovo/"
     },
     {
       "id": 167,
       "name": "Pandemic 2",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/pandemic2/pandemic2.png",
-      "game": "https://g4.s.mjevents.org/pandemic2/"
+      "img": "/assets/storage/sp4-macvg/pandemic2/pandemic2.png",
+      "game": "/assets/storage/sp4-macvg/pandemic2/"
     },
     {
       "id": 168,
       "name": "Papa's Burgeria",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/papasburgeria/splash.jpg",
-      "game": "https://g2.s.mjevents.org/papasburgeria/"
+      "img": "/assets/storage/sp2-macvg/papasburgeria/splash.jpg",
+      "game": "/assets/storage/sp2-macvg/papasburgeria/"
     },
     {
       "id": 169,
       "name": "Papa's Pizzaria",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/papaspizzaria/papaspizzaria.jpg",
-      "game": "https://g2.s.mjevents.org/papaspizzaria/"
+      "img": "/assets/storage/sp2-macvg/papaspizzaria/papaspizzaria.jpg",
+      "game": "/assets/storage/sp2-macvg/papaspizzaria/"
     },
     {
       "id": 170,
       "name": "Paper.io 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/paperio2/images/icon512.png",
-      "game": "https://g1.s.mjevents.org/paperio2/"
+      "img": "/assets/storage/sp1-macvg/paperio2/images/icon512.png",
+      "game": "/assets/storage/sp1-macvg/paperio2/"
     },
     {
       "id": 196,
       "name": "Sandboxels",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/sandboxels/sandboxels.jpg",
-      "game": "https://g2.s.mjevents.org/sandboxels/"
+      "img": "/assets/storage/sp2-macvg/sandboxels/sandboxels.jpg",
+      "game": "/assets/storage/sp2-macvg/sandboxels/"
     },
     {
       "id": 197,
       "name": "Santy is Home",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/santy-is-home/splash.png",
-      "game": "https://g1.s.mjevents.org/santy-is-home/"
+      "img": "/assets/storage/sp1-macvg/santy-is-home/splash.png",
+      "game": "/assets/storage/sp1-macvg/santy-is-home/"
     },
     {
       "id": 202,
       "name": "Sky Car Stunt",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/sky-car-stunt/512x512.jpg",
-      "game": "https://g3.s.mjevents.org/sky-car-stunt/"
+      "img": "/assets/storage/sp3-macvg/sky-car-stunt/512x512.jpg",
+      "game": "/assets/storage/sp3-macvg/sky-car-stunt/"
     },
     {
       "id": 211,
       "name": "Snowbattle",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/snowbattle/img/logo.png",
-      "game": "https://g1.s.mjevents.org/snowbattle/"
+      "img": "/assets/storage/sp1-macvg/snowbattle/img/logo.png",
+      "game": "/assets/storage/sp1-macvg/snowbattle/"
     },
     {
       "id": 215,
       "name": "Solitaire",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/solitaire/logo.jpg",
-      "game": "https://g4.s.mjevents.org/solitaire/"
+      "img": "/assets/storage/sp4-macvg/solitaire/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/solitaire/"
     },
     {
       "id": 249,
       "name": "The Hotel",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/the-hotel/splash.png",
-      "game": "https://g4.s.mjevents.org/the-hotel/"
+      "img": "/assets/storage/sp4-macvg/the-hotel/splash.png",
+      "game": "/assets/storage/sp4-macvg/the-hotel/"
     },
     {
       "id": 255,
       "name": "Toss the Turtle",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/tosstheturtle/tosstheturtle.png",
-      "game": "https://g1.s.mjevents.org/tosstheturtle/"
+      "img": "/assets/storage/sp1-macvg/tosstheturtle/tosstheturtle.png",
+      "game": "/assets/storage/sp1-macvg/tosstheturtle/"
     },
     {
       "id": 279,
       "name": "Yoshi's Fabrication Lab",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/yoshifabrication/icons/icon-512.png",
-      "game": "https://g2.s.mjevents.org/yoshifabrication/"
+      "img": "/assets/storage/sp2-macvg/yoshifabrication/icons/icon-512.png",
+      "game": "/assets/storage/sp2-macvg/yoshifabrication/"
     },
     {
       "id": 307,
       "name": "Paper.io 3",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/paper-3/PaperIo3.png",
-      "game": "https://g1.s.mjevents.org/paper-3/"
+      "img": "/assets/storage/sp1-macvg/paper-3/PaperIo3.png",
+      "game": "/assets/storage/sp1-macvg/paper-3/"
     },
     {
       "id": 403,
       "name": "Mr Bullet",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/mr-bullet/logo.jpg",
-      "game": "https://g4.s.mjevents.org/mr-bullet/"
+      "img": "/assets/storage/sp4-macvg/mr-bullet/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/mr-bullet/"
     },
     {
       "id": 404,
       "name": "Mutazone",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/mutazone/logo.jpg",
-      "game": "https://g1.s.mjevents.org/mutazone/"
+      "img": "/assets/storage/sp1-macvg/mutazone/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/mutazone/"
     },
     {
       "id": 405,
       "name": "Ninja Cat",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/ninja-cat/logo.jpg",
-      "game": "https://g4.s.mjevents.org/ninja-cat/"
+      "img": "/assets/storage/sp4-macvg/ninja-cat/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/ninja-cat/"
     },
     {
       "id": 406,
       "name": "OvO 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/ovo-2/logo.jpg",
-      "game": "https://g1.s.mjevents.org/ovo-2/"
+      "img": "/assets/storage/sp1-macvg/ovo-2/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/ovo-2/"
     },
     {
       "id": 407,
       "name": "OvO Dimensions",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/ovo-dimensions/logo.jpg",
-      "game": "https://g1.s.mjevents.org/ovo-dimensions/"
+      "img": "/assets/storage/sp1-macvg/ovo-dimensions/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/ovo-dimensions/"
     },
     {
       "id": 408,
       "name": "Pacman",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/pacman/logo.png",
-      "game": "https://g1.s.mjevents.org/pacman/"
+      "img": "/assets/storage/sp1-macvg/pacman/logo.png",
+      "game": "/assets/storage/sp1-macvg/pacman/"
     },
     {
       "id": 409,
       "name": "Papa Cherry Saga",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/papa-cherry-saga/logo.jpg",
-      "game": "https://g4.s.mjevents.org/papa-cherry-saga/"
+      "img": "/assets/storage/sp4-macvg/papa-cherry-saga/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/papa-cherry-saga/"
     },
     {
       "id": 410,
       "name": "Parking Fury",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/parking-fury/logo.jpg",
-      "game": "https://g3.s.mjevents.org/parking-fury/"
+      "img": "/assets/storage/sp3-macvg/parking-fury/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/parking-fury/"
     },
     {
       "id": 411,
       "name": "Parking Fury 2",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/parking-fury-2/logo.jpg",
-      "game": "https://g3.s.mjevents.org/parking-fury-2/"
+      "img": "/assets/storage/sp3-macvg/parking-fury-2/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/parking-fury-2/"
     },
     {
       "id": 414,
       "name": "Parking Fury 3",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/parking-fury-3/67f5943d779b41b2bc6a67ce132b7c68-512x512.jpeg",
-      "game": "https://g3.s.mjevents.org/parking-fury-3/"
+      "img": "/assets/storage/sp3-macvg/parking-fury-3/67f5943d779b41b2bc6a67ce132b7c68-512x512.jpeg",
+      "game": "/assets/storage/sp3-macvg/parking-fury-3/"
     },
     {
       "id": 415,
       "name": "Penalty Kick Online",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/penalty-kick/logo.jpg",
-      "game": "https://g3.s.mjevents.org/penalty-kick/"
+      "img": "/assets/storage/sp3-macvg/penalty-kick/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/penalty-kick/"
     },
     {
       "id": 416,
       "name": "Penalty Shooters 3",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/penalty-shooters-3/logo.jpg",
-      "game": "https://g3.s.mjevents.org/penalty-shooters-3/"
+      "img": "/assets/storage/sp3-macvg/penalty-shooters-3/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/penalty-shooters-3/"
     },
     {
       "id": 417,
       "name": "Pixel Smash Duel",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/pixel-smash-duels/logo.jpg",
-      "game": "https://g3.s.mjevents.org/pixel-smash-duels/"
+      "img": "/assets/storage/sp3-macvg/pixel-smash-duels/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/pixel-smash-duels/"
     },
     {
       "id": 418,
       "name": "Pizza Tower",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/pizza-tower/logo.jpg",
-      "game": "https://g1.s.mjevents.org/pizza-tower/"
+      "img": "/assets/storage/sp1-macvg/pizza-tower/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/pizza-tower/"
     },
     {
       "id": 419,
       "name": "Pou",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/pou/logo.png",
-      "game": "https://g2.s.mjevents.org/pou/"
+      "img": "/assets/storage/sp2-macvg/pou/logo.png",
+      "game": "/assets/storage/sp2-macvg/pou/"
     },
     {
       "id": 420,
       "name": "Pudding Monsters",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/pudding-monster/logo.jpg",
-      "game": "https://g4.s.mjevents.org/pudding-monster/"
+      "img": "/assets/storage/sp4-macvg/pudding-monster/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/pudding-monster/"
     },
     {
       "id": 421,
       "name": "Racing Monster Trucks",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/racing-monster-truck/logo.jpg",
-      "game": "https://g3.s.mjevents.org/racing-monster-truck/"
+      "img": "/assets/storage/sp3-macvg/racing-monster-truck/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/racing-monster-truck/"
     },
     {
       "id": 422,
       "name": "Run 3 Space",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/run-3-space/logo.jpg",
-      "game": "https://g1.s.mjevents.org/run-3-space/"
+      "img": "/assets/storage/sp1-macvg/run-3-space/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/run-3-space/"
     },
     {
       "id": 423,
       "name": "Rusher Crusher",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/rusher-crusher/logo.jpg",
-      "game": "https://g1.s.mjevents.org/rusher-crusher/"
+      "img": "/assets/storage/sp1-macvg/rusher-crusher/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/rusher-crusher/"
     },
     {
       "id": 424,
       "name": "Save the Doge",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/save-the-dodge/logo.jpg",
-      "game": "https://g4.s.mjevents.org/save-the-dodge/"
+      "img": "/assets/storage/sp4-macvg/save-the-dodge/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/save-the-dodge/"
     },
     {
       "id": 425,
       "name": "Sling Tomb",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/sling-tomb/logo.jpg",
-      "game": "https://g1.s.mjevents.org/sling-tomb/"
+      "img": "/assets/storage/sp1-macvg/sling-tomb/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/sling-tomb/"
     },
     {
       "id": 426,
       "name": "Snail Bob 7",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/snail-bob-7/9aefc9ef4a7f4d5d8062cfb563cc658c-512x512.jpeg",
-      "game": "https://g4.s.mjevents.org/snail-bob-7/"
+      "img": "/assets/storage/sp4-macvg/snail-bob-7/9aefc9ef4a7f4d5d8062cfb563cc658c-512x512.jpeg",
+      "game": "/assets/storage/sp4-macvg/snail-bob-7/"
     },
     {
       "id": 427,
       "name": "Snail Bob 8",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/snail-bob-8/logo.jpg",
-      "game": "https://g4.s.mjevents.org/snail-bob-8/"
+      "img": "/assets/storage/sp4-macvg/snail-bob-8/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/snail-bob-8/"
     },
     {
       "id": 428,
       "name": "Soccer Heads",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/soccer-heads/logo.jpg",
-      "game": "https://g3.s.mjevents.org/soccer-heads/"
+      "img": "/assets/storage/sp3-macvg/soccer-heads/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/soccer-heads/"
     },
     {
       "id": 429,
       "name": "Space Bar Clicker",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/space-bar-clicker/logo.jpg",
-      "game": "https://g2.s.mjevents.org/space-bar-clicker/"
+      "img": "/assets/storage/sp2-macvg/space-bar-clicker/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/space-bar-clicker/"
     },
     {
       "id": 430,
       "name": "Spider Solitaire",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/spider-solitaire/logo.jpg",
-      "game": "https://g4.s.mjevents.org/spider-solitaire/"
+      "img": "/assets/storage/sp4-macvg/spider-solitaire/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/spider-solitaire/"
     },
     {
       "id": 431,
       "name": "Super Liquid Soccer",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/super-liquid-soccer/logo.jpg",
-      "game": "https://g3.s.mjevents.org/super-liquid-soccer/"
+      "img": "/assets/storage/sp3-macvg/super-liquid-soccer/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/super-liquid-soccer/"
     },
     {
       "id": 432,
       "name": "Super Mario Wonder",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/super-mario-wonder/loading-logo.png",
-      "game": "https://g1.s.mjevents.org/super-mario-wonder/"
+      "img": "/assets/storage/sp1-macvg/super-mario-wonder/loading-logo.png",
+      "game": "/assets/storage/sp1-macvg/super-mario-wonder/"
     },
     {
       "id": 433,
       "name": "Swingo",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/swingo/logo.jpg",
-      "game": "https://g4.s.mjevents.org/swingo/"
+      "img": "/assets/storage/sp4-macvg/swingo/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/swingo/"
     },
     {
       "id": 434,
       "name": "Tap Tap Shots",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/tap-tap-shots/logo.jpg",
-      "game": "https://g1.s.mjevents.org/tap-tap-shots/"
+      "img": "/assets/storage/sp1-macvg/tap-tap-shots/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/tap-tap-shots/"
     },
     {
       "id": 435,
       "name": "Tower Crash 3D",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/tower-crash-3d/logo.jpg",
-      "game": "https://g4.s.mjevents.org/tower-crash-3d/"
+      "img": "/assets/storage/sp4-macvg/tower-crash-3d/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/tower-crash-3d/"
     },
     {
       "id": 436,
       "name": "Traffic Control",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/traffic-control/logo.jpg",
-      "game": "https://g1.s.mjevents.org/traffic-control/"
+      "img": "/assets/storage/sp1-macvg/traffic-control/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/traffic-control/"
     },
     {
       "id": 437,
       "name": "Tunnel Rush 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/tunnel-rush-2/logo.jpg",
-      "game": "https://g1.s.mjevents.org/tunnel-rush-2/"
+      "img": "/assets/storage/sp1-macvg/tunnel-rush-2/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/tunnel-rush-2/"
     },
     {
       "id": 438,
       "name": "Turn Turn",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/turn-turn/logo.jpg",
-      "game": "https://g1.s.mjevents.org/turn-turn/"
+      "img": "/assets/storage/sp1-macvg/turn-turn/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/turn-turn/"
     },
     {
       "id": 439,
       "name": "Wheelie Bike",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/wheelie-bike/icon-256.png",
-      "game": "https://g3.s.mjevents.org/wheelie-bike/"
+      "img": "/assets/storage/sp3-macvg/wheelie-bike/icon-256.png",
+      "game": "/assets/storage/sp3-macvg/wheelie-bike/"
     },
     {
       "id": 440,
       "name": "Wheelie Bike 2",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/wheelie-bike-2/icon-256.png",
-      "game": "https://g3.s.mjevents.org/wheelie-bike-2/"
+      "img": "/assets/storage/sp3-macvg/wheelie-bike-2/icon-256.png",
+      "game": "/assets/storage/sp3-macvg/wheelie-bike-2/"
     },
     {
       "id": 441,
       "name": "Wheely 2",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/wheely-2/logo.jpg",
-      "game": "https://g4.s.mjevents.org/wheely-2/"
+      "img": "/assets/storage/sp4-macvg/wheely-2/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/wheely-2/"
     },
     {
       "id": 442,
       "name": "Wheely 3",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/wheely-3/logo.jpg",
-      "game": "https://g4.s.mjevents.org/wheely-3/"
+      "img": "/assets/storage/sp4-macvg/wheely-3/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/wheely-3/"
     },
     {
       "id": 443,
       "name": "Wheely 4",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/wheely-4/logo.jpg",
-      "game": "https://g4.s.mjevents.org/wheely-4/"
+      "img": "/assets/storage/sp4-macvg/wheely-4/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/wheely-4/"
     },
     {
       "id": 444,
       "name": "Wheely 5",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/wheely-5/logo.jpg",
-      "game": "https://g4.s.mjevents.org/wheely-5/"
+      "img": "/assets/storage/sp4-macvg/wheely-5/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/wheely-5/"
     },
     {
       "id": 445,
       "name": "Wheely 6",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/wheely-6/logo.jpg",
-      "game": "https://g4.s.mjevents.org/wheely-6/"
+      "img": "/assets/storage/sp4-macvg/wheely-6/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/wheely-6/"
     },
     {
       "id": 446,
       "name": "Wheely 7",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/wheely-7/logo.jpg",
-      "game": "https://g4.s.mjevents.org/wheely-7/"
+      "img": "/assets/storage/sp4-macvg/wheely-7/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/wheely-7/"
     },
     {
       "id": 447,
       "name": "Wheely 8",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/wheely-8/logo.jpg",
-      "game": "https://g4.s.mjevents.org/wheely-8/"
+      "img": "/assets/storage/sp4-macvg/wheely-8/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/wheely-8/"
     },
     {
       "id": 448,
       "name": "Wood Block Puzzle",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/wood-block-puzzle/logo.jpg",
-      "game": "https://g4.s.mjevents.org/wood-block-puzzle/"
+      "img": "/assets/storage/sp4-macvg/wood-block-puzzle/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/wood-block-puzzle/"
     },
     {
       "id": 449,
       "name": "Woodventure",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/woodventure/logo.jpg",
-      "game": "https://g4.s.mjevents.org/woodventure/"
+      "img": "/assets/storage/sp4-macvg/woodventure/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/woodventure/"
     },
     {
       "id": 450,
       "name": "Wordle Unlimited",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/wordle-unlimited/logo.png",
-      "game": "https://g4.s.mjevents.org/wordle-unlimited/"
+      "img": "/assets/storage/sp4-macvg/wordle-unlimited/logo.png",
+      "game": "/assets/storage/sp4-macvg/wordle-unlimited/"
     },
     {
       "id": 451,
       "name": "Word Slide",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/word-slide/logo.jpg",
-      "game": "https://g4.s.mjevents.org/word-slide/"
+      "img": "/assets/storage/sp4-macvg/word-slide/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/word-slide/"
     },
     {
       "id": 452,
       "name": "Retro Bowl College",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/retro-bowl-college/unnamed.png",
-      "game": "https://g3.s.mjevents.org/retro-bowl-college/"
+      "img": "/assets/storage/sp3-macvg/retro-bowl-college/unnamed.png",
+      "game": "/assets/storage/sp3-macvg/retro-bowl-college/"
     },
     {
       "id": 453,
       "name": "Axis Football League",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/axis-football-league/logo.jpg",
-      "game": "https://g3.s.mjevents.org/axis-football-league/"
+      "img": "/assets/storage/sp3-macvg/axis-football-league/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/axis-football-league/"
     },
     {
       "id": 454,
       "name": "Burrito Bison Revenge",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/burrito-bison-revenge/logo.jpg",
-      "game": "https://g1.s.mjevents.org/burrito-bison-revenge/"
+      "img": "/assets/storage/sp1-macvg/burrito-bison-revenge/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/burrito-bison-revenge/"
     },
     {
       "id": 455,
       "name": "Fancy Pants Adventures 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/fancy-pants-2/logo.avif",
-      "game": "https://g1.s.mjevents.org/fancy-pants-2/"
+      "img": "/assets/storage/sp1-macvg/fancy-pants-2/logo.avif",
+      "game": "/assets/storage/sp1-macvg/fancy-pants-2/"
     },
     {
       "id": 456,
       "name": "Fancy Pants Adventures 3",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/fancy-pants-3/logo.avif",
-      "game": "https://g1.s.mjevents.org/fancy-pants-3/"
+      "img": "/assets/storage/sp1-macvg/fancy-pants-3/logo.avif",
+      "game": "/assets/storage/sp1-macvg/fancy-pants-3/"
     },
     {
       "id": 457,
       "name": "Galaga",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/galaga/logo.png",
-      "game": "https://g1.s.mjevents.org/galaga/"
+      "img": "/assets/storage/sp1-macvg/galaga/logo.png",
+      "game": "/assets/storage/sp1-macvg/galaga/"
     },
     {
       "id": 458,
       "name": "Dummy Never Fails",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/dummy-never-fails/logo.jpg",
-      "game": "https://g4.s.mjevents.org/dummy-never-fails/"
+      "img": "/assets/storage/sp4-macvg/dummy-never-fails/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/dummy-never-fails/"
     },
     {
       "id": 459,
       "name": "Dummy Never Fails 2",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/dummy-never-fails-2/logo.jpg",
-      "game": "https://g4.s.mjevents.org/dummy-never-fails-2/"
+      "img": "/assets/storage/sp4-macvg/dummy-never-fails-2/logo.jpg",
+      "game": "/assets/storage/sp4-macvg/dummy-never-fails-2/"
     },
     {
       "id": 460,
       "name": "Gunblood",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/gunblood/logo.png",
-      "game": "https://g1.s.mjevents.org/gunblood/"
+      "img": "/assets/storage/sp1-macvg/gunblood/logo.png",
+      "game": "/assets/storage/sp1-macvg/gunblood/"
     },
     {
       "id": 461,
       "name": "Learn To Fly 2",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/learn-to-fly-2/logo.jpeg",
-      "game": "https://g2.s.mjevents.org/learn-to-fly-2/"
+      "img": "/assets/storage/sp2-macvg/learn-to-fly-2/logo.jpeg",
+      "game": "/assets/storage/sp2-macvg/learn-to-fly-2/"
     },
     {
       "id": 462,
       "name": "Papa's Bakeria",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/papas-bake/logo.jpg",
-      "game": "https://g2.s.mjevents.org/papas-bake/"
+      "img": "/assets/storage/sp2-macvg/papas-bake/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/papas-bake/"
     },
     {
       "id": 463,
       "name": "Papa's Cheeseria",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/papas-cheese/logo.jpg",
-      "game": "https://g2.s.mjevents.org/papas-cheese/"
+      "img": "/assets/storage/sp2-macvg/papas-cheese/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/papas-cheese/"
     },
     {
       "id": 464,
       "name": "Papa's Cupcakeria",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/papas-cupcake/logo.jpg",
-      "game": "https://g2.s.mjevents.org/papas-cupcake/"
+      "img": "/assets/storage/sp2-macvg/papas-cupcake/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/papas-cupcake/"
     },
     {
       "id": 465,
       "name": "Papa's Donuteria",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/papas-donut/logo.png",
-      "game": "https://g2.s.mjevents.org/papas-donut/"
+      "img": "/assets/storage/sp2-macvg/papas-donut/logo.png",
+      "game": "/assets/storage/sp2-macvg/papas-donut/"
     },
     {
       "id": 466,
       "name": "Papa's Freezeria",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/papas-freeze/logo.jpg",
-      "game": "https://g2.s.mjevents.org/papas-freeze/"
+      "img": "/assets/storage/sp2-macvg/papas-freeze/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/papas-freeze/"
     },
     {
       "id": 467,
       "name": "Papa's Hot Doggeria",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/papas-hotdog/logo.jpg",
-      "game": "https://g2.s.mjevents.org/papas-hotdog/"
+      "img": "/assets/storage/sp2-macvg/papas-hotdog/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/papas-hotdog/"
     },
     {
       "id": 468,
       "name": "Papa's Pancakeria",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/papas-pancake/logo.jpg",
-      "game": "https://g2.s.mjevents.org/papas-pancake/"
+      "img": "/assets/storage/sp2-macvg/papas-pancake/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/papas-pancake/"
     },
     {
       "id": 469,
       "name": "Papa's Pastaria",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/papas-pasta/logo.jpg",
-      "game": "https://g2.s.mjevents.org/papas-pasta/"
+      "img": "/assets/storage/sp2-macvg/papas-pasta/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/papas-pasta/"
     },
     {
       "id": 470,
       "name": "Papa's Scooperia",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/papas-scoop/logo.jpg",
-      "game": "https://g2.s.mjevents.org/papas-scoop/"
+      "img": "/assets/storage/sp2-macvg/papas-scoop/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/papas-scoop/"
     },
     {
       "id": 471,
       "name": "Papa's Sushiria",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/papas-sushi/logo.jpg",
-      "game": "https://g2.s.mjevents.org/papas-sushi/"
+      "img": "/assets/storage/sp2-macvg/papas-sushi/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/papas-sushi/"
     },
     {
       "id": 472,
       "name": "Papa's Taco Mia",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/papas-taco/logo.jpg",
-      "game": "https://g2.s.mjevents.org/papas-taco/"
+      "img": "/assets/storage/sp2-macvg/papas-taco/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/papas-taco/"
     },
     {
       "id": 473,
       "name": "Papa's Wingeria",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/papas-wing/logo.jpg",
-      "game": "https://g2.s.mjevents.org/papas-wing/"
+      "img": "/assets/storage/sp2-macvg/papas-wing/logo.jpg",
+      "game": "/assets/storage/sp2-macvg/papas-wing/"
     },
     {
       "id": 474,
       "name": "Gun Mayhem",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/gun-mayhem/logo.jpg",
-      "game": "https://g1.s.mjevents.org/gun-mayhem/"
+      "img": "/assets/storage/sp1-macvg/gun-mayhem/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/gun-mayhem/"
     },
     {
       "id": 475,
       "name": "Gun Mayhem 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/gun-mayhem-2/logo.webp",
-      "game": "https://g1.s.mjevents.org/gun-mayhem-2/"
+      "img": "/assets/storage/sp1-macvg/gun-mayhem-2/logo.webp",
+      "game": "/assets/storage/sp1-macvg/gun-mayhem-2/"
     },
     {
       "id": 476,
       "name": "Gun Mayhem Redux",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/gun-mayhem-redux/logo.jpg",
-      "game": "https://g1.s.mjevents.org/gun-mayhem-redux/"
+      "img": "/assets/storage/sp1-macvg/gun-mayhem-redux/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/gun-mayhem-redux/"
     },
     {
       "id": 477,
       "name": "Icycle",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/icycle/logo.avif",
-      "game": "https://g3.s.mjevents.org/icycle/"
+      "img": "/assets/storage/sp3-macvg/icycle/logo.avif",
+      "game": "/assets/storage/sp3-macvg/icycle/"
     },
     {
       "id": 478,
       "name": "Monster Truck Destroyer",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/monster-truck-destroyer/unnamed.png",
-      "game": "https://g3.s.mjevents.org/monster-truck-destroyer/"
+      "img": "/assets/storage/sp3-macvg/monster-truck-destroyer/unnamed.png",
+      "game": "/assets/storage/sp3-macvg/monster-truck-destroyer/"
     },
     {
       "id": 479,
       "name": "Pokemon Emerald",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/pokemon-emerald/logo.jpg",
-      "game": "https://g1.s.mjevents.org/pokemon-emerald/"
+      "img": "/assets/storage/sp1-macvg/pokemon-emerald/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/pokemon-emerald/"
     },
     {
       "id": 480,
       "name": "Pokemon Emerald 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/pokemon-emerald-2/logo.jpg",
-      "game": "https://g1.s.mjevents.org/pokemon-emerald-2/"
+      "img": "/assets/storage/sp1-macvg/pokemon-emerald-2/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/pokemon-emerald-2/"
     },
     {
       "id": 481,
       "name": "Pokemon Firered",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/pokemon-firered/logo.jpg",
-      "game": "https://g1.s.mjevents.org/pokemon-firered/"
+      "img": "/assets/storage/sp1-macvg/pokemon-firered/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/pokemon-firered/"
     },
     {
       "id": 482,
       "name": "Bally",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/bally/thumb.png",
-      "game": "https://g4.s.mjevents.org/bally/"
+      "img": "/assets/storage/sp4-macvg/bally/thumb.png",
+      "game": "/assets/storage/sp4-macvg/bally/"
     },
     {
       "id": 483,
       "name": "Bicycle Stunt 3D",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/bicycle-stunt-3d/thumbnail.jpg",
-      "game": "https://g3.s.mjevents.org/bicycle-stunt-3d/"
+      "img": "/assets/storage/sp3-macvg/bicycle-stunt-3d/thumbnail.jpg",
+      "game": "/assets/storage/sp3-macvg/bicycle-stunt-3d/"
     },
     {
       "id": 484,
       "name": "Bob the Robber 4",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/bob-the-robber-4/thumb.png",
-      "game": "https://g1.s.mjevents.org/bob-the-robber-4/"
+      "img": "/assets/storage/sp1-macvg/bob-the-robber-4/thumb.png",
+      "game": "/assets/storage/sp1-macvg/bob-the-robber-4/"
     },
     {
       "id": 485,
       "name": "Bottle Flip 3D",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/bottle-flip-3d/thumb.png",
-      "game": "https://g2.s.mjevents.org/bottle-flip-3d/"
+      "img": "/assets/storage/sp2-macvg/bottle-flip-3d/thumb.png",
+      "game": "/assets/storage/sp2-macvg/bottle-flip-3d/"
     },
     {
       "id": 486,
       "name": "Bullet Force",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/bullet-force/thumb.jpg",
-      "game": "https://g1.s.mjevents.org/bullet-force/"
+      "img": "/assets/storage/sp1-macvg/bullet-force/thumb.jpg",
+      "game": "/assets/storage/sp1-macvg/bullet-force/"
     },
     {
       "id": 487,
       "name": "Burnin' Rubber 5 XS",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/burnin-rubber-5xs/thumb.jpg",
-      "game": "https://g3.s.mjevents.org/burnin-rubber-5xs/"
+      "img": "/assets/storage/sp3-macvg/burnin-rubber-5xs/thumb.jpg",
+      "game": "/assets/storage/sp3-macvg/burnin-rubber-5xs/"
     },
     {
       "id": 488,
       "name": "Cartoon Mini Racing",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/cartoon-mini-racing/thumb.jpg",
-      "game": "https://g3.s.mjevents.org/cartoon-mini-racing/"
+      "img": "/assets/storage/sp3-macvg/cartoon-mini-racing/thumb.jpg",
+      "game": "/assets/storage/sp3-macvg/cartoon-mini-racing/"
     },
     {
       "id": 489,
       "name": "Run 2",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/run-2/thumb.png",
-      "game": "https://g1.s.mjevents.org/run-2/"
+      "img": "/assets/storage/sp1-macvg/run-2/thumb.png",
+      "game": "/assets/storage/sp1-macvg/run-2/"
     },
     {
       "id": 490,
       "name": "Skywire",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/skywire/thumb.avif",
-      "game": "https://g1.s.mjevents.org/skywire/"
+      "img": "/assets/storage/sp1-macvg/skywire/thumb.avif",
+      "game": "/assets/storage/sp1-macvg/skywire/"
     },
     {
       "id": 491,
       "name": "Whack your Boss",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/whack-your-boss/thumb.jpg",
-      "game": "https://g2.s.mjevents.org/whack-your-boss/"
+      "img": "/assets/storage/sp2-macvg/whack-your-boss/thumb.jpg",
+      "game": "/assets/storage/sp2-macvg/whack-your-boss/"
     },
     {
       "id": 492,
       "name": "Crazy Tunnel 3D",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/crazy-tunnel-3d/thumb.webp",
-      "game": "https://g1.s.mjevents.org/crazy-tunnel-3d/"
+      "img": "/assets/storage/sp1-macvg/crazy-tunnel-3d/thumb.webp",
+      "game": "/assets/storage/sp1-macvg/crazy-tunnel-3d/"
     },
     {
       "id": 493,
       "name": "Eagle Ride",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/eagle-ride/logo.avif",
-      "game": "https://g1.s.mjevents.org/eagle-ride/"
+      "img": "/assets/storage/sp1-macvg/eagle-ride/logo.avif",
+      "game": "/assets/storage/sp1-macvg/eagle-ride/"
     },
     {
       "id": 494,
       "name": "Earn to Die",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/earn-to-die/logo.png",
-      "game": "https://g3.s.mjevents.org/earn-to-die/"
+      "img": "/assets/storage/sp3-macvg/earn-to-die/logo.png",
+      "game": "/assets/storage/sp3-macvg/earn-to-die/"
     },
     {
       "id": 495,
       "name": "Electron Dash",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/electron-dash/logo.png",
-      "game": "https://g1.s.mjevents.org/electron-dash/"
+      "img": "/assets/storage/sp1-macvg/electron-dash/logo.png",
+      "game": "/assets/storage/sp1-macvg/electron-dash/"
     },
     {
       "id": 496,
       "name": "Endless Tunnel",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/endless-tunnel/logo.png",
-      "game": "https://g1.s.mjevents.org/endless-tunnel/"
+      "img": "/assets/storage/sp1-macvg/endless-tunnel/logo.png",
+      "game": "/assets/storage/sp1-macvg/endless-tunnel/"
     },
     {
       "id": 497,
       "name": "Fisherman Life",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/fisherman-life/logo.webp",
-      "game": "https://g2.s.mjevents.org/fisherman-life/"
+      "img": "/assets/storage/sp2-macvg/fisherman-life/logo.webp",
+      "game": "/assets/storage/sp2-macvg/fisherman-life/"
     },
     {
       "id": 498,
       "name": "Football Run",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/football-run/logo.jpg",
-      "game": "https://g1.s.mjevents.org/football-run/"
+      "img": "/assets/storage/sp1-macvg/football-run/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/football-run/"
     },
     {
       "id": 499,
       "name": "Gladihoppers",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/gladihoppers/logo.jpg",
-      "game": "https://g1.s.mjevents.org/gladihoppers/"
+      "img": "/assets/storage/sp1-macvg/gladihoppers/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/gladihoppers/"
     },
     {
       "id": 500,
       "name": "Glitch Dash",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/glitch-dash/logo.avif",
-      "game": "https://g1.s.mjevents.org/glitch-dash/"
+      "img": "/assets/storage/sp1-macvg/glitch-dash/logo.avif",
+      "game": "/assets/storage/sp1-macvg/glitch-dash/"
     },
     {
       "id": 501,
       "name": "Ohio Fortnite",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/ohio-fortnite/logo.jpg",
-      "game": "https://g1.s.mjevents.org/ohio-fortnite/"
+      "img": "/assets/storage/sp1-macvg/ohio-fortnite/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/ohio-fortnite/"
     },
     {
       "id": 502,
       "name": "GunSpin",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/gun-spin/logo.jpg",
-      "game": "https://g1.s.mjevents.org/gun-spin/"
+      "img": "/assets/storage/sp1-macvg/gun-spin/logo.jpg",
+      "game": "/assets/storage/sp1-macvg/gun-spin/"
     },
     {
       "id": 503,
       "name": "Happy Wheels",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/happy-wheels/logo.jpg",
-      "game": "https://g3.s.mjevents.org/happy-wheels/"
+      "img": "/assets/storage/sp3-macvg/happy-wheels/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/happy-wheels/"
     },
     {
       "id": 504,
       "name": "House of Hazards",
       "category": "action",
-      "img": "https://g1.s.mjevents.org/house-of-hazards/logo.avif",
-      "game": "https://g1.s.mjevents.org/house-of-hazards/"
+      "img": "/assets/storage/sp1-macvg/house-of-hazards/logo.avif",
+      "game": "/assets/storage/sp1-macvg/house-of-hazards/"
     },
     {
       "id": 505,
       "name": "Idle Light City",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/idle-light-city/logo.jpeg",
-      "game": "https://g2.s.mjevents.org/idle-light-city/"
+      "img": "/assets/storage/sp2-macvg/idle-light-city/logo.jpeg",
+      "game": "/assets/storage/sp2-macvg/idle-light-city/"
     },
     {
       "id": 506,
       "name": "Idle Tree City",
       "category": "casual",
-      "img": "https://g2.s.mjevents.org/idle-tree-city/logo.jpeg",
-      "game": "https://g2.s.mjevents.org/idle-tree-city/"
+      "img": "/assets/storage/sp2-macvg/idle-tree-city/logo.jpeg",
+      "game": "/assets/storage/sp2-macvg/idle-tree-city/"
     },
     {
       "id": 507,
       "name": "Impossible Monster Truck",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/impossible-monster-truck/logo.png",
-      "game": "https://g3.s.mjevents.org/impossible-monster-truck/"
+      "img": "/assets/storage/sp3-macvg/impossible-monster-truck/logo.png",
+      "game": "/assets/storage/sp3-macvg/impossible-monster-truck/"
     },
     {
       "id": 508,
       "name": "Indian Truck Simulator",
       "category": "driving",
-      "img": "https://g3.s.mjevents.org/indian-truck-simulator/logo.jpg",
-      "game": "https://g3.s.mjevents.org/indian-truck-simulator/"
+      "img": "/assets/storage/sp3-macvg/indian-truck-simulator/logo.jpg",
+      "game": "/assets/storage/sp3-macvg/indian-truck-simulator/"
     },
     {
       "id": 509,
       "name": "Jungle TD",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/jungle-td/logo.avif",
-      "game": "https://g4.s.mjevents.org/jungle-td/"
+      "img": "/assets/storage/sp4-macvg/jungle-td/logo.avif",
+      "game": "/assets/storage/sp4-macvg/jungle-td/"
     },
     {
       "id": 510,
       "name": "Kingdom Rush",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/kingdom-rush/logo.png",
-      "game": "https://g4.s.mjevents.org/kingdom-rush/"
+      "img": "/assets/storage/sp4-macvg/kingdom-rush/logo.png",
+      "game": "/assets/storage/sp4-macvg/kingdom-rush/"
     },
     {
       "id": 511,
       "name": "Kingdom Defense Mercenary",
       "category": "strategy",
-      "img": "https://g4.s.mjevents.org/kingdom-defence/logo.png",
-      "game": "https://g4.s.mjevents.org/kingdom-defence/"
+      "img": "/assets/storage/sp4-macvg/kingdom-defence/logo.png",
+      "game": "/assets/storage/sp4-macvg/kingdom-defence/"
     }
   ]

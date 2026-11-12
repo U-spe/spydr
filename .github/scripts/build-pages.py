@@ -33,9 +33,15 @@ for path in OUT.rglob("*"):
     except UnicodeDecodeError:
         continue
     if path.suffix.lower() == ".html" and "<head" in content.lower() and "data-spydr-pages-base" not in content:
-        base_tag = '<script>const spydrBase=document.createElement("base");spydrBase.href=location.hostname.endsWith(".github.io")?"/spydr/":"/";document.head.prepend(spydrBase);</script>'
+        relative_parts = path.relative_to(OUT).parts
+        if len(relative_parts) > 2 and relative_parts[:2] == ("assets", "storage"):
+            submodule_base = "/assets/storage/" + relative_parts[2] + "/"
+            base_expression = 'location.hostname.endsWith(".github.io")?"/spydr' + submodule_base + '":"' + submodule_base + '"'
+        else:
+            base_expression = 'location.hostname.endsWith(".github.io")?"/spydr/":"/"'
+        base_tag = '<script>const spydrBase=document.createElement("base");spydrBase.href=' + base_expression + ';document.head.prepend(spydrBase);</script>'
         content = re.sub(r'(<head(?:\s[^>]*)?>)', r'\1\n' + base_tag, content, count=1, flags=re.I)
-    content = content.replace('"/api/', '"' + API_ORIGIN + '/api/').replace("'/api/", "'" + API_ORIGIN + "/api/").replace("`/api/", "`" + API_ORIGIN + "/api/")
+    content = content.replace('"/api/', '"' + API_ORIGIN + '/api/').replace("'/api/", "'" + API_ORIGIN + "/api/").replace("\`/api/", "\`" + API_ORIGIN + "/api/")
     content = path_pattern.sub(lambda match: match.group("q") + match.group("path"), content)
     content = content.replace('window.location.replace("/")', 'window.location.replace(new URL("./", document.baseURI).href)')
     path.write_text(content, encoding="utf-8")

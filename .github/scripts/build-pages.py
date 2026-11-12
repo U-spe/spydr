@@ -21,19 +21,19 @@ for item in ROOT.iterdir():
         shutil.copy2(item, target)
 
 # GitHub project pages serve this repository below /spydr/.
-# Rewrite root-relative app paths only in the generated artifact.
-path_pattern = re.compile(r'(?P<q>["\'(=])/(?P<path>(?:assets|css|js|apps|login\\.html|settings\\.html|study\\.html|lessons\\.html|search\\.html|review\\.html|flashcards\\.html)(?:/|["\'?#]))')
+# Prefix root-relative app URLs in the generated copy, not the source files.
+path_pattern = re.compile(r'(?P<q>["\'(=])/(?P<path>(?:assets|css|js|apps|(?:login|settings|study|lessons|search|review|flashcards)\.html)(?:/|["\'?#]))')
 for path in OUT.rglob("*"):
     if not path.is_file() or path.suffix.lower() not in {".html", ".js", ".css", ".json"}:
         continue
     try:
-        text = path.read_text(encoding="utf-8")
+        content = path.read_text(encoding="utf-8")
     except UnicodeDecodeError:
         continue
-    if path.suffix.lower() == ".html" and "<head" in text.lower() and "name=\"spydr-pages-base\"" not in text:
-        base_script = '<base href="/spydr/" data-spydr-pages-base="true">'
-        text = re.sub(r'(<head(?:\\s[^>]*)?>)', r'\\1\\n' + base_script, text, count=1, flags=re.I)
-    text = path_pattern.sub(lambda m: m.group("q") + "spydr/" + m.group("path"), text)
-    path.write_text(text, encoding="utf-8")
+    if path.suffix.lower() == ".html" and "<head" in content.lower() and "data-spydr-pages-base" not in content:
+        base_tag = '<base href="/spydr/" data-spydr-pages-base="true">'
+        content = re.sub(r'(<head(?:\s[^>]*)?>)', r'\1\n' + base_tag, content, count=1, flags=re.I)
+    content = path_pattern.sub(lambda match: match.group("q") + "/spydr/" + match.group("path"), content)
+    path.write_text(content, encoding="utf-8")
 
 (OUT / ".nojekyll").touch()

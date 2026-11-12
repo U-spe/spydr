@@ -20,7 +20,7 @@ const handlers = new Map([
 ]);
 
 export async function onRequest(context) {
-  const pathname = new URL(context.request.url).pathname.replace(/\\/$/, "");
+  const pathname = new URL(context.request.url).pathname.replace(/\/$/, "");
   const handler = handlers.get(pathname);
   if (!handler) {
     return Response.json({ error: "API endpoint not found." }, { status: 404 });

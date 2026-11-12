@@ -31,10 +31,11 @@ for path in OUT.rglob("*"):
     except UnicodeDecodeError:
         continue
     if path.suffix.lower() == ".html" and "<head" in content.lower() and "data-spydr-pages-base" not in content:
-        base_tag = '<base href="/spydr/" data-spydr-pages-base="true">'
+        base_tag = '<script>const spydrBase=document.createElement("base");spydrBase.href=location.hostname.endsWith(".github.io")?"/spydr/":"/";document.head.prepend(spydrBase);</script>'
         content = re.sub(r'(<head(?:\s[^>]*)?>)', r'\1\n' + base_tag, content, count=1, flags=re.I)
     content = content.replace('"/api/', '"https://spydr-delta.vercel.app/api/').replace("'/api/", "'https://spydr-delta.vercel.app/api/").replace("`/api/", "`https://spydr-delta.vercel.app/api/")
-    content = path_pattern.sub(lambda match: match.group("q") + "/spydr/" + match.group("path"), content)
+    content = path_pattern.sub(lambda match: match.group("q") + match.group("path"), content)
+    content = content.replace('window.location.replace("/")', 'window.location.replace(new URL("./", document.baseURI).href)')
     path.write_text(content, encoding="utf-8")
 
 (OUT / ".nojekyll").touch()

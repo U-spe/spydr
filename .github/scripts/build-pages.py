@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "_site"
 EXCLUDED = {".git", ".github", "functions", "api", "py", "scripts", "node_modules", "_site"}
 EXCLUDED_FILES = {"package.json", "package-lock.json", "server.js", "wrangler.jsonc", "vercel.json", ".gitmodules", ".gitignore"}
-API_ORIGIN = os.environ.get("SPYDR_API_ORIGIN", "https://spydr-delta.vercel.app").rstrip("/")
+API_ORIGIN = (os.environ.get("SPYDR_API_ORIGIN") or "https://spydr-delta.vercel.app").rstrip("/")
 
 if OUT.exists():
     shutil.rmtree(OUT)

@@ -1,25 +1,30 @@
 [
   {
+    "Name": "Gn-Math",
+    "File": "assets/json/gnmath.json",
+    "Icon": "ri-grid-line"
+  },
+  {
     "Name": "MacVG",
     "File": "assets/json/macvg.json",
     "Icon": "ri-ship-2-line"
   },
-   {
+  {
     "Name": "Nates Hub",
     "File": "assets/json/nate.json",
     "Icon": "ri-flask-line"
   },
-    {
+  {
     "Name": "Requested",
     "File": "assets/json/requested.json",
     "Icon": "ri-star-line"
-  }, 
-   {
+  },
+  {
     "Name": "Fire Hydrant",
     "File": "assets/json/hydra.json",
     "Icon": "ri-fire-line"
   },
-   {
+  {
     "Name": "Truffled",
     "File": "assets/json/truffled.json",
     "Icon": "ri-ghost-line"
@@ -29,14 +34,9 @@
     "File": "assets/json/suntree.json",
     "Icon": "ri-tree-line"
   },
-    {
+  {
     "Name": "Lumin",
     "File": "lumin",
     "Icon": "ri-lightbulb-line"
-  },
-  {
-    "Name": "Gn-Math",
-    "File": "assets/json/gnmath.json",
-    "Icon": "ri-grid-line"
   }
 ]

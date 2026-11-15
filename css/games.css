@@ -1028,3 +1028,16 @@ body[data-bg-style="fog"]
   }
 
 }
+
+
+/* MONOCHROME GAME CATALOG */
+.category-bar{display:flex;align-items:center;gap:12px;margin:-5px 0 20px;color:var(--gray);font-size:12px}
+.category-label{display:inline-flex;align-items:center;gap:7px;text-transform:lowercase}
+#category-filter{min-width:180px;padding:10px 12px;color:var(--text);background:var(--bg2);border:1px solid var(--border);border-radius:9px;font:inherit;font-size:12px;outline:none}
+#category-filter:focus-visible,.game-card:focus-visible{outline:2px solid var(--text);outline-offset:3px}
+.game-card{position:relative;background:linear-gradient(145deg,var(--card),var(--bg2));border-color:color-mix(in srgb,var(--border) 78%,white 22%);text-align:left}
+.game-card img{height:145px;filter:saturate(.72);transition:filter .25s ease,transform .35s ease}
+.game-card:hover img{filter:saturate(1);transform:scale(1.025)}
+.game-card span{padding:12px 12px 4px;color:var(--text);font-family:"Space Grotesk",sans-serif;font-size:14px;font-weight:600}
+.game-card .game-category{display:block;padding:0 12px 12px;color:var(--gray);font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:700px){.category-bar{margin-top:-8px}#category-filter{flex:1;min-width:0}.game-card img{height:112px}}

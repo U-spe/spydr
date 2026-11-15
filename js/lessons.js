@@ -3,7 +3,7 @@
 ========================= */
 
 // Public Cloudflare R2 bucket base URL.
-// Keep the /multiuse/... object paths unchanged.
+// Resolve only the public R2 game and cover folders.
 window.SPYDR_R2_BASE = window.SPYDR_R2_BASE || "https://pub-becf721603f5446dbe8deed55a153d97.r2.dev";
 
 let gameLists = [];
@@ -58,7 +58,7 @@ const getEl = (id) =>
 function resolveR2Path(path) {
   if (!path) return path;
 const base = String(window.SPYDR_R2_BASE || '').replace(/\/$/, '');
-   if (!base || !String(path).startsWith('/multiuse/')) return path;
+   if (!base || !(String(path).startsWith('/html/') || String(path).startsWith('/covers/'))) return path;
   return base + path;
 }
 

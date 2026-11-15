@@ -2,7 +2,23 @@
 
 All notable changes to spydr are documented here.
 
-# v3.0 - CURRENT
+# v4.0 - CURRENT
+
+## 🛠️ Beginning
+- [ ] UV route (this should be the final proxy change)
+- [x] SWITCHED TO Cloudflare instead of Vercel (i got blocked)
+- [x] Add GN-Math Games Via Cloudflare
+- [ ] Add Seraph Games (same as gnm)
+
+## 🐛 Fixed
+- [x] Cine Cloud (Replaced Cine with PS5 Emu)
+- [x] Domain Links On Homepage
+- [x] Cloudflare CLI
+- [x] GitHub Actions Work
+
+---
+
+# v3.0 - PREVIOUS
 
 ## 🛠️ Beginning
 - [x] Starting CORROSION build 
@@ -14,7 +30,7 @@ All notable changes to spydr are documented here.
 
 ---
 
-# v2.7.3 - PREVIOUS
+# v2.7.3
 
 ## 🛠️ Beginning
 - [x] Add More Colored Themes And Cool Stuff

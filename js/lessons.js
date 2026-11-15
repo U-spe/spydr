@@ -51,6 +51,13 @@ const getEl = (id) =>
    GET GAME URL
 ========================= */
 
+function resolveR2Path(path) {
+  if (!path) return path;
+  const base = String(window.SPYDR_R2_BASE || '').replace(/\\/$/, '');
+  if (!base || !String(path).startsWith('/multiuse/')) return path;
+  return base + path;
+}
+
 async function getGameURL(game) {
 
   /*
@@ -189,7 +196,7 @@ async function getGameURL(game) {
   */
 
   return (
-    game.url ||
+    resolveR2Path(game.url) ||
     "#"
   );
 
@@ -201,12 +208,7 @@ async function getGameURL(game) {
 ========================= */
 
 function getCover(game) {
-
-  return (
-    game.cover ||
-    "/assets/images/no-image.png"
-  );
-
+  return resolveR2Path(game.cover || "/assets/images/no-image.png");
 }
 
 
@@ -656,31 +658,7 @@ document.addEventListener(
     }
 
 
-    const q =
-      e.target.value
-        .trim()
-        .toLowerCase();
-
-
-    filteredGames =
-      games.filter(
-        (game) => {
-
-          return (
-
-            String(
-              game.name
-            )
-              .toLowerCase()
-              .includes(q)
-
-          );
-
-        }
-      );
-
-
-    renderGames();
+    applyGameFilters();
 
   }
 );
@@ -1510,7 +1488,8 @@ async function loadGames() {
               Boolean(
                 game.prx ||
                 game.proxy
-              )
+              ),
+            category: String(game.category || game.genre || "Other")
 
           };
 
@@ -1541,12 +1520,9 @@ async function loadGames() {
        STORE GAMES
     ========================== */
 
-    games =
-      normalizedGames;
-
-
-    filteredGames =
-      games.slice();
+    games = normalizedGames;
+    buildCategoryFilter();
+    filteredGames = games.slice();
 
 
     /* =========================
@@ -1637,6 +1613,37 @@ async function loadGames() {
 
 
 /* =========================
+   CATEGORY + SEARCH FILTERS
+========================= */
+
+function buildCategoryFilter() {
+  const select = getEl("category-filter");
+  if (!select) return;
+  const current = select.value || "all";
+  const categories = [...new Set(games.map(g => g.category || "Other"))].sort((a,b) => a.localeCompare(b));
+  select.innerHTML = '<option value="all">all categories</option>';
+  categories.forEach(category => {
+    const option = document.createElement("option");
+    option.value = category;
+    option.textContent = category.toLowerCase();
+    select.appendChild(option);
+  });
+  select.value = categories.includes(current) ? current : "all";
+}
+
+function applyGameFilters() {
+  const q = (getEl("search")?.value || "").trim().toLowerCase();
+  const category = getEl("category-filter")?.value || "all";
+  filteredGames = games.filter(game =>
+    String(game.name || "").toLowerCase().includes(q) &&
+    (category === "all" || (game.category || "Other") === category)
+  );
+  renderGames();
+}
+
+getEl("category-filter")?.addEventListener("change", applyGameFilters);
+
+/* =========================
    RENDER GAMES
 ========================= */
 
@@ -1725,8 +1732,10 @@ function renderGames() {
         "lazy";
 
 
-      titleSpan.textContent =
-        game.name;
+      titleSpan.textContent = game.name;
+      const categorySpan = document.createElement("small");
+      categorySpan.className = "game-category";
+      categorySpan.textContent = String(game.category || "Other").toLowerCase();
 
 
       /* =========================
@@ -1768,9 +1777,8 @@ function renderGames() {
       );
 
 
-      card.appendChild(
-        titleSpan
-      );
+      card.appendChild(titleSpan);
+      card.appendChild(categorySpan);
 
 
       gameGrid.appendChild(

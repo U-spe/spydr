@@ -29,6 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
             url: '/app/no-app.html'
         },
         {
+            id: 'soundboard',
+            name: 'Soundboard',
+            description: 'Play sound effects, manage favorites, and use text-to-speech.',
+            icon: 'ri-volume-up-line',
+            category: 'local',
+            featured: true,
+            url: '/apps/soundboard.html'
+        },
+        {
             id: 'calc',
             name: 'Calculator',
             description: 'Standard OS mathematical calculator.',

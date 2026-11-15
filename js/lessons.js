@@ -57,7 +57,7 @@ const getEl = (id) =>
 
 function resolveR2Path(path) {
   if (!path) return path;
-  const base = String(window.SPYDR_R2_BASE || '').replace(/\\/$/, '');
+  const base = String(window.SPYDR_R2_BASE || '').replace(/\/$/, '');
   if (!base || !String(path).startsWith('/multiuse/')) return path;
   return base + path;
 }

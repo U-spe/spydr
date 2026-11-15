@@ -33,5 +33,10 @@
     "Name": "Lumin",
     "File": "lumin",
     "Icon": "ri-lightbulb-line"
-  } 
+  },
+  {
+    "Name": "Gn-Math",
+    "File": "assets/json/gnmath.json",
+    "Icon": "ri-grid-line"
+  }
 ]

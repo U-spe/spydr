@@ -75,12 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 'cine',
-            name: 'Cine Cloud',
-            description: 'High-fidelity cloud media streaming service.',
-            icon: 'ri-cloud-windy-fill',
+            name: 'PS5 Emu',
+            description: 'PS5-like system with nieche games.',
+            icon: 'ri-playstation-line',
             category: 'local',
             featured: true,
-            url: '/apps/c-os.html'
+            url: '/apps/play-ps5.emu.html'
         }
     ];
 

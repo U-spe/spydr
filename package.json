@@ -4,9 +4,10 @@
   "description": "Spydr web application",
   "main": "server.js",
   "scripts": {
-    "start": "NODE_OPTIONS=--openssl-legacy-provider node server.js",
+    "start": "node server.js",
     "deploy": "wrangler pages deploy . --project-name spydr",
-    "preview": "wrangler pages dev ."
+    "preview": "wrangler pages dev .",
+    "postinstall": "npm install --prefix web --omit=dev --no-audit --no-fund"
   },
   "keywords": [],
   "author": "",

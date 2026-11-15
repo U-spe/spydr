@@ -1,7 +1,6 @@
 const express = require("express");
 const http = require("http");
 const path = require("path");
-const { createRequire } = require("module");
 const { pathToFileURL } = require("url");
 
 const app = express();
@@ -11,20 +10,11 @@ const PORT = Number(process.env.PORT) || 3000;
 const ROOT = __dirname;
 const WEB_ROOT = path.join(ROOT, "web");
 const WEB_PUBLIC = path.join(WEB_ROOT, "public");
-const webRequire = createRequire(path.join(WEB_ROOT, "package.json"));
 
 async function start() {
-  // Load Scramjet's runtime packages from the self-contained /web installation.
-  const importWebPackage = async (name) =>
-    import(pathToFileURL(webRequire.resolve(name)).href);
-
-  const [{ server: wisp, logging }, { scramjetPath }, { libcurlPath }, { baremuxPath }] =
-    await Promise.all([
-      importWebPackage("@mercuryworkshop/wisp-js/server"),
-      importWebPackage("@mercuryworkshop/scramjet/path"),
-      importWebPackage("@mercuryworkshop/libcurl-transport"),
-      importWebPackage("@mercuryworkshop/bare-mux/node")
-    ]);
+  // Load Scramjet's runtime packages from the ESM module inside /web.
+  const { wisp, logging, scramjetPath, libcurlPath, baremuxPath } =
+    await import(pathToFileURL(path.join(WEB_ROOT, "runtime.js")).href);
 
   logging.set_level(logging.NONE);
   Object.assign(wisp.options, {

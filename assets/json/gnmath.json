@@ -105,7 +105,7 @@
     "game": "/html/11-fix2.html",
     "author": "Madbox",
     "authorLink": "https://madbox.io",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 13,
@@ -150,7 +150,7 @@
     "game": "/html/17-fix2.html",
     "author": "AmaNotes",
     "authorLink": "https://play.google.com/store/apps/details?id=com.youmusic.magictiles",
-    "category": "Arcade"
+    "category": "Music"
   },
   {
     "id": 18,
@@ -168,7 +168,7 @@
     "game": "/html/19-fix2.html",
     "author": "Neron's Brother",
     "authorLink": "https://neronsbrother.com",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 20,
@@ -186,7 +186,7 @@
     "game": "/html/21-fix2.html",
     "author": "https://play.google.com/store/apps/details?id=com.turbo.stars",
     "authorLink": "SayGames",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 22,
@@ -195,7 +195,7 @@
     "game": "/html/22-fix2.html",
     "author": "Voodoo",
     "authorLink": "https://voodoo.io",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 23,
@@ -204,7 +204,7 @@
     "game": "/html/23-fix2.html",
     "author": "Zakeh",
     "authorLink": "https://play.google.com/store/apps/details?id=me.pou.app",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 24,
@@ -222,7 +222,7 @@
     "game": "/html/25-fix2.html",
     "author": "Supersonic Studios LTD",
     "authorLink": "https://play.google.com/store/apps/details?id=com.noorgames.basketbattle",
-    "category": "Arcade"
+    "category": "Sports"
   },
   {
     "id": 26,
@@ -258,7 +258,7 @@
     "game": "/html/29-fix2.html",
     "author": "Supersonic Studios LTD",
     "authorLink": "https://play.google.com/store/apps/details?id=com.Lightneer.BazookaBoy",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 30,
@@ -312,7 +312,7 @@
     "game": "/html/36-fix3.html",
     "author": "Fancade",
     "authorLink": "https://fancade.com/",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 37,
@@ -396,7 +396,7 @@
     "game": "/html/44-fix2.html",
     "author": "Kids Games LLC",
     "authorLink": "https://play.google.com/store/apps/dev?id=6566434917716295659&hl=en_US",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 45,
@@ -594,7 +594,7 @@
     "game": "/html/65-fix2.html",
     "author": "Basically Games",
     "authorLink": "https://basically-games.itch.io/baldis-basics",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 66,
@@ -603,7 +603,7 @@
     "game": "/html/66-fix2.html",
     "author": "RHM Interactive OÜ",
     "authorLink": "https://play.google.com/store/apps/dev?id=9182049342574405049&hl=en_US",
-    "category": "Arcade"
+    "category": "Sports"
   },
   {
     "id": 67,
@@ -612,7 +612,7 @@
     "game": "/html/67-fix2.html",
     "author": "EvilObjective",
     "authorLink": "https://evilobjective.itch.io",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 68,
@@ -621,7 +621,7 @@
     "game": "/html/68-fix2.html",
     "author": "EvilObjective",
     "authorLink": "https://evilobjective.itch.io",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 69,
@@ -630,7 +630,7 @@
     "game": "/html/69-fix.html",
     "author": "EvilObjective",
     "authorLink": "https://evilobjective.itch.io",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 70,
@@ -708,7 +708,7 @@
     "game": "/html/76-fix3.html",
     "author": "Meow Beast",
     "authorLink": "https://www.newgrounds.com/portal/view/585767",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 77,
@@ -762,7 +762,7 @@
     "game": "/html/81-fix.html",
     "author": "Landfall",
     "authorLink": "https://landfall.se",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 82,
@@ -771,7 +771,7 @@
     "game": "/html/82-a.html",
     "author": "Orteil",
     "authorLink": "https://orteil.dashnet.org",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 83,
@@ -810,7 +810,7 @@
     "game": "/html/86-fix3.html",
     "author": "VOODOO",
     "authorLink": "https://voodoo.io",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 87,
@@ -870,7 +870,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 92,
@@ -888,7 +888,7 @@
     "game": "/html/93-fix2.html",
     "author": "SayGames",
     "authorLink": "https://say.games",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 94,
@@ -897,7 +897,7 @@
     "game": "/html/94-fix2.html",
     "author": "Megagon Industries",
     "authorLink": "https://megagonindustries.com/",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 95,
@@ -909,7 +909,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 96,
@@ -918,7 +918,7 @@
     "game": "/html/96-fix.html",
     "author": "MadPuffers",
     "authorLink": "https://www.madpuffers.com",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 97,
@@ -927,7 +927,7 @@
     "game": "/html/97-fix2.html",
     "author": "MadPuffers",
     "authorLink": "https://www.madpuffers.com",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 98,
@@ -936,7 +936,7 @@
     "game": "/html/98-fix2.html",
     "author": "MadPuffers",
     "authorLink": "https://www.madpuffers.com",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 99,
@@ -954,7 +954,7 @@
     "game": "/html/100-fix2.html",
     "author": "MadPuffers",
     "authorLink": "https://www.madpuffers.com",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 101,
@@ -984,7 +984,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 104,
@@ -996,7 +996,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 105,
@@ -1008,7 +1008,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 106,
@@ -1020,7 +1020,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 107,
@@ -1032,7 +1032,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 108,
@@ -1041,7 +1041,7 @@
     "game": "/html/108-fix2.html",
     "author": "Winter Studio",
     "authorLink": "https://winterstudio.com/",
-    "category": "Arcade"
+    "category": "Sports"
   },
   {
     "id": 109,
@@ -1050,7 +1050,7 @@
     "game": "/html/109-fix.html",
     "author": "Happymagenta UAB",
     "authorLink": "https://happymagenta.com/",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 110,
@@ -1062,7 +1062,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 111,
@@ -1071,7 +1071,7 @@
     "game": "/html/111-fix2.html",
     "author": "New Eich Games",
     "authorLink": "https://www.neweichgames.com/",
-    "category": "Arcade"
+    "category": "Sports"
   },
   {
     "id": 112,
@@ -1093,7 +1093,7 @@
       "emulator",
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Emulator"
   },
   {
     "id": 114,
@@ -1120,7 +1120,7 @@
     "game": "/html/116-fix.html",
     "author": "RHM Interactive OÜ",
     "authorLink": "https://play.google.com/store/apps/dev?id=9182049342574405049&hl=en_US",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 117,
@@ -1129,7 +1129,7 @@
     "game": "/html/117-fix2.html",
     "author": "do.games",
     "authorLink": "https://play.google.com/store/apps/dev?id=8163162718412732005&hl=en_US",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 118,
@@ -1147,7 +1147,7 @@
     "game": "/html/119-fix2.html",
     "author": "gamebiz",
     "authorLink": "https://gamebiz.com/",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 120,
@@ -1156,7 +1156,7 @@
     "game": "/html/120-fix2.html",
     "author": "Mirra Games",
     "authorLink": "https://mirragames.com/",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 121,
@@ -1183,7 +1183,7 @@
     "game": "/html/123-fix2.html",
     "author": "Kodub",
     "authorLink": "https://www.kodub.com",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 124,
@@ -1192,7 +1192,7 @@
     "game": "/html/124-fix.html",
     "author": "MadPuffers",
     "authorLink": "http://madpuffers.com/",
-    "category": "Sports"
+    "category": "Racing"
   },
   {
     "id": 125,
@@ -1210,7 +1210,7 @@
     "game": "/html/127-fix2.html",
     "author": "Apps Mobile Games",
     "authorLink": "https://play.google.com/store/apps/dev?id=4672672872255695418&hl=en_US",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 128,
@@ -1219,7 +1219,7 @@
     "game": "/html/128-fix2.html",
     "author": "VOODOO",
     "authorLink": "https://play.google.com/store/apps/developer?id=VOODOO&hl=en_US",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 129,
@@ -1228,7 +1228,7 @@
     "game": "/html/129-fix.html",
     "author": "Dong Nguyen",
     "authorLink": "https://x.com/dongatory",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 130,
@@ -1246,7 +1246,7 @@
     "game": "/html/146-fix2.html",
     "author": "Famobi",
     "authorLink": "https://play.google.com/store/apps/details?id=com.famobi.eightballbilliardsclassic",
-    "category": "Arcade"
+    "category": "Sports"
   },
   {
     "id": 147,
@@ -1264,7 +1264,7 @@
     "game": "/html/148-fix2.html",
     "author": "Famobi",
     "authorLink": "https://play.google.com/store/apps/details?id=com.famobi.archeryworldtour",
-    "category": "Arcade"
+    "category": "Sports"
   },
   {
     "id": 149,
@@ -1300,7 +1300,7 @@
     "game": "/html/152-fix2.html",
     "author": "Supersonic Studios LTD",
     "authorLink": "https://play.google.com/store/apps/details?id=com.friendsgamesincubator.drawtheline",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 153,
@@ -1309,7 +1309,7 @@
     "game": "/html/153-fix2.html",
     "author": "Voodoo",
     "authorLink": "https://play.google.com/store/apps/details?id=com.acidcousins.fdunk",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 154,
@@ -1327,7 +1327,7 @@
     "game": "/html/155-fix2.html",
     "author": "TapNation",
     "authorLink": "https://play.google.com/store/apps/details?id=com.qoni.guesstheiranswer",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 156,
@@ -1336,7 +1336,7 @@
     "game": "/html/156-fix2.html",
     "author": "CASUAL AZUR GAMES",
     "authorLink": "https://play.google.com/store/apps/details?id=com.harvest.io",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 157,
@@ -1354,7 +1354,7 @@
     "game": "/html/158-fix2.html",
     "author": "RedFox Games",
     "authorLink": "https://www.playredfox.com",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 159,
@@ -1363,7 +1363,7 @@
     "game": "/html/159-fix2.html",
     "author": "Nine&Nine",
     "authorLink": "https://play.google.com/store/apps/details?id=com.tianninenine.parkingrush",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 160,
@@ -1381,7 +1381,7 @@
     "game": "/html/161-fix2.html",
     "author": "CASUAL AZUR GAMES",
     "authorLink": "https://play.google.com/store/apps/details?id=io.state.fight",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 162,
@@ -1390,7 +1390,7 @@
     "game": "/html/162-fix2.html",
     "author": "Famobi",
     "authorLink": "https://play.google.com/store/apps/details?id=com.famobi.towercrash3d",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 163,
@@ -1399,7 +1399,7 @@
     "game": "/html/163-fix2.html",
     "author": "etermax",
     "authorLink": "https://play.google.com/store/apps/details?id=com.etermax.preguntados.lite",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 164,
@@ -1411,7 +1411,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 165,
@@ -1420,7 +1420,7 @@
     "game": "/html/165-fix2.html",
     "author": "NavaNoid",
     "authorLink": "https://cheesechompers3d.itch.io/cheese-chompers-3d",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 166,
@@ -1433,7 +1433,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 167,
@@ -1442,7 +1442,7 @@
     "game": "/html/167-fix.html",
     "author": "??",
     "authorLink": "",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 168,
@@ -1460,7 +1460,7 @@
     "game": "/html/169-fix.html",
     "author": "Damien Clarke",
     "authorLink": "https://damienclarke.me",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 170,
@@ -1472,7 +1472,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 171,
@@ -1490,7 +1490,7 @@
     "game": "/html/172-fix2.html",
     "author": "playducky.com",
     "authorLink": "https://playducky.com",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 173,
@@ -1511,7 +1511,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 175,
@@ -1590,7 +1590,7 @@
     "game": "/html/181-fix.html",
     "author": "lax1dude",
     "authorLink": "https://eaglercraft.com",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 182,
@@ -1600,7 +1600,7 @@
     "author": "lax1dude",
     "authorLink": "https://eaglercraft.com",
     "featured": true,
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 183,
@@ -1609,7 +1609,7 @@
     "game": "/html/183.html",
     "author": "zardoy",
     "authorLink": "https://github.com/zardoy/minecraft-web-client",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 185,
@@ -1643,7 +1643,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 188,
@@ -1652,7 +1652,7 @@
     "game": "/html/188-fix2.html",
     "author": "Ciorbyn",
     "authorLink": "https://www.ciorbynstudio.com",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 190,
@@ -1701,7 +1701,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 194,
@@ -1714,7 +1714,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 195,
@@ -1727,7 +1727,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 196,
@@ -1740,7 +1740,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 197,
@@ -1758,7 +1758,7 @@
     "game": "/html/198-fix2.html",
     "author": "coweggs",
     "authorLink": "https://coweggs.itch.io/slope-plus",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 199,
@@ -1767,7 +1767,7 @@
     "game": "/html/199-fix.html",
     "author": "g80g",
     "authorLink": "https://g80g.com",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 200,
@@ -1776,7 +1776,7 @@
     "game": "/html/200-fix.html",
     "author": "g80g",
     "authorLink": "https://g80g.com",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 201,
@@ -1785,7 +1785,7 @@
     "game": "/html/201-fix2.html",
     "author": "g80g",
     "authorLink": "https://g80g.com",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 202,
@@ -1803,7 +1803,7 @@
     "game": "/html/203-fix2.html",
     "author": "Id Software",
     "authorLink": "https://www.idsoftware.com",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 204,
@@ -1825,7 +1825,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 206,
@@ -1834,7 +1834,7 @@
     "game": "/html/206-fix2.html",
     "author": "Deer Cat Games",
     "authorLink": "http://www.deercatgames.com",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 207,
@@ -1861,7 +1861,7 @@
     "game": "/html/209-fix3.html",
     "author": "Stelennnn",
     "authorLink": "https://play.google.com/store/apps/details?id=xyz.gameshtml5.drawathehill&hl=en_US",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 210,
@@ -1932,7 +1932,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 217,
@@ -1944,7 +1944,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 218,
@@ -2133,7 +2133,7 @@
     "game": "/html/233-fix.html",
     "author": "Superhot Team",
     "authorLink": "https://superhotgame.com",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 234,
@@ -2145,7 +2145,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 235,
@@ -2157,7 +2157,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 236,
@@ -2169,7 +2169,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 237,
@@ -2181,7 +2181,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 238,
@@ -2193,7 +2193,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 239,
@@ -2205,7 +2205,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 240,
@@ -2217,7 +2217,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 241,
@@ -2229,7 +2229,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 242,
@@ -2241,7 +2241,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 243,
@@ -2253,7 +2253,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 244,
@@ -2265,7 +2265,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 245,
@@ -2277,7 +2277,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 246,
@@ -2289,7 +2289,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 247,
@@ -2301,7 +2301,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 248,
@@ -2313,7 +2313,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 249,
@@ -2325,7 +2325,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 250,
@@ -2337,7 +2337,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 251,
@@ -2349,7 +2349,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 252,
@@ -2361,7 +2361,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 253,
@@ -2413,7 +2413,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 259,
@@ -2425,7 +2425,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 260,
@@ -2459,7 +2459,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 263,
@@ -2471,7 +2471,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 264,
@@ -2501,7 +2501,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 267,
@@ -2514,7 +2514,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 268,
@@ -2523,7 +2523,7 @@
     "game": "/html/268-fix2.html",
     "author": "SnoutUp",
     "authorLink": "https://store.steampowered.com/app/646240/Bacon_May_Die/",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 269,
@@ -2568,7 +2568,7 @@
     "game": "/html/273-fix.html",
     "author": "SkullCap Studios",
     "authorLink": "https://poki.com/en/g/blockpost",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 274,
@@ -2613,7 +2613,7 @@
     "game": "/html/278-fix.html",
     "author": "Madalin Games",
     "authorLink": "https://www.madalingames.com",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 279,
@@ -2622,7 +2622,7 @@
     "game": "/html/279-fix.html",
     "author": "Madalin Games",
     "authorLink": "https://www.madalingames.com",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 280,
@@ -2640,7 +2640,7 @@
     "game": "/html/281-fix.html",
     "author": "Mentolatux",
     "authorLink": "https://www.fiverr.com/mentolatux",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 282,
@@ -2649,7 +2649,7 @@
     "game": "/html/282-fix2.html",
     "author": "rujogames",
     "authorLink": "https://rujogames.itch.io/protektor",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 283,
@@ -2658,7 +2658,7 @@
     "game": "/html/283-fix2.html",
     "author": "New Eich Games",
     "authorLink": "https://www.neweichgames.com",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 284,
@@ -2667,7 +2667,7 @@
     "game": "/html/284-fix2.html",
     "author": "BANZAI",
     "authorLink": "https://banzai.games/en/",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 285,
@@ -2688,7 +2688,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 287,
@@ -2700,7 +2700,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 288,
@@ -2712,7 +2712,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 289,
@@ -2724,7 +2724,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 290,
@@ -2736,7 +2736,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 291,
@@ -2748,7 +2748,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 292,
@@ -2760,7 +2760,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 293,
@@ -2772,7 +2772,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 294,
@@ -2790,7 +2790,7 @@
     "game": "/html/295-fix.html",
     "author": "Shared Dreams Studio",
     "authorLink": "https://play.google.com/store/apps/dev?id=6107531068522107777&hl=en_US",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 297,
@@ -2799,7 +2799,7 @@
     "game": "/html/297-f.html",
     "author": "lax1dude",
     "authorLink": "https://eaglercraft.com",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 298,
@@ -2808,7 +2808,7 @@
     "game": "/html/298-fix.html",
     "author": "lax1dude",
     "authorLink": "https://eaglercraft.com",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 299,
@@ -2817,7 +2817,7 @@
     "game": "/html/299-fix.html",
     "author": "lax1dude",
     "authorLink": "https://eaglercraft.com",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 300,
@@ -2826,7 +2826,7 @@
     "game": "/html/300-fix.html",
     "author": "lax1dude",
     "authorLink": "https://eaglercraft.com",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 301,
@@ -2835,7 +2835,7 @@
     "game": "/html/301-fix.html",
     "author": "lax1dude",
     "authorLink": "https://eaglercraft.com",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 302,
@@ -2844,7 +2844,7 @@
     "game": "/html/302-fix.html",
     "author": "juhosprite, gooseworx",
     "authorLink": "https://juhosprite.itch.io/little-runmo",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 303,
@@ -2853,7 +2853,7 @@
     "game": "/html/303-fix2.html",
     "author": "TTCreator",
     "authorLink": "https://play.google.com/store/apps/dev?id=8652009334379030762",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 304,
@@ -2865,7 +2865,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 305,
@@ -2874,7 +2874,7 @@
     "game": "/html/305-fix2.html",
     "author": "Rewind Games",
     "authorLink": "https://store.steampowered.com/app/1251460/Tanuki_Sunset/",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 306,
@@ -2901,7 +2901,7 @@
     "game": "/html/308-fix.html",
     "author": "nzp team",
     "authorLink": "https://nzp-team.itch.io/nazi-zombies-portable",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 309,
@@ -2910,7 +2910,7 @@
     "game": "/html/309-fix.html",
     "author": "R74N",
     "authorLink": "https://store.steampowered.com/app/3664820/Sandboxels/",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 310,
@@ -2928,7 +2928,7 @@
     "game": "/html/311-fix.html",
     "author": "FRANCO MIRANDA",
     "authorLink": "https://francomiranda.com",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 312,
@@ -2937,7 +2937,7 @@
     "game": "/html/312-fix.html",
     "author": "Synic-dx",
     "authorLink": "https://github.com/Synic-dx/blackJack/",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 313,
@@ -2982,7 +2982,7 @@
     "game": "/html/317-fix.html",
     "author": "maxbittker",
     "authorLink": "https://x.com/maxbittker",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 318,
@@ -2991,7 +2991,7 @@
     "game": "/html/318-fix.html",
     "author": "hi rohun, Mr.Pootsley, Jaybooty",
     "authorLink": "https://hirohun.itch.io/side-effects",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 319,
@@ -3000,7 +3000,7 @@
     "game": "/html/319-fix2.html",
     "author": "Supersonic Studios LTD",
     "authorLink": "https://play.google.com/store/apps/details?id=com.Polystation.BuildABabe",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 320,
@@ -3018,7 +3018,7 @@
     "game": "/html/321-fix2.html",
     "author": "Gamincat",
     "authorLink": "https://play.google.com/store/apps/details?id=com.gamincat.roomsort",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 322,
@@ -3027,7 +3027,7 @@
     "game": "/html/322-fix2.html",
     "author": "Famobi",
     "authorLink": "https://play.google.com/store/apps/details?id=com.famobi.suhsiroll",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 323,
@@ -3036,7 +3036,7 @@
     "game": "/html/323-fix2.html",
     "author": "MOONEE PUBLISHING LTD",
     "authorLink": "https://play.google.com/store/apps/details?id=net.wyvernware.whosthealien",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 324,
@@ -3045,7 +3045,7 @@
     "game": "/html/324-fix2.html",
     "author": "Raval Matic",
     "authorLink": "https://www.ravalmatic.com",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 325,
@@ -3054,7 +3054,7 @@
     "game": "/html/325-fix2.html",
     "author": "Gameloft",
     "authorLink": "https://www.gameloft.com",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 326,
@@ -3072,7 +3072,7 @@
     "game": "/html/327-fix.html",
     "author": "GameSnacks",
     "authorLink": "https://gamesnacks.com/games/slime-io",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 328,
@@ -3090,7 +3090,7 @@
     "game": "/html/329-fix2.html",
     "author": "GameSnacks",
     "authorLink": "https://gamesnacks.com/games/6nilllqpgkm6o",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 330,
@@ -3108,7 +3108,7 @@
     "game": "/html/331-fix.html",
     "author": "No Pressure Studios",
     "authorLink": "https://www.nopressurestudios.com",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 333,
@@ -3177,7 +3177,7 @@
     "game": "/html/338-fix2.html",
     "author": "New Eich Games",
     "authorLink": "https://www.neweichgames.com",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 339,
@@ -3186,7 +3186,7 @@
     "game": "/html/339-fix2.html",
     "author": "New Eich Games",
     "authorLink": "https://www.neweichgames.com",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 340,
@@ -3198,7 +3198,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 341,
@@ -3210,7 +3210,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 342,
@@ -3222,7 +3222,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 343,
@@ -3246,7 +3246,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 345,
@@ -3258,7 +3258,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 346,
@@ -3267,7 +3267,7 @@
     "game": "/html/346-fix.html",
     "author": "graebor",
     "authorLink": "https://x.com/graebor",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 347,
@@ -3276,7 +3276,7 @@
     "game": "/html/347-fix.html",
     "author": "Ysopprod",
     "authorLink": "https://ysopprod.newgrounds.com",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 348,
@@ -3285,7 +3285,7 @@
     "game": "/html/348-fix2.html",
     "author": "OnHit Developments",
     "authorLink": "https://play.google.com/store/apps/details?id=dev.onhit.theyarecoming",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 349,
@@ -3306,7 +3306,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "RPG"
   },
   {
     "id": 351,
@@ -3315,7 +3315,7 @@
     "game": "/html/351-fix.html",
     "author": "Berker Games",
     "authorLink": "https://berkergames.itch.io/happy-sheepies",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 352,
@@ -3336,7 +3336,7 @@
     "game": "/html/353-fix2.html",
     "author": "Blumgi",
     "authorLink": "https://blumgi.com",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 354,
@@ -3354,7 +3354,7 @@
     "game": "/html/355-fix.html",
     "author": "Thomas K. Young",
     "authorLink": "https://x.com/tommy_ill",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 356,
@@ -3363,7 +3363,7 @@
     "game": "/html/356-fix.html",
     "author": "Thomas K. Young",
     "authorLink": "https://x.com/tommy_ill",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 357,
@@ -3372,7 +3372,7 @@
     "game": "/html/357-fix.html",
     "author": "Thomas K. Young",
     "authorLink": "https://x.com/tommy_ill",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 358,
@@ -3381,7 +3381,7 @@
     "game": "/html/358-fix.html",
     "author": "Thomas K. Young",
     "authorLink": "https://x.com/tommy_ill",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 359,
@@ -3390,7 +3390,7 @@
     "game": "/html/359-fix.html",
     "author": "Thomas K. Young",
     "authorLink": "https://x.com/tommy_ill",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 360,
@@ -3408,7 +3408,7 @@
     "game": "/html/361-fix.html",
     "author": "Justin Hook",
     "authorLink": "https://justinhook.com",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 362,
@@ -3462,7 +3462,7 @@
     "game": "/html/367-fix2.html",
     "author": "Brain Software",
     "authorLink": "https://poki.com/en/g/parking-fury-3d",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 368,
@@ -3471,7 +3471,7 @@
     "game": "/html/368-fix.html",
     "author": "idfk",
     "authorLink": "https://gn-math.github.io",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 369,
@@ -3480,7 +3480,7 @@
     "game": "/html/369-fix.html",
     "author": "Topograph Interactive",
     "authorLink": "https://store.steampowered.com/app/3431300/Slow_Roads/",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 370,
@@ -3489,7 +3489,7 @@
     "game": "/html/370-fix2.html",
     "author": "Tall Team",
     "authorLink": "https://tall.team/",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 371,
@@ -3507,7 +3507,7 @@
     "game": "/html/372-fix.html",
     "author": "y8",
     "authorLink": "https://www.y8.com/games/stickman_boost",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 373,
@@ -3516,7 +3516,7 @@
     "game": "/html/373-fix.html",
     "author": "No Pressure Studios",
     "authorLink": "https://www.nopressurestudios.com",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 374,
@@ -3543,7 +3543,7 @@
     "game": "/html/376-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 377,
@@ -3552,7 +3552,7 @@
     "game": "/html/377-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 378,
@@ -3561,7 +3561,7 @@
     "game": "/html/378-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 379,
@@ -3570,7 +3570,7 @@
     "game": "/html/379-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 380,
@@ -3597,7 +3597,7 @@
     "game": "/html/382-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Platformer"
+    "category": "Racing"
   },
   {
     "id": 383,
@@ -3606,7 +3606,7 @@
     "game": "/html/383-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 384,
@@ -3624,7 +3624,7 @@
     "game": "/html/385-fix2.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 386,
@@ -3642,7 +3642,7 @@
     "game": "/html/387-fix2.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 388,
@@ -3651,7 +3651,7 @@
     "game": "/html/388-fix2.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 389,
@@ -3669,7 +3669,7 @@
     "game": "/html/390-fix2.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 391,
@@ -3678,7 +3678,7 @@
     "game": "/html/391-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Sports"
   },
   {
     "id": 392,
@@ -3696,7 +3696,7 @@
     "game": "/html/393-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 394,
@@ -3705,7 +3705,7 @@
     "game": "/html/394-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 395,
@@ -3714,7 +3714,7 @@
     "game": "/html/395-fix2.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 396,
@@ -3732,7 +3732,7 @@
     "game": "/html/397-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 398,
@@ -3750,7 +3750,7 @@
     "game": "/html/399-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 400,
@@ -3759,7 +3759,7 @@
     "game": "/html/400-fix3.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 401,
@@ -3786,7 +3786,7 @@
     "game": "/html/403-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 404,
@@ -3795,7 +3795,7 @@
     "game": "/html/404-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 405,
@@ -3804,7 +3804,7 @@
     "game": "/html/405-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 406,
@@ -3813,7 +3813,7 @@
     "game": "/html/406-fix2.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 407,
@@ -3822,7 +3822,7 @@
     "game": "/html/407-fix2.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 408,
@@ -3840,7 +3840,7 @@
     "game": "/html/409-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 410,
@@ -3867,7 +3867,7 @@
     "game": "/html/413-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 414,
@@ -3885,7 +3885,7 @@
     "game": "/html/415-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 416,
@@ -3894,7 +3894,7 @@
     "game": "/html/416-fix2.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 417,
@@ -3903,7 +3903,7 @@
     "game": "/html/417-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 418,
@@ -3912,7 +3912,7 @@
     "game": "/html/418-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Platformer"
+    "category": "Shooter"
   },
   {
     "id": 419,
@@ -3921,7 +3921,7 @@
     "game": "/html/419-fix2.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 420,
@@ -3930,7 +3930,7 @@
     "game": "/html/420-fix.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 421,
@@ -3948,7 +3948,7 @@
     "game": "/html/422-fix2.html",
     "author": "Yandex",
     "authorLink": "https://yandex.com/games",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 423,
@@ -3961,7 +3961,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Sports"
   },
   {
     "id": 426,
@@ -3986,7 +3986,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 428,
@@ -4019,7 +4019,7 @@
     "game": "/html/430-fix2.html",
     "author": "flanne",
     "authorLink": "https://store.steampowered.com/app/1966900/20_Minutes_Till_Dawn/",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 431,
@@ -4037,7 +4037,7 @@
     "game": "/html/432-fix.html",
     "author": "krutovig",
     "authorLink": "https://www.kongregate.com/games/krutovigor/abandoned",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 433,
@@ -4050,7 +4050,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 434,
@@ -4059,7 +4059,7 @@
     "game": "/html/434-fix.html",
     "author": "Glompyy",
     "authorLink": "https://glompyy.itch.io/gods-flesh",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 435,
@@ -4068,7 +4068,7 @@
     "game": "/html/435-fix.html",
     "author": "rujogames",
     "authorLink": "https://rujogames.itch.io/a-small-world-cup",
-    "category": "Arcade"
+    "category": "Sports"
   },
   {
     "id": 436,
@@ -4077,7 +4077,7 @@
     "game": "/html/436-fix.html",
     "author": "coolmathgames",
     "authorLink": "https://www.coolmathgames.com/0-awesome-tanks",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 437,
@@ -4086,7 +4086,7 @@
     "game": "/html/437-fix2.html",
     "author": "Azur Games, Playgendary",
     "authorLink": "https://azurgames.com",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 438,
@@ -4095,7 +4095,7 @@
     "game": "/html/438-fix.html",
     "author": "coolmathgames",
     "authorLink": "https://www.coolmathgames.com/0-awesome-tanks-2",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 439,
@@ -4104,7 +4104,7 @@
     "game": "/html/439-fix.html",
     "author": "justaliendev",
     "authorLink": "https://www.crazygames.com/game/bank-robbery-2",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 440,
@@ -4122,7 +4122,7 @@
     "game": "/html/441-fix.html",
     "author": "Rakqoi",
     "authorLink": "https://rakqoi.itch.io/kittytoy",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 442,
@@ -4131,7 +4131,7 @@
     "game": "/html/442-fix.html",
     "author": "Werxzy",
     "authorLink": "https://werxzy.itch.io/infinimoes",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 443,
@@ -4149,7 +4149,7 @@
     "game": "/html/444-fix.html",
     "author": "JoySpark Games",
     "authorLink": "https://play.google.com/store/apps/details?id=com.JoySparkGames.AgesofConflict",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 445,
@@ -4162,7 +4162,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 446,
@@ -4174,7 +4174,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 447,
@@ -4192,7 +4192,7 @@
     "game": "/html/448-fix2.html",
     "author": "Voodoo",
     "authorLink": "https://play.google.com/store/apps/details?id=com.cassette.aquapark",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 449,
@@ -4234,7 +4234,7 @@
     "game": "/html/452-fix.html",
     "author": "Maksim Chmutov",
     "authorLink": "https://booleet.itch.io/station-141",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 453,
@@ -4243,7 +4243,7 @@
     "game": "/html/453-fix2.html",
     "author": "Maksim Chmutov",
     "authorLink": "https://booleet.itch.io/station-saturn",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 454,
@@ -4255,7 +4255,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 455,
@@ -4267,7 +4267,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 456,
@@ -4279,7 +4279,7 @@
     "special": [
       "port"
     ],
-    "category": "RPG"
+    "category": "Adventure"
   },
   {
     "id": 457,
@@ -4291,7 +4291,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 458,
@@ -4303,7 +4303,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 459,
@@ -4315,7 +4315,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 460,
@@ -4327,7 +4327,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 461,
@@ -4348,7 +4348,7 @@
     "special": [
       "port"
     ],
-    "category": "Horror"
+    "category": "Action"
   },
   {
     "id": 463,
@@ -4360,7 +4360,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 464,
@@ -4369,7 +4369,7 @@
     "game": "/html/464-fix.html",
     "author": "eddynardo",
     "authorLink": "https://eddynardo.com/games/choppy-orc/",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 465,
@@ -4382,7 +4382,7 @@
     "special": [
       "port"
     ],
-    "category": "Platformer"
+    "category": "Adventure"
   },
   {
     "id": 466,
@@ -4394,7 +4394,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 467,
@@ -4407,7 +4407,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 468,
@@ -4420,7 +4420,7 @@
     "special": [
       "port"
     ],
-    "category": "Platformer"
+    "category": "Adventure"
   },
   {
     "id": 469,
@@ -4471,7 +4471,7 @@
     "game": "/html/473-fix.html",
     "author": "Bruno Croci",
     "authorLink": "https://bruno.croci.me",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 474,
@@ -4498,7 +4498,7 @@
     "game": "/html/476-fix.html",
     "author": "YingYang48 etc",
     "authorLink": "https://gamebanana.com/mods/44225",
-    "category": "Puzzle"
+    "category": "Arcade"
   },
   {
     "id": 477,
@@ -4555,7 +4555,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 483,
@@ -4627,7 +4627,7 @@
     "game": "/html/490-fix.html",
     "author": "Neweichgames",
     "authorLink": "https://www.neweichgames.com",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 491,
@@ -4636,7 +4636,7 @@
     "game": "/html/491-fix.html",
     "author": "angela he",
     "authorLink": "https://zephyo.itch.io/i-woke-up",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 492,
@@ -4645,7 +4645,7 @@
     "game": "/html/492-fix.html",
     "author": "LakenDaCoda",
     "authorLink": "https://www.newgrounds.com/portal/view/987750",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 493,
@@ -4654,7 +4654,7 @@
     "game": "/html/493-fix.html",
     "author": "Cartoon Network",
     "authorLink": "https://www.cartoonnetwork.com",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 494,
@@ -4663,7 +4663,7 @@
     "game": "/html/494-fix.html",
     "author": "Cartoon Network",
     "authorLink": "https://www.cartoonnetwork.com",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 495,
@@ -4729,7 +4729,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 502,
@@ -4741,7 +4741,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 503,
@@ -4777,7 +4777,7 @@
     "special": [
       "emulator"
     ],
-    "category": "RPG"
+    "category": "Adventure"
   },
   {
     "id": 506,
@@ -4789,7 +4789,7 @@
     "special": [
       "emulator"
     ],
-    "category": "RPG"
+    "category": "Adventure"
   },
   {
     "id": 507,
@@ -4801,7 +4801,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 508,
@@ -4834,7 +4834,7 @@
     "special": [
       "emulator"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 511,
@@ -4843,7 +4843,7 @@
     "game": "/html/511-fix.html",
     "author": "rkn",
     "authorLink": "https://www.patreon.com/dogeminer/about",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 512,
@@ -4852,7 +4852,7 @@
     "game": "/html/512-fix.html",
     "author": "flori9",
     "authorLink": "https://flori9.itch.io/the-final-earth-2",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 513,
@@ -4861,7 +4861,7 @@
     "game": "/html/513-fix2.html",
     "author": "Studio-19",
     "authorLink": "https://studio-19.itch.io/swordfight",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 514,
@@ -4870,7 +4870,7 @@
     "game": "/html/514-fix2.html",
     "author": "Enchae, Lumpy",
     "authorLink": "https://enchae.itch.io/portaboyplus",
-    "category": "Arcade"
+    "category": "Emulator"
   },
   {
     "id": 515,
@@ -4888,7 +4888,7 @@
     "game": "/html/516-fix2.html",
     "author": "Empty House Games, Shuu",
     "authorLink": "https://emptyhousegames.itch.io/oshi-oshi-punch",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 517,
@@ -4900,7 +4900,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 518,
@@ -4909,7 +4909,7 @@
     "game": "/html/518-fix2.html",
     "author": "NitNitori, LadyEbony",
     "authorLink": "https://nitori.itch.io/touhou-luminous-strike",
-    "category": "Arcade"
+    "category": "Music"
   },
   {
     "id": 519,
@@ -4927,7 +4927,7 @@
     "game": "/html/520-fix4.html",
     "author": "Halfbrick Studios",
     "authorLink": "https://play.google.com/store/apps/details?id=com.halfbrick.dantheman",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 521,
@@ -4936,7 +4936,7 @@
     "game": "/html/521-fix2.html",
     "author": "PeachTreeOath",
     "authorLink": "https://peachtreeoath.itch.io/bust-a-loop",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 522,
@@ -4957,7 +4957,7 @@
     "special": [
       "port"
     ],
-    "category": "RPG"
+    "category": "Music"
   },
   {
     "id": 524,
@@ -4969,7 +4969,7 @@
     "special": [
       "emulator"
     ],
-    "category": "Arcade"
+    "category": "Music"
   },
   {
     "id": 525,
@@ -4987,7 +4987,7 @@
     "game": "/html/526-fix.html",
     "author": "Nickelodeon",
     "authorLink": "https://nick.com",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 527,
@@ -4996,7 +4996,7 @@
     "game": "/html/527-fix.html",
     "author": "Nickelodeon",
     "authorLink": "https://nick.com",
-    "category": "Platformer"
+    "category": "Adventure"
   },
   {
     "id": 528,
@@ -5005,7 +5005,7 @@
     "game": "/html/528-fix.html",
     "author": "Nickelodeon",
     "authorLink": "https://nick.com",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 529,
@@ -5014,7 +5014,7 @@
     "game": "/html/529-fix.html",
     "author": "Nickelodeon",
     "authorLink": "https://nick.com",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 530,
@@ -5023,7 +5023,7 @@
     "game": "/html/530-fix.html",
     "author": "Nickelodeon",
     "authorLink": "https://nick.com",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 531,
@@ -5032,7 +5032,7 @@
     "game": "/html/531-fix.html",
     "author": "Nickelodeon",
     "authorLink": "https://nick.com",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 532,
@@ -5041,7 +5041,7 @@
     "game": "/html/532-fix.html",
     "author": "Nickelodeon",
     "authorLink": "https://nick.com",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 533,
@@ -5050,7 +5050,7 @@
     "game": "/html/533-fix.html",
     "author": "Nickelodeon",
     "authorLink": "https://nick.com",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 534,
@@ -5077,7 +5077,7 @@
     "game": "/html/536-fix.html",
     "author": "MOSTLY MAD PRODUCTIONS",
     "authorLink": "https://mostlymadproductions.itch.io/cat-connection",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 537,
@@ -5095,7 +5095,7 @@
     "game": "/html/538-fix.html",
     "author": "Nozomu Games",
     "authorLink": "https://nozomu57.itch.io/love-letters",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 539,
@@ -5135,7 +5135,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 543,
@@ -5156,7 +5156,7 @@
     "game": "/html/544-fix.html",
     "author": "Anson Heung",
     "authorLink": "https://www.ansonh.com",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 545,
@@ -5174,7 +5174,7 @@
     "game": "/html/546-fix.html",
     "author": "Martin Magini",
     "authorLink": "https://play.fancade.com",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 547,
@@ -5219,7 +5219,7 @@
     "game": "/html/551-fix.html",
     "author": "VobbyGames, weirdnessworld",
     "authorLink": "https://play.google.com/store/apps/details?id=com.Hypper&hl=en_US",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 552,
@@ -5237,7 +5237,7 @@
     "game": "/html/553-fix2.html",
     "author": "Dream Playz",
     "authorLink": "https://play.google.com/store/apps/details?id=com.dreamplayz.rollingball&hl=en_US",
-    "category": "Arcade"
+    "category": "Music"
   },
   {
     "id": 554,
@@ -5279,7 +5279,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 558,
@@ -5309,7 +5309,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 561,
@@ -5318,7 +5318,7 @@
     "game": "/html/561-fix2.html",
     "author": "Hazmob",
     "authorLink": "https://www.crazygames.com/game/bit-gun-io",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 562,
@@ -5336,7 +5336,7 @@
     "game": "/html/563-fix2.html",
     "author": "Finz Games",
     "authorLink": "https://www.finz.io/",
-    "category": "Arcade"
+    "category": "Sports"
   },
   {
     "id": 564,
@@ -5345,7 +5345,7 @@
     "game": "/html/564-fix2.html",
     "author": "FreePlay LLC",
     "authorLink": "https://www.crazygames.com/game/count-masters-stickman-games",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 565,
@@ -5354,7 +5354,7 @@
     "game": "/html/565-fix2.html",
     "author": "CrazyGames",
     "authorLink": "https://www.crazygames.com/",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 567,
@@ -5399,7 +5399,7 @@
     "game": "/html/571-fix2.html",
     "author": "CrazyGames",
     "authorLink": "https://www.crazygames.com/",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 572,
@@ -5408,7 +5408,7 @@
     "game": "/html/572-fix2.html",
     "author": "CrazyGames",
     "authorLink": "https://www.crazygames.com/",
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 573,
@@ -5426,7 +5426,7 @@
     "game": "/html/574-fix2.html",
     "author": "CrazyGames",
     "authorLink": "https://www.crazygames.com/",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 575,
@@ -5435,7 +5435,7 @@
     "game": "/html/575-fix2.html",
     "author": "CrazyGames",
     "authorLink": "https://www.crazygames.com/",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 576,
@@ -5444,7 +5444,7 @@
     "game": "/html/576-fix2.html",
     "author": "CrazyGames",
     "authorLink": "https://www.crazygames.com/",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 577,
@@ -5462,7 +5462,7 @@
     "game": "/html/578-fix2.html",
     "author": "CrazyGames",
     "authorLink": "https://www.crazygames.com/",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 579,
@@ -5471,7 +5471,7 @@
     "game": "/html/579-fix2.html",
     "author": "CrazyGames",
     "authorLink": "https://www.crazygames.com/",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 580,
@@ -5489,7 +5489,7 @@
     "game": "/html/581-fix2.html",
     "author": "CrazyGames",
     "authorLink": "https://www.crazygames.com/",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 582,
@@ -5528,7 +5528,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 586,
@@ -5537,7 +5537,7 @@
     "game": "/html/586-fix.html",
     "author": "MECC",
     "authorLink": "https://archive.org/details/msdos_Oregon_Trail_The_1990",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 587,
@@ -5549,7 +5549,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 588,
@@ -5598,7 +5598,7 @@
       "port"
     ],
     "featured": true,
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 592,
@@ -5610,7 +5610,7 @@
     "special": [
       "emulator"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 593,
@@ -5622,7 +5622,7 @@
     "special": [
       "emulator"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 594,
@@ -5631,7 +5631,7 @@
     "game": "/html/594-fix2.html",
     "author": "scriptwelder",
     "authorLink": "https://scriptwelder.itch.io/waterworks",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 595,
@@ -5640,7 +5640,7 @@
     "game": "/html/595-fix2.html",
     "author": "scriptwelder",
     "authorLink": "https://scriptwelder.itch.io/waterworks",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 596,
@@ -5686,7 +5686,7 @@
     "special": [
       "emulator"
     ],
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 600,
@@ -5722,7 +5722,7 @@
     "special": [
       "emulator"
     ],
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 603,
@@ -5731,7 +5731,7 @@
     "game": "/html/603-fix2.html",
     "author": "growden.io",
     "authorLink": "https://growden.io/",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 604,
@@ -5756,7 +5756,7 @@
       "port"
     ],
     "featured": true,
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 606,
@@ -5781,7 +5781,7 @@
       "port"
     ],
     "featured": true,
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 608,
@@ -5864,7 +5864,7 @@
     "game": "/html/614-fix.html",
     "author": "CrazyGames",
     "authorLink": "https://www.crazygames.com/",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 615,
@@ -5897,7 +5897,7 @@
     "game": "/html/617-fix2.html",
     "author": "Stinkalistic, Running With Scissors",
     "authorLink": "https://runningwithscissors.com/",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 618,
@@ -5930,7 +5930,7 @@
     "game": "/html/620-fix2.html",
     "author": "Adventale",
     "authorLink": "https://adventale.net/play/three-goblets/",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 621,
@@ -5955,7 +5955,7 @@
       "port"
     ],
     "featured": true,
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 623,
@@ -5986,7 +5986,7 @@
     "game": "/html/625-fix.html",
     "author": "gregs games",
     "authorLink": "https://gregs-games.itch.io/get-yoked-2",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 626,
@@ -5998,7 +5998,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 627,
@@ -6019,7 +6019,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 629,
@@ -6028,7 +6028,7 @@
     "game": "/html/629-fix.html",
     "author": "Mortis Ghost, Fangamer",
     "authorLink": "https://store.steampowered.com/app/3339880/OFF/",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 630,
@@ -6037,7 +6037,7 @@
     "game": "/html/630-fix.html",
     "author": "Stephen Gillmurphy",
     "authorLink": "https://thecatamites.itch.io/space-funeral",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 631,
@@ -6046,7 +6046,7 @@
     "game": "/html/631-fix2.html",
     "author": " Segawa",
     "authorLink": "https://vgperson.com/games/endroll.htm",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 632,
@@ -6088,7 +6088,7 @@
     "game": "/html/635-fix.html",
     "author": " nkrapivin",
     "authorLink": "https://yancharkin.itch.io/spelunky-classic-hd",
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 636,
@@ -6148,7 +6148,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 641,
@@ -6160,7 +6160,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 642,
@@ -6181,7 +6181,7 @@
     "game": "/html/643-fix.html",
     "author": "Gametornado",
     "authorLink": "https://store.steampowered.com/app/868830/Rio_Rex/",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 644,
@@ -6205,7 +6205,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 646,
@@ -6217,7 +6217,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 647,
@@ -6241,7 +6241,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 649,
@@ -6253,7 +6253,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 650,
@@ -6265,7 +6265,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 651,
@@ -6277,7 +6277,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 653,
@@ -6322,7 +6322,7 @@
     "game": "/html/657-fix.html",
     "author": "vs undertale team",
     "authorLink": "https://gamebanana.com/mods/342415",
-    "category": "RPG"
+    "category": "Adventure"
   },
   {
     "id": 658,
@@ -6334,7 +6334,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 659,
@@ -6346,7 +6346,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 660,
@@ -6355,7 +6355,7 @@
     "game": "/html/660-fix.html",
     "author": "Four Quarters",
     "authorLink": "https://store.steampowered.com/app/354240/Please_Dont_Touch_Anything/",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 661,
@@ -6364,7 +6364,7 @@
     "game": "/html/661-fix2.html",
     "author": "Superplus Games",
     "authorLink": "https://play.google.com/store/apps/details?id=com.superplusgames.tower",
-    "category": "Strategy"
+    "category": "Arcade"
   },
   {
     "id": 662,
@@ -6373,7 +6373,7 @@
     "game": "/html/662-fix2.html",
     "author": "Supersonic Studios LTD",
     "authorLink": "https://play.google.com/store/apps/details?id=com.pronetis.ironball2",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 663,
@@ -6400,7 +6400,7 @@
     "game": "/html/665-fix2.html",
     "author": "LIHUHU PTE. LTD.",
     "authorLink": "https://play.google.com/store/apps/details?id=and.lihuhu.machingtriple&hl=en_US",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 666,
@@ -6410,7 +6410,7 @@
     "author": "Max Games Studios",
     "featured": true,
     "authorLink": "https://play.google.com/store/apps/details/Stick+War:+Legacy?id=com.maxgames.stickwarlegacy&hl=en_ZA",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 667,
@@ -6422,7 +6422,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 668,
@@ -6434,7 +6434,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Sports"
   },
   {
     "id": 669,
@@ -6447,7 +6447,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 670,
@@ -6459,7 +6459,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 671,
@@ -6480,7 +6480,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 673,
@@ -6492,7 +6492,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 674,
@@ -6504,7 +6504,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 675,
@@ -6516,7 +6516,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 676,
@@ -6528,7 +6528,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 677,
@@ -6540,7 +6540,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 678,
@@ -6552,7 +6552,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 679,
@@ -6564,7 +6564,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 680,
@@ -6672,7 +6672,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 689,
@@ -6684,7 +6684,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 690,
@@ -6732,7 +6732,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 694,
@@ -6757,7 +6757,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 696,
@@ -6779,7 +6779,7 @@
     "game": "/html/697-fix2.html",
     "author": "justaliendev",
     "authorLink": "https://www.crazygames.com/game/bank-robbery",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 698,
@@ -6788,7 +6788,7 @@
     "game": "/html/698-fix2.html",
     "author": "justaliendev",
     "authorLink": "https://www.crazygames.com/game/bank-robbery-3",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 699,
@@ -6797,7 +6797,7 @@
     "game": "/html/699-fix.html",
     "author": "freezenova",
     "authorLink": "https://unblocked-games.s3.amazonaws.com/index.html",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 700,
@@ -6827,7 +6827,7 @@
     "game": "/html/702-fix.html",
     "author": "Alex Ashnov",
     "authorLink": "https://github.com/AlexAshnovSrc/JavascriptPS1",
-    "category": "Arcade"
+    "category": "Emulator"
   },
   {
     "id": 703,
@@ -6864,7 +6864,7 @@
       "port"
     ],
     "featured": true,
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 706,
@@ -6876,7 +6876,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 707,
@@ -6897,7 +6897,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 709,
@@ -6906,7 +6906,7 @@
     "game": "/html/709-fix2.html",
     "author": "Habby Pte. Ltd, madkidgames",
     "authorLink": "https://play.google.com/store/apps/details?id=com.dxx.firenow",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 710,
@@ -6931,7 +6931,7 @@
       "port"
     ],
     "featured": true,
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 712,
@@ -6992,7 +6992,7 @@
       "port"
     ],
     "featured": true,
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 717,
@@ -7004,7 +7004,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 718,
@@ -7017,7 +7017,7 @@
       "port"
     ],
     "featured": true,
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 719,
@@ -7026,7 +7026,7 @@
     "game": "/html/719-fix2.html",
     "author": "Aarimous, Thornityco",
     "authorLink": "https://store.steampowered.com/app/3694480/A_Game_About_Feeding_A_Black_Hole/",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 720,
@@ -7035,7 +7035,7 @@
     "game": "/html/720-fix.html",
     "author": "vfqd, Mr.Pootsley, Jaybooty, Kane Forster, shxyder",
     "authorLink": "https://vfqd.itch.io/roulette-hero",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 721,
@@ -7047,7 +7047,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 722,
@@ -7059,7 +7059,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 723,
@@ -7071,7 +7071,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 724,
@@ -7083,7 +7083,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 725,
@@ -7092,7 +7092,7 @@
     "game": "/html/725-fix2.html",
     "author": "Shredsauce Team",
     "authorLink": "https://shredsauce.com",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 726,
@@ -7114,7 +7114,7 @@
     "game": "/html/727-fix.html",
     "author": "biznesbear",
     "authorLink": "https://biznesbear.itch.io/dimensionincident",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 728,
@@ -7123,7 +7123,7 @@
     "game": "/html/728-fix.html",
     "author": "Alexander Wiseman",
     "authorLink": "https://alexander-wiseman.itch.io/fear-assessment",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 729,
@@ -7141,7 +7141,7 @@
     "game": "/html/730-fix2.html",
     "author": "Sam Hogan",
     "authorLink": "https://samhogan.itch.io/cell-machine",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 731,
@@ -7150,7 +7150,7 @@
     "game": "/html/731-fix.html",
     "author": "caijiqaq",
     "authorLink": "https://caijiqaq.github.io/LAST-BREATH/",
-    "category": "RPG"
+    "category": "Adventure"
   },
   {
     "id": 732,
@@ -7188,7 +7188,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 735,
@@ -7225,7 +7225,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 738,
@@ -7234,7 +7234,7 @@
     "game": "/html/738-fix3.html",
     "author": "PlaySide Studios Ltd, Metro Trains",
     "authorLink": "https://store.steampowered.com/app/3079280/Saihate_Station/",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 739,
@@ -7290,7 +7290,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 744,
@@ -7324,7 +7324,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 747,
@@ -7342,7 +7342,7 @@
     "game": "/html/748-fix.html",
     "author": "mario1d240",
     "authorLink": "https://mario1d240.github.io/undertale-last-breath-remake-bad-time-simulator/",
-    "category": "RPG"
+    "category": "Adventure"
   },
   {
     "id": 749,
@@ -7351,7 +7351,7 @@
     "game": "/html/749-fix.html",
     "author": "Amusement Vision, camthesaxman etc",
     "authorLink": "https://monkeyball-online.pages.dev/",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 750,
@@ -7375,7 +7375,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 752,
@@ -7387,7 +7387,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 753,
@@ -7396,7 +7396,7 @@
     "game": "/html/753-fix.html",
     "author": "Print More India",
     "authorLink": "https://play.google.com/store/apps/details?id=com.pmi.breaklock",
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 754,
@@ -7408,7 +7408,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 755,
@@ -7429,7 +7429,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 757,
@@ -7441,7 +7441,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 758,
@@ -7453,7 +7453,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 759,
@@ -7465,7 +7465,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 760,
@@ -7477,7 +7477,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 761,
@@ -7489,7 +7489,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 762,
@@ -7501,7 +7501,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Sports"
   },
   {
     "id": 763,
@@ -7513,7 +7513,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 764,
@@ -7540,7 +7540,7 @@
     "game": "/html/766-fix2.html",
     "author": "unknown",
     "authorLink": "https://gn-math.dev",
-    "category": "Arcade"
+    "category": "Puzzle"
   },
   {
     "id": 767,
@@ -7549,7 +7549,7 @@
     "game": "/html/767-fix.html",
     "author": "Beruke Games",
     "authorLink": "https://play.google.com/store/apps/details?id=com.BerukeGames.StickSlasher",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 768,
@@ -7558,7 +7558,7 @@
     "game": "/html/768-fix2.html",
     "author": "GamePush",
     "authorLink": "https://www.crazygames.com/game/stickman-kombat-2d",
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 769,
@@ -7589,7 +7589,7 @@
     "special": [
       "port"
     ],
-    "category": "Platformer"
+    "category": "Adventure"
   },
   {
     "id": 772,
@@ -7644,7 +7644,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Sports"
   },
   {
     "id": 777,
@@ -7662,7 +7662,7 @@
     "game": "/html/778-fix.html",
     "author": "NBCUniversal Entertainment Japan, Pioneer Productions",
     "authorLink": "https://laingame.net/",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 779,
@@ -7686,7 +7686,7 @@
     "special": [
       "flash"
     ],
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 781,
@@ -7695,7 +7695,7 @@
     "game": "/html/781-fix.html",
     "author": "Makopaz",
     "authorLink": "https://store.steampowered.com/app/3788420/Scratch_Inc/",
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 782,
@@ -7720,7 +7720,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 784,
@@ -7732,7 +7732,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 785,
@@ -7744,7 +7744,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 786,
@@ -7765,7 +7765,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Music"
   },
   {
     "id": 788,
@@ -7790,7 +7790,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 790,
@@ -7802,7 +7802,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 791,
@@ -7814,7 +7814,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 792,
@@ -7835,7 +7835,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 794,
@@ -7847,7 +7847,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 795,
@@ -7859,7 +7859,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 796,
@@ -7871,7 +7871,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 797,
@@ -7883,7 +7883,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 798,
@@ -7892,7 +7892,7 @@
     "game": "/html/798-fix2.html",
     "author": "kulurc / kulu",
     "authorLink": "https://kulurc.itch.io/hungry-lamu",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 799,
@@ -7901,7 +7901,7 @@
     "game": "/html/799-fix3.html",
     "author": "kulurc / kulu",
     "authorLink": "https://kulurc.itch.io/hungry-lamu-2",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 800,
@@ -7910,7 +7910,7 @@
     "game": "/html/800-fix2.html",
     "author": "Rocket Goal team",
     "authorLink": "https://rocketgoal.io",
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 801,
@@ -7919,7 +7919,7 @@
     "game": "/html/801-fix3.html",
     "author": "tykenn",
     "authorLink": "https://tykenn.itch.io/trees-hate-you",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 802,
@@ -7931,7 +7931,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 803,
@@ -7952,7 +7952,7 @@
     "game": "/html/804-fix.html",
     "author": "Poncle",
     "authorLink": "https://store.steampowered.com/app/1794680/Vampire_Survivors/",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 805,
@@ -7964,7 +7964,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Strategy"
   },
   {
     "id": 806,
@@ -7976,7 +7976,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 807,
@@ -7988,7 +7988,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 808,
@@ -8076,7 +8076,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 815,
@@ -8085,7 +8085,7 @@
     "game": "/html/815.html",
     "author": "SeenWonderAlex",
     "authorLink": "https://seenwonderalex.itch.io/baldis-basics-tud",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 816,
@@ -8097,7 +8097,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 817,
@@ -8109,7 +8109,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 818,
@@ -8121,7 +8121,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 819,
@@ -8133,7 +8133,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 820,
@@ -8210,7 +8210,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 826,
@@ -8223,7 +8223,7 @@
       "port"
     ],
     "featured": true,
-    "category": "Arcade"
+    "category": "Music"
   },
   {
     "id": 827,
@@ -8325,7 +8325,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 835,
@@ -8379,7 +8379,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 840,
@@ -8391,7 +8391,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 841,
@@ -8416,7 +8416,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 843,
@@ -8428,7 +8428,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 844,
@@ -8437,7 +8437,7 @@
     "game": "/html/844-f.html",
     "author": "RewindApp",
     "authorLink": "https://store.steampowered.com/app/730620/Hammer_2/",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 845,
@@ -8461,7 +8461,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 847,
@@ -8473,7 +8473,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Platformer"
   },
   {
     "id": 848,
@@ -8485,7 +8485,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Racing"
   },
   {
     "id": 849,
@@ -8511,7 +8511,7 @@
       "port"
     ],
     "featured": true,
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 851,
@@ -8523,7 +8523,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 852,
@@ -8559,7 +8559,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 855,
@@ -8583,7 +8583,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 857,
@@ -8595,7 +8595,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "RPG"
   },
   {
     "id": 858,
@@ -8608,7 +8608,7 @@
       "port"
     ],
     "featured": true,
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 859,
@@ -8630,7 +8630,7 @@
     "game": "/html/860.html",
     "author": "andyl4nd",
     "authorLink": "https://andyl4nd.itch.io/endacopiademo",
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 861,
@@ -8690,7 +8690,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 866,
@@ -8702,7 +8702,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 867,
@@ -8714,7 +8714,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 868,
@@ -8753,7 +8753,7 @@
       "port"
     ],
     "featured": true,
-    "category": "Arcade"
+    "category": "Horror"
   },
   {
     "id": 871,
@@ -8765,7 +8765,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 872,
@@ -8777,7 +8777,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 873,
@@ -8789,7 +8789,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 874,
@@ -8798,7 +8798,7 @@
     "game": "/html/874.html",
     "author": "id Software, Bethesda Softworks",
     "authorLink": "https://store.steampowered.com/app/2270/Wolfenstein_3D/",
-    "category": "Arcade"
+    "category": "Shooter"
   },
   {
     "id": 875,
@@ -8810,7 +8810,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Action"
   },
   {
     "id": 876,
@@ -8822,7 +8822,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Adventure"
   },
   {
     "id": 877,
@@ -8870,7 +8870,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Fighting"
   },
   {
     "id": 881,
@@ -8882,7 +8882,7 @@
     "special": [
       "port"
     ],
-    "category": "Arcade"
+    "category": "Simulation"
   },
   {
     "id": 882,
@@ -8894,6 +8894,6 @@
     "special": [
       "port"
     ],
-    "category": "Adventure"
+    "category": "Simulation"
   }
 ]

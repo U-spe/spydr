@@ -2,6 +2,10 @@
    spydr GAME LOADER
 ========================= */
 
+// Public Cloudflare R2 bucket base URL.
+// Keep the /multiuse/... object paths unchanged.
+window.SPYDR_R2_BASE = window.SPYDR_R2_BASE || "https://pub-becf721603f5446dbe8deed55a153d97.r2.dev";
+
 let gameLists = [];
 
 let currentSourceData = null;

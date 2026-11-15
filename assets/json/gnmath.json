@@ -1562,19 +1562,6 @@
     "category": "RPG"
   },
   {
-    "id": 179,
-    "name": "Soundboard",
-    "img": "/covers/179.png",
-    "game": "/html/179-a3.html",
-    "author": "genizy",
-    "authorLink": "https://github.com/genizymath/soundboard/",
-    "featured": true,
-    "special": [
-      "tools"
-    ],
-    "category": "Tools"
-  },
-  {
     "id": 180,
     "name": "n-gon",
     "img": "/covers/180.png",
@@ -2362,19 +2349,6 @@
       "flash"
     ],
     "category": "Adventure"
-  },
-  {
-    "id": 253,
-    "name": "Chat Bot AI (A.I GPT)",
-    "img": "/covers/253.png",
-    "game": "/html/253-update2.html",
-    "author": "gn-math",
-    "authorLink": "https://gn-math.dev",
-    "featured": true,
-    "special": [
-      "tools"
-    ],
-    "category": "Tools"
   },
   {
     "id": 255,
@@ -3318,18 +3292,6 @@
     "category": "Simulation"
   },
   {
-    "id": 352,
-    "name": "DON'T YOU LECTURE ME",
-    "img": "/covers/352.png",
-    "game": "/html/352-fix.html",
-    "author": "GD Colon",
-    "authorLink": "https://thirtydollar.website",
-    "special": [
-      "tools"
-    ],
-    "category": "Tools"
-  },
-  {
     "id": 353,
     "name": "Blumgi Rocket",
     "img": "/covers/353.png",
@@ -4001,18 +3963,6 @@
     "category": "Horror"
   },
   {
-    "id": 429,
-    "name": "Code Editor",
-    "img": "/covers/429.png",
-    "game": "/html/429-ff.html",
-    "author": "gn-math",
-    "authorLink": "https://gn-math.dev",
-    "special": [
-      "tools"
-    ],
-    "category": "Tools"
-  },
-  {
     "id": 430,
     "name": "10 Minutes Till Dawn",
     "img": "/covers/430.png",
@@ -4421,18 +4371,6 @@
       "port"
     ],
     "category": "Adventure"
-  },
-  {
-    "id": 469,
-    "name": "sandstone",
-    "img": "/covers/469.png",
-    "game": "/html/469-fix.html",
-    "author": "ading2210",
-    "authorLink": "https://github.com/ading2210/sandstone",
-    "special": [
-      "tools"
-    ],
-    "category": "Tools"
   },
   {
     "id": 470,
@@ -5641,19 +5579,6 @@
     "author": "scriptwelder",
     "authorLink": "https://scriptwelder.itch.io/waterworks",
     "category": "Strategy"
-  },
-  {
-    "id": 596,
-    "name": "[!] COMMENTS",
-    "img": "/covers/596-uu.png",
-    "game": "/html/596-fix2.html",
-    "author": "gn-math",
-    "authorLink": "https://gn-math.github.io",
-    "featured": true,
-    "special": [
-      "tools"
-    ],
-    "category": "Tools"
   },
   {
     "id": 597,
@@ -8486,19 +8411,6 @@
       "port"
     ],
     "category": "Racing"
-  },
-  {
-    "id": 849,
-    "name": "Azahar (Emulator)",
-    "img": "/covers/849.png",
-    "game": "/html/849.html",
-    "author": "Azahar Contributors, Sexyplankton",
-    "authorLink": "https://github.com/azahar-emu/azahar",
-    "special": [
-      "emulator",
-      "tools"
-    ],
-    "category": "Tools"
   },
   {
     "id": 850,

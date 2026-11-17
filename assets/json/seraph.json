@@ -1,7 +1,4 @@
 {
-  "categories": {
-    "platformer": [
-      {
         "game": "https://cool.er.webcreationstudios.org/slope/index.html",
         "img": "/assets/images/seraph-thumbs/slope.jpg"
       },
@@ -28,9 +25,7 @@
       {
         "game": "https://cool.er.webcreationstudios.org/fancypantsadventure/index.html",
         "img": "/assets/images/seraph-thumbs/fancypantsadventure.jpg"
-      }
-    ],
-    "mobile": [
+      },
       {
         "game": "https://cool.er.webcreationstudios.org/flappy/index.html",
         "img": "/assets/images/seraph-thumbs/flappybird.jpg"
@@ -38,9 +33,7 @@
       {
         "game": "https://cool.er.webcreationstudios.org/crossy/index.html",
         "img": "/assets/images/seraph-thumbs/crossyroad.jpg"
-      }
-    ],
-    "simulation": [
+      },
       {
         "game": "https://cool.er.webcreationstudios.org/papaspizzaria/index.html",
         "img": "/assets/images/seraph-thumbs/papaspizzeria.jpg"
@@ -52,21 +45,15 @@
       {
         "game": "https://cool.er.webcreationstudios.org/ducklife4/index.html",
         "img": "/assets/images/seraph-thumbs/ducklife4.jpg"
-      }
-    ],
-    "simulator": [
+      },
       {
         "game": "https://cool.er.webcreationstudios.org/bitlife/index.html",
         "img": "/assets/images/seraph-thumbs/bitlife.jpg"
-      }
-    ],
-    "minecraft": [
+      },
       {
         "game": "https://cool.er.webcreationstudios.org/mc/index.html",
         "img": "/assets/images/seraph-thumbs/mc.jpg"
-      }
-    ],
-    "arcade": [
+      },
       {
         "game": "https://cool.er.webcreationstudios.org/cookieclicker/index.html",
         "img": "/assets/images/seraph-thumbs/cookieclick.jpg"
@@ -94,9 +81,7 @@
       {
         "game": "https://cool.er.webcreationstudios.org/tunnelrush/index.html",
         "img": "/assets/images/seraph-thumbs/tunnelrush.jpg"
-      }
-    ],
-    "puzzle": [
+      },
       {
         "game": "https://cool.er.webcreationstudios.org/2048/index.html",
         "img": "/assets/images/seraph-thumbs/2048.jpg"
@@ -104,15 +89,11 @@
       {
         "game": "https://cool.er.webcreationstudios.org/solitaire/index.html",
         "img": "/assets/images/seraph-thumbs/solitaire.jpg"
-      }
-    ],
-    "tetris": [
+      },
       {
         "game": "https://cool.er.webcreationstudios.org/tetris/index.html",
         "img": "/assets/images/seraph-thumbs/tetris.jpg"
-      }
-    ],
-    "adventure": [
+      },
       {
         "game": "https://cool.er.webcreationstudios.org/superhot/index.html",
         "img": "/assets/images/seraph-thumbs/superhot.jpg"
@@ -137,6 +118,4 @@
         "game": "https://cool.er.webcreationstudios.org/fleeingthecomplex/index.html",
         "img": "/assets/images/seraph-thumbs/fleeingthecomplex.jpg"
       }
-    ]
   }
-}

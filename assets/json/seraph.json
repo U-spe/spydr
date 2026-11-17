@@ -2,140 +2,140 @@
   "categories": {
     "platformer": [
       {
-        "game": "/html/slope/index.html",
-        "img": "./images/thumbnails/slope.jpg"
+        "game": "https://cool.er.webcreationstudios.org/slope/index.html",
+        "img": "/assets/images/seraph-thumbs/slope.jpg"
       },
       {
-        "game": "/html/subwaysurfers/index.html",
-        "img": "./images/thumbnails/subwaysurfers.jpeg"
+        "game": "https://cool.er.webcreationstudios.org/subwaysurfers/index.html",
+        "img": "/assets/images/seraph-thumbs/subwaysurfers.jpeg"
       },
       {
-        "game": "/html/sm64/index.html",
-        "img": "./images/thumbnails/sm64.jpg"
+        "game": "https://cool.er.webcreationstudios.org/sm64/index.html",
+        "img": "/assets/images/seraph-thumbs/sm64.jpg"
       },
       {
-        "game": "/html/run3/index.html",
-        "img": "./images/thumbnails/run3.jpg"
+        "game": "https://cool.er.webcreationstudios.org/run3/index.html",
+        "img": "/assets/images/seraph-thumbs/run3.jpg"
       },
       {
-        "game": "/html/templerun2/index.html",
-        "img": "./images/thumbnails/templerun2.jpg"
+        "game": "https://cool.er.webcreationstudios.org/templerun2/index.html",
+        "img": "/assets/images/seraph-thumbs/templerun2.jpg"
       },
       {
-        "game": "/html/doodlejump/index.html",
-        "img": "./images/thumbnails/doodlejump.jpg"
+        "game": "https://cool.er.webcreationstudios.org/doodlejump/index.html",
+        "img": "/assets/images/seraph-thumbs/doodlejump.jpg"
       },
       {
-        "game": "/html/fancypantsadventure/index.html",
-        "img": "./images/thumbnails/fancypantsadventure.jpg"
+        "game": "https://cool.er.webcreationstudios.org/fancypantsadventure/index.html",
+        "img": "/assets/images/seraph-thumbs/fancypantsadventure.jpg"
       }
     ],
     "mobile": [
       {
-        "game": "/html/flappy/index.html",
-        "img": "./images/thumbnails/flappybird.jpg"
+        "game": "https://cool.er.webcreationstudios.org/flappy/index.html",
+        "img": "/assets/images/seraph-thumbs/flappybird.jpg"
       },
       {
-        "game": "/html/crossy/index.html",
-        "img": "./images/thumbnails/crossyroad.jpg"
+        "game": "https://cool.er.webcreationstudios.org/crossy/index.html",
+        "img": "/assets/images/seraph-thumbs/crossyroad.jpg"
       }
     ],
     "simulation": [
       {
-        "game": "/html/papaspizzaria/index.html",
-        "img": "./images/thumbnails/papaspizzeria.jpg"
+        "game": "https://cool.er.webcreationstudios.org/papaspizzaria/index.html",
+        "img": "/assets/images/seraph-thumbs/papaspizzeria.jpg"
       },
       {
-        "game": "/html/papasburgeria/index.html",
-        "img": "./images/thumbnails/papasburgeria.jpg"
+        "game": "https://cool.er.webcreationstudios.org/papasburgeria/index.html",
+        "img": "/assets/images/seraph-thumbs/papasburgeria.jpg"
       },
       {
-        "game": "/html/ducklife4/index.html",
-        "img": "./images/thumbnails/ducklife4.jpg"
+        "game": "https://cool.er.webcreationstudios.org/ducklife4/index.html",
+        "img": "/assets/images/seraph-thumbs/ducklife4.jpg"
       }
     ],
     "simulator": [
       {
-        "game": "/html/bitlife/index.html",
-        "img": "./images/thumbnails/bitlife.jpg"
+        "game": "https://cool.er.webcreationstudios.org/bitlife/index.html",
+        "img": "/assets/images/seraph-thumbs/bitlife.jpg"
       }
     ],
     "minecraft": [
       {
-        "game": "/html/mc/index.html",
-        "img": "./images/thumbnails/mc.jpg"
+        "game": "https://cool.er.webcreationstudios.org/mc/index.html",
+        "img": "/assets/images/seraph-thumbs/mc.jpg"
       }
     ],
     "arcade": [
       {
-        "game": "/html/cookieclicker/index.html",
-        "img": "./images/thumbnails/cookieclick.jpg"
+        "game": "https://cool.er.webcreationstudios.org/cookieclicker/index.html",
+        "img": "/assets/images/seraph-thumbs/cookieclick.jpg"
       },
       {
-        "game": "/html/dinogame/index.html",
-        "img": "./images/thumbnails/chromedino.jpg"
+        "game": "https://cool.er.webcreationstudios.org/dinogame/index.html",
+        "img": "/assets/images/seraph-thumbs/chromedino.jpg"
       },
       {
-        "game": "/html/jetpackjoyride/index.html",
-        "img": "./images/thumbnails/jetpackjoyride.jpg"
+        "game": "https://cool.er.webcreationstudios.org/jetpackjoyride/index.html",
+        "img": "/assets/images/seraph-thumbs/jetpackjoyride.jpg"
       },
       {
-        "game": "/html/retrobowl/index.html",
-        "img": "./images/thumbnails/retrobowl.jpg"
+        "game": "https://cool.er.webcreationstudios.org/retrobowl/index.html",
+        "img": "/assets/images/seraph-thumbs/retrobowl.jpg"
       },
       {
-        "game": "/html/fruitninja/index.html",
-        "img": "./images/thumbnails/fruitninja.jpg"
+        "game": "https://cool.er.webcreationstudios.org/fruitninja/index.html",
+        "img": "/assets/images/seraph-thumbs/fruitninja.jpg"
       },
       {
-        "game": "/html/paperio2/index.html",
-        "img": "./images/thumbnails/paperio2.jpg"
+        "game": "https://cool.er.webcreationstudios.org/paperio2/index.html",
+        "img": "/assets/images/seraph-thumbs/paperio2.jpg"
       },
       {
-        "game": "/html/tunnelrush/index.html",
-        "img": "./images/thumbnails/tunnelrush.jpg"
+        "game": "https://cool.er.webcreationstudios.org/tunnelrush/index.html",
+        "img": "/assets/images/seraph-thumbs/tunnelrush.jpg"
       }
     ],
     "puzzle": [
       {
-        "game": "/html/2048/index.html",
-        "img": "./images/thumbnails/2048.jpg"
+        "game": "https://cool.er.webcreationstudios.org/2048/index.html",
+        "img": "/assets/images/seraph-thumbs/2048.jpg"
       },
       {
-        "game": "/html/solitaire/index.html",
-        "img": "./images/thumbnails/solitaire.jpg"
+        "game": "https://cool.er.webcreationstudios.org/solitaire/index.html",
+        "img": "/assets/images/seraph-thumbs/solitaire.jpg"
       }
     ],
     "tetris": [
       {
-        "game": "/html/tetris/index.html",
-        "img": "./images/thumbnails/tetris.jpg"
+        "game": "https://cool.er.webcreationstudios.org/tetris/index.html",
+        "img": "/assets/images/seraph-thumbs/tetris.jpg"
       }
     ],
     "adventure": [
       {
-        "game": "/html/superhot/index.html",
-        "img": "./images/thumbnails/superhot.jpg"
+        "game": "https://cool.er.webcreationstudios.org/superhot/index.html",
+        "img": "/assets/images/seraph-thumbs/superhot.jpg"
       },
       {
-        "game": "/html/thebindingofisaac/index.html",
-        "img": "./images/thumbnails/thebindingofisaac.jpg"
+        "game": "https://cool.er.webcreationstudios.org/thebindingofisaac/index.html",
+        "img": "/assets/images/seraph-thumbs/thebindingofisaac.jpg"
       },
       {
-        "game": "/html/escapingtheprison/index.html",
-        "img": "./images/thumbnails/escapingtheprison.jpg"
+        "game": "https://cool.er.webcreationstudios.org/escapingtheprison/index.html",
+        "img": "/assets/images/seraph-thumbs/escapingtheprison.jpg"
       },
       {
-        "game": "/html/stealingthediamond/index.html",
-        "img": "./images/thumbnails/stealingthediamond.jpg"
+        "game": "https://cool.er.webcreationstudios.org/stealingthediamond/index.html",
+        "img": "/assets/images/seraph-thumbs/stealingthediamond.jpg"
       },
       {
-        "game": "/html/infiltratingtheairship/index.html",
-        "img": "./images/thumbnails/infiltratingtheairship.jpg"
+        "game": "https://cool.er.webcreationstudios.org/infiltratingtheairship/index.html",
+        "img": "/assets/images/seraph-thumbs/infiltratingtheairship.jpg"
       },
       {
-        "game": "/html/fleeingthecomplex/index.html",
-        "img": "./images/thumbnails/fleeingthecomplex.jpg"
+        "game": "https://cool.er.webcreationstudios.org/fleeingthecomplex/index.html",
+        "img": "/assets/images/seraph-thumbs/fleeingthecomplex.jpg"
       }
     ]
   }

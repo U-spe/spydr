@@ -15,13 +15,13 @@
     "Icon": "ri-flask-line"
   },
   {
-    "Name": "Requested",
-    "File": "assets/json/requested.json",
-    "Icon": "ri-star-line"
-  },
-  {
     "Name": "Seraph",
     "File": "assets/json/seraph.json",
     "Icon": "ri-fire-line"
+  },
+  {
+    "Name": "Requested",
+    "File": "assets/json/requested.json",
+    "Icon": "ri-star-line"
   }
 ]

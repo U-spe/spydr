@@ -1,120 +1,122 @@
-{
-        "game": "https://cool.er.webcreationstudios.org/slope/index.html",
-        "img": "/assets/images/seraph-thumbs/slope.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/subwaysurfers/index.html",
-        "img": "/assets/images/seraph-thumbs/subwaysurfers.jpeg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/sm64/index.html",
-        "img": "/assets/images/seraph-thumbs/sm64.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/run3/index.html",
-        "img": "/assets/images/seraph-thumbs/run3.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/templerun2/index.html",
-        "img": "/assets/images/seraph-thumbs/templerun2.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/doodlejump/index.html",
-        "img": "/assets/images/seraph-thumbs/doodlejump.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/fancypantsadventure/index.html",
-        "img": "/assets/images/seraph-thumbs/fancypantsadventure.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/flappy/index.html",
-        "img": "/assets/images/seraph-thumbs/flappybird.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/crossy/index.html",
-        "img": "/assets/images/seraph-thumbs/crossyroad.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/papaspizzaria/index.html",
-        "img": "/assets/images/seraph-thumbs/papaspizzeria.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/papasburgeria/index.html",
-        "img": "/assets/images/seraph-thumbs/papasburgeria.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/ducklife4/index.html",
-        "img": "/assets/images/seraph-thumbs/ducklife4.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/bitlife/index.html",
-        "img": "/assets/images/seraph-thumbs/bitlife.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/mc/index.html",
-        "img": "/assets/images/seraph-thumbs/mc.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/cookieclicker/index.html",
-        "img": "/assets/images/seraph-thumbs/cookieclick.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/dinogame/index.html",
-        "img": "/assets/images/seraph-thumbs/chromedino.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/jetpackjoyride/index.html",
-        "img": "/assets/images/seraph-thumbs/jetpackjoyride.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/retrobowl/index.html",
-        "img": "/assets/images/seraph-thumbs/retrobowl.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/fruitninja/index.html",
-        "img": "/assets/images/seraph-thumbs/fruitninja.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/paperio2/index.html",
-        "img": "/assets/images/seraph-thumbs/paperio2.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/tunnelrush/index.html",
-        "img": "/assets/images/seraph-thumbs/tunnelrush.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/2048/index.html",
-        "img": "/assets/images/seraph-thumbs/2048.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/solitaire/index.html",
-        "img": "/assets/images/seraph-thumbs/solitaire.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/tetris/index.html",
-        "img": "/assets/images/seraph-thumbs/tetris.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/superhot/index.html",
-        "img": "/assets/images/seraph-thumbs/superhot.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/thebindingofisaac/index.html",
-        "img": "/assets/images/seraph-thumbs/thebindingofisaac.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/escapingtheprison/index.html",
-        "img": "/assets/images/seraph-thumbs/escapingtheprison.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/stealingthediamond/index.html",
-        "img": "/assets/images/seraph-thumbs/stealingthediamond.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/infiltratingtheairship/index.html",
-        "img": "/assets/images/seraph-thumbs/infiltratingtheairship.jpg"
-      },
-      {
-        "game": "https://cool.er.webcreationstudios.org/fleeingthecomplex/index.html",
-        "img": "/assets/images/seraph-thumbs/fleeingthecomplex.jpg"
-      }
+[
+  {
+    "game": "https://cool.er.webcreationstudios.org/slope/index.html",
+    "img": "/assets/images/seraph-thumbs/slope.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/subwaysurfers/index.html",
+    "img": "/assets/images/seraph-thumbs/subwaysurfers.jpeg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/sm64/index.html",
+    "img": "/assets/images/seraph-thumbs/sm64.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/run3/index.html",
+    "img": "/assets/images/seraph-thumbs/run3.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/templerun2/index.html",
+    "img": "/assets/images/seraph-thumbs/templerun2.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/doodlejump/index.html",
+    "img": "/assets/images/seraph-thumbs/doodlejump.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/fancypantsadventure/index.html",
+    "img": "/assets/images/seraph-thumbs/fancypantsadventure.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/flappy/index.html",
+    "img": "/assets/images/seraph-thumbs/flappybird.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/crossy/index.html",
+    "img": "/assets/images/seraph-thumbs/crossyroad.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/papaspizzaria/index.html",
+    "img": "/assets/images/seraph-thumbs/papaspizzeria.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/papasburgeria/index.html",
+    "img": "/assets/images/seraph-thumbs/papasburgeria.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/ducklife4/index.html",
+    "img": "/assets/images/seraph-thumbs/ducklife4.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/bitlife/index.html",
+    "img": "/assets/images/seraph-thumbs/bitlife.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/mc/index.html",
+    "img": "/assets/images/seraph-thumbs/mc.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/cookieclicker/index.html",
+    "img": "/assets/images/seraph-thumbs/cookieclick.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/dinogame/index.html",
+    "img": "/assets/images/seraph-thumbs/chromedino.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/jetpackjoyride/index.html",
+    "img": "/assets/images/seraph-thumbs/jetpackjoyride.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/retrobowl/index.html",
+    "img": "/assets/images/seraph-thumbs/retrobowl.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/fruitninja/index.html",
+    "img": "/assets/images/seraph-thumbs/fruitninja.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/paperio2/index.html",
+    "img": "/assets/images/seraph-thumbs/paperio2.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/tunnelrush/index.html",
+    "img": "/assets/images/seraph-thumbs/tunnelrush.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/2048/index.html",
+    "img": "/assets/images/seraph-thumbs/2048.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/solitaire/index.html",
+    "img": "/assets/images/seraph-thumbs/solitaire.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/tetris/index.html",
+    "img": "/assets/images/seraph-thumbs/tetris.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/superhot/index.html",
+    "img": "/assets/images/seraph-thumbs/superhot.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/thebindingofisaac/index.html",
+    "img": "/assets/images/seraph-thumbs/thebindingofisaac.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/escapingtheprison/index.html",
+    "img": "/assets/images/seraph-thumbs/escapingtheprison.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/stealingthediamond/index.html",
+    "img": "/assets/images/seraph-thumbs/stealingthediamond.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/infiltratingtheairship/index.html",
+    "img": "/assets/images/seraph-thumbs/infiltratingtheairship.jpg"
+  },
+  {
+    "game": "https://cool.er.webcreationstudios.org/fleeingthecomplex/index.html",
+    "img": "/assets/images/seraph-thumbs/fleeingthecomplex.jpg"
+  }
+]

@@ -4,7 +4,7 @@
 
 // Public Cloudflare R2 bucket base URL.
 // Resolve only the public R2 game and cover folders.
-window.SPYDR_R2_BASE = window.SPYDR_R2_BASE || "https://pub-becf721603f5446dbe8deed55a153d97.r2.dev";
+window.SPYDR_R2_BASE = window.SPYDR_R2_BASE || "https://cy.1.mjevents.org";
 
 let gameLists = [];
 

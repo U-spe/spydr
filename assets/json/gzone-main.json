@@ -1,22 +1,7 @@
 [
   {
-    "Name": "Seraph",
-    "File": "assets/json/seraph.json",
-    "Icon": "ri-fire-line"
-  },
-  {
-    "Name": "MacVG",
-    "File": "assets/json/macvg.json",
-    "Icon": "ri-ship-2-line"
-  },
-  {
-    "Name": "Nates Hub",
-    "File": "assets/json/nate.json",
-    "Icon": "ri-flask-line"
-  },
-    {
-    "Name": "Gn-Math",
-    "File": "assets/json/gnmath.json",
-    "Icon": "ri-calculator-line"
+    "Name": "Games",
+    "File": "assets/json/main.json",
+    "Icon": "ri-gamepad-line"
   }
 ]

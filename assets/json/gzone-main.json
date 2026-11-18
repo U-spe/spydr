@@ -1,8 +1,8 @@
 [
   {
-    "Name": "Gn-Math",
-    "File": "assets/json/gnmath.json",
-    "Icon": "ri-calculator-line"
+    "Name": "Seraph",
+    "File": "assets/json/seraph.json",
+    "Icon": "ri-fire-line"
   },
   {
     "Name": "MacVG",
@@ -14,14 +14,9 @@
     "File": "assets/json/nate.json",
     "Icon": "ri-flask-line"
   },
-  {
-    "Name": "Seraph",
-    "File": "assets/json/seraph.json",
-    "Icon": "ri-fire-line"
-  },
-  {
-    "Name": "Requested",
-    "File": "assets/json/requested.json",
-    "Icon": "ri-star-line"
+    {
+    "Name": "Gn-Math",
+    "File": "assets/json/gnmath.json",
+    "Icon": "ri-calculator-line"
   }
 ]

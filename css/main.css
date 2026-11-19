@@ -563,6 +563,17 @@ body[data-bg-style="fog"] #fog-overlay {
   gap: 20px;
 }
 
+.brand-name {
+  color: #fff;
+}
+
+.brand-version {
+  color: #888;
+  font-size: 0.55em;
+  font-weight: 500;
+  margin-left: 9px;
+  vertical-align: super;
+}
 
 /* =========================================================
    ANIMATED LOGO

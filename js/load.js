@@ -1,4 +1,4 @@
-
+ 
 /* =========================
    SPYDR GLOBAL LOADER
 ========================= */
@@ -36,51 +36,28 @@
     let introFinished = false;
 
     /* =========================
-       LOAD AND SHOW POPUP
+       LOAD AND SHOW WEEKLY POPUP
     ========================= */
 
     async function launchPopup() {
         try {
-            const response = await fetch("/assets/static/popup.html", {
-                cache: "no-cache"
-            });
-
-            if (!response.ok) {
-                throw new Error(
-                    `Popup request failed: ${response.status}`
-                );
-            }
-
-            const html = await response.text();
-
-            // Insert the popup markup and its inline styles.
-            const container = document.createElement("div");
-            container.id = "spydr-popup-container";
-            container.innerHTML = html;
-
-            document.body.appendChild(container);
-
-            // Load the popup dismissal controller.
-            if (!window.SpydrPopup) {
+            if (!window.SpydrPopupManager) {
                 await new Promise((resolve, reject) => {
                     const script = document.createElement("script");
 
-                    script.src = "/js/disc.js";
+                    script.src = "/js/popup-manager.js";
                     script.onload = resolve;
                     script.onerror = () => reject(
-                        new Error("Failed to load /js/disc.js")
+                        new Error("Failed to load /js/popup-manager.js")
                     );
 
                     document.body.appendChild(script);
                 });
             }
 
-            // Initialize after the popup markup exists.
-            window.SpydrPopup.init();
-            window.SpydrPopup.show();
-
+            await window.SpydrPopupManager.launch();
         } catch (error) {
-            console.error("Spydr: Could not launch popup.", error);
+            console.error("Spydr: Could not launch weekly popup manager.", error);
         }
     }
 
@@ -88,35 +65,32 @@
        FINISH INTRO
     ========================= */
 
-   
-function finishIntro() {
-    if (introFinished) return;
+    function finishIntro() {
+        if (introFinished) return;
 
-    introFinished = true;
+        introFinished = true;
 
-    // Start removing the intro immediately.
-    if (loadingScreen) {
-        loadingScreen.classList.add("hide");
-    }
+        if (loadingScreen) {
+            loadingScreen.classList.add("hide");
+        }
 
-    // Launch the popup immediately. No 1000ms timeout.
-    launchPopup();
+        launchPopup();
 
-    // Remove the intro after its CSS fade finishes.
-    if (loadingScreen) {
-        loadingScreen.addEventListener("transitionend", (event) => {
-            if (event.target === loadingScreen &&
-                event.propertyName === "opacity") {
+        if (loadingScreen) {
+            loadingScreen.addEventListener("transitionend", (event) => {
+                if (
+                    event.target === loadingScreen &&
+                    event.propertyName === "opacity"
+                ) {
+                    loadingScreen.remove();
+                }
+            });
+
+            setTimeout(() => {
                 loadingScreen.remove();
-            }
-        });
-
-        // Safety fallback if the transition event never fires.
-        setTimeout(() => {
-            loadingScreen.remove();
-        }, 700);
+            }, 700);
+        }
     }
-}
 
     /* =========================
        VIDEO EVENTS
@@ -142,10 +116,8 @@ function finishIntro() {
         }, 5000);
     });
 
-    // Handle autoplay being blocked by the browser.
     loadVideo.play().catch((error) => {
         console.warn("Spydr: Video autoplay failed.", error);
         finishIntro();
     });
-
 })();

@@ -1524,7 +1524,22 @@ async function loadGames() {
        STORE GAMES
     ========================== */
 
-    games = normalizedGames;
+    // Keep every forms entry pinned at the top, then shuffle all other games.
+    const formGames = normalizedGames.filter(
+      game => String(game.category || "").trim().toLowerCase() === "forms"
+    );
+
+    const otherGames = normalizedGames.filter(
+      game => String(game.category || "").trim().toLowerCase() !== "forms"
+    );
+
+    // Fisher-Yates shuffle: a fresh order each time a source is loaded.
+    for (let i = otherGames.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [otherGames[i], otherGames[j]] = [otherGames[j], otherGames[i]];
+    }
+
+    games = [...formGames, ...otherGames];
     buildCategoryFilter();
     filteredGames = games.slice();
 
@@ -1625,7 +1640,7 @@ function buildCategoryFilter() {
   if (!select) return;
   const current = select.value || "all";
   const categories = [...new Set(games.map(g => g.category || "Other"))].sort((a,b) => a.localeCompare(b));
-  select.innerHTML = '<option value="all">all categories</option>';
+  select.innerHTML = '<option value="all">all zones</option>';
   categories.forEach(category => {
     const option = document.createElement("option");
     option.value = category;

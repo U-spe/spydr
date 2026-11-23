@@ -96,28 +96,6 @@
     <div class="top-bar">
 
 
-      <!-- SOURCE DROPDOWN -->
-
-      <div class="dropdown">
-
-        <button id="dropdownButton">
-
-          <i class="ri-gamepad-line"></i>
-
-          <span id="sourceText">
-            loading...
-          </span>
-
-          <i class="ri-arrow-down-s-line"></i>
-
-        </button>
-
-
-        <div id="dropdownMenu"></div>
-
-      </div>
-
-
       <!-- SEARCH -->
 
       <div class="search">
@@ -140,12 +118,15 @@
          GAME GRID
     ========================== -->
 
-    <div class="category-bar" aria-label="Filter games by zone">
-      <span class="category-label"><i class="ri-filter-3-line"></i> zone</span>
-      <select id="category-filter" aria-label="Game zone">
-        <option value="all">all zones</option>
-      </select>
-    </div>
+    <section class="catalog-controls" aria-label="Game filters">
+      <div class="zone-control">
+        <label class="category-label" for="zone-filter"><i class="ri-filter-3-line"></i> zone</label>
+        <select id="zone-filter" aria-label="Game zone">
+          <option value="all">all zones</option><option value="forms">forms</option><option value="GN-Math">gn-math</option><option value="MacVG">macvg</option><option value="Nates">nates</option><option value="Nettleweb">nettleweb</option><option value="Seraph">seraph</option>
+        </select>
+      </div>
+      <div class="genre-control"><div class="genre-heading"><i class="ri-layout-grid-line"></i> categories</div><div id="genre-filters" class="genre-filters" aria-label="Filter games by category"></div></div>
+    </section>
 
     <div id="game-grid">
       loading...

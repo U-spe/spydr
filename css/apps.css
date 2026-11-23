@@ -1044,3 +1044,23 @@ body.app-open {
         font-size: 2rem;
     }
 }
+
+/* SPYDR // FUTURE APP DECK */
+.spydr-dashboard{max-width:1540px;padding:clamp(1.5rem,4vw,3.6rem)}
+.dashboard-header{padding-bottom:1.5rem;border-bottom:1px solid var(--border-color)}
+.page-title{font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.065em;text-transform:lowercase}
+.page-title::before{content:"/";margin-right:.18em;color:var(--theme-primary);-webkit-text-fill-color:var(--theme-primary)}
+.section-title{font-size:.78rem;font-weight:700;letter-spacing:.16em;color:var(--theme-text)}
+.section-title::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--theme-primary);box-shadow:0 0 13px var(--theme-primary)}
+.app-grid{grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem}
+.app-card{min-height:210px;padding:1.2rem;border-radius:14px;background:linear-gradient(145deg,color-mix(in srgb,var(--theme-surface) 90%,white 10%),color-mix(in srgb,var(--theme-background) 92%,var(--theme-primary) 8%));border-color:color-mix(in srgb,var(--theme-border) 72%,white 28%);box-shadow:0 12px 32px rgba(0,0,0,.13);gap:.85rem}
+.app-card::after{content:"";position:absolute;top:0;right:0;width:74px;height:74px;background:radial-gradient(circle at top right,color-mix(in srgb,var(--theme-primary) 17%,transparent),transparent 72%);pointer-events:none}
+.app-card:hover{transform:translateY(-5px);border-color:color-mix(in srgb,var(--theme-primary) 65%,var(--theme-border));box-shadow:0 18px 40px rgba(0,0,0,.25),0 0 26px color-mix(in srgb,var(--theme-primary) 10%,transparent)}
+.app-icon{width:46px;height:46px;border-radius:12px;font-size:1.45rem;background:color-mix(in srgb,var(--theme-background) 80%,var(--theme-primary) 20%);border-color:color-mix(in srgb,var(--theme-primary) 25%,var(--border-color))}
+.app-name{font-size:1.08rem;letter-spacing:-.035em}
+.app-desc{font-size:.72rem;opacity:.72}
+.launch-btn{padding:.68rem .8rem;border-radius:9px;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;background:color-mix(in srgb,var(--theme-primary) 9%,transparent);border-color:color-mix(in srgb,var(--theme-primary) 25%,var(--border-color))}
+.app-badge{font-size:.58rem;letter-spacing:.12em}
+#app-search{border-radius:11px;padding:.9rem 1rem .9rem 3rem;font-size:.8rem}
+@media(max-width:600px){.spydr-dashboard{padding:1.3rem}.app-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}.app-card{min-height:190px;padding:.9rem}.app-desc{font-size:.66rem}.launch-btn{font-size:.65rem}}
+@media(prefers-reduced-motion:reduce){.app-card,.app-card::before{animation:none;transition:none;opacity:1;transform:none}}

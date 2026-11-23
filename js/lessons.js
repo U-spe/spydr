@@ -13,6 +13,27 @@ let currentSourceData = null;
 let games = [];
 
 let filteredGames = [];
+let activeGenre = "all";
+const GAME_GENRES = ["Action","Adventure","Arcade","Casual","Educational","Fighting","Horror","Multiplayer","Music","Platformer","Puzzle","Racing","Rhythm","Simulation","Sports","Strategy","Survival"];
+function classifyGameGenre(game) {
+ const supplied=String(game.genre||"").trim(); const known=GAME_GENRES.find(g=>g.toLowerCase()===supplied.toLowerCase()); if(known)return known;
+ const n=String(game.name||"").toLowerCase(), has=(...w)=>w.some(x=>n.includes(x));
+ if(has("multiplayer","2 player","2-player","1v1","among us","tag"))return "Multiplayer";
+ if(has("racing","racer","drift","kart","rally","bike"))return "Racing";
+ if(has("soccer","football","basket","tennis","golf","cricket","baseball","hockey","volley","bowling"))return "Sports";
+ if(has("music","piano","fnf","funkin","dance","rhythm","tiles","beat"))return "Rhythm";
+ if(has("puzzle","2048","sudoku","block","word","mahjong","crossword","unblock","brain"))return "Puzzle";
+ if(has("ovo","mario","sonic","obby","parkour","jump"))return "Platformer";
+ if(has("simulator","simulation","tycoon","idle","farming","cooking"))return "Simulation";
+ if(has("strategy","chess","tower defense","empire"))return "Strategy";
+ if(has("horror","scary","backrooms","granny","haunt"))return "Horror";
+ if(has("survival","craft","minecraft","zombie"))return "Survival";
+ if(has("fight","fighter","boxing","wrestling"))return "Fighting";
+ if(has("learn","math","typing","quiz","geography"))return "Educational";
+ if(has("adventure","quest","escape","story","explore"))return "Adventure";
+ if(has("snake","flappy","doodle"))return "Casual";
+ if(has("action","shooter","battle","strike"))return "Action"; return "Arcade";
+}
 
 
 /* =========================
@@ -1493,7 +1514,7 @@ async function loadGames() {
                 game.prx ||
                 game.proxy
               ),
-            category: String(game.category || game.genre || "Other")
+            category: String(game.category || game.genre || "Other"),\n            genre: String(game.genre || (source.Zone === "GN-Math" ? game.category : "") || "")
 
           };
 
@@ -1635,36 +1656,18 @@ async function loadGames() {
    CATEGORY + SEARCH FILTERS
 ========================= */
 
-function buildCategoryFilter() {
-  const select = getEl("category-filter");
-  if (!select) return;
-  const current = select.value || "all";
-  const categories = [...new Set(games.map(g => g.category || "Other"))].sort((a,b) => a.localeCompare(b));
-  select.innerHTML = '<option value="all">all zones</option>';
-  categories.forEach(category => {
-    const option = document.createElement("option");
-    option.value = category;
-    option.textContent = category.toLowerCase();
-    select.appendChild(option);
-  });
-  select.value = categories.includes(current) ? current : "all";
+function buildGenreFilters() {
+ const wrap=getEl("genre-filters"); if(!wrap)return; wrap.innerHTML="";
+ const counts=new Map(); games.forEach(g=>counts.set(g.genre,(counts.get(g.genre)||0)+1));
+ const add=(value,label,count)=>{const b=document.createElement("button");b.type="button";b.className="genre-chip"+(activeGenre===value?" active":"");b.dataset.genre=value;b.innerHTML="<span>"+label+"</span><small>"+count+"</small>";b.setAttribute("aria-pressed",String(activeGenre===value));b.addEventListener("click",()=>{activeGenre=value;applyGameFilters()});wrap.appendChild(b)};
+ add("all","all",games.length); GAME_GENRES.forEach(g=>add(g,g.toLowerCase(),counts.get(g)||0));
 }
-
 function applyGameFilters() {
-  const q = (getEl("search")?.value || "").trim().toLowerCase();
-  const category = getEl("category-filter")?.value || "all";
-  filteredGames = games.filter(game =>
-    String(game.name || "").toLowerCase().includes(q) &&
-    (category === "all" || (game.category || "Other") === category)
-  );
-  renderGames();
+ const q=(getEl("search")?.value||"").trim().toLowerCase(), zone=getEl("zone-filter")?.value||"all";
+ filteredGames=games.filter(g=>String(g.name||"").toLowerCase().includes(q)&&(zone==="all"||String(g.zone||"").toLowerCase()===zone.toLowerCase())&&(activeGenre==="all"||g.genre===activeGenre));
+ buildGenreFilters(); renderGames();
 }
-
-getEl("category-filter")?.addEventListener("change", applyGameFilters);
-
-/* =========================
-   RENDER GAMES
-========================= */
+getEl("zone-filter")?.addEventListener("change",()=>{const selected=getEl("zone-filter").value;const index=gameLists.findIndex(source=>(source.Zone||"all")===selected);if(index>=0)setSource(index);else applyGameFilters()});
 
 function renderGames() {
 
@@ -1754,7 +1757,7 @@ function renderGames() {
       titleSpan.textContent = game.name;
       const categorySpan = document.createElement("small");
       categorySpan.className = "game-category";
-      categorySpan.textContent = String(game.category || "Other").toLowerCase();
+      categorySpan.textContent = (String(game.zone || "games") + " - " + String(game.genre || "arcade")).toLowerCase();
 
 
       /* =========================

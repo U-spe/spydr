@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'tt',
             name: 'TikTok',
-            description: 'Short-form mobile video content network.',
+            description: 'video feed',
             icon: 'ri-tiktok-fill',
             category: 'proxy',
             featured: false,
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
            id: 'yt-player',
            name: 'YT Player',
-           description: 'Search, watch, and manage videos with Spydr.',
+           description: 'video player',
            icon: 'ri-youtube-fill',
            category: 'local',
            featured: true,
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'tw',
             name: 'Twitch',
-            description: 'Live streaming platform for gamers and creators.',
+            description: 'live streams',
             icon: 'ri-twitch-fill',
             category: 'proxy',
             featured: false,
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'soundboard',
             name: 'Soundboard',
-            description: 'Play sound effects, manage favorites, and use text-to-speech.',
+            description: 'audio tools',
             icon: 'ri-volume-up-line',
             category: 'local',
             featured: true,
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'calc',
             name: 'Calculator',
-            description: 'Standard OS mathematical calculator.',
+            description: 'quick calculations',
             icon: 'ri-calculator-fill',
             category: 'local',
             featured: false,
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'note',
             name: 'Notepad',
-            description: 'Lightweight rich text and code editor.',
+            description: 'notes and code',
             icon: 'ri-file-list-3-fill',
             category: 'local',
             featured: false,
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'html',
             name: 'HTML Editor',
-            description: 'Live web development workspace.',
+            description: 'code playground',
             icon: 'ri-html5-fill',
             category: 'local',
             featured: true,
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'mov',
             name: 'Movies',
-            description: 'Local media playback interface.',
+            description: 'media library',
             icon: 'ri-film-fill',
             category: 'local',
             featured: false,
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 'cine',
             name: 'PS5 Emu',
-            description: 'PS5-like system with nieche games.',
+            description: 'console interface',
             icon: 'ri-playstation-line',
             category: 'local',
             featured: true,

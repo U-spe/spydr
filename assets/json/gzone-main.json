@@ -1,7 +1,44 @@
 [
   {
-    "Name": "Games",
+    "Name": "All Games",
     "File": "assets/json/main.json",
-    "Icon": "ri-gamepad-line"
+    "Icon": "ri-apps-2-line",
+    "Zone": "all"
+  },
+  {
+    "Name": "Forms",
+    "File": "assets/json/main.json",
+    "Icon": "ri-file-list-3-line",
+    "Zone": "forms"
+  },
+  {
+    "Name": "GN-Math",
+    "File": "assets/json/gnmath.json",
+    "Icon": "ri-graduation-cap-line",
+    "Zone": "GN-Math"
+  },
+  {
+    "Name": "MacVG",
+    "File": "assets/json/main.json",
+    "Icon": "ri-gamepad-line",
+    "Zone": "MacVG"
+  },
+  {
+    "Name": "Nates",
+    "File": "assets/json/nate.json",
+    "Icon": "ri-planet-line",
+    "Zone": "Nates"
+  },
+  {
+    "Name": "Nettleweb",
+    "File": "assets/json/main.json",
+    "Icon": "ri-global-line",
+    "Zone": "Nettleweb"
+  },
+  {
+    "Name": "Seraph",
+    "File": "assets/json/main.json",
+    "Icon": "ri-sparkling-2-line",
+    "Zone": "Seraph"
   }
 ]

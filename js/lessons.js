@@ -1710,29 +1710,6 @@ function renderGames() {
       };
 
 
-      /* =========================
-         OPEN GAME
-      ========================== */
-
-      card.addEventListener(
-        "click",
-        () => {
-
-          openGame(game);
-
-        }
-      );
-
-
-      card.appendChild(
-        img
-      );
-
-
-      card.appendChild(titleSpan);
-      card.appendChild(categorySpan);
-
-
       card.addEventListener("click", () => openGame(game));
       gameGrid.appendChild(card);
     }

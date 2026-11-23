@@ -449,8 +449,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     data-name="${app.name}"
                     data-url="${app.url}"
                 >
-                    Launch
-                    <i class="ri-arrow-right-line"></i>
+                    Open <i class="ri-arrow-up-right-line"></i>
                 </button>
             </div>
         `;

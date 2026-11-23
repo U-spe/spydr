@@ -1560,8 +1560,15 @@ async function loadGames() {
       [otherGames[i], otherGames[j]] = [otherGames[j], otherGames[i]];
     }
 
-    games = [...formGames, ...otherGames];
-    buildCategoryFilter();
+    games = [...formGames, ...otherGames].map(game => ({
+      ...game,
+      zone: source.Zone && source.Zone !== "all"
+        ? source.Zone
+        : (["forms", "GN-Math", "MacVG", "Nates", "Nettleweb", "Seraph"].includes(String(game.category)) ? String(game.category) : "Nates"),
+      genre: classifyGameGenre(game)
+    }));
+    activeGenre = "all";
+    buildGenreFilters();
     filteredGames = games.slice();
 
 

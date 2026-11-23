@@ -1071,3 +1071,25 @@ body[data-bg-style="fog"]
 .zone-button i{font-size:16px}
 .zone-button:hover,.zone-button.active{color:var(--text);border-color:color-mix(in srgb,var(--accent) 72%,var(--border));background:color-mix(in srgb,var(--accent) 14%,var(--card));box-shadow:0 0 18px color-mix(in srgb,var(--accent) 12%,transparent)}
 @media(max-width:700px){.catalog-controls{grid-template-columns:1fr}.zone-buttons{gap:6px}.zone-button{padding:8px 10px}}
+
+/* SPYDR // ICONIC GAME WALL */
+#game-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(142px,1fr));grid-auto-rows:9px;gap:12px;align-items:stretch;grid-auto-flow:dense}
+.game-card{position:relative;display:block;grid-column:span var(--tile-columns,1);grid-row:span var(--tile-rows,16);min-width:0;min-height:112px;width:100%;height:100%;padding:0;border:1px solid color-mix(in srgb,var(--border) 78%,white 22%);border-radius:14px;overflow:hidden;background:var(--bg2);cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.18);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.game-card img{display:block;width:100%;height:100%;min-height:112px;object-fit:cover;background:var(--bg2);filter:saturate(.82);transition:filter .25s ease,transform .35s ease}
+.game-card::after{content:attr(data-tooltip);position:absolute;left:50%;bottom:12px;z-index:3;max-width:calc(100% - 20px);padding:7px 10px;border:1px solid rgba(255,255,255,.18);border-radius:8px;background:rgba(8,8,12,.88);color:#fff;font:600 11px "JetBrains Mono",monospace;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:0;visibility:hidden;pointer-events:none;transform:translate(-50%,5px);transition:opacity .16s ease,transform .16s ease,visibility .16s ease;backdrop-filter:blur(12px)}
+.game-card:hover,.game-card:focus-visible{z-index:4;transform:translateY(-3px);border-color:var(--accent);box-shadow:0 16px 34px rgba(0,0,0,.3),0 0 20px color-mix(in srgb,var(--accent) 16%,transparent);outline:none}
+.game-card:hover img,.game-card:focus-visible img{filter:saturate(1);transform:scale(1.035)}
+.game-card:hover::after,.game-card:focus-visible::after{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.zone-button{width:42px;height:42px;min-height:42px;padding:0;gap:0;border-radius:12px;font-size:0}
+.zone-button i{font-size:21px}
+.zone-button span{display:none}
+.zone-button[aria-pressed="true"]{color:var(--text);border-color:var(--accent);background:color-mix(in srgb,var(--accent) 18%,var(--card));box-shadow:0 0 18px color-mix(in srgb,var(--accent) 18%,transparent)}
+.zone-button{position:relative}
+.zone-button::after{content:attr(title);position:absolute;left:50%;bottom:calc(100% + 9px);z-index:30;padding:6px 9px;border:1px solid var(--border);border-radius:7px;background:var(--bg2);color:var(--text);font:600 10px "JetBrains Mono",monospace;white-space:nowrap;opacity:0;visibility:hidden;pointer-events:none;transform:translate(-50%,4px);transition:all .15s ease}
+.zone-button:hover::after,.zone-button:focus-visible::after{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.zone-control{padding:0;border:0;background:transparent;box-shadow:none}
+.genre-control{padding:0;border:0;background:transparent;box-shadow:none}
+#category-filter{min-width:190px;max-width:260px}
+@media(max-width:700px){#game-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:9px;gap:9px}.game-card{grid-column:span 1;grid-row:span var(--tile-rows,16)}.zone-button{width:40px;height:40px;min-height:40px}.catalog-controls{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}}
+@media(max-width:380px){#game-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.game-card{grid-column:span 1}}
+@media(prefers-reduced-motion:reduce){.game-card,.game-card img,.game-card::after,.zone-button::after{transition:none}}

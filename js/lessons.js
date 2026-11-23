@@ -1594,7 +1594,9 @@ function buildZoneButtons() {
    button.type="button";
    button.className="zone-button"+(active?" active":"");
    button.setAttribute("aria-pressed",String(active));
-   button.innerHTML=`<i class="${source.Icon||"ri-folder-line"}"></i><span>${source.Name}</span>`;
+   button.innerHTML=`<i class="${source.Icon||"ri-folder-line"}" aria-hidden="true"></i>`;
+   button.setAttribute("aria-label",source.Name);
+   button.title=source.Name;
    button.addEventListener("click",()=>setSource(index));
    wrap.appendChild(button);
  });
@@ -1666,49 +1668,27 @@ function renderGames() {
   filteredGames.forEach(
     (game) => {
 
-      const card =
-        document.createElement(
-          "div"
-        );
+      const card = document.createElement("button");
+      card.type = "button";
+      card.className = "game-card";
+      card.setAttribute("aria-label", game.name);
+      card.setAttribute("data-tooltip", game.name);
+      card.title = game.name;
 
+      const img = document.createElement("img");
+      const fallbackSrc = "/assets/images/no-image.png";
+      img.src = getCover(game);
+      img.alt = game.name;
+      img.loading = "lazy";
+      img.draggable = false;
 
-      card.className =
-        "game-card";
-
-
-      const img =
-        document.createElement(
-          "img"
-        );
-
-
-      const titleSpan =
-        document.createElement(
-          "span"
-        );
-
-
-      const fallbackSrc =
-        "/assets/images/no-image.png";
-
-
-      img.src =
-        getCover(game);
-
-
-      img.alt =
-        game.name;
-
-
-      img.loading =
-        "lazy";
-
-
-      titleSpan.textContent = game.name;
-      const categorySpan = document.createElement("small");
-      categorySpan.className = "game-category";
-      categorySpan.textContent = (String(game.zone || "games") + " - " + String(game.genre || "arcade")).toLowerCase();
-
+      // Stable per-title sizing keeps the mosaic varied without jumping on filter changes.
+      const hash = Array.from(String(game.name || "")).reduce((value, char) => ((value * 31) + char.charCodeAt(0)) >>> 0, 7);
+      const columnSpan = hash % 7 === 0 ? 2 : 1;
+      const rowSpan = 13 + ((hash >>> 3) % 10);
+      card.style.setProperty("--tile-columns", columnSpan);
+      card.style.setProperty("--tile-rows", rowSpan);
+      card.appendChild(img);
 
       /* =========================
          IMAGE FALLBACK
@@ -1753,10 +1733,8 @@ function renderGames() {
       card.appendChild(categorySpan);
 
 
-      gameGrid.appendChild(
-        card
-      );
-
+      card.addEventListener("click", () => openGame(game));
+      gameGrid.appendChild(card);
     }
   );
 

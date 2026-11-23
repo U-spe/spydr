@@ -1514,7 +1514,8 @@ async function loadGames() {
                 game.prx ||
                 game.proxy
               ),
-            category: String(game.category || game.genre || "Other"),\n            genre: String(game.genre || (source.Zone === "GN-Math" ? game.category : "") || "")
+            category: String(game.category || game.genre || "Other"),
+            genre: String(game.genre || (source.Zone === "GN-Math" ? game.category : "") || "")
 
           };
 

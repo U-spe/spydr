@@ -3,5 +3,10 @@
     "Name": "Games",
     "File": "assets/json/main.json",
     "Icon": "ri-gamepad-line"
+  },
+  {
+    "Name": "XR Games",
+    "File": "assets/json/xr-games.json",
+    "Icon": "ri-gamepad-line"
   }
 ]

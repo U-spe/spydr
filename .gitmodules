@@ -17,3 +17,7 @@
 [submodule "assets/storage/legacy-assets"]
 	path = assets/storage/legacy-assets
 	url = https://github.com/U-spe/legacy-assets.git
+
+[submodule "assets/storage/unblocked-games"]
+	path = assets/storage/unblocked-games
+	url = https://github.com/BlueDonuts/unblocked-games.git

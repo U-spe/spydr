@@ -226,3 +226,8 @@ body:has(.container) .status.success,body:has(.container) .status.error{border-c
 #spydr-popup-button:hover{background:linear-gradient(135deg,#fff,#c8d3dd)!important}
 .spydr-popup-changelog li.completed:before{background:#dce5ed!important;color:#10151a!important}
 .spydr-popup-changelog li.pending:before{border-color:#8c9aa7!important}
+
+/* Keep every page layer above the ambient canvas */
+body:before{z-index:0}
+#app,.spydr-app-wrapper,.auth-wrapper,.dashboard-wrapper,.container,body>main{position:relative;z-index:2}
+#loader,#loading-screen{z-index:100001}

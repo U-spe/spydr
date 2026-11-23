@@ -206,3 +206,23 @@ a:hover{color:#fff}
  .dock a i,.dock button i{font-size:19px!important}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* FORM + SHARED OVERLAY FINISH */
+body:has(.container) .container{max-width:700px!important}
+body:has(.container) .eyebrow{color:#aab7c3!important}
+body:has(.container) h1{color:#f0f4f8!important;letter-spacing:-.07em!important}
+body:has(.container) .form-panel{border:1px solid var(--sp-line-strong)!important;border-radius:18px!important;background:linear-gradient(145deg,#1a222b,#0d1217)!important;box-shadow:var(--sp-shadow)!important}
+body:has(.container) .description,body:has(.container) .hint{color:#94a1ad!important}
+body:has(.container) .required{color:#d7e1e9!important}
+body:has(.container) input:focus,body:has(.container) textarea:focus{border-color:#c5d2de!important;box-shadow:0 0 0 3px rgba(220,232,245,.08)!important}
+body:has(.container) button{border:1px solid #dce5ed!important;background:linear-gradient(135deg,#e6edf3,#aebbc8)!important;color:#10151a!important}
+body:has(.container) .status.success,body:has(.container) .status.error{border-color:var(--sp-line-strong)!important;background:#151c23!important;color:#dce5ed!important}
+.spydr-popup-overlay{background:rgba(2,4,6,.82)!important;backdrop-filter:blur(18px)!important}
+.spydr-popup{border:1px solid rgba(215,230,245,.2)!important;border-radius:20px!important;background:linear-gradient(145deg,#1c252e,#0b1015)!important;color:#edf2f6!important;box-shadow:0 35px 110px rgba(0,0,0,.72)!important}
+.spydr-popup-accent{background:linear-gradient(90deg,#647382,#e0e8ef,#647382)!important;box-shadow:0 0 20px rgba(210,225,240,.2)!important}
+.spydr-popup-label,.spydr-popup-changelog h3{color:#c0ccd7!important}
+.spydr-popup p,.spydr-popup-changelog li{color:#aab6c1!important}
+#spydr-popup-button{border:1px solid #e4ebf1!important;background:linear-gradient(135deg,#e8eef4,#aebbc8)!important;color:#10151a!important}
+#spydr-popup-button:hover{background:linear-gradient(135deg,#fff,#c8d3dd)!important}
+.spydr-popup-changelog li.completed:before{background:#dce5ed!important;color:#10151a!important}
+.spydr-popup-changelog li.pending:before{border-color:#8c9aa7!important}

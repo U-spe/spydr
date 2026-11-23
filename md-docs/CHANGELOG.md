@@ -2,13 +2,21 @@
 
 All notable changes to spydr are documented here.
 
-# v4.0 - CURRENT
+# v4.1 - CURRENT
+
+## 🛠️ Beginning
+- [x] Mess around a little with the UI
+- [x] Change the layout on the games (match with duckmath slightly)
+
+
+# v4.0 - PREVIOUS
 
 ## 🛠️ Beginning
 - [ ] UV route (this should be the final proxy change)
 - [x] SWITCHED TO Cloudflare instead of Vercel (i got blocked)
 - [x] Add GN-Math Games Via Cloudflare
-- [ ] Add Seraph Games (same as gnm)
+- [x] Add Seraph Games (same as gnm)
+
 
 ## 🐛 Fixed
 - [x] Cine Cloud (Replaced Cine with PS5 Emu)
@@ -18,7 +26,7 @@ All notable changes to spydr are documented here.
 
 ---
 
-# v3.0 - PREVIOUS
+# v3.0
 
 ## 🛠️ Beginning
 - [x] Starting CORROSION build 
@@ -130,7 +138,7 @@ All notable changes to spydr are documented here.
 
 ---
 
-# v2.0.0 - spydr Rewrite
+# v2.0.0 - Rewrite
 
 ## 🚀 Major Update
 
@@ -138,7 +146,7 @@ All notable changes to spydr are documented here.
 - [x] Introduced new architecture
 - [x] Added modular systems
 - [x] Added improved content management
-- [x] Created a stronger foundation for future updates
+- [x] Better foundation for future updates
 
 ---
 
@@ -159,12 +167,7 @@ Older builds included:
 
 Planned:
 
-- Seasonal Themes
-- Deploy On Surge & B-CDN
-- Improved AI integrations
-- Using Scramjet (IN PROGRESS)
-- Offline capabilities (via downloads)
-- More customization options
+idk, give us some ideas!
 
 ---
 

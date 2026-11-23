@@ -1,86 +1,70 @@
-<!---like bro, really? you would REALLY fork my code? wowwww. i see how it is. just give me some credit and ill be fine.
-
-xD
-  
-  love u :3--->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>spydr</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="/css/main.css"/>
-  <link rel="stylesheet" href="/css/menu.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="spydr // a quieter corner of the internet">
+<title>spydr v4</title>
+<link rel="icon" href="/assets/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/menu.css">
+<link rel="stylesheet" href="/css/monochrome.css">
+<style>
+.home-shell{width:min(1100px,calc(100% - 40px));margin:0 auto 130px;position:relative;z-index:4}
+.home-kicker{display:flex;align-items:center;gap:10px;color:#777;font:11px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;margin:0 0 18px}
+.home-kicker:before{content:"";width:24px;height:1px;background:#888}
+.home-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}
+.home-heading h2{font:600 clamp(24px,4vw,38px) "Space Grotesk",sans-serif;letter-spacing:-.06em}
+.home-heading p{color:#777;font:11px "JetBrains Mono",monospace}
+.launch-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px}
+.launch-card{position:relative;min-height:154px;grid-column:span 4;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;padding:20px;border:1px solid #292929;border-radius:16px;background:linear-gradient(145deg,#171717,#0e0e0e);overflow:hidden;transition:transform .25s,border-color .25s,background .25s}
+.launch-card:after{content:"";position:absolute;width:140px;height:140px;right:-65px;top:-70px;border:1px solid rgba(255,255,255,.08);border-radius:50%;box-shadow:0 0 0 18px rgba(255,255,255,.018),0 0 0 38px rgba(255,255,255,.012)}
+.launch-card:hover{transform:translateY(-4px);border-color:#666;background:#1b1b1b}
+.launch-card.wide{grid-column:span 6}
+.launch-card .launch-icon{font-size:22px;color:#bbb}
+.launch-card .launch-arrow{position:absolute;right:18px;bottom:18px;color:#777;font-size:18px}
+.launch-card strong{font:600 17px "Space Grotesk",sans-serif;color:#f1f1f1}
+.launch-card small{display:block;margin-top:5px;color:#777;font:10px "JetBrains Mono",monospace;letter-spacing:.04em}
+.home-footer{display:flex;justify-content:space-between;gap:15px;margin-top:22px;color:#666;font:10px "JetBrains Mono",monospace}
+@media(max-width:700px){.home-shell{width:calc(100% - 28px)}.home-heading{align-items:start;flex-direction:column}.launch-card,.launch-card.wide{grid-column:span 6;min-height:140px;padding:15px}.launch-card strong{font-size:15px}.home-footer{flex-direction:column}}
+</style>
 </head>
-
 <body data-bg-style="stars">
-
-  <div id="loader"></div>
-
-  <div id="bg-effects-container">
-      <canvas id="stars-canvas"></canvas>
-      <div id="fog-overlay"></div>
-  </div>
-
-  <div id="app">
-
-    <div class="top">
-      <div id="time">--:--</div>
-      <div id="date">loading...</div>
-    </div>
-
-    <div id="global-menu"></div>
-
-    <div class="center">
-  <div class="hero-wrap">
-    <img src="/assets/images/logo.png" class="logo-img" alt="spydr logo">
-
-    <div class="hero-text">
-      <h1>
-        <span class="brand-name">spydr</span><span class="brand-version">v4</span>
-      </h1>
-      <div class="const" id="constText">
-        override, override!
+<div id="loader"></div>
+<div id="bg-effects-container"><canvas id="stars-canvas"></canvas><div id="fog-overlay"></div><div id="theme-fx-container"></div></div>
+<div id="app">
+  <div class="top"><div id="time">--:--</div><div id="date">loading...</div></div>
+  <div id="global-menu"></div>
+  <main>
+    <section class="center">
+      <div class="hero-wrap">
+        <img src="/assets/images/logo.png" class="logo-img" alt="spydr logo">
+        <div class="hero-text"><h1><span class="brand-name">spydr</span><span class="brand-version">v4</span></h1><div class="const" id="constText">a quieter corner of the internet.</div></div>
       </div>
-    </div>
-  </div>
+    </section>
+    <section class="home-shell">
+      <div class="home-kicker">personal network / 04</div>
+      <div class="home-heading"><h2>your space, reconnected.</h2><p>SELECT A DESTINATION ↗</p></div>
+      <div class="launch-grid">
+        <a class="launch-card wide" href="/lessons.html"><i class="ri-gamepad-line launch-icon"></i><span><strong>Game library</strong><small>ARCADE / DISCOVER / PLAY</small></span><i class="ri-arrow-up-right-line launch-arrow"></i></a>
+        <a class="launch-card wide" href="/search.html"><i class="ri-global-line launch-icon"></i><span><strong>Web browser</strong><small>SEARCH / EXPLORE / CONNECT</small></span><i class="ri-arrow-up-right-line launch-arrow"></i></a>
+        <a class="launch-card" href="/flashcards.html"><i class="ri-apps-2-line launch-icon"></i><span><strong>Apps</strong><small>YOUR TOOLKIT</small></span><i class="ri-arrow-up-right-line launch-arrow"></i></a>
+        <a class="launch-card" href="/study.html"><i class="ri-sparkling-2-line launch-icon"></i><span><strong>Venomous AI</strong><small>THINK / CREATE</small></span><i class="ri-arrow-up-right-line launch-arrow"></i></a>
+        <a class="launch-card" href="/review.html"><i class="ri-message-3-line launch-icon"></i><span><strong>Chat</strong><small>MESSAGES / COMMUNITY</small></span><i class="ri-arrow-up-right-line launch-arrow"></i></a>
+        <a class="launch-card" href="/settings.html"><i class="ri-settings-4-line launch-icon"></i><span><strong>Control center</strong><small>MAKE IT YOURS</small></span><i class="ri-arrow-up-right-line launch-arrow"></i></a>
+      </div>
+      <div class="home-footer"><span>SPYDR NETWORK / ALL SYSTEMS NOMINAL</span><span>MONOCHROME BY DESIGN.</span></div>
+    </section>
+  </main>
 </div>
-
-    <div class="games">
- <button class="game-card" onclick="window.location.href='https://dns2.webcreationstudios.org'">
-  url #1
-</button>
-
-<button class="game-card" onclick="window.location.href='https://madeby.thegoats.webcreationstudios.org'">
-  url #2
-</button>
-
-<button class="game-card" onclick="window.location.href='https://dns1.webcreationstudios.org'">
-  url #3
-</button>
-
-<button class="game-card" onclick="window.location.href='https://madeby.thegoats.mjevents.org'">
-  url #4
-</button>
-
-<button class="game-card" onclick="window.location.href='https://dns1.mjevents.org'">
-  url #5
-</button>
-</div>
-
-  </div>
-
-  <script src="/js/load.js"></script>
-  <script src="/js/globalmenu.js"></script>
-  <script src="/js/main.js"></script>
-  <script type="module" src="/js/global.js"></script>
-
-</body>  
+<script src="/js/load.js"></script>
+<script src="/js/globalmenu.js"></script>
+<script src="/js/main.js"></script>
+<script type="module" src="/js/global.js"></script>
+</body>
 </html>

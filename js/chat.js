@@ -5,7 +5,7 @@ const supabaseKey = "sb_publishable_UHN349V0ftl3nJVle0za2Q_oWeHWMvd";
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 let currentUser = null;
-let isGuest = false;
+let isGuest = true;
 let currentChannel = "global"; // State machine to hold current active channel
 let realtimeSubscription = null; // Hold reference to tear-down old channel listeners
 
@@ -27,18 +27,14 @@ const channelElements = document.querySelectorAll(".channel");
 
 // --- INITIALIZE CHAT ---
 async function initChat() {
-    // 1. Get current user
-    const { data: { user } } = await supabase.auth.getUser();
-    
-    if (user) {
-        currentUser = user;
-        isGuest = false;
-    } else {
-        // 2. Generate a Guest profile if not logged in
-        const guestId = Math.floor(Math.random() * 9000) + 1000;
-        currentUser = { email: `Guest_${guestId}@guest.com` };
-        isGuest = true;
+    // Everyone joins with a persistent guest identity. No account required.
+    let guestName = localStorage.getItem('spydr_chat_guest_name');
+    if (!guestName) {
+        guestName = `Guest_${Math.floor(Math.random() * 9000) + 1000}`;
+        localStorage.setItem('spydr_chat_guest_name', guestName);
     }
+    currentUser = { email: `${guestName}@guest.com` };
+    isGuest = true;
 
     // Unlock input elements safely
     if (messageInput) messageInput.disabled = false;
@@ -96,7 +92,7 @@ const createDmBtn = document.getElementById('create-dm-btn');
 if (createDmBtn) {
     createDmBtn.addEventListener('click', () => {
         if (isGuest) {
-            alert("You must be logged in to spydr net to create private chatrooms.");
+            alert("Private rooms are not available yet.");
         } else {
             const roomName = prompt("Enter private room name:");
             if (roomName) {

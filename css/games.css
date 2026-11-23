@@ -1059,3 +1059,15 @@ body[data-bg-style="fog"]
 .game-card .game-category{letter-spacing:.09em;color:color-mix(in srgb,var(--gray) 82%,var(--accent))}
 @media(max-width:700px){.catalog-controls{grid-template-columns:1fr;gap:10px}.genre-filters{gap:6px}.genre-chip{padding:7px 9px}}
 @media(prefers-reduced-motion:reduce){.game-card,.genre-chip{transition:none}}
+
+/* SPYDR // CATEGORY SELECT + ICON ZONE BUTTONS */
+.catalog-controls{grid-template-columns:minmax(190px,240px) minmax(0,1fr)}
+.genre-control{gap:10px}
+#category-filter{width:100%;min-width:0;padding:11px 12px;border:1px solid color-mix(in srgb,var(--border) 75%,white 25%);border-radius:9px;background:#101014;color:var(--text);font:600 12px "JetBrains Mono",monospace;outline:none;cursor:pointer}
+#category-filter:focus-visible{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+.zone-heading{display:flex;align-items:center;gap:8px;color:var(--gray);font:600 10px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase}
+.zone-buttons{display:flex;flex-wrap:wrap;gap:8px}
+.zone-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:8px 12px;border:1px solid var(--border);border-radius:9px;background:rgba(255,255,255,.025);color:var(--gray);font:600 11px "JetBrains Mono",monospace;text-transform:lowercase;cursor:pointer;transition:all .2s ease}
+.zone-button i{font-size:16px}
+.zone-button:hover,.zone-button.active{color:var(--text);border-color:color-mix(in srgb,var(--accent) 72%,var(--border));background:color-mix(in srgb,var(--accent) 14%,var(--card));box-shadow:0 0 18px color-mix(in srgb,var(--accent) 12%,transparent)}
+@media(max-width:700px){.catalog-controls{grid-template-columns:1fr}.zone-buttons{gap:6px}.zone-button{padding:8px 10px}}

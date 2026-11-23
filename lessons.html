@@ -119,12 +119,15 @@
     ========================== -->
 
     <section class="catalog-controls" aria-label="Game filters">
-      <div class="genre-control"><div class="genre-heading"><i class="ri-layout-grid-line"></i> categories</div><div id="genre-filters" class="genre-filters" aria-label="Filter games by category"></div></div>
-      <div class="zone-control">
-        <label class="category-label" for="zone-filter"><i class="ri-filter-3-line"></i> zone</label>
-        <select id="zone-filter" aria-label="Game zone">
-          <option value="all">all zones</option><option value="forms">forms</option><option value="GN-Math">gn-math</option><option value="MacVG">macvg</option><option value="Nates">nates</option><option value="Nettleweb">nettleweb</option><option value="Seraph">seraph</option>
+      <div class="genre-control">
+        <label class="genre-heading" for="category-filter"><i class="ri-layout-grid-line"></i> categories</label>
+        <select id="category-filter" aria-label="Filter games by category">
+          <option value="all">all categories</option>
         </select>
+      </div>
+      <div class="zone-control">
+        <div class="zone-heading"><i class="ri-stack-line"></i> zones</div>
+        <div id="zone-buttons" class="zone-buttons" aria-label="Choose a game zone"></div>
       </div>
     </section>
 

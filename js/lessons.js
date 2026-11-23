@@ -693,70 +693,6 @@ document.addEventListener(
    BUILD SOURCE MENU
 ========================= */
 
-function buildSourceMenu() {
-
-  const dropdownMenu =
-    getEl("dropdownMenu");
-
-
-  if (!dropdownMenu) {
-
-    return;
-
-  }
-
-
-  dropdownMenu.innerHTML =
-    "";
-
-
-  gameLists.forEach(
-    (source, index) => {
-
-      const item =
-        document.createElement(
-          "div"
-        );
-
-
-      item.className =
-        "dropdown-item";
-
-
-      item.innerHTML = `
-
-        <i class="${
-          source.Icon ||
-          "ri-folder-line"
-        }"></i>
-
-        <span>
-          ${source.Name}
-        </span>
-
-      `;
-
-
-      item.addEventListener(
-        "click",
-        () => {
-
-          setSource(index);
-
-        }
-      );
-
-
-      dropdownMenu.appendChild(
-        item
-      );
-
-    }
-  );
-
-}
-
-
 /* =========================
    SET SOURCE
 ========================= */
@@ -778,21 +714,7 @@ async function setSource(index) {
     source;
 
 
-  const sourceText =
-    getEl("sourceText");
-
-
-  if (sourceText) {
-
-    sourceText.textContent =
-      source.Name;
-
-  }
-
-
-  getEl("dropdownMenu")
-    ?.classList
-    .remove("active");
+  buildZoneButtons();
 
 
   const searchInput =
@@ -1664,18 +1586,38 @@ async function loadGames() {
    CATEGORY + SEARCH FILTERS
 ========================= */
 
+function buildZoneButtons() {
+ const wrap=getEl("zone-buttons"); if(!wrap)return; wrap.innerHTML="";
+ gameLists.forEach((source,index)=>{
+   const button=document.createElement("button");
+   const active=currentSourceData===source;
+   button.type="button";
+   button.className="zone-button"+(active?" active":"");
+   button.setAttribute("aria-pressed",String(active));
+   button.innerHTML=`<i class="${source.Icon||"ri-folder-line"}"></i><span>${source.Name}</span>`;
+   button.addEventListener("click",()=>setSource(index));
+   wrap.appendChild(button);
+ });
+}
 function buildGenreFilters() {
- const wrap=getEl("genre-filters"); if(!wrap)return; wrap.innerHTML="";
+ const select=getEl("category-filter"); if(!select)return;
+ const previous=activeGenre;
  const counts=new Map(); games.forEach(g=>counts.set(g.genre,(counts.get(g.genre)||0)+1));
- const add=(value,label,count)=>{const b=document.createElement("button");b.type="button";b.className="genre-chip"+(activeGenre===value?" active":"");b.dataset.genre=value;b.innerHTML="<span>"+label+"</span><small>"+count+"</small>";b.setAttribute("aria-pressed",String(activeGenre===value));b.addEventListener("click",()=>{activeGenre=value;applyGameFilters()});wrap.appendChild(b)};
- add("all","all",games.length); GAME_GENRES.forEach(g=>add(g,g.toLowerCase(),counts.get(g)||0));
+ select.innerHTML='<option value="all">all categories</option>';
+ GAME_GENRES.forEach(genre=>{
+   const option=document.createElement("option");
+   option.value=genre; option.textContent=genre.toLowerCase()+" ("+(counts.get(genre)||0)+")";
+   select.appendChild(option);
+ });
+ select.value=GAME_GENRES.includes(previous)?previous:"all";
+ activeGenre=select.value;
 }
 function applyGameFilters() {
- const q=(getEl("search")?.value||"").trim().toLowerCase(), zone=getEl("zone-filter")?.value||"all";
- filteredGames=games.filter(g=>String(g.name||"").toLowerCase().includes(q)&&(zone==="all"||String(g.zone||"").toLowerCase()===zone.toLowerCase())&&(activeGenre==="all"||g.genre===activeGenre));
- buildGenreFilters(); renderGames();
+ const q=(getEl("search")?.value||"").trim().toLowerCase();
+ filteredGames=games.filter(g=>String(g.name||"").toLowerCase().includes(q)&&(activeGenre==="all"||g.genre===activeGenre));
+ renderGames();
 }
-getEl("zone-filter")?.addEventListener("change",()=>{const selected=getEl("zone-filter").value;const index=gameLists.findIndex(source=>(source.Zone||"all")===selected);if(index>=0)setSource(index);else applyGameFilters()});
+getEl("category-filter")?.addEventListener("change",()=>{activeGenre=getEl("category-filter").value;applyGameFilters()});
 
 function renderGames() {
 
@@ -2136,12 +2078,7 @@ async function init() {
       );
 
     }
-
-
-    buildSourceMenu();
-
-
-    console.log(
+console.log(
 
       `[spydr games] source registry loaded: ${gameLists.length} sources`
 

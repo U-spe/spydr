@@ -1,0 +1,86 @@
+/* SPYDR / MONOCHROME INTERFACE SYSTEM */
+:root{
+  color-scheme:dark;
+  --sp-bg:#080808;--sp-panel:#101010;--sp-panel-2:#151515;--sp-panel-3:#1b1b1b;
+  --sp-line:#292929;--sp-line-soft:rgba(255,255,255,.075);
+  --sp-text:#f4f4f4;--sp-muted:#999;--sp-dim:#666;--sp-white:#fff;
+  --sp-radius:18px;--sp-radius-sm:12px;--sp-shadow:0 24px 80px rgba(0,0,0,.42);
+  --sp-ease:cubic-bezier(.2,.8,.2,1);
+}
+html{scroll-behavior:smooth}
+body{background:var(--sp-bg)!important;color:var(--sp-text)!important;font-family:"Space Grotesk",Inter,system-ui,sans-serif!important}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 50% -20%,rgba(255,255,255,.075),transparent 48%),linear-gradient(180deg,#0b0b0b,#070707 70%)}
+::selection{background:#eee;color:#080808}
+a{color:inherit}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #eee;outline-offset:3px}
+#bg-effects-container{opacity:.18!important}
+#stars-canvas{opacity:.2!important}
+#fog-overlay{opacity:.12!important}
+#app{position:relative;min-height:100vh;isolation:isolate}
+.top{top:22px!important;right:28px!important;left:auto!important;transform:none!important;text-align:right!important;z-index:30}
+#time{font:600 15px "JetBrains Mono",monospace!important;letter-spacing:.08em;color:#eee!important}
+#date{font:11px "JetBrains Mono",monospace!important;color:#777!important}
+.dock{left:50%!important;bottom:22px!important;gap:5px!important;padding:8px!important;border:1px solid #303030!important;border-radius:18px!important;background:rgba(17,17,17,.86)!important;box-shadow:0 18px 55px rgba(0,0,0,.55)!important;backdrop-filter:blur(24px) saturate(0)!important}
+.dock button{width:46px!important;height:44px!important;border-radius:12px!important;color:#999!important}
+.dock button i{font-size:20px!important}
+.dock button:hover{background:#292929!important;color:#fff!important;transform:translateY(-4px)!important;box-shadow:none!important}
+.dock button.active{background:#eee!important;color:#090909!important;box-shadow:none!important}
+.dock button.active:after{background:#fff!important}
+.dock button:before{background:#eee!important;color:#090909!important;border-radius:8px!important;font-weight:600}
+.center{position:relative!important;inset:auto!important;min-height:68vh!important;padding:130px 24px 30px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.hero-wrap{gap:26px!important;padding:34px 42px!important;border:1px solid var(--sp-line-soft);border-radius:26px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.012));box-shadow:var(--sp-shadow);backdrop-filter:blur(18px)}
+.logo-img{width:clamp(100px,15vw,190px)!important;filter:grayscale(1) drop-shadow(0 12px 30px rgba(255,255,255,.08))!important}
+.hero-text h1{font:700 clamp(54px,8vw,100px)/.95 "Space Grotesk",sans-serif!important;letter-spacing:-.09em!important}
+.brand-name{color:#f5f5f5!important}
+.brand-version{color:#777!important;font:500 .24em "JetBrains Mono",monospace!important;letter-spacing:.08em!important;vertical-align:middle!important;margin-left:14px!important}
+.const{font:12px "JetBrains Mono",monospace!important;color:#888!important;letter-spacing:.02em;margin-top:14px!important}
+.games{position:relative!important;inset:auto!important;transform:none!important;display:grid!important;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))!important;gap:12px!important;width:min(920px,calc(100% - 40px))!important;margin:0 auto 130px!important}
+.game-card{min-height:74px!important;text-align:left!important;padding:18px 20px!important;border:1px solid var(--sp-line)!important;border-radius:14px!important;background:linear-gradient(145deg,#171717,#101010)!important;color:#ddd!important;font:600 13px "JetBrains Mono",monospace!important;letter-spacing:.03em;transition:transform .25s var(--sp-ease),border-color .25s,background .25s!important}
+.game-card:hover{transform:translateY(-4px)!important;border-color:#666!important;background:#202020!important;box-shadow:0 14px 35px rgba(0,0,0,.3)!important;color:#fff!important}
+.dashboard-wrapper{min-height:100vh!important;padding:34px 34px 110px!important;gap:24px!important}
+.sidebar{background:#0d0d0d!important;border:1px solid var(--sp-line)!important;border-radius:20px!important;box-shadow:var(--sp-shadow)!important}
+.sidebar-header,.sidebar-footer{border-color:var(--sp-line)!important}
+.sidebar-header h2{font:700 24px "Space Grotesk",sans-serif!important;letter-spacing:-.07em}
+.status-badge{background:#eee!important;color:#080808!important;border-radius:6px!important}
+.sidebar-nav{gap:7px!important}
+.nav-btn{border:1px solid transparent!important;border-radius:11px!important;color:#999!important;background:transparent!important;font:500 13px "Space Grotesk",sans-serif!important}
+.nav-btn:hover,.nav-btn.active{background:#1c1c1c!important;color:#fff!important;border-color:#303030!important;transform:none!important}
+.btn-icon{color:#aaa!important}
+.content-panel{background:transparent!important}
+.section-header h1{font:700 clamp(28px,4vw,42px) "Space Grotesk",sans-serif!important;letter-spacing:-.06em!important}
+.section-header p{color:#888!important}
+.card,.glassmorphism,.panel,.settings-section .card{background:linear-gradient(145deg,#151515,#101010)!important;border:1px solid var(--sp-line)!important;border-radius:16px!important;box-shadow:0 16px 45px rgba(0,0,0,.2)!important;backdrop-filter:blur(16px)}
+.setting-row,.setting-block{border-color:var(--sp-line)!important}
+.setting-info h3,.setting-block h3{color:#eee!important;font:600 15px "Space Grotesk",sans-serif!important}
+.setting-info p,.setting-block p{color:#888!important}
+input:not([type=checkbox]):not([type=radio]),textarea,select,.select-wrapper select{background:#0b0b0b!important;color:#eee!important;border:1px solid #333!important;border-radius:10px!important;padding:12px 14px!important}
+input::placeholder,textarea::placeholder{color:#666!important}
+button:not(.dock button),.btn,.button{transition:all .22s var(--sp-ease)!important}
+.auth-wrapper{min-height:100vh!important;padding:30px!important}
+.auth-box{width:min(460px,100%)!important;background:linear-gradient(145deg,#171717,#0d0d0d)!important;border:1px solid #303030!important;border-radius:22px!important;box-shadow:var(--sp-shadow)!important;padding:34px!important}
+.auth-header h2{font:600 18px "JetBrains Mono",monospace!important;color:#eee!important}
+.auth-tabs{background:#090909!important;border:1px solid #292929!important;border-radius:12px!important;padding:4px!important}
+.auth-tabs button{border-radius:9px!important;color:#888!important}
+.auth-tabs button.active{background:#eee!important;color:#090909!important}
+#submit-btn,.guest-btn{border:1px solid #eee!important;border-radius:11px!important;background:#eee!important;color:#080808!important;font-weight:700!important;padding:13px 16px!important}
+#submit-btn:hover,.guest-btn:hover{background:#ccc!important;transform:translateY(-2px)}
+#global-menu{z-index:99999}
+table{border-color:#303030!important}
+hr{border-color:#292929!important}
+@media(max-width:760px){
+ .top{top:14px!important;right:16px!important}
+ .center{min-height:56vh!important;padding:105px 16px 20px!important}
+ .hero-wrap{flex-direction:column!important;text-align:center;padding:26px 24px!important;gap:10px!important}
+ .logo-img{width:108px!important}
+ .hero-text h1{font-size:64px!important}
+ .games{width:calc(100% - 28px)!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;margin-bottom:115px!important}
+ .game-card{min-height:62px!important;padding:14px!important;font-size:11px!important}
+ .dock{max-width:calc(100vw - 20px)!important;overflow-x:auto!important;bottom:10px!important}
+ .dock button{flex:0 0 40px!important;width:40px!important;height:40px!important}
+ .dashboard-wrapper{padding:14px 14px 100px!important}
+ .sidebar{width:100%!important}
+ .auth-box{padding:24px!important}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}

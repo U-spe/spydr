@@ -3,7 +3,6 @@ import ThemeManager from './theme.js';
 import CloakManager from './cloak.js';
 import HotkeyManager from './hotkeys.js';
 import UIManager from './ui.js';
-import AuthManager from './auth-user.js';
 
 class SpydrCoreRegistry {
     constructor() {
@@ -34,9 +33,6 @@ class SpydrCoreRegistry {
         const ui = new UIManager(this);
         this.register('ui', ui);
 
-        const auth = new AuthManager(this);
-        this.register('auth', auth);
-
         settings.init();
 
         // Boot theme manager first so themeFX configurations load prior to invoking FX styles
@@ -44,7 +40,6 @@ class SpydrCoreRegistry {
         cloak.init();
         hotkeys.init();
         ui.init();
-        auth.init();
         
         console.log("spydr engine // Core Stack Booted & Themes Injected.");
     }

@@ -1591,23 +1591,45 @@
       track.addEventListener("ended", stopScreenShare, { once: true });
       stream.addEventListener("inactive", stopScreenShare, { once: true });
 
-      await video.play();
+      const videoReady = new Promise((resolve, reject) => {
+        if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA && video.videoWidth && video.videoHeight) {
+          resolve();
+          return;
+        }
 
-      if (!video.videoWidth || !video.videoHeight) {
-        await new Promise((resolve, reject) => {
-          const timeout = setTimeout(
-            () => reject(new Error("the shared screen did not become ready in time.")),
-            10000
-          );
-          video.addEventListener("loadeddata", () => {
-            clearTimeout(timeout);
-            resolve();
-          }, { once: true });
-          video.addEventListener("error", () => {
-            clearTimeout(timeout);
-            reject(new Error("the shared screen could not be read."));
-          }, { once: true });
-        });
+        const timeout = setTimeout(() => {
+          cleanup();
+          reject(new Error("the shared screen did not become ready in time."));
+        }, 10000);
+
+        const onReady = () => {
+          if (!video.videoWidth || !video.videoHeight) return;
+          cleanup();
+          resolve();
+        };
+
+        const onError = () => {
+          cleanup();
+          reject(new Error("the shared screen could not be read."));
+        };
+
+        const cleanup = () => {
+          clearTimeout(timeout);
+          video.removeEventListener("loadeddata", onReady);
+          video.removeEventListener("resize", onReady);
+          video.removeEventListener("error", onError);
+        };
+
+        video.addEventListener("loadeddata", onReady);
+        video.addEventListener("resize", onReady);
+        video.addEventListener("error", onError);
+      });
+
+      await video.play();
+      await videoReady;
+
+      if (screenShareStream !== stream || !stream.active) {
+        throw new Error("screen sharing ended before the screenshot was ready.");
       }
 
       updateScreenShareUI();
@@ -1720,8 +1742,9 @@
       ensureChat();
 
 
+    // Uploaded images stay visible in chat. Shared-screen frames are sent as context only.
     const imageId =
-      outgoingImage
+      outgoingImage && outgoingImage.source !== "screen"
         ? makeId()
         : null;
 

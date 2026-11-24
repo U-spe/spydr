@@ -50,6 +50,39 @@ const lines = [
 ];
 
 const constText = document.querySelector(".const");
+const foxyOverlay = document.getElementById("foxy-overlay");
+const foxyAudio = document.getElementById("foxy-audio");
+let foxyTimer = null;
+let foxyPlayed = false;
+
+function playFoxySequence() {
+  if (foxyPlayed) return;
+  foxyPlayed = true;
+
+  if (foxyOverlay) {
+    foxyOverlay.classList.add("active");
+    foxyOverlay.setAttribute("aria-hidden", "false");
+  }
+
+  if (foxyAudio) {
+    foxyAudio.currentTime = 0;
+    foxyAudio.play().catch(() => {
+      // Browsers may block audio until the visitor interacts with the page.
+    });
+  }
+
+  foxyTimer = setTimeout(() => {
+    if (foxyOverlay) {
+      foxyOverlay.classList.remove("active");
+      foxyOverlay.setAttribute("aria-hidden", "true");
+    }
+
+    if (foxyAudio) {
+      foxyAudio.pause();
+      foxyAudio.currentTime = 0;
+    }
+  }, 3000);
+}
 
 let lineIndex = 0;
 
@@ -57,6 +90,10 @@ setInterval(() => {
   if (!constText) return;
 
   constText.textContent = lines[lineIndex];
+
+  if (lineIndex === lines.length - 1) {
+    playFoxySequence();
+  }
 
   lineIndex++;
 

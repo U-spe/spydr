@@ -15,6 +15,22 @@
   const API_ENDPOINT =
     "/api/venomous";
 
+  const MODEL_STORAGE =
+    "spydr.venomous.model";
+
+  const AI_MODELS = {
+    arachnid: "openai/gpt-oss-120b",
+    silk: "openai/gpt-oss-20b",
+    venomous: "qwen/qwen3.8-27b"
+  };
+
+  let selectedModel =
+    localStorage.getItem(MODEL_STORAGE) || "venomous";
+
+  if (!Object.prototype.hasOwnProperty.call(AI_MODELS, selectedModel)) {
+    selectedModel = "venomous";
+  }
+
 
   const STORAGE = {
 
@@ -79,6 +95,9 @@
 
     sidebar:
       $("venomous-sidebar"),
+
+    modelSelect:
+      $("ai-model-select"),
 
     openSidebar:
       $("open-sidebar"),
@@ -1640,6 +1659,9 @@
                 image:
                   outgoingImage,
 
+                model:
+                  selectedModel,
+
                 preferences: {
 
                   name:
@@ -2715,6 +2737,27 @@
       }
     );
 
+  }
+
+
+  /* =======================================================
+     MODEL SELECTOR
+     ======================================================= */
+
+  if (el.modelSelect) {
+    el.modelSelect.value = selectedModel;
+
+    el.modelSelect.addEventListener("change", () => {
+      const nextModel = el.modelSelect.value;
+
+      if (!Object.prototype.hasOwnProperty.call(AI_MODELS, nextModel)) {
+        el.modelSelect.value = selectedModel;
+        return;
+      }
+
+      selectedModel = nextModel;
+      localStorage.setItem(MODEL_STORAGE, selectedModel);
+    });
   }
 
 

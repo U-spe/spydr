@@ -2611,3 +2611,87 @@ body select {
   }
 
 }
+
+
+/* =========================================================
+   MODEL PICKER
+   ========================================================= */
+
+.model-picker {
+  min-width: 142px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  border: 1px solid var(--venom-border);
+  border-radius: 11px;
+  color: var(--venom-muted);
+  background: rgba(255,255,255,.035);
+  transition: border-color .16s ease, background .16s ease;
+}
+
+.model-picker:hover,
+.model-picker:focus-within {
+  border-color: var(--venom-border-hover);
+  background: rgba(255,255,255,.065);
+}
+
+.model-picker > i:first-child {
+  font-size: 16px;
+  color: #b9a5ff;
+}
+
+.model-picker > i:last-child {
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.model-picker select {
+  width: 100%;
+  min-width: 0;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  color: #f0eff5;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.model-picker select option {
+  color: #f0eff5;
+  background: #151518;
+}
+
+@media (max-width: 620px) {
+  .venomous-header {
+    padding: 0 12px;
+  }
+
+  .model-picker {
+    min-width: 112px;
+    height: 35px;
+    gap: 5px;
+    padding: 0 7px;
+  }
+
+  .model-picker select {
+    font-size: 11px;
+  }
+
+  .vision-badge {
+    display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .model-picker {
+    min-width: 96px;
+  }
+
+  .header-right {
+    gap: 5px;
+  }
+}

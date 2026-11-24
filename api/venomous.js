@@ -409,13 +409,13 @@ export default async function handler(
 
   const apiKey =
     process.env
-      .GROQ_API_KEY;
+      .AI_TOKEN;
 
 
   if (!apiKey) {
 
     console.error(
-      "[Venomous] GROQ_API_KEY missing."
+      "[Venomous] AI_TOKEN missing."
     );
 
 

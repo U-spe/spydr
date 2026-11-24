@@ -501,6 +501,18 @@
         <!-- ACTUAL TEXTBOX -->
 
         <div
+          id="screen-share-status"
+          class="screen-share-status hidden"
+          role="status"
+          aria-live="polite"
+        >
+          <span class="screen-share-indicator"></span>
+          <i class="ri-computer-line" aria-hidden="true"></i>
+          <span id="screen-share-label">screen sharing is on · screenshot on send</span>
+          <button id="screen-share-stop" type="button">stop</button>
+        </div>
+
+        <div
           id="composer"
           class="composer"
           data-composer-background="theme"
@@ -515,6 +527,17 @@
 
           <div class="composer-inner">
 
+
+            <button
+              id="screen-share-button"
+              class="composer-button screen-share-button"
+              type="button"
+              aria-label="Share screen"
+              aria-pressed="false"
+              title="Share your screen. A screenshot is captured only when you send a message."
+            >
+              <i class="ri-computer-line"></i>
+            </button>
 
             <button
               id="attach-button"

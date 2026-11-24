@@ -2695,3 +2695,75 @@ body select {
     gap: 5px;
   }
 }
+
+
+/* =========================================================
+   SCREEN CONTEXT
+   ========================================================= */
+
+.screen-share-button.is-sharing {
+  color: #d7e5ff;
+  border-color: rgba(125, 164, 255, .42);
+  background: rgba(86, 125, 210, .14);
+}
+
+.screen-share-button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.screen-share-status {
+  width: min(820px, calc(100% - 36px));
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 auto 9px;
+  padding: 0 11px;
+  border: 1px solid rgba(125, 164, 255, .24);
+  border-radius: 10px;
+  color: var(--venom-soft);
+  background: rgba(67, 103, 177, .10);
+  font-size: 11px;
+}
+
+.screen-share-status.hidden {
+  display: none;
+}
+
+.screen-share-status > i {
+  color: #9bbaff;
+  font-size: 15px;
+}
+
+.screen-share-indicator {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: #78d6a0;
+  box-shadow: 0 0 9px rgba(120, 214, 160, .5);
+}
+
+.screen-share-status button {
+  margin-left: auto;
+  padding: 5px 9px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 7px;
+  color: var(--venom-soft);
+  background: rgba(255,255,255,.045);
+  font: inherit;
+  cursor: pointer;
+}
+
+.screen-share-status button:hover {
+  background: rgba(255,255,255,.09);
+}
+
+@media (max-width: 520px) {
+  .screen-share-status {
+    width: calc(100% - 24px);
+    margin-bottom: 7px;
+    font-size: 10px;
+  }
+}

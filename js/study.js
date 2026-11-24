@@ -149,6 +149,18 @@
     attachButton:
       $("attach-button"),
 
+    screenShareButton:
+      $("screen-share-button"),
+
+    screenShareStatus:
+      $("screen-share-status"),
+
+    screenShareLabel:
+      $("screen-share-label"),
+
+    screenShareStop:
+      $("screen-share-stop"),
+
     imageInput:
       $("image-input"),
 
@@ -286,6 +298,15 @@
 
 
   let isGenerating =
+    false;
+
+  let screenShareStream =
+    null;
+
+  let screenShareVideo =
+    null;
+
+  let screenCaptureInProgress =
     false;
 
 
@@ -1489,6 +1510,171 @@
 
 
   /* =======================================================
+     SCREEN CONTEXT
+     ======================================================= */
+
+  function updateScreenShareUI() {
+    const active = Boolean(screenShareStream && screenShareStream.active);
+
+    el.screenShareButton.classList.toggle("is-sharing", active);
+    el.screenShareButton.setAttribute("aria-pressed", String(active));
+    el.screenShareButton.setAttribute("aria-label", active ? "Stop screen sharing" : "Share screen");
+    el.screenShareButton.title = active
+      ? "Stop sharing your screen"
+      : "Share your screen. A screenshot is captured only when you send a message.";
+    el.screenShareButton.innerHTML = active
+      ? '<i class="ri-stop-circle-line" aria-hidden="true"></i>'
+      : '<i class="ri-computer-line" aria-hidden="true"></i>';
+
+    el.screenShareStatus.classList.toggle("hidden", !active);
+    el.screenShareLabel.textContent = active
+      ? "screen sharing is on · screenshot on send"
+      : "";
+  }
+
+
+  function stopScreenShare() {
+    const stream = screenShareStream;
+    const video = screenShareVideo;
+
+    screenShareStream = null;
+    screenShareVideo = null;
+
+    if (video) {
+      video.pause();
+      video.srcObject = null;
+    }
+
+    if (stream) {
+      stream.getTracks().forEach(track => {
+        if (track.readyState !== "ended") track.stop();
+      });
+    }
+
+    updateScreenShareUI();
+  }
+
+
+  async function startScreenShare() {
+    if (selectedModel !== "venomous") {
+      alert("screen context currently works with venomous only. switch to venomous first.");
+      return;
+    }
+
+    if (!window.isSecureContext || !navigator.mediaDevices?.getDisplayMedia) {
+      alert("screen sharing needs a supported browser and a secure HTTPS connection.");
+      return;
+    }
+
+    try {
+      // Keep getDisplayMedia directly in the user's click flow.
+      const stream = await navigator.mediaDevices.getDisplayMedia({
+        video: true,
+        audio: false
+      });
+
+      const video = document.createElement("video");
+      video.autoplay = true;
+      video.muted = true;
+      video.playsInline = true;
+      video.srcObject = stream;
+
+      const track = stream.getVideoTracks()[0];
+      if (!track) {
+        stream.getTracks().forEach(item => item.stop());
+        throw new Error("the selected screen did not provide a video track.");
+      }
+
+      screenShareStream = stream;
+      screenShareVideo = video;
+
+      track.addEventListener("ended", stopScreenShare, { once: true });
+      stream.addEventListener("inactive", stopScreenShare, { once: true });
+
+      await video.play();
+
+      if (!video.videoWidth || !video.videoHeight) {
+        await new Promise((resolve, reject) => {
+          const timeout = setTimeout(
+            () => reject(new Error("the shared screen did not become ready in time.")),
+            10000
+          );
+          video.addEventListener("loadeddata", () => {
+            clearTimeout(timeout);
+            resolve();
+          }, { once: true });
+          video.addEventListener("error", () => {
+            clearTimeout(timeout);
+            reject(new Error("the shared screen could not be read."));
+          }, { once: true });
+        });
+      }
+
+      updateScreenShareUI();
+    } catch (error) {
+      stopScreenShare();
+
+      if (error.name === "NotAllowedError" || error.name === "AbortError") return;
+
+      console.error("[Venomous screen share]", error);
+      alert(error.message || "couldn't start screen sharing.");
+    }
+  }
+
+
+  async function captureScreenFrame() {
+    if (
+      !screenShareStream?.active ||
+      !screenShareVideo ||
+      screenShareStream.getVideoTracks().every(track => track.readyState !== "live")
+    ) {
+      throw new Error("screen sharing ended. start it again to ask about your screen.");
+    }
+
+    const video = screenShareVideo;
+
+    if (video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA || !video.videoWidth || !video.videoHeight) {
+      throw new Error("the shared screen isn't ready yet. try again in a moment.");
+    }
+
+    const maxDimension = 1600;
+    const scale = Math.min(1, maxDimension / Math.max(video.videoWidth, video.videoHeight));
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.max(1, Math.round(video.videoWidth * scale));
+    canvas.height = Math.max(1, Math.round(video.videoHeight * scale));
+
+    const context = canvas.getContext("2d", { alpha: false });
+    if (!context) throw new Error("this browser couldn't prepare the screen screenshot.");
+
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    let dataUrl = canvas.toDataURL("image/jpeg", 0.78);
+    if (dataUrl.length > 4_500_000) dataUrl = canvas.toDataURL("image/jpeg", 0.62);
+    if (dataUrl.length > 4_900_000) {
+      throw new Error("this screen is too detailed to send. try sharing a smaller window or zooming out.");
+    }
+
+    return {
+      dataUrl,
+      mimeType: "image/jpeg",
+      source: "screen"
+    };
+  }
+
+
+  el.screenShareButton.addEventListener("click", () => {
+    if (screenShareStream?.active) stopScreenShare();
+    else startScreenShare();
+  });
+
+  el.screenShareStop.addEventListener("click", stopScreenShare);
+
+  // Leaving/navigating away from this page ends the capture. Switching tabs
+  // does not, because the selected shared tab may be a different tab.
+  window.addEventListener("pagehide", stopScreenShare);
+
+
+  /* =======================================================
      SEND
      ======================================================= */
 
@@ -1496,64 +1682,55 @@
     forcedText = null
   ) {
 
-    if (
-      isGenerating
-    ) {
+    if (isGenerating || screenCaptureInProgress) return;
 
-      return;
+    let text = String(
+      forcedText ??
+      el.messageInput.value
+    ).trim();
 
+    if (!text && !currentAttachment && !screenShareStream?.active) return;
+
+    let outgoingImage = currentAttachment
+      ? {
+          dataUrl: currentAttachment.dataUrl,
+          mimeType: currentAttachment.mimeType,
+          source: "upload"
+        }
+      : null;
+
+    if (!outgoingImage && screenShareStream?.active) {
+      screenCaptureInProgress = true;
+      el.screenShareButton.disabled = true;
+
+      try {
+        outgoingImage = await captureScreenFrame();
+        if (!text) text = "Describe what is currently on my screen.";
+      } catch (error) {
+        console.error("[Venomous screen capture]", error);
+        alert(error.message || "couldn't capture the shared screen.");
+        return;
+      } finally {
+        screenCaptureInProgress = false;
+        el.screenShareButton.disabled = false;
+      }
     }
-
-
-    const text =
-      String(
-        forcedText ??
-        el.messageInput.value
-      ).trim();
-
-
-    if (
-      !text &&
-      !currentAttachment
-    ) {
-
-      return;
-
-    }
-
 
     const chat =
       ensureChat();
 
 
     const imageId =
-      currentAttachment
+      outgoingImage
         ? makeId()
         : null;
 
 
-    const outgoingImage =
-      currentAttachment
-        ? {
-            dataUrl:
-              currentAttachment.dataUrl,
-
-            mimeType:
-              currentAttachment.mimeType
-          }
-        : null;
-
-
-    if (
-      currentAttachment &&
-      imageId
-    ) {
-
+    if (outgoingImage && imageId) {
       runtimeImages.set(
         imageId,
-        currentAttachment.dataUrl
+        outgoingImage.dataUrl
       );
-
     }
 
 
@@ -1878,6 +2055,9 @@
 
     el.attachButton.disabled =
       isGenerating;
+
+    el.screenShareButton.disabled =
+      isGenerating || screenCaptureInProgress;
 
   }
 
@@ -2757,6 +2937,10 @@
 
       selectedModel = nextModel;
       localStorage.setItem(MODEL_STORAGE, selectedModel);
+
+      if (selectedModel !== "venomous" && screenShareStream) {
+        stopScreenShare();
+      }
     });
   }
 

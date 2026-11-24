@@ -718,50 +718,19 @@ input:checked + .slider:before {
 @media(max-width:520px){#spydr-quick-panel .quick-panel-card{top:auto;right:8px;bottom:8px;width:calc(100vw - 16px)}#spydr-quick-panel .quick-panel-grid{gap:8px}.legal-button{width:100%}}
 
 
-/* About updates: larger layout without an inner scroll area */
-#panel-about .info-card {
-    max-height: none;
-    overflow: visible;
-    gap: 18px;
-    padding: 28px;
-}
 
-#panel-about .spydr-popup-changelog {
-    max-height: none;
-    min-height: 390px;
-    overflow: visible;
-    padding: 22px 24px;
-    padding-right: 24px;
-}
 
-#panel-about .spydr-popup-changelog h3 {
-    font-size: 14px;
-    margin: 12px 0 14px;
+/* About updates opener */
+.updates-open-button {
+    width: 100%;
+    min-height: 58px;
+    justify-content: space-between;
+    padding: 16px 19px;
+    background: linear-gradient(110deg, #17181b, #202126);
+    border-color: rgba(255,255,255,.16);
+    text-align: left;
 }
+.updates-open-button > i:first-child { color: #b6a1ff; font-size: 19px; }
+.updates-open-button .updates-arrow { color: #92939b; margin-left: auto; }
+.updates-open-button:hover .updates-arrow { color: #fff; transform: translate(2px,-2px); }
 
-#panel-about .spydr-popup-changelog h4 {
-    font-size: 14px;
-    margin-bottom: 12px;
-}
-
-#panel-about .spydr-popup-changelog li {
-    font-size: 14px;
-    line-height: 1.65;
-}
-
-#panel-about .spydr-popup-changelog ul {
-    gap: 11px;
-    margin-bottom: 24px;
-}
-
-@media (max-height: 760px) {
-    #panel-about .info-card {
-        gap: 12px;
-        padding: 20px;
-    }
-
-    #panel-about .spydr-popup-changelog {
-        min-height: 320px;
-        padding: 16px 18px;
-    }
-}

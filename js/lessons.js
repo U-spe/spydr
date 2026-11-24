@@ -1682,12 +1682,11 @@ function renderGames() {
       img.loading = "lazy";
       img.draggable = false;
 
-      // Stable per-title sizing keeps the mosaic varied without jumping on filter changes.
+      // Stable per-title sizing gives the catalog a randomized square mosaic.
       const hash = Array.from(String(game.name || "")).reduce((value, char) => ((value * 31) + char.charCodeAt(0)) >>> 0, 7);
-      const columnSpan = hash % 7 === 0 ? 2 : 1;
-      const rowSpan = 13 + ((hash >>> 3) % 10);
-      card.style.setProperty("--tile-columns", columnSpan);
-      card.style.setProperty("--tile-rows", rowSpan);
+      const sizeRoll = hash % 10;
+      const tileSize = sizeRoll < 5 ? 1 : sizeRoll < 9 ? 2 : 3;
+      card.style.setProperty("--tile-size", tileSize);
       card.appendChild(img);
 
       /* =========================

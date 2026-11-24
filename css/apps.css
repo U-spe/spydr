@@ -1077,3 +1077,8 @@ body.app-open {
 .app-status-dot{position:absolute;right:9px;top:9px;width:9px;height:9px;border-radius:50%;background:#ff6262;box-shadow:0 0 12px rgba(255,98,98,.75)}
 @media(max-width:600px){.app-grid#apps-grid{grid-template-columns:repeat(auto-fill,minmax(82px,1fr));gap:13px}.app-tile{border-radius:22%;padding:8px}.app-tile>i{font-size:2.8rem}.app-tile::after{display:none}}
 @media(prefers-reduced-motion:reduce){.app-tile,.app-tile::after{transition:none}}
+
+
+/* SPYDR // TIGHTER APP ICONS */
+.app-tile>i{font-size:clamp(2.25rem,3.6vw,3.25rem)}
+@media(max-width:600px){.app-tile>i{font-size:2.2rem}}

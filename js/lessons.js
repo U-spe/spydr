@@ -1,9 +1,3 @@
-/* =========================
-   spydr GAME LOADER
-========================= */
-
-// Public Cloudflare R2 bucket base URL.
-// Resolve only the public R2 game and cover folders.
 window.SPYDR_R2_BASE = window.SPYDR_R2_BASE || "https://cy.1.mjevents.org";
 
 let gameLists = [];
@@ -233,7 +227,7 @@ async function getGameURL(game) {
 ========================= */
 
 function getCover(game) {
-  return resolveR2Path(game.cover || "/assets/images/no-image.png");
+  return resolveR2Path(game.cover || "/assets/images/no-image.jpg");
 }
 
 
@@ -1047,7 +1041,7 @@ async function loadGames() {
 
                 game.cover ||
 
-                "/assets/images/no-image.png";
+                "/assets/images/no-image.jpg";
 
 
               /*
@@ -1343,7 +1337,7 @@ async function loadGames() {
 
             game.icon ||
 
-            "/assets/images/no-image.png";
+            "/assets/images/no-image.jpg";
 
 
           const urlStr =
@@ -1676,7 +1670,7 @@ function renderGames() {
       card.title = game.name;
 
       const img = document.createElement("img");
-      const fallbackSrc = "/assets/images/no-image.png";
+      const fallbackSrc = "/assets/images/no-image.jpg";
       img.src = getCover(game);
       img.alt = game.name;
       img.loading = "lazy";

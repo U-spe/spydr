@@ -580,7 +580,7 @@ body[data-bg-style="fog"] #fog-overlay {
    ========================================================= */
 
 .logo-img {
-  width: 240px;
+  width: clamp(180px, 28vw, 320px);
 
   filter:
     drop-shadow(

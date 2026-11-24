@@ -716,3 +716,52 @@ input:checked + .slider:before {
 @keyframes quick-in{from{opacity:0;transform:translateY(-6px) scale(.985)}to{opacity:1;transform:none}}
 @media(max-width:700px){.legal-actions{grid-template-columns:1fr}.dashboard-wrapper{padding:12px;gap:12px}.sidebar{width:210px;padding:14px}.nav-btn{font-size:12px;padding:11px}.card{padding:18px}.setting-row{gap:12px;align-items:flex-start}.manifest-row{gap:10px}.manifest-val{max-width:55%;text-align:right}}
 @media(max-width:520px){#spydr-quick-panel .quick-panel-card{top:auto;right:8px;bottom:8px;width:calc(100vw - 16px)}#spydr-quick-panel .quick-panel-grid{gap:8px}.legal-button{width:100%}}
+
+
+/* About updates: larger layout without an inner scroll area */
+#panel-about .info-card {
+    max-height: none;
+    overflow: visible;
+    gap: 18px;
+    padding: 28px;
+}
+
+#panel-about .spydr-popup-changelog {
+    max-height: none;
+    min-height: 390px;
+    overflow: visible;
+    padding: 22px 24px;
+    padding-right: 24px;
+}
+
+#panel-about .spydr-popup-changelog h3 {
+    font-size: 14px;
+    margin: 12px 0 14px;
+}
+
+#panel-about .spydr-popup-changelog h4 {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+#panel-about .spydr-popup-changelog li {
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+#panel-about .spydr-popup-changelog ul {
+    gap: 11px;
+    margin-bottom: 24px;
+}
+
+@media (max-height: 760px) {
+    #panel-about .info-card {
+        gap: 12px;
+        padding: 20px;
+    }
+
+    #panel-about .spydr-popup-changelog {
+        min-height: 320px;
+        padding: 16px 18px;
+    }
+}

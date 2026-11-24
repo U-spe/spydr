@@ -1,6 +1,9 @@
 /* js/apps.js */
 document.addEventListener('DOMContentLoaded', () => {
     const apps = [
+        { id: 'crosh', name: 'Terminal', description: 'crosh terminal emulator', icon: 'ri-terminal-box-line', category: 'local', featured: true, url: '/apps/crosh.html' },
+        { id: 'gauth', name: 'GauthMath', description: 'math help', icon: 'ri-calculator-line', category: 'noapp', featured: false, launchUrl: 'https://www.gauthmath.com/' },
+        { id: 'geforce-now', name: 'GeForce Now', description: 'cloud gaming', icon: 'ri-gamepad-line', category: 'noapp', featured: false, launchUrl: 'https://play.geforcenow.com/' },
         {
             id: 'tt',
             name: 'TikTok',
@@ -180,7 +183,13 @@ document.addEventListener('DOMContentLoaded', () => {
             tile.appendChild(status);
         }
 
-        tile.addEventListener('click', () => openApp(app.url, app.name));
+        tile.addEventListener('click', () => {
+            if (app.category === 'noapp' && app.launchUrl) {
+                window.open(app.launchUrl, '_blank', 'noopener,noreferrer');
+                return;
+            }
+            openApp(app.url, app.name);
+        });
         return tile;
     }
 

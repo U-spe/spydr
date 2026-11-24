@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>spydr // control panel</title>
+<title>spydr // settings</title>
+<link rel="icon" href="/assets/images/favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,7 @@
 <link rel="stylesheet" href="/css/menu.css">
 
 <!-- Include marked.js for markdown rendering -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 
   <link rel="stylesheet" href="/css/monochrome.css">
 </head>
@@ -36,9 +37,7 @@
 
 <div id="js-warning">
     <strong>SYS_WARNING:</strong>
-    You must run this using a Local Web Server
-    (e.g., Live Server in VS Code).
-    Opening the file directly (file://) blocks modular JavaScript from working!
+    SPYDR needs to be opened from its website to load correctly.
 </div>
 
 
@@ -83,67 +82,14 @@
 
 
         <nav class="sidebar-nav">
-
-            <button
-                class="nav-btn active"
-                data-target="general"
-                type="button"
-            >
-                <span class="btn-icon">⚙_</span>
-                General Settings/Quick Settings
-            </button>
-
-
-            <button
-                class="nav-btn"
-                data-target="background-fx"
-                type="button"
-            >
-                <span class="btn-icon">✦_</span>
-                Background FX
-            </button>
-
-
-            <button
-                class="nav-btn"
-                data-target="themes"
-                type="button"
-            >
-                <span class="btn-icon">🎨_</span>
-                Themes and Colors
-            </button>
-
-
-            <button
-                class="nav-btn"
-                data-target="hotkeys"
-                type="button"
-            >
-                <span class="btn-icon">⌨_</span>
-                Hotkeys
-            </button>
-
-
-            <button
-                class="nav-btn"
-                data-target="cloaking"
-                type="button"
-            >
-                <span class="btn-icon">🕶_</span>
-                Cloaking Tabs & A:B
-            </button>
-
-
-            <button
-                class="nav-btn"
-                data-target="about"
-                type="button"
-            >
-                <span class="btn-icon">ℹ_</span>
-                About & Changelog
-            </button>
-
-        </nav>
+  <button class="nav-btn active" data-target="general" type="button"><i class="ri-settings-3-line"></i> General</button>
+  <button class="nav-btn" data-target="background-fx" type="button"><i class="ri-sparkling-2-line"></i> Background FX</button>
+  <button class="nav-btn" data-target="themes" type="button"><i class="ri-palette-line"></i> Themes</button>
+  <button class="nav-btn" data-target="hotkeys" type="button"><i class="ri-keyboard-line"></i> Hotkeys</button>
+  <button class="nav-btn" data-target="cloaking" type="button"><i class="ri-eye-line"></i> Tab appearance</button>
+  <button class="nav-btn" data-target="storage" type="button"><i class="ri-hard-drive-3-line"></i> Storage & Backup</button>
+  <button class="nav-btn" data-target="about" type="button"><i class="ri-information-line"></i> About</button>
+</nav>
 
 
         <div class="sidebar-footer">
@@ -176,7 +122,7 @@
                 </h1>
 
                 <p>
-                    Core system behavior adjustments
+                    Manage how SPYDR looks and works.
                 </p>
 
             </div>
@@ -193,7 +139,7 @@
                         </h3>
 
                         <p>
-                            Instantly commit configuration adjustments to disk
+                            Save changes automatically on this device.
                         </p>
 
                     </div>
@@ -233,7 +179,7 @@
                 </h1>
 
                 <p>
-                    Configure spydr's background visualization system
+                    Choose the background effects used across SPYDR.
                 </p>
 
             </div>
@@ -276,14 +222,29 @@
                     </div>
 
                     <p>
-                        Choose the background visualization used across spydr.
+                        Choose an effect for the page background.
                     </p>
 
                 </div>
 
             </div>
 
-        </section>
+        <div class="setting-block video-background-setting">
+  <h3>Video background</h3>
+  <div class="select-wrapper">
+    <select id="video-background-select">
+      <option value="none">Off</option>
+      <option value="v1-b">Bedrock 01</option>
+      <option value="v2-b">Bedrock 02</option>
+      <option value="v3-b">Bedrock 03</option>
+      <option value="v4-b">Bedrock 04</option>
+      <option value="v5-b">Bedrock 05</option>
+      <option value="v6-b">Bedrock 06</option>
+    </select>
+  </div>
+  <p>Play a looping video behind the page. You can turn it off any time.</p>
+</div>
+</section>
 
 
         <!-- =================================================
@@ -302,7 +263,7 @@
                 </h1>
 
                 <p>
-                    Tailor your terminal visualization matrix
+                    Pick a look for SPYDR.
                 </p>
 
             </div>
@@ -558,7 +519,7 @@
                 </h1>
 
                 <p>
-                    Configure quick-trigger actions for utilities
+                    Set keyboard shortcuts for SPYDR.
                 </p>
 
             </div>
@@ -576,7 +537,7 @@
                         </h3>
 
                         <p>
-                            Hard redirect to Google and force-cloak to Google Classroom
+                            Open the selected panic destination.
                         </p>
 
                     </div>
@@ -606,7 +567,7 @@
                         </h3>
 
                         <p>
-                            Instantly enables your currently saved stealth A:B identity
+                            Turn on the selected tab appearance.
                         </p>
 
                     </div>
@@ -636,7 +597,7 @@
                         </h3>
 
                         <p>
-                            Toggle overlay displaying FPS, Battery, and Browser details
+                            Show or hide the browser and performance panel.
                         </p>
 
                     </div>
@@ -666,7 +627,7 @@
                         </h3>
 
                         <p>
-                            Instantly pull up this system control panel
+                            Open Quick Settings.
                         </p>
 
                     </div>
@@ -695,173 +656,80 @@
              CLOAKING
         ================================================== -->
 
-        <section
-            class="settings-section"
-            id="panel-cloaking"
-        >
-
-            <div class="section-header">
-
-                <h1>
-                    Cloaking Tabs & A:B
-                </h1>
-
-                <p>
-                    Toggle real-time identity spoofing vectors
-                </p>
-
-            </div>
-
-
-            <div class="card glassmorphism">
-
-
-                <div class="setting-row">
-
-                    <div class="setting-info">
-
-                        <h3>
-                            A:B State Mode
-                        </h3>
-
-                        <p>
-                            A Mode = Normal / B Mode = Stealth Target Identity
-                        </p>
-
-                    </div>
+        <section class="settings-section" id="panel-cloaking">
+  <div class="section-header"><h1>Tab appearance</h1><p>Choose the title and icon shown on this tab.</p></div>
+  <div class="card glassmorphism">
+    <div class="setting-row">
+      <div class="setting-info"><h3>Tab appearance</h3><p>Change the tab title and favicon using one of the presets below.</p></div>
+      <button class="action-button" id="cloak-toggle-button" type="button" aria-pressed="false"><i class="ri-eye-line"></i><span>Enable</span></button>
+    </div>
+    <div class="setting-block">
+      <h3>Preset</h3>
+      <div class="select-wrapper">
+        <select id="cloak-target-select">
+          <option value="spydr">SPYDR</option>
+          <option value="google">Google</option>
+          <option value="classroom">Classroom</option>
+          <option value="securly">Securly Pass</option>
+          <option value="wayground">Wayground</option>
+          <option value="studysync">StudySync</option>
+          <option value="classlink">ClassLink</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-                    <label class="switch">
-
-                        <input
-                            type="checkbox"
-                            id="toggle-cloak"
-                        >
-
-                        <span class="slider"></span>
-
-                    </label>
-
-                </div>
-
-
-                <div class="setting-block">
-
-                    <h3>
-                        Disguise Target Identity
-                    </h3>
-
-                    <div class="select-wrapper">
-
-                        <select id="cloak-target-select">
-
-                            <option value="spydr">
-                                spydr
-                            </option>
-
-                            <option value="google">
-                                Google
-                            </option>
-
-                            <option value="classroom">
-                                Home - Classroom
-                            </option>
-
-                            <option value="securly">
-                                Create Pass - Securly Pass
-                            </option>
-
-                            <option value="wayground">
-                                Playing a Game - Wayground (Formerly Quizizz)
-                            </option>
-
-                            <option value="studysync">
-                                StudySync
-                            </option>
-
-                            <option value="classlink">
-                                My Apps - Classlink
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
 
 
         <!-- =================================================
              ABOUT
         ================================================== -->
 
-        <section
-            class="settings-section"
-            id="panel-about"
-        >
+        <section class="settings-section" id="panel-storage">
+  <div class="section-header"><h1>Storage & Backup</h1><p>Keep a copy of your SPYDR settings or start fresh.</p></div>
+  <div class="card glassmorphism">
+    <div class="setting-row"><div class="setting-info"><h3>Export settings</h3><p>Download a JSON backup of your preferences.</p></div><button class="action-button" id="export-settings" type="button"><i class="ri-download-2-line"></i> Export</button></div>
+    <div class="setting-row"><div class="setting-info"><h3>Import settings</h3><p>Restore preferences from a SPYDR settings backup.</p></div><button class="action-button" id="import-settings" type="button"><i class="ri-upload-2-line"></i> Import</button><input id="import-settings-file" type="file" accept="application/json,.json" hidden></div>
+    <div class="setting-row"><div class="setting-info"><h3>Reset settings</h3><p>Restore the default SPYDR preferences on this device.</p></div><button class="action-button danger-button" id="reset-settings" type="button"><i class="ri-refresh-line"></i> Reset</button></div>
+  </div>
+</section>
 
-            <div class="section-header">
-
-                <h1>
-                    About & Changelog
-                </h1>
-
-                <p>
-                    spydr build information analytics
-                </p>
-
-            </div>
-
-
-            <div class="card glassmorphism info-card">
-
-                <div class="manifest-row">
-
-                    <span class="manifest-label">
-                        CORE ARCHITECTURE:
-                    </span>
-
-                    <span class="manifest-val">
-                        spydr os v3.0
-                    </span>
-
-                </div>
-
-
-                <div class="manifest-row">
-
-                    <span class="manifest-label">
-                        BUILD ENVIRONMENT:
-                    </span>
-
-                    <span class="manifest-val">
-                        Vanilla JS / Modular Logic
-                    </span>
-
-                </div>
-
-
-                <hr class="divider">
-
-
-                <h3>
-                    Changelog Entries
-                </h3>
-
-
-                <div class="changelog-scroll">
-
-                    <!-- Markdown Render Container -->
-                    <div id="changelog"></div>
-
-                </div>
-
-            </div>
-
-        </section>
+<section class="settings-section" id="panel-about">
+  <div class="section-header"><h1>About SPYDR</h1><p>Current version and project information.</p></div>
+  <div class="card glassmorphism info-card">
+    <div class="manifest-row"><span class="manifest-label">VERSION</span><strong>v4.1</strong></div>
+    <div class="manifest-row"><span class="manifest-label">BUILT WITH</span><strong>HTML · CSS · JavaScript</strong></div>
+    <hr class="divider">
+    <span class="about-email-label">Questions or issues?</span>
+    <a class="about-email" href="mailto:help.solargames@gmail.com"><i class="ri-mail-line"></i> help.solargames@gmail.com</a>
+    <div class="legal-actions">
+      <button class="legal-button privacy" type="button" data-legal="/assets/static/privacy.html"><i class="ri-shield-check-line"></i> Privacy Policy</button>
+      <button class="legal-button license" type="button" data-legal="/assets/static/license.html"><i class="ri-file-certificate-line"></i> License</button>
+      <button class="legal-button terms" type="button" data-legal="/assets/static/terms.html"><i class="ri-file-text-line"></i> Terms Of Use</button>
+    </div>
+    <hr class="divider">
+    <div class="changelog-heading"><span class="spydr-popup-label">updates</span><h2>v4.1</h2><p>Latest changes in SPYDR.</p></div>
+    <div class="spydr-popup-changelog">
+      <h3>v4.1 · Current</h3>
+      <h4><i class="ri-tools-line"></i> Updated</h4>
+      <ul>
+        <li class="completed">Updated the game library layout.</li>
+        <li class="completed">Added selectable AI models.</li>
+        <li class="completed">Added screen sharing for AI prompts.</li>
+        <li class="completed">Added new settings and background options.</li>
+      </ul>
+      <h3>v4.0 · Previous</h3>
+      <h4><i class="ri-check-double-line"></i> Changes</h4>
+      <ul>
+        <li class="completed">Moved hosting to Cloudflare.</li>
+        <li class="completed">Added GN-Math and Seraph game zones.</li>
+        <li class="completed">Updated the apps and games pages.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
     </main>
 
@@ -873,6 +741,10 @@
 ========================================================== -->
 
 <div id="global-menu"></div>
+<div id="legal-view" aria-hidden="true">
+  <button id="closeLegalBtn" type="button"><i class="ri-arrow-left-line"></i> exit</button>
+  <iframe id="legal-frame" title="SPYDR legal information"></iframe>
+</div>
 
 
 <!-- =========================================================
@@ -880,6 +752,27 @@
 ========================================================== -->
 
 <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const view = document.getElementById("legal-view");
+  const frame = document.getElementById("legal-frame");
+  const close = () => {
+    view.classList.remove("open");
+    view.setAttribute("aria-hidden", "true");
+    frame.src = "about:blank";
+    document.querySelector(".dock")?.classList.remove("hidden");
+  };
+  document.querySelectorAll("[data-legal]").forEach(button => button.addEventListener("click", () => {
+    frame.src = button.dataset.legal;
+    view.classList.add("open");
+    view.setAttribute("aria-hidden", "false");
+    document.querySelector(".dock")?.classList.add("hidden");
+    document.getElementById("closeLegalBtn").focus();
+  }));
+  document.getElementById("closeLegalBtn")?.addEventListener("click", close);
+  document.addEventListener("keydown", event => { if(event.key === "Escape" && view.classList.contains("open")) close(); });
+});
+</script>
 
 <script
     type="module"
@@ -889,31 +782,6 @@
 <script
     src="/js/globalmenu.js"
 ></script>
-
-<script>
-    // Render the Markdown into the HTML div
-    const markdownText = `
-# v3.0 - CURRENT
-
-## 🛠️ Beginning
-- [ ] Starting Scram/UV build 
-- [x] Make Homepage Text Buttons
-- [ ] Redownload Locally and Deploy On surge.sh
-
-
-## v2.7.3 - PREVIOUS
-
-### 🛠️ Beginning
-- [x] Add More Colored Themes And Cool Stuff
-- [x] Deploy On New Subdomains
-- [x] Fix Menu Bar (Make it thinner so it doesn't cover items on some pages)
-- [x] Make a page on Search to embed a custom error message
-- [x] Add a notice on the Apps page explaining that proxied apps currently don't work
-
-    `;
-
-    document.getElementById('changelog').innerHTML = marked.parse(markdownText);
-</script>
 
 <script>
 window.addEventListener("load", () => {

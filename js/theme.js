@@ -36,6 +36,7 @@ export default class ThemeManager {
         }
 
         await this.applyTheme(savedTheme);
+        this.applyVideoBackground(settings?.get("videoBackground") || "none");
         this.ready = true;
 
         console.log(
@@ -516,6 +517,48 @@ export default class ThemeManager {
                 `spydr theme // failed to load FX for "${themeName}":`,
                 error
             );
+        }
+    }
+
+    applyVideoBackground(name = "none") {
+        const allowed = new Set(["v1-b", "v2-b", "v3-b", "v4-b", "v5-b", "v6-b"]);
+        let video = document.getElementById("spydr-theme-video");
+        if (name === "none" || !allowed.has(name)) {
+            video?.remove();
+            return;
+        }
+        const host = document.getElementById("bg-effects-container") || document.body;
+        if (!video) {
+            video = document.createElement("video");
+            video.id = "spydr-theme-video";
+            video.autoplay = true;
+            video.muted = true;
+            video.loop = true;
+            video.playsInline = true;
+            video.setAttribute("aria-hidden", "true");
+            Object.assign(video.style, {
+                position: "absolute", inset: "0", width: "100%", height: "100%",
+                objectFit: "cover", opacity: "0.28", filter: "brightness(.58) saturate(.82)",
+                pointerEvents: "none", zIndex: "0"
+            });
+            host.prepend(video);
+        }
+        const local = `/assets/images/themes/${name}.mp4`;
+        const bedrock = `https://raw.githubusercontent.com/U-spe/bedrock/main/assets/images/b/${name}.mp4`;
+        video.onerror = () => {
+            if (video.dataset.fallback !== "1") {
+                video.dataset.fallback = "1";
+                video.src = bedrock;
+                video.load();
+                video.play().catch(() => {});
+            }
+        };
+        if (video.dataset.themeVideo !== name) {
+            video.dataset.themeVideo = name;
+            video.dataset.fallback = "0";
+            video.src = local;
+            video.load();
+            video.play().catch(() => {});
         }
     }
 

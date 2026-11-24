@@ -8,6 +8,7 @@ export default class SettingsManager {
             autoSave: true,
             theme: "spydr",
             bgStyle: "stars",
+            videoBackground: "none",
             starsEnabled: true,
             accent: "purple",
 
@@ -89,6 +90,10 @@ export default class SettingsManager {
             "theme"
         ]);
 
+        if (!["none", "v1-b", "v2-b", "v3-b", "v4-b", "v5-b", "v6-b"].includes(this.state.videoBackground)) {
+            this.state.videoBackground = "none";
+        }
+
         if (!backgroundStyles.has(this.state.bgStyle)) {
             this.state.bgStyle = "stars";
         }
@@ -124,6 +129,12 @@ export default class SettingsManager {
         }
 
         return true;
+    }
+
+    reset() {
+        this.state = this.createDefaultState();
+        this.save();
+        this.notify("reset", this.state);
     }
 
     save() {

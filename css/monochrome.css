@@ -52,28 +52,40 @@ body:has(.form-panel) .form-panel{border:1px solid var(--line)!important;border-
 }
 
 
-/* FOXy FINAL TAGLINE EFFECT */
+/* RANDOM FOXY TAGLINE BURST */
 .foxy-overlay{
   position:fixed;
   inset:0;
   z-index:100000;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:24px;
-  background:rgba(0,0,0,.94);
+  overflow:hidden;
+  pointer-events:none;
   opacity:0;
   visibility:hidden;
-  pointer-events:none;
-  transition:opacity .12s ease,visibility .12s ease;
+  background:transparent;
+  transition:opacity .08s ease,visibility .08s ease;
 }
 .foxy-overlay.active{
   opacity:1;
   visibility:visible;
 }
-.foxy-overlay img{
+.foxy-pop{
+  position:absolute;
   display:block;
-  width:min(680px,100%);
-  max-height:90vh;
+  max-width:none;
+  height:auto;
   object-fit:contain;
+  pointer-events:none;
+  user-select:none;
+  filter:drop-shadow(0 5px 16px rgba(0,0,0,.55));
+  animation:foxy-pop-in .35s ease-out both;
+}
+@keyframes foxy-pop-in{
+  from{
+    opacity:0;
+    transform:scale(.35) rotate(var(--foxy-rotation));
+  }
+  to{
+    opacity:1;
+    transform:scale(1) rotate(var(--foxy-rotation));
+  }
 }

@@ -8,6 +8,7 @@ All notable changes to spydr are documented here.
 - [x] Mess around a little with the UI
 - [x] Change the layout on the games (match with duckmath slightly)
 - [ ] UV route (this should be the final proxy change)
+- [x] Switchable AI verisons + AI able to share screen (cool!)
 - [ ] more stuff, idk what but it will be here soon.
 
 

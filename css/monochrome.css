@@ -50,3 +50,30 @@ body:has(.form-panel) .form-panel{border:1px solid var(--line)!important;border-
     grid-auto-rows:calc((100vw - 42px)/3)!important;
   }
 }
+
+
+/* FOXy FINAL TAGLINE EFFECT */
+.foxy-overlay{
+  position:fixed;
+  inset:0;
+  z-index:100000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:rgba(0,0,0,.94);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .12s ease,visibility .12s ease;
+}
+.foxy-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+.foxy-overlay img{
+  display:block;
+  width:min(680px,100%);
+  max-height:90vh;
+  object-fit:contain;
+}

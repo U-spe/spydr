@@ -31,22 +31,24 @@ const lines = [
   "wait...better?",
   "sophisticated and formulated",
   "science lowk boring af",
-  "mr k is the goat",
+  "socalstudies + mr k = peak🥹?",
   "guess what??",
   "wait for itt",
-  "i truly DONT CARE",
+  "i truly DONT CARE 😭🥀",
   "hahahahahaha",
   "\"is this gay, is this straight?\" - DigBar",
   "2x2 hellcat, go fast",
-  "ahhh, almost, almost",
-  "go to games n try roblox!",
-  "OH! also, the AI, u can share ur screen nowz",
+  "ahhh, almost, almost ✌️",
+  "watch out! securly might be spyhiyn on u",
+  "go to games n try roblox! 😁",
+  "OH! also, the AI, u can share ur screen now 😁😁",
   "\"wonder is the beginning of wisdom\" - Socrates",
-  "\"u gay and apart of LGBTQ+\" - also Socrates",
+  "\"u gay and apart of LGBTQ+\" - Me🥀",
   "you got all that time and still chose to read this",
-  "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "AAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!!!!!!!!!!!!",
   "GO AWAY!!",
-  "bc u dont wanna leave, heres what you get"
+  "bc u dont wanna leave, heres what you get",
+  "punishment!"
 ];
 
 const constText = document.querySelector(".const");

@@ -7,8 +7,13 @@ const GROQ_URL =
   "https://api.groq.com/openai/v1/chat/completions";
 
 
-const MODEL =
-  "qwen/qwen3.8-27b";
+const MODELS = {
+  arachnid: "openai/gpt-oss-120b",
+  silk: "openai/gpt-oss-20b",
+  venomous: "qwen/qwen3.8-27b"
+};
+
+const DEFAULT_MODEL = "qwen/qwen3.8-27b";
 
 
 /* =========================================================
@@ -504,6 +509,14 @@ export default async function handler(
     }
 
 
+    const requestedModel =
+      typeof body.model === "string"
+        ? body.model
+        : "venomous";
+
+    const MODEL =
+      MODELS[requestedModel] || DEFAULT_MODEL;
+
     const preferences =
       buildPreferencePrompt(
         body.preferences
@@ -610,6 +623,17 @@ export default async function handler(
       image.dataUrl.length <
         5_000_000;
 
+
+    if (
+      validImage &&
+      MODEL !== "qwen/qwen3.8-27b"
+    ) {
+      return res
+        .status(400)
+        .json({
+          error: "image uploads are currently supported with venomous only."
+        });
+    }
 
     if (
       validImage

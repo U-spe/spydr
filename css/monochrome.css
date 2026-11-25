@@ -184,3 +184,11 @@ body.global-menu-collapsed .dock-toggle{
   .home-brand{gap:11px!important}
   .home-status{bottom:10px!important;gap:8px;padding:8px 10px;font-size:9px!important}
 }
+
+/* Keep the chevron control visible after the dock is hidden */
+body.global-menu-collapsed .dock-shell{
+  width:38px;
+  justify-content:center;
+  transform:translateX(-50%);
+}
+body.global-menu-collapsed .dock-shell .dock{display:none!important}

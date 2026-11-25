@@ -1,18 +1,48 @@
+
 <div id="spydr-popup" class="spydr-popup-overlay" hidden>
   <section class="spydr-popup" role="dialog" aria-modal="true" aria-labelledby="spydr-popup-title">
     <div class="spydr-popup-accent"></div>
 
     <div class="spydr-popup-content">
-      <span class="spydr-popup-label">matenince</span>
+      <span class="spydr-popup-label">updates</span>
 
-      <h2 id="spydr-popup-title">tidyy</h2>
+      <h2 id="spydr-popup-title">v4.1</h2>
 
       <p id="spydr-popup-message">
-okay... we here you. Nov 21 - 28 spydr is down for matenince. everything that is there will still work until we get to fixing. byee!
+        heres whats poppin.
       </p>
 
+      <div class="spydr-popup-changelog">
+        <h3>v4.1 · Current</h3>
+        <h4>Completed 🟢</h4>
+        <ul>
+          <li class="completed">Improve UI across all pages</li>
+          <li class="completed">Change the image layout on the games (match with duckmath slightly)</li>
+          <li class="completed">Switchable AI verisons + AI able to share screen</li>
+        </ul>
+
+        <h4>Pending 🟡</h4>
+        <ul>
+          <li class="pending">Scram route (this should be the final proxy change)</li>
+          <li class="pending">Add more games that work + requested games</li>
+          <li class="pending">more stuff, idk what but it will be here soon.</li>
+        </ul>
+
+        <h3>v4.0 · Previous</h3>
+        <h4>Completed 🟢</h4>
+        <ul>
+          <li class="completed">SWITCHED TO Cloudflare instead of Vercel (i got blocked)</li>
+          <li class="completed">Add GN-Math Games Via Cloudflare</li>
+          <li class="completed">Add Seraph Games (same as gnm)</li>
+          <li class="completed">Cine Cloud (Replaced Cine with PS5 Emu)</li>
+          <li class="completed">Domain Links On Homepage</li>
+          <li class="completed">Cloudflare CLI</li>
+          <li class="completed">GitHub Actions Work</li>
+        </ul>
+      </div>
+
       <button id="spydr-popup-button" type="button">
-        okk
+        good 2 know. not that i care, but good 2 know.
       </button>
     </div>
   </section>
@@ -47,6 +77,7 @@ okay... we here you. Nov 21 - 28 spydr is down for matenince. everything that is
   .spydr-popup {
     position: relative;
     width: min(100%, 420px);
+    max-height: min(85vh, 720px);
     overflow: hidden;
 
     color: #e8f2ee;
@@ -74,6 +105,9 @@ okay... we here you. Nov 21 - 28 spydr is down for matenince. everything that is
 
   .spydr-popup-content {
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(85vh - 3px);
   }
 
   .spydr-popup-label {
@@ -91,15 +125,79 @@ okay... we here you. Nov 21 - 28 spydr is down for matenince. everything that is
   }
 
   .spydr-popup p {
-    margin: 0 0 24px;
+    margin: 0 0 18px;
     color: #a8b8af;
     font-size: 14px;
     line-height: 1.7;
   }
 
+  /* CHANGELOG */
+
+  .spydr-popup-changelog {
+    overflow-y: auto;
+    min-height: 0;
+    margin-bottom: 22px;
+    padding-right: 8px;
+
+    scrollbar-width: thin;
+    scrollbar-color: #355442 transparent;
+  }
+
+  .spydr-popup-changelog h3 {
+    margin: 8px 0 10px;
+    color: #5fae87;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .spydr-popup-changelog ul {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .spydr-popup-changelog li {
+    position: relative;
+    padding-left: 23px;
+    color: #c1cec6;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .spydr-popup-changelog li::before {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 15px;
+    height: 15px;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 900;
+  }
+
+  .spydr-popup-changelog li.completed::before {
+    content: "✓";
+    color: #07110b;
+    background: #5fae87;
+  }
+
+  .spydr-popup-changelog li.pending::before {
+    content: "";
+    border: 1px solid #6c8174;
+    background: transparent;
+  }
+
   /* BUTTON */
 
   #spydr-popup-button {
+    flex-shrink: 0;
     width: 100%;
     padding: 13px 18px;
 
@@ -195,6 +293,12 @@ okay... we here you. Nov 21 - 28 spydr is down for matenince. everything that is
 
     #spydr-popup-button {
       transition: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .spydr-popup-content {
+      padding: 24px;
     }
   }
 </style>

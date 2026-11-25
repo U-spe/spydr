@@ -3,25 +3,60 @@
 // =====================
 function updateClock() {
   const now = new Date();
-
-  const timeEl = document.getElementById("time");
-  const dateEl = document.getElementById("date");
+  const timeEl = document.getElementById("home-time") || document.getElementById("time");
+  const dateEl = document.getElementById("home-date") || document.getElementById("date");
 
   if (timeEl) {
     timeEl.textContent = now.toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit"
+      hour: "numeric",
+      minute: "2-digit"
     });
   }
 
   if (dateEl) {
-    dateEl.textContent = now.toDateString();
+    dateEl.textContent = now.toLocaleDateString([], {
+      weekday: "short",
+      month: "short",
+      day: "numeric"
+    });
   }
 }
 
 setInterval(updateClock, 1000);
 updateClock();
+
+async function initHomeBattery() {
+  const levelEl = document.getElementById("home-battery-level");
+  const iconEl = document.getElementById("home-battery-icon");
+  if (!levelEl || !iconEl) return;
+
+  const update = battery => {
+    const percent = Math.round(battery.level * 100);
+    levelEl.textContent = percent + "%";
+    iconEl.className = battery.charging ? "ri-battery-charge-line" :
+      percent >= 80 ? "ri-battery-2-line" :
+      percent >= 50 ? "ri-battery-2-line" :
+      percent >= 20 ? "ri-battery-low-line" : "ri-battery-line";
+    iconEl.setAttribute("aria-label", battery.charging ? "Charging" : "Battery");
+  };
+
+  if (!navigator.getBattery) {
+    levelEl.textContent = "n/a";
+    iconEl.className = "ri-battery-line";
+    return;
+  }
+
+  try {
+    const battery = await navigator.getBattery();
+    update(battery);
+    battery.addEventListener("levelchange", () => update(battery));
+    battery.addEventListener("chargingchange", () => update(battery));
+  } catch {
+    levelEl.textContent = "n/a";
+  }
+}
+
+initHomeBattery();
 
 
 // =====================

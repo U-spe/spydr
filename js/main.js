@@ -55,7 +55,7 @@ const constText = document.querySelector(".const");
 const foxyOverlay = document.getElementById("foxy-overlay");
 const foxyAudio = document.getElementById("foxy-audio");
 
-const FOXY_COUNT = 40;
+const FOXY_COUNT = 90;
 const FOXY_IMAGE_LIFETIME = 3000;
 const FOXY_SOUND_INTERVAL = 300;
 const FOXY_SEQUENCE_LENGTH = 3000;
@@ -95,21 +95,29 @@ function playFoxySound() {
   }
 }
 
-function spawnFoxy() {
+function spawnFoxy(index = 0) {
   if (!foxyOverlay) return;
 
   const foxy = document.createElement("img");
-  const size = Math.round(75 + Math.random() * 145);
-  const maxLeft = Math.max(0, window.innerWidth - size);
-  const maxTop = Math.max(0, window.innerHeight - size);
+  const columns = 10;
+  const rows = 9;
+  const cellWidth = window.innerWidth / columns;
+  const cellHeight = window.innerHeight / rows;
+  const column = index % columns;
+  const row = Math.floor(index / columns);
+  const size = Math.round(Math.max(90, Math.min(220, cellWidth * 1.2)));
+  const jitterX = (Math.random() - 0.5) * cellWidth * 0.55;
+  const jitterY = (Math.random() - 0.5) * cellHeight * 0.55;
 
   foxy.className = "foxy-pop";
   foxy.src = "/assets/images/foxy-jpsc.gif";
   foxy.alt = "";
   foxy.draggable = false;
+  foxy.style.position = "absolute";
   foxy.style.width = size + "px";
-  foxy.style.left = Math.round(Math.random() * maxLeft) + "px";
-  foxy.style.top = Math.round(Math.random() * maxTop) + "px";
+  foxy.style.maxWidth = "none";
+  foxy.style.left = Math.round(column * cellWidth + (cellWidth - size) / 2 + jitterX) + "px";
+  foxy.style.top = Math.round(row * cellHeight + (cellHeight - size) / 2 + jitterY) + "px";
   foxy.style.setProperty("--foxy-rotation", Math.round(Math.random() * 50 - 25) + "deg");
 
   foxyOverlay.appendChild(foxy);
@@ -124,10 +132,19 @@ function playFoxySequence() {
 
   foxyOverlay.classList.add("active");
   foxyOverlay.setAttribute("aria-hidden", "false");
+  Object.assign(foxyOverlay.style, {
+    position: "fixed",
+    inset: "0",
+    width: "100vw",
+    height: "100vh",
+    overflow: "hidden",
+    pointerEvents: "none",
+    zIndex: "9998"
+  });
 
-  // Put all 40 foxies on screen in the same moment.
+  // Distribute all 90 foxies across the full screen at once.
   for (let i = 0; i < FOXY_COUNT; i++) {
-    spawnFoxy();
+    spawnFoxy(i);
   }
 
   playFoxySound();

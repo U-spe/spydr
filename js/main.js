@@ -29,7 +29,7 @@ updateClock();
 // =====================
 const lines = [
   "wait...better?",
-  "sophisticated and formulated",
+  "dont you just LOUVE spydr?",
   "science lowk boring af",
   "socalstudies + mr k = peak🥹?",
   "guess what??",
@@ -43,12 +43,12 @@ const lines = [
   "go to games n try roblox! 😁",
   "OH! also, the AI, u can share ur screen now 😁😁",
   "\"wonder is the beginning of wisdom\" - Socrates",
-  "\"u gay and apart of LGBTQ+\" - Me🥀",
-  "you got all that time and still chose to read this",
+  "\"u gay and apart of LGBTQ+\" - Me",
+  "you got all that time and still chose to read this 🥀",
   "AAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!!!!!!!!!!!!",
-  "go away!!",
+  "GO AWAYY!",
   "bc u dont wanna leave, heres what you get",
-  "punishment!"
+  "PUNISHMENTTTTTTT!"
 ];
 
 const constText = document.querySelector(".const");

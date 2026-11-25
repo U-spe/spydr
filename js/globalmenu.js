@@ -50,7 +50,7 @@
     toggle.setAttribute("aria-label", "Hide navigation menu");
     toggle.setAttribute("aria-expanded", "true");
     toggle.title = "Hide menu";
-    toggle.innerHTML = '<i class="ri-arrow-left-s-line" aria-hidden="true"></i>';
+    toggle.innerHTML = '<i class="ri-arrow-up-s-line" aria-hidden="true"></i>';
 
     shell.append(nav, toggle);
     container.replaceChildren(shell);
@@ -62,8 +62,8 @@
       toggle.setAttribute("aria-label", collapsed ? "Show navigation menu" : "Hide navigation menu");
       toggle.title = collapsed ? "Show menu" : "Hide menu";
       toggle.innerHTML = collapsed
-        ? '<i class="ri-arrow-right-s-line" aria-hidden="true"></i>'
-        : '<i class="ri-arrow-left-s-line" aria-hidden="true"></i>';
+        ? '<i class="ri-arrow-down-s-line" aria-hidden="true"></i>'
+        : '<i class="ri-arrow-up-s-line" aria-hidden="true"></i>';
       try { localStorage.setItem(storageKey, collapsed ? "1" : "0"); } catch {}
     };
 

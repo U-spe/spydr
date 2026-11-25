@@ -16,7 +16,11 @@
       { icon: "ri-settings-3-line", title: "Settings", page: "/settings.html" }
     ];
 
-    const nav = document.createElement("nav");
+    const shell = document.createElement("div");
+    shell.className = "dock-shell";
+    shell.id = "dock-shell";
+
+    const nav = document.createElement("aside");
     nav.className = "dock";
     nav.setAttribute("aria-label", "Main navigation");
 
@@ -39,61 +43,53 @@
       nav.appendChild(link);
     }
 
-    const collapseButton = document.createElement("button");
-    collapseButton.type = "button";
-    collapseButton.className = "dock-menu-toggle";
-    collapseButton.setAttribute("aria-label", "Hide navigation menu");
-    collapseButton.title = "Hide menu";
-    collapseButton.innerHTML = '<i class="ri-eye-off-line" aria-hidden="true"></i>';
-    nav.appendChild(collapseButton);
+    const toggle = document.createElement("button");
+    toggle.className = "dock-toggle";
+    toggle.id = "dock-toggle";
+    toggle.type = "button";
+    toggle.setAttribute("aria-label", "Hide navigation menu");
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.title = "Hide menu";
+    toggle.innerHTML = '<i class="ri-arrow-left-s-line" aria-hidden="true"></i>';
 
-    const expandTab = document.createElement("button");
-    expandTab.type = "button";
-    expandTab.className = "dock-expand-tab";
-    expandTab.innerHTML = '<i class="ri-arrow-up-line" aria-hidden="true"></i><span>expand menu</span>';
-    expandTab.setAttribute("aria-label", "Expand navigation menu");
+    shell.append(nav, toggle);
+    container.replaceChildren(shell);
 
-    container.replaceChildren(nav, expandTab);
-
-    const menuStorageKey = "spydr.globalmenu.collapsed";
+    const storageKey = "spydr.globalmenu.collapsed";
     const setCollapsed = collapsed => {
       document.body.classList.toggle("global-menu-collapsed", collapsed);
-      collapseButton.setAttribute("aria-expanded", String(!collapsed));
-      collapseButton.setAttribute("aria-label", collapsed ? "Expand navigation menu" : "Hide navigation menu");
-      collapseButton.title = collapsed ? "Expand menu" : "Hide menu";
-      expandTab.setAttribute("aria-expanded", String(!collapsed));
-      try { localStorage.setItem(menuStorageKey, collapsed ? "1" : "0"); } catch {}
+      toggle.setAttribute("aria-expanded", String(!collapsed));
+      toggle.setAttribute("aria-label", collapsed ? "Show navigation menu" : "Hide navigation menu");
+      toggle.title = collapsed ? "Show menu" : "Hide menu";
+      toggle.innerHTML = collapsed
+        ? '<i class="ri-arrow-right-s-line" aria-hidden="true"></i>'
+        : '<i class="ri-arrow-left-s-line" aria-hidden="true"></i>';
+      try { localStorage.setItem(storageKey, collapsed ? "1" : "0"); } catch {}
     };
 
-    collapseButton.addEventListener("click", () => setCollapsed(true));
-    expandTab.addEventListener("click", () => setCollapsed(false));
+    toggle.addEventListener("click", () => {
+      setCollapsed(!document.body.classList.contains("global-menu-collapsed"));
+    });
 
     try {
-      setCollapsed(localStorage.getItem(menuStorageKey) === "1");
+      setCollapsed(localStorage.getItem(storageKey) === "1");
     } catch {
       setCollapsed(false);
     }
 
     const keys = {
-      "1": "/",
-      "2": "/lessons.html",
-      "3": "/flashcards.html",
-      "4": "/search.html",
-      "5": "/study.html",
-      "6": "/review.html",
+      "1": "/", "2": "/lessons.html", "3": "/flashcards.html",
+      "4": "/search.html", "5": "/study.html", "6": "/review.html",
       "7": "/settings.html"
     };
 
     document.addEventListener("keydown", event => {
       if (!event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
       if (event.target && /INPUT|TEXTAREA|SELECT/.test(event.target.tagName)) return;
-
       const page = keys[event.key];
       if (!page) return;
-
       event.preventDefault();
       location.assign(page);
     });
   }
-
 })();

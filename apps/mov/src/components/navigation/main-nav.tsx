@@ -37,7 +37,7 @@ interface SearchResult {
 export function MainNav({ items }: MainNavProps) {
   const path = usePathname();
   const router = useRouter();
-  // search store
+  const isLanding = path === '/';
   const searchStore = useSearchStore();
   const [isScrolled, setIsScrolled] = React.useState(false);
 
@@ -103,14 +103,13 @@ export function MainNav({ items }: MainNavProps) {
     }
   }
 
-  // change background color on scroll
   React.useEffect(() => {
     const changeBgColor = () => {
       window.scrollY > 0 ? setIsScrolled(true) : setIsScrolled(false);
     };
     window.addEventListener('scroll', changeBgColor);
     return () => window.removeEventListener('scroll', changeBgColor);
-  }, [isScrolled]);
+  }, []);
 
   const handleChangeStatusOpen = (value: boolean): void => {
     searchStore.setOpen(value);
@@ -120,67 +119,83 @@ export function MainNav({ items }: MainNavProps) {
   return (
     <nav
       className={cn(
-        'relative flex h-12 w-full items-center justify-between bg-gradient-to-b from-secondary/70 from-10% px-[4vw] transition-colors duration-300 md:sticky md:h-16',
-        isScrolled ? 'bg-secondary shadow-md' : 'bg-transparent',
-      )}>
+        'relative flex h-14 w-full items-center justify-between px-[4vw] transition-colors duration-300 md:h-16',
+        isLanding
+          ? 'border-b border-white/[0.08] bg-[#08090d]/85 text-white shadow-lg shadow-black/10 backdrop-blur-xl'
+          : isScrolled
+            ? 'bg-secondary shadow-md'
+            : 'bg-gradient-to-b from-secondary/70 from-10% bg-transparent',
+      )}
+    >
       <div className="flex items-center gap-6 md:gap-10">
         <Link
           href="/"
           className="hidden md:block"
-          onClick={() => handleChangeStatusOpen(false)}>
+          onClick={() => handleChangeStatusOpen(false)}
+        >
           <div className="flex items-center space-x-2">
             <Icons.logo className="h-6 w-6" aria-hidden="true" />
             <span className="inline-block font-bold">{siteConfig.name}</span>
             <span className="sr-only">Home</span>
           </div>
         </Link>
+
         {items?.length ? (
           <nav className="hidden gap-6 md:flex">
-            {items?.map(
+            {items.map(
               (item, index) =>
                 item.href && (
                   <Link
                     key={index}
                     href={item.href}
                     className={cn(
-                      'flex items-center text-sm font-medium text-foreground/60 transition hover:text-foreground/80',
-                      path === item.href && 'font-bold text-foreground',
+                      'flex items-center text-sm font-medium transition',
+                      isLanding
+                        ? 'text-white/55 hover:text-white'
+                        : 'text-foreground/60 hover:text-foreground/80',
+                      path === item.href && 'font-bold',
+                      path === item.href &&
+                        (isLanding ? 'text-white' : 'text-foreground'),
                       item.disabled && 'cursor-not-allowed opacity-80',
                     )}
-                    onClick={() => handleChangeStatusOpen(false)}>
+                    onClick={() => handleChangeStatusOpen(false)}
+                  >
                     {item.title}
                   </Link>
                 ),
             )}
           </nav>
         ) : null}
+
         <div className="block md:hidden">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
                 variant="ghost"
-                className="flex items-center space-x-2 px-0 hover:bg-transparent focus:ring-0"
-                // className="h-auto px-2 py-1.5 text-base hover:bg-neutral-800 focus:ring-0 dark:hover:bg-neutral-800 lg:hidden"
+                className={cn(
+                  'flex items-center space-x-2 px-0 hover:bg-transparent focus:ring-0',
+                  isLanding && 'text-white hover:text-white',
+                )}
               >
                 <Icons.logo className="h-6 w-6" />
-                <span className="text-base font-bold">Menu</span>
+                <span className="text-base font-bold">Silk+</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="start"
               sideOffset={20}
-              // className="w-52 overflow-y-auto overflow-x-hidden rounded-sm bg-neutral-800 text-slate-200 dark:bg-neutral-800 dark:text-slate-200"
-              className="w-52 overflow-y-auto overflow-x-hidden rounded-sm">
+              className={cn(
+                'w-52 overflow-y-auto overflow-x-hidden rounded-xl',
+                isLanding && 'border-white/10 bg-[#15151d] text-white',
+              )}
+            >
               <DropdownMenuLabel>
                 <Link
                   href="/"
                   className="flex items-center justify-center"
-                  onClick={() => handleChangeStatusOpen(false)}>
-                  {/* <Icons.logo */}
-                  {/*   className="mr-2 h-4 w-4 text-red-600" */}
-                  {/*   aria-hidden="true" */}
-                  {/* /> */}
-                  <span className="">{siteConfig.name}</span>
+                  onClick={() => handleChangeStatusOpen(false)}
+                >
+                  <span>{siteConfig.name}</span>
                 </Link>
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
@@ -188,19 +203,21 @@ export function MainNav({ items }: MainNavProps) {
                 <DropdownMenuItem
                   key={index}
                   asChild
-                  className="items-center justify-center">
+                  className="items-center justify-center"
+                >
                   {item.href && (
                     <Link
                       href={item.href}
-                      onClick={() => handleChangeStatusOpen(false)}>
-                      {/* {item.icon &&  */}
-                      {/*   <item.icon className="mr-2 h-4 w-4" aria-hidden="true" /> */}
-                      {/* } */}
+                      onClick={() => handleChangeStatusOpen(false)}
+                    >
                       <span
                         className={cn(
                           'line-clamp-1 text-foreground/60 hover:text-foreground/80',
+                          isLanding && 'text-white/65 hover:text-white',
                           path === item.href && 'font-bold text-foreground',
-                        )}>
+                          path === item.href && isLanding && 'text-white',
+                        )}
+                      >
                         {item.title}
                       </span>
                     </Link>
@@ -211,6 +228,7 @@ export function MainNav({ items }: MainNavProps) {
           </DropdownMenu>
         </div>
       </div>
+
       <div className="flex items-center gap-1">
         <DebouncedInput
           id="search-input"
@@ -224,10 +242,12 @@ export function MainNav({ items }: MainNavProps) {
           rel="noreferrer"
           target="_blank"
           href={siteConfig.links.github}
-          className={cn(path === '/' ? 'flex' : 'hidden')}>
+          aria-label="Silk+ GitHub repository"
+          className={cn(path === '/' ? 'flex' : 'hidden')}
+        >
           <Icons.gitHub className="h-5 w-5 hover:bg-transparent" />
         </Link>
-        <ThemeToggle />
+        {!isLanding && <ThemeToggle />}
       </div>
     </nav>
   );

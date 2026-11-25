@@ -1,0 +1,55 @@
+name: Sync dependencies and verify Cloudflare build
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Regenerate lockfile
+        run: npm install --package-lock-only --ignore-scripts
+
+      - name: Commit lockfile if changed
+        run: |
+          if git diff --quiet -- package-lock.json; then
+            echo "Lockfile is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git commit -m "Sync package lockfile"
+          git push
+
+      - name: Install clean dependency tree
+        run: npm ci
+
+      - name: Type-check application
+        run: npm run typecheck
+
+      - name: Build Cloudflare Worker
+        run: npm run build
+
+      - name: Validate Cloudflare Worker deployment
+        run: |
+          test -f .open-next/worker.js
+          npx wrangler deploy --dry-run

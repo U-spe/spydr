@@ -5,7 +5,6 @@ import type { KeyWord, KeyWordResponse, Show } from '@/types';
 import { type AxiosResponse } from 'axios';
 import { type ClassValue, clsx } from 'clsx';
 import { type Metadata } from 'next';
-import { cache } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
@@ -119,8 +118,7 @@ export function handleDefaultSearchInp(): void {
   }
 }
 
-export const handleMetadata = cache(
-  async (slug: string, page: string, type: 'tv' | 'movie') => {
+export async function handleMetadata(slug: string, page: string, type: 'tv' | 'movie') {
     const movieId: number = getIdFromSlug(slug);
     let keywords: string[] = [];
     let data: Show | null = null;
@@ -170,8 +168,7 @@ export const handleMetadata = cache(
         creator: siteConfig.author,
       },
     };
-  },
-);
+}
 
 export async function handleModal(slug: string): Promise<Show | null> {
   if (!slug) return null;

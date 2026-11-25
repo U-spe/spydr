@@ -15,7 +15,6 @@ import {
   type TmdbRequest,
 } from '@/enums/request-type';
 import { Genre } from '@/enums/genre';
-import { cache } from 'react';
 
 const requestTypesNeedUpdateMediaType = [
   RequestType.TOP_RATED,
@@ -46,13 +45,13 @@ class MovieService extends BaseService {
     return Promise.resolve<Show>(response[0]);
   }
 
-  static findMovie = cache(async (id: number) => {
+  static findMovie = async (id: number) => {
     return this.axios(baseUrl).get<Show>(`/movie/${id}`);
-  });
+  };
 
-  static findTvSeries = cache(async (id: number) => {
+  static findTvSeries = async (id: number) => {
     return this.axios(baseUrl).get<Show>(`/tv/${id}`);
-  });
+  };
 
   static async getKeywords(
     id: number,
@@ -61,7 +60,7 @@ class MovieService extends BaseService {
     return this.axios(baseUrl).get<KeyWordResponse>(`/${type}/${id}/keywords`);
   }
 
-  static findMovieByIdAndType = cache(async (id: number, type: string) => {
+  static findMovieByIdAndType = async (id: number, type: string) => {
     const params: Record<string, string> = {
       language: 'en-US',
       append_to_response: 'videos',
@@ -70,7 +69,7 @@ class MovieService extends BaseService {
       baseUrl,
     ).get<ShowWithGenreAndVideo>(`/${type}/${id}`, { params });
     return Promise.resolve(response.data);
-  });
+  };
 
   static urlBuilder(req: TmdbRequest) {
     switch (req.requestType) {
@@ -119,7 +118,7 @@ class MovieService extends BaseService {
     return this.axios(baseUrl).get<TmdbPagingResponse>(this.urlBuilder(req));
   }
 
-  static getShows = cache(async (requests: ShowRequest[]) => {
+  static getShows = async (requests: ShowRequest[]) => {
     const shows: CategorizedShows[] = [];
     const promises = requests.map((m) => this.executeRequest(m.req));
     const responses = await Promise.allSettled(promises);
@@ -151,9 +150,9 @@ class MovieService extends BaseService {
       }
     }
     return shows;
-  });
+  };
 
-  static searchMovies = cache(async (query: string, page?: number) => {
+  static searchMovies = async (query: string, page?: number) => {
     const { data } = await this.axios(baseUrl).get<TmdbPagingResponse>(
       `/search/multi?query=${encodeURIComponent(query)}&language=en-US&page=${
         page ?? 1
@@ -164,7 +163,7 @@ class MovieService extends BaseService {
       return b.popularity - a.popularity;
     });
     return data;
-  });
+  };
 }
 
 export default MovieService;

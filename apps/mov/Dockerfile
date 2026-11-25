@@ -11,7 +11,7 @@ COPY . .
 ENV NODE_ENV=production
 ENV SKIP_ENV_VALIDATION=1
 
-RUN npm run build
+RUN npm run build:next
 
 FROM node:20-bookworm-slim AS runner
 

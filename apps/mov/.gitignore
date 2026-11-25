@@ -1,8 +1,23 @@
+# Dependencies
 node_modules/
+
+# Next.js and OpenNext build output
 .next/
+.open-next/
 out/
-.env
-.env.*
+build/
+dist/
+
+# Cloudflare local state
+.wrangler/
+.dev.vars*
+!.dev.vars.example
+
+# Tooling output
+coverage/
+*.tsbuildinfo
+.eslintcache
+
+# Local environment files
+.env*
 !.env.example
-.DS_Store
-npm-debug.log*

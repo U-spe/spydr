@@ -43,7 +43,6 @@
     toggle.setAttribute("aria-expanded", "true");
     toggle.title = "Hide menu";
     toggle.innerHTML = '<i class="ri-arrow-up-s-line" aria-hidden="true"></i>';
-    nav.insertAdjacentElement("afterend", toggle);
     shell.appendChild(nav);
     shell.appendChild(toggle);
     container.replaceChildren(shell);

@@ -774,6 +774,7 @@
             <div class="hero-actions">
               <button class="primary-action" id="hero-details" type="button"><i class="ri-information-line"></i> details</button>
               <button class="secondary-action" id="hero-trailer" type="button"><i class="ri-play-fill"></i> trailer</button>
+              <button class="primary-action" id="hero-silk" type="button"><i class="ri-clapperboard-line"></i> open silk+</button>
             </div>
           </div>
         </div>
@@ -830,6 +831,7 @@
         heroDescription: document.getElementById("hero-description"),
         heroDetails: document.getElementById("hero-details"),
         heroTrailer: document.getElementById("hero-trailer"),
+        heroSilk: document.getElementById("hero-silk"),
         searchForm: document.getElementById("movie-search"),
         searchInput: document.getElementById("search-input"),
         homeButton: document.getElementById("home-button"),
@@ -1127,7 +1129,8 @@
                   </div>
                   <p>${itemOverview}</p>
                   <div class="hero-actions">
-                    <button class="primary-action" type="button" data-trailer-id="${id}" data-trailer-type="${type}"><i class="ri-play-fill"></i> trailer</button>
+                    <button class="primary-action" type="button" data-open-silk><i class="ri-clapperboard-line"></i> open silk+</button>
+                    <button class="secondary-action" type="button" data-trailer-id="${id}" data-trailer-type="${type}"><i class="ri-play-fill"></i> trailer</button>
                     <button class="secondary-action" type="button" data-providers-id="${id}" data-providers-type="${type}"><i class="ri-external-link-line"></i> where to watch</button>
                     <button class="secondary-action" type="button" data-back><i class="ri-arrow-left-line"></i> back</button>
                   </div>
@@ -1219,6 +1222,11 @@
         const card = event.target.closest(".movie-card[data-id]");
         if (card) {
           showDetails(card.dataset.id, card.dataset.type);
+          return;
+        }
+
+        if (event.target.closest("[data-open-silk]")) {
+          window.location.href = "/silk/";
           return;
         }
 

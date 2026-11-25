@@ -55,7 +55,7 @@ const constText = document.querySelector(".const");
 const foxyOverlay = document.getElementById("foxy-overlay");
 const foxyAudio = document.getElementById("foxy-audio");
 
-const FOXY_COUNT = 90;
+const FOXY_COUNT = 180;
 const FOXY_IMAGE_LIFETIME = 3000;
 const FOXY_SEQUENCE_LENGTH = 3000;
 

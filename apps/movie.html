@@ -881,7 +881,7 @@
           .replace(/[^a-z0-9]+/g, "-")
           .replace(/^-|-$/g, "") || type;
         const slug = `${name}-${number(item.id)}`;
-        window.location.assign(`/silk/watch/${type}/${encodeURIComponent(slug)}`);
+        window.location.assign(`https://cinegeek-beta.solutionsforyourweb.workers.dev/watch/${type}/${encodeURIComponent(slug)}`);
       }
       const year = item => releaseDate(item).slice(0, 4) || "tba";
       const score = item => number(item?.vote_average).toFixed(1);

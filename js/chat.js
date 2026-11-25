@@ -1,219 +1,278 @@
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
-const supabaseUrl = "https://bxsiniqhswmiokqshcgi.supabase.co";
-const supabaseKey = "sb_publishable_UHN349V0ftl3nJVle0za2Q_oWeHWMvd"; 
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabase = createClient(
+  "https://bxsiniqhswmiokqshcgi.supabase.co",
+  "sb_publishable_UHN349V0ftl3nJVle0za2Q_oWeHWMvd"
+);
 
 let currentUser = null;
-let isGuest = true;
-let currentChannel = "global"; // State machine to hold current active channel
-let realtimeSubscription = null; // Hold reference to tear-down old channel listeners
+let currentChannel = "global";
+let realtimeSubscription = null;
+let selectedImage = null;
+let previewUrl = null;
 
-// UI Room Metadata
+const IMAGE_BUCKET = "chat-images";
+const MAX_IMAGE_SIZE = 5 * 1024 * 1024;
+const allowedImageTypes = ["image/png", "image/jpeg", "image/webp", "image/gif", "image/avif"];
+
 const channelDescriptions = {
-    "global": "Welcome to the main spydr network.",
-    "dev-logs": "Follow the development updates and system deployments.",
-    "off-topic": "Unwind, post memes, and hang out."
+  global: "Welcome to the main spydr network.",
+  "dev-logs": "Follow the development updates and system deployments. Read-only channel.",
+  "off-topic": "Unwind, post memes, and hang out."
 };
 
 const messagesContainer = document.getElementById("chat-messages");
 const chatForm = document.getElementById("chat-form");
 const messageInput = document.getElementById("message-input");
 const sendBtn = document.getElementById("send-btn");
-
+const attachBtn = document.getElementById("attach-image-btn");
+const imageInput = document.getElementById("image-input");
+const imagePreview = document.getElementById("chat-image-preview");
+const imagePreviewName = document.getElementById("image-preview-name");
+const clearImageBtn = document.getElementById("clear-image-btn");
 const chatTitle = document.getElementById("chat-title");
 const chatDesc = document.getElementById("chat-desc");
 const channelElements = document.querySelectorAll(".channel");
+const createDmBtn = document.getElementById("create-dm-btn");
 
-// --- INITIALIZE CHAT ---
+function isReadOnlyChannel(channel = currentChannel) {
+  return channel === "dev-logs";
+}
+
+function updateComposerState() {
+  const readOnly = isReadOnlyChannel();
+  if (messageInput) {
+    messageInput.disabled = readOnly;
+    messageInput.placeholder = readOnly
+      ? "dev-logs is read-only"
+      : `Message #${currentChannel} as ${currentUser?.email?.split("@")[0] || "Guest"}...`;
+  }
+  if (sendBtn) sendBtn.disabled = readOnly;
+  if (attachBtn) attachBtn.disabled = readOnly;
+  if (readOnly) clearSelectedImage();
+}
+
+function clearSelectedImage() {
+  selectedImage = null;
+  if (imageInput) imageInput.value = "";
+  if (previewUrl) URL.revokeObjectURL(previewUrl);
+  previewUrl = null;
+  if (imagePreview) imagePreview.hidden = true;
+  if (imagePreviewName) imagePreviewName.textContent = "";
+}
+
 async function initChat() {
-    // Everyone joins with a persistent guest identity. No account required.
-    let guestName = localStorage.getItem('spydr_chat_guest_name');
-    if (!guestName) {
-        guestName = `Guest_${Math.floor(Math.random() * 9000) + 1000}`;
-        localStorage.setItem('spydr_chat_guest_name', guestName);
-    }
-    currentUser = { email: `${guestName}@guest.com` };
-    isGuest = true;
-
-    // Unlock input elements safely
-    if (messageInput) messageInput.disabled = false;
-    if (sendBtn) sendBtn.disabled = false;
-
-    // Set Up Channel Switch Action Listeners
-    setupChannelClickListeners();
-
-    // 3. Perform initial load sequence
-    await switchChannel("global");
+  let guestName = localStorage.getItem("spydr_chat_guest_name");
+  if (!guestName) {
+    guestName = `Guest_${Math.floor(Math.random() * 9000) + 1000}`;
+    localStorage.setItem("spydr_chat_guest_name", guestName);
+  }
+  currentUser = { email: `${guestName}@guest.com` };
+  setupChannelClickListeners();
+  updateComposerState();
+  await switchChannel("global");
 }
 
-// --- SETUP SIDEBAR CLICK EVENT LISTENERS ---
 function setupChannelClickListeners() {
-    if (!channelElements) return;
-    channelElements.forEach(element => {
-        element.addEventListener("click", () => {
-            const selectedRoom = element.getAttribute("data-channel");
-            if (!selectedRoom || selectedRoom === currentChannel) return;
-
-            // Switch layout classes
-            document.querySelector(".channel.active")?.classList.remove("active");
-            element.classList.add("active");
-
-            // Execute programmatic swap
-            switchChannel(selectedRoom); //SIX SEVEN!!! (mb gng)
-        });
+  channelElements.forEach(element => {
+    element.addEventListener("click", () => {
+      const selectedRoom = element.getAttribute("data-channel");
+      if (!selectedRoom || selectedRoom === currentChannel) return;
+      document.querySelector(".channel.active")?.classList.remove("active");
+      element.classList.add("active");
+      switchChannel(selectedRoom);
     });
+  });
 }
 
-// --- CORE SWITCH LOGIC ---
 async function switchChannel(targetChannel) {
-    currentChannel = targetChannel;
-
-    // Get a clean display name for the input placeholder
-    const displayName = currentUser && currentUser.email ? currentUser.email.split('@')[0] : "Guest";
-
-    // 1. Update Room Headers and Description
-    if (chatTitle) chatTitle.innerHTML = `<i class="ri-hashtag"></i> ${currentChannel}`;
-    if (chatDesc) chatDesc.innerText = channelDescriptions[currentChannel] || "Secure terminal network.";
-    if (messageInput) messageInput.placeholder = `Message #${currentChannel} as ${displayName}...`;
-
-    // 2. Clear out older chat UI contents
-    if (messagesContainer) messagesContainer.innerHTML = '';
-
-    // 3. Load past context
-    await loadMessages();
-
-    // 4. Recycle websocket channels
-    subscribeToMessages();
+  currentChannel = targetChannel;
+  if (chatTitle) chatTitle.innerHTML = `<i class="ri-hashtag"></i> ${escapeHTML(currentChannel)}`;
+  if (chatDesc) chatDesc.textContent = channelDescriptions[currentChannel] || "Secure terminal network.";
+  updateComposerState();
+  if (messagesContainer) messagesContainer.innerHTML = "";
+  await loadMessages();
+  subscribeToMessages();
 }
 
-// --- LOGIC GATE: CREATE PRIVATE CHAT ---
-const createDmBtn = document.getElementById('create-dm-btn');
 if (createDmBtn) {
-    createDmBtn.addEventListener('click', () => {
-        if (isGuest) {
-            alert("Private rooms are not available yet.");
-        } else {
-            const roomName = prompt("Enter private room name:");
-            if (roomName) {
-                alert(`Ready to create room: ${roomName}. Backend logic pending.`);
-            }
-        }
-    });
+  createDmBtn.addEventListener("click", () => {
+    alert("Private rooms are not available yet.");
+  });
 }
 
-// --- LOAD HISTORY (Filtered by Channel) ---
 async function loadMessages() {
-    const { data: messages, error } = await supabase
-        .from('messages')
-        .select('*')
-        .eq('channel', currentChannel) // Filter by active room context
-        .order('created_at', { ascending: true })
-        .limit(50);
+  const { data: messages, error } = await supabase
+    .from("messages")
+    .select("*")
+    .eq("channel", currentChannel)
+    .order("created_at", { ascending: true })
+    .limit(50);
 
-    if (error) {
-        console.error("Error loading messages:", error);
-        return;
-    }
-
-    if (messagesContainer) {
-        messagesContainer.innerHTML = ''; // Double safety clean
-        messages.forEach(msg => appendMessageUI(msg));
-        scrollToBottom();
-    }
+  if (error) {
+    console.error("Error loading messages:", error);
+    return;
+  }
+  if (messagesContainer) {
+    messagesContainer.innerHTML = "";
+    messages.forEach(appendMessageUI);
+    scrollToBottom();
+  }
 }
 
-// --- REALTIME SUBSCRIPTION (Recyclable) ---
 function subscribeToMessages() {
-    // Clean up old socket connection to avoid duplicate deliveries and memory leaks
-    if (realtimeSubscription) {
-        supabase.removeChannel(realtimeSubscription);
-    }
-
-    realtimeSubscription = supabase
-        .channel(`public:messages:${currentChannel}`)
-        .on('postgres_changes', { 
-            event: 'INSERT', 
-            schema: 'public', 
-            table: 'messages',
-            filter: `channel=eq.${currentChannel}` // Server side filter: only stream events matching room
-        }, payload => {
-            appendMessageUI(payload.new);
-            scrollToBottom();
-        })
-        .subscribe();
+  if (realtimeSubscription) supabase.removeChannel(realtimeSubscription);
+  realtimeSubscription = supabase
+    .channel(`public:messages:${currentChannel}`)
+    .on("postgres_changes", {
+      event: "INSERT",
+      schema: "public",
+      table: "messages",
+      filter: `channel=eq.${currentChannel}`
+    }, payload => {
+      appendMessageUI(payload.new);
+      scrollToBottom();
+    })
+    .subscribe();
 }
 
-// --- SEND MESSAGE (Includes Room Target) ---
+if (attachBtn && imageInput) {
+  attachBtn.addEventListener("click", () => {
+    if (!isReadOnlyChannel()) imageInput.click();
+  });
+  imageInput.addEventListener("change", () => {
+    const file = imageInput.files?.[0];
+    if (!file) return;
+    if (!allowedImageTypes.includes(file.type)) {
+      alert("Choose a PNG, JPG, WebP, GIF, or AVIF image.");
+      clearSelectedImage();
+      return;
+    }
+    if (file.size > MAX_IMAGE_SIZE) {
+      alert("Images must be 5 MB or smaller.");
+      clearSelectedImage();
+      return;
+    }
+    clearSelectedImage();
+    selectedImage = file;
+    previewUrl = URL.createObjectURL(file);
+    if (imagePreviewName) imagePreviewName.textContent = file.name;
+    if (imagePreview) imagePreview.hidden = false;
+  });
+}
+if (clearImageBtn) clearImageBtn.addEventListener("click", clearSelectedImage);
+
+async function uploadChatImage(file) {
+  const extensionByType = {
+    "image/jpeg": "jpg",
+    "image/png": "png",
+    "image/webp": "webp",
+    "image/gif": "gif",
+    "image/avif": "avif"
+  };
+  const extension = extensionByType[file.type];
+  const path = `${Date.now()}-${crypto.randomUUID() || Math.random().toString(36).slice(2)}.${extension}`;
+  const { error } = await supabase.storage.from(IMAGE_BUCKET).upload(path, file, {
+    cacheControl: "3600",
+    upsert: false,
+    contentType: file.type
+  });
+  if (error) throw error;
+  return supabase.storage.from(IMAGE_BUCKET).getPublicUrl(path).data.publicUrl;
+}
+
 if (chatForm) {
-    chatForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        if (!currentUser) return;
+  chatForm.addEventListener("submit", async event => {
+    event.preventDefault();
+    if (!currentUser || isReadOnlyChannel()) return;
 
-        const content = messageInput.value.trim();
-        if (!content) return;
+    const content = messageInput.value.trim();
+    const imageFile = selectedImage;
+    if (!content && !imageFile) return;
 
-        // Clear UI layout input immediately
-        messageInput.value = '';
+    sendBtn.disabled = true;
+    if (attachBtn) attachBtn.disabled = true;
+    try {
+      let imageUrl = null;
+      if (imageFile) imageUrl = await uploadChatImage(imageFile);
 
-        // Insert to database with current room parameter
-        const { error } = await supabase
-            .from('messages')
-            .insert([{ 
-                user_email: currentUser.email, 
-                content: content,
-                channel: currentChannel // Insert context room
-            }]);
+      const { error } = await supabase.from("messages").insert([{
+        user_email: currentUser.email,
+        content,
+        channel: currentChannel,
+        image_url: imageUrl
+      }]);
+      if (error) throw error;
 
-        if (error) {
-            console.error("Error sending message:", error);
-            alert("Database error: Could not send message.");
-        }
-    });
-}
-
-// --- HTML ESCAPE HELPER (Prevents XSS attacks in chat) ---
-function escapeHTML(str) {
-    return str.replace(/[&<>'"]/g, 
-        tag => ({
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            "'": '&#39;',
-            '"': '&quot;'
-        }[tag] || tag)
-    );
-}
-
-// --- UI HELPER: APPEND MESSAGE ---
-function appendMessageUI(msg) {
-    if (!messagesContainer) return;
-    const time = new Date(msg.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    const username = msg.user_email ? msg.user_email.split('@')[0] : "System"; 
-
-    const msgDiv = document.createElement("div");
-    msgDiv.className = "msg";
-    
-    msgDiv.innerHTML = `
-        <div class="msg-pfp"></div>
-        <div class="msg-content">
-            <div class="msg-header">
-                <span class="msg-user">${username}</span>
-                <span class="msg-time">${time}</span>
-            </div>
-            <div class="msg-text">${escapeHTML(msg.content)}</div>
-        </div>
-    `;
-
-    messagesContainer.appendChild(msgDiv);
-}
-
-// --- UI HELPER: SCROLL TO BOTTOM ---
-function scrollToBottom() {
-    if (messagesContainer) {
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      messageInput.value = "";
+      clearSelectedImage();
+    } catch (error) {
+      console.error("Error sending chat message:", error);
+      alert("Could not send that message. Check the chat database and image bucket setup.");
+    } finally {
+      updateComposerState();
     }
+  });
 }
 
-// Boot the chat script safely
+function escapeHTML(value = "") {
+  return String(value).replace(/[&<>'"]/g, character => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;"
+  }[character]));
+}
+
+function appendMessageUI(message) {
+  if (!messagesContainer) return;
+  const time = new Date(message.created_at).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  const username = message.user_email ? message.user_email.split("@")[0] : "System";
+
+  const messageElement = document.createElement("div");
+  messageElement.className = "msg";
+
+  const avatar = document.createElement("div");
+  avatar.className = "msg-pfp";
+
+  const content = document.createElement("div");
+  content.className = "msg-content";
+
+  const header = document.createElement("div");
+  header.className = "msg-header";
+  const user = document.createElement("span");
+  user.className = "msg-user";
+  user.textContent = username;
+  const timestamp = document.createElement("span");
+  timestamp.className = "msg-time";
+  timestamp.textContent = time;
+  header.append(user, timestamp);
+
+  content.appendChild(header);
+  if (message.content) {
+    const text = document.createElement("div");
+    text.className = "msg-text";
+    text.textContent = message.content;
+    content.appendChild(text);
+  }
+
+  if (message.image_url) {
+    try {
+      const url = new URL(message.image_url);
+      if (url.protocol === "https:" && url.hostname === "bxsiniqhswmiokqshcgi.supabase.co") {
+        const image = document.createElement("img");
+        image.className = "msg-image";
+        image.src = url.href;
+        image.alt = `Image shared by ${username}`;
+        image.loading = "lazy";
+        content.appendChild(image);
+      }
+    } catch {}
+  }
+
+  messageElement.append(avatar, content);
+  messagesContainer.appendChild(messageElement);
+}
+
+function scrollToBottom() {
+  if (messagesContainer) messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
 window.addEventListener("DOMContentLoaded", initChat);

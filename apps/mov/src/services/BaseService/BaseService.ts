@@ -1,0 +1,51 @@
+import "server-only";
+import axios, {
+  type AxiosRequestConfig,
+  type AxiosError,
+  type AxiosInstance,
+  type InternalAxiosRequestConfig,
+} from "axios";
+import { env } from "@/env.mjs";
+
+class BaseService {
+  constructor() {
+    if (this.constructor === BaseService) {
+      throw new Error("Classes can't be instantiated.");
+    }
+  }
+
+  static axios(baseUrl: string) {
+    const instance: AxiosInstance = axios.create(this.getConfig(baseUrl));
+
+    const onRequest = (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {
+      if (config.baseURL?.includes("themoviedb")) {
+        config.headers.Authorization = `Bearer ${env.TMDB_READ_ACCESS_TOKEN}`;
+      }
+      return config;
+    };
+
+    const onErrorResponse = (error: AxiosError | Error): Promise<AxiosError> => {
+      console.error(`TMDb request failed: ${error.message}`);
+      return Promise.reject(error);
+    };
+
+    instance.interceptors.request.use(onRequest, onErrorResponse);
+    return instance;
+  }
+
+  static getConfig(baseUrl: string): AxiosRequestConfig {
+    return {
+      timeout: 15000,
+      baseURL: baseUrl,
+      responseType: "json",
+      maxContentLength: 100000,
+      validateStatus: (status: number) => status >= 200 && status < 300,
+      maxRedirects: 5,
+    };
+  }
+
+  static isRejected = (input: PromiseSettledResult<unknown>): input is PromiseRejectedResult => input.status === "rejected";
+  static isFulfilled = <T>(input: PromiseSettledResult<T>): input is PromiseFulfilledResult<T> => input.status === "fulfilled";
+}
+
+export default BaseService;

@@ -1,91 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#09090b">
-  <title>spydr // updates</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-  <style>
-    :root{color-scheme:dark;--bg:#09090b;--panel:#111216;--panel2:#17181d;--line:#292a31;--muted:#92939d;--text:#f3f3f5;--accent:#a58aff;--green:#75c99b}
-    *{box-sizing:border-box}
-    html{min-height:100%;scroll-behavior:smooth}
-    body{margin:0;min-height:100%;overflow-x:hidden;overflow-y:auto;background:radial-gradient(ellipse at 50% -15%,rgba(124,92,220,.18),transparent 48%),var(--bg);color:var(--text);font-family:"Space Grotesk",sans-serif}
-    .page{width:min(100% - 36px,920px);margin:0 auto;padding:64px 0 80px}
-    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font:700 11px "JetBrains Mono",monospace;letter-spacing:2px;text-transform:uppercase}
-    .eyebrow i{font-size:16px}
-    h1{margin:16px 0 8px;font-size:clamp(38px,7vw,62px);line-height:1;letter-spacing:-.065em}
-    .intro{margin:0;color:var(--muted);font-size:15px;line-height:1.7}
-    .release{margin-top:34px;padding:26px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,rgba(27,28,34,.96),rgba(15,16,20,.96));box-shadow:0 22px 70px rgba(0,0,0,.22)}
-    .release-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:25px}
-    .version{font:700 22px "JetBrains Mono",monospace;letter-spacing:-1px}
-    .tag{padding:7px 10px;border:1px solid rgba(117,201,155,.3);border-radius:999px;background:rgba(117,201,155,.09);color:var(--green);font:700 10px "JetBrains Mono",monospace;letter-spacing:1px;text-transform:uppercase}
-    .group{padding-top:21px;margin-top:20px;border-top:1px solid var(--line)}
-    .group:first-of-type{padding-top:0;margin-top:0;border:0}
-    .group-title{display:flex;align-items:center;gap:9px;margin:0 0 15px;color:#e7e3f4;font-size:14px;font-weight:700}
-    .group-title i{color:var(--accent);font-size:18px}
-    ul{display:grid;gap:11px;margin:0;padding:0;list-style:none}
-    li{display:flex;align-items:flex-start;gap:11px;color:#c9c9d0;font-size:14px;line-height:1.6}
-    li i{flex:0 0 auto;margin-top:2px;color:var(--green);font-size:16px}
-    .previous{margin-top:18px;padding:25px;border:1px solid var(--line);border-radius:18px;background:rgba(17,18,22,.82)}
-    .previous .version{font-size:18px}
-    .previous .group{padding-top:18px;margin-top:18px}
-    .footer{display:flex;justify-content:space-between;gap:12px;margin-top:24px;color:#777984;font:11px "JetBrains Mono",monospace}
-    @media(max-width:600px){.page{width:min(100% - 24px,920px);padding:38px 0 54px}.release,.previous{padding:19px;border-radius:15px}.release-top{align-items:flex-start}.footer{flex-direction:column}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09090b">
+<title>spydr // changelog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#09090b;--panel:#111216;--panel2:#17181d;--line:#292a31;--muted:#92939d;--text:#f3f3f5;--accent:#a58aff;--green:#75c99b;--yellow:#d6b66e}
+*{box-sizing:border-box}html{min-height:100%;scroll-behavior:smooth}
+body{margin:0;min-height:100%;background:radial-gradient(ellipse at 50% -15%,rgba(124,92,220,.16),transparent 48%),var(--bg);color:var(--text);font-family:"Space Grotesk",sans-serif}
+.page{width:min(100% - 36px,920px);margin:0 auto;padding:64px 0 80px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font:700 11px "JetBrains Mono",monospace;letter-spacing:2px;text-transform:uppercase}
+h1{margin:16px 0 8px;font-size:clamp(38px,7vw,62px);line-height:1;letter-spacing:-.065em}
+.intro{margin:0;color:var(--muted);font-size:15px;line-height:1.7}
+.release{margin-top:30px;padding:25px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(27,28,34,.96),rgba(15,16,20,.96));box-shadow:0 22px 70px rgba(0,0,0,.2)}
+.release.previous{margin-top:15px;background:rgba(17,18,22,.82)}
+.release-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:22px}
+.version{font:700 21px "JetBrains Mono",monospace;letter-spacing:-1px}
+.tag{padding:7px 10px;border:1px solid rgba(117,201,155,.3);border-radius:999px;background:rgba(117,201,155,.09);color:var(--green);font:700 10px "JetBrains Mono",monospace;letter-spacing:1px;text-transform:uppercase}
+.tag.old{border-color:#34343d;background:#202127;color:#aaa}
+.group{padding-top:19px;margin-top:18px;border-top:1px solid var(--line)}
+.group:first-of-type{padding-top:0;margin-top:0;border:0}
+.group-title{display:flex;align-items:center;gap:9px;margin:0 0 13px;color:#e7e3f4;font-size:14px;font-weight:700}
+.group-title i{color:var(--accent);font-size:18px}
+ul{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+li{display:flex;align-items:flex-start;gap:10px;color:#c9c9d0;font-size:13px;line-height:1.6}
+li i{flex:0 0 auto;margin-top:2px;font-size:15px}
+li.done i{color:var(--green)}li.pending i{color:var(--yellow)}
+.footer{display:flex;justify-content:space-between;gap:12px;margin-top:24px;color:#777984;font:11px "JetBrains Mono",monospace}
+@media(max-width:600px){.page{width:min(100% - 24px,920px);padding:38px 0 54px}.release{padding:19px;border-radius:15px}.release-top{align-items:flex-start}.footer{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-  <main class="page">
-    <span class="eyebrow"><i class="ri-history-line"></i> spydr / changelog</span>
-    <h1>what's new.</h1>
-    <p class="intro">the latest changes, fixes, and things we've been working on.</p>
+<main class="page">
+<span class="eyebrow"><i class="ri-history-line"></i> spydr / changelog</span>
+<h1>what's new.</h1>
+<p class="intro">releases, fixes, completed work, and what's still on the board.</p>
 
-    <section class="release" aria-labelledby="current-version">
-      <div class="release-top">
-        <div class="version" id="current-version">v4.1</div>
-        <span class="tag">current release</span>
-      </div>
+<section class="release" aria-labelledby="v41">
+<div class="release-top"><div class="version" id="v41">v4.1</div><span class="tag">current release</span></div>
+<section class="group"><h2 class="group-title"><i class="ri-checkbox-circle-line"></i> Completed</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Improve the UI across all pages.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Change the game image layout to better match DuckMath.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Add switchable AI versions and AI screen sharing.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Add a proper movies page.</span></li>
+</ul></section>
+<section class="group"><h2 class="group-title"><i class="ri-time-line"></i> Pending</h2><ul>
+<li class="pending"><i class="ri-time-line"></i><span>Finish the Scram route (planned as the final proxy change).</span></li>
+<li class="pending"><i class="ri-time-line"></i><span>Add more working games and requested games.</span></li>
+<li class="pending"><i class="ri-time-line"></i><span>Create more apps and bring proxied apps back online.</span></li>
+<li class="pending"><i class="ri-time-line"></i><span>More updates are still being planned.</span></li>
+</ul></section>
+</section>
 
-      <section class="group">
-        <h2 class="group-title"><i class="ri-tools-line"></i> Beginning</h2>
-        <ul>
-          <li><i class="ri-checkbox-circle-fill"></i><span>Mess around a little with the UI</span></li>
-          <li><i class="ri-checkbox-circle-fill"></i><span>Change the layout on the games (match with duckmath slightly)</span></li>
-          <li><i class="ri-time-line"></i><span>UV route (this should be the final proxy change)</span></li>
-          <li><i class="ri-checkbox-circle-fill"></i><span>Switchable AI versions + AI able to share screen</span></li>
-          <li><i class="ri-time-line"></i><span>more stuff, idk what but it will be here soon.</span></li>
-        </ul>
-      </section>
-    </section>
+<section class="release previous" aria-labelledby="v40">
+<div class="release-top"><div class="version" id="v40">v4.0</div><span class="tag old">previous</span></div>
+<section class="group"><h2 class="group-title"><i class="ri-tools-line"></i> Added and changed</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Moved hosting from Vercel to Cloudflare.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Added GN-Math games through Cloudflare.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Added Seraph games.</span></li>
+</ul></section>
+<section class="group"><h2 class="group-title"><i class="ri-bug-line"></i> Fixed</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Replaced Cine Cloud with the PS5 emulator.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Fixed homepage domain links.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Fixed the Cloudflare CLI workflow.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Fixed GitHub Actions workflow issues.</span></li>
+</ul></section>
+</section>
 
-    <section class="previous" aria-labelledby="previous-version">
-      <div class="release-top">
-        <div class="version" id="previous-version">v4.0</div>
-        <span class="tag" style="border-color:#34343d;background:#202127;color:#aaa">previous</span>
-      </div>
-      <section class="group">
-        <h2 class="group-title"><i class="ri-tools-line"></i> Beginning</h2>
-        <ul>
-          <li><i class="ri-checkbox-circle-fill"></i><span>SWITCHED TO Cloudflare instead of Vercel (i got blocked)</span></li>
-          <li><i class="ri-checkbox-circle-fill"></i><span>Add GN-Math Games Via Cloudflare</span></li>
-          <li><i class="ri-checkbox-circle-fill"></i><span>Add Seraph Games (same as gnm)</span></li>
-        </ul>
-      </section>
-      <section class="group">
-        <h2 class="group-title"><i class="ri-bug-line"></i> Fixed</h2>
-        <ul>
-          <li><i class="ri-checkbox-circle-fill"></i><span>Cine Cloud (Replaced Cine with PS5 Emu)</span></li>
-          <li><i class="ri-checkbox-circle-fill"></i><span>Domain Links On Homepage</span></li>
-          <li><i class="ri-checkbox-circle-fill"></i><span>Cloudflare CLI</span></li>
-          <li><i class="ri-checkbox-circle-fill"></i><span>GitHub Actions Work</span></li>
-        </ul>
-      </section>
-    </section>
-    <div class="footer"><span>spydr updates</span><span>that's the list. for now.</span></div>
-  </main>
+<section class="release previous"><div class="release-top"><div class="version">v3.0</div><span class="tag old">previous</span></div>
+<section class="group"><h2 class="group-title"><i class="ri-tools-line"></i> Beginning</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Started the Corrosion build.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Made the homepage text buttons.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Used MacVG games to improve the game library, replacing ML20.</span></li>
+<li class="pending"><i class="ri-time-line"></i><span>YouTube video player work was listed as a question / planned item.</span></li>
+<li class="pending"><i class="ri-time-line"></i><span>Find Kiwi, Nate Games, and Cool Math Games assets.</span></li>
+<li class="pending"><i class="ri-time-line"></i><span>Redownload assets locally and deploy on Surge.sh.</span></li>
+</ul></section></section>
+
+<section class="release previous"><div class="release-top"><div class="version">v2.7.3</div><span class="tag old">previous</span></div>
+<section class="group"><h2 class="group-title"><i class="ri-tools-line"></i> Beginning</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Added more color themes and visual options.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Deployed on dns1.webcreationstudios.org and dns1.mjevents.org.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Thinned the menu bar so it no longer covers page content.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Added a custom error-message page to Search.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Added a notice on Apps explaining that proxied apps were unavailable.</span></li>
+</ul></section></section>
+
+<section class="release previous"><div class="release-top"><div class="version">v2.7.2</div><span class="tag old">previous</span></div>
+<section class="group"><h2 class="group-title"><i class="ri-tools-line"></i> Beginning</h2><ul>
+<li class="pending"><i class="ri-time-line"></i><span>Started planning the Scramjet build.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Started the Venomous build with Quen LLM.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Finished Hydra game files.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Added Pizza Edition, with a later plan to replace it with Totally Science.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Fixed the game loader.</span></li>
+</ul></section>
+<section class="group"><h2 class="group-title"><i class="ri-bug-line"></i> Fixed</h2><ul><li class="done"><i class="ri-checkbox-circle-fill"></i><span>Fixed JSON issues (repeatedly).</span></li></ul></section></section>
+
+<section class="release previous"><div class="release-top"><div class="version">v2.7.1</div><span class="tag old">previous</span></div>
+<section class="group"><h2 class="group-title"><i class="ri-add-line"></i> Added</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Started a Corrosion proxy build, later changed to Scramjet in v2.7.2.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Used Render to host the proxy backend.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Installed CORS locally to connect to the backend.</span></li>
+</ul></section>
+<section class="group"><h2 class="group-title"><i class="ri-bug-line"></i> Fixed</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Fixed proxy embed linking.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Fixed the Go button backend issue.</span></li>
+</ul></section></section>
+
+<section class="release previous"><div class="release-top"><div class="version">v2.7.0</div><span class="tag old">previous</span></div>
+<section class="group"><h2 class="group-title"><i class="ri-add-line"></i> Added and changed</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Improved game-card organization.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Added the Browser section, previously a VM.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Moved README and other Markdown files into md-docs.</span></li>
+</ul></section>
+<section class="group"><h2 class="group-title"><i class="ri-bug-line"></i> Fixed</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Fixed login and improved navigation.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Fixed JSON-powered game zones.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Added hotkey support and tab-cloaking options.</span></li>
+</ul></section></section>
+
+<section class="release previous"><div class="release-top"><div class="version">v2.6.0</div><span class="tag old">previous</span></div>
+<section class="group"><h2 class="group-title"><i class="ri-tools-line"></i> Changed</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Improved project structure and asset organization.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Converted static content into JSON systems.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Improved JavaScript modularity and loading performance.</span></li>
+</ul></section>
+<section class="group"><h2 class="group-title"><i class="ri-bug-line"></i> Fixed</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Fixed asset paths, JSON fetch locations, menu variable conflicts, and game launching issues.</span></li>
+</ul></section></section>
+
+<section class="release previous"><div class="release-top"><div class="version">v2.5.0</div><span class="tag old">previous</span></div>
+<section class="group"><h2 class="group-title"><i class="ri-add-line"></i> Added</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Added new Spydr branding, a redesigned visual style, a new navigation layout, and improved animations.</span></li>
+</ul></section>
+<section class="group"><h2 class="group-title"><i class="ri-tools-line"></i> Changed</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Moved away from the Neo/JetX structure, rebuilt core components, and improved maintainability.</span></li>
+</ul></section></section>
+
+<section class="release previous"><div class="release-top"><div class="version">v2.0.0 · Rewrite</div><span class="tag old">major update</span></div>
+<section class="group"><h2 class="group-title"><i class="ri-rocket-line"></i> Major update</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Rebuilt Spydr from the ground up with a new architecture and modular systems.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Added improved content management and a stronger foundation for future updates.</span></li>
+</ul></section></section>
+
+<section class="release previous"><div class="release-top"><div class="version">v1.x</div><span class="tag old">legacy</span></div>
+<section class="group"><h2 class="group-title"><i class="ri-archive-line"></i> Legacy versions</h2><ul>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Initial dashboard design.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Game launcher prototypes.</span></li>
+<li class="done"><i class="ri-checkbox-circle-fill"></i><span>Early browser experiments and first UI concepts.</span></li>
+</ul></section></section>
+
+<section class="release previous"><div class="release-top"><div class="version">Future updates</div><span class="tag old">planned</span></div>
+<section class="group"><ul><li class="pending"><i class="ri-lightbulb-line"></i><span>More ideas are welcome. The roadmap will grow as new work is planned.</span></li></ul></section></section>
+<div class="footer"><span>spydr updates</span><span>the full changelog, all in one place.</span></div>
+</main>
 </body>
 </html>

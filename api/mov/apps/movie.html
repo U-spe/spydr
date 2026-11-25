@@ -870,6 +870,19 @@
       const mediaType = item => item?.media_type || (item?.first_air_date || item?.name ? "tv" : "movie");
       const title = item => text(item?.title || item?.name || item?.original_title || item?.original_name, "untitled");
       const releaseDate = item => text(item?.release_date || item?.first_air_date);
+
+      function openSilk(item) {
+        if (!item?.id) return;
+        const type = mediaType(item) === "tv" ? "tv" : "movie";
+        const name = title(item)
+          .normalize("NFKD")
+          .replace(/[\\u0300-\\u036f]/g, "")
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-|-$/g, "") || type;
+        const slug = `${name}-${number(item.id)}`;
+        window.location.assign(`/silk/watch/${type}/${encodeURIComponent(slug)}`);
+      }
       const year = item => releaseDate(item).slice(0, 4) || "tba";
       const score = item => number(item?.vote_average).toFixed(1);
 
@@ -1129,7 +1142,7 @@
                   </div>
                   <p>${itemOverview}</p>
                   <div class="hero-actions">
-                    <button class="primary-action" type="button" data-open-silk><i class="ri-clapperboard-line"></i> open silk+</button>
+                    <button class="primary-action" type="button" data-open-silk data-id="${id}" data-type="${type}" data-title="${itemTitle}"><i class="ri-clapperboard-line"></i> watch on silk+</button>
                     <button class="secondary-action" type="button" data-trailer-id="${id}" data-trailer-type="${type}"><i class="ri-play-fill"></i> trailer</button>
                     <button class="secondary-action" type="button" data-providers-id="${id}" data-providers-type="${type}"><i class="ri-external-link-line"></i> where to watch</button>
                     <button class="secondary-action" type="button" data-back><i class="ri-arrow-left-line"></i> back</button>
@@ -1203,6 +1216,7 @@
       elements.homeButton.addEventListener("click", () => loadHome());
       elements.heroDetails.addEventListener("click", () => state.hero && showDetails(state.hero.id, mediaType(state.hero)));
       elements.heroTrailer.addEventListener("click", () => state.hero && openTrailer(state.hero.id, mediaType(state.hero)));
+      elements.heroSilk.addEventListener("click", () => openSilk(state.hero));
       elements.closeTrailer.addEventListener("click", closeTrailer);
       elements.modal.addEventListener("click", event => event.target === elements.modal && closeTrailer());
 
@@ -1226,7 +1240,7 @@
         }
 
         if (event.target.closest("[data-open-silk]")) {
-          window.location.href = "/silk/";
+          openSilk({ id: event.target.closest("[data-open-silk]").dataset.id, media_type: event.target.closest("[data-open-silk]").dataset.type, title: event.target.closest("[data-open-silk]").dataset.title });
           return;
         }
 

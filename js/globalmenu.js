@@ -39,7 +39,40 @@
       nav.appendChild(link);
     }
 
-    container.replaceChildren(nav);
+    const collapseButton = document.createElement("button");
+    collapseButton.type = "button";
+    collapseButton.className = "dock-menu-toggle";
+    collapseButton.setAttribute("aria-label", "Hide navigation menu");
+    collapseButton.title = "Hide menu";
+    collapseButton.innerHTML = '<i class="ri-layout-bottom-line" aria-hidden="true"></i><span>hide menu</span>';
+    nav.appendChild(collapseButton);
+
+    const expandTab = document.createElement("button");
+    expandTab.type = "button";
+    expandTab.className = "dock-expand-tab";
+    expandTab.innerHTML = '<i class="ri-arrow-up-line" aria-hidden="true"></i><span>expand menu</span>';
+    expandTab.setAttribute("aria-label", "Expand navigation menu");
+
+    container.replaceChildren(nav, expandTab);
+
+    const menuStorageKey = "spydr.globalmenu.collapsed";
+    const setCollapsed = collapsed => {
+      document.body.classList.toggle("global-menu-collapsed", collapsed);
+      collapseButton.setAttribute("aria-expanded", String(!collapsed));
+      collapseButton.setAttribute("aria-label", collapsed ? "Expand navigation menu" : "Hide navigation menu");
+      collapseButton.title = collapsed ? "Expand menu" : "Hide menu";
+      expandTab.setAttribute("aria-expanded", String(!collapsed));
+      try { localStorage.setItem(menuStorageKey, collapsed ? "1" : "0"); } catch {}
+    };
+
+    collapseButton.addEventListener("click", () => setCollapsed(true));
+    expandTab.addEventListener("click", () => setCollapsed(false));
+
+    try {
+      setCollapsed(localStorage.getItem(menuStorageKey) === "1");
+    } catch {
+      setCollapsed(false);
+    }
 
     const keys = {
       "1": "/",

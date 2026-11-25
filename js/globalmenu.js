@@ -44,7 +44,7 @@
     collapseButton.className = "dock-menu-toggle";
     collapseButton.setAttribute("aria-label", "Hide navigation menu");
     collapseButton.title = "Hide menu";
-    collapseButton.innerHTML = '<i class="ri-layout-bottom-line" aria-hidden="true"></i><span>hide menu</span>';
+    collapseButton.innerHTML = '<i class="ri-eye-off-line" aria-hidden="true"></i>';
     nav.appendChild(collapseButton);
 
     const expandTab = document.createElement("button");

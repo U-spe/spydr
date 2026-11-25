@@ -249,3 +249,101 @@
     }
 
 }
+
+
+/* GLOBAL MENU COLLAPSE / EXPAND */
+.dock {
+  gap: 7px;
+}
+.dock a {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: var(--gray, #bdbdbd);
+  text-decoration: none;
+}
+.dock a i {
+  font-size: 21px;
+}
+.dock a:hover {
+  color: var(--white, #fff);
+  background: rgba(255,255,255,.07);
+  transform: translateY(-4px);
+}
+.dock a.active {
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent, #3f5efb), #7c3aed);
+}
+.dock-menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 40px;
+  margin-left: 4px;
+  padding: 0 13px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 11px;
+  color: #e9e9ee;
+  background: rgba(255,255,255,.055);
+  font: 600 10px "JetBrains Mono", monospace;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.dock-menu-toggle i { font-size: 17px; }
+.dock-menu-toggle:hover {
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.24);
+}
+.dock-expand-tab {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  z-index: 100000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 17px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 999px;
+  color: #f4f2fa;
+  background: rgba(18,18,22,.92);
+  box-shadow: 0 10px 35px rgba(0,0,0,.42);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  font: 600 11px "JetBrains Mono", monospace;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 12px);
+  transition: opacity .22s ease, transform .22s ease, background .22s ease;
+}
+.dock-expand-tab i { font-size: 16px; }
+.dock-expand-tab:hover { background: rgba(42,42,50,.96); }
+body.global-menu-collapsed .dock {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 18px);
+}
+body.global-menu-collapsed .dock-expand-tab {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+@media (max-width:700px) {
+  .dock { gap: 3px; padding: 5px; max-width: calc(100vw - 16px); }
+  .dock a { width: 37px; height: 39px; }
+  .dock a i { font-size: 18px; }
+  .dock-menu-toggle { min-height: 37px; padding: 0 9px; font-size: 9px; }
+  .dock-expand-tab { bottom: 12px; min-height: 40px; }
+}

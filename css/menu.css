@@ -344,6 +344,7 @@ body.global-menu-collapsed .dock-expand-tab {
   .dock { gap: 3px; padding: 5px; max-width: calc(100vw - 16px); }
   .dock a { width: 37px; height: 39px; }
   .dock a i { font-size: 18px; }
-  .dock-menu-toggle { min-height: 37px; padding: 0 9px; font-size: 9px; }
+  .dock-menu-toggle { flex-basis: 38px; width: 38px; height: 39px; min-height: 39px; margin-left: 3px; }
+  .dock-menu-toggle i { font-size: 19px; }
   .dock-expand-tab { bottom: 12px; min-height: 40px; }
 }

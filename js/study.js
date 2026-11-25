@@ -24,6 +24,8 @@
     venomous: "qwen/qwen3.8-27b"
   };
 
+  const MODEL_LABELS = { arachnid: "arachnid", silk: "silk", venomous: "venomous" };
+
   let selectedModel =
     localStorage.getItem(MODEL_STORAGE) || "venomous";
 
@@ -98,6 +100,13 @@
 
     modelSelect:
       $("ai-model-select"),
+
+    expandSidebarTab: $("expand-sidebar-tab"),
+    sidebarBrandName: $("sidebar-brand-name"),
+    headerBrandName: $("header-brand-name"),
+    welcomeTitle: $("welcome-title"),
+    visionBadge: $("vision-badge"),
+    aiDisclaimer: $("ai-disclaimer"),
 
     openSidebar:
       $("open-sidebar"),
@@ -2877,24 +2886,31 @@
      ======================================================= */
 
   function openSidebar() {
-
-    el.sidebar
-      .classList
-      .add(
-        "open"
-      );
-
+    $("venomous-app").classList.remove("sidebar-collapsed");
+    el.sidebar.classList.add("open");
+    localStorage.setItem("spydr.ai.sidebar", "open");
   }
 
-
   function closeSidebar() {
+    el.sidebar.classList.remove("open");
+    $("venomous-app").classList.add("sidebar-collapsed");
+    localStorage.setItem("spydr.ai.sidebar", "closed");
+  }
 
-    el.sidebar
-      .classList
-      .remove(
-        "open"
-      );
-
+  function updateModelBranding() {
+    const label = MODEL_LABELS[selectedModel] || "venomous";
+    document.title = label + " | spydr";
+    if (el.sidebarBrandName) el.sidebarBrandName.textContent = label;
+    if (el.headerBrandName) el.headerBrandName.textContent = label;
+    if (el.welcomeTitle) el.welcomeTitle.textContent = label + ".";
+    if (el.messageInput) el.messageInput.placeholder = "message " + label + "...";
+    if (el.aiDisclaimer) el.aiDisclaimer.textContent = label + " can make mistakes. check important info.";
+    if (el.visionBadge) {
+      el.visionBadge.classList.toggle("hidden", selectedModel !== "venomous");
+      el.visionBadge.title = selectedModel === "venomous" ? "Image and screen context available" : "Image and screen context is available with Venomous";
+    }
+    const customizeTitle = $("customize-title");
+    if (customizeTitle) customizeTitle.textContent = "personalize " + label;
   }
 
 
@@ -2960,6 +2976,7 @@
 
       selectedModel = nextModel;
       localStorage.setItem(MODEL_STORAGE, selectedModel);
+      updateModelBranding();
 
       if (selectedModel !== "venomous" && screenShareStream) {
         stopScreenShare();
@@ -2990,6 +3007,8 @@
 
   el.closeSidebar.onclick =
     closeSidebar;
+
+  if (el.expandSidebarTab) el.expandSidebarTab.onclick = openSidebar;
 
 
   el.sendButton.onclick =
@@ -3216,6 +3235,11 @@
 
 
     applyComposerBackground();
+    updateModelBranding();
+
+    if (localStorage.getItem("spydr.ai.sidebar") === "closed") {
+      $("venomous-app").classList.add("sidebar-collapsed");
+    }
 
     renderHistory();
 

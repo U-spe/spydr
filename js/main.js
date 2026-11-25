@@ -55,25 +55,38 @@ const constText = document.querySelector(".const");
 const foxyOverlay = document.getElementById("foxy-overlay");
 const foxyAudio = document.getElementById("foxy-audio");
 
-const FOXY_COUNT = 36;
-const FOXY_SPAWN_INTERVAL = 75;
-const FOXY_IMAGE_LIFETIME = 350;
+const FOXY_COUNT = 40;
+const FOXY_IMAGE_LIFETIME = 3000;
 const FOXY_SOUND_INTERVAL = 300;
 const FOXY_SEQUENCE_LENGTH = 3000;
 
-let foxySpawnTimer = null;
 let foxySoundTimer = null;
 let foxyEndTimer = null;
+const foxySounds = new Set();
 
 function playFoxySound() {
   if (!foxyAudio) return;
 
   try {
-    foxyAudio.pause();
-    foxyAudio.currentTime = 0;
-    const playback = foxyAudio.play();
+    // Use a fresh audio element each time so sounds overlap instead of restarting.
+    const sound = foxyAudio.cloneNode();
+    sound.currentTime = 0;
+    sound.volume = foxyAudio.volume;
+    foxySounds.add(sound);
+
+    const cleanup = () => {
+      foxySounds.delete(sound);
+      sound.pause();
+      sound.removeAttribute("src");
+      sound.load();
+    };
+
+    sound.addEventListener("ended", cleanup, { once: true });
+
+    const playback = sound.play();
     if (playback && typeof playback.catch === "function") {
       playback.catch(() => {
+        cleanup();
         // Browsers may block audio until the visitor interacts with the page.
       });
     }
@@ -106,42 +119,32 @@ function spawnFoxy() {
 function playFoxySequence() {
   if (!foxyOverlay) return;
 
-  window.clearInterval(foxySpawnTimer);
   window.clearInterval(foxySoundTimer);
   window.clearTimeout(foxyEndTimer);
 
   foxyOverlay.classList.add("active");
   foxyOverlay.setAttribute("aria-hidden", "false");
 
-  let spawned = 0;
-  spawnFoxy();
-  spawned++;
-
-  foxySpawnTimer = window.setInterval(() => {
-    if (spawned >= FOXY_COUNT) {
-      window.clearInterval(foxySpawnTimer);
-      return;
-    }
-
+  // Put all 40 foxies on screen in the same moment.
+  for (let i = 0; i < FOXY_COUNT; i++) {
     spawnFoxy();
-    spawned++;
-  }, FOXY_SPAWN_INTERVAL);
+  }
 
   playFoxySound();
   foxySoundTimer = window.setInterval(playFoxySound, FOXY_SOUND_INTERVAL);
 
   foxyEndTimer = window.setTimeout(() => {
-    window.clearInterval(foxySpawnTimer);
     window.clearInterval(foxySoundTimer);
 
     foxyOverlay.classList.remove("active");
     foxyOverlay.setAttribute("aria-hidden", "true");
     foxyOverlay.replaceChildren();
 
-    if (foxyAudio) {
-      foxyAudio.pause();
-      foxyAudio.currentTime = 0;
+    for (const sound of foxySounds) {
+      sound.pause();
+      sound.currentTime = 0;
     }
+    foxySounds.clear();
   }, FOXY_SEQUENCE_LENGTH);
 }
 

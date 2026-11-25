@@ -88,8 +88,7 @@ export async function onRequest(context) {
     body = rewriter.transform(new Response(body, { headers })).body;
   } else if (/text\/css/i.test(contentType)) {
     const css = await upstreamResponse.text();
-    const escapedOrigin = upstream.origin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    const rewritten = css.replace(new RegExp(escapedOrigin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g"), PREFIX);
+    const rewritten = css.split(upstream.origin).join(PREFIX);
     headers.delete("content-length");
     body = rewritten;
   }

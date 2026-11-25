@@ -192,3 +192,50 @@ body.global-menu-collapsed .dock-shell{
   transform:translateX(-50%);
 }
 body.global-menu-collapsed .dock-shell .dock{display:none!important}
+
+/* Upward folding dock tab */
+.dock-toggle{
+  flex-basis:34px!important;
+  width:34px!important;
+  height:40px!important;
+}
+.dock-toggle i{font-size:24px!important}
+.dock-toggle:hover{transform:translateY(-2px)!important}
+body.global-menu-collapsed .dock-shell{
+  position:fixed;
+  top:0;
+  left:50%;
+  width:34px;
+  height:23px;
+  justify-content:center;
+  align-items:flex-start;
+  transform:translateX(-50%);
+}
+body.global-menu-collapsed .dock-shell .dock{display:none!important}
+body.global-menu-collapsed .dock-toggle{
+  flex:0 0 34px!important;
+  width:34px!important;
+  height:23px!important;
+  min-height:23px!important;
+  padding:0!important;
+  border:1px solid rgba(255,255,255,.13)!important;
+  border-top:0!important;
+  border-radius:0 0 9px 9px!important;
+  background:rgba(18,19,21,.78)!important;
+  box-shadow:0 5px 15px rgba(0,0,0,.2)!important;
+  transform:none!important;
+}
+body.global-menu-collapsed .dock-toggle i{font-size:20px!important}
+@media(max-width:700px){
+  body.global-menu-collapsed .dock-shell{
+    top:0;
+    width:30px;
+    height:21px;
+  }
+  body.global-menu-collapsed .dock-toggle{
+    flex-basis:30px!important;
+    width:30px!important;
+    height:21px!important;
+    min-height:21px!important;
+  }
+}

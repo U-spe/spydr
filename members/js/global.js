@@ -15,7 +15,7 @@ const catalogFallback = [
 ];
 
 let currentUser = null;
-const GUEST_MODE = true;
+const GUEST_MODE = false;
 let profile = null;
 let bookmarks = [];
 let friends = [];
@@ -795,30 +795,42 @@ async function init() {
   inviteTarget = new URLSearchParams(location.search).get("invite") || "";
   updateClock();
   window.setInterval(updateClock, 30000);
-  currentUser = {
-    id: "public-guest",
-    email: "",
-    created_at: new Date().toISOString(),
-    user_metadata: { display_name: readLocal("guest_profile", {}).display_name || "Guest" }
-  };
-  $("#auth-gate").hidden = true;
-  $("#member-app").hidden = false;
-  document.body.classList.add("member-guest-mode");
-  $$(".account-control-row").forEach(row => {
-    if (row.querySelector("#settings-signout")) row.hidden = true;
+
+  showGate();
+  const recoveryMode = /type=recovery/.test(location.hash);
+  if (recoveryMode) {
+    $("#auth-form").hidden = true;
+    $("#recovery-form").hidden = false;
+    $("#auth-heading").innerHTML = "choose a<br><span>new password.</span>";
+    $("#auth-copy").textContent = "Set a new password for your Spydr member account.";
+  }
+
+  try {
+    const { data, error } = await supabase.auth.getSession();
+    if (error) throw error;
+    if (!recoveryMode && data.session?.user) await enterAccount(data.session.user);
+  } catch (error) {
+    setAuthMessage("Account service unavailable: " + error.message, true);
+  }
+
+  supabase.auth.onAuthStateChange((event, session) => {
+    if (event === "PASSWORD_RECOVERY") {
+      showGate();
+      $("#auth-form").hidden = true;
+      $("#recovery-form").hidden = false;
+      $("#auth-heading").innerHTML = "choose a<br><span>new password.</span>";
+      $("#auth-copy").textContent = "Set a new password for your Spydr member account.";
+      return;
+    }
+    if (session?.user && !recoveryMode) {
+      window.setTimeout(() => enterAccount(session.user), 0);
+    } else if (!session && currentUser) {
+      currentUser = null;
+      profile = null;
+      showGate();
+    }
   });
-  $("#sign-out").hidden = true;
-  $("#account-menu-button").hidden = true;
-  $("#copy-invite").hidden = true;
-  $("#copy-invite-inline").hidden = true;
-  $("#friend-add-form").querySelectorAll("input,button").forEach(control => { control.disabled = true; });
-  $("#friend-add-form").querySelector("button").textContent = "sign-in required";
-  const guestNote = document.createElement("div");
-  guestNote.className = "guest-mode-note";
-  guestNote.style.cssText = "display:flex;align-items:center;gap:12px;margin:0 0 22px;padding:13px 16px;border:1px solid #34363b;border-radius:14px;background:rgba(255,255,255,.035);color:#e5e5e7;font-size:13px";
-  guestNote.innerHTML = '<i class="ri-eye-line"></i><span>public guest preview <small>Changes are saved only in this browser.</small></span>';
-  $(".member-content").prepend(guestNote);
-  await loadDashboard();
+
   $("#js-warning")?.remove();
 }
 document.addEventListener("DOMContentLoaded", init);

@@ -1,10 +1,7 @@
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+import { supabase } from "/js/supabase-client.js";
 import { mountMemberNavigation } from "./globalmenu.js";
 import { isValidUUID, safeAvatarUrl, safeAccent, initials, relativeTime, memberSince } from "./member-core.js";
 
-const SUPABASE_URL = "https://bxsiniqhswmiokqshcgi.supabase.co";
-const SUPABASE_KEY = "sb_publishable_UHN349V0ftl3nJVle0za2Q_oWeHWMvd";
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
 const localKey = key => "spydr_members_" + key;
@@ -640,7 +637,7 @@ function bindEvents() {
         const { data, error } = await supabase.auth.signUp({ email, password, options: { data: { display_name: displayName || email.split("@")[0] } } });
         if (error) throw error;
         if (data.session) await enterAccount(data.user);
-        else setAuthMessage("Account created. Check your email to confirm it, then sign in here.");
+        else setAuthMessage("Account created, but email confirmation is still enabled in Supabase. Turn off Authentication → Sign In / Providers → Email → Confirm email, then try again.");
       } else {
         const { data, error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;

@@ -22,6 +22,7 @@ let profile = null;
 let bookmarks = [];
 let friends = [];
 let requests = [];
+let socialReady = false;
 let activity = [];
 let apps = catalogFallback;
 let activeFilter = "all";
@@ -357,6 +358,7 @@ function renderActivity() {
 async function loadFriends() {
   friends = [];
   requests = [];
+  socialReady = false;
   try {
     const { data: links, error } = await supabase.from("member_friendships").select("friend_id").eq("user_id", currentUser.id);
     if (error) throw error;
@@ -374,6 +376,7 @@ async function loadFriends() {
       if (senderError) throw senderError;
       requests = incoming.map(request => ({ ...request, sender: (senders || []).find(sender => sender.user_id === request.sender_id) }));
     }
+    socialReady = true;
   } catch (error) {
     console.info("members // social tables unavailable. Apply members/supabase.sql to enable friends:", error.message);
     friends = [];
@@ -442,9 +445,10 @@ function renderFriends() {
     const sender = request.sender || { display_name: "Spydr member", avatar_url: "" };
     requestList.appendChild(createFriendRow({ ...sender, request_id: request.id }, true));
   });
-  $("#friends-empty").hidden = friends.length > 0;
-  $("#friends-mini-empty").hidden = friends.length > 0;
-  $("#requests-empty").hidden = requests.length > 0;
+  $("#friends-empty").hidden = friends.length > 0 || !socialReady;
+  $("#friends-mini-empty").hidden = friends.length > 0 || !socialReady;
+  $("#requests-empty").hidden = requests.length > 0 || !socialReady;
+  $("#social-setup-note").hidden = socialReady;
   $("#metric-friends").textContent = friends.length;
   $("#friends-count-label").textContent = friends.length + (friends.length === 1 ? " member" : " members");
   $("#requests-count-label").textContent = requests.length + (requests.length === 1 ? " request" : " requests");

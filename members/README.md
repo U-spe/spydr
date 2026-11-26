@@ -10,7 +10,7 @@ The member area lives entirely under `/members`. It uses Spydr's existing global
 - App search, category filters, pinned shortcuts, and local fallback storage.
 - Member invite URLs, friend requests, request approval, friend removal, and friend list.
 - First-visit walkthrough, compact layout, reduced motion, and account preferences.
-- TypeScript member-domain types and normalization helpers under `src/`.
+- TypeScript member-domain types, auth wrappers, app catalog filtering, API contracts, state store, validation, and preference helpers under `src/`.
 - Python catalog builder and structural validator under `tools/`.
 
 ## Supabase setup
@@ -38,6 +38,8 @@ Run from the repository root:
 ```bash
 python members/tools/validate.py
 python members/tools/build_catalog.py
+python -m unittest discover -s members/tests -v
+node members/tools/build.mjs
 ```
 
 The validator checks page anchors, app routes, and RLS coverage. The catalog builder emits a compact search index from the app manifest.

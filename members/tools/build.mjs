@@ -6,7 +6,10 @@ await build({
     new URL("../src/member-core.ts", import.meta.url).pathname,
     new URL("../src/member-validation.ts", import.meta.url).pathname,
     new URL("../src/member-api.ts", import.meta.url).pathname,
-    new URL("../src/member-state.ts", import.meta.url).pathname
+    new URL("../src/member-state.ts", import.meta.url).pathname,
+    new URL("../src/member-auth.ts", import.meta.url).pathname,
+    new URL("../src/member-apps.ts", import.meta.url).pathname,
+    new URL("../src/member-preferences.ts", import.meta.url).pathname
   ],
   outdir: new URL("../dist/", import.meta.url).pathname,
   bundle: false,

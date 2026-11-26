@@ -624,28 +624,56 @@ async function leaveAccount() {
 
 function bindEvents() {
   $$(".auth-tab").forEach(button => button.addEventListener("click", () => setAuthMode(button.dataset.authMode)));
+  let authRequestPending = false;
+  let authCooldownUntil = 0;
+
   $("#auth-form").addEventListener("submit", async event => {
     event.preventDefault();
+    if (authRequestPending) return;
+
+    const now = Date.now();
+    if (now < authCooldownUntil) {
+      const seconds = Math.ceil((authCooldownUntil - now) / 1000);
+      setAuthMessage(`Too many account requests. Wait ${seconds}s before trying again.`, true);
+      return;
+    }
+
     const mode = $(".auth-tab.active")?.dataset.authMode || "signin";
     const email = $("#auth-email").value.trim();
     const password = $("#auth-password").value;
     const displayName = $("#auth-display-name").value.trim();
+
+    authRequestPending = true;
     $("#auth-submit").disabled = true;
     setAuthMessage(mode === "signup" ? "creating your account..." : "signing in...");
+
     try {
       if (mode === "signup") {
-        const { data, error } = await supabase.auth.signUp({ email, password, options: { data: { display_name: displayName || email.split("@")[0] } } });
+        const { data, error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: { data: { display_name: displayName || email.split("@")[0] } }
+        });
         if (error) throw error;
         if (data.session) await enterAccount(data.user);
-        else setAuthMessage("Account created, but email confirmation is still enabled in Supabase. Turn off Authentication → Sign In / Providers → Email → Confirm email, then try again.");
+        else setAuthMessage("Account created. Check your email to confirm your account before signing in.");
       } else {
         const { data, error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
         await enterAccount(data.user);
       }
     } catch (error) {
-      setAuthMessage(error.message || "Couldn't complete that request.", true);
+      const status = Number(error.status || error.statusCode || 0);
+      const message = String(error.message || "");
+      if (status === 429 || /rate.?limit|too many requests/i.test(message)) {
+        authCooldownUntil = Date.now() + 30000;
+        setAuthMessage("Supabase is temporarily rate-limiting account requests. Wait a minute, then try once. If it keeps happening, check Supabase Auth rate limits and email provider settings.", true);
+      } else {
+        setAuthMessage(message || "Couldn't complete that request. Please try again.", true);
+      }
+      console.error("members // authentication request failed:", error);
     } finally {
+      authRequestPending = false;
       $("#auth-submit").disabled = false;
     }
   });

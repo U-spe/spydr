@@ -1,9 +1,4 @@
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
-
-const supabase = createClient(
-  "https://bxsiniqhswmiokqshcgi.supabase.co",
-  "sb_publishable_UHN349V0ftl3nJVle0za2Q_oWeHWMvd"
-);
+import { supabase } from "./supabase-client.js";
 
 let currentUser = null;
 let currentChannel = "global";

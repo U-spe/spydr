@@ -10,6 +10,7 @@ let currentChannel = "global";
 let realtimeSubscription = null;
 let selectedImage = null;
 let previewUrl = null;
+const renderedMessageIds = new Set();
 
 const IMAGE_BUCKET = "chat-images";
 const MAX_IMAGE_SIZE = 5 * 1024 * 1024;
@@ -90,7 +91,10 @@ async function switchChannel(targetChannel) {
   if (chatTitle) chatTitle.innerHTML = `<i class="ri-hashtag"></i> ${escapeHTML(currentChannel)}`;
   if (chatDesc) chatDesc.textContent = channelDescriptions[currentChannel] || "Secure terminal network.";
   updateComposerState();
-  if (messagesContainer) messagesContainer.innerHTML = "";
+  if (messagesContainer) {
+    messagesContainer.innerHTML = "";
+    renderedMessageIds.clear();
+  }
   await loadMessages();
   subscribeToMessages();
 }
@@ -102,20 +106,31 @@ if (createDmBtn) {
 }
 
 async function loadMessages() {
+  const channelAtRequest = currentChannel;
   const { data: messages, error } = await supabase
     .from("messages")
     .select("*")
-    .eq("channel", currentChannel)
-    .order("created_at", { ascending: true })
-    .limit(50);
+    .eq("channel", channelAtRequest)
+    .order("created_at", { ascending: false })
+    .limit(100);
 
   if (error) {
-    console.error("Error loading messages:", error);
+    console.error("spydr chat // message history failed:", error);
+    if (messagesContainer) {
+      messagesContainer.innerHTML = "";
+      const notice = document.createElement("div");
+      notice.className = "msg-text";
+      notice.textContent = `Could not load chat history: ${error.message}`;
+      messagesContainer.appendChild(notice);
+    }
     return;
   }
+
+  if (channelAtRequest !== currentChannel) return;
   if (messagesContainer) {
     messagesContainer.innerHTML = "";
-    messages.forEach(appendMessageUI);
+    renderedMessageIds.clear();
+    (messages || []).reverse().forEach(appendMessageUI);
     scrollToBottom();
   }
 }
@@ -130,6 +145,7 @@ function subscribeToMessages() {
       table: "messages",
       filter: `channel=eq.${currentChannel}`
     }, payload => {
+      if (payload.new?.channel !== currentChannel) return;
       appendMessageUI(payload.new);
       scrollToBottom();
     })
@@ -196,19 +212,29 @@ if (chatForm) {
       let imageUrl = null;
       if (imageFile) imageUrl = await uploadChatImage(imageFile);
 
-      const { error } = await supabase.from("messages").insert([{
-        user_email: currentUser.email,
-        content,
-        channel: currentChannel,
-        image_url: imageUrl
-      }]);
+      const { data: savedMessage, error } = await supabase
+        .from("messages")
+        .insert([{
+          user_email: currentUser.email,
+          content,
+          channel: currentChannel,
+          image_url: imageUrl
+        }])
+        .select("*")
+        .single();
+
       if (error) throw error;
+
+      if (savedMessage && savedMessage.channel === currentChannel) {
+        appendMessageUI(savedMessage);
+        scrollToBottom();
+      }
 
       messageInput.value = "";
       clearSelectedImage();
     } catch (error) {
-      console.error("Error sending chat message:", error);
-      alert("Could not send that message. Check the chat database and image bucket setup.");
+      console.error("spydr chat // send failed:", error);
+      alert(`Message was not saved: ${error?.message || error}`);
     } finally {
       updateComposerState();
     }
@@ -223,6 +249,11 @@ function escapeHTML(value = "") {
 
 function appendMessageUI(message) {
   if (!messagesContainer) return;
+  if (message?.id !== undefined && message?.id !== null) {
+    const messageId = String(message.id);
+    if (renderedMessageIds.has(messageId)) return;
+    renderedMessageIds.add(messageId);
+  }
   const time = new Date(message.created_at).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   const username = message.user_email ? message.user_email.split("@")[0] : "System";
 

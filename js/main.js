@@ -14,11 +14,10 @@ function updateClock() {
   }
 
   if (dateEl) {
-    dateEl.textContent = now.toLocaleDateString([], {
-      weekday: "short",
-      month: "short",
-      day: "numeric"
-    });
+    const month = now.getMonth() + 1;
+    const day = now.getDate();
+    const year = String(now.getFullYear()).slice(-2);
+    dateEl.textContent = `${month}.${day}.${year}`;
   }
 }
 

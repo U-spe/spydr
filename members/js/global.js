@@ -15,6 +15,7 @@ const catalogFallback = [
 ];
 
 let currentUser = null;
+const GUEST_MODE = true;
 let profile = null;
 let bookmarks = [];
 let friends = [];
@@ -129,6 +130,13 @@ async function loadCatalog() {
 
 async function loadProfile() {
   const metadata = currentUser.user_metadata || {};
+  if (GUEST_MODE) {
+    const saved = readLocal("guest_profile", {});
+    profile = { user_id: "public-guest", display_name: String(saved.display_name || "Guest").slice(0, 28), avatar_url: safeAvatarUrl(saved.avatar_url || ""), bio: saved.bio || "Exploring Spydr Members in guest mode.", status: saved.status || "online", accent: safeAccent(saved.accent), preferences: saved.preferences || readLocal("preferences", {}) };
+    hydrateProfileUI();
+    applyPreferences();
+    return;
+  }
   const fallback = {
     user_id: currentUser.id,
     display_name: metadata.display_name || currentUser.email?.split("@")[0] || "Member",
@@ -258,7 +266,13 @@ function renderApps() {
   $("#apps-empty").hidden = filtered.length > 0;
 }
 async function loadBookmarks() {
-  let list = readLocal("bookmarks", []);
+  let list = readLocal(GUEST_MODE ? "guest_bookmarks" : "bookmarks", []);
+  if (GUEST_MODE) {
+    bookmarks = [...new Set(list)].filter(id => apps.some(app => app.id === id));
+    renderPinned();
+    renderApps();
+    return;
+  }
   try {
     const { data, error } = await supabase.from("member_bookmarks").select("app_id").eq("user_id", currentUser.id).order("position");
     if (error) throw error;
@@ -274,10 +288,14 @@ async function loadBookmarks() {
 async function toggleBookmark(id) {
   const exists = bookmarks.includes(id);
   bookmarks = exists ? bookmarks.filter(value => value !== id) : [...bookmarks, id];
-  writeLocal("bookmarks", bookmarks);
+  writeLocal(GUEST_MODE ? "guest_bookmarks" : "bookmarks", bookmarks);
   renderPinned();
   renderApps();
   trackActivity(exists ? "bookmark_removed" : "bookmark_added", id);
+  if (GUEST_MODE) {
+    showToast(exists ? "Removed from this browser." : "Pinned in this browser.", "success");
+    return;
+  }
   try {
     if (exists) {
       const { error } = await supabase.from("member_bookmarks").delete().eq("user_id", currentUser.id).eq("app_id", id);
@@ -303,8 +321,9 @@ const activityLabels = {
 async function trackActivity(type, detail = "") {
   const event = { type, detail: String(detail).slice(0, 80), created_at: new Date().toISOString() };
   activity = [event, ...activity].slice(0, 10);
-  writeLocal("activity", activity);
+  writeLocal(GUEST_MODE ? "guest_activity" : "activity", activity);
   renderActivity();
+  if (GUEST_MODE) return;
   try {
     const { error } = await supabase.from("member_activity").insert({ user_id: currentUser.id, event_type: type, detail: event.detail });
     if (error) throw error;
@@ -313,7 +332,12 @@ async function trackActivity(type, detail = "") {
   }
 }
 async function loadActivity() {
-  let list = readLocal("activity", []);
+  let list = readLocal(GUEST_MODE ? "guest_activity" : "activity", []);
+  if (GUEST_MODE) {
+    activity = list;
+    renderActivity();
+    return;
+  }
   try {
     const { data, error } = await supabase.from("member_activity").select("event_type,detail,created_at").eq("user_id", currentUser.id).order("created_at", { ascending: false }).limit(8);
     if (error) throw error;
@@ -355,7 +379,11 @@ function renderActivity() {
 async function loadFriends() {
   friends = [];
   requests = [];
-  socialReady = false;
+  socialReady = GUEST_MODE;
+  if (GUEST_MODE) {
+    renderFriends();
+    return;
+  }
   try {
     const { data: links, error } = await supabase.from("member_friendships").select("friend_id").eq("user_id", currentUser.id);
     if (error) throw error;
@@ -461,6 +489,7 @@ async function sendFriendRequest(targetId) {
     showToast("You can't add your own account.", "error");
     return;
   }
+  if (GUEST_MODE) return showToast("Friend connections need a signed-in member account.", "error");
   const { data, error } = await supabase.rpc("member_send_friend_request", { target_id: targetId });
   if (error) {
     showToast("Friend requests need the member database setup. Check /members/supabase.sql.", "error");
@@ -534,6 +563,16 @@ async function saveProfile(event) {
   const saveState = $("#profile-save-state");
   saveState.textContent = "saving...";
   const metadata = { display_name: displayName, avatar_url: avatarUrl, bio, status, accent, preferences: profile?.preferences || {} };
+  if (GUEST_MODE) {
+    profile = { ...profile, ...metadata };
+    writeLocal("guest_profile", profile);
+    hydrateProfileUI();
+    applyPreferences();
+    setGreeting();
+    saveState.textContent = "saved in this browser only.";
+    showToast("Guest profile saved on this device.", "success");
+    return;
+  }
   const { data, error } = await supabase.auth.updateUser({ data: metadata });
   if (error) {
     saveState.textContent = "couldn't save";
@@ -561,6 +600,15 @@ async function savePreferences() {
     reduceMotion: $("#motion-toggle").checked,
     accent: safeAccent($("#settings-accent").value)
   };
+  if (GUEST_MODE) {
+    profile = { ...profile, preferences, accent: preferences.accent };
+    writeLocal("guest_profile", profile);
+    writeLocal("preferences", preferences);
+    applyPreferences();
+    $("#profile-accent").value = preferences.accent;
+    showToast("Preferences saved in this browser.", "success");
+    return;
+  }
   const { data, error } = await supabase.auth.updateUser({ data: { preferences, accent: preferences.accent } });
   if (error) return showToast(error.message, "error");
   currentUser = data.user || currentUser;
@@ -571,6 +619,7 @@ async function savePreferences() {
   showToast("Preferences saved.", "success");
 }
 async function resetPassword() {
+  if (GUEST_MODE) return showToast("Password reset is unavailable in guest mode.", "error");
   const email = currentUser.email;
   if (!email) return showToast("No account email is available.", "error");
   const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo: new URL("/members/", location.origin).href });
@@ -610,6 +659,7 @@ async function enterAccount(user) {
   }
 }
 async function leaveAccount() {
+  if (GUEST_MODE) return showToast("You are browsing as a guest.", "success");
   currentUser = null;
   profile = null;
   bookmarks = [];
@@ -741,37 +791,25 @@ async function init() {
   inviteTarget = new URLSearchParams(location.search).get("invite") || "";
   updateClock();
   window.setInterval(updateClock, 30000);
-  showGate();
-  const recoveryMode = /type=recovery/.test(location.hash);
-  if (recoveryMode) {
-    showGate();
-    $("#auth-form").hidden = true;
-    $("#recovery-form").hidden = false;
-    $("#auth-heading").innerHTML = "choose a<br><span>new password.</span>";
-    $("#auth-copy").textContent = "Set a new password for your Spydr member account.";
-  }
-  try {
-    const { data, error } = await supabase.auth.getSession();
-    if (error) throw error;
-    if (!recoveryMode && data.session?.user) await enterAccount(data.session.user);
-  } catch (error) {
-    setAuthMessage("Account service unavailable: " + error.message, true);
-  }
-  supabase.auth.onAuthStateChange((_event, session) => {
-    if (_event === "PASSWORD_RECOVERY") {
-      showGate();
-      $("#auth-form").hidden = true;
-      $("#recovery-form").hidden = false;
-      $("#auth-heading").innerHTML = "choose a<br><span>new password.</span>";
-      $("#auth-copy").textContent = "Set a new password for your Spydr member account.";
-      return;
-    }
-    if (session?.user && !recoveryMode) window.setTimeout(() => enterAccount(session.user), 0);
-    else if (!session && currentUser) {
-      currentUser = null;
-      showGate();
-    }
+  currentUser = {
+    id: "public-guest",
+    email: "",
+    created_at: new Date().toISOString(),
+    user_metadata: { display_name: readLocal("guest_profile", {}).display_name || "Guest" }
+  };
+  $("#auth-gate").hidden = true;
+  $("#member-app").hidden = false;
+  document.body.classList.add("member-guest-mode");
+  $(".account-control-row").forEach(row => {
+    if (row.querySelector("#settings-signout")) row.hidden = true;
   });
+  $("#sign-out").hidden = true;
+  $("#account-menu-button").hidden = true;
+  const guestNote = document.createElement("div");
+  guestNote.className = "guest-mode-note";
+  guestNote.innerHTML = '<i class="ri-eye-line"></i><span>public guest preview <small>Changes are saved only in this browser.</small></span>';
+  $(".member-content").prepend(guestNote);
+  await loadDashboard();
   $("#js-warning")?.remove();
 }
 document.addEventListener("DOMContentLoaded", init);

@@ -473,7 +473,11 @@ function renderFriends() {
   $("#friends-empty").hidden = friends.length > 0 || !socialReady;
   $("#friends-mini-empty").hidden = friends.length > 0 || !socialReady;
   $("#requests-empty").hidden = requests.length > 0 || !socialReady;
-  $("#social-setup-note").hidden = socialReady;
+  $("#social-setup-note").hidden = socialReady && !GUEST_MODE;
+  if (GUEST_MODE) {
+    $("#social-setup-note").hidden = false;
+    $("#social-setup-note").querySelector("span").innerHTML = "<strong>guest preview.</strong><small>Friend connections are available to signed-in members.</small>";
+  }
   $("#metric-friends").textContent = friends.length;
   $("#friends-count-label").textContent = friends.length + (friends.length === 1 ? " member" : " members");
   $("#requests-count-label").textContent = requests.length + (requests.length === 1 ? " request" : " requests");
@@ -805,8 +809,13 @@ async function init() {
   });
   $("#sign-out").hidden = true;
   $("#account-menu-button").hidden = true;
+  $("#copy-invite").hidden = true;
+  $("#copy-invite-inline").hidden = true;
+  $("#friend-add-form").querySelectorAll("input,button").forEach(control => { control.disabled = true; });
+  $("#friend-add-form").querySelector("button").textContent = "sign-in required";
   const guestNote = document.createElement("div");
   guestNote.className = "guest-mode-note";
+  guestNote.style.cssText = "display:flex;align-items:center;gap:12px;margin:0 0 22px;padding:13px 16px;border:1px solid #34363b;border-radius:14px;background:rgba(255,255,255,.035);color:#e5e5e7;font-size:13px";
   guestNote.innerHTML = '<i class="ri-eye-line"></i><span>public guest preview <small>Changes are saved only in this browser.</small></span>';
   $(".member-content").prepend(guestNote);
   await loadDashboard();

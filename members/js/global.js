@@ -804,7 +804,7 @@ async function init() {
   $("#auth-gate").hidden = true;
   $("#member-app").hidden = false;
   document.body.classList.add("member-guest-mode");
-  $(".account-control-row").forEach(row => {
+  $$(".account-control-row").forEach(row => {
     if (row.querySelector("#settings-signout")) row.hidden = true;
   });
   $("#sign-out").hidden = true;

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Your Spydr member dashboard.">
+  <title>spydr // members</title>
+  <link rel="icon" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/monochrome.css">
+  <link rel="stylesheet" href="/members/css/dashboard.css">
+</head>
+<body data-bg-style="stars">
+  <div id="loader"></div>
+  <div id="js-warning" class="member-js-warning"><strong>SYS_WARNING:</strong> Spydr Members needs JavaScript enabled.</div>
+  <div id="bg-effects-container" aria-hidden="true">
+    <canvas id="stars-canvas"></canvas>
+    <div id="fog-overlay"></div>
+    <div id="theme-fx-container"></div>
+  </div>
+  <div id="global-menu"></div>
+
+  <main class="member-frame">
+    <section class="auth-gate" id="auth-gate" hidden>
+      <div class="auth-brand">
+        <img src="/assets/images/logo.png" alt="">
+        <span>spydr<span class="auth-brand-plus"> / members</span></span>
+      </div>
+      <div class="auth-card">
+        <div class="auth-kicker"><span class="live-dot"></span> MEMBER ACCESS</div>
+        <h1 id="auth-heading">Your space.<br><span>Your Spydr.</span></h1>
+        <p class="auth-copy" id="auth-copy">Sign in to open your member dashboard, manage your profile, and keep your apps close.</p>
+        <div class="auth-tabs" role="tablist" aria-label="Account">
+          <button class="auth-tab active" type="button" data-auth-mode="signin" role="tab" aria-selected="true">sign in</button>
+          <button class="auth-tab" type="button" data-auth-mode="signup" role="tab" aria-selected="false">create account</button>
+        </div>
+        <form id="auth-form" class="auth-form">
+          <label id="display-name-wrap" hidden>display name<input id="auth-display-name" name="displayName" type="text" maxlength="28" autocomplete="nickname" placeholder="what should we call you?"></label>
+          <label>email<input id="auth-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+          <label>password<input id="auth-password" name="password" type="password" minlength="8" autocomplete="current-password" required placeholder="at least 8 characters"></label>
+          <button class="primary-button auth-submit" id="auth-submit" type="submit">continue <i class="ri-arrow-right-line"></i></button>
+        </form>
+        <div class="auth-utility">
+          <button type="button" id="forgot-password" class="text-button">forgot password?</button>
+          <span>spydr stays free. membership starts with your account.</span>
+        </div>
+        <p class="auth-message" id="auth-message" role="status" aria-live="polite"></p>
+        <a class="back-home" href="/"><i class="ri-arrow-left-line"></i> back to spydr</a>
+      </div>
+      <p class="auth-footnote">SPYDR NETWORK <span>•</span> ACCOUNT SERVICES</p>
+    </section>
+
+    <section class="member-app" id="member-app" hidden>
+      <aside class="member-sidebar" id="member-sidebar">
+        <div class="sidebar-brand">
+          <a href="/" class="sidebar-logo" aria-label="Spydr home"><img src="/assets/images/logo.png" alt=""></a>
+          <div><strong>spydr</strong><span>MEMBER SPACE</span></div>
+          <button class="sidebar-close" id="sidebar-close" type="button" aria-label="Close navigation"><i class="ri-close-line"></i></button>
+        </div>
+        <div class="sidebar-label">workspace</div>
+        <nav class="member-nav" id="member-nav" aria-label="Member navigation">
+          <button class="member-nav-link active" type="button" data-page="dashboard"><i class="ri-layout-grid-line"></i><span>Dashboard</span><kbd>01</kbd></button>
+          <button class="member-nav-link" type="button" data-page="apps"><i class="ri-apps-2-line"></i><span>My apps</span><kbd>02</kbd></button>
+          <button class="member-nav-link" type="button" data-page="friends"><i class="ri-group-line"></i><span>Friends</span><kbd>03</kbd><span class="nav-count" id="request-count" hidden>0</span></button>
+          <button class="member-nav-link" type="button" data-page="profile"><i class="ri-user-3-line"></i><span>Profile</span><kbd>04</kbd></button>
+          <button class="member-nav-link" type="button" data-page="settings"><i class="ri-settings-3-line"></i><span>Settings</span><kbd>05</kbd></button>
+        </nav>
+        <div class="sidebar-bottom">
+          <a href="/review.html" class="sidebar-support"><i class="ri-message-3-line"></i><span>Community chat</span><i class="ri-arrow-up-right-line"></i></a>
+          <div class="sidebar-account">
+            <div class="avatar avatar-small" id="sidebar-avatar">S</div>
+            <div class="account-copy"><strong id="sidebar-name">Member</strong><span>spydr member</span></div>
+            <button id="account-menu-button" class="icon-button" type="button" title="Account options" aria-label="Account options"><i class="ri-more-2-fill"></i></button>
+          </div>
+          <div class="account-menu" id="account-menu" hidden>
+            <button type="button" data-page="profile"><i class="ri-user-line"></i> profile</button>
+            <button type="button" id="sign-out"><i class="ri-logout-box-r-line"></i> sign out</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="member-main">
+        <header class="member-topbar">
+          <div class="topbar-left">
+            <button class="icon-button mobile-menu-button" id="mobile-menu-button" type="button" aria-label="Open navigation"><i class="ri-menu-2-line"></i></button>
+            <div class="breadcrumb"><span>spydr</span><i class="ri-arrow-right-s-line"></i><strong id="breadcrumb-current">dashboard</strong></div>
+          </div>
+          <div class="topbar-actions">
+            <div class="topbar-date"><span id="member-date">--</span><strong id="member-clock">--:--</strong></div>
+            <button class="topbar-profile" type="button" data-page="profile" aria-label="Open profile">
+              <span class="avatar avatar-top" id="top-avatar">S</span>
+              <span><strong id="top-name">Member</strong><small>member account</small></span>
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+          </div>
+        </header>
+
+        <div class="member-content">
+          <div class="invite-banner" id="invite-banner" hidden>
+            <div><i class="ri-user-add-line"></i><span><strong>you received a friend invite</strong><small>Connect with this Spydr member.</small></span></div>
+            <button class="secondary-button" id="accept-invite" type="button">add friend <i class="ri-arrow-right-line"></i></button>
+            <button class="icon-button" id="dismiss-invite" type="button" aria-label="Dismiss invite"><i class="ri-close-line"></i></button>
+          </div>
+
+          <section class="member-view active" id="view-dashboard" data-view="dashboard">
+            <div class="page-heading">
+              <div><div class="eyebrow"><span class="live-dot"></span> YOUR MEMBER SPACE</div><h1 id="member-greeting">welcome back.</h1><p>Everything you use in Spydr, in one place.</p></div>
+              <button class="secondary-button" type="button" data-page="profile"><i class="ri-edit-line"></i> edit profile</button>
+            </div>
+
+            <div class="dashboard-grid">
+              <div class="dashboard-main-column">
+                <article class="welcome-card">
+                  <div class="welcome-card-bg"><span class="orb orb-one"></span><span class="orb orb-two"></span><span class="orb orb-three"></span></div>
+                  <div class="welcome-card-content">
+                    <div class="welcome-overline"><span class="member-pill"><i class="ri-verified-badge-line"></i> MEMBER</span><span id="member-local-time">YOUR SPACE</span></div>
+                    <h2>good to have<br><span id="welcome-name">you</span> here.</h2>
+                    <p id="welcome-status">Your Spydr setup is ready when you are.</p>
+                    <button class="light-button" type="button" data-page="apps">open my apps <i class="ri-arrow-right-line"></i></button>
+                  </div>
+                  <div class="welcome-brand">spydr<span> / m</span></div>
+                </article>
+
+                <div class="metric-grid">
+                  <article class="metric-card"><div class="metric-icon"><i class="ri-bookmark-3-line"></i></div><span>saved apps</span><strong id="metric-bookmarks">0</strong><small>your pinned shortcuts</small></article>
+                  <article class="metric-card"><div class="metric-icon"><i class="ri-group-line"></i></div><span>friends</span><strong id="metric-friends">0</strong><small>your Spydr circle</small></article>
+                  <article class="metric-card"><div class="metric-icon"><i class="ri-calendar-check-line"></i></div><span>member since</span><strong id="metric-member-since">today</strong><small id="metric-member-since-full">account created</small></article>
+                </div>
+
+                <section class="content-card app-preview-card">
+                  <div class="card-heading"><div><span class="card-eyebrow">YOUR SHORTCUTS</span><h2>pinned apps</h2></div><button class="inline-link" type="button" data-page="apps">manage apps <i class="ri-arrow-right-line"></i></button></div>
+                  <div class="pinned-grid" id="pinned-grid"></div>
+                  <div class="empty-state compact-empty" id="pinned-empty" hidden><i class="ri-bookmark-line"></i><span>pin a few apps and they’ll show up here.</span><button class="inline-link" type="button" data-page="apps">browse apps</button></div>
+                </section>
+
+                <section class="content-card activity-card">
+                  <div class="card-heading"><div><span class="card-eyebrow">YOUR FOOTPRINT</span><h2>recent activity</h2></div><span class="subtle-count" id="activity-count">0 events</span></div>
+                  <div class="activity-list" id="activity-list"></div>
+                  <div class="empty-state compact-empty" id="activity-empty" hidden><i class="ri-time-line"></i><span>your recent member activity will show here.</span></div>
+                </section>
+              </div>
+
+              <aside class="dashboard-rail">
+                <section class="content-card profile-summary-card">
+                  <div class="profile-cover"><span></span><span></span><span></span></div>
+                  <div class="profile-summary-body">
+                    <div class="avatar avatar-large" id="profile-avatar">S</div>
+                    <div class="profile-title-row"><div><h2 id="summary-name">Member</h2><span class="member-tag"><i class="ri-checkbox-circle-fill"></i> MEMBER</span></div><button class="icon-button" type="button" data-page="profile" aria-label="Edit profile"><i class="ri-edit-line"></i></button></div>
+                    <p id="summary-bio">Your Spydr profile. Make it yours.</p>
+                    <div class="profile-status-row"><span class="status-dot" id="status-dot"></span><span id="summary-status">online</span><span class="profile-id" id="profile-id-short">ID —</span></div>
+                  </div>
+                </section>
+
+                <section class="content-card friends-mini-card">
+                  <div class="card-heading"><div><span class="card-eyebrow">YOUR PEOPLE</span><h2>friends</h2></div><button class="icon-only-link" type="button" data-page="friends" aria-label="Manage friends"><i class="ri-arrow-right-up-line"></i></button></div>
+                  <div id="friends-mini-list" class="friends-mini-list"></div>
+                  <div class="empty-state mini-empty" id="friends-mini-empty"><i class="ri-user-add-line"></i><span>your circle starts here.</span><button class="inline-link" type="button" data-page="friends">invite someone</button></div>
+                </section>
+
+                <section class="quick-note-card">
+                  <div class="quick-note-icon"><i class="ri-flashlight-line"></i></div>
+                  <div><strong>keep it close.</strong><p>Pin your most-used Spydr pages for one-click access.</p><button type="button" data-page="apps">set up shortcuts <i class="ri-arrow-right-line"></i></button></div>
+                </section>
+              </aside>
+            </div>
+          </section>
+
+          <section class="member-view" id="view-apps" data-view="apps" hidden>
+            <div class="page-heading"><div><div class="eyebrow">YOUR LIBRARY</div><h1>my apps.</h1><p>Your Spydr shortcuts, ready when you are.</p></div><span class="view-counter" id="apps-count">0 apps</span></div>
+            <div class="apps-toolbar"><label class="search-field"><i class="ri-search-line"></i><input id="app-search" type="search" placeholder="find an app..." autocomplete="off"></label><div class="filter-pills" id="app-filters"><button type="button" class="filter-pill active" data-filter="all">all</button><button type="button" class="filter-pill" data-filter="saved">pinned</button><button type="button" class="filter-pill" data-filter="core">core</button><button type="button" class="filter-pill" data-filter="social">social</button></div></div>
+            <div class="app-library-grid" id="app-library-grid"></div>
+            <div class="empty-state library-empty" id="apps-empty" hidden><i class="ri-search-eye-line"></i><strong>nothing found.</strong><span>Try another search or category.</span></div>
+          </section>
+
+          <section class="member-view" id="view-friends" data-view="friends" hidden>
+            <div class="page-heading"><div><div class="eyebrow">YOUR CIRCLE</div><h1>friends.</h1><p>Keep your Spydr people close.</p></div><button class="secondary-button" id="copy-invite" type="button"><i class="ri-user-add-line"></i> invite friends</button></div>
+            <div class="friends-layout">
+              <section class="content-card friend-invite-card"><div class="card-eyebrow">BRING YOUR PEOPLE</div><h2>your corner of Spydr.</h2><p>Share your invite link. Friends can use it to connect with your member account.</p><div class="invite-link-row"><input id="invite-link" type="text" readonly aria-label="Your friend invite link"><button class="primary-button" id="copy-invite-inline" type="button"><i class="ri-file-copy-line"></i> copy</button></div><div class="friend-id-row"><span>your member ID</span><code id="member-id">—</code><button class="icon-button" id="copy-member-id" type="button" aria-label="Copy member ID"><i class="ri-file-copy-line"></i></button></div></section>
+              <section class="content-card friend-add-card"><div class="card-eyebrow">CONNECT</div><h2>add a member</h2><p>Paste a member ID from a friend’s invite.</p><form id="friend-add-form" class="friend-add-form"><input id="friend-id-input" type="text" maxlength="36" placeholder="member ID (UUID)" autocomplete="off" required><button class="secondary-button" type="submit">send request <i class="ri-arrow-right-line"></i></button></form></section>
+            </div>
+            <section class="content-card friends-section-card"><div class="card-heading"><div><span class="card-eyebrow">CONNECTED</span><h2>your friends</h2></div><span class="subtle-count" id="friends-count-label">0 members</span></div><div class="friend-list" id="friend-list"></div><div class="empty-state compact-empty" id="friends-empty"><i class="ri-group-line"></i><span>no friends here yet.</span><small>Send an invite link to get your circle started.</small></div></section>
+            <section class="content-card requests-section-card"><div class="card-heading"><div><span class="card-eyebrow">PENDING</span><h2>friend requests</h2></div><span class="subtle-count" id="requests-count-label">0 requests</span></div><div class="request-list" id="request-list"></div><div class="empty-state compact-empty" id="requests-empty"><i class="ri-mail-open-line"></i><span>you're all caught up.</span></div></section>
+          </section>
+
+          <section class="member-view" id="view-profile" data-view="profile" hidden>
+            <div class="page-heading"><div><div class="eyebrow">YOUR IDENTITY</div><h1>profile.</h1><p>Give your member account its own feel.</p></div><span class="member-pill"><i class="ri-verified-badge-line"></i> MEMBER</span></div>
+            <div class="profile-editor-layout">
+              <section class="content-card profile-editor-card">
+                <div class="editor-preview"><div class="avatar avatar-editor" id="editor-avatar">S</div><div><strong id="editor-preview-name">Member</strong><span id="editor-preview-status">online</span></div></div>
+                <form id="profile-form" class="member-form">
+                  <label>display name<input id="profile-name" type="text" maxlength="28" required placeholder="your display name"></label>
+                  <label>avatar image URL <span class="field-note">optional, HTTPS image link</span><input id="profile-avatar-url" type="url" placeholder="https://..."></label>
+                  <label>about you<textarea id="profile-bio" maxlength="180" rows="3" placeholder="a little about yourself..."></textarea><span class="field-note align-right" id="bio-length">0 / 180</span></label>
+                  <div class="form-two-column"><label>status<select id="profile-status"><option value="online">online</option><option value="away">away</option><option value="busy">busy</option><option value="invisible">invisible</option></select></label><label>accent color<input id="profile-accent" type="color" value="#d7d8dc"></label></div>
+                  <div class="form-actions"><span id="profile-save-state" class="form-hint">changes sync to your account.</span><button class="primary-button" type="submit">save profile <i class="ri-check-line"></i></button></div>
+                </form>
+              </section>
+              <aside class="content-card profile-details-card"><div class="card-eyebrow">ACCOUNT DETAILS</div><div class="detail-row"><span>account email</span><strong id="detail-email">—</strong></div><div class="detail-row"><span>member since</span><strong id="detail-created">—</strong></div><div class="detail-row"><span>member ID</span><code id="detail-id">—</code></div><div class="detail-row"><span>account</span><strong class="account-active"><i class="ri-checkbox-circle-fill"></i> active</strong></div><button class="secondary-button full-width" type="button" id="copy-profile-id"><i class="ri-file-copy-line"></i> copy member ID</button></aside>
+            </div>
+          </section>
+
+          <section class="member-view" id="view-settings" data-view="settings" hidden>
+            <div class="page-heading"><div><div class="eyebrow">PREFERENCES</div><h1>settings.</h1><p>Make your member dashboard feel right.</p></div></div>
+            <div class="settings-layout">
+              <section class="content-card settings-card"><div class="card-eyebrow">APPEARANCE</div><h2>dashboard feel</h2><div class="setting-row"><div><strong>accent color</strong><small>Used for highlights and selected controls.</small></div><input id="settings-accent" type="color" value="#d7d8dc"></div><div class="setting-row"><div><strong>compact layout</strong><small>Reduce gaps and card padding.</small></div><label class="toggle"><input id="compact-toggle" type="checkbox"><span></span></label></div><div class="setting-row"><div><strong>reduce motion</strong><small>Limit decorative transitions and effects.</small></div><label class="toggle"><input id="motion-toggle" type="checkbox"><span></span></label></div><button class="secondary-button" id="save-settings" type="button">save preferences <i class="ri-check-line"></i></button></section>
+              <section class="content-card settings-card"><div class="card-eyebrow">ACCOUNT</div><h2>account controls</h2><div class="account-control-row"><div><strong>password</strong><small>Send a password reset link to your email.</small></div><button class="secondary-button" id="send-reset" type="button">reset password</button></div><div class="account-control-row"><div><strong>sign out</strong><small>Sign out of this browser session.</small></div><button class="danger-button" id="settings-signout" type="button"><i class="ri-logout-box-r-line"></i> sign out</button></div></section>
+            </div>
+            <p class="settings-footnote">Your global Spydr theme is still managed in <a href="/settings.html">Spydr settings</a>. Member accent and layout settings stay separate.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="member-overlay" id="member-overlay" hidden>
+    <section class="tour-card" role="dialog" aria-modal="true" aria-labelledby="tour-title">
+      <button class="icon-button tour-close" id="tour-close" type="button" aria-label="Close welcome tour"><i class="ri-close-line"></i></button>
+      <span class="tour-mark"><i class="ri-sparkling-2-line"></i></span>
+      <div class="card-eyebrow">FIRST TIME HERE?</div>
+      <h2 id="tour-title">welcome to<br>your member space.</h2>
+      <p>Your dashboard brings your profile, saved apps, friends, and preferences together. Start by pinning the pages you use most.</p>
+      <div class="tour-steps"><span><b>01</b> personalize your profile</span><span><b>02</b> pin your favorite apps</span><span><b>03</b> invite your people</span></div>
+      <button class="primary-button full-width" id="tour-start" type="button">let’s go <i class="ri-arrow-right-line"></i></button>
+    </section>
+  </div>
+  <div class="member-toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="/js/load.js"></script>
+  <script src="/js/globalmenu.js"></script>
+  <script type="module" src="/js/global.js"></script>
+  <script type="module" src="/members/js/global.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "apps": [
+    {"id":"games","name":"Games","description":"Your game library","icon":"ri-gamepad-line","category":"core","href":"/lessons.html"},
+    {"id":"apps","name":"Apps","description":"Spydr app collection","icon":"ri-apps-2-line","category":"core","href":"/flashcards.html"},
+    {"id":"browser","name":"Browser","description":"Browse the web","icon":"ri-global-line","category":"core","href":"/search.html"},
+    {"id":"ai","name":"AI","description":"Study and create","icon":"ri-sparkling-2-line","category":"core","href":"/study.html"},
+    {"id":"chat","name":"Community chat","description":"Talk with the network","icon":"ri-message-3-line","category":"social","href":"/review.html"},
+    {"id":"settings","name":"Settings","description":"Make Spydr yours","icon":"ri-settings-3-line","category":"core","href":"/settings.html"}
+  ]
+}

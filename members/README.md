@@ -4,11 +4,11 @@ The member area lives entirely under `/members`. It uses Spydr's existing global
 
 ## Included
 
-- Supabase email/password sign-up, sign-in, sign-out, and password reset.
+- Supabase email/password sign-up, sign-in, sign-out, password reset, and recovery-password update flow.
 - Responsive member dashboard with a Vortex-style sidebar, top profile control, welcome panel, summary cards, pinned apps, friends panel, and activity.
 - Editable display name, HTTPS avatar URL, short bio, status, and accent color.
 - App search, category filters, pinned shortcuts, and local fallback storage.
-- Member invite URLs, friend requests, request approval, and friend list.
+- Member invite URLs, friend requests, request approval, friend removal, and friend list.
 - First-visit walkthrough, compact layout, reduced motion, and account preferences.
 - TypeScript member-domain types and normalization helpers under `src/`.
 - Python catalog builder and structural validator under `tools/`.

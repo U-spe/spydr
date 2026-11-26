@@ -46,6 +46,10 @@
           <label>password<input id="auth-password" name="password" type="password" minlength="8" autocomplete="current-password" required placeholder="at least 8 characters"></label>
           <button class="primary-button auth-submit" id="auth-submit" type="submit">continue <i class="ri-arrow-right-line"></i></button>
         </form>
+        <form id="recovery-form" class="auth-form" hidden>
+          <label>new password<input id="recovery-password" type="password" minlength="8" autocomplete="new-password" required placeholder="at least 8 characters"></label>
+          <button class="primary-button auth-submit" type="submit">update password <i class="ri-check-line"></i></button>
+        </form>
         <div class="auth-utility">
           <button type="button" id="forgot-password" class="text-button">forgot password?</button>
           <span>spydr stays free. membership starts with your account.</span>

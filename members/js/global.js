@@ -395,9 +395,9 @@ function createFriendRow(person, isRequest = false) {
   status.textContent = isRequest ? "wants to connect" : (person.status || "member");
   copy.append(name, status);
   row.append(avatar, copy);
+  const actions = document.createElement("div");
+  actions.className = "friend-actions";
   if (isRequest) {
-    const actions = document.createElement("div");
-    actions.className = "friend-actions";
     const accept = document.createElement("button");
     accept.type = "button";
     accept.textContent = "accept";
@@ -407,8 +407,14 @@ function createFriendRow(person, isRequest = false) {
     decline.textContent = "decline";
     decline.addEventListener("click", () => respondFriend(person.request_id, false));
     actions.append(accept, decline);
-    row.appendChild(actions);
+  } else {
+    const remove = document.createElement("button");
+    remove.type = "button";
+    remove.textContent = "remove";
+    remove.addEventListener("click", () => removeFriend(person.user_id));
+    actions.appendChild(remove);
   }
+  row.appendChild(actions);
   return row;
 }
 function renderFriends() {
@@ -472,6 +478,16 @@ async function respondFriend(requestId, accept) {
   }
   showToast(accept ? "Friend request accepted." : "Request declined.", "success");
   if (accept) trackActivity("friend_request_accepted", "");
+  await loadFriends();
+}
+async function removeFriend(friendId) {
+  if (!isValidUUID(friendId)) return;
+  const { error } = await supabase.rpc("member_remove_friend", { target_id: friendId });
+  if (error) {
+    showToast("Couldn't remove that connection.", "error");
+    return;
+  }
+  showToast("Friend removed.", "success");
   await loadFriends();
 }
 async function makeInviteLink() {
@@ -638,6 +654,18 @@ function bindEvents() {
     const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo: new URL("/members/", location.origin).href });
     setAuthMessage(error ? error.message : "Password reset email sent. Check your inbox.");
   });
+  $("#recovery-form").addEventListener("submit", async event => {
+    event.preventDefault();
+    const password = $("#recovery-password").value;
+    if (password.length < 8) return setAuthMessage("Use at least 8 characters for the new password.", true);
+    const { data, error } = await supabase.auth.updateUser({ password });
+    if (error) return setAuthMessage(error.message, true);
+    $("#recovery-form").hidden = true;
+    $("#auth-form").hidden = false;
+    setAuthMode("signin");
+    if (data.user) await enterAccount(data.user);
+    else setAuthMessage("Password updated. Sign in with your new password.");
+  });
   $("#profile-form").addEventListener("submit", saveProfile);
   $("#profile-bio").addEventListener("input", () => $("#bio-length").textContent = $("#profile-bio").value.length + " / 180");
   $("#profile-name").addEventListener("input", () => $("#editor-preview-name").textContent = $("#profile-name").value || "Member");
@@ -685,16 +713,32 @@ async function init() {
   updateClock();
   window.setInterval(updateClock, 30000);
   showGate();
+  const recoveryMode = /type=recovery/.test(location.hash);
+  if (recoveryMode) {
+    showGate();
+    $("#auth-form").hidden = true;
+    $("#recovery-form").hidden = false;
+    $("#auth-heading").innerHTML = "choose a<br><span>new password.</span>";
+    $("#auth-copy").textContent = "Set a new password for your Spydr member account.";
+  }
   try {
     const { data, error } = await supabase.auth.getSession();
     if (error) throw error;
-    if (data.session?.user) await enterAccount(data.session.user);
+    if (!recoveryMode && data.session?.user) await enterAccount(data.session.user);
   } catch (error) {
     setAuthMessage("Account service unavailable: " + error.message, true);
   }
   supabase.auth.onAuthStateChange((_event, session) => {
-    if (session?.user) window.setTimeout(() => enterAccount(session.user), 0);
-    else if (currentUser) {
+    if (_event === "PASSWORD_RECOVERY") {
+      showGate();
+      $("#auth-form").hidden = true;
+      $("#recovery-form").hidden = false;
+      $("#auth-heading").innerHTML = "choose a<br><span>new password.</span>";
+      $("#auth-copy").textContent = "Set a new password for your Spydr member account.";
+      return;
+    }
+    if (session?.user && !recoveryMode) window.setTimeout(() => enterAccount(session.user), 0);
+    else if (!session && currentUser) {
       currentUser = null;
       showGate();
     }

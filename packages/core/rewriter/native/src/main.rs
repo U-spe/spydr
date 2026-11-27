@@ -1,0 +1,201 @@
+use std::{
+	env, ffi::OsString, fs, path::PathBuf, sync::Arc, time::{Duration, Instant},
+};
+
+use anyhow::{Context, Result};
+use clap::Parser;
+use js::cfg::IncumbencyMode;
+use oxc::{
+	allocator::{Allocator, StringBuilder}, diagnostics::NamedSource, parser::{ParseOptions}, span::SourceType,
+};
+use rewriter::NativeRewriter;
+
+mod rewriter;
+mod test_runner;
+
+#[derive(Parser)]
+pub struct RewriterOptions {
+	#[clap(long, default_value = "/scrammedjet/")]
+	prefix: String,
+	#[clap(long, default_value = "$wrap")]
+	wrapfn: String,
+	#[clap(long, default_value = "$sj_")]
+	wrappropertybase: String,
+	#[clap(long, default_value = "$prop")]
+	wrappropertyfn: String,
+	#[clap(long, default_value = "$call")]
+	callfn: String,
+	#[clap(long, default_value = "$clean")]
+	cleanrestfn: String,
+	#[clap(long, default_value = "$import")]
+	importfn: String,
+	#[clap(long, default_value = "$rewrite")]
+	rewritefn: String,
+	#[clap(long, default_value = "$meta")]
+	metafn: String,
+	#[clap(long, default_value = "$pushsourcemap")]
+	pushsourcemapfn: String,
+	#[clap(long, default_value = "$registerrealm")]
+	registerrealmfn: String,
+
+	#[clap(long, default_value = "$tryset")]
+	trysetfn: String,
+	#[clap(long, default_value = "$temploc")]
+	templocid: String,
+	#[clap(long, default_value = "$tempreceiver")]
+	tempreceiverid: String,
+	#[clap(long, default_value = "$tempcallee")]
+	tempcalleeid: String,
+	#[clap(long, default_value = "$tempunused")]
+	tempunusedid: String,
+
+	#[clap(long, default_value = "https://google.com/glorngle/si.js")]
+	base: String,
+	#[clap(long, default_value = "glongle1")]
+	sourcetag: String,
+	#[clap(long, default_value_t = false)]
+	is_module: bool,
+
+	#[clap(long, default_value_t = false)]
+	capture_errors: bool,
+	#[clap(long, default_value_t = false)]
+	do_sourcemaps: bool,
+	#[clap(long, default_value_t = false)]
+	inline_sourcemap: bool,
+	#[clap(long, default_value_t = false)]
+	disable_computed_wrap: bool,
+	#[clap(long, default_value_t = false)]
+	destructure_rewrites: bool,
+	#[clap(long, default_value = "none")]
+	incumbency: IncumbencyMode,
+}
+
+impl Default for RewriterOptions {
+	fn default() -> Self {
+		Self::parse_from(std::iter::empty::<OsString>())
+	}
+}
+
+#[derive(Parser)]
+#[command(version = clap::crate_version!())]
+pub enum Cli {
+	/// Rewrite a file
+	Rewrite {
+		file: PathBuf,
+		#[clap(flatten)]
+		config: RewriterOptions,
+	},
+	/// Rewrite a file multiple times for flamegraphing
+	Bench {
+		file: PathBuf,
+		iterations: u32,
+		#[clap(flatten)]
+		config: RewriterOptions,
+	},
+	Dump {
+		file: PathBuf,
+		#[clap(flatten)]
+		config: RewriterOptions,
+	}
+}
+
+fn main() -> Result<()> {
+	let args = Cli::parse();
+
+	match args {
+		Cli::Rewrite { file, config } => {
+			let mut rewriter = NativeRewriter::new(&config);
+
+			let data = fs::read_to_string(file).context("failed to read file")?;
+
+			let res = rewriter.rewrite(&data, &config)?;
+
+			let source =
+				Arc::new(NamedSource::new(data.clone(), config.base).with_language("javascript"));
+
+			eprintln!(
+				"rewritten:\n",
+			);
+			println!("{}", str::from_utf8(&res.js).context("failed to parse rewritten js")?);
+
+			let unrewritten = NativeRewriter::unrewrite(&res);
+			// println!(
+			//     "unrewritten:\n{}",
+			//              str::from_utf8(&unrewritten).context("failed to parse unrewritten js")?
+			// );
+
+			eprintln!("errors:");
+			for err in res.errors {
+				eprintln!("{}", err.with_source_code(source.clone()));
+			}
+
+			rewriter.reset();
+
+			eprintln!(
+				"unrewritten matches orig: {}",
+				data.as_bytes() == unrewritten.as_slice()
+			);
+		}
+		Cli::Bench {
+			file,
+			iterations,
+			config,
+		} => {
+			let mut rewriter = NativeRewriter::new(&config);
+
+			let data = fs::read_to_string(file).context("failed to read file")?;
+			let mut duration = Duration::from_secs(0);
+
+			let cnt = iterations * 100;
+
+			for x in 1..=cnt {
+				let before = Instant::now();
+				rewriter
+					.rewrite(&data, &config)
+					.context("failed to rewrite")?;
+				let after = Instant::now();
+
+				rewriter.reset();
+
+				duration += after - before;
+
+				if x % 100 == 0 {
+					println!("{x}...");
+				}
+			}
+
+			println!("iterations: {cnt}");
+			println!("total time: {duration:?}");
+			println!("avg time: {:?}", duration / cnt);
+		}
+		Cli::Dump { file, config } => {
+			let data = fs::read_to_string(file).context("failed to read file")?;
+
+			let source_type = SourceType::unambiguous()
+				.with_javascript(true)
+				.with_module(config.is_module)
+				.with_standard(true);
+			let alloc = Allocator::new();
+			let parsed = oxc::parser::Parser::new(&alloc, &data, source_type)
+				.with_options(ParseOptions {
+					allow_v8_intrinsics: true,
+					allow_return_outside_function: true,
+					..Default::default()
+				})
+				.parse();
+
+			if parsed.panicked {
+				use std::fmt::Write;
+
+				let mut errors = String::new();
+				for error in parsed.errors {
+					writeln!(errors, "{error}")?;
+				}
+				panic!("oxc panicked");
+			}
+			dbg!(&parsed.program);
+		}
+	}
+
+	Ok(())
+}

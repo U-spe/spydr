@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bare Test Harness (no scramjet)</title>
+	</head>
+	<body>
+		<h1>Bare Test Harness</h1>
+		<div id="status">Initializing...</div>
+		<iframe
+			id="testframe"
+			style="width: 100%; height: 80vh; border: 1px solid #ccc"
+		></iframe>
+
+		<script>
+			const statusEl = document.getElementById("status");
+			const testframe = document.getElementById("testframe");
+
+			statusEl.textContent = "Ready - waiting for test...";
+
+			window.__runwayNavigate = (url) => {
+				statusEl.textContent = `Loading test: ${url}`;
+				// Use direct iframe src - no proxy
+				testframe.src = url;
+			};
+
+			console.log("Bare harness ready, __runwayNavigate exposed");
+		</script>
+	</body>
+</html>

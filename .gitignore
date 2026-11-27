@@ -7,3 +7,13 @@ npm-debug.log*
 py/dist/
 py/logs/
 py/__pycache__/
+
+
+# Scramjet
+node_modules
+dist
+packages/core/rewriter/target
+packages/core/rewriter/wasm/out
+packages/core/rewriter/*.js
+packages/core/README.md
+packages/runway/coverage

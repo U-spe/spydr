@@ -1,39 +1,61 @@
-<p align="center">
-  <a href="https://github.com/u-spe/spydr">
-    <img src="https://cdn-icons-png.flaticon.com/256/733/733609.png">
-  </a>
-  <a href="https://spydr-delta.vercel.app">
-    <img src="https://cdn-icons-png.flaticon.com/256/16116/16116463.png">
-  </a>
-</p>
+<h1 align="center">Scramjet</h1>
+<div align="center">
+  <img src="assets/scramjet.png" height="200" />
+</div>
 
-<p align="center">
-  <b>Created by Solar/u-spe (WCS)</b>
-</p>
+<div align="center">
+  <a href="https://www.npmjs.com/package/@mercuryworkshop/scramjet"><img src="https://img.shields.io/npm/v/@mercuryworkshop/scramjet.svg?maxAge=3600" alt="npm version" /></a>
+  <img src="https://img.shields.io/github/issues/MercuryWorkshop/scramjet?style=flat&color=orange" />
+  <img src="https://img.shields.io/github/stars/MercuryWorkshop/scramjet?style=flat&color=orange" />
+</div>
 
-<p align="center">
-  <img src="https://img.shields.io/github/commit-activity/t/u-spe/spydr?style=for-the-badge&label=COMMITS">
-  <img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey?style=for-the-badge">
-  <img src="https://img.shields.io/github/last-commit/u-spe/spydr?style=for-the-badge&logo=github">
-</p>
+---
 
+Scramjet is an experimental interception-based web proxy designed to evade internet censorship and bypass arbitrary browser restrictions.<br><br>
+Scramjet allows you to sandbox arbitrary web content, bypass CORS restrictions on loading websites, and instrument and debug websites inside the browser itself. This is accomplished through a combination of interception, rewriting, and sandboxing techniques. You can learn more about the technical details <a href="https://developer.puter.com/blog/how-I-ported-the-web-to-the-web/"><strong>here</strong></a>.<br><br>
 
-# README HAS MOVED
+<div align="center">
+ <a href="https://github.com/MercuryWorkshop/scramjet/wiki">Documentation</a> | <a href="https://scramjet.mercurywork.shop">Playground</a> | <a href="https://discord.gg/tmApqGqfX2">Discord</a>
+</div>
 
-You're probably looking for the README, hence you scrolled so far. Well, it got moved in update 2.7 or 2.6?.
+## Supported Sites
 
-To find the README and other MarkDown files, view the [MD docs](/md-docs/README.md) page. (It also includes our license!)
+Some of the popular websites that Scramjet supports include:
 
+- [Google](https://google.com)
+- [Youtube](https://youtube.com)
+- [Instagram](https://instagram.com)
+- [ChatGPT](https://chatgpt.com)
+- [Reddit](https://reddit.com)
+- [Twitter](https://twitter.com)
+- [Discord](https://discord.com)
+- [Spotify](https://spotify.com)
+- [GeForce NOW](https://play.geforcenow.com/)
+- [now.gg](https://now.gg)
 
+## Development
 
+### Dependencies
 
+- Recent versions of `node.js` and `pnpm`
+- `rustup`
+- `wasm-bindgen`
+- [Binaryen's `wasm-opt`](https://github.com/WebAssembly/binaryen)
+- [this `wasm-snip` fork](https://github.com/r58Playz/wasm-snip)
 
+#### Building
 
-# OHH MAAA GAHHHHH!
+- Clone the repository with `git clone --recursive https://github.com/MercuryWorkshop/scramjet`
+- Build everything with `./cv build` (`.\cv.ps1` on Windows). It installs the
+  dependencies, offers to install the rust tools above through cargo, and
+  only rebuilds what changed. `./cv build wasm` builds just the rewriter.
 
-1000 COMMITS! NOT 100, NOT 200, NOT 300, NOT 400, NOT 500, NOT 600, NOT 700, NOT 800, N0T 900, BUT 1000! 
+### Running Scramjet Locally
 
+You can run the Scramjet dev server when running this command at the root
 
-thanks for all the support and help from my friends and...more friends?
+```sh
+./cv dev
+```
 
-BYEEE
+The demo page for scramjet should now be running at <http://localhost:4141> and should rebuild upon a file being changed (excluding the rewriter).

@@ -62,6 +62,7 @@ initHomeBattery();
 // CONST TEXT
 // =====================
 const lines = [
+  "REmade by bbcj (the goat??)
   "wait...better?",
   "dont you just LOUVE spydr?",
   "science lowk boring af",

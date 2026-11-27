@@ -979,7 +979,8 @@ jobs:
           cp .gitignore /tmp/spydr-gitignore
           cp README.md SPYDR_README.md
 
-          rsync -a --exclude='.git' .scramjet-source/ ./
+          rsync -a --exclude='.git' --exclude='.github/workflows/**' .scramjet-source/ ./
+          cp .scramjet-source/.github/workflows/main.yml scramjet-main.workflow.yml
 
           node <<'NODE'
           const fs = require("node:fs");

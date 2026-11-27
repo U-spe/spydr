@@ -1,3 +1,5 @@
+includeWorkspaceRoot: true
+
 packages:
   - packages/core
   - packages/runway

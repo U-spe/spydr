@@ -249,7 +249,15 @@ function appendMessageUI(message) {
     if (renderedMessageIds.has(messageId)) return;
     renderedMessageIds.add(messageId);
   }
-  const time = new Date(message.created_at).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  const messageDate = new Date(message.created_at);
+  const time = Number.isNaN(messageDate.getTime())
+    ? ""
+    : messageDate.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  const date = Number.isNaN(messageDate.getTime())
+    ? ""
+    : [messageDate.getDate(), messageDate.getMonth() + 1, messageDate.getFullYear()]
+        .map((part, index) => index < 2 ? String(part).padStart(2, "0") : String(part))
+        .join("/");
   const username = message.user_email ? message.user_email.split("@")[0] : "System";
 
   const messageElement = document.createElement("div");
@@ -268,7 +276,7 @@ function appendMessageUI(message) {
   user.textContent = username;
   const timestamp = document.createElement("span");
   timestamp.className = "msg-time";
-  timestamp.textContent = time;
+  timestamp.textContent = [time, date].filter(Boolean).join(" · ");
   header.append(user, timestamp);
 
   content.appendChild(header);

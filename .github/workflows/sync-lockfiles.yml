@@ -41,7 +41,7 @@ jobs:
           cache: pnpm
 
       - name: Regenerate pnpm lockfile from package manifests
-        run: pnpm install --lockfile-only --ignore-scripts --no-frozen-lockfile
+        run: pnpm install --lockfile-only --ignore-scripts --no-frozen-lockfile --include-workspace-root
 
       - name: Verify pnpm lockfile
         run: pnpm install --lockfile-only --ignore-scripts --frozen-lockfile

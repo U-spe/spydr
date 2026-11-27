@@ -1,0 +1,62 @@
+name: Verify and synchronize dependency lockfiles
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/sync-lockfiles.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: github.event.head_commit.message == 'Synchronize Spydr dependency lockfiles'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+          sparse-checkout: |
+            package.json
+            package-lock.json
+            pnpm-lock.yaml
+            pnpm-workspace.yaml
+            .npmrc
+            .pnpmfile.cjs
+            patches
+            packages
+          sparse-checkout-cone-mode: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12.17.0
+          run_install: false
+
+      - name: Regenerate pnpm lockfile from package manifests
+        run: pnpm install --lockfile-only --ignore-scripts --no-frozen-lockfile
+
+      - name: Verify pnpm lockfile
+        run: pnpm install --lockfile-only --ignore-scripts --frozen-lockfile
+
+      - name: Regenerate npm lockfile from package.json
+        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund --legacy-peer-deps
+
+      - name: Commit synchronized lockfiles
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pnpm-lock.yaml package-lock.json
+          if git diff --cached --quiet; then
+            echo "Both lockfiles are already synchronized."
+            exit 0
+          fi
+          git commit -m "Synchronize Spydr dependency lockfiles"
+          git push origin HEAD:main

@@ -1,6 +1,7 @@
 includeWorkspaceRoot: true
 
 packages:
+  - .
   - packages/core
   - packages/runway
   - packages/rpc

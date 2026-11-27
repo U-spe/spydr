@@ -30,15 +30,15 @@ jobs:
             packages
           sparse-checkout-cone-mode: true
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
-
       - uses: pnpm/action-setup@v4
         with:
           version: 12.17.0
           run_install: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
 
       - name: Regenerate pnpm lockfile from package manifests
         run: pnpm install --lockfile-only --ignore-scripts --no-frozen-lockfile

@@ -255,9 +255,9 @@ function appendMessageUI(message) {
     : messageDate.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   const date = Number.isNaN(messageDate.getTime())
     ? ""
-    : [messageDate.getDate(), messageDate.getMonth() + 1, messageDate.getFullYear()]
+    : [messageDate.getMonth() + 1, messageDate.getDate(), messageDate.getFullYear()]
         .map((part, index) => index < 2 ? String(part).padStart(2, "0") : String(part))
-        .join("/");
+        .join(".");
   const username = message.user_email ? message.user_email.split("@")[0] : "System";
 
   const messageElement = document.createElement("div");

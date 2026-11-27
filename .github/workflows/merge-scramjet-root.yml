@@ -1,0 +1,96 @@
+name: One-time Scramjet root import
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/merge-scramjet-root.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    if: github.event.head_commit.message == 'Import Scramjet into Spydr root'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Spydr
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Check out Scramjet
+        uses: actions/checkout@v4
+        with:
+          repository: MercuryWorkshop/scramjet
+          ref: main
+          path: .scramjet-source
+
+      - name: Merge Scramjet into the repository root
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          cp package.json /tmp/spydr-package.json
+          cp .gitignore /tmp/spydr-gitignore
+          cp README.md SPYDR_README.md
+
+          rsync -a --exclude='.git' .scramjet-source/ ./
+
+          node <<'NODE'
+          const fs = require("node:fs");
+          const spydr = JSON.parse(fs.readFileSync("/tmp/spydr-package.json", "utf8"));
+          const scramjet = JSON.parse(fs.readFileSync("package.json", "utf8"));
+
+          const scramjetDev = { ...(scramjet.devDependencies || {}) };
+          if (scramjetDev["@mercuryworkshop/wisp-js"] === "catalog:") {
+            scramjetDev["@mercuryworkshop/wisp-js"] = "0.4.1";
+          }
+
+          const merged = {
+            ...scramjet,
+            ...spydr,
+            packageManager: scramjet.packageManager,
+            ava: scramjet.ava,
+            scripts: {
+              ...(scramjet.scripts || {}),
+              ...(spydr.scripts || {}),
+              cv: scramjet.scripts.cv,
+              "scramjet:build": "./cv build",
+              "scramjet:dev": "./cv dev"
+            },
+            dependencies: {
+              ...(scramjet.dependencies || {}),
+              ...(spydr.dependencies || {})
+            },
+            devDependencies: {
+              ...scramjetDev,
+              ...(spydr.devDependencies || {}),
+              prettier: scramjet.dependencies.prettier
+            }
+          };
+
+          delete merged.scripts.postinstall;
+          delete merged.preinstall;
+
+          fs.writeFileSync("package.json", JSON.stringify(merged, null, 2) + "\n");
+          NODE
+
+          {
+            cat /tmp/spydr-gitignore
+            printf '\n\n# Scramjet\n'
+            cat .scramjet-source/.gitignore
+          } > .gitignore
+
+          rm -rf .scramjet-source
+          rm -f .github/workflows/merge-scramjet-root.yml
+
+          npm install --package-lock-only --ignore-scripts --no-audit --no-fund --legacy-peer-deps
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Import Scramjet into Spydr root"
+          git push origin HEAD:main

@@ -1,1 +1,0 @@
-for(location.k of 0) {}

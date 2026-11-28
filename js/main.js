@@ -75,6 +75,7 @@ const lines = [
   "2x2 hellcat, go fast",
   "ahhh, almost, almost ✌️",
   "watch out! securly might be spyhiyn on u",
+  "initals M.M likes Scarlett (wont snitch)",
   "go to games n try roblox! 😁",
   "OH! also, the AI, u can share ur screen now 😁😁",
   "\"wonder is the beginning of wisdom\" - Socrates",
